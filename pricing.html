@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tarifs — NotchIA Pro</title>
+<meta name="description" content="NotchIA Pro : 3,99 €/mois ou 39,99 € à vie. Débloque Claude, Codex et toutes les fonctionnalités IA dans ton encoche MacBook." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/pricing" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  .grad-bg { background: var(--brand); }
+  .card {
+    background: linear-gradient(180deg, #14171F 0%, #0F1218 100%);
+    border: 1px solid rgba(237,232,220,0.08);
+  }
+  .card-pro {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(180deg, #14171F 0%, #0F1218 100%) padding-box,
+      var(--brand) border-box;
+  }
+  .cta-primary {
+    background: var(--brand);
+    color: #0B0D12;
+    font-weight: 600;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  .cta-primary:hover { transform: translateY(-1px); opacity: 0.95; }
+  .cta-primary:disabled { opacity: 0.5; cursor: wait; }
+  .cta-secondary {
+    background: rgba(237,232,220,0.06);
+    color: #EDE8DC;
+    border: 1px solid rgba(237,232,220,0.10);
+  }
+  .cta-secondary:hover { background: rgba(237,232,220,0.10); }
+  .check { color: #FF7A2D; }
+</style>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/account" class="hover:text-cream">Mon compte</a>
+  </nav>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pt-8 pb-24">
+
+  <section class="text-center mb-16">
+    <h1 class="font-display text-5xl md:text-6xl leading-tight mb-4">
+      <span class="grad-text">Pro</span>, sans abonnement obligatoire
+    </h1>
+    <p class="text-cream/70 text-lg max-w-2xl mx-auto">
+      Choisis ce qui te convient. 3,99 € par mois pour rester flexible, ou 39,99 € une fois pour toujours.
+    </p>
+  </section>
+
+  <div class="grid md:grid-cols-2 gap-6 mb-16" id="plans">
+    <!-- Mensuel -->
+    <article class="card rounded-2xl p-8 flex flex-col">
+      <div class="flex items-baseline gap-2 mb-2">
+        <h2 class="font-display text-2xl">Mensuel</h2>
+        <span class="text-xs text-cream/50 font-mono uppercase tracking-wider">flexible</span>
+      </div>
+      <p class="text-cream/60 mb-6 text-sm">Annule à tout moment. Essai gratuit 7 jours.</p>
+      <div class="mb-8">
+        <span class="font-display text-5xl font-medium">3,99&nbsp;€</span>
+        <span class="text-cream/50 text-sm">&nbsp;/&nbsp;mois</span>
+      </div>
+      <ul class="space-y-3 text-sm mb-8 flex-1">
+        <li class="flex gap-2"><span class="check">✓</span><span>Tab Claude Code intégrée</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Tab Codex intégrée</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Toutes les futures features IA</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>3 Mac inclus</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Mises à jour incluses</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Annulation en 1 clic</span></li>
+      </ul>
+      <button data-plan="monthly" class="cta-secondary py-3 px-6 rounded-full text-sm font-medium">
+        Démarrer l'essai gratuit
+      </button>
+    </article>
+
+    <!-- Lifetime -->
+    <article class="card-pro rounded-2xl p-8 flex flex-col relative">
+      <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+        <span class="grad-bg text-ink text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Best value</span>
+      </div>
+      <div class="flex items-baseline gap-2 mb-2">
+        <h2 class="font-display text-2xl"><span class="grad-text">À vie</span></h2>
+        <span class="text-xs text-cream/50 font-mono uppercase tracking-wider">one-shot</span>
+      </div>
+      <p class="text-cream/60 mb-6 text-sm">Un seul paiement. Toutes les futures versions incluses.</p>
+      <div class="mb-8">
+        <span class="font-display text-5xl font-medium">39,99&nbsp;€</span>
+        <span class="text-cream/50 text-sm">&nbsp;une seule fois</span>
+      </div>
+      <ul class="space-y-3 text-sm mb-8 flex-1">
+        <li class="flex gap-2"><span class="check">✓</span><span><strong>Tout ce qu'il y a dans Mensuel</strong></span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Pas de renouvellement</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Mises à jour à vie</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Rentable dès 10 mois</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>3 Mac inclus</span></li>
+      </ul>
+      <button data-plan="lifetime" class="cta-primary py-3 px-6 rounded-full text-sm">
+        Passer à la version à vie
+      </button>
+    </article>
+  </div>
+
+  <!-- Status banner (si redirection ?status=cancel) -->
+  <div id="status" class="hidden text-center text-sm py-3 px-5 rounded-xl mb-8"></div>
+
+  <!-- FAQ légère -->
+  <section class="space-y-4 max-w-2xl mx-auto">
+    <h2 class="font-display text-2xl text-center mb-4">Questions fréquentes</h2>
+
+    <details class="card rounded-xl px-5 py-4">
+      <summary class="cursor-pointer font-medium">Que se passe-t-il si j'arrête de payer ?</summary>
+      <p class="text-cream/70 text-sm mt-3">Les fonctionnalités Pro (Claude Code et Codex) deviennent inaccessibles. Le reste de NotchIA continue de marcher normalement (média, calendrier, étagère). Tu peux toujours réactiver plus tard.</p>
+    </details>
+
+    <details class="card rounded-xl px-5 py-4">
+      <summary class="cursor-pointer font-medium">Sur combien de Mac puis-je l'installer ?</summary>
+      <p class="text-cream/70 text-sm mt-3">3 Mac par licence. Si tu en changes un, contacte le support pour libérer un slot.</p>
+    </details>
+
+    <details class="card rounded-xl px-5 py-4">
+      <summary class="cursor-pointer font-medium">Le lifetime inclut-il les futures versions majeures ?</summary>
+      <p class="text-cream/70 text-sm mt-3">Oui. Toutes les mises à jour de NotchIA, y compris les versions majeures, sont incluses pour les acheteurs lifetime.</p>
+    </details>
+
+    <details class="card rounded-xl px-5 py-4">
+      <summary class="cursor-pointer font-medium">J'ai perdu ma clé de licence. Que faire ?</summary>
+      <p class="text-cream/70 text-sm mt-3">Va sur <a href="/account" class="underline">/account</a>, entre l'email d'achat — on te renvoie une nouvelle clé. L'ancienne est invalidée pour ta sécurité.</p>
+    </details>
+  </section>
+
+  <p class="text-center text-cream/40 text-xs mt-12">
+    Paiement sécurisé Stripe. TVA appliquée selon ton pays. Remboursable 14 jours sans condition.
+  </p>
+
+</main>
+
+<script>
+  const API_BASE = 'https://notchia-license.axel-courty.workers.dev';
+
+  // Show banner if Stripe redirected back here with ?status=cancel.
+  (function(){
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get('status');
+    const banner = document.getElementById('status');
+    if (status === 'cancel') {
+      banner.textContent = "Paiement annulé. Tu peux reprendre quand tu veux.";
+      banner.style.background = "rgba(237,232,220,0.06)";
+      banner.style.color = "#EDE8DC";
+      banner.classList.remove('hidden');
+    }
+  })();
+
+  document.querySelectorAll('button[data-plan]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const plan = btn.getAttribute('data-plan');
+      const original = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Redirection vers Stripe…';
+      try {
+        const res = await fetch(API_BASE + '/v1/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ plan }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.url) {
+          alert("Impossible de démarrer le paiement. Réessaie dans un instant.");
+          btn.textContent = original;
+          btn.disabled = false;
+          return;
+        }
+        window.location.href = data.url;
+      } catch (e) {
+        alert("Erreur réseau. Réessaie.");
+        btn.textContent = original;
+        btn.disabled = false;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

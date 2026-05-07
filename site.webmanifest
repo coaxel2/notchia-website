@@ -1,0 +1,33 @@
+{
+  "name": "NotchIA",
+  "short_name": "NotchIA",
+  "description": "L'encoche de votre MacBook devient un cockpit silencieux pour Claude Code et plus.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B0D12",
+  "theme_color": "#0B0D12",
+  "lang": "fr",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["productivity", "developer", "utilities"]
+}

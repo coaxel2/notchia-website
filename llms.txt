@@ -1,0 +1,211 @@
+# NotchIA
+
+> NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif : médias multi-source, calendrier, IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot), Pomodoro, presse-papiers historique, conversion de fichiers, HUD système. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro mensuel 3,99 €/mois (annulable) · Pro à vie 39,99 € en achat unique. Aucune télémétrie.
+
+## À propos
+
+NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Paris. Basé sur le projet open-source BoringNotch, étendu avec une intégration IA en direct, un convertisseur natif et un Sneak Peek Engine. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
+
+- **Version actuelle** : 2.7.4 beta (build 2.7.4-beta1)
+- **Plateforme** : macOS 14.0+ (Sonoma et plus récent)
+- **Architecture** : Apple Silicon + Intel
+- **Poids** : 47 Mo environ
+- **Langues** : français, anglais, allemand, espagnol
+- **Confidentialité** : aucune télémétrie, aucun cookie tiers, traitement local
+- **Distribution** : pas de Mac App Store, pas d'Apple Developer ID requis ; signature gérée par Homebrew
+- **Page de téléchargement** : https://notchia.app/install
+- **Releases GitHub** : https://github.com/coaxel2/NotchIA/releases
+
+## Install
+
+Deux méthodes de téléchargement, toutes deux gratuites, hors Mac App Store, sans Apple Developer ID. Application signée mais **non notarisée Apple** : au premier lancement, macOS affiche un avertissement Gatekeeper — procédure officielle clic droit → Ouvrir, à faire une seule fois.
+
+### Méthode 1 — Téléchargement direct .dmg (recommandé)
+
+URL : https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg (~ 12 Mo, dernière version stable)
+
+1. Télécharger `NotchIA.dmg`
+2. Double-cliquer le DMG pour le monter
+3. Glisser `NotchIA.app` dans le dossier `Applications`
+4. **Premier lancement** : clic droit sur NotchIA dans Applications → **Ouvrir** → confirmer dans la fenêtre macOS
+
+Sur macOS Sequoia 15+ ou Tahoe 26+, si le clic droit ne suffit pas : **Réglages système → Confidentialité et sécurité → "Ouvrir quand même"** à côté du message « NotchIA a été empêchée de s'ouvrir ». À faire une seule fois, l'app est ensuite approuvée pour toujours.
+
+Mises à jour automatiques via Sparkle (signature EdDSA vérifiée, appcast HTTPS).
+
+### Méthode 2 — Installateur Homebrew (.command auto)
+
+URL : https://notchia.app/NotchIA-Installer.zip (~ 2 Ko)
+
+1. Télécharger `NotchIA-Installer.zip` depuis https://notchia.app/install, décompresser
+2. Clic droit → **Ouvrir** sur le fichier `install.command`
+3. Le script installe automatiquement :
+   - **Homebrew** si absent (avec ajout automatique au PATH dans `~/.zprofile`, détection Apple Silicon vs Intel)
+   - **NotchIA** via `brew install --cask coaxel2/notchia/notchia`
+   - **Lance NotchIA** ou ouvre Réglages système → Confidentialité & Sécurité si Gatekeeper bloque
+
+Durée totale ~ 2 minutes. Solution alternative directement en CLI si Homebrew déjà installé : `brew install --cask coaxel2/notchia/notchia`.
+
+### Désinstallation
+
+- **Si installée via .dmg** : Glisser `NotchIA.app` de `Applications` dans la corbeille. Pour effacer aussi les préférences : `~/Library/Preferences/com.coaxel2.notchia.plist`, `~/Library/Application Support/NotchIA/`.
+- **Si installée via Homebrew** : `brew uninstall --cask --zap notchia` (avec préférences) ou `brew uninstall --cask notchia` (sans).
+
+## Modules disponibles (14 modules natifs)
+
+### Médias & musique
+- Lecteur multi-source : Apple Music, Spotify, YouTube Music, et toute app utilisant le Now Playing macOS
+- Album art animé avec couleur dominante extraite, miniature dans l'encoche fermée
+- Contrôles personnalisables : play/pause, suivant/précédent, shuffle, repeat, ±15s, volume, favori (jusqu'à 7 slots)
+- Visualizer audio : spectrogramme coloré ou animation Lottie personnalisée
+- Paroles synchronisées en temps réel via lrclib (26 langues)
+- Sneak peek lors d'un changement de morceau (titre + artiste, 3 secondes)
+
+### Calendrier & rappels
+- Vue défilante jour par jour avec marqueur sous chaque date occupée
+- Vue mois complet en grille classique
+- Affichage des événements iCal et rappels Reminders côte à côte
+- Premier jour de la semaine configurable (Lundi/Dimanche)
+- Création d'événements directement depuis l'encoche
+- Sélection des calendriers à afficher
+- Auto-scroll vers le prochain événement
+- Cocher un rappel d'un clic
+
+### Productivité
+- **Pomodoro** : sessions focus + pauses courtes/longues paramétrables, statistiques quotidiennes, son de fin, sneak peek périodique
+- **Presse-papiers historique** : recherche, regroupement par app, épinglage, taille de cache configurable (jusqu'à 500 entrées en Pro)
+- **Shelf** : drag-and-drop temporaire de fichiers/textes/liens entre apps sans encombrer le Bureau
+- **Convertisseur de fichiers intégré** : 16 formats en Pro (image JPG/WebP/HEIC/AVIF/TIFF, PDF, vidéo)
+- **Quick Share** : partage rapide AirDrop, Messages, Mail, Notes
+- **QuickLook** depuis le Shelf
+
+### Assistants IA (version Pro)
+Détection automatique des sessions actives par IDE pour :
+- **Claude Code** (Anthropic)
+- **ChatGPT Codex** (OpenAI)
+- **GitHub Copilot**
+
+10 états en direct affichés dans l'encoche : Compilation, Terminal, Exécution, Recherche, Lecture, Modification, Écriture, Web, Planification, Sous-agent. Statistiques quotidiennes (messages, outils, jetons), quotas 5h et 7j, tâches en cours, mise au premier plan de l'IDE en un clic. Notifications quand un assistant attend la permission. Indicateur multi-session (points colorés sous l'encoche fermée). Toutes les données sont lues localement depuis les journaux de session — aucune donnée ne quitte la machine.
+
+### HUD système (remplacement)
+NotchIA peut remplacer les HUD natifs macOS par un affichage intégré dans l'encoche :
+- Volume, luminosité écran, rétroéclairage clavier
+- Style classique (capsule sous le notch) ou inline (intégré dans l'encoche fermée)
+- Action sur la touche Option configurable
+- Affichage du pourcentage en option
+
+### Sneak Peek Engine
+Affichage rotatif périodique de mini-widgets dans l'encoche fermée : musique, Pomodoro, presse-papiers, volume, luminosité, météo. Intervalle de rotation et durée d'affichage configurables. Affiche uniquement les widgets avec contenu actif.
+
+### Détections automatiques
+- **Appels en cours** : indicateur dans l'encoche pendant FaceTime, Zoom, Teams, Meet
+- **Mode Concentration macOS** : affiche le Focus Mode actif (Ne pas déranger, Travail, Sommeil)
+- **Enregistrement d'écran** : détection QuickTime, OBS — masquage automatique du notch
+
+### Animations & live activities
+- Visage animé au repos (clignements aléatoires)
+- Live activities musique dans l'encoche fermée
+- Animations spring naturelles à l'ouverture/fermeture
+- Retour haptique optionnel sur trackpad
+
+### Personnalisation visuelle
+- Couleur d'accent : système, presets (Bleu, Violet, Rose, Rouge, Orange, Jaune, Vert, Graphite) ou color picker libre
+- Icône d'app personnalisable (import d'une image)
+- Forme de l'encoche : rayon des coins adaptatif, ombre activable
+- Hauteur du notch ajustable séparément pour écrans avec/sans encoche
+- Onglets visibles configurables (Média, Calendrier, Shelf, IA, Pomodoro, Presse-papiers)
+- Visualizers custom importables
+
+### Comportements & gestes
+- Ouverture au survol avec délai configurable
+- Délai de fermeture auto ajustable (0 à 2s)
+- Geste deux doigts vers le bas pour ouvrir l'encoche fermée
+- Sensibilité du geste réglable
+- Mémoire du dernier onglet ouvert
+- Étendue de zone de survol configurable
+- Affichage sur l'écran verrouillé
+- Multi-écrans : tous les écrans, écran préféré, ou bascule auto sur l'actif
+
+### Système & intégration
+- Lancement au démarrage (Login Item natif)
+- Auto-mise à jour Sparkle avec signature EdDSA vérifiée, appcast HTTPS
+- Helper XPC signé pour interception clavier/HUD système
+- Raccourcis clavier personnalisables
+- Mode LSUIElement : pas d'icône Dock
+- Architecture sandbox avec entitlements minimaux
+- Logging unifié OSLog (catégorisé par module, filtrable dans Console.app)
+
+## Tarification
+
+Trois formules (modèle freemium) :
+
+**Essentiel — 0 €, gratuit à vie, sans limitation**
+Inclut : médias multi-source (Apple Music, Spotify, YouTube), paroles synchronisées, visualizer, calendrier + Rappels, HUD système (volume, luminosité, clavier), Sneak Peek Engine, détections automatiques (appels, focus mode, capture d'écran), Pomodoro complet (statistiques quotidiennes + sons), personnalisation visuelle.
+
+**Pro mensuel — 3,99 €/mois, annulable à tout moment, 1 Mac**
+Tout l'Essentiel, plus les trois modules Pro :
+- **IA en direct** : Claude Code, ChatGPT Codex, GitHub Copilot avec états en temps réel, statistiques de jetons, cache, latence, quotas 5h et 7j
+- **Gestion de fichiers** : Shelf (drag-and-drop entre apps), convertisseur 16 formats, Quick Share (AirDrop/Messages/Mail), QuickLook
+- **Presse-papiers historique** : illimité, recherche, regroupement par app, épinglage
+Mises à jour incluses.
+
+**Pro à vie — 39,99 € en achat unique, 2 Mac, aucune récurrence**
+Tout le Pro mensuel sans limite de durée, sur 2 Mac. Toutes les mises à jour majeures à venir incluses. Visualizers et icônes custom, couleurs illimitées. Support prioritaire FR. Rentabilisé en moins de 11 mois face à l'abonnement.
+
+Remboursé sous 30 jours, TVA incluse.
+
+## Fonctionnalités gratuites vs payantes
+
+| Module | Essentiel (gratuit) | Pro |
+|---|---|---|
+| Médias multi-source + paroles + visualizer | ✓ | ✓ |
+| Calendrier + Rappels | ✓ | ✓ |
+| HUD système | ✓ | ✓ |
+| Sneak Peek Engine | ✓ | ✓ |
+| Détections automatiques | ✓ | ✓ |
+| Pomodoro complet (statistiques + sons) | ✓ | ✓ |
+| Personnalisation visuelle | ✓ | ✓ |
+| **IA en direct (Claude Code, Codex, Copilot)** | ✗ | ✓ |
+| **Shelf · Convertisseur · Quick Share · QuickLook** | ✗ | ✓ |
+| **Presse-papiers historique** | ✗ | ✓ |
+
+## Standards qualité & confidentialité
+
+- Signé par le développeur, distribué hors Mac App Store (non notarisé Apple — premier lancement par clic droit → Ouvrir)
+- Aucune télémétrie, aucune connexion réseau hors auto-update signé
+- Architecture open-core (basé sur BoringNotch sous licence libre)
+- Lecture locale des journaux Claude Code (`~/.claude/projects/`)
+- Helper XPC signé avec validation de signature de l'appelant
+- Sandbox + entitlements minimaux
+- Code source partiellement public
+
+## Liens utiles
+
+- **Site officiel** : https://notchia.app/
+- **Téléchargement** : https://notchia.app/#telecharger
+- **Tarifs** : https://notchia.app/#tarif
+- **Créateur** : Axel Courty (Paris, France)
+- **Email contact** : axelcourty1@gmail.com
+
+## FAQ
+
+**Quelle version de macOS est requise ?**
+macOS 14.0 (Sonoma) ou plus récent. Apple Silicon ou Intel.
+
+**NotchIA fonctionne-t-il sur un Mac sans encoche ?**
+Oui. Sur les Mac sans encoche physique, NotchIA crée une zone d'encoche virtuelle dans la barre de menu. Hauteur configurable séparément.
+
+**Mes données quittent-elles mon Mac ?**
+Non. Tous les modules fonctionnent localement. La seule connexion réseau est l'auto-update Sparkle (signature EdDSA vérifiée). Aucune télémétrie.
+
+**Combien coûte NotchIA ?**
+Trois formules. Essentiel gratuit à vie. Pro mensuel 3,99 €/mois (annulable, 1 Mac). Pro à vie 39,99 € en achat unique (2 Mac, aucune récurrence, mises à jour majeures incluses). Remboursement sous 30 jours.
+
+**Quels assistants IA sont supportés ?**
+Claude Code (Anthropic), ChatGPT Codex (OpenAI), GitHub Copilot. Détection automatique par IDE.
+
+**NotchIA est-il open-source ?**
+Modèle open-core. Le projet de base BoringNotch est open-source. Les extensions Pro (intégration IA, convertisseur étendu, certains modules) sont propriétaires.
+
+**Y a-t-il une option sans abonnement ?**
+Oui. Le Pro à vie à 39,99 € est un achat unique sans récurrence, valable sur 2 Mac, avec toutes les mises à jour majeures incluses. Le Pro mensuel à 3,99 €/mois reste disponible pour ceux qui veulent tester avant ou n'en ont besoin que ponctuellement. Et l'Essentiel reste gratuit à vie sans limitation.

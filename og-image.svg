@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0F1218"/>
+      <stop offset="100%" stop-color="#0B0D12"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="35%" stop-color="#FF4D88"/>
+      <stop offset="65%" stop-color="#FF7A2D"/>
+      <stop offset="100%" stop-color="#4DA8FF"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#FF4D88" stop-opacity="0.30"/>
+      <stop offset="50%" stop-color="#A855F7" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FF4D88" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo2" cx="80%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#4DA8FF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#4DA8FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#EDE8DC" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2"/>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#halo)"/>
+  <rect width="1200" height="630" fill="url(#halo2)"/>
+  <rect width="1200" height="630" filter="url(#grain)" opacity="0.5"/>
+
+  <!-- top hairline -->
+  <line x1="0" y1="80" x2="1200" y2="80" stroke="#EDE8DC" stroke-opacity="0.08"/>
+
+  <!-- Logo + wordmark -->
+  <image href="logo.png" x="60" y="22" width="40" height="40"/>
+  <text x="112" y="51" font-family="Fraunces, serif" font-size="22" fill="#EDE8DC" font-weight="500">NotchIA</text>
+  <text x="1140" y="50" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="14" fill="#EDE8DC" opacity="0.55">notchia.app</text>
+
+  <!-- Notch -->
+  <g transform="translate(440,110)">
+    <path d="M 0 0 H 320 V 26 a20 20 0 0 1 -20 20 H 20 a20 20 0 0 1 -20 -20 Z" fill="#000"/>
+    <!-- marquee text -->
+    <g font-family="JetBrains Mono, monospace" font-size="14" fill="#EDE8DC">
+      <circle cx="36" cy="23" r="4" fill="#FF7A2D"/>
+      <text x="50" y="28" fill="#FF7A2D">Compilation</text>
+      <text x="148" y="28" fill="#EDE8DC" opacity="0.55">xcodebuild · 12 sec</text>
+    </g>
+  </g>
+
+  <!-- soft halo around notch -->
+  <ellipse cx="600" cy="160" rx="320" ry="80" fill="#FF4D88" opacity="0.25" filter="blur(28)"/>
+  <ellipse cx="600" cy="160" rx="220" ry="50" fill="#FF7A2D" opacity="0.18" filter="blur(22)"/>
+
+  <!-- Headline -->
+  <g font-family="Fraunces, serif" fill="#EDE8DC">
+    <text x="60" y="340" font-size="116" font-weight="500" letter-spacing="-3">L'encoche</text>
+    <text x="60" y="460" font-size="116" font-weight="500" letter-spacing="-3" font-style="italic" fill="url(#brand)">pense</text>
+    <text x="350" y="460" font-size="116" font-weight="500" letter-spacing="-3">maintenant.</text>
+  </g>
+
+  <!-- Subline -->
+  <text x="60" y="528" font-family="Instrument Sans, sans-serif" font-size="22" fill="#EDE8DC" opacity="0.62">
+    Médias · Calendrier · IA · Pomodoro · HUD · Convertisseur — un seul point d'accès.
+  </text>
+
+  <!-- Bottom strip -->
+  <line x1="60" y1="560" x2="1140" y2="560" stroke="#EDE8DC" stroke-opacity="0.08"/>
+
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="#EDE8DC" opacity="0.55">
+    <text x="60" y="595">macOS 14+ · Apple Silicon · Intel</text>
+    <text x="800" y="595" text-anchor="middle">·</text>
+    <text x="1140" y="595" text-anchor="end">Gratuit · 3,99 €/mois · 39,99 € à vie</text>
+  </g>
+</svg>

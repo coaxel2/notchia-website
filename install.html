@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Télécharger NotchIA</title>
+<meta name="description" content="Télécharger NotchIA pour macOS — DMG direct ou installateur Homebrew automatique." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/install" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/install" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/install" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/install" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/install" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/install" />
+<meta name="theme-color" content="#0B0D12" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+      fontFamily: {
+        display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+        sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+      }
+    }}
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  .grad-bg { background: var(--brand); }
+  .card {
+    background: linear-gradient(180deg, #14171F 0%, #0F1218 100%);
+    border: 1px solid rgba(237,232,220,0.08);
+  }
+  .card-reco {
+    border-color: rgba(168,85,247,0.45);
+    box-shadow: 0 0 60px rgba(168, 85, 247, 0.10), inset 0 1px 0 rgba(255,255,255,0.03);
+  }
+  .cta-mega {
+    background: var(--brand);
+    color: #0B0D12;
+    font-weight: 700;
+    transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+    box-shadow: 0 0 60px rgba(255, 77, 136, 0.20);
+  }
+  .cta-mega:hover { transform: translateY(-2px); box-shadow: 0 0 80px rgba(255, 77, 136, 0.32); }
+  .cta-mega:active { transform: translateY(0); }
+  .cta-soft {
+    background: rgba(237,232,220,0.06);
+    color: var(--cream);
+    border: 1px solid rgba(237,232,220,0.18);
+    font-weight: 600;
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+  }
+  .cta-soft:hover { background: rgba(237,232,220,0.10); border-color: rgba(237,232,220,0.30); transform: translateY(-1px); }
+  .step-badge {
+    background: var(--brand);
+    color: #0B0D12;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 12px;
+    flex-shrink: 0;
+  }
+  .step-badge-soft {
+    background: rgba(237,232,220,0.10);
+    color: var(--cream);
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 12px;
+    flex-shrink: 0;
+    border: 1px solid rgba(237,232,220,0.15);
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .pill-grad { background: var(--brand); color: #0B0D12; font-weight: 700; }
+  .pill-soft { background: rgba(237,232,220,0.06); color: rgba(237,232,220,0.65); border: 1px solid rgba(237,232,220,0.12); }
+  pre.cmd {
+    background: #14171F;
+    border: 1px solid rgba(237,232,220,0.10);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 12.5px;
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(237,232,220,0.92);
+    overflow-x: auto;
+  }
+  code.inline {
+    color: rgba(237,232,220,0.92);
+    background: rgba(237,232,220,0.08);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
+    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+    <a href="/account" class="hover:text-cream" data-i18n="nav.account">Mon compte</a>
+    <select id="lang-switch" aria-label="Choisir la langue" class="bg-transparent border border-cream/15 text-cream/70 text-xs font-mono rounded-full px-2.5 py-1.5 hover:text-cream hover:border-cream/30 transition cursor-pointer focus:outline-none focus:border-orange">
+      <option value="fr">FR</option>
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+      <option value="de">DE</option>
+    </select>
+  </nav>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pt-8 pb-24 space-y-10">
+
+  <!-- ── HERO ───────────────────────────────────────── -->
+  <section class="text-center space-y-5 max-w-3xl mx-auto">
+    <div class="inline-flex items-center gap-2 rounded-full border border-cream/15 px-3 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em] text-cream/60">
+      <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+      <span data-i18n="hero.os_badge">macOS Sequoia 15+ · Apple Silicon &amp; Intel</span>
+    </div>
+
+    <h1 class="font-display text-5xl md:text-6xl">
+      <span class="grad-text" data-i18n="hero.title.verb">Telecharger</span> <span data-i18n="hero.title.app">NotchIA</span>
+    </h1>
+    <p class="text-cream/70 text-lg max-w-xl mx-auto" data-i18n-html="hero.subtitle">
+      Deux méthodes au choix : <strong class="text-cream">le .dmg</strong> (standard, recommandé) ou <strong class="text-cream">l'installateur Homebrew</strong> (auto).
+    </p>
+  </section>
+
+  <!-- ── DEUX COLONNES : DMG (RECO) + HOMEBREW (AVANCE) ── -->
+  <section class="grid md:grid-cols-2 gap-5 lg:gap-6">
+
+    <!-- COL 1 — DMG (RECOMMANDÉ) -->
+    <article class="card card-reco rounded-2xl p-7 flex flex-col gap-5">
+      <div>
+        <span class="pill pill-grad" data-i18n="dmg.badge">Recommandé</span>
+        <h2 class="font-display text-2xl mt-3" data-i18n="dmg.title">Télécharger le .dmg</h2>
+        <p class="text-cream/70 text-sm mt-2" data-i18n="dmg.desc">Méthode standard : drag-and-drop dans Applications. Premier lancement avec clic droit → Ouvrir.</p>
+      </div>
+
+      <div>
+        <a href="https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg" download
+           class="cta-mega inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-base w-full">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v14"/><path d="m6 11 6 6 6-6"/><path d="M5 21h14"/>
+          </svg>
+          <span data-i18n="dmg.cta">Télécharger NotchIA.dmg</span>
+        </a>
+        <p class="text-cream/50 text-xs mt-2.5 font-mono text-center" data-i18n="dmg.format">~ 12 Mo · NotchIA.dmg · macOS Sequoia 15+</p>
+      </div>
+
+      <div class="space-y-3.5 pt-4 border-t border-cream/[0.08]">
+        <p class="text-[11px] font-mono uppercase tracking-[0.18em] text-cream/45" data-i18n="dmg.steps.title">Procédure</p>
+
+        <div class="flex items-start gap-3">
+          <div class="step-badge">1</div>
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-sm" data-i18n="dmg.s1.t">Clique le bouton ci-dessus</p>
+            <p class="text-cream/60 text-sm" data-i18n-html="dmg.s1.d">Tu reçois <code class="inline">NotchIA.dmg</code> dans tes Téléchargements.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="step-badge">2</div>
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-sm" data-i18n-html="dmg.s2.t">Double-clique le <code class="inline">.dmg</code></p>
+            <p class="text-cream/60 text-sm" data-i18n="dmg.s2.d">Une fenêtre s'ouvre avec NotchIA et un raccourci Applications.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="step-badge">3</div>
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-sm" data-i18n-html="dmg.s3.t">Glisse <strong>NotchIA</strong> dans <strong>Applications</strong></p>
+            <p class="text-cream/60 text-sm" data-i18n="dmg.s3.d">Puis éjecte le DMG (clic droit sur l'icône du disque → Éjecter).</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="step-badge">4</div>
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-sm" data-i18n-html="dmg.s4.t"><strong>Premier lancement</strong> : clic droit → Ouvrir</p>
+            <p class="text-cream/60 text-sm" data-i18n-html="dmg.s4.d">Dans Applications, <strong>clic droit</strong> sur NotchIA → <strong>Ouvrir</strong> → confirme dans la fenêtre macOS.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- COL 2 — HOMEBREW (AVANCÉ) -->
+    <article class="card rounded-2xl p-7 flex flex-col gap-5">
+      <div>
+        <span class="pill pill-soft" data-i18n="brew.badge">Avancé</span>
+        <h2 class="font-display text-2xl mt-3" data-i18n="brew.title">Installer via Homebrew</h2>
+        <p class="text-cream/70 text-sm mt-2" data-i18n="brew.desc">Installateur automatique : Homebrew + NotchIA + lancement, en ~ 2 minutes.</p>
+      </div>
+
+      <div>
+        <a href="NotchIA-Installer.zip" download="NotchIA-Installer.zip"
+           class="cta-soft inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-base w-full">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v14"/><path d="m6 11 6 6 6-6"/><path d="M5 21h14"/>
+          </svg>
+          <span data-i18n="brew.cta">Télécharger l'installateur</span>
+        </a>
+        <p class="text-cream/50 text-xs mt-2.5 font-mono text-center" data-i18n="brew.format">~ 2 Ko · NotchIA-Installer.zip</p>
+      </div>
+
+      <div class="space-y-3.5 pt-4 border-t border-cream/[0.08]">
+        <p class="text-[11px] font-mono uppercase tracking-[0.18em] text-cream/45" data-i18n="brew.steps.title">Procédure</p>
+
+        <div class="flex items-start gap-3">
+          <div class="step-badge-soft">1</div>
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-sm" data-i18n="brew.s1.t">Décompresse le .zip téléchargé</p>
+            <p class="text-cream/60 text-sm" data-i18n-html="brew.s1.d">Tu obtiens un fichier <code class="inline">install.command</code>.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="step-badge-soft">2</div>
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-sm" data-i18n-html="brew.s2.t"><strong>Clic droit</strong> sur <code class="inline">install.command</code> → Ouvrir</p>
+            <p class="text-cream/60 text-sm" data-i18n="brew.s2.d">Confirme dans le warning macOS. Le Terminal s'ouvre.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="step-badge-soft">3</div>
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-sm" data-i18n="brew.s3.t">Laisse tourner (~ 2 min)</p>
+            <p class="text-cream/60 text-sm" data-i18n="brew.s3.d">Le script installe Homebrew (si besoin), télécharge NotchIA, et le lance. macOS te demandera peut-être ton mot de passe une fois.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-cream/[0.08] space-y-2">
+        <p class="text-[11px] font-mono uppercase tracking-[0.18em] text-cream/45" data-i18n="brew.cli.title">Ou en CLI direct</p>
+        <p class="text-cream/60 text-sm" data-i18n-html="brew.cli.desc">Si tu as déjà <a href="https://brew.sh" class="underline">Homebrew</a> :</p>
+        <pre class="cmd">brew install --cask coaxel2/notchia/notchia</pre>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ── SI MACOS BLOQUE (Sequoia 15+ / Tahoe 26+) ──────── -->
+  <section class="card rounded-2xl p-7 space-y-3" style="border-color: rgba(255,122,45,0.30); background: linear-gradient(180deg,#1a1612 0%, #0F1218 100%);">
+    <h2 class="font-display text-xl" data-i18n="gate.title">Si macOS bloque (Sequoia 15+ ou Tahoe 26+)</h2>
+    <p class="text-cream/70 text-sm" data-i18n="gate.intro">Sur les versions récentes de macOS, le clic droit "Ouvrir" peut ne plus suffire. Procédure officielle Apple :</p>
+    <ol class="list-decimal list-inside text-cream/75 text-sm space-y-1.5 pl-2">
+      <li data-i18n-html="gate.li1">Ouvre <strong>Réglages système → Confidentialité et sécurité</strong></li>
+      <li data-i18n-html="gate.li2">Scrolle jusqu'à la section <strong>Sécurité</strong> en bas</li>
+      <li data-i18n-html="gate.li3">Clique <strong>« Ouvrir quand même »</strong> à côté du message « NotchIA a été empêchée de s'ouvrir »</li>
+    </ol>
+    <p class="text-cream/55 text-xs pt-2" data-i18n="gate.note">Tu n'auras à le faire qu'une seule fois. macOS approuve ensuite l'app pour toujours.</p>
+    <p class="text-cream/45 text-[11px] pt-1" data-i18n="gate.legal">NotchIA est signée mais non notarisée Apple, distribuée hors App Store. C'est normal et inoffensif.</p>
+  </section>
+
+  <!-- ── DÉSINSTALLER ─────────────────────────────────── -->
+  <section class="card rounded-2xl p-7 space-y-5">
+    <h2 class="font-display text-xl" data-i18n="uninstall.title">Désinstaller NotchIA</h2>
+
+    <div class="space-y-2">
+      <p class="text-[11px] font-mono uppercase tracking-[0.18em] text-cream/45" data-i18n="uninstall.dmg.title">Si installée via .dmg</p>
+      <ol class="list-decimal list-inside text-cream/75 text-sm space-y-1 pl-2">
+        <li data-i18n="uninstall.dmg.li1">Quitte NotchIA depuis la barre de menu</li>
+        <li data-i18n-html="uninstall.dmg.li2">Glisse <strong>NotchIA.app</strong> dans la corbeille</li>
+      </ol>
+      <p class="text-cream/55 text-xs pt-1" data-i18n-html="uninstall.dmg.note">Pour effacer aussi tes préférences : <code class="inline">~/Library/Preferences/com.coaxel2.notchia.plist</code> et <code class="inline">~/Library/Application Support/NotchIA/</code></p>
+    </div>
+
+    <div class="space-y-2 pt-2 border-t border-cream/[0.08]">
+      <p class="text-[11px] font-mono uppercase tracking-[0.18em] text-cream/45" data-i18n="uninstall.brew.title">Si installée via Homebrew</p>
+      <p class="text-cream/75 text-sm" data-i18n="uninstall.brew.intro">Ouvre Terminal et tape :</p>
+      <pre class="cmd">brew uninstall --cask --zap notchia</pre>
+      <p class="text-cream/55 text-xs" data-i18n-html="uninstall.brew.note">L'option <code class="inline">--zap</code> supprime aussi tes préférences NotchIA. Sans elle, elles sont conservées (au cas où tu réinstalles plus tard).</p>
+    </div>
+  </section>
+
+  <p class="text-center text-cream/40 text-xs pt-4" data-i18n-html="support.line">
+    Une question ? <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>
+  </p>
+
+</main>
+
+<script>
+  /* ────────────────────────────────────────────────────────────────────
+     i18n install.html — même mécanique que index.html (data-i18n attrs,
+     applyLang, detectLang via navigator.language + localStorage partagé).
+     Silent fallback : un élément sans clé dans le dict garde son texte.
+     ──────────────────────────────────────────────────────────────────── */
+  const I18N = {
+    fr: {
+      'meta.description': 'Télécharger NotchIA pour macOS — DMG direct ou installateur Homebrew automatique.',
+      'nav.home': 'Accueil', 'nav.pricing': 'Tarifs', 'nav.account': 'Mon compte',
+      'hero.os_badge': 'macOS Sequoia 15+ · Apple Silicon & Intel',
+      'hero.title.verb': 'Télécharger', 'hero.title.app': 'NotchIA',
+      'hero.subtitle': 'Deux méthodes au choix : <strong class="text-cream">le .dmg</strong> (standard, recommandé) ou <strong class="text-cream">l\'installateur Homebrew</strong> (auto).',
+
+      'dmg.badge': 'Recommandé',
+      'dmg.title': 'Télécharger le .dmg',
+      'dmg.desc': 'Méthode standard : drag-and-drop dans Applications. Premier lancement avec clic droit → Ouvrir.',
+      'dmg.cta': 'Télécharger NotchIA.dmg',
+      'dmg.format': '~ 12 Mo · NotchIA.dmg · macOS Sequoia 15+',
+      'dmg.steps.title': 'Procédure',
+      'dmg.s1.t': 'Clique le bouton ci-dessus',
+      'dmg.s1.d': 'Tu reçois <code class="inline">NotchIA.dmg</code> dans tes Téléchargements.',
+      'dmg.s2.t': 'Double-clique le <code class="inline">.dmg</code>',
+      'dmg.s2.d': "Une fenêtre s'ouvre avec NotchIA et un raccourci Applications.",
+      'dmg.s3.t': 'Glisse <strong>NotchIA</strong> dans <strong>Applications</strong>',
+      'dmg.s3.d': 'Puis éjecte le DMG (clic droit sur l\'icône du disque → Éjecter).',
+      'dmg.s4.t': '<strong>Premier lancement</strong> : clic droit → Ouvrir',
+      'dmg.s4.d': 'Dans Applications, <strong>clic droit</strong> sur NotchIA → <strong>Ouvrir</strong> → confirme dans la fenêtre macOS.',
+
+      'brew.badge': 'Avancé',
+      'brew.title': 'Installer via Homebrew',
+      'brew.desc': 'Installateur automatique : Homebrew + NotchIA + lancement, en ~ 2 minutes.',
+      'brew.cta': "Télécharger l'installateur",
+      'brew.format': '~ 2 Ko · NotchIA-Installer.zip',
+      'brew.steps.title': 'Procédure',
+      'brew.s1.t': 'Décompresse le .zip téléchargé',
+      'brew.s1.d': 'Tu obtiens un fichier <code class="inline">install.command</code>.',
+      'brew.s2.t': '<strong>Clic droit</strong> sur <code class="inline">install.command</code> → Ouvrir',
+      'brew.s2.d': "Confirme dans le warning macOS. Le Terminal s'ouvre.",
+      'brew.s3.t': 'Laisse tourner (~ 2 min)',
+      'brew.s3.d': 'Le script installe Homebrew (si besoin), télécharge NotchIA, et le lance. macOS te demandera peut-être ton mot de passe une fois.',
+      'brew.cli.title': 'Ou en CLI direct',
+      'brew.cli.desc': 'Si tu as déjà <a href="https://brew.sh" class="underline">Homebrew</a> :',
+
+      'gate.title': 'Si macOS bloque (Sequoia 15+ ou Tahoe 26+)',
+      'gate.intro': 'Sur les versions récentes de macOS, le clic droit "Ouvrir" peut ne plus suffire. Procédure officielle Apple :',
+      'gate.li1': 'Ouvre <strong>Réglages système → Confidentialité et sécurité</strong>',
+      'gate.li2': 'Scrolle jusqu\'à la section <strong>Sécurité</strong> en bas',
+      'gate.li3': 'Clique <strong>« Ouvrir quand même »</strong> à côté du message « NotchIA a été empêchée de s\'ouvrir »',
+      'gate.note': "Tu n'auras à le faire qu'une seule fois. macOS approuve ensuite l'app pour toujours.",
+      'gate.legal': "NotchIA est signée mais non notarisée Apple, distribuée hors App Store. C'est normal et inoffensif.",
+
+      'uninstall.title': 'Désinstaller NotchIA',
+      'uninstall.dmg.title': 'Si installée via .dmg',
+      'uninstall.dmg.li1': 'Quitte NotchIA depuis la barre de menu',
+      'uninstall.dmg.li2': 'Glisse <strong>NotchIA.app</strong> dans la corbeille',
+      'uninstall.dmg.note': 'Pour effacer aussi tes préférences : <code class="inline">~/Library/Preferences/com.coaxel2.notchia.plist</code> et <code class="inline">~/Library/Application Support/NotchIA/</code>',
+      'uninstall.brew.title': 'Si installée via Homebrew',
+      'uninstall.brew.intro': 'Ouvre Terminal et tape :',
+      'uninstall.brew.note': 'L\'option <code class="inline">--zap</code> supprime aussi tes préférences NotchIA. Sans elle, elles sont conservées (au cas où tu réinstalles plus tard).',
+
+      'support.line': 'Une question ? <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>',
+    },
+    en: {
+      'meta.description': 'Download NotchIA for macOS — direct DMG or automatic Homebrew installer.',
+      'nav.home': 'Home', 'nav.pricing': 'Pricing', 'nav.account': 'Account',
+      'hero.os_badge': 'macOS Sequoia 15+ · Apple Silicon & Intel',
+      'hero.title.verb': 'Download', 'hero.title.app': 'NotchIA',
+      'hero.subtitle': 'Two methods to choose from: <strong class="text-cream">the .dmg</strong> (standard, recommended) or <strong class="text-cream">the Homebrew installer</strong> (auto).',
+
+      'dmg.badge': 'Recommended',
+      'dmg.title': 'Download the .dmg',
+      'dmg.desc': 'Standard method: drag-and-drop into Applications. First launch with right-click → Open.',
+      'dmg.cta': 'Download NotchIA.dmg',
+      'dmg.format': '~ 12 MB · NotchIA.dmg · macOS Sequoia 15+',
+      'dmg.steps.title': 'Procedure',
+      'dmg.s1.t': 'Click the button above',
+      'dmg.s1.d': 'You get <code class="inline">NotchIA.dmg</code> in your Downloads.',
+      'dmg.s2.t': 'Double-click the <code class="inline">.dmg</code>',
+      'dmg.s2.d': 'A window opens with NotchIA and an Applications shortcut.',
+      'dmg.s3.t': 'Drag <strong>NotchIA</strong> into <strong>Applications</strong>',
+      'dmg.s3.d': 'Then eject the DMG (right-click the disk icon → Eject).',
+      'dmg.s4.t': '<strong>First launch</strong>: right-click → Open',
+      'dmg.s4.d': 'In Applications, <strong>right-click</strong> NotchIA → <strong>Open</strong> → confirm in the macOS dialog.',
+
+      'brew.badge': 'Advanced',
+      'brew.title': 'Install via Homebrew',
+      'brew.desc': 'Automatic installer: Homebrew + NotchIA + launch, in ~ 2 minutes.',
+      'brew.cta': 'Download the installer',
+      'brew.format': '~ 2 KB · NotchIA-Installer.zip',
+      'brew.steps.title': 'Procedure',
+      'brew.s1.t': 'Unzip the downloaded .zip',
+      'brew.s1.d': 'You get an <code class="inline">install.command</code> file.',
+      'brew.s2.t': '<strong>Right-click</strong> <code class="inline">install.command</code> → Open',
+      'brew.s2.d': 'Confirm the macOS warning. Terminal opens.',
+      'brew.s3.t': 'Let it run (~ 2 min)',
+      'brew.s3.d': 'The script installs Homebrew (if needed), downloads NotchIA, and launches it. macOS may ask for your password once.',
+      'brew.cli.title': 'Or via CLI directly',
+      'brew.cli.desc': 'If you already have <a href="https://brew.sh" class="underline">Homebrew</a>:',
+
+      'gate.title': 'If macOS blocks (Sequoia 15+ or Tahoe 26+)',
+      'gate.intro': 'On recent macOS versions, the right-click "Open" trick may no longer be enough. Official Apple procedure:',
+      'gate.li1': 'Open <strong>System Settings → Privacy & Security</strong>',
+      'gate.li2': 'Scroll to the <strong>Security</strong> section at the bottom',
+      'gate.li3': 'Click <strong>"Open Anyway"</strong> next to the message "NotchIA was blocked from opening"',
+      'gate.note': 'You only need to do this once. macOS then approves the app permanently.',
+      'gate.legal': "NotchIA is signed but not Apple-notarized, distributed outside the App Store. It's normal and harmless.",
+
+      'uninstall.title': 'Uninstall NotchIA',
+      'uninstall.dmg.title': 'If installed via .dmg',
+      'uninstall.dmg.li1': 'Quit NotchIA from the menu bar',
+      'uninstall.dmg.li2': 'Drag <strong>NotchIA.app</strong> to the Trash',
+      'uninstall.dmg.note': 'To also remove your preferences: <code class="inline">~/Library/Preferences/com.coaxel2.notchia.plist</code> and <code class="inline">~/Library/Application Support/NotchIA/</code>',
+      'uninstall.brew.title': 'If installed via Homebrew',
+      'uninstall.brew.intro': 'Open Terminal and type:',
+      'uninstall.brew.note': 'The <code class="inline">--zap</code> option also removes your NotchIA preferences. Without it, they are kept (in case you reinstall later).',
+
+      'support.line': 'A question? <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>',
+    },
+    es: {
+      'meta.description': 'Descargar NotchIA para macOS — DMG directo o instalador Homebrew automático.',
+      'nav.home': 'Inicio', 'nav.pricing': 'Precio', 'nav.account': 'Mi cuenta',
+      'hero.os_badge': 'macOS Sequoia 15+ · Apple Silicon & Intel',
+      'hero.title.verb': 'Descargar', 'hero.title.app': 'NotchIA',
+      'hero.subtitle': 'Dos métodos a elegir: <strong class="text-cream">el .dmg</strong> (estándar, recomendado) o <strong class="text-cream">el instalador Homebrew</strong> (automático).',
+
+      'dmg.badge': 'Recomendado',
+      'dmg.title': 'Descargar el .dmg',
+      'dmg.desc': 'Método estándar: arrastrar y soltar en Aplicaciones. Primer lanzamiento con clic derecho → Abrir.',
+      'dmg.cta': 'Descargar NotchIA.dmg',
+      'dmg.format': '~ 12 MB · NotchIA.dmg · macOS Sequoia 15+',
+      'dmg.steps.title': 'Procedimiento',
+      'dmg.s1.t': 'Haz clic en el botón de arriba',
+      'dmg.s1.d': 'Recibes <code class="inline">NotchIA.dmg</code> en tus Descargas.',
+      'dmg.s2.t': 'Doble clic en el <code class="inline">.dmg</code>',
+      'dmg.s2.d': 'Se abre una ventana con NotchIA y un acceso directo a Aplicaciones.',
+      'dmg.s3.t': 'Arrastra <strong>NotchIA</strong> a <strong>Aplicaciones</strong>',
+      'dmg.s3.d': 'Luego expulsa el DMG (clic derecho en el icono del disco → Expulsar).',
+      'dmg.s4.t': '<strong>Primer lanzamiento</strong>: clic derecho → Abrir',
+      'dmg.s4.d': 'En Aplicaciones, <strong>clic derecho</strong> en NotchIA → <strong>Abrir</strong> → confirma en la ventana de macOS.',
+
+      'brew.badge': 'Avanzado',
+      'brew.title': 'Instalar vía Homebrew',
+      'brew.desc': 'Instalador automático: Homebrew + NotchIA + lanzamiento, en ~ 2 minutos.',
+      'brew.cta': 'Descargar el instalador',
+      'brew.format': '~ 2 KB · NotchIA-Installer.zip',
+      'brew.steps.title': 'Procedimiento',
+      'brew.s1.t': 'Descomprime el .zip descargado',
+      'brew.s1.d': 'Obtienes un archivo <code class="inline">install.command</code>.',
+      'brew.s2.t': '<strong>Clic derecho</strong> en <code class="inline">install.command</code> → Abrir',
+      'brew.s2.d': 'Confirma la advertencia de macOS. Terminal se abre.',
+      'brew.s3.t': 'Déjalo correr (~ 2 min)',
+      'brew.s3.d': 'El script instala Homebrew (si es necesario), descarga NotchIA y lo lanza. macOS puede pedirte la contraseña una vez.',
+      'brew.cli.title': 'O por CLI directamente',
+      'brew.cli.desc': 'Si ya tienes <a href="https://brew.sh" class="underline">Homebrew</a>:',
+
+      'gate.title': 'Si macOS bloquea (Sequoia 15+ o Tahoe 26+)',
+      'gate.intro': 'En las versiones recientes de macOS, el clic derecho "Abrir" puede no ser suficiente. Procedimiento oficial de Apple:',
+      'gate.li1': 'Abre <strong>Ajustes del sistema → Privacidad y seguridad</strong>',
+      'gate.li2': 'Baja hasta la sección <strong>Seguridad</strong> al final',
+      'gate.li3': 'Haz clic en <strong>«Abrir de todas formas»</strong> al lado del mensaje «NotchIA fue bloqueada al abrirse»',
+      'gate.note': 'Solo tendrás que hacerlo una vez. macOS aprueba la app para siempre después.',
+      'gate.legal': 'NotchIA está firmada pero no notarizada por Apple, distribuida fuera del App Store. Es normal e inofensivo.',
+
+      'uninstall.title': 'Desinstalar NotchIA',
+      'uninstall.dmg.title': 'Si instalada vía .dmg',
+      'uninstall.dmg.li1': 'Cierra NotchIA desde la barra de menús',
+      'uninstall.dmg.li2': 'Arrastra <strong>NotchIA.app</strong> a la papelera',
+      'uninstall.dmg.note': 'Para borrar también tus preferencias: <code class="inline">~/Library/Preferences/com.coaxel2.notchia.plist</code> y <code class="inline">~/Library/Application Support/NotchIA/</code>',
+      'uninstall.brew.title': 'Si instalada vía Homebrew',
+      'uninstall.brew.intro': 'Abre Terminal y escribe:',
+      'uninstall.brew.note': 'La opción <code class="inline">--zap</code> también elimina tus preferencias de NotchIA. Sin ella, se conservan (por si reinstalas más tarde).',
+
+      'support.line': '¿Una pregunta? <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>',
+    },
+    de: {
+      'meta.description': 'NotchIA für macOS herunterladen — direktes DMG oder automatischer Homebrew-Installer.',
+      'nav.home': 'Startseite', 'nav.pricing': 'Preis', 'nav.account': 'Mein Konto',
+      'hero.os_badge': 'macOS Sequoia 15+ · Apple Silicon & Intel',
+      'hero.title.verb': 'NotchIA', 'hero.title.app': 'herunterladen',
+      'hero.subtitle': 'Zwei Methoden zur Wahl: <strong class="text-cream">das .dmg</strong> (Standard, empfohlen) oder <strong class="text-cream">der Homebrew-Installer</strong> (automatisch).',
+
+      'dmg.badge': 'Empfohlen',
+      'dmg.title': 'Das .dmg herunterladen',
+      'dmg.desc': 'Standardmethode: per Drag-and-Drop in Programme. Erster Start mit Rechtsklick → Öffnen.',
+      'dmg.cta': 'NotchIA.dmg herunterladen',
+      'dmg.format': '~ 12 MB · NotchIA.dmg · macOS Sequoia 15+',
+      'dmg.steps.title': 'Ablauf',
+      'dmg.s1.t': 'Auf den Button oben klicken',
+      'dmg.s1.d': 'Du erhältst <code class="inline">NotchIA.dmg</code> in deinen Downloads.',
+      'dmg.s2.t': 'Doppelklick auf das <code class="inline">.dmg</code>',
+      'dmg.s2.d': 'Ein Fenster mit NotchIA und einer Verknüpfung zu Programme öffnet sich.',
+      'dmg.s3.t': 'Ziehe <strong>NotchIA</strong> in <strong>Programme</strong>',
+      'dmg.s3.d': 'Dann das DMG auswerfen (Rechtsklick auf das Symbol → Auswerfen).',
+      'dmg.s4.t': '<strong>Erster Start</strong>: Rechtsklick → Öffnen',
+      'dmg.s4.d': 'In Programme: <strong>Rechtsklick</strong> auf NotchIA → <strong>Öffnen</strong> → im macOS-Dialog bestätigen.',
+
+      'brew.badge': 'Fortgeschritten',
+      'brew.title': 'Über Homebrew installieren',
+      'brew.desc': 'Automatischer Installer: Homebrew + NotchIA + Start, in ~ 2 Minuten.',
+      'brew.cta': 'Installer herunterladen',
+      'brew.format': '~ 2 KB · NotchIA-Installer.zip',
+      'brew.steps.title': 'Ablauf',
+      'brew.s1.t': 'Die geladene .zip-Datei entpacken',
+      'brew.s1.d': 'Du erhältst eine <code class="inline">install.command</code>-Datei.',
+      'brew.s2.t': '<strong>Rechtsklick</strong> auf <code class="inline">install.command</code> → Öffnen',
+      'brew.s2.d': 'Die macOS-Warnung bestätigen. Terminal öffnet sich.',
+      'brew.s3.t': 'Laufen lassen (~ 2 Min)',
+      'brew.s3.d': 'Das Skript installiert Homebrew (falls nötig), lädt NotchIA herunter und startet es. macOS fragt eventuell einmal nach deinem Passwort.',
+      'brew.cli.title': 'Oder direkt per CLI',
+      'brew.cli.desc': 'Wenn du bereits <a href="https://brew.sh" class="underline">Homebrew</a> hast:',
+
+      'gate.title': 'Wenn macOS blockiert (Sequoia 15+ oder Tahoe 26+)',
+      'gate.intro': 'Auf neueren macOS-Versionen reicht der Rechtsklick „Öffnen" eventuell nicht mehr. Offizielle Apple-Prozedur:',
+      'gate.li1': 'Öffne <strong>Systemeinstellungen → Datenschutz & Sicherheit</strong>',
+      'gate.li2': 'Scrolle zum Abschnitt <strong>Sicherheit</strong> ganz unten',
+      'gate.li3': 'Klicke <strong>„Trotzdem öffnen"</strong> neben der Meldung „NotchIA wurde am Öffnen gehindert"',
+      'gate.note': 'Du musst das nur einmal machen. macOS genehmigt die App danach dauerhaft.',
+      'gate.legal': 'NotchIA ist signiert, aber nicht von Apple notarisiert, außerhalb des App Stores vertrieben. Das ist normal und harmlos.',
+
+      'uninstall.title': 'NotchIA deinstallieren',
+      'uninstall.dmg.title': 'Wenn über .dmg installiert',
+      'uninstall.dmg.li1': 'NotchIA in der Menüleiste beenden',
+      'uninstall.dmg.li2': 'Ziehe <strong>NotchIA.app</strong> in den Papierkorb',
+      'uninstall.dmg.note': 'Um auch deine Einstellungen zu löschen: <code class="inline">~/Library/Preferences/com.coaxel2.notchia.plist</code> und <code class="inline">~/Library/Application Support/NotchIA/</code>',
+      'uninstall.brew.title': 'Wenn über Homebrew installiert',
+      'uninstall.brew.intro': 'Öffne Terminal und tippe:',
+      'uninstall.brew.note': 'Die Option <code class="inline">--zap</code> entfernt auch deine NotchIA-Einstellungen. Ohne sie bleiben sie erhalten (falls du später neu installierst).',
+
+      'support.line': 'Eine Frage? <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>',
+    },
+  };
+
+  function detectLang() {
+    try {
+      const stored = localStorage.getItem('notchia-lang');
+      if (stored && I18N[stored]) return stored;
+    } catch (e) {}
+    const b = (navigator.language || 'en').toLowerCase().split('-')[0];
+    return I18N[b] ? b : 'en';
+  }
+
+  function applyLang(lang) {
+    if (!I18N[lang]) lang = 'en';
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const v = dict[el.dataset.i18n];
+      if (v != null) el.textContent = v;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const v = dict[el.dataset.i18nHtml];
+      if (v != null) el.innerHTML = v;
+    });
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && dict['meta.description']) metaDesc.content = dict['meta.description'];
+    const sel = document.getElementById('lang-switch');
+    if (sel) sel.value = lang;
+    try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+  }
+
+  applyLang(detectLang());
+  document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
+</script>
+
+</body>
+</html>

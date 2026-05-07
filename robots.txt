@@ -1,0 +1,79 @@
+# NotchIA — robots.txt
+# https://notchia.app/robots.txt
+
+# === Crawlers traditionnels ===
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+
+# === Crawlers IA (CRITIQUE pour GEO — citation par les LLM) ===
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI (Gemini, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Amazon (Alexa AI)
+User-agent: Amazonbot
+Allow: /
+
+# Apple (Apple Intelligence)
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta (Llama, Meta AI)
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ByteDance (Doubao)
+User-agent: Bytespider
+Allow: /
+
+# Common Crawl (utilisé par GPT, LLaMA, etc.)
+User-agent: CCBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# DuckDuckGo Assist
+User-agent: DuckAssistBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Sitemap
+Sitemap: https://notchia.app/sitemap.xml
