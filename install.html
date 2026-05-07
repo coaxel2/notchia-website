@@ -269,14 +269,32 @@
   <!-- ── SI MACOS BLOQUE (Sequoia 15+ / Tahoe 26+) ──────── -->
   <section class="card rounded-2xl p-7 space-y-3" style="border-color: rgba(255,122,45,0.30); background: linear-gradient(180deg,#1a1612 0%, #0F1218 100%);">
     <h2 class="font-display text-xl" data-i18n="gate.title">Si macOS bloque (Sequoia 15+ ou Tahoe 26+)</h2>
-    <p class="text-cream/70 text-sm" data-i18n="gate.intro">Sur les versions récentes de macOS, le clic droit "Ouvrir" peut ne plus suffire. Procédure officielle Apple :</p>
+    <p class="text-cream/70 text-sm" data-i18n="gate.intro">Au premier lancement, macOS affiche un avertissement de sécurité. Procédure officielle Apple, étape par étape :</p>
     <ol class="list-decimal list-inside text-cream/75 text-sm space-y-1.5 pl-2">
-      <li data-i18n-html="gate.li1">Ouvre <strong>Réglages système → Confidentialité et sécurité</strong></li>
-      <li data-i18n-html="gate.li2">Scrolle jusqu'à la section <strong>Sécurité</strong> en bas</li>
-      <li data-i18n-html="gate.li3">Clique <strong>« Ouvrir quand même »</strong> à côté du message « NotchIA a été empêchée de s'ouvrir »</li>
+      <li data-i18n-html="gate.li1">Dans la fenêtre <em>« NotchIA ne peut pas être ouverte »</em>, clique <strong>Terminer</strong> pour la fermer</li>
+      <li data-i18n-html="gate.li2">Ouvre <strong>Réglages système → Confidentialité et sécurité</strong></li>
+      <li data-i18n-html="gate.li3">Scrolle jusqu'à la section <strong>Sécurité</strong> tout en bas</li>
+      <li data-i18n-html="gate.li4">Clique <strong>« Ouvrir quand même »</strong> à côté du message « NotchIA a été empêchée de s'ouvrir »</li>
+      <li data-i18n-html="gate.li5">Saisis ton <strong>mot de passe Mac</strong> pour autoriser l'action</li>
+      <li data-i18n-html="gate.li6">Une dernière fenêtre apparaît : clique <strong>« Ouvrir »</strong>. NotchIA se lance et est approuvée pour toujours</li>
     </ol>
     <p class="text-cream/55 text-xs pt-2" data-i18n="gate.note">Tu n'auras à le faire qu'une seule fois. macOS approuve ensuite l'app pour toujours.</p>
     <p class="text-cream/45 text-[11px] pt-1" data-i18n="gate.legal">NotchIA est signée mais non notarisée Apple, distribuée hors App Store. C'est normal et inoffensif.</p>
+  </section>
+
+  <!-- ── ACCESSIBILITÉ : DÉBLOQUER TOUTES LES FONCTIONNALITÉS ── -->
+  <section class="card rounded-2xl p-7 space-y-3" style="border-color: rgba(168,85,247,0.35); background: linear-gradient(180deg,#16121F 0%, #0F1218 100%);">
+    <div>
+      <span class="pill pill-grad" data-i18n="access.badge">Pour aller plus loin</span>
+    </div>
+    <h2 class="font-display text-xl" data-i18n="access.title">Débloquer tout le potentiel de NotchIA (Accessibilité)</h2>
+    <p class="text-cream/70 text-sm" data-i18n-html="access.intro">Pour profiter pleinement de NotchIA — <strong>raccourcis globaux</strong>, <strong>contrôle des médias</strong>, <strong>capture d'écran</strong>, <strong>automatisations</strong> et <strong>personnalisation avancée</strong> — accorde-lui l'accès <strong>Accessibilité</strong>.</p>
+    <ol class="list-decimal list-inside text-cream/75 text-sm space-y-1.5 pl-2">
+      <li data-i18n-html="access.li1">Ouvre <strong>Réglages système → Confidentialité et sécurité → Accessibilité</strong></li>
+      <li data-i18n-html="access.li2">Active l'interrupteur à côté de <strong>NotchIA</strong> (saisis ton mot de passe si demandé)</li>
+      <li data-i18n-html="access.li3">Si NotchIA n'apparaît pas dans la liste, clique <strong>+</strong> puis ajoute-la depuis le dossier <strong>Applications</strong></li>
+    </ol>
+    <p class="text-cream/55 text-xs pt-2" data-i18n="access.note">Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégrations système, personnalisation avancée) seront limitées ou indisponibles.</p>
   </section>
 
   <!-- ── DÉSINSTALLER ─────────────────────────────────── -->
@@ -351,12 +369,23 @@
       'brew.cli.desc': 'Si tu as déjà <a href="https://brew.sh" class="underline">Homebrew</a> :',
 
       'gate.title': 'Si macOS bloque (Sequoia 15+ ou Tahoe 26+)',
-      'gate.intro': 'Sur les versions récentes de macOS, le clic droit "Ouvrir" peut ne plus suffire. Procédure officielle Apple :',
-      'gate.li1': 'Ouvre <strong>Réglages système → Confidentialité et sécurité</strong>',
-      'gate.li2': 'Scrolle jusqu\'à la section <strong>Sécurité</strong> en bas',
-      'gate.li3': 'Clique <strong>« Ouvrir quand même »</strong> à côté du message « NotchIA a été empêchée de s\'ouvrir »',
+      'gate.intro': 'Au premier lancement, macOS affiche un avertissement de sécurité. Procédure officielle Apple, étape par étape :',
+      'gate.li1': 'Dans la fenêtre <em>« NotchIA ne peut pas être ouverte »</em>, clique <strong>Terminer</strong> pour la fermer',
+      'gate.li2': 'Ouvre <strong>Réglages système → Confidentialité et sécurité</strong>',
+      'gate.li3': 'Scrolle jusqu\'à la section <strong>Sécurité</strong> tout en bas',
+      'gate.li4': 'Clique <strong>« Ouvrir quand même »</strong> à côté du message « NotchIA a été empêchée de s\'ouvrir »',
+      'gate.li5': 'Saisis ton <strong>mot de passe Mac</strong> pour autoriser l\'action',
+      'gate.li6': 'Une dernière fenêtre apparaît : clique <strong>« Ouvrir »</strong>. NotchIA se lance et est approuvée pour toujours',
       'gate.note': "Tu n'auras à le faire qu'une seule fois. macOS approuve ensuite l'app pour toujours.",
       'gate.legal': "NotchIA est signée mais non notarisée Apple, distribuée hors App Store. C'est normal et inoffensif.",
+
+      'access.badge': 'Pour aller plus loin',
+      'access.title': 'Débloquer tout le potentiel de NotchIA (Accessibilité)',
+      'access.intro': 'Pour profiter pleinement de NotchIA — <strong>raccourcis globaux</strong>, <strong>contrôle des médias</strong>, <strong>capture d\'écran</strong>, <strong>automatisations</strong> et <strong>personnalisation avancée</strong> — accorde-lui l\'accès <strong>Accessibilité</strong>.',
+      'access.li1': 'Ouvre <strong>Réglages système → Confidentialité et sécurité → Accessibilité</strong>',
+      'access.li2': 'Active l\'interrupteur à côté de <strong>NotchIA</strong> (saisis ton mot de passe si demandé)',
+      'access.li3': 'Si NotchIA n\'apparaît pas dans la liste, clique <strong>+</strong> puis ajoute-la depuis le dossier <strong>Applications</strong>',
+      'access.note': 'Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégrations système, personnalisation avancée) seront limitées ou indisponibles.',
 
       'uninstall.title': 'Désinstaller NotchIA',
       'uninstall.dmg.title': 'Si installée via .dmg',
@@ -407,12 +436,23 @@
       'brew.cli.desc': 'If you already have <a href="https://brew.sh" class="underline">Homebrew</a>:',
 
       'gate.title': 'If macOS blocks (Sequoia 15+ or Tahoe 26+)',
-      'gate.intro': 'On recent macOS versions, the right-click "Open" trick may no longer be enough. Official Apple procedure:',
-      'gate.li1': 'Open <strong>System Settings → Privacy & Security</strong>',
-      'gate.li2': 'Scroll to the <strong>Security</strong> section at the bottom',
-      'gate.li3': 'Click <strong>"Open Anyway"</strong> next to the message "NotchIA was blocked from opening"',
+      'gate.intro': 'On first launch, macOS shows a security warning. Official Apple procedure, step by step:',
+      'gate.li1': 'In the dialog <em>"NotchIA can\'t be opened"</em>, click <strong>Done</strong> to dismiss it',
+      'gate.li2': 'Open <strong>System Settings → Privacy & Security</strong>',
+      'gate.li3': 'Scroll all the way down to the <strong>Security</strong> section',
+      'gate.li4': 'Click <strong>"Open Anyway"</strong> next to the message "NotchIA was blocked from opening"',
+      'gate.li5': 'Enter your <strong>Mac password</strong> to authorize the action',
+      'gate.li6': 'A final dialog appears: click <strong>"Open"</strong>. NotchIA launches and is approved for good',
       'gate.note': 'You only need to do this once. macOS then approves the app permanently.',
       'gate.legal': "NotchIA is signed but not Apple-notarized, distributed outside the App Store. It's normal and harmless.",
+
+      'access.badge': 'Going further',
+      'access.title': 'Unlock NotchIA\'s full potential (Accessibility)',
+      'access.intro': 'To get the most out of NotchIA — <strong>global shortcuts</strong>, <strong>media control</strong>, <strong>screen capture</strong>, <strong>automations</strong> and <strong>advanced customization</strong> — grant it <strong>Accessibility</strong> access.',
+      'access.li1': 'Open <strong>System Settings → Privacy & Security → Accessibility</strong>',
+      'access.li2': 'Toggle on <strong>NotchIA</strong> (enter your password if asked)',
+      'access.li3': 'If NotchIA isn\'t in the list, click <strong>+</strong> and add it from the <strong>Applications</strong> folder',
+      'access.note': 'Without this permission, some features (global shortcuts, system integrations, advanced customization) will be limited or unavailable.',
 
       'uninstall.title': 'Uninstall NotchIA',
       'uninstall.dmg.title': 'If installed via .dmg',
@@ -463,12 +503,23 @@
       'brew.cli.desc': 'Si ya tienes <a href="https://brew.sh" class="underline">Homebrew</a>:',
 
       'gate.title': 'Si macOS bloquea (Sequoia 15+ o Tahoe 26+)',
-      'gate.intro': 'En las versiones recientes de macOS, el clic derecho "Abrir" puede no ser suficiente. Procedimiento oficial de Apple:',
-      'gate.li1': 'Abre <strong>Ajustes del sistema → Privacidad y seguridad</strong>',
-      'gate.li2': 'Baja hasta la sección <strong>Seguridad</strong> al final',
-      'gate.li3': 'Haz clic en <strong>«Abrir de todas formas»</strong> al lado del mensaje «NotchIA fue bloqueada al abrirse»',
+      'gate.intro': 'En el primer lanzamiento, macOS muestra un aviso de seguridad. Procedimiento oficial de Apple, paso a paso:',
+      'gate.li1': 'En la ventana <em>«No se puede abrir NotchIA»</em>, haz clic en <strong>Listo</strong> para cerrarla',
+      'gate.li2': 'Abre <strong>Ajustes del sistema → Privacidad y seguridad</strong>',
+      'gate.li3': 'Baja hasta la sección <strong>Seguridad</strong> al final',
+      'gate.li4': 'Haz clic en <strong>«Abrir de todas formas»</strong> al lado del mensaje «NotchIA fue bloqueada al abrirse»',
+      'gate.li5': 'Introduce tu <strong>contraseña de Mac</strong> para autorizar la acción',
+      'gate.li6': 'Aparece una última ventana: haz clic en <strong>«Abrir»</strong>. NotchIA se inicia y queda aprobada para siempre',
       'gate.note': 'Solo tendrás que hacerlo una vez. macOS aprueba la app para siempre después.',
       'gate.legal': 'NotchIA está firmada pero no notarizada por Apple, distribuida fuera del App Store. Es normal e inofensivo.',
+
+      'access.badge': 'Para más',
+      'access.title': 'Desbloquear todo el potencial de NotchIA (Accesibilidad)',
+      'access.intro': 'Para aprovechar al máximo NotchIA — <strong>atajos globales</strong>, <strong>control de medios</strong>, <strong>capturas de pantalla</strong>, <strong>automatizaciones</strong> y <strong>personalización avanzada</strong> — concédele acceso de <strong>Accesibilidad</strong>.',
+      'access.li1': 'Abre <strong>Ajustes del sistema → Privacidad y seguridad → Accesibilidad</strong>',
+      'access.li2': 'Activa el interruptor al lado de <strong>NotchIA</strong> (introduce tu contraseña si se te pide)',
+      'access.li3': 'Si NotchIA no aparece en la lista, haz clic en <strong>+</strong> y añádela desde la carpeta <strong>Aplicaciones</strong>',
+      'access.note': 'Sin este permiso, algunas funciones (atajos globales, integraciones del sistema, personalización avanzada) estarán limitadas o no disponibles.',
 
       'uninstall.title': 'Desinstalar NotchIA',
       'uninstall.dmg.title': 'Si instalada vía .dmg',
@@ -519,12 +570,23 @@
       'brew.cli.desc': 'Wenn du bereits <a href="https://brew.sh" class="underline">Homebrew</a> hast:',
 
       'gate.title': 'Wenn macOS blockiert (Sequoia 15+ oder Tahoe 26+)',
-      'gate.intro': 'Auf neueren macOS-Versionen reicht der Rechtsklick „Öffnen" eventuell nicht mehr. Offizielle Apple-Prozedur:',
-      'gate.li1': 'Öffne <strong>Systemeinstellungen → Datenschutz & Sicherheit</strong>',
-      'gate.li2': 'Scrolle zum Abschnitt <strong>Sicherheit</strong> ganz unten',
-      'gate.li3': 'Klicke <strong>„Trotzdem öffnen"</strong> neben der Meldung „NotchIA wurde am Öffnen gehindert"',
+      'gate.intro': 'Beim ersten Start zeigt macOS eine Sicherheitswarnung. Offizielle Apple-Prozedur, Schritt für Schritt:',
+      'gate.li1': 'Im Dialog <em>„NotchIA kann nicht geöffnet werden"</em> auf <strong>Fertig</strong> klicken, um ihn zu schließen',
+      'gate.li2': 'Öffne <strong>Systemeinstellungen → Datenschutz & Sicherheit</strong>',
+      'gate.li3': 'Scrolle ganz nach unten zum Abschnitt <strong>Sicherheit</strong>',
+      'gate.li4': 'Klicke <strong>„Trotzdem öffnen"</strong> neben der Meldung „NotchIA wurde am Öffnen gehindert"',
+      'gate.li5': 'Gib dein <strong>Mac-Passwort</strong> ein, um die Aktion zu autorisieren',
+      'gate.li6': 'Ein letztes Fenster erscheint: klicke <strong>„Öffnen"</strong>. NotchIA startet und ist dauerhaft genehmigt',
       'gate.note': 'Du musst das nur einmal machen. macOS genehmigt die App danach dauerhaft.',
       'gate.legal': 'NotchIA ist signiert, aber nicht von Apple notarisiert, außerhalb des App Stores vertrieben. Das ist normal und harmlos.',
+
+      'access.badge': 'Mehr Möglichkeiten',
+      'access.title': 'Das volle Potenzial von NotchIA freischalten (Bedienungshilfen)',
+      'access.intro': 'Um NotchIA voll auszunutzen — <strong>globale Shortcuts</strong>, <strong>Medien-Steuerung</strong>, <strong>Bildschirmaufnahmen</strong>, <strong>Automatisierungen</strong> und <strong>erweiterte Anpassung</strong> — erteile ihr <strong>Bedienungshilfen</strong>-Zugriff.',
+      'access.li1': 'Öffne <strong>Systemeinstellungen → Datenschutz & Sicherheit → Bedienungshilfen</strong>',
+      'access.li2': 'Aktiviere den Schalter neben <strong>NotchIA</strong> (Passwort eingeben falls gefragt)',
+      'access.li3': 'Falls NotchIA nicht in der Liste erscheint, klicke <strong>+</strong> und füge sie aus dem Ordner <strong>Programme</strong> hinzu',
+      'access.note': 'Ohne diese Erlaubnis sind einige Funktionen (globale Shortcuts, Systemintegration, erweiterte Anpassung) eingeschränkt oder nicht verfügbar.',
 
       'uninstall.title': 'NotchIA deinstallieren',
       'uninstall.dmg.title': 'Wenn über .dmg installiert',

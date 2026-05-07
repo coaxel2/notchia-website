@@ -29,7 +29,16 @@ URL : https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg (~
 3. Glisser `NotchIA.app` dans le dossier `Applications`
 4. **Premier lancement** : clic droit sur NotchIA dans Applications → **Ouvrir** → confirmer dans la fenêtre macOS
 
-Sur macOS Sequoia 15+ ou Tahoe 26+, si le clic droit ne suffit pas : **Réglages système → Confidentialité et sécurité → "Ouvrir quand même"** à côté du message « NotchIA a été empêchée de s'ouvrir ». À faire une seule fois, l'app est ensuite approuvée pour toujours.
+Sur macOS Sequoia 15+ ou Tahoe 26+, si le clic droit ne suffit pas, procédure complète Apple, étape par étape :
+
+1. Dans la fenêtre « NotchIA ne peut pas être ouverte », cliquer **Terminer** pour la fermer
+2. Ouvrir **Réglages système → Confidentialité et sécurité**
+3. Scroller jusqu'à la section **Sécurité** tout en bas
+4. Cliquer **« Ouvrir quand même »** à côté du message « NotchIA a été empêchée de s'ouvrir »
+5. Saisir le **mot de passe Mac** pour autoriser l'action
+6. Une dernière fenêtre apparaît : cliquer **« Ouvrir »**. NotchIA se lance et est approuvée pour toujours
+
+À faire une seule fois — macOS approuve ensuite l'app pour toujours.
 
 Mises à jour automatiques via Sparkle (signature EdDSA vérifiée, appcast HTTPS).
 
@@ -45,6 +54,16 @@ URL : https://notchia.app/NotchIA-Installer.zip (~ 2 Ko)
    - **Lance NotchIA** ou ouvre Réglages système → Confidentialité & Sécurité si Gatekeeper bloque
 
 Durée totale ~ 2 minutes. Solution alternative directement en CLI si Homebrew déjà installé : `brew install --cask coaxel2/notchia/notchia`.
+
+### Étape finale — Accessibilité (recommandé)
+
+Pour exploiter tout le potentiel de NotchIA — raccourcis globaux, contrôle des médias, capture d'écran, automatisations, personnalisation avancée — accorder l'accès **Accessibilité** :
+
+1. Ouvrir **Réglages système → Confidentialité et sécurité → Accessibilité**
+2. Activer l'interrupteur à côté de **NotchIA** (saisir le mot de passe si demandé)
+3. Si NotchIA n'apparaît pas dans la liste, cliquer **+** puis ajouter l'app depuis le dossier **Applications**
+
+Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégrations système, personnalisation avancée) seront limitées ou indisponibles.
 
 ### Désinstallation
 
