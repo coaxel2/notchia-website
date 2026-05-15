@@ -113,9 +113,9 @@
       "screenshot": "https://notchia.app/og-image.png",
       "applicationCategory": ["ProductivityApplication", "DeveloperApplication", "UtilitiesApplication"],
       "applicationSubCategory": "MenuBarApp",
-      "operatingSystem": "macOS 14.0+",
+      "operatingSystem": "macOS 15.0+",
       "processorRequirements": "Apple Silicon or Intel",
-      "softwareVersion": "2.7.4-beta1",
+      "softwareVersion": "2.8.0",
       "releaseNotes": "https://notchia.app/#telecharger",
       "datePublished": "2026-04-12",
       "dateModified": "2026-05-06",
@@ -126,6 +126,8 @@
       "author": { "@id": "https://notchia.app/#axel" },
       "publisher": { "@id": "https://notchia.app/#organization" },
       "featureList": [
+        "Digest : brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS/Atom (nouveau en 2.8.0, requiert macOS 26+)",
+        "Résumé IA d'un fichier (PDF/.txt/.md/.docx) on-device dans le Shelf (Pro, requiert macOS 26+)",
         "Lecteur multi-source Apple Music / Spotify / YouTube Music",
         "Paroles synchronisées en temps réel via lrclib",
         "Visualizer audio personnalisable",
@@ -217,7 +219,7 @@
           "name": "Quelle version de macOS est requise pour NotchIA ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NotchIA nécessite macOS 14.0 (Sonoma) ou plus récent. L'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel."
+            "text": "NotchIA nécessite macOS 15.0 (Sequoia) ou plus récent. L'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel. Les fonctionnalités d'IA on-device (Digest, résumé Shelf) nécessitent macOS 26+ avec Apple Intelligence ; dégradation gracieuse sinon."
           }
         },
         {
@@ -766,13 +768,14 @@
     <a href="#" class="flex items-center gap-2.5 group" aria-label="NotchIA — accueil">
       <img src="logo.png" alt="" width="28" height="28" class="rounded-md w-7 h-7 sm:w-8 sm:h-8" />
       <span class="font-display text-lg sm:text-xl leading-none tracking-tight">NotchIA</span>
-      <span class="eyebrow ml-2 hidden md:inline">v2.7 · macOS</span>
+      <span class="eyebrow ml-2 hidden md:inline">v2.8 · macOS</span>
     </a>
 
     <nav class="hidden lg:flex items-center gap-8 text-sm text-fog" aria-label="Navigation principale">
       <a href="#ia" data-i18n="nav.ia" class="hover:text-cream transition">IA</a>
       <a href="#medias" data-i18n="nav.medias" class="hover:text-cream transition">Médias</a>
       <a href="#agenda" data-i18n="nav.agenda" class="hover:text-cream transition">Agenda</a>
+      <a href="#digest" data-i18n="nav.digest" class="hover:text-cream transition">Digest</a>
       <a href="#productivite" data-i18n="nav.productivity" class="hover:text-cream transition">Productivité</a>
       <a href="#systeme" data-i18n="nav.system" class="hover:text-cream transition">Système</a>
       <a href="#tarif" data-i18n="nav.pricing" class="hover:text-cream transition">Tarif</a>
@@ -819,7 +822,7 @@
       </div>
       <div class="flex items-center gap-4 sm:gap-6 text-[11px] sm:text-xs text-mist font-mono">
         <span>FR · 47 Mo</span>
-        <span class="hidden sm:inline">macOS 14+</span>
+        <span class="hidden sm:inline">macOS 15+</span>
         <span class="hidden md:inline">Apple Silicon · Intel</span>
       </div>
     </div>
@@ -1328,14 +1331,98 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §04 — PRODUCTIVITÉ
+     §04 — DIGEST (NEW 2.8.0)
+═══════════════════════════════════════════════════════════════════════ -->
+<section id="digest" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
+      <div class="lg:col-span-5 reveal">
+        <div class="eyebrow mb-5 sm:mb-6 flex items-center gap-3 flex-wrap">
+          <span data-i18n="digest.eyebrow">§04 — digest IA on-device</span>
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider" style="background:linear-gradient(90deg,#A855F7,#4DA8FF);color:#0B0D12">Nouveau · 2.8.0</span>
+        </div>
+        <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
+          <span data-i18n="digest.title1">Ton brief d'actu.</span>
+          <br/>
+          <span class="display-italic grad-text" data-i18n="digest.title2">Résumé sur ton Mac.</span>
+        </h2>
+        <p class="mt-6 sm:mt-7 text-fog text-base sm:text-lg leading-relaxed max-w-md" data-i18n="digest.intro">
+          Tu colles tes flux RSS/Atom. Tu dis ce qui t'intéresse en langage naturel. Apple Intelligence fait le tri, résume, priorise — sans qu'aucun octet ne quitte ta machine.
+        </p>
+        <ul class="mt-7 space-y-2.5 text-fog text-sm">
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="digest.b1">Tes propres flux RSS / Atom</span></li>
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="digest.b2">Sujets à suivre en langage naturel</span></li>
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="digest.b3">Résumé Apple Intelligence on-device</span></li>
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="digest.b4">Cache 14 jours · 100 % local · zéro envoi externe</span></li>
+        </ul>
+        <p class="mt-6 text-mist text-xs font-mono" data-i18n="digest.note">Requiert macOS 26+ pour Apple Intelligence. Sans, dégradation gracieuse : viewer brut sans résumé IA.</p>
+      </div>
+
+      <!-- Digest brief mock -->
+      <div class="lg:col-span-7 reveal">
+        <div class="rounded-3xl border border-line bg-ink2 overflow-hidden">
+          <div class="px-5 sm:px-6 py-4 sm:py-5 border-b border-line flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full grad-bg flex items-center justify-center text-[14px]">🦉</div>
+              <div>
+                <div class="display text-base sm:text-lg">Digest du matin</div>
+                <div class="text-mist text-[11px] font-mono">15 mai · 07:42 · 4 sources · 18 items → 3 résumés</div>
+              </div>
+            </div>
+            <span class="text-[10px] font-mono text-mist">on-device</span>
+          </div>
+
+          <div class="divide-y divide-line">
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-[10px] font-mono text-orange uppercase tracking-wider">IA vidéo</span>
+                <span class="text-mist text-[10px] font-mono">· 3 sources</span>
+              </div>
+              <p class="text-cream text-sm sm:text-base leading-relaxed">
+                Sora 2.4 ouvre la génération longue à 60 s côté API ; Runway répond avec un mode « gen-4 director » qui accepte des storyboards JSON. Pika reste en retrait sur la durée mais améliore la cohérence faciale.
+              </p>
+            </div>
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-[10px] font-mono text-magenta uppercase tracking-wider">macOS 26</span>
+                <span class="text-mist text-[10px] font-mono">· 2 sources</span>
+              </div>
+              <p class="text-cream text-sm sm:text-base leading-relaxed">
+                La bêta 4 livre une API stable pour Foundation Models avec exécution en arrière-plan ; les apps en sandbox y accèdent désormais sans entitlement spécial.
+              </p>
+            </div>
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-[10px] font-mono text-cyan uppercase tracking-wider">SwiftUI</span>
+                <span class="text-mist text-[10px] font-mono">· 1 source</span>
+              </div>
+              <p class="text-cream text-sm sm:text-base leading-relaxed">
+                Le nouveau modificateur <code class="font-mono text-xs">.scrollPosition(idType:)</code> remplace les hacks GeometryReader pour la pagination ; rétro-compatible iOS 17 via shim.
+              </p>
+            </div>
+          </div>
+
+          <div class="px-5 sm:px-6 py-3 border-t border-line flex items-center justify-between text-[11px] font-mono text-mist">
+            <span>résumé par Apple Intelligence · 0 ko envoyé au cloud</span>
+            <span>↻ régénérer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §05 — PRODUCTIVITÉ
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="productivite" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14 reveal">
       <div>
-        <div class="eyebrow mb-4 sm:mb-5" data-i18n="prod.eyebrow">§04 — productivité</div>
+        <div class="eyebrow mb-4 sm:mb-5" data-i18n="prod.eyebrow">§05 — productivité</div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="prod.title1">Une boîte à outils.</span>
           <br/>
@@ -1467,13 +1554,13 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §05 — SYSTÈME (HUD + Sneak Peek + Détections)
+     §06 — SYSTÈME (HUD + Sneak Peek + Détections)
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="systeme" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="text-center mb-12 sm:mb-16 reveal">
-      <div class="eyebrow mb-4 sm:mb-5" data-i18n="sys.eyebrow">§05 — système réinventé</div>
+      <div class="eyebrow mb-4 sm:mb-5" data-i18n="sys.eyebrow">§06 — système réinventé</div>
       <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
         <span data-i18n="sys.title1">macOS,</span>
         <span class="display-italic grad-text" data-i18n="sys.title2">réinventé.</span>
@@ -1907,7 +1994,7 @@
           <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
         <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a2">
-          NotchIA nécessite <span class="text-cream">macOS 14.0 (Sonoma)</span> ou plus récent. L'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel.
+          NotchIA nécessite <span class="text-cream">macOS 15.0 (Sequoia)</span> ou plus récent. L'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel. Les fonctionnalités IA on-device (Digest, résumé Shelf) nécessitent <span class="text-cream">macOS 26+</span> avec Apple Intelligence ; dégradation gracieuse sinon.
         </p>
       </details>
 
@@ -1991,7 +2078,7 @@
           <div class="marquee-track text-[12px] sm:text-[13px] font-mono">
             <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#FF4D88;animation:pulse 1.6s infinite"></span><span style="color:#FF4D88">NotchIA</span><span style="color:rgba(237,232,220,0.55)">prêt à installer</span></span>
             <span style="color:rgba(237,232,220,0.25)">·</span>
-            <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#9DD9B7"></span><span style="color:#9DD9B7">macOS 14.0+</span></span>
+            <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#9DD9B7"></span><span style="color:#9DD9B7">macOS 15.0+</span></span>
             <span style="color:rgba(237,232,220,0.25)">·</span>
             <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#4DA8FF"></span><span style="color:#4DA8FF">47 Mo</span></span>
           </div>
@@ -2055,8 +2142,10 @@
           <li><a href="#ia" class="hover:text-cream" data-i18n="footer.app.l1">IA en direct</a></li>
           <li><a href="#medias" class="hover:text-cream" data-i18n="footer.app.l2">Médias</a></li>
           <li><a href="#agenda" class="hover:text-cream" data-i18n="footer.app.l3">Agenda</a></li>
+          <li><a href="#digest" class="hover:text-cream" data-i18n="footer.app.l3b">Digest <span class="text-orange text-[10px]">NEW</span></a></li>
           <li><a href="#productivite" class="hover:text-cream" data-i18n="footer.app.l4">Productivité</a></li>
           <li><a href="#systeme" class="hover:text-cream" data-i18n="footer.app.l5">Système</a></li>
+          <li><a href="/features" class="hover:text-cream" data-i18n="footer.app.features">Toutes les fonctionnalités</a></li>
           <li><a href="#tarif" class="hover:text-cream" data-i18n="footer.app.l6">Tarif</a></li>
         </ul>
       </div>
@@ -2087,7 +2176,7 @@
     <div class="flex flex-wrap items-center justify-between gap-3 sm:gap-4 text-[11px] sm:text-xs text-mist font-mono">
       <span data-i18n="footer.copyright">© 2026 NotchIA · Axel Courty</span>
       <span data-i18n="footer.madein">fait avec Swift 6 · à Paris · sans télémétrie</span>
-      <span>v2.7.4-beta1 · 2026-05-06</span>
+      <span>v2.8.0 (Wise Owl 🦉) · 2026-05-15</span>
     </div>
   </div>
 </footer>
@@ -2102,7 +2191,7 @@
     fr: {
       'a11y.skip': 'Aller au contenu',
       'hero.build': 'build 2.7.4 beta — disponible',
-      'nav.ia': 'IA', 'nav.medias': 'Médias', 'nav.agenda': 'Agenda',
+      'nav.ia': 'IA', 'nav.medias': 'Médias', 'nav.agenda': 'Agenda', 'nav.digest': 'Digest',
       'nav.productivity': 'Productivité', 'nav.system': 'Système',
       'nav.pricing': 'Tarif', 'nav.faq': 'FAQ', 'nav.download': 'Télécharger',
       'hero.title.line1': "L'encoche", 'hero.title.line3': 'maintenant.',
@@ -2169,7 +2258,7 @@
       'faq.q1': "Qu'est-ce que NotchIA ?",
       'faq.a1': "NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, des assistants IA en direct (Claude Code, Codex, Copilot), un Pomodoro, un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système.",
       'faq.q2': 'Quelle version de macOS est requise ?',
-      'faq.a2': 'NotchIA nécessite <span class="text-cream">macOS 14.0 (Sonoma)</span> ou plus récent. L\'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel.',
+      'faq.a2': 'NotchIA nécessite <span class="text-cream">macOS 15.0 (Sequoia)</span> ou plus récent. L\'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel. Les fonctionnalités IA on-device (Digest, résumé Shelf) nécessitent <span class="text-cream">macOS 26+</span> avec Apple Intelligence ; dégradation gracieuse sinon.',
       'faq.q3': 'NotchIA fonctionne-t-il sur un Mac sans encoche physique ?',
       'faq.a3': "Oui. Sur les Mac sans encoche physique (iMac, MacBook Air anciennes générations, Mac mini connecté à un écran externe), NotchIA crée une zone d'encoche virtuelle dans la barre de menu. La hauteur est configurable séparément pour les deux contextes.",
       'faq.q4': 'Combien coûte NotchIA et quelles sont les formules ?',
@@ -2212,14 +2301,24 @@
       'agenda.b3': 'Auto-scroll vers le prochain événement',
       'agenda.b4': 'Sélection des calendriers à afficher',
 
-      // §04 Productivité
-      'prod.eyebrow': '§04 — productivité',
+      // §04 Digest (NEW 2.8.0)
+      'digest.eyebrow': '§04 — digest IA on-device',
+      'digest.title1': "Ton brief d'actu.",
+      'digest.title2': 'Résumé sur ton Mac.',
+      'digest.intro': "Tu colles tes flux RSS/Atom. Tu dis ce qui t'intéresse en langage naturel. Apple Intelligence fait le tri, résume, priorise — sans qu'aucun octet ne quitte ta machine.",
+      'digest.b1': 'Tes propres flux RSS / Atom',
+      'digest.b2': 'Sujets à suivre en langage naturel',
+      'digest.b3': 'Résumé Apple Intelligence on-device',
+      'digest.b4': 'Cache 14 jours · 100 % local · zéro envoi externe',
+      'digest.note': 'Requiert macOS 26+ pour Apple Intelligence. Sans, dégradation gracieuse : viewer brut sans résumé IA.',
+      // §05 Productivité
+      'prod.eyebrow': '§05 — productivité',
       'prod.title1': 'Une boîte à outils.',
       'prod.title2': 'Pas une fenêtre.',
       'prod.intro': "Pomodoro, presse-papiers historique, étagère de fichiers, convertisseur, Quick Share, QuickLook — tous chargés à la demande dans l'encoche.",
 
-      // §05 Système
-      'sys.eyebrow': '§05 — système réinventé',
+      // §06 Système
+      'sys.eyebrow': '§06 — système réinventé',
       'sys.title1': 'macOS,',
       'sys.title2': 'réinventé.',
       'sys.intro': "NotchIA remplace les HUD natifs, fait défiler des mini-widgets dans l'encoche fermée, et détecte automatiquement appels, focus mode et enregistrements.",
@@ -2264,8 +2363,10 @@
       'footer.app.l1': 'IA en direct',
       'footer.app.l2': 'Médias',
       'footer.app.l3': 'Agenda',
+      'footer.app.l3b': 'Digest <span class="text-orange text-[10px]">NEW</span>',
       'footer.app.l4': 'Productivité',
       'footer.app.l5': 'Système',
+      'footer.app.features': 'Toutes les fonctionnalités',
       'footer.app.l6': 'Tarif',
       'footer.help.l1': 'Documentation',
       'footer.help.l2': 'Installation',
@@ -2281,7 +2382,7 @@
     en: {
       'a11y.skip': 'Skip to content',
       'hero.build': 'build 2.7.4 beta — available',
-      'nav.ia': 'AI', 'nav.medias': 'Media', 'nav.agenda': 'Calendar',
+      'nav.ia': 'AI', 'nav.medias': 'Media', 'nav.agenda': 'Calendar', 'nav.digest': 'Digest',
       'nav.productivity': 'Productivity', 'nav.system': 'System',
       'nav.pricing': 'Pricing', 'nav.faq': 'FAQ', 'nav.download': 'Download',
       'hero.title.line1': 'The notch', 'hero.title.line3': 'now.',
@@ -2348,7 +2449,7 @@
       'faq.q1': 'What is NotchIA?',
       'faq.a1': 'NotchIA is a macOS app that turns your MacBook notch (or the menu bar on notch-less displays) into an interactive control center. In a single access point: a multi-source media player, a calendar, live AI assistants (Claude Code, Codex, Copilot), a Pomodoro, a clipboard history, a file converter, and an aesthetic replacement for system HUDs.',
       'faq.q2': 'Which macOS version is required?',
-      'faq.a2': 'NotchIA requires <span class="text-cream">macOS 14.0 (Sonoma)</span> or newer. The app runs natively on Apple Silicon (M1, M2, M3, M4) and on Intel.',
+      'faq.a2': 'NotchIA requires <span class="text-cream">macOS 15.0 (Sequoia)</span> or newer. The app runs natively on Apple Silicon (M1, M2, M3, M4) and on Intel. On-device AI features (Digest, Shelf summary) require <span class="text-cream">macOS 26+</span> with Apple Intelligence; graceful fallback otherwise.',
       'faq.q3': 'Does NotchIA work on a Mac without a physical notch?',
       'faq.a3': 'Yes. On Macs without a physical notch (iMac, older MacBook Air, Mac mini connected to an external display), NotchIA creates a virtual notch zone in the menu bar. Height is configurable separately for both contexts.',
       'faq.q4': 'How much does NotchIA cost and what are the plans?',
@@ -2391,14 +2492,24 @@
       'agenda.b3': 'Auto-scroll to the next event',
       'agenda.b4': 'Pick which calendars to show',
 
-      // §04 Productivity
-      'prod.eyebrow': '§04 — productivity',
+      // §04 Digest (NEW 2.8.0)
+      'digest.eyebrow': '§04 — on-device AI digest',
+      'digest.title1': 'Your news brief.',
+      'digest.title2': 'Summarized on your Mac.',
+      'digest.intro': "You paste your RSS/Atom feeds. You say what matters in plain language. Apple Intelligence filters, summarizes, prioritizes — without a single byte leaving your machine.",
+      'digest.b1': 'Your own RSS / Atom feeds',
+      'digest.b2': 'Topics to follow in plain language',
+      'digest.b3': 'On-device Apple Intelligence summary',
+      'digest.b4': '14-day cache · 100% local · zero external upload',
+      'digest.note': 'Requires macOS 26+ for Apple Intelligence. Without it, graceful fallback: raw viewer without AI summary.',
+      // §05 Productivity
+      'prod.eyebrow': '§05 — productivity',
       'prod.title1': 'A toolkit.',
       'prod.title2': 'Not a window.',
       'prod.intro': 'Pomodoro, clipboard history, file shelf, converter, Quick Share, QuickLook — all loaded on demand inside the notch.',
 
-      // §05 System
-      'sys.eyebrow': '§05 — system reinvented',
+      // §06 System
+      'sys.eyebrow': '§06 — system reinvented',
       'sys.title1': 'macOS,',
       'sys.title2': 'reimagined.',
       'sys.intro': 'NotchIA replaces native HUDs, rotates mini-widgets inside the closed notch, and automatically detects calls, focus mode and recordings.',
@@ -2443,8 +2554,10 @@
       'footer.app.l1': 'Live AI',
       'footer.app.l2': 'Media',
       'footer.app.l3': 'Calendar',
+      'footer.app.l3b': 'Digest <span class="text-orange text-[10px]">NEW</span>',
       'footer.app.l4': 'Productivity',
       'footer.app.l5': 'System',
+      'footer.app.features': 'All features',
       'footer.app.l6': 'Pricing',
       'footer.help.l1': 'Documentation',
       'footer.help.l2': 'Installation',
@@ -2460,7 +2573,7 @@
     es: {
       'a11y.skip': 'Saltar al contenido',
       'hero.build': 'build 2.7.4 beta — disponible',
-      'nav.ia': 'IA', 'nav.medias': 'Medios', 'nav.agenda': 'Agenda',
+      'nav.ia': 'IA', 'nav.medias': 'Medios', 'nav.agenda': 'Agenda', 'nav.digest': 'Digest',
       'nav.productivity': 'Productividad', 'nav.system': 'Sistema',
       'nav.pricing': 'Precio', 'nav.faq': 'FAQ', 'nav.download': 'Descargar',
       'hero.title.line1': 'La muesca', 'hero.title.line3': 'ahora.',
@@ -2527,7 +2640,7 @@
       'faq.q1': '¿Qué es NotchIA?',
       'faq.a1': 'NotchIA es una aplicación macOS que convierte la muesca del MacBook (o la barra de menú en pantallas sin muesca) en un centro de control interactivo. Reúne en un solo punto de acceso: un reproductor multifuente, un calendario, asistentes de IA en directo (Claude Code, Codex, Copilot), un Pomodoro, un historial del portapapeles, un conversor de archivos y un reemplazo estético de los HUD del sistema.',
       'faq.q2': '¿Qué versión de macOS se requiere?',
-      'faq.a2': 'NotchIA requiere <span class="text-cream">macOS 14.0 (Sonoma)</span> o más reciente. La app funciona de forma nativa en Apple Silicon (M1, M2, M3, M4) y en Intel.',
+      'faq.a2': 'NotchIA requiere <span class="text-cream">macOS 15.0 (Sequoia)</span> o más reciente. La app funciona de forma nativa en Apple Silicon (M1, M2, M3, M4) y en Intel. Las funciones de IA on-device (Digest, resumen del Shelf) requieren <span class="text-cream">macOS 26+</span> con Apple Intelligence; degradación elegante en caso contrario.',
       'faq.q3': '¿Funciona NotchIA en un Mac sin muesca física?',
       'faq.a3': 'Sí. En Mac sin muesca física (iMac, MacBook Air antiguos, Mac mini con pantalla externa), NotchIA crea una zona de muesca virtual en la barra de menú. La altura es configurable por separado para ambos contextos.',
       'faq.q4': '¿Cuánto cuesta NotchIA y cuáles son los planes?',
@@ -2570,14 +2683,24 @@
       'agenda.b3': 'Auto-scroll al próximo evento',
       'agenda.b4': 'Selección de calendarios a mostrar',
 
-      // §04 Productividad
-      'prod.eyebrow': '§04 — productividad',
+      // §04 Digest (NEW 2.8.0)
+      'digest.eyebrow': '§04 — digest IA on-device',
+      'digest.title1': 'Tu briefing de actualidad.',
+      'digest.title2': 'Resumido en tu Mac.',
+      'digest.intro': "Pegas tus feeds RSS/Atom. Indicas lo que te interesa en lenguaje natural. Apple Intelligence filtra, resume, prioriza — sin que un solo byte salga de tu máquina.",
+      'digest.b1': 'Tus propios feeds RSS / Atom',
+      'digest.b2': 'Temas a seguir en lenguaje natural',
+      'digest.b3': 'Resumen Apple Intelligence on-device',
+      'digest.b4': 'Caché 14 días · 100% local · cero envío externo',
+      'digest.note': 'Requiere macOS 26+ para Apple Intelligence. Sin él, degradación elegante: viewer sin resumen IA.',
+      // §05 Productividad
+      'prod.eyebrow': '§05 — productividad',
       'prod.title1': 'Una caja de herramientas.',
       'prod.title2': 'No una ventana.',
       'prod.intro': 'Pomodoro, historial del portapapeles, estantería de archivos, conversor, Quick Share, QuickLook — todos cargados bajo demanda en la muesca.',
 
-      // §05 Sistema
-      'sys.eyebrow': '§05 — sistema reinventado',
+      // §06 Sistema
+      'sys.eyebrow': '§06 — sistema reinventado',
       'sys.title1': 'macOS,',
       'sys.title2': 'reimaginado.',
       'sys.intro': 'NotchIA reemplaza los HUD nativos, hace rotar mini-widgets en la muesca cerrada y detecta automáticamente llamadas, modo focus y grabaciones.',
@@ -2622,7 +2745,9 @@
       'footer.app.l1': 'IA en directo',
       'footer.app.l2': 'Medios',
       'footer.app.l3': 'Agenda',
+      'footer.app.l3b': 'Digest <span class="text-orange text-[10px]">NEW</span>',
       'footer.app.l4': 'Productividad',
+      'footer.app.features': 'Todas las funciones',
       'footer.app.l5': 'Sistema',
       'footer.app.l6': 'Precio',
       'footer.help.l1': 'Documentación',
@@ -2639,7 +2764,7 @@
     de: {
       'a11y.skip': 'Zum Inhalt springen',
       'hero.build': 'Build 2.7.4 beta — verfügbar',
-      'nav.ia': 'KI', 'nav.medias': 'Medien', 'nav.agenda': 'Kalender',
+      'nav.ia': 'KI', 'nav.medias': 'Medien', 'nav.agenda': 'Kalender', 'nav.digest': 'Digest',
       'nav.productivity': 'Produktivität', 'nav.system': 'System',
       'nav.pricing': 'Preis', 'nav.faq': 'FAQ', 'nav.download': 'Laden',
       'hero.title.line1': 'Die Aussparung', 'hero.title.line3': 'jetzt.',
@@ -2706,7 +2831,7 @@
       'faq.q1': 'Was ist NotchIA?',
       'faq.a1': 'NotchIA ist eine macOS-App, die die Aussparung Ihres MacBooks (oder die Menüleiste auf Bildschirmen ohne Aussparung) in ein interaktives Kontrollzentrum verwandelt. An einem einzigen Zugangspunkt: ein Multi-Source-Mediaplayer, ein Kalender, Live-KI-Assistenten (Claude Code, Codex, Copilot), ein Pomodoro, ein Zwischenablage-Verlauf, ein Datei-Konverter und ein ästhetischer Ersatz für System-HUDs.',
       'faq.q2': 'Welche macOS-Version wird benötigt?',
-      'faq.a2': 'NotchIA benötigt <span class="text-cream">macOS 14.0 (Sonoma)</span> oder neuer. Die App läuft nativ auf Apple Silicon (M1, M2, M3, M4) und auf Intel.',
+      'faq.a2': 'NotchIA benötigt <span class="text-cream">macOS 15.0 (Sequoia)</span> oder neuer. Die App läuft nativ auf Apple Silicon (M1, M2, M3, M4) und auf Intel. On-device-KI-Funktionen (Digest, Shelf-Zusammenfassung) benötigen <span class="text-cream">macOS 26+</span> mit Apple Intelligence; ansonsten elegante Degradation.',
       'faq.q3': 'Funktioniert NotchIA auf einem Mac ohne physische Aussparung?',
       'faq.a3': 'Ja. Auf Macs ohne physische Aussparung (iMac, älteren MacBook Air, Mac mini mit externem Display) erstellt NotchIA eine virtuelle Aussparungszone in der Menüleiste. Die Höhe ist für beide Kontexte separat konfigurierbar.',
       'faq.q4': 'Wie viel kostet NotchIA und welche Pläne gibt es?',
@@ -2749,14 +2874,24 @@
       'agenda.b3': 'Auto-Scroll zum nächsten Termin',
       'agenda.b4': 'Auswahl der angezeigten Kalender',
 
-      // §04 Produktivität
-      'prod.eyebrow': '§04 — Produktivität',
+      // §04 Digest (NEW 2.8.0)
+      'digest.eyebrow': '§04 — On-Device-KI-Digest',
+      'digest.title1': 'Dein News-Briefing.',
+      'digest.title2': 'Auf deinem Mac zusammengefasst.',
+      'digest.intro': "Du fügst deine RSS/Atom-Feeds ein. Du sagst in natürlicher Sprache, was zählt. Apple Intelligence filtert, fasst zusammen, priorisiert — ohne dass ein einziges Byte deine Maschine verlässt.",
+      'digest.b1': 'Deine eigenen RSS-/Atom-Feeds',
+      'digest.b2': 'Themen in natürlicher Sprache verfolgen',
+      'digest.b3': 'On-Device Apple Intelligence Zusammenfassung',
+      'digest.b4': '14-Tage-Cache · 100% lokal · null externer Upload',
+      'digest.note': 'Benötigt macOS 26+ für Apple Intelligence. Ansonsten elegante Degradation: Roh-Viewer ohne KI-Zusammenfassung.',
+      // §05 Produktivität
+      'prod.eyebrow': '§05 — Produktivität',
       'prod.title1': 'Ein Werkzeugkasten.',
       'prod.title2': 'Kein Fenster.',
       'prod.intro': 'Pomodoro, Zwischenablage-Verlauf, Datei-Shelf, Konverter, Quick Share, QuickLook — alle bei Bedarf in die Aussparung geladen.',
 
-      // §05 System
-      'sys.eyebrow': '§05 — System neu erfunden',
+      // §06 System
+      'sys.eyebrow': '§06 — System neu erfunden',
       'sys.title1': 'macOS,',
       'sys.title2': 'neu gedacht.',
       'sys.intro': 'NotchIA ersetzt native HUDs, lässt Mini-Widgets in der geschlossenen Aussparung rotieren und erkennt automatisch Anrufe, Fokusmodus und Aufnahmen.',
@@ -2801,7 +2936,9 @@
       'footer.app.l1': 'Live-KI',
       'footer.app.l2': 'Medien',
       'footer.app.l3': 'Kalender',
+      'footer.app.l3b': 'Digest <span class="text-orange text-[10px]">NEW</span>',
       'footer.app.l4': 'Produktivität',
+      'footer.app.features': 'Alle Funktionen',
       'footer.app.l5': 'System',
       'footer.app.l6': 'Preis',
       'footer.help.l1': 'Dokumentation',

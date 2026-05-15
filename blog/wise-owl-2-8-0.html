@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2.8.0 Wise Owl 🦉 — Digest IA on-device et résumés Shelf — NotchIA</title>
+<meta name="description" content="NotchIA 2.8.0 Wise Owl 🦉 introduit Digest, un brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS. Aucun octet ne quitte ton Mac." />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/wise-owl-2-8-0" />
+<meta name="robots" content="index,follow" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/wise-owl-2-8-0" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/wise-owl-2-8-0" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="2.8.0 Wise Owl 🦉 — Digest IA on-device et résumés Shelf — NotchIA" />
+<meta property="og:description" content="NotchIA 2.8.0 Wise Owl 🦉 introduit Digest, un brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS. Aucun octet ne quitte ton Mac." />
+<meta property="og:url" content="https://notchia.app/blog/wise-owl-2-8-0" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-05-15" />
+<meta property="article:modified_time" content="2026-05-15" />
+<meta property="article:author" content="Axel Courty" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="2.8.0 Wise Owl 🦉 — Digest IA on-device et résumés Shelf — NotchIA" />
+<meta name="twitter:description" content="NotchIA 2.8.0 Wise Owl 🦉 introduit Digest, un brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS. Aucun octet ne quitte ton Mac." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tech-note { font-size: 0.85rem; color: rgba(237,232,220,0.55); border-left: 2px solid rgba(168,85,247,0.4); padding: 0.4rem 0 0.4rem 1rem; margin: 2rem 0 1rem; }
+  .tech-note p { color: rgba(237,232,220,0.55); margin-bottom: 0.4rem; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://notchia.app/blog/wise-owl-2-8-0#article",
+      "headline": "Wise Owl : ton encoche te résume l'actu, sans qu'aucun flux ne sorte de ton Mac",
+      "description": "NotchIA 2.8.0 Wise Owl 🦉 introduit Digest, un brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS. Aucun octet ne quitte ton Mac.",
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-05-15",
+      "inLanguage": "fr-FR",
+      "image": "https://notchia.app/og-image.png",
+      "author": {
+        "@type": "Person",
+        "name": "Axel Courty",
+        "url": "https://notchia.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NotchIA",
+        "url": "https://notchia.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://notchia.app/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://notchia.app/blog/wise-owl-2-8-0"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://notchia.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "2.8.0 Wise Owl", "item": "https://notchia.app/blog/wise-owl-2-8-0" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Mise à jour · 2.8.0 Wise Owl 🦉</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Wise Owl : ton encoche te résume <span class="grad-text">l'actu</span>, sans qu'aucun flux ne sorte de ton Mac</h1>
+    <p class="text-cream/55 text-sm">Par Axel Courty · 15 mai 2026 · 5 min de lecture</p>
+  </section>
+
+  <p>Tous les matins, c'est le même cinéma. Hacker News dans un onglet, deux newsletters dans Gmail, Bluesky dans un autre, ton lecteur RSS, les releases GitHub de cinq projets que tu suis, et un blog perso qui poste à 7h05. Tu scrolles, tu scannes, tu cherches les trois trucs qui comptent vraiment pour <em>toi</em>. Tu perds vingt-cinq minutes avant ton premier vrai café.</p>
+
+  <p>NotchIA a une encoche qui sait déjà ce que tu écoutes, qui t'appelle, ce que tu écris dans Claude Code, quand ta prochaine réunion commence. Elle voit passer ta vie sans broncher. Mais elle ne savait pas ce qui se passait dans tes flux.</p>
+
+  <p>C'est ce que fait Digest, le nouvel onglet de la 2.8.0. Et le tout sans qu'un seul octet de tes flux ne sorte de ta machine.</p>
+
+  <h2>Digest, <span class="grad-text">c'est quoi exactement</span></h2>
+
+  <p>Trois étapes, vraiment trois.</p>
+
+  <p><strong>Étape 1.</strong> Tu colles les URL des flux RSS et Atom que tu suis déjà — ton lecteur RSS exporte sûrement un OPML, ou tu copies juste les URL une par une. Tu peux mettre Hacker News, le blog d'un dev que tu lis, les releases GitHub d'un repo, n'importe quelle newsletter qui expose un flux. Si ça parle RSS ou Atom, NotchIA sait le lire.</p>
+
+  <p><strong>Étape 2.</strong> Tu écris en langage naturel ce qui t'intéresse. Pas de mots-clés, pas de filtres booléens. Un paragraphe. Par exemple : <em>« IA vidéo, macOS 26 et les nouveaux Foundation Models, SwiftUI, indie dev macOS, sortie de jeux indé. »</em> C'est ton brief éditorial à toi. Tu peux le réécrire quand tu veux.</p>
+
+  <p><strong>Étape 3.</strong> NotchIA fetch les flux, dédupe les articles vus, et demande à Apple Intelligence — les Foundation Models qui tournent on-device depuis macOS 26 — de te résumer le tout selon ton intérêt. Tu te retrouves avec un brief court à scanner en trente secondes, directement dans l'encoche, sans ouvrir une seule app.</p>
+
+  <p>Le résultat est mis en cache quatorze jours pour ne pas re-générer en boucle quand tu rouvres ton Mac. Tu peux forcer un rafraîchissement quand tu veux.</p>
+
+  <p>Les liens d'origine restent toujours affichés à côté de chaque résumé — l'IA résume, elle ne remplace pas la source.</p>
+
+  <p>Et — c'est le point qui m'intéressait — tout est local. La requête sort vers les flux RSS publics (forcément, il faut bien aller les chercher) et c'est tout. Le résumé est fait sur ton CPU/GPU, par le moteur Apple. Jamais d'appel vers OpenAI, Anthropic, Mistral, ou nos serveurs. Il n'y a pas de serveur NotchIA qui voit tes lectures, parce qu'il n'y a pas de serveur NotchIA dans le circuit, point.</p>
+
+  <h2>Pourquoi <span class="grad-text">je l'ai fait</span></h2>
+
+  <div class="callout">
+    <p>Je suis le profil tech qui jongle entre Hacker News, trois ou quatre newsletters, Bluesky, deux lecteurs RSS et les releases GitHub de quelques projets. Le matin, je passe vingt minutes à scanner pour trouver les trois trucs vraiment importants. Et le soir, je recommence, parce que j'ai peur d'avoir raté un truc.</p>
+    <p>Quand Apple a sorti les Foundation Models on-device avec macOS 26, je me suis dit que le tooling existait enfin pour un usage quotidien — pas un gadget pour faire la démo, un vrai outil. L'encoche affiche déjà ma musique et mon prochain événement de calendrier de façon passive ; pourquoi pas mon actu filtrée ?</p>
+    <p>Restait l'arbitrage privacy. Envoyer la liste de ses flux RSS à OpenAI ou Anthropic, c'est leur offrir gratuitement un portrait fidèle de ses centres d'intérêt — qui tu lis, ce que tu suis, ce qui te préoccupe en ce moment. Je voulais que NotchIA s'en passe complètement. Apple Intelligence on-device, c'était la pièce qui manquait.</p>
+  </div>
+
+  <h2>Autres améliorations dans <span class="grad-text">2.8.0</span></h2>
+
+  <p><strong>Résumé IA du Shelf <span class="pro-badge">💎 Pro</span></strong> — Drop un PDF, un <code class="font-mono text-xs">.docx</code>, un <code class="font-mono text-xs">.txt</code> ou un <code class="font-mono text-xs">.md</code> sur l'encoche, et tu as un résumé scrollable en quelques secondes. Même moteur Apple Intelligence on-device que Digest. Le Shelf affiche une aura arc-en-ciel pendant la génération, histoire que tu voies qu'il bosse. Ça tourne sans réseau, ça tourne sur ton Mac.</p>
+
+  <p>+ corrections diverses sur la stabilité du lecteur musique en arrière-plan, la gestion de l'écran de connexion après un long sleep, et quelques petites choses signalées par mail.</p>
+
+  <h2>Comment <span class="grad-text">l'obtenir</span></h2>
+
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update Sparkle te proposera la 2.8.0 dans les prochaines heures. Si tu n'as pas envie d'attendre : menu NotchIA dans la barre des menus → <em>Vérifier les mises à jour</em>.</p>
+
+  <p><strong>Nouvel utilisateur ?</strong> Digest, Musique, Calendrier et Concentration sont gratuits. Télécharge NotchIA depuis <a href="/#telecharger">la page d'accueil</a>. Le résumé Shelf et l'IA Code sont dans le pack Pro — voir <a href="/pricing">les tarifs</a>.</p>
+
+  <div class="tech-note">
+    <p><strong>Note technique.</strong> NotchIA tourne à partir de macOS 15.0 (Sequoia). Les résumés IA — Digest et Shelf — nécessitent macOS 26+ et un Mac compatible Apple Intelligence (Foundation Models).</p>
+    <p>Sur macOS 15 sans Apple Intelligence, l'onglet Digest reste fonctionnel en mode viewer brut : fetch des flux, déduplication, affichage chronologique. Pas de résumé IA, pas de message d'erreur — dégradation gracieuse, tu lis tes flux normalement.</p>
+  </div>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/pricing" class="btn-secondary">Voir les tarifs Pro</a>
+  </div>
+
+  <p class="mt-10 text-sm"><a href="/" class="text-cream/55 hover:text-cream">← Retour à l'accueil</a></p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

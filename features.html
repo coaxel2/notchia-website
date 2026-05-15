@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fonctionnalités — NotchIA</title>
+<meta name="description" content="NotchIA en détail : 4 onglets gratuits (Musique, Calendrier, Digest IA, Pomodoro) et 3 onglets Pro (Shelf, IA Code, Presse-papier). Résumés IA 100% on-device via Apple Intelligence." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/features" />
+<meta name="robots" content="index,follow" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/features" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Fonctionnalités — NotchIA" />
+<meta property="og:description" content="NotchIA en détail : 4 onglets gratuits (Musique, Calendrier, Digest IA, Pomodoro) et 3 onglets Pro (Shelf, IA Code, Presse-papier). Résumés IA 100% on-device." />
+<meta property="og:url" content="https://notchia.app/features" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Fonctionnalités — NotchIA" />
+<meta name="twitter:description" content="4 onglets gratuits + 3 Pro. IA on-device. macOS 15+." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text, h3 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.9rem; margin-top: 3rem; margin-bottom: 0.5rem; line-height: 1.2; }
+  main h2 + .lede { color: rgba(237,232,220,0.65); font-size: 1.02rem; margin-bottom: 1.25rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.05rem; margin-top: 1.2rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+
+  .callout {
+    background: linear-gradient(180deg, #14171F 0%, #0F1218 100%);
+    border: 1px solid rgba(237,232,220,0.08);
+    border-radius: 14px;
+    padding: 1.25rem 1.4rem;
+  }
+  .callout h3:first-child { margin-top: 0; }
+  .callout ul { margin-bottom: 0; }
+
+  .feature-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 768px) { .feature-grid.cols-2 { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 768px) { .feature-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; } }
+  @media (min-width: 768px) { .feature-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+  .badge-pro {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(255,77,136,0.18), rgba(255,122,45,0.18));
+    border: 1px solid rgba(255,122,45,0.45);
+    color: #FFB48C;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+  }
+  .badge-new {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(168,85,247,0.18), rgba(77,168,255,0.18));
+    border: 1px solid rgba(168,85,247,0.45);
+    color: #C9B6FF;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+  }
+  .badge-free {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(237,232,220,0.06);
+    border: 1px solid rgba(237,232,220,0.18);
+    color: rgba(237,232,220,0.7);
+    vertical-align: middle;
+    margin-left: 0.5rem;
+  }
+
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(237,232,220,0.45);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-primary {
+    display: inline-block;
+    padding: 0.95rem 1.6rem;
+    border-radius: 12px;
+    background: var(--brand);
+    color: #0B0D12 !important;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: transform 0.15s ease;
+  }
+  .cta-primary:hover { transform: translateY(-1px); color: #0B0D12 !important; }
+
+  .cta-secondary {
+    display: inline-block;
+    padding: 0.95rem 1.6rem;
+    border-radius: 12px;
+    border: 1px solid rgba(237,232,220,0.25);
+    color: #EDE8DC !important;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: border-color 0.15s ease;
+  }
+  .cta-secondary:hover { border-color: rgba(237,232,220,0.6); color: #EDE8DC !important; }
+
+  .meta-line { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: rgba(237,232,220,0.55); }
+
+  .nav-current { color: #EDE8DC; position: relative; }
+  .nav-current::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 2px;
+    background: var(--brand);
+    border-radius: 2px;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(237,232,220,0.18), transparent);
+    margin: 3.5rem 0 1rem;
+  }
+
+  .pro-band {
+    border-radius: 16px;
+    padding: 1.5rem;
+    background:
+      radial-gradient(120% 100% at 0% 0%, rgba(255,77,136,0.12), transparent 60%),
+      radial-gradient(120% 100% at 100% 100%, rgba(255,122,45,0.10), transparent 60%),
+      #0F1218;
+    border: 1px solid rgba(255,122,45,0.22);
+    margin-top: 1rem;
+  }
+</style>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="nav-current">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pt-4 pb-24">
+
+  <!-- HERO -->
+  <section class="mb-10">
+    <h1 class="font-display text-4xl md:text-6xl mb-5 leading-tight">Toutes les <span class="grad-text">fonctionnalités</span></h1>
+    <p class="text-cream/75 text-lg md:text-xl max-w-3xl mb-3">L'encoche de ton Mac devient un véritable assistant. Musique, calendrier, digest d'actualité IA, pomodoro et toutes les détections live sont <strong class="text-cream">gratuits</strong>.</p>
+    <p class="text-cream/75 text-lg md:text-xl max-w-3xl mb-5">Passe Pro <span class="badge-pro">💎 Pro</span> pour débloquer la Shelf (drag-drop universel + résumé IA de fichiers), le suivi temps réel de ton assistant de code et l'historique presse-papier.</p>
+    <p class="meta-line">v2.8.0 Wise Owl 🦉 · macOS 15+ · Apple Silicon ou Intel</p>
+  </section>
+
+  <div class="callout">
+    <p class="!mb-0">L'encoche pense maintenant. Sept onglets, des dizaines de détections, et toute l'intelligence reste sur ton Mac — aucun flux, aucun fichier, aucun token n'est envoyé à nos serveurs.</p>
+  </div>
+
+  <!-- ============ GRATUIT ============ -->
+  <div class="divider"></div>
+  <div class="section-eyebrow">Inclus dans la version gratuite</div>
+
+  <!-- MUSIQUE -->
+  <h2>Onglet <span class="grad-text">Musique</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede">La piste qui tourne, sous la main, sans ouvrir d'app.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>Ce que tu vois en un coup d'œil</h3>
+      <ul>
+        <li>Pochette, titre, artiste, progression temps réel.</li>
+        <li>Marquee fluide quand le titre est trop long.</li>
+        <li>Tinting dynamique : l'encoche prend la couleur dominante de la pochette.</li>
+        <li>Spectrogramme audio coloré et visualiseur custom.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>4 controllers, un seul UI</h3>
+      <ul>
+        <li>Now Playing système (tout ce qui joue, navigateur inclus).</li>
+        <li>Apple Music dédié.</li>
+        <li>Spotify dédié.</li>
+        <li>YouTube Music dédié.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Contrôles configurables</h3>
+      <ul>
+        <li>Boutons activables individuellement : play/pause, suivant, précédent, like.</li>
+        <li>Like rapide via ⇧⌘L.</li>
+        <li>Lyrics optionnels quand le controller les expose.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Couleur à ta main</h3>
+      <ul>
+        <li>Slider de teinte : blanc neutre, couleur de la pochette, ou ta teinte d'accent.</li>
+        <li>Anti-flash quand la pochette change d'image.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CALENDRIER -->
+  <h2>Onglet <span class="grad-text">Calendrier</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede">Tes prochains événements en survol, sans contexte switch.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>Vue d'ensemble</h3>
+      <ul>
+        <li>Mini calendrier qui apparaît au survol de l'encoche.</li>
+        <li>Liste des prochains événements à droite.</li>
+        <li>Auto-scroll vers le prochain rendez-vous.</li>
+        <li>Premier jour de la semaine configurable (lundi ou dimanche).</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Affichage maîtrisé</h3>
+      <ul>
+        <li>Choix des calendriers visibles (perso, pro, partagés).</li>
+        <li>Masquer les évènements « toute la journée » pour ne garder que ce qui a une heure.</li>
+        <li>Titres complets ou tronqués selon ta densité d'affichage.</li>
+        <li>Rappels intégrés depuis Reminders.app, dans la même vue.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DIGEST -->
+  <h2>Onglet <span class="grad-text">Digest</span> <span class="badge-new">Nouveau · 2.8.0</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede">Ton brief d'actualité matinal, résumé par ton Mac, jamais par un serveur.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>Tes flux, ton sujet</h3>
+      <ul>
+        <li>Ajoute n'importe quel flux RSS ou Atom (blogs, médias, newsletters).</li>
+        <li>Définis un sujet à suivre — par exemple « IA vidéo, macOS, SwiftUI ».</li>
+        <li>L'IA filtre les articles pertinents, résume et priorise.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>100% on-device</h3>
+      <ul>
+        <li>Résumés générés par Apple Intelligence Foundation Models, en local.</li>
+        <li>Aucun flux ne sort de ton Mac.</li>
+        <li>Cache local de 14 jours pour relire un brief offline.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-sm text-cream/55"><em>Note :</em> les résumés IA nécessitent macOS 26+ avec Apple Intelligence. Sur macOS 15, l'onglet fonctionne en mode viewer brut (flux + tri chronologique, sans résumé).</p>
+
+  <!-- CONCENTRATION -->
+  <h2>Onglet <span class="grad-text">Concentration</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede">Pomodoro intégré, stats journalières, badges discrets.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>Le minuteur</h3>
+      <ul>
+        <li>Ring de progression animé autour de l'encoche.</li>
+        <li>Durées configurables : focus, pause courte, pause longue.</li>
+        <li>Nombre de sessions avant pause longue ajustable.</li>
+        <li>Commandes Démarrer, Pause, Skip, Reset.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Tes habitudes en clair</h3>
+      <ul>
+        <li>Stats journalières et historique en graphique.</li>
+        <li>Mini badges Focus et Cycle pendant les sessions.</li>
+        <li>Audio feedback en fin de focus et fin de pause.</li>
+        <li>Sneak peek : un rappel discret quand il reste 1 minute.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DÉTECTIONS LIVE -->
+  <h2>Détections <span class="grad-text">live</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede">L'encoche réagit à ce qui se passe sur ton Mac, en temps réel. Toutes les détections sont toggleables individuellement.</p>
+  <div class="feature-grid cols-3">
+    <div class="callout">
+      <h3>Appel vidéo</h3>
+      <p class="!mb-0">FaceTime, Zoom, Google Meet, Microsoft Teams, Slack Huddle. Indicateur dédié pendant l'appel.</p>
+    </div>
+    <div class="callout">
+      <h3>Focus / Ne pas déranger</h3>
+      <p class="!mb-0">L'encoche reflète ton mode Focus actif. Visuel adapté pour ne pas distraire.</p>
+    </div>
+    <div class="callout">
+      <h3>Enregistrement d'écran</h3>
+      <p class="!mb-0">Détection auto. Option pour cacher l'encoche pendant la capture si tu veux un rendu propre.</p>
+    </div>
+    <div class="callout">
+      <h3>AirPods & Bluetooth</h3>
+      <p class="!mb-0">Connexion, déconnexion, batterie affichée en sneak peek au moment du pairing.</p>
+    </div>
+    <div class="callout">
+      <h3>HUD volume & luminosité</h3>
+      <p class="!mb-0">Remplace le HUD système. Mode inline dans l'encoche ou rendu classique au choix.</p>
+    </div>
+    <div class="callout">
+      <h3>Événements système</h3>
+      <p class="!mb-0">Gradient ou couleur d'accent quand un événement notable se déclenche.</p>
+    </div>
+    <div class="callout">
+      <h3>Téléchargements</h3>
+      <p class="!mb-0">Animation download visible pour AirDrop entrant et téléchargements navigateur.</p>
+    </div>
+    <div class="callout">
+      <h3>Webcam active</h3>
+      <p class="!mb-0">Détection précise de l'usage caméra par n'importe quelle app.</p>
+    </div>
+    <div class="callout">
+      <h3>Sneak Peek Engine</h3>
+      <p class="!mb-0">Widgets en rotation pendant que tu bosses : musique, Pomodoro, presse-papier, volume, luminosité. Intervalle et durée configurables.</p>
+    </div>
+  </div>
+
+  <!-- PERSONNALISATION -->
+  <h2><span class="grad-text">Personnalisation</span> complète <span class="badge-free">Gratuit</span></h2>
+  <p class="lede">L'encoche s'adapte à toi, pas l'inverse.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>5 thèmes inclus</h3>
+      <ul>
+        <li><strong>Marque</strong> — violet → cyan, signature NotchIA.</li>
+        <li><strong>Crépuscule</strong> — orange → magenta.</li>
+        <li><strong>Océan</strong> — turquoise → violet.</li>
+        <li><strong>Forêt</strong> — vert → cyan.</li>
+        <li><strong>Noir</strong> — pour les puristes.</li>
+        <li>Couleur d'accent custom via color picker, sur n'importe quel thème.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Apparence</h3>
+      <ul>
+        <li>Icône d'app uploadable (la tienne ou un dock perso).</li>
+        <li>3 densités d'affichage : compact, normal, large.</li>
+        <li>Hauteur d'encoche : menu bar, encoche physique, ou taille custom.</li>
+        <li>Effet lumineux, ombre, scaling animé — chacun toggleable.</li>
+        <li>Langue : français, anglais, espagnol, allemand.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Comportement</h3>
+      <ul>
+        <li>Sensibilité des gestes (hover, drag, tap).</li>
+        <li>Hover area étendue au-delà de l'encoche.</li>
+        <li>Délai de fermeture configurable.</li>
+        <li>Cacher l'encoche pendant un screen recording.</li>
+        <li>Afficher (ou non) sur l'écran de verrouillage.</li>
+        <li>Retours haptiques sur les MacBook qui les supportent.</li>
+        <li>Auto-switch d'écran en multi-display.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Raccourcis clavier</h3>
+      <ul>
+        <li>7 raccourcis 100% éditables.</li>
+        <li>Ouvrir/fermer l'encoche, basculer un onglet, play/pause musique, like, démarrer Pomodoro, ouvrir Shelf, etc.</li>
+        <li>Aucune combinaison forcée — tu remappes tout.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ PRO ============ -->
+  <div class="divider"></div>
+  <div class="section-eyebrow">Débloqué avec NotchIA Pro 💎</div>
+
+  <div class="pro-band">
+    <p class="!mb-0 text-cream/80">Trois onglets puissants pour aller plus loin : un dock universel pour partager et convertir n'importe quoi, le suivi temps réel de ton assistant IA de code, et un historique presse-papier intelligent.</p>
+  </div>
+
+  <!-- SHELF -->
+  <h2>Onglet <span class="grad-text">Shelf</span> <span class="badge-pro">💎 Pro</span></h2>
+  <p class="lede">Drag, drop, partage, résume. L'encoche devient ton hub pour les fichiers.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>Drag-drop universel</h3>
+      <ul>
+        <li>Drague un fichier vers l'encoche : la zone de drop s'agrandit automatiquement.</li>
+        <li>Empile plusieurs fichiers en attente.</li>
+        <li>Copy-on-drag ou move, au choix par fichier.</li>
+        <li>Auto-remove après partage (toggleable).</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Quick Share intelligent</h3>
+      <ul>
+        <li>Auto-découverte des cibles compatibles : AirDrop, Messages, Mail, WhatsApp, Slack…</li>
+        <li>Un clic pour envoyer, pas de menu Partage natif.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Convertisseur intégré</h3>
+      <ul>
+        <li><strong>Images</strong> : PNG, JPG, HEIC, WebP entre tous les formats.</li>
+        <li><strong>PDF</strong> : conversion PDF ↔ images.</li>
+        <li><strong>Audio</strong> : mp3, wav, aac, m4a.</li>
+        <li><strong>Vidéo</strong> : mp4, mov.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Résumé IA d'un fichier <span class="badge-new">on-device</span></h3>
+      <ul>
+        <li>Drop un PDF, .txt, .md ou .docx.</li>
+        <li>Résumé scrollable en quelques secondes.</li>
+        <li>Animation aura rainbow pendant la génération.</li>
+        <li>Bouton « Copier » pour récupérer le texte.</li>
+        <li>Apple Intelligence Foundation Models, 100% local.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-sm text-cream/55"><em>Note :</em> le résumé IA de fichier nécessite macOS 26+. Sans Apple Intelligence, la Shelf garde le drag-drop, le Quick Share et le convertisseur.</p>
+
+  <!-- IA CODE -->
+  <h2>Onglet <span class="grad-text">IA Code</span> <span class="badge-pro">💎 Pro</span></h2>
+  <p class="lede">Ton assistant de code, dans l'encoche, sans alt-tab.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>Providers supportés</h3>
+      <ul>
+        <li><strong>Claude Code</strong> (Anthropic) — lecture de <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>.</li>
+        <li><strong>Codex</strong> (ChatGPT) — lecture de <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.</li>
+        <li><strong>GitHub Copilot</strong> — lecture des logs Copilot.</li>
+        <li>Un seul provider actif à la fois — celui que tu choisis.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Mode compact</h3>
+      <ul>
+        <li>Le tool en cours d'exécution (Read, Edit, Bash…).</li>
+        <li>La session active.</li>
+        <li>Tient dans l'encoche pendant que tu codes.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Mode étendu</h3>
+      <ul>
+        <li>Dots indicator des sessions ouvertes.</li>
+        <li>Context bar : pourcentage du context window utilisé.</li>
+        <li>Stats tokens en temps réel.</li>
+        <li>Session picker pour switcher en un clic.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>100% local</h3>
+      <ul>
+        <li>NotchIA lit les sessions depuis <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code> et les logs Copilot.</li>
+        <li>Aucune requête réseau vers Anthropic, OpenAI ou GitHub depuis NotchIA.</li>
+        <li>Tes prompts et réponses ne transitent jamais par nos serveurs.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PRESSE-PAPIER -->
+  <h2>Onglet <span class="grad-text">Presse-papier</span> <span class="badge-pro">💎 Pro</span></h2>
+  <p class="lede">Tout ce que tu as copié, retrouvable instantanément.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>Historique intelligent</h3>
+      <ul>
+        <li>Jusqu'à 48 entrées (configurable).</li>
+        <li>Recherche full-text sur tout l'historique.</li>
+        <li>Groupement par app source : Safari, VSCode, Slack, etc.</li>
+        <li>Raccourci d'ouverture : ⇧⌘C.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Sécurité par défaut</h3>
+      <ul>
+        <li>Auto-clear du contenu sensible détecté (mots de passe, numéros de carte).</li>
+        <li>Restauration en un clic d'une entrée passée.</li>
+        <li>Rien ne sort de ton Mac.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ CONFIANCE ============ -->
+  <div class="divider"></div>
+  <h2>Confiance & <span class="grad-text">vie privée</span></h2>
+  <p class="lede">On a conçu NotchIA pour qu'elle ne puisse pas trahir tes données — pas juste pour qu'elle promette de ne pas le faire.</p>
+  <div class="feature-grid cols-2">
+    <div class="callout">
+      <h3>IA on-device uniquement</h3>
+      <p class="!mb-0">Tous les résumés (Digest, Shelf) passent par Apple Intelligence Foundation Models, qui tourne entièrement sur ton appareil. Aucun appel à OpenAI, Anthropic ou un autre fournisseur tiers.</p>
+    </div>
+    <div class="callout">
+      <h3>Données locales, jamais envoyées</h3>
+      <p class="!mb-0">Calendrier, rappels, presse-papier, sessions Claude/Codex/Copilot, statut Focus, état Bluetooth — rien de tout ça ne quitte ton Mac.</p>
+    </div>
+    <div class="callout">
+      <h3>Backend minimal</h3>
+      <p class="!mb-0">Un seul Cloudflare Worker, qui ne sait faire qu'une chose : valider une clé de licence. Zéro télémétrie, zéro analytics tiers, pas de pixel, pas de Sentry.</p>
+    </div>
+    <div class="callout">
+      <h3>Anti-piratage discret</h3>
+      <p class="!mb-0">Vérification de licence par signature Ed25519 et <code class="font-mono text-xs">PT_DENY_ATTACH</code> en production. Transparent pour l'utilisateur légitime, frustrant pour qui essaie de cracker.</p>
+    </div>
+  </div>
+
+  <!-- ============ PRÉREQUIS ============ -->
+  <h2>Prérequis <span class="grad-text">techniques</span></h2>
+  <p class="lede">Ce qu'il te faut pour lancer NotchIA aujourd'hui.</p>
+  <div class="callout">
+    <ul>
+      <li><strong>macOS 15.0 Sequoia minimum.</strong></li>
+      <li><strong>Apple Silicon ou Intel</strong> — binaire universal.</li>
+      <li><strong>Mac avec encoche recommandé</strong> (MacBook Pro / Air 2021 et plus). Fonctionne aussi sans : NotchIA simule une encoche sous la menu bar.</li>
+      <li><strong>macOS 26+ requis</strong> pour les résumés IA Shelf et le brief Digest (Apple Intelligence). Sans ça, dégradation gracieuse — les onglets restent fonctionnels.</li>
+      <li><strong>~30 Mo</strong> d'espace disque.</li>
+      <li><strong>Réseau</strong> utilisé uniquement pour : validation de licence, mises à jour Sparkle, fetch des flux RSS du Digest. Rien d'autre.</li>
+    </ul>
+  </div>
+
+  <!-- ============ CTA ============ -->
+  <div class="divider"></div>
+  <section class="text-center mt-8 mb-4">
+    <h2 class="!mt-0 font-display text-3xl md:text-4xl">Prêt à essayer ?</h2>
+    <p class="text-cream/70 max-w-xl mx-auto mb-6">Télécharge la version gratuite. Si elle te plaît, débloque les onglets Pro quand tu veux.</p>
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+      <a href="/#telecharger" class="cta-primary">Télécharger gratuit</a>
+      <a href="/pricing" class="cta-secondary">Voir les tarifs Pro</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
