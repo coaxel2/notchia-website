@@ -1,5 +1,5 @@
 # NotchIA — robots.txt
-# https://notchia-website.pages.dev/robots.txt
+# https://notchia.app/robots.txt
 
 # === Crawlers traditionnels ===
 User-agent: *
@@ -76,4 +76,4 @@ User-agent: YouBot
 Allow: /
 
 # Sitemap
-Sitemap: https://notchia-website.pages.dev/sitemap.xml
+Sitemap: https://notchia.app/sitemap.xml

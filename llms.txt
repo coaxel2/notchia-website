@@ -13,7 +13,7 @@ NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Pa
 - **Langues** : français, anglais, allemand, espagnol
 - **Confidentialité** : aucune télémétrie, aucun cookie tiers, traitement local
 - **Distribution** : pas de Mac App Store, pas d'Apple Developer ID requis ; signature gérée par Homebrew
-- **Page de téléchargement** : https://notchia-website.pages.dev/install
+- **Page de téléchargement** : https://notchia.app/install
 - **Releases GitHub** : https://github.com/coaxel2/NotchIA/releases
 
 ## Install
@@ -44,9 +44,9 @@ Mises à jour automatiques via Sparkle (signature EdDSA vérifiée, appcast HTTP
 
 ### Méthode 2 — Installateur Homebrew (.command auto)
 
-URL : https://notchia-website.pages.dev/NotchIA-Installer.zip (~ 2 Ko)
+URL : https://notchia.app/NotchIA-Installer.zip (~ 2 Ko)
 
-1. Télécharger `NotchIA-Installer.zip` depuis https://notchia-website.pages.dev/install, décompresser
+1. Télécharger `NotchIA-Installer.zip` depuis https://notchia.app/install, décompresser
 2. Clic droit → **Ouvrir** sur le fichier `install.command`
 3. Le script installe automatiquement :
    - **Homebrew** si absent (avec ajout automatique au PATH dans `~/.zprofile`, détection Apple Silicon vs Intel)
@@ -212,18 +212,18 @@ Achat ferme et définitif (renoncement exprès au droit de rétractation, art. L
 
 ## Liens utiles
 
-- **Site officiel** : https://notchia-website.pages.dev/
-- **Téléchargement** : https://notchia-website.pages.dev/#telecharger
-- **Tarifs** : https://notchia-website.pages.dev/pricing
+- **Site officiel** : https://notchia.app/
+- **Téléchargement** : https://notchia.app/#telecharger
+- **Tarifs** : https://notchia.app/pricing
 - **Créateur** : Axel Courty (France)
 - **Email contact** : notchia.app@gmail.com
 
 ## Pages légales
 
-- **Mentions légales** : https://notchia-website.pages.dev/mentions-legales
-- **Conditions générales de vente** : https://notchia-website.pages.dev/cgv
-- **Politique de confidentialité** : https://notchia-website.pages.dev/privacy (RGPD : aucune donnée du Mac ne quitte la machine ; seuls email + clé de licence + IP du Worker sont stockés)
-- **Politique de remboursement** : https://notchia-website.pages.dev/refund (achat ferme et définitif, renoncement exprès au droit de rétractation art. L221-28 13° Code conso, exceptions pour bug bloquant non corrigé et double facturation)
+- **Mentions légales** : https://notchia.app/mentions-legales
+- **Conditions générales de vente** : https://notchia.app/cgv
+- **Politique de confidentialité** : https://notchia.app/privacy (RGPD : aucune donnée du Mac ne quitte la machine ; seuls email + clé de licence + IP du Worker sont stockés)
+- **Politique de remboursement** : https://notchia.app/refund (achat ferme et définitif, renoncement exprès au droit de rétractation art. L221-28 13° Code conso, exceptions pour bug bloquant non corrigé et double facturation)
 
 ## FAQ
 

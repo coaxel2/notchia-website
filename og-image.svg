@@ -40,7 +40,7 @@
   <!-- Logo + wordmark -->
   <image href="logo.png" x="60" y="22" width="40" height="40"/>
   <text x="112" y="51" font-family="Fraunces, serif" font-size="22" fill="#EDE8DC" font-weight="500">NotchIA</text>
-  <text x="1140" y="50" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="14" fill="#EDE8DC" opacity="0.55">notchia-website.pages.dev</text>
+  <text x="1140" y="50" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="14" fill="#EDE8DC" opacity="0.55">notchia.app</text>
 
   <!-- Notch -->
   <g transform="translate(440,110)">
