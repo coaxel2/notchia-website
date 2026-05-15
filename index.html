@@ -264,14 +264,6 @@
         },
         {
           "@type": "Question",
-          "name": "NotchIA est-il open-source ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NotchIA est en open-core. Le projet de base BoringNotch est open-source sous licence libre. Les extensions Pro de NotchIA — l'intégration IA en direct, le convertisseur étendu, certains modules avancés — sont propriétaires. L'application est signée par le développeur et distribuée hors Mac App Store (procédure clic droit → Ouvrir au premier lancement)."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Qu'est-ce que Digest et comment fonctionne-t-il ?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -2058,15 +2050,6 @@
         </p>
       </details>
 
-      <details class="group rounded-2xl border border-line bg-ink2 p-5 sm:p-6">
-        <summary class="flex items-center justify-between cursor-pointer list-none">
-          <h3 class="font-medium text-cream text-base sm:text-lg pr-4" data-i18n="faq.q8">NotchIA est-il open-source ?</h3>
-          <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </summary>
-        <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a8">
-          NotchIA est en <span class="text-cream">open-core</span>. Le projet de base BoringNotch est open-source sous licence libre. Les extensions Pro — l'intégration IA en direct, le convertisseur étendu, certains modules avancés — sont propriétaires. L'application est signée par le développeur et distribuée hors Mac App Store (procédure clic droit → Ouvrir au premier lancement).
-        </p>
-      </details>
     </div>
   </div>
 </section>
@@ -2281,8 +2264,6 @@
       'faq.a7': '<span class="text-cream">Non.</span> NotchIA ne collecte aucune donnée d\'usage et n\'envoie aucune télémétrie. Les modules calendrier, presse-papiers, Pomodoro, assistants IA et résumé Shelf fonctionnent <span class="text-cream">100% localement</span>. Les journaux de session Claude Code / Codex / Copilot sont lus depuis le disque local — jamais envoyés. Le résumé d\'un fichier dans le Shelf est généré <span class="text-cream">on-device</span> par Apple Intelligence (Foundation Models). Le module Digest fetch tes flux RSS publics directement depuis ton Mac, et le résumé est lui aussi généré on-device — <span class="text-cream">jamais d\'envoi vers OpenAI, Anthropic ou nos serveurs</span>. Seules connexions sortantes : auto-update Sparkle (signature EdDSA), validation de licence (email + clé), fetch des flux RSS que tu as toi-même configurés.',
       'faq.q9': 'Qu\'est-ce que Digest et comment fonctionne-t-il ?',
       'faq.a9': '<span class="text-cream">Digest</span> est un nouvel onglet <span class="text-cream">gratuit</span> ajouté en 2.8.0 (Wise Owl 🦉). Tu colles tes flux RSS/Atom préférés, tu écris en langage naturel ce qui t\'intéresse (ex&nbsp;: « IA vidéo, macOS 26, SwiftUI »), et Apple Intelligence — Foundation Models on-device — filtre, résume et priorise. Brief court à scanner en 30 secondes, directement dans l\'encoche. Cache 14 jours pour éviter la régénération en boucle. <span class="text-cream">100% local</span> : les flux sont fetched depuis ton Mac, les résumés générés sur ton CPU/GPU, <b class="text-cream">jamais d\'appel</b> vers un fournisseur IA tiers ou nos serveurs. Requiert <span class="text-cream">macOS 26+</span> pour Apple Intelligence ; sur macOS 15, dégradation gracieuse (viewer brut sans résumé IA).',
-      'faq.q8': 'NotchIA est-il open-source ?',
-      'faq.a8': 'NotchIA est en <span class="text-cream">open-core</span>. Le projet de base BoringNotch est open-source sous licence libre. Les extensions Pro — l\'intégration IA en direct, le convertisseur étendu, certains modules avancés — sont propriétaires. L\'application est signée par le développeur et distribuée hors Mac App Store (procédure clic droit → Ouvrir au premier lancement).',
 
       // Stats band
       'stats.modules': 'modules',
@@ -2474,8 +2455,6 @@
       'faq.a7': '<span class="text-cream">No.</span> NotchIA collects no usage data and sends no telemetry. The calendar, clipboard, Pomodoro, AI assistants, and Shelf summary modules all run <span class="text-cream">100% locally</span>. Claude Code, Codex, and Copilot session logs are read from the local disk — never uploaded. The Shelf file summary is generated <span class="text-cream">on-device</span> by Apple Intelligence (Foundation Models). The Digest module fetches your public RSS feeds directly from your Mac, and the summary is also generated on-device — <span class="text-cream">never sent to OpenAI, Anthropic, or our servers</span>. Only outbound connections: Sparkle auto-update (EdDSA signed), license validation (email + key), and fetching of the RSS feeds you configured yourself.',
       'faq.q9': 'What is Digest and how does it work?',
       'faq.a9': '<span class="text-cream">Digest</span> is a new <span class="text-cream">free</span> tab added in 2.8.0 (Wise Owl 🦉). You paste your favorite RSS/Atom feeds, you write what matters in plain language (e.g.&nbsp;"AI video, macOS 26, SwiftUI"), and Apple Intelligence — on-device Foundation Models — filters, summarizes, and prioritizes. A short brief to scan in 30 seconds, right in the notch. 14-day cache to avoid regenerating on every reopen. <span class="text-cream">100% local</span>: feeds are fetched from your Mac, summaries are generated on your CPU/GPU, <b class="text-cream">no call</b> to a third-party AI provider or our servers. Requires <span class="text-cream">macOS 26+</span> for Apple Intelligence; on macOS 15, graceful fallback (raw viewer without AI summary).',
-      'faq.q8': 'Is NotchIA open-source?',
-      'faq.a8': 'NotchIA is <span class="text-cream">open-core</span>. The base BoringNotch project is open-source under a free license. Pro extensions — live AI integration, extended converter, some advanced modules — are proprietary. The app is signed by the developer and distributed outside the Mac App Store (right-click → Open required on first launch).',
 
       // Stats band
       'stats.modules': 'modules',
@@ -2667,8 +2646,6 @@
       'faq.a7': '<span class="text-cream">No.</span> NotchIA no recopila datos de uso ni envía telemetría. Los módulos calendario, portapapeles, Pomodoro, asistentes IA y resumen Shelf funcionan <span class="text-cream">100% localmente</span>. Los registros de sesión de Claude Code, Codex y Copilot se leen desde el disco local — nunca se envían. El resumen de un archivo en el Shelf se genera <span class="text-cream">on-device</span> por Apple Intelligence (Foundation Models). El módulo Digest hace fetch de tus feeds RSS públicos directamente desde tu Mac, y el resumen también se genera on-device — <span class="text-cream">jamás se envía a OpenAI, Anthropic ni nuestros servidores</span>. Conexiones salientes únicas: actualización Sparkle (firma EdDSA), validación de licencia (email + clave), fetch de los feeds RSS que tú mismo configuraste.',
       'faq.q9': '¿Qué es Digest y cómo funciona?',
       'faq.a9': '<span class="text-cream">Digest</span> es una nueva pestaña <span class="text-cream">gratuita</span> añadida en 2.8.0 (Wise Owl 🦉). Pegas tus feeds RSS/Atom preferidos, escribes en lenguaje natural lo que te interesa (ej.&nbsp;«IA vídeo, macOS 26, SwiftUI»), y Apple Intelligence — Foundation Models on-device — filtra, resume y prioriza. Briefing corto para escanear en 30 segundos, directamente en la muesca. Caché de 14 días para evitar regeneración en bucle. <span class="text-cream">100% local</span>: los feeds se fetched desde tu Mac, los resúmenes se generan en tu CPU/GPU, <b class="text-cream">cero llamadas</b> a un proveedor IA tercero o a nuestros servidores. Requiere <span class="text-cream">macOS 26+</span> para Apple Intelligence; en macOS 15, degradación elegante (viewer sin resumen IA).',
-      'faq.q8': '¿Es NotchIA open-source?',
-      'faq.a8': 'NotchIA es <span class="text-cream">open-core</span>. El proyecto base BoringNotch es open-source bajo licencia libre. Las extensiones Pro — la integración IA en directo, el conversor extendido, algunos módulos avanzados — son propietarias. La app está firmada por el desarrollador y distribuida fuera del Mac App Store (clic derecho → Abrir necesario en el primer lanzamiento).',
 
       // Stats band
       'stats.modules': 'módulos',
@@ -2860,8 +2837,6 @@
       'faq.a7': '<span class="text-cream">Nein.</span> NotchIA sammelt keine Nutzungsdaten und sendet keine Telemetrie. Die Module Kalender, Zwischenablage, Pomodoro, KI-Assistenten und Shelf-Zusammenfassung laufen <span class="text-cream">100% lokal</span>. Die Sitzungsprotokolle von Claude Code, Codex und Copilot werden von der lokalen Festplatte gelesen — nie gesendet. Die Datei-Zusammenfassung im Shelf wird <span class="text-cream">on-device</span> von Apple Intelligence (Foundation Models) erstellt. Das Digest-Modul fetcht Ihre öffentlichen RSS-Feeds direkt von Ihrem Mac, und die Zusammenfassung wird ebenfalls on-device erstellt — <span class="text-cream">nie an OpenAI, Anthropic oder unsere Server gesendet</span>. Einzige ausgehende Verbindungen: Sparkle-Auto-Update (EdDSA-Signatur), Lizenzvalidierung (E-Mail + Schlüssel), Fetch der RSS-Feeds, die Sie selbst konfiguriert haben.',
       'faq.q9': 'Was ist Digest und wie funktioniert es?',
       'faq.a9': '<span class="text-cream">Digest</span> ist ein neuer <span class="text-cream">kostenloser</span> Tab, hinzugefügt in 2.8.0 (Wise Owl 🦉). Sie fügen Ihre bevorzugten RSS/Atom-Feeds ein, schreiben in natürlicher Sprache, was zählt (z.&nbsp;B. «KI-Video, macOS 26, SwiftUI»), und Apple Intelligence — On-Device-Foundation-Models — filtert, fasst zusammen und priorisiert. Kurzes Briefing zum Scannen in 30 Sekunden, direkt in der Aussparung. 14-Tage-Cache, um eine ständige Neugenerierung zu vermeiden. <span class="text-cream">100% lokal</span>: Feeds werden von Ihrem Mac gefetcht, Zusammenfassungen auf Ihrem CPU/GPU erstellt, <b class="text-cream">kein Aufruf</b> an einen KI-Drittanbieter oder unsere Server. Erfordert <span class="text-cream">macOS 26+</span> für Apple Intelligence; auf macOS 15 elegante Degradation (Roh-Viewer ohne KI-Zusammenfassung).',
-      'faq.q8': 'Ist NotchIA open-source?',
-      'faq.a8': 'NotchIA ist <span class="text-cream">open-core</span>. Das Basisprojekt BoringNotch ist open-source unter freier Lizenz. Pro-Erweiterungen — Live-KI-Integration, erweiterter Konverter, einige fortgeschrittene Module — sind proprietär. Die App ist vom Entwickler signiert und außerhalb des Mac App Stores vertrieben (Rechtsklick → Öffnen beim ersten Start nötig).',
 
       // Stats band
       'stats.modules': 'Module',
