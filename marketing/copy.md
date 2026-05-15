@@ -57,7 +57,7 @@ Gratuit ou 39,99 € à vie. macOS 15+.
 👉 https://notchia.app/
 
 **B.**
-J'ai transformé l'encoche de mon MacBook en hub : musique, calendrier, pomodoro, détections live, Digest IA on-device.
+J'ai transformé l'encoche de mon MacBook en hub : musique, calendrier, concentration, détections live, Digest IA on-device.
 Zéro tracking. Pas de SaaS forcé.
 NotchIA 2.8.0 🦉 → https://notchia.app/
 
@@ -70,7 +70,7 @@ Free, or $44 once for life. macOS 15+.
 👉 https://notchia.app/
 
 **B.**
-I turned my MacBook's notch into a real hub: music, calendar, pomodoro, live detections, on-device AI digest.
+I turned my MacBook's notch into a real hub: music, calendar, concentration, live detections, on-device AI digest.
 No tracking. No forced SaaS.
 NotchIA 2.8.0 🦉 → https://notchia.app/
 
@@ -93,10 +93,10 @@ NotchIA 2.8.0 🦉 → https://notchia.app/
 ### Description (260 chars max)
 
 **FR**
-NotchIA transforme l'encoche du MacBook en hub interactif : musique, calendrier, pomodoro, détections live, brief d'actu IA on-device. Pro 💎 : Shelf, presse-papier intelligent, IA Code. Zéro tracking. Lifetime 39,99 €.
+NotchIA transforme l'encoche du MacBook en hub interactif : musique, calendrier, concentration, détections live, brief d'actu IA on-device. Pro 💎 : Shelf, presse-papier intelligent, IA Code. Zéro tracking. Lifetime 39,99 €.
 
 **EN**
-NotchIA turns the MacBook notch into an interactive hub: music, calendar, pomodoro, live detections, on-device AI news digest. Pro 💎 adds Shelf, smart clipboard, AI Code. Zero tracking. $44 lifetime.
+NotchIA turns the MacBook notch into an interactive hub: music, calendar, concentration, live detections, on-device AI news digest. Pro 💎 adds Shelf, smart clipboard, AI Code. Zero tracking. $44 lifetime.
 
 ### First / maker comment (voix Axel, 1ère personne)
 
@@ -106,7 +106,7 @@ Salut Product Hunt 👋
 
 Je suis Axel, dev indé FR. J'ai un MacBook avec une encoche et ça m'a toujours frustré de voir cet espace inutilisé.
 
-NotchIA, c'est ma tentative d'en faire quelque chose d'utile sans tomber dans le gadget : musique, calendrier, pomodoro, détections live (appel vidéo, AirPods, focus…), et depuis la 2.8.0 « Wise Owl », un Digest qui résume mon actu IA dans l'encoche — entièrement on-device via Apple Intelligence.
+NotchIA, c'est ma tentative d'en faire quelque chose d'utile sans tomber dans le gadget : musique, calendrier, concentration, détections live (appel vidéo, AirPods, focus…), et depuis la 2.8.0 « Wise Owl », un Digest qui résume mon actu IA dans l'encoche — entièrement on-device via Apple Intelligence.
 
 Trois choses qui me tiennent à cœur :
 - **Tout tourne en local.** Aucun résumé, aucun brief, aucun clic ne quitte le Mac. Pas d'analytics tiers.
@@ -121,7 +121,7 @@ Hey Product Hunt 👋
 
 I'm Axel, a French indie dev. I have a MacBook with a notch and I always hated seeing that space go to waste.
 
-NotchIA is my attempt to make it actually useful without being a gimmick: music, calendar, pomodoro, live detections (video call, AirPods, focus…), and as of 2.8.0 "Wise Owl", a Digest that summarises my AI news right inside the notch — fully on-device via Apple Intelligence.
+NotchIA is my attempt to make it actually useful without being a gimmick: music, calendar, concentration, live detections (video call, AirPods, focus…), and as of 2.8.0 "Wise Owl", a Digest that summarises my AI news right inside the notch — fully on-device via Apple Intelligence.
 
 Three things I care about:
 - **Everything runs locally.** No summary, no brief, no click ever leaves the Mac. No third-party analytics.
@@ -137,10 +137,10 @@ Happy to dig into any technical questions (Apple Intelligence, Foundation Models
 ### Short description (~500 chars)
 
 **FR**
-NotchIA transforme l'encoche du MacBook en hub interactif. Contrôlez votre musique, votre calendrier, votre pomodoro et vos AirPods sans quitter la barre supérieure. La version 2.8.0 « Wise Owl » ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence. Aucune télémétrie, aucun tracker tiers. Gratuit avec un Pro optionnel pour Shelf, presse-papier intelligent et intégration IA Code. Disponible en abonnement 3,99 €/mois ou en achat unique 39,99 € à vie. macOS 15 Sequoia minimum, Apple Silicon et Intel.
+NotchIA transforme l'encoche du MacBook en hub interactif. Contrôlez votre musique, votre calendrier, votre concentration et vos AirPods sans quitter la barre supérieure. La version 2.8.0 « Wise Owl » ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence. Aucune télémétrie, aucun tracker tiers. Gratuit avec un Pro optionnel pour Shelf, presse-papier intelligent et intégration IA Code. Disponible en abonnement 3,99 €/mois ou en achat unique 39,99 € à vie. macOS 15 Sequoia minimum, Apple Silicon et Intel.
 
 **EN**
-NotchIA turns your MacBook's notch into an interactive hub. Control your music, calendar, pomodoro and AirPods without ever leaving the menu bar. Version 2.8.0 "Wise Owl" adds Digest, an AI news brief generated entirely on-device through Apple Intelligence. No telemetry, no third-party trackers. Free, with an optional Pro tier unlocking Shelf, smart clipboard and AI Code integration. Available as a $5/month subscription or a $44 one-time lifetime purchase. macOS 15 Sequoia minimum, Apple Silicon and Intel.
+NotchIA turns your MacBook's notch into an interactive hub. Control your music, calendar, concentration and AirPods without ever leaving the menu bar. Version 2.8.0 "Wise Owl" adds Digest, an AI news brief generated entirely on-device through Apple Intelligence. No telemetry, no third-party trackers. Free, with an optional Pro tier unlocking Shelf, smart clipboard and AI Code integration. Available as a $5/month subscription or a $44 one-time lifetime purchase. macOS 15 Sequoia minimum, Apple Silicon and Intel.
 
 ### Long description (~1500 chars)
 
@@ -151,7 +151,7 @@ NotchIA habite l'encoche de votre MacBook et la transforme en hub interactif, ca
 **Gratuit, et déjà très complet :**
 - Musique avec quatre contrôleurs (Spotify, Apple Music, Music.app, lecteur système)
 - Calendrier et rappels système, directement dans l'encoche
-- Pomodoro complet avec statistiques quotidiennes et historique
+- Concentration complet avec statistiques quotidiennes et historique
 - Détections live : appel vidéo, mode focus, AirPods, screen recording, webcam active
 - Sneak Peek Engine — aperçu visuel des fichiers déposés
 - Personnalisation totale : 5 thèmes, couleur d'accent libre, icône personnalisable, 7 raccourcis éditables
@@ -174,7 +174,7 @@ NotchIA lives in your MacBook's notch and turns it into a calm, capable interact
 **Free, and already feature-complete:**
 - Music with four controllers (Spotify, Apple Music, Music.app, system player)
 - System calendar and reminders, right inside the notch
-- Full pomodoro with daily stats and history
+- Full concentration with daily stats and history
 - Live detections: video call, focus mode, AirPods, screen recording, active webcam
 - Sneak Peek Engine — visual preview of dropped files
 - Total customisation: 5 themes, free accent colour, custom icon, 7 editable shortcuts
@@ -200,13 +200,13 @@ macOS 15.0 Sequoia minimum. Apple Silicon or Intel. Final purchase.
 
 1. L'encoche de votre MacBook devient un hub interactif — musique, calendrier, IA. 100% on-device.
 2. Une seule encoche. Tout ce que votre Mac veut vous dire, sans jamais vous interrompre.
-3. NotchIA fait penser l'encoche : Digest IA, Shelf, pomodoro, détections live. Zéro tracking.
+3. NotchIA fait penser l'encoche : Digest IA, Shelf, concentration, détections live. Zéro tracking.
 
 ### EN
 
 1. Your MacBook's notch becomes an interactive hub — music, calendar, AI. Fully on-device.
 2. One notch. Everything your Mac wants to say, without ever interrupting you.
-3. NotchIA makes the notch think: AI Digest, Shelf, pomodoro, live detections. Zero tracking.
+3. NotchIA makes the notch think: AI Digest, Shelf, concentration, live detections. Zero tracking.
 
 ---
 
@@ -216,11 +216,11 @@ macOS 15.0 Sequoia minimum. Apple Silicon or Intel. Final purchase.
 
 ### FR
 
-NotchIA est une application macOS qui transforme l'encoche du MacBook en hub interactif. Pensée et développée par Axel Courty, développeur indépendant français, elle fait de cet espace longtemps perçu comme un défaut un véritable centre de contrôle : musique, calendrier, rappels, pomodoro, détections live (appel vidéo, focus, AirPods, screen recording, webcam), aperçu visuel des fichiers, raccourcis personnalisables. La version 2.8.0 « Wise Owl », sortie le 15 mai 2026, ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence — aucune donnée ne quitte le Mac. Pour les utilisateurs avancés, la version Pro 💎 débloque Shelf (drag-and-drop universel, conversion entre 16 formats, résumé IA local de PDF), une intégration directe avec Claude Code, Codex et GitHub Copilot pilotés depuis l'encoche, ainsi qu'un presse-papier intelligent de 48 entrées avec recherche full-text. NotchIA refuse les compromis du SaaS forcé : 3,99 € par mois ou 39,99 € en achat unique à vie. Aucun tracker tiers, aucune télémétrie. macOS 15 Sequoia minimum, distribution hors App Store via Stripe et GitHub Releases. Site : https://notchia.app/
+NotchIA est une application macOS qui transforme l'encoche du MacBook en hub interactif. Pensée et développée par Axel Courty, développeur indépendant français, elle fait de cet espace longtemps perçu comme un défaut un véritable centre de contrôle : musique, calendrier, rappels, concentration, détections live (appel vidéo, focus, AirPods, screen recording, webcam), aperçu visuel des fichiers, raccourcis personnalisables. La version 2.8.0 « Wise Owl », sortie le 15 mai 2026, ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence — aucune donnée ne quitte le Mac. Pour les utilisateurs avancés, la version Pro 💎 débloque Shelf (drag-and-drop universel, conversion entre 16 formats, résumé IA local de PDF), une intégration directe avec Claude Code, Codex et GitHub Copilot pilotés depuis l'encoche, ainsi qu'un presse-papier intelligent de 48 entrées avec recherche full-text. NotchIA refuse les compromis du SaaS forcé : 3,99 € par mois ou 39,99 € en achat unique à vie. Aucun tracker tiers, aucune télémétrie. macOS 15 Sequoia minimum, distribution hors App Store via Stripe et GitHub Releases. Site : https://notchia.app/
 
 ### EN
 
-NotchIA is a macOS app that turns your MacBook's notch into an interactive hub. Designed and developed by Axel Courty, a French indie developer, it transforms a long-criticised piece of hardware into a real control centre: music, calendar, reminders, pomodoro, live detections (video call, focus, AirPods, screen recording, webcam), visual file previews, customisable shortcuts. Version 2.8.0 "Wise Owl", released on May 15, 2026, adds Digest, an AI news brief generated entirely on-device through Apple Intelligence — no data ever leaves the Mac. Power users can unlock Pro 💎, which adds Shelf (universal drag-and-drop, 16-format conversion, on-device AI summary for any PDF), a direct integration with Claude Code, Codex and GitHub Copilot driven from the notch, and a smart clipboard with 48 entries and full-text search. NotchIA refuses forced-SaaS trade-offs: $5 per month or $44 once for life. No third-party trackers, no telemetry. macOS 15 Sequoia minimum, distributed outside the App Store through Stripe and GitHub Releases. Site: https://notchia.app/
+NotchIA is a macOS app that turns your MacBook's notch into an interactive hub. Designed and developed by Axel Courty, a French indie developer, it transforms a long-criticised piece of hardware into a real control centre: music, calendar, reminders, concentration, live detections (video call, focus, AirPods, screen recording, webcam), visual file previews, customisable shortcuts. Version 2.8.0 "Wise Owl", released on May 15, 2026, adds Digest, an AI news brief generated entirely on-device through Apple Intelligence — no data ever leaves the Mac. Power users can unlock Pro 💎, which adds Shelf (universal drag-and-drop, 16-format conversion, on-device AI summary for any PDF), a direct integration with Claude Code, Codex and GitHub Copilot driven from the notch, and a smart clipboard with 48 entries and full-text search. NotchIA refuses forced-SaaS trade-offs: $5 per month or $44 once for life. No third-party trackers, no telemetry. macOS 15 Sequoia minimum, distributed outside the App Store through Stripe and GitHub Releases. Site: https://notchia.app/
 
 ---
 
@@ -233,7 +233,7 @@ NotchIA is a macOS app that turns your MacBook's notch into an interactive hub. 
 - **Musique** — Quatre contrôleurs (Spotify, Apple Music, Music.app, système) pilotés sans quitter l'encoche.
 - **Calendrier** — Vos événements et rappels système accessibles d'un regard, jamais dans le chemin.
 - **Digest [NEW 2.8.0]** — Votre brief d'actu IA, généré on-device, livré chaque jour dans l'encoche.
-- **Concentration / Pomodoro** — Sessions chronométrées, stats quotidiennes, historique. Sans cérémonie.
+- **Concentration / Concentration** — Sessions chronométrées, stats quotidiennes, historique. Sans cérémonie.
 - **Détections live** — Appel vidéo, focus, AirPods, screen recording, webcam : votre Mac vous l'annonce.
 - **Sneak Peek Engine** — Glissez un fichier dans l'encoche, voyez son aperçu instantanément.
 - **Personnalisation** — 5 thèmes, accent custom, icône uploadable, langue et 7 raccourcis éditables.
@@ -246,7 +246,7 @@ NotchIA is a macOS app that turns your MacBook's notch into an interactive hub. 
 - **Music** — Four controllers (Spotify, Apple Music, Music.app, system) driven without leaving the notch.
 - **Calendar** — Your events and system reminders, glanceable, never in the way.
 - **Digest [NEW 2.8.0]** — Your AI news brief, generated on-device, delivered daily inside the notch.
-- **Focus / Pomodoro** — Timed sessions, daily stats, history. No ceremony.
+- **Focus / Concentration** — Timed sessions, daily stats, history. No ceremony.
 - **Live detections** — Video call, focus, AirPods, screen recording, webcam: your Mac tells you what's on.
 - **Sneak Peek Engine** — Drop a file on the notch, see an instant preview.
 - **Customisation** — 5 themes, custom accent, uploadable icon, language and 7 editable shortcuts.
@@ -324,7 +324,7 @@ ENTIÈREMENT GRATUIT, DÉJÀ COMPLET
 
 • Musique — quatre contrôleurs intégrés (Spotify, Apple Music, Music.app, lecteur système) avec aperçu de la pochette et navigation morceau par morceau.
 • Calendrier — vos événements système et vos rappels, glissés dans l'encoche, jamais en collision avec votre travail.
-• Concentration — un pomodoro complet avec stats quotidiennes, historique, sessions personnalisées.
+• Concentration — un concentration complet avec stats quotidiennes, historique, sessions personnalisées.
 • Détections live — votre Mac détecte automatiquement vos appels vidéo, votre mode focus, vos AirPods, un enregistrement d'écran, une webcam active, et adapte l'encoche en conséquence.
 • Sneak Peek Engine — déposez un fichier dans l'encoche, recevez un aperçu visuel instantané.
 • Personnalisation — cinq thèmes, couleur d'accent libre, icône uploadable, langue, sept raccourcis éditables. Tout est négociable.
@@ -358,7 +358,7 @@ ENTIRELY FREE, ALREADY COMPLETE
 
 • Music — four built-in controllers (Spotify, Apple Music, Music.app, system player) with artwork preview and track-by-track navigation.
 • Calendar — your system events and reminders, tucked into the notch, never colliding with your work.
-• Focus — a full pomodoro with daily stats, history and custom sessions.
+• Focus — a full concentration with daily stats, history and custom sessions.
 • Live detections — your Mac automatically detects video calls, focus mode, AirPods, screen recording, an active webcam, and adapts the notch accordingly.
 • Sneak Peek Engine — drop a file on the notch, get an instant visual preview.
 • Customisation — five themes, free accent colour, uploadable icon, language, seven editable shortcuts. Everything is negotiable.
@@ -387,10 +387,10 @@ Made with care in France by Axel Courty.
 ### Keywords (100 chars max, virgules)
 
 **FR**
-encoche,notch,macbook,productivité,pomodoro,calendrier,musique,ia,presse-papier,airpods,focus,shelf
+encoche,notch,macbook,productivité,concentration,calendrier,musique,ia,presse-papier,airpods,focus,shelf
 
 **EN**
-notch,macbook,productivity,pomodoro,calendar,music,ai,clipboard,airpods,focus,shelf,menubar,onDevice
+notch,macbook,productivity,concentration,calendar,music,ai,clipboard,airpods,focus,shelf,menubar,onDevice
 
 ---
 

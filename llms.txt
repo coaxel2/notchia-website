@@ -1,6 +1,6 @@
 # NotchIA
 
-> NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif : médias multi-source, calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot), Pomodoro, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro mensuel 3,99 €/mois (annulable) · Pro à vie 39,99 € en achat unique. Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
+> NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif : médias multi-source, calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro mensuel 3,99 €/mois (annulable) · Pro à vie 39,99 € en achat unique. Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
 
 ## À propos
 
@@ -101,7 +101,7 @@ Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégr
 - Cocher un rappel d'un clic
 
 ### Productivité
-- **Pomodoro** : sessions focus + pauses courtes/longues paramétrables, statistiques quotidiennes, son de fin, sneak peek périodique
+- **Concentration** : sessions focus + pauses courtes/longues paramétrables, statistiques quotidiennes, son de fin, sneak peek périodique
 - **Presse-papiers historique** : recherche, regroupement par app, épinglage, taille de cache configurable (jusqu'à 500 entrées en Pro)
 - **Shelf** : drag-and-drop temporaire de fichiers/textes/liens entre apps sans encombrer le Bureau
 - **Convertisseur de fichiers intégré** : 16 formats en Pro (image JPG/WebP/HEIC/AVIF/TIFF, PDF, vidéo)
@@ -124,7 +124,7 @@ NotchIA peut remplacer les HUD natifs macOS par un affichage intégré dans l'en
 - Affichage du pourcentage en option
 
 ### Sneak Peek Engine
-Affichage rotatif périodique de mini-widgets dans l'encoche fermée : musique, Pomodoro, presse-papiers, volume, luminosité, météo. Intervalle de rotation et durée d'affichage configurables. Affiche uniquement les widgets avec contenu actif.
+Affichage rotatif périodique de mini-widgets dans l'encoche fermée : musique, Concentration, presse-papiers, volume, luminosité, météo. Intervalle de rotation et durée d'affichage configurables. Affiche uniquement les widgets avec contenu actif.
 
 ### Détections automatiques
 - **Appels en cours** : indicateur dans l'encoche pendant FaceTime, Zoom, Teams, Meet
@@ -142,7 +142,7 @@ Affichage rotatif périodique de mini-widgets dans l'encoche fermée : musique, 
 - Icône d'app personnalisable (import d'une image)
 - Forme de l'encoche : rayon des coins adaptatif, ombre activable
 - Hauteur du notch ajustable séparément pour écrans avec/sans encoche
-- Onglets visibles configurables (Média, Calendrier, Shelf, IA, Pomodoro, Presse-papiers)
+- Onglets visibles configurables (Média, Calendrier, Shelf, IA, Concentration, Presse-papiers)
 - Visualizers custom importables
 
 ### Comportements & gestes
@@ -169,7 +169,7 @@ Affichage rotatif périodique de mini-widgets dans l'encoche fermée : musique, 
 Trois formules (modèle freemium) :
 
 **Essentiel — 0 €, gratuit à vie, sans limitation**
-Inclut : médias multi-source (Apple Music, Spotify, YouTube), paroles synchronisées, visualizer, calendrier + Rappels, HUD système (volume, luminosité, clavier), Sneak Peek Engine, détections automatiques (appels, focus mode, capture d'écran), Pomodoro complet (statistiques quotidiennes + sons), personnalisation visuelle.
+Inclut : médias multi-source (Apple Music, Spotify, YouTube), paroles synchronisées, visualizer, calendrier + Rappels, HUD système (volume, luminosité, clavier), Sneak Peek Engine, détections automatiques (appels, focus mode, capture d'écran), Concentration complet (statistiques quotidiennes + sons), personnalisation visuelle.
 
 **Pro mensuel — 3,99 €/mois, annulable à tout moment, 1 Mac**
 Tout l'Essentiel, plus les trois modules Pro :
@@ -192,7 +192,7 @@ Achat ferme et définitif (renoncement exprès au droit de rétractation, art. L
 | HUD système | ✓ | ✓ |
 | Sneak Peek Engine | ✓ | ✓ |
 | Détections automatiques | ✓ | ✓ |
-| Pomodoro complet (statistiques + sons) | ✓ | ✓ |
+| Concentration complet (statistiques + sons) | ✓ | ✓ |
 | **Digest IA on-device (RSS résumé par Apple Intelligence)** | ✓ | ✓ |
 | Personnalisation visuelle | ✓ | ✓ |
 | **IA en direct (Claude Code, Codex, Copilot)** | ✗ | ✓ |
