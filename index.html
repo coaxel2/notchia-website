@@ -211,7 +211,7 @@
           "name": "Qu'est-ce que NotchIA ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, des assistants IA en direct (Claude Code, Codex, Copilot), un Pomodoro, un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système."
+            "text": "NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, un Digest IA on-device (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), un Pomodoro complet, des assistants IA en direct (Claude Code, Codex, Copilot, en Pro), un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système."
           }
         },
         {
@@ -259,7 +259,7 @@
           "name": "NotchIA collecte-t-il des données ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non. NotchIA ne collecte aucune donnée et n'envoie aucune télémétrie. Tous les modules fonctionnent localement. La seule connexion réseau est l'auto-update Sparkle avec signature EdDSA vérifiée. Les journaux de session Claude Code sont lus depuis le disque local — aucune donnée IA ne quitte votre machine."
+            "text": "Non. NotchIA ne collecte aucune donnée d'usage et n'envoie aucune télémétrie. Les modules calendrier, presse-papiers, Pomodoro, assistants IA et résumé Shelf fonctionnent 100% localement. Les journaux de session Claude Code, Codex et Copilot sont lus depuis le disque local — jamais envoyés. Le résumé d'un fichier dans le Shelf est généré on-device par Apple Intelligence (Foundation Models). Le module Digest fetch tes flux RSS publics directement depuis ton Mac, et le résumé est lui aussi généré on-device — jamais d'envoi vers OpenAI, Anthropic ou nos serveurs. Seules connexions sortantes : auto-update Sparkle (signature EdDSA), validation de licence (email + clé), fetch des flux RSS que tu as configurés."
           }
         },
         {
@@ -272,10 +272,10 @@
         },
         {
           "@type": "Question",
-          "name": "Comment NotchIA s'ouvre-t-il et se ferme-t-il ?",
+          "name": "Qu'est-ce que Digest et comment fonctionne-t-il ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "L'encoche s'ouvre au survol de la souris, avec un délai configurable. Elle se ferme automatiquement après 0 à 2 secondes (réglable). Un geste deux doigts vers le bas sur le trackpad ouvre également l'encoche fermée. La zone de survol peut être étendue au-delà de l'encoche physique. NotchIA mémorise le dernier onglet ouvert."
+            "text": "Digest est un nouvel onglet gratuit ajouté en 2.8.0 (Wise Owl). Tu colles tes flux RSS/Atom préférés, tu écris en langage naturel ce qui t'intéresse (ex : « IA vidéo, macOS 26, SwiftUI »), et Apple Intelligence (Foundation Models, on-device) filtre, résume et priorise. Brief court à scanner en 30 secondes, directement dans l'encoche. Cache 14 jours pour éviter la régénération en boucle. 100% local : les flux sont fetched depuis ton Mac, les résumés générés sur ton CPU/GPU, jamais d'appel vers un fournisseur IA tiers ou nos serveurs. Requiert macOS 26+ pour Apple Intelligence ; sur macOS 15, dégradation gracieuse (viewer brut sans résumé IA)."
           }
         }
       ]
@@ -1984,7 +1984,7 @@
           <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
         <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n="faq.a1">
-          NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, des assistants IA en direct (Claude Code, Codex, Copilot), un Pomodoro, un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système.
+          NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, un Digest IA on-device (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS), un Pomodoro complet, des assistants IA en direct (Claude Code, Codex, Copilot, en Pro), un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système.
         </p>
       </details>
 
@@ -2034,7 +2034,7 @@
           <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
         <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a7">
-          <span class="text-cream">Non.</span> NotchIA ne collecte aucune donnée et n'envoie aucune télémétrie. Tous les modules fonctionnent localement. La seule connexion réseau est l'auto-update Sparkle avec signature EdDSA vérifiée. Les journaux de session Claude Code sont lus depuis le disque local — aucune donnée IA ne quitte votre machine.
+          <span class="text-cream">Non.</span> NotchIA ne collecte aucune donnée d'usage et n'envoie aucune télémétrie. Les modules calendrier, presse-papiers, Pomodoro, assistants IA et résumé Shelf fonctionnent <span class="text-cream">100% localement</span>. Les journaux de session Claude Code / Codex / Copilot sont lus depuis le disque local — jamais envoyés. Le résumé d'un fichier dans le Shelf est généré <span class="text-cream">on-device</span> par Apple Intelligence (Foundation Models). Le module Digest fetch tes flux RSS publics directement depuis ton Mac (les mêmes requêtes que ton navigateur ferait), et le résumé est lui aussi généré on-device — <span class="text-cream">jamais d'envoi vers OpenAI, Anthropic ou nos serveurs</span>. Seules connexions sortantes : auto-update Sparkle (signature EdDSA), validation de licence (email + clé), fetch des flux RSS que tu as toi-même configurés.
         </p>
       </details>
 
@@ -2046,6 +2046,16 @@
         <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a4">
           Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Pomodoro complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">3,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro — <b class="text-cream">IA en direct</b> (Claude Code, Codex, Copilot), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et <b class="text-cream">presse-papiers historique</b> illimité. <span class="text-cream">Pro à vie</span> : <span class="text-cream">39,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire. Rentabilisé en moins de 11 mois face à l'abonnement. Achat ferme et définitif (voir <a href="/refund" class="text-orange hover:underline">politique de remboursement</a>).
 </p>
+      </details>
+
+      <details class="group rounded-2xl border border-line bg-ink2 p-5 sm:p-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <h3 class="font-medium text-cream text-base sm:text-lg pr-4" data-i18n="faq.q9">Qu'est-ce que Digest et comment fonctionne-t-il ?</h3>
+          <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a9">
+          <span class="text-cream">Digest</span> est un nouvel onglet <span class="text-cream">gratuit</span> ajouté en 2.8.0 (Wise Owl 🦉). Tu colles tes flux RSS/Atom préférés, tu écris en langage naturel ce qui t'intéresse (ex&nbsp;: « IA vidéo, macOS 26, SwiftUI »), et Apple Intelligence — Foundation Models on-device — filtre, résume et priorise. Brief court à scanner en 30 secondes, directement dans l'encoche. Cache 14 jours pour éviter la régénération en boucle. <span class="text-cream">100% local</span> : les flux sont fetched depuis ton Mac, les résumés générés sur ton CPU/GPU, <b class="text-cream">jamais d'appel</b> vers un fournisseur IA tiers ou nos serveurs. Requiert <span class="text-cream">macOS 26+</span> pour Apple Intelligence ; sur macOS 15, dégradation gracieuse (viewer brut sans résumé IA).
+        </p>
       </details>
 
       <details class="group rounded-2xl border border-line bg-ink2 p-5 sm:p-6">
@@ -2256,7 +2266,7 @@
       'faq.title1': 'Avant de',
       'faq.title2': 'télécharger.',
       'faq.q1': "Qu'est-ce que NotchIA ?",
-      'faq.a1': "NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, des assistants IA en direct (Claude Code, Codex, Copilot), un Pomodoro, un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système.",
+      'faq.a1': "NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, un Digest IA on-device (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS), un Pomodoro complet, des assistants IA en direct (Claude Code, Codex, Copilot, en Pro), un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système.",
       'faq.q2': 'Quelle version de macOS est requise ?',
       'faq.a2': 'NotchIA nécessite <span class="text-cream">macOS 15.0 (Sequoia)</span> ou plus récent. L\'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel. Les fonctionnalités IA on-device (Digest, résumé Shelf) nécessitent <span class="text-cream">macOS 26+</span> avec Apple Intelligence ; dégradation gracieuse sinon.',
       'faq.q3': 'NotchIA fonctionne-t-il sur un Mac sans encoche physique ?',
@@ -2268,7 +2278,9 @@
       'faq.q6': 'Quels lecteurs musicaux sont supportés ?',
       'faq.a6': 'NotchIA supporte nativement <span class="text-cream">Apple Music, Spotify, YouTube Music</span> et toute application utilisant l\'API Now Playing de macOS. L\'encoche affiche la pochette avec couleur dominante extraite, les contrôles personnalisables et les paroles synchronisées en temps réel via lrclib (26 langues).',
       'faq.q7': 'NotchIA collecte-t-il des données ?',
-      'faq.a7': '<span class="text-cream">Non.</span> NotchIA ne collecte aucune donnée et n\'envoie aucune télémétrie. Tous les modules fonctionnent localement. La seule connexion réseau est l\'auto-update Sparkle avec signature EdDSA vérifiée. Les journaux de session Claude Code sont lus depuis le disque local — aucune donnée IA ne quitte votre machine.',
+      'faq.a7': '<span class="text-cream">Non.</span> NotchIA ne collecte aucune donnée d\'usage et n\'envoie aucune télémétrie. Les modules calendrier, presse-papiers, Pomodoro, assistants IA et résumé Shelf fonctionnent <span class="text-cream">100% localement</span>. Les journaux de session Claude Code / Codex / Copilot sont lus depuis le disque local — jamais envoyés. Le résumé d\'un fichier dans le Shelf est généré <span class="text-cream">on-device</span> par Apple Intelligence (Foundation Models). Le module Digest fetch tes flux RSS publics directement depuis ton Mac, et le résumé est lui aussi généré on-device — <span class="text-cream">jamais d\'envoi vers OpenAI, Anthropic ou nos serveurs</span>. Seules connexions sortantes : auto-update Sparkle (signature EdDSA), validation de licence (email + clé), fetch des flux RSS que tu as toi-même configurés.',
+      'faq.q9': 'Qu\'est-ce que Digest et comment fonctionne-t-il ?',
+      'faq.a9': '<span class="text-cream">Digest</span> est un nouvel onglet <span class="text-cream">gratuit</span> ajouté en 2.8.0 (Wise Owl 🦉). Tu colles tes flux RSS/Atom préférés, tu écris en langage naturel ce qui t\'intéresse (ex&nbsp;: « IA vidéo, macOS 26, SwiftUI »), et Apple Intelligence — Foundation Models on-device — filtre, résume et priorise. Brief court à scanner en 30 secondes, directement dans l\'encoche. Cache 14 jours pour éviter la régénération en boucle. <span class="text-cream">100% local</span> : les flux sont fetched depuis ton Mac, les résumés générés sur ton CPU/GPU, <b class="text-cream">jamais d\'appel</b> vers un fournisseur IA tiers ou nos serveurs. Requiert <span class="text-cream">macOS 26+</span> pour Apple Intelligence ; sur macOS 15, dégradation gracieuse (viewer brut sans résumé IA).',
       'faq.q8': 'NotchIA est-il open-source ?',
       'faq.a8': 'NotchIA est en <span class="text-cream">open-core</span>. Le projet de base BoringNotch est open-source sous licence libre. Les extensions Pro — l\'intégration IA en direct, le convertisseur étendu, certains modules avancés — sont propriétaires. L\'application est signée par le développeur et distribuée hors Mac App Store (procédure clic droit → Ouvrir au premier lancement).',
 
@@ -2447,7 +2459,7 @@
       'faq.title1': 'Before you',
       'faq.title2': 'download.',
       'faq.q1': 'What is NotchIA?',
-      'faq.a1': 'NotchIA is a macOS app that turns your MacBook notch (or the menu bar on notch-less displays) into an interactive control center. In a single access point: a multi-source media player, a calendar, live AI assistants (Claude Code, Codex, Copilot), a Pomodoro, a clipboard history, a file converter, and an aesthetic replacement for system HUDs.',
+      'faq.a1': 'NotchIA is a macOS app that turns your MacBook notch (or the menu bar on notch-less displays) into an interactive control center. In a single access point: a multi-source media player, a calendar, an on-device AI Digest (news brief summarized by Apple Intelligence from your RSS feeds), a full Pomodoro, live AI assistants (Claude Code, Codex, Copilot — Pro), a clipboard history, a file converter, and an aesthetic replacement for system HUDs.',
       'faq.q2': 'Which macOS version is required?',
       'faq.a2': 'NotchIA requires <span class="text-cream">macOS 15.0 (Sequoia)</span> or newer. The app runs natively on Apple Silicon (M1, M2, M3, M4) and on Intel. On-device AI features (Digest, Shelf summary) require <span class="text-cream">macOS 26+</span> with Apple Intelligence; graceful fallback otherwise.',
       'faq.q3': 'Does NotchIA work on a Mac without a physical notch?',
@@ -2459,7 +2471,9 @@
       'faq.q6': 'Which music players are supported?',
       'faq.a6': 'NotchIA natively supports <span class="text-cream">Apple Music, Spotify, YouTube Music</span> and any app using the macOS Now Playing API. The notch displays the album art with extracted dominant color, customizable controls, and real-time synced lyrics via lrclib (26 languages).',
       'faq.q7': 'Does NotchIA collect data?',
-      'faq.a7': '<span class="text-cream">No.</span> NotchIA collects no data and sends no telemetry. All modules run locally. The only network connection is the Sparkle auto-update with verified EdDSA signature. Claude Code session logs are read from the local disk — no AI data leaves your machine.',
+      'faq.a7': '<span class="text-cream">No.</span> NotchIA collects no usage data and sends no telemetry. The calendar, clipboard, Pomodoro, AI assistants, and Shelf summary modules all run <span class="text-cream">100% locally</span>. Claude Code, Codex, and Copilot session logs are read from the local disk — never uploaded. The Shelf file summary is generated <span class="text-cream">on-device</span> by Apple Intelligence (Foundation Models). The Digest module fetches your public RSS feeds directly from your Mac, and the summary is also generated on-device — <span class="text-cream">never sent to OpenAI, Anthropic, or our servers</span>. Only outbound connections: Sparkle auto-update (EdDSA signed), license validation (email + key), and fetching of the RSS feeds you configured yourself.',
+      'faq.q9': 'What is Digest and how does it work?',
+      'faq.a9': '<span class="text-cream">Digest</span> is a new <span class="text-cream">free</span> tab added in 2.8.0 (Wise Owl 🦉). You paste your favorite RSS/Atom feeds, you write what matters in plain language (e.g.&nbsp;"AI video, macOS 26, SwiftUI"), and Apple Intelligence — on-device Foundation Models — filters, summarizes, and prioritizes. A short brief to scan in 30 seconds, right in the notch. 14-day cache to avoid regenerating on every reopen. <span class="text-cream">100% local</span>: feeds are fetched from your Mac, summaries are generated on your CPU/GPU, <b class="text-cream">no call</b> to a third-party AI provider or our servers. Requires <span class="text-cream">macOS 26+</span> for Apple Intelligence; on macOS 15, graceful fallback (raw viewer without AI summary).',
       'faq.q8': 'Is NotchIA open-source?',
       'faq.a8': 'NotchIA is <span class="text-cream">open-core</span>. The base BoringNotch project is open-source under a free license. Pro extensions — live AI integration, extended converter, some advanced modules — are proprietary. The app is signed by the developer and distributed outside the Mac App Store (right-click → Open required on first launch).',
 
@@ -2638,7 +2652,7 @@
       'faq.title1': 'Antes de',
       'faq.title2': 'descargar.',
       'faq.q1': '¿Qué es NotchIA?',
-      'faq.a1': 'NotchIA es una aplicación macOS que convierte la muesca del MacBook (o la barra de menú en pantallas sin muesca) en un centro de control interactivo. Reúne en un solo punto de acceso: un reproductor multifuente, un calendario, asistentes de IA en directo (Claude Code, Codex, Copilot), un Pomodoro, un historial del portapapeles, un conversor de archivos y un reemplazo estético de los HUD del sistema.',
+      'faq.a1': 'NotchIA es una aplicación macOS que convierte la muesca del MacBook (o la barra de menú en pantallas sin muesca) en un centro de control interactivo. Reúne en un solo punto de acceso: un reproductor multifuente, un calendario, un Digest IA on-device (briefing de actualidad resumido por Apple Intelligence desde tus feeds RSS), un Pomodoro completo, asistentes de IA en directo (Claude Code, Codex, Copilot, en Pro), un historial del portapapeles, un conversor de archivos y un reemplazo estético de los HUD del sistema.',
       'faq.q2': '¿Qué versión de macOS se requiere?',
       'faq.a2': 'NotchIA requiere <span class="text-cream">macOS 15.0 (Sequoia)</span> o más reciente. La app funciona de forma nativa en Apple Silicon (M1, M2, M3, M4) y en Intel. Las funciones de IA on-device (Digest, resumen del Shelf) requieren <span class="text-cream">macOS 26+</span> con Apple Intelligence; degradación elegante en caso contrario.',
       'faq.q3': '¿Funciona NotchIA en un Mac sin muesca física?',
@@ -2650,7 +2664,9 @@
       'faq.q6': '¿Qué reproductores de música son compatibles?',
       'faq.a6': 'NotchIA admite de forma nativa <span class="text-cream">Apple Music, Spotify, YouTube Music</span> y cualquier app que use la API Now Playing de macOS. La muesca muestra la portada con color dominante extraído, controles personalizables y letras sincronizadas en tiempo real vía lrclib (26 idiomas).',
       'faq.q7': '¿NotchIA recopila datos?',
-      'faq.a7': '<span class="text-cream">No.</span> NotchIA no recopila datos ni envía telemetría. Todos los módulos funcionan localmente. La única conexión de red es la actualización automática Sparkle con firma EdDSA verificada. Los registros de sesión de Claude Code se leen desde el disco local — ningún dato de IA sale de tu máquina.',
+      'faq.a7': '<span class="text-cream">No.</span> NotchIA no recopila datos de uso ni envía telemetría. Los módulos calendario, portapapeles, Pomodoro, asistentes IA y resumen Shelf funcionan <span class="text-cream">100% localmente</span>. Los registros de sesión de Claude Code, Codex y Copilot se leen desde el disco local — nunca se envían. El resumen de un archivo en el Shelf se genera <span class="text-cream">on-device</span> por Apple Intelligence (Foundation Models). El módulo Digest hace fetch de tus feeds RSS públicos directamente desde tu Mac, y el resumen también se genera on-device — <span class="text-cream">jamás se envía a OpenAI, Anthropic ni nuestros servidores</span>. Conexiones salientes únicas: actualización Sparkle (firma EdDSA), validación de licencia (email + clave), fetch de los feeds RSS que tú mismo configuraste.',
+      'faq.q9': '¿Qué es Digest y cómo funciona?',
+      'faq.a9': '<span class="text-cream">Digest</span> es una nueva pestaña <span class="text-cream">gratuita</span> añadida en 2.8.0 (Wise Owl 🦉). Pegas tus feeds RSS/Atom preferidos, escribes en lenguaje natural lo que te interesa (ej.&nbsp;«IA vídeo, macOS 26, SwiftUI»), y Apple Intelligence — Foundation Models on-device — filtra, resume y prioriza. Briefing corto para escanear en 30 segundos, directamente en la muesca. Caché de 14 días para evitar regeneración en bucle. <span class="text-cream">100% local</span>: los feeds se fetched desde tu Mac, los resúmenes se generan en tu CPU/GPU, <b class="text-cream">cero llamadas</b> a un proveedor IA tercero o a nuestros servidores. Requiere <span class="text-cream">macOS 26+</span> para Apple Intelligence; en macOS 15, degradación elegante (viewer sin resumen IA).',
       'faq.q8': '¿Es NotchIA open-source?',
       'faq.a8': 'NotchIA es <span class="text-cream">open-core</span>. El proyecto base BoringNotch es open-source bajo licencia libre. Las extensiones Pro — la integración IA en directo, el conversor extendido, algunos módulos avanzados — son propietarias. La app está firmada por el desarrollador y distribuida fuera del Mac App Store (clic derecho → Abrir necesario en el primer lanzamiento).',
 
@@ -2829,7 +2845,7 @@
       'faq.title1': 'Bevor Sie',
       'faq.title2': 'laden.',
       'faq.q1': 'Was ist NotchIA?',
-      'faq.a1': 'NotchIA ist eine macOS-App, die die Aussparung Ihres MacBooks (oder die Menüleiste auf Bildschirmen ohne Aussparung) in ein interaktives Kontrollzentrum verwandelt. An einem einzigen Zugangspunkt: ein Multi-Source-Mediaplayer, ein Kalender, Live-KI-Assistenten (Claude Code, Codex, Copilot), ein Pomodoro, ein Zwischenablage-Verlauf, ein Datei-Konverter und ein ästhetischer Ersatz für System-HUDs.',
+      'faq.a1': 'NotchIA ist eine macOS-App, die die Aussparung Ihres MacBooks (oder die Menüleiste auf Bildschirmen ohne Aussparung) in ein interaktives Kontrollzentrum verwandelt. An einem einzigen Zugangspunkt: ein Multi-Source-Mediaplayer, ein Kalender, ein On-Device-KI-Digest (News-Briefing zusammengefasst von Apple Intelligence aus Ihren RSS-Feeds), ein vollständiges Pomodoro, Live-KI-Assistenten (Claude Code, Codex, Copilot, in Pro), ein Zwischenablage-Verlauf, ein Datei-Konverter und ein ästhetischer Ersatz für System-HUDs.',
       'faq.q2': 'Welche macOS-Version wird benötigt?',
       'faq.a2': 'NotchIA benötigt <span class="text-cream">macOS 15.0 (Sequoia)</span> oder neuer. Die App läuft nativ auf Apple Silicon (M1, M2, M3, M4) und auf Intel. On-device-KI-Funktionen (Digest, Shelf-Zusammenfassung) benötigen <span class="text-cream">macOS 26+</span> mit Apple Intelligence; ansonsten elegante Degradation.',
       'faq.q3': 'Funktioniert NotchIA auf einem Mac ohne physische Aussparung?',
@@ -2841,7 +2857,9 @@
       'faq.q6': 'Welche Musikplayer werden unterstützt?',
       'faq.a6': 'NotchIA unterstützt nativ <span class="text-cream">Apple Music, Spotify, YouTube Music</span> und jede App, die die Now Playing API von macOS verwendet. Die Aussparung zeigt das Albumbild mit extrahierter dominanter Farbe, anpassbaren Steuerelementen und in Echtzeit synchronisierten Songtexten über lrclib (26 Sprachen).',
       'faq.q7': 'Sammelt NotchIA Daten?',
-      'faq.a7': '<span class="text-cream">Nein.</span> NotchIA sammelt keine Daten und sendet keine Telemetrie. Alle Module laufen lokal. Die einzige Netzwerkverbindung ist das Sparkle-Auto-Update mit verifizierter EdDSA-Signatur. Claude-Code-Sitzungsprotokolle werden von der lokalen Festplatte gelesen — keine KI-Daten verlassen Ihren Mac.',
+      'faq.a7': '<span class="text-cream">Nein.</span> NotchIA sammelt keine Nutzungsdaten und sendet keine Telemetrie. Die Module Kalender, Zwischenablage, Pomodoro, KI-Assistenten und Shelf-Zusammenfassung laufen <span class="text-cream">100% lokal</span>. Die Sitzungsprotokolle von Claude Code, Codex und Copilot werden von der lokalen Festplatte gelesen — nie gesendet. Die Datei-Zusammenfassung im Shelf wird <span class="text-cream">on-device</span> von Apple Intelligence (Foundation Models) erstellt. Das Digest-Modul fetcht Ihre öffentlichen RSS-Feeds direkt von Ihrem Mac, und die Zusammenfassung wird ebenfalls on-device erstellt — <span class="text-cream">nie an OpenAI, Anthropic oder unsere Server gesendet</span>. Einzige ausgehende Verbindungen: Sparkle-Auto-Update (EdDSA-Signatur), Lizenzvalidierung (E-Mail + Schlüssel), Fetch der RSS-Feeds, die Sie selbst konfiguriert haben.',
+      'faq.q9': 'Was ist Digest und wie funktioniert es?',
+      'faq.a9': '<span class="text-cream">Digest</span> ist ein neuer <span class="text-cream">kostenloser</span> Tab, hinzugefügt in 2.8.0 (Wise Owl 🦉). Sie fügen Ihre bevorzugten RSS/Atom-Feeds ein, schreiben in natürlicher Sprache, was zählt (z.&nbsp;B. «KI-Video, macOS 26, SwiftUI»), und Apple Intelligence — On-Device-Foundation-Models — filtert, fasst zusammen und priorisiert. Kurzes Briefing zum Scannen in 30 Sekunden, direkt in der Aussparung. 14-Tage-Cache, um eine ständige Neugenerierung zu vermeiden. <span class="text-cream">100% lokal</span>: Feeds werden von Ihrem Mac gefetcht, Zusammenfassungen auf Ihrem CPU/GPU erstellt, <b class="text-cream">kein Aufruf</b> an einen KI-Drittanbieter oder unsere Server. Erfordert <span class="text-cream">macOS 26+</span> für Apple Intelligence; auf macOS 15 elegante Degradation (Roh-Viewer ohne KI-Zusammenfassung).',
       'faq.q8': 'Ist NotchIA open-source?',
       'faq.a8': 'NotchIA ist <span class="text-cream">open-core</span>. Das Basisprojekt BoringNotch ist open-source unter freier Lizenz. Pro-Erweiterungen — Live-KI-Integration, erweiterter Konverter, einige fortgeschrittene Module — sind proprietär. Die App ist vom Entwickler signiert und außerhalb des Mac App Stores vertrieben (Rechtsklick → Öffnen beim ersten Start nötig).',
 
