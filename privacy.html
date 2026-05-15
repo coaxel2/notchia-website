@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Politique de confidentialité — NotchIA</title>
+<meta name="description" content="Quelles données NotchIA collecte, pourquoi, où elles sont stockées, et comment exercer tes droits RGPD." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/privacy" />
+<meta name="robots" content="index,follow" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/privacy" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/privacy" />
+<!-- TODO i18n: traductions EN/ES/DE à fournir par un relecteur juridique avant publication des versions traduites. -->
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .todo { background: rgba(255,77,136,0.10); border: 1px dashed rgba(255,77,136,0.45); color: #FF9DB6; padding: 0.15rem 0.5rem; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+</style>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-2">
+    <h1 class="font-display text-4xl md:text-5xl mb-3">Politique de <span class="grad-text">confidentialité</span></h1>
+    <p class="text-cream/60 text-sm font-mono">Dernière mise à jour : 15 mai 2026</p>
+  </section>
+
+  <div class="callout">
+    <p class="!mb-0"><strong>En une phrase.</strong> Quand tu achètes NotchIA, on stocke ton email et ta clé de licence. C'est tout. Aucune donnée de ton Mac — calendrier, rappels, Bluetooth, statut Focus, sessions Claude/Codex/Copilot — n'est jamais envoyée vers nos serveurs.</p>
+  </div>
+
+  <h2>Qui est responsable de tes données</h2>
+  <p>Le responsable de traitement au sens du RGPD (art. 4-7) est :</p>
+  <ul>
+    <li>Axel Courty, auto-entrepreneur <span class="todo">[immatriculation en cours]</span></li>
+    <li>Adresse : <span class="todo">[À COMPLÉTER : adresse postale]</span></li>
+    <li>SIRET : <span class="todo">[À COMPLÉTER]</span></li>
+    <li>Email RGPD : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a></li>
+  </ul>
+  <p>Pour les structures de la taille de NotchIA (solo, sans suivi comportemental à grande échelle), la désignation d'un DPO n'est pas obligatoire (RGPD art. 37). Axel Courty est le point de contact unique pour toute demande relative à tes données.</p>
+
+  <h2>Quelles données on collecte et pourquoi</h2>
+
+  <h3>1. Achat et licence — base légale : exécution du contrat (art. 6.1.b RGPD)</h3>
+  <ul>
+    <li><strong>Ton email</strong> — pour t'envoyer ta clé de licence et te permettre de la récupérer.</li>
+    <li><strong>Ta clé de licence</strong> (une chaîne signée Ed25519 du type <code class="font-mono text-xs">nia_live_…</code>) — pour activer NotchIA Pro sur ton Mac.</li>
+    <li><strong>Date et identifiant de transaction Stripe</strong> — pour la gestion de ton abonnement et nos obligations comptables.</li>
+  </ul>
+
+  <h3>2. Sécurité de l'API de licences — base légale : intérêt légitime (art. 6.1.f RGPD)</h3>
+  <ul>
+    <li><strong>Adresse IP et User-Agent</strong> dans les logs de notre Cloudflare Worker, pour limiter les abus (rate-limiting anti-énumération d'emails et anti-DoS).</li>
+  </ul>
+
+  <h3>3. Ce qu'on ne collecte PAS — jamais</h3>
+  <p>NotchIA est conçu pour fonctionner <strong>localement sur ton Mac</strong>. Les données suivantes ne quittent jamais ta machine :</p>
+  <ul>
+    <li>Le contenu de ton calendrier et de tes rappels.</li>
+    <li>L'état de tes appareils Bluetooth.</li>
+    <li>Ton statut Focus / Ne pas déranger.</li>
+    <li>Les sessions et logs de Claude Code, Codex, Copilot lus depuis <code class="font-mono text-xs">~/.claude</code>, <code class="font-mono text-xs">~/.codex</code> et les logs Copilot.</li>
+    <li>Le contenu de ton presse-papiers ou de tes fichiers.</li>
+    <li>Tes habitudes d'utilisation, ta navigation, tes clics — aucune télémétrie, aucun analytics tiers, aucun pixel.</li>
+  </ul>
+  <p>Les résumés IA générés par NotchIA passent par <a href="https://developer.apple.com/documentation/foundationmodels" target="_blank" rel="noopener">Apple Intelligence (Foundation Models)</a>, qui tourne <strong>entièrement sur ton appareil</strong> (macOS 26+). Aucun appel réseau n'est fait vers nos serveurs ou vers un fournisseur IA tiers pour ces résumés.</p>
+
+  <h2>Qui voit tes données (sous-traitants)</h2>
+  <p>On utilise des sous-traitants techniques au sens du RGPD (art. 28). Chacun est lié par ses propres engagements de conformité :</p>
+  <ul>
+    <li><strong>Stripe Payments Europe Limited</strong> (Irlande) — traitement des paiements et abonnements. <a href="https://stripe.com/fr/privacy" target="_blank" rel="noopener">Politique de confidentialité Stripe</a>.</li>
+    <li><strong>Cloudflare, Inc.</strong> (États-Unis) — hébergement du site (Cloudflare Pages), de l'API de licences (Worker) et stockage clés/email (Workers KV). <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Politique de confidentialité Cloudflare</a>.</li>
+    <li><strong>GitHub, Inc.</strong> (États-Unis, filiale Microsoft) — hébergement des fichiers d'installation (GitHub Releases). <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Politique GitHub</a>.</li>
+    <li><strong>Google LLC</strong> — réception de l'email contact à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> via Gmail. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique Google</a>.</li>
+  </ul>
+
+  <h2>Transferts hors Union européenne</h2>
+  <p>Cloudflare, GitHub et Google sont des sociétés américaines. Tes données peuvent transiter ou être stockées aux États-Unis. Ces transferts s'appuient sur les <strong>clauses contractuelles types</strong> de la Commission européenne (décision 2021/914) et, le cas échéant, sur le <strong>Data Privacy Framework UE-USA</strong> (décision d'adéquation du 10 juillet 2023) pour les sous-traitants qui y sont certifiés. Stripe Payments Europe Ltd opère depuis l'Irlande (UE).</p>
+
+  <h2>Combien de temps on garde tes données</h2>
+  <ul>
+    <li><strong>Email + clé de licence</strong> : pendant la durée de ton abonnement, puis <strong>3 ans</strong> après sa fin (délai de prescription commerciale, art. L110-4 Code de commerce).</li>
+    <li><strong>Données de facturation</strong> (transactions Stripe) : <strong>10 ans</strong>, conservation comptable obligatoire (art. L123-22 Code de commerce).</li>
+    <li><strong>Logs de l'API</strong> (IP, User-Agent) : <strong>30 jours maximum</strong>, puis suppression automatique.</li>
+    <li><strong>Échanges email avec le support</strong> : 3 ans après le dernier contact.</li>
+  </ul>
+
+  <h2>Tes droits</h2>
+  <p>Le RGPD (art. 15 à 22) te donne les droits suivants sur tes données :</p>
+  <ul>
+    <li><strong>Accès</strong> — savoir quelles données on a sur toi.</li>
+    <li><strong>Rectification</strong> — corriger une donnée inexacte.</li>
+    <li><strong>Effacement</strong> (« droit à l'oubli ») — sous réserve de nos obligations comptables.</li>
+    <li><strong>Portabilité</strong> — récupérer tes données dans un format lisible.</li>
+    <li><strong>Opposition</strong> — au traitement fondé sur l'intérêt légitime.</li>
+    <li><strong>Limitation</strong> du traitement.</li>
+    <li><strong>Retrait du consentement</strong> à tout moment, lorsque le traitement repose sur le consentement.</li>
+  </ul>
+  <p>Pour exercer un de ces droits, écris à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> en précisant ta demande et ton email d'achat. On te répond sous <strong>30 jours</strong> maximum (RGPD art. 12.3).</p>
+  <p>Si tu estimes que tes droits ne sont pas respectés, tu peux saisir la <strong>CNIL</strong> (Commission nationale de l'informatique et des libertés) : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">cnil.fr/fr/plaintes</a>.</p>
+
+  <h2>Cookies et traceurs</h2>
+  <p>Le site <code class="font-mono text-xs">notchia.app</code> ne dépose <strong>aucun cookie de mesure d'audience, de profilage ou publicitaire</strong>. Pas de Google Analytics, pas de pixel Meta, pas de Hotjar. Cloudflare peut déposer des cookies strictement techniques nécessaires à la sécurité (anti-DDoS, vérification de navigateur) qui ne nécessitent pas de consentement préalable (art. 82 loi Informatique et Libertés ; lignes directrices CNIL du 17 septembre 2020).</p>
+  <p>L'application macOS ne dépose aucun cookie : elle ne contient pas de navigateur web embarqué pour des contenus tiers.</p>
+
+  <h2>Sécurité</h2>
+  <p>Les clés de licence sont signées avec <strong>Ed25519</strong> (signature asymétrique). La clé privée n'est jamais sur ton Mac. L'API de licences impose un rate-limiting strict par IP et par email pour empêcher les attaques par énumération. Les téléchargements de mises à jour (Sparkle) sont vérifiés par <strong>signature EdDSA</strong> avant installation.</p>
+
+  <h2>Modifications de cette politique</h2>
+  <p>Si on modifie significativement cette politique, la date en haut de page change. Pour un changement substantiel (nouveau sous-traitant collectant des données personnelles, nouvelle finalité, allongement de durée de conservation), tu seras prévenu par email avant que ça prenne effet.</p>
+
+  <h2>Contact</h2>
+  <p>Pour toute question : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

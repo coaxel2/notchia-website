@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Politique de remboursement — NotchIA</title>
+<meta name="description" content="Achat ferme et définitif pour NotchIA Pro, avec exceptions claires pour les bugs bloquants et les doubles facturations." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/refund" />
+<meta name="robots" content="index,follow" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/refund" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/refund" />
+<!-- TODO i18n: traductions EN/ES/DE à fournir par un relecteur juridique avant publication des versions traduites. -->
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+</style>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-2">
+    <h1 class="font-display text-4xl md:text-5xl mb-3">Politique de <span class="grad-text">remboursement</span></h1>
+    <p class="text-cream/60 text-sm font-mono">Dernière mise à jour : 15 mai 2026</p>
+  </section>
+
+  <div class="callout">
+    <p class="!mb-0"><strong>Principe.</strong> Les achats de NotchIA Pro sont fermes et définitifs. En validant la commande, tu renonces expressément à ton droit de rétractation de 14 jours, conformément à l'<a href="/cgv">article 5 des CGV</a> (art. L221-28 13° du Code de la consommation). Il existe néanmoins quelques exceptions commerciales documentées ci-dessous.</p>
+  </div>
+
+  <h2>Pourquoi pas de remboursement automatique ?</h2>
+  <p>NotchIA Pro est un logiciel téléchargé : dès le paiement, ta clé de licence est générée, envoyée par email, et débloque immédiatement toutes les fonctionnalités Pro sur ton Mac. Tu reçois la totalité du produit. Le droit de rétractation classique de 14 jours n'est donc pas applicable, et tu y consens expressément au moment du paiement (case à cocher Stripe Checkout).</p>
+  <p>Avant d'acheter, tu peux <a href="/install">télécharger et tester gratuitement NotchIA en version Essentielle</a>, qui couvre déjà les fonctions de base (médias, calendrier, encoche dynamique). Tu sais donc à quoi t'attendre.</p>
+
+  <h2>Exceptions — Quand on rembourse quand même</h2>
+
+  <h3>1. Bug bloquant non corrigé</h3>
+  <p>Si un défaut technique <strong>empêche l'usage normal du logiciel</strong> sur un Mac qui respecte les <a href="/cgv">prérequis techniques</a> (macOS 15+, Apple Silicon ou Intel récent), et qu'on ne parvient pas à le corriger dans un délai <strong>raisonnable de 30 jours</strong> après ton signalement, tu peux demander un remboursement intégral.</p>
+
+  <h3>2. Double facturation ou erreur technique</h3>
+  <p>Si Stripe te facture deux fois la même transaction, ou si la clé de licence n'a jamais été délivrée malgré le paiement et l'épuisement des procédures de récupération sur <a href="/account">/account</a>, on rembourse intégralement la transaction concernée.</p>
+
+  <h3>3. Achat manifestement non sollicité</h3>
+  <p>Si une personne mineure ou non autorisée a utilisé ta carte sans ton consentement, contacte-nous : on étudie la situation et on coopère avec ta banque pour annuler la transaction.</p>
+
+  <h3>4. Garantie légale de conformité</h3>
+  <p>Cette politique commerciale est <em>sans préjudice</em> de la garantie légale de conformité (art. L217-3 à L217-17 Code conso) et de la garantie des vices cachés (art. 1641 Code civil), qui s'appliquent de plein droit pendant 2 ans. Si le logiciel ne correspond pas à la description faite sur le site, tu peux faire jouer ces garanties — sans frais.</p>
+
+  <h2>Annuler un abonnement mensuel</h2>
+  <p>L'annulation n'est pas un remboursement : tu gardes l'accès jusqu'à la fin de la période en cours, puis l'abonnement ne se reconduit plus. Aucun remboursement au prorata.</p>
+  <ul>
+    <li>Depuis <a href="/account">/account</a> → « Gérer mon abonnement » (portail Stripe) ;</li>
+    <li>Ou par email à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</li>
+  </ul>
+
+  <h2>Comment demander un remboursement</h2>
+  <ol style="list-style: decimal; padding-left: 1.4rem; color: rgba(237,232,220,0.78); line-height: 1.65;">
+    <li style="margin-bottom: 0.4rem;">Écris à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> depuis l'email utilisé pour l'achat.</li>
+    <li style="margin-bottom: 0.4rem;">Indique :
+      <ul>
+        <li>la date de la transaction et son identifiant Stripe (ex. <code class="font-mono text-xs">pi_3Q…</code> ou <code class="font-mono text-xs">ch_3Q…</code>, visible sur ton reçu Stripe) ;</li>
+        <li>la raison de la demande (bug, double facturation, etc.) ;</li>
+        <li>pour les bugs : version de macOS, modèle de Mac, version de NotchIA, et un descriptif du problème (capture d'écran ou vidéo bienvenue).</li>
+      </ul>
+    </li>
+    <li style="margin-bottom: 0.4rem;">On te répond sous <strong>5 jours ouvrés</strong>.</li>
+    <li>Si la demande est acceptée, le remboursement est effectué sur le moyen de paiement initial sous <strong>14 jours maximum</strong> à compter de l'accord (art. L221-24 Code conso pour les remboursements consentis). Stripe peut prendre 5 à 10 jours ouvrés supplémentaires pour que tu voies les fonds sur ton compte, selon ta banque.</li>
+  </ol>
+
+  <h2>Et après remboursement ?</h2>
+  <p>Une fois le remboursement traité, ta clé de licence est <strong>désactivée</strong>. NotchIA retombe en mode Essentiel sur tes Mac à la prochaine vérification de licence. Tu peux racheter à tout moment, sans pénalité.</p>
+
+  <h2>Contact</h2>
+  <p>Une question, un doute, un cas non couvert ? Écris à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. On répond en français ou en anglais.</p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
