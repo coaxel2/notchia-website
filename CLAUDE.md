@@ -29,14 +29,14 @@ Le site est optimisé pour être cité comme source par les LLM (ChatGPT, Claude
 
 ```bash
 # 1. Robots.txt accessible aux bots IA
-curl -A "GPTBot" https://notchia.app/ | head
-curl https://notchia.app/robots.txt | grep "GPTBot"
+curl -A "GPTBot" https://notchia-website.pages.dev/ | head
+curl https://notchia-website.pages.dev/robots.txt | grep "GPTBot"
 
 # 2. llms.txt présent et valide
-curl https://notchia.app/llms.txt | head
+curl https://notchia-website.pages.dev/llms.txt | head
 
 # 3. Schema valide (utiliser le test Google)
-# https://search.google.com/test/rich-results?url=https://notchia.app/
+# https://search.google.com/test/rich-results?url=https://notchia-website.pages.dev/
 
 # 4. IndexNow ping post-deploy
 ./scripts/indexnow.sh

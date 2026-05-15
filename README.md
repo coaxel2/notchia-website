@@ -22,11 +22,11 @@ notchia-website/
 
 ### 1. Remplacer le domaine
 
-Le domaine `https://notchia.app/` est utilisé partout. Si tu déploies ailleurs,
+Le domaine `https://notchia-website.pages.dev/` est utilisé partout. Si tu déploies ailleurs,
 remplace-le dans :
 
 ```bash
-sed -i '' 's|https://notchia.app|https://ton-domaine.com|g' \
+sed -i '' 's|https://notchia-website.pages.dev|https://ton-domaine.com|g' \
   index.html sitemap.xml robots.txt
 ```
 
@@ -81,7 +81,7 @@ gtag('consent', 'update', {
 Si tu veux éviter le bandeau cookies, décommente la ligne Plausible en bas du `<head>` :
 
 ```html
-<script defer data-domain="notchia.app" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="notchia-website.pages.dev" src="https://plausible.io/js/script.js"></script>
 ```
 
 Plausible ne pose pas de cookie, ne collecte aucune donnée personnelle → pas de bandeau requis.
@@ -89,7 +89,7 @@ Plausible ne pose pas de cookie, ne collecte aucune donnée personnelle → pas 
 ### 4. Soumettre à Google Search Console
 
 1. Vérifie le domaine via balise meta ou enregistrement DNS
-2. Soumets `https://notchia.app/sitemap.xml`
+2. Soumets `https://notchia-website.pages.dev/sitemap.xml`
 3. Attends 24-48 h pour la première indexation
 
 ### 5. Vérifier l'OG (Open Graph)

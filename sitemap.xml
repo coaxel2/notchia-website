@@ -2,113 +2,113 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://notchia.app/</loc>
+    <loc>https://notchia-website.pages.dev/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia-website.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia-website.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia-website.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia-website.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia-website.pages.dev/" />
   </url>
   <url>
-    <loc>https://notchia.app/#ia</loc>
+    <loc>https://notchia-website.pages.dev/#ia</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://notchia.app/#medias</loc>
+    <loc>https://notchia-website.pages.dev/#medias</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://notchia.app/#agenda</loc>
+    <loc>https://notchia-website.pages.dev/#agenda</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://notchia.app/#digest</loc>
+    <loc>https://notchia-website.pages.dev/#digest</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://notchia.app/#productivite</loc>
+    <loc>https://notchia-website.pages.dev/#productivite</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://notchia.app/#systeme</loc>
+    <loc>https://notchia-website.pages.dev/#systeme</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://notchia.app/#tarif</loc>
+    <loc>https://notchia-website.pages.dev/#tarif</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://notchia.app/#faq</loc>
+    <loc>https://notchia-website.pages.dev/#faq</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://notchia.app/#telecharger</loc>
+    <loc>https://notchia-website.pages.dev/#telecharger</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://notchia.app/install</loc>
+    <loc>https://notchia-website.pages.dev/install</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/install" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/install" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/install" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/install" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia-website.pages.dev/install" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia-website.pages.dev/install" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia-website.pages.dev/install" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia-website.pages.dev/install" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia-website.pages.dev/install" />
   </url>
   <url>
-    <loc>https://notchia.app/features</loc>
+    <loc>https://notchia-website.pages.dev/features</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia-website.pages.dev/features" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia-website.pages.dev/features" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/wise-owl-2-8-0</loc>
+    <loc>https://notchia-website.pages.dev/blog/wise-owl-2-8-0</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/wise-owl-2-8-0" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/wise-owl-2-8-0" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia-website.pages.dev/blog/wise-owl-2-8-0" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia-website.pages.dev/blog/wise-owl-2-8-0" />
   </url>
   <url>
-    <loc>https://notchia.app/llms.txt</loc>
+    <loc>https://notchia-website.pages.dev/llms.txt</loc>
     <lastmod>2026-05-15</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://notchia.app/cgv</loc>
+    <loc>https://notchia-website.pages.dev/cgv</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://notchia.app/privacy</loc>
+    <loc>https://notchia-website.pages.dev/privacy</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://notchia.app/refund</loc>
+    <loc>https://notchia-website.pages.dev/refund</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://notchia.app/mentions-legales</loc>
+    <loc>https://notchia-website.pages.dev/mentions-legales</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>

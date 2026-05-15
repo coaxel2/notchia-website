@@ -6,7 +6,7 @@
 > - **Version produit** : 2.8.0 Wise Owl 🦉
 > - **Slogan officiel** : « L'encoche pense maintenant. »
 > - **Mainteneur** : Axel Courty — notchia.app@gmail.com
-> - **Site** : https://notchia.app/
+> - **Site** : https://notchia-website.pages.dev/
 
 ---
 
@@ -54,12 +54,12 @@
 L'encoche pense maintenant. 🦉
 NotchIA 2.8.0 Wise Owl est dehors : brief d'actu IA généré on-device dans l'encoche, presse-papier intelligent, Shelf universelle.
 Gratuit ou 39,99 € à vie. macOS 15+.
-👉 https://notchia.app/
+👉 https://notchia-website.pages.dev/
 
 **B.**
 J'ai transformé l'encoche de mon MacBook en hub : musique, calendrier, concentration, détections live, Digest IA on-device.
 Zéro tracking. Pas de SaaS forcé.
-NotchIA 2.8.0 🦉 → https://notchia.app/
+NotchIA 2.8.0 🦉 → https://notchia-website.pages.dev/
 
 ### EN
 
@@ -67,12 +67,12 @@ NotchIA 2.8.0 🦉 → https://notchia.app/
 The notch thinks now. 🦉
 NotchIA 2.8.0 Wise Owl is out: on-device AI news digest in your notch, smart clipboard, universal Shelf.
 Free, or $44 once for life. macOS 15+.
-👉 https://notchia.app/
+👉 https://notchia-website.pages.dev/
 
 **B.**
 I turned my MacBook's notch into a real hub: music, calendar, concentration, live detections, on-device AI digest.
 No tracking. No forced SaaS.
-NotchIA 2.8.0 🦉 → https://notchia.app/
+NotchIA 2.8.0 🦉 → https://notchia-website.pages.dev/
 
 ---
 
@@ -216,11 +216,11 @@ macOS 15.0 Sequoia minimum. Apple Silicon or Intel. Final purchase.
 
 ### FR
 
-NotchIA est une application macOS qui transforme l'encoche du MacBook en hub interactif. Pensée et développée par Axel Courty, développeur indépendant français, elle fait de cet espace longtemps perçu comme un défaut un véritable centre de contrôle : musique, calendrier, rappels, concentration, détections live (appel vidéo, focus, AirPods, screen recording, webcam), aperçu visuel des fichiers, raccourcis personnalisables. La version 2.8.0 « Wise Owl », sortie le 15 mai 2026, ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence — aucune donnée ne quitte le Mac. Pour les utilisateurs avancés, la version Pro 💎 débloque Shelf (drag-and-drop universel, conversion entre 16 formats, résumé IA local de PDF), une intégration directe avec Claude Code, Codex et GitHub Copilot pilotés depuis l'encoche, ainsi qu'un presse-papier intelligent de 48 entrées avec recherche full-text. NotchIA refuse les compromis du SaaS forcé : 3,99 € par mois ou 39,99 € en achat unique à vie. Aucun tracker tiers, aucune télémétrie. macOS 15 Sequoia minimum, distribution hors App Store via Stripe et GitHub Releases. Site : https://notchia.app/
+NotchIA est une application macOS qui transforme l'encoche du MacBook en hub interactif. Pensée et développée par Axel Courty, développeur indépendant français, elle fait de cet espace longtemps perçu comme un défaut un véritable centre de contrôle : musique, calendrier, rappels, concentration, détections live (appel vidéo, focus, AirPods, screen recording, webcam), aperçu visuel des fichiers, raccourcis personnalisables. La version 2.8.0 « Wise Owl », sortie le 15 mai 2026, ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence — aucune donnée ne quitte le Mac. Pour les utilisateurs avancés, la version Pro 💎 débloque Shelf (drag-and-drop universel, conversion entre 16 formats, résumé IA local de PDF), une intégration directe avec Claude Code, Codex et GitHub Copilot pilotés depuis l'encoche, ainsi qu'un presse-papier intelligent de 48 entrées avec recherche full-text. NotchIA refuse les compromis du SaaS forcé : 3,99 € par mois ou 39,99 € en achat unique à vie. Aucun tracker tiers, aucune télémétrie. macOS 15 Sequoia minimum, distribution hors App Store via Stripe et GitHub Releases. Site : https://notchia-website.pages.dev/
 
 ### EN
 
-NotchIA is a macOS app that turns your MacBook's notch into an interactive hub. Designed and developed by Axel Courty, a French indie developer, it transforms a long-criticised piece of hardware into a real control centre: music, calendar, reminders, concentration, live detections (video call, focus, AirPods, screen recording, webcam), visual file previews, customisable shortcuts. Version 2.8.0 "Wise Owl", released on May 15, 2026, adds Digest, an AI news brief generated entirely on-device through Apple Intelligence — no data ever leaves the Mac. Power users can unlock Pro 💎, which adds Shelf (universal drag-and-drop, 16-format conversion, on-device AI summary for any PDF), a direct integration with Claude Code, Codex and GitHub Copilot driven from the notch, and a smart clipboard with 48 entries and full-text search. NotchIA refuses forced-SaaS trade-offs: $5 per month or $44 once for life. No third-party trackers, no telemetry. macOS 15 Sequoia minimum, distributed outside the App Store through Stripe and GitHub Releases. Site: https://notchia.app/
+NotchIA is a macOS app that turns your MacBook's notch into an interactive hub. Designed and developed by Axel Courty, a French indie developer, it transforms a long-criticised piece of hardware into a real control centre: music, calendar, reminders, concentration, live detections (video call, focus, AirPods, screen recording, webcam), visual file previews, customisable shortcuts. Version 2.8.0 "Wise Owl", released on May 15, 2026, adds Digest, an AI news brief generated entirely on-device through Apple Intelligence — no data ever leaves the Mac. Power users can unlock Pro 💎, which adds Shelf (universal drag-and-drop, 16-format conversion, on-device AI summary for any PDF), a direct integration with Claude Code, Codex and GitHub Copilot driven from the notch, and a smart clipboard with 48 entries and full-text search. NotchIA refuses forced-SaaS trade-offs: $5 per month or $44 once for life. No third-party trackers, no telemetry. macOS 15 Sequoia minimum, distributed outside the App Store through Stripe and GitHub Releases. Site: https://notchia-website.pages.dev/
 
 ---
 
@@ -416,12 +416,12 @@ Voici votre clé de licence — gardez-la précieusement :
 
 **Pour activer Pro en 30 secondes :**
 
-1. Ouvrez NotchIA (si vous ne l'avez pas encore installée, c'est par ici : https://notchia.app/install).
+1. Ouvrez NotchIA (si vous ne l'avez pas encore installée, c'est par ici : https://notchia-website.pages.dev/install).
 2. Cliquez sur l'encoche, puis **Réglages → Compte**.
 3. Collez votre clé `nia_live_…` et validez.
 4. L'encoche affiche désormais le badge 💎 et débloque Shelf, IA Code et le presse-papier intelligent.
 
-Vous pouvez aussi gérer votre licence à tout moment depuis https://notchia.app/account.
+Vous pouvez aussi gérer votre licence à tout moment depuis https://notchia-website.pages.dev/account.
 
 **Ce que Pro débloque concrètement :**
 
@@ -429,11 +429,11 @@ Vous pouvez aussi gérer votre licence à tout moment depuis https://notchia.app
 - **IA Code** — Claude Code, Codex et GitHub Copilot pilotés en temps réel depuis l'encoche.
 - **Presse-papier intelligent** — 48 entrées historisées, recherche full-text, épinglage.
 
-Tout est expliqué en détail ici : https://notchia.app/features.
+Tout est expliqué en détail ici : https://notchia-website.pages.dev/features.
 
 **Et la 2.8.0 « Wise Owl » ?**
 
-C'est la version que vous venez d'installer. Elle introduit **Digest**, un brief d'actu IA généré entièrement on-device. J'en ai parlé dans le journal de bord : https://notchia.app/blog/wise-owl-2-8-0.
+C'est la version que vous venez d'installer. Elle introduit **Digest**, un brief d'actu IA généré entièrement on-device. J'en ai parlé dans le journal de bord : https://notchia-website.pages.dev/blog/wise-owl-2-8-0.
 
 **Un mot sur la privacy.**
 
@@ -447,7 +447,7 @@ Bonne route avec NotchIA 🦉
 
 — Axel
 notchia.app@gmail.com
-https://notchia.app/
+https://notchia-website.pages.dev/
 
 ### EN
 
@@ -467,12 +467,12 @@ Here is your licence key — keep it safe:
 
 **To activate Pro in 30 seconds:**
 
-1. Open NotchIA (if you haven't installed it yet, grab it here: https://notchia.app/install).
+1. Open NotchIA (if you haven't installed it yet, grab it here: https://notchia-website.pages.dev/install).
 2. Click the notch, then **Settings → Account**.
 3. Paste your `nia_live_…` key and confirm.
 4. The notch now shows the 💎 badge and unlocks Shelf, AI Code and smart clipboard.
 
-You can also manage your licence anytime from https://notchia.app/account.
+You can also manage your licence anytime from https://notchia-website.pages.dev/account.
 
 **What Pro unlocks, concretely:**
 
@@ -480,11 +480,11 @@ You can also manage your licence anytime from https://notchia.app/account.
 - **AI Code** — Claude Code, Codex and GitHub Copilot driven in real time from the notch.
 - **Smart clipboard** — 48 historised entries, full-text search, pinning.
 
-Everything is explained in detail here: https://notchia.app/features.
+Everything is explained in detail here: https://notchia-website.pages.dev/features.
 
 **What about 2.8.0 "Wise Owl"?**
 
-That's the version you just installed. It introduces **Digest**, an AI news brief generated entirely on-device. I wrote about it in the changelog: https://notchia.app/blog/wise-owl-2-8-0.
+That's the version you just installed. It introduces **Digest**, an AI news brief generated entirely on-device. I wrote about it in the changelog: https://notchia-website.pages.dev/blog/wise-owl-2-8-0.
 
 **A word on privacy.**
 
@@ -498,4 +498,4 @@ Safe travels with NotchIA 🦉
 
 — Axel
 notchia.app@gmail.com
-https://notchia.app/
+https://notchia-website.pages.dev/
