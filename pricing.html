@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tarifs NotchIA Pro — 3,99 €/mois ou 39,99 € à vie</title>
-<meta name="description" content="NotchIA Pro : 3,99 €/mois ou 39,99 € à vie. Débloque Claude, Codex et toutes les fonctionnalités IA dans ton encoche MacBook." />
+<title>Tarifs NotchIA Pro — bientôt disponible</title>
+<meta name="description" content="NotchIA Pro sera bientôt disponible à 3,99 €/mois ou 39,99 € à vie. La version gratuite de NotchIA reste disponible dès maintenant." />
 <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
 <meta name="author" content="Axel Courty" />
@@ -57,14 +57,15 @@
     font-weight: 600;
     transition: transform 0.15s ease, opacity 0.15s ease;
   }
-  .cta-primary:hover { transform: translateY(-1px); opacity: 0.95; }
-  .cta-primary:disabled { opacity: 0.5; cursor: wait; }
+  .cta-primary:hover:not(:disabled) { transform: translateY(-1px); opacity: 0.95; }
+  .cta-primary:disabled { opacity: 0.55; cursor: not-allowed; }
   .cta-secondary {
     background: rgba(237,232,220,0.06);
     color: #EDE8DC;
     border: 1px solid rgba(237,232,220,0.10);
   }
-  .cta-secondary:hover { background: rgba(237,232,220,0.10); }
+  .cta-secondary:hover:not(:disabled) { background: rgba(237,232,220,0.10); }
+  .cta-secondary:disabled { opacity: 0.55; cursor: not-allowed; }
   .check { color: #FF7A2D; }
 </style>
 <script type="application/ld+json">
@@ -74,8 +75,8 @@
     {"@type":"ListItem","position":2,"name":"Tarifs","item":"https://notchia.app/pricing"}
   ]},
   {"@type":"Product","name":"NotchIA Pro","description":"Logiciel macOS qui transforme l'encoche du MacBook en centre de contrôle interactif : assistants IA en direct (Claude Code, Codex, Copilot), Shelf, presse-papiers historique, convertisseur natif.","brand":{"@type":"Brand","name":"NotchIA"},"image":"https://notchia.app/og-image.png","url":"https://notchia.app/pricing","offers":[
-    {"@type":"Offer","name":"Pro mensuel","price":"3.99","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://notchia.app/pricing","priceSpecification":{"@type":"UnitPriceSpecification","price":"3.99","priceCurrency":"EUR","billingDuration":"P1M","unitCode":"MON"}},
-    {"@type":"Offer","name":"Pro à vie","price":"39.99","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://notchia.app/pricing","category":"lifetime license"}
+    {"@type":"Offer","name":"Pro mensuel","price":"3.99","priceCurrency":"EUR","availability":"https://schema.org/PreOrder","url":"https://notchia.app/pricing","priceSpecification":{"@type":"UnitPriceSpecification","price":"3.99","priceCurrency":"EUR","billingDuration":"P1M","unitCode":"MON"}},
+    {"@type":"Offer","name":"Pro à vie","price":"39.99","priceCurrency":"EUR","availability":"https://schema.org/PreOrder","url":"https://notchia.app/pricing","category":"licence à vie"}
   ]}
 ]}
 </script>
@@ -101,7 +102,7 @@
       <span class="grad-text">Pro</span>, sans abonnement obligatoire
     </h1>
     <p class="text-cream/70 text-lg max-w-2xl mx-auto">
-      Choisis ce qui te convient. 3,99 € par mois pour rester flexible, ou 39,99 € une fois pour toujours.
+      Les offres Pro seront bientôt disponibles. En attendant, la version gratuite reste téléchargeable.
     </p>
   </section>
 
@@ -112,32 +113,32 @@
         <h2 class="font-display text-2xl">Mensuel</h2>
         <span class="text-xs text-cream/50 font-mono uppercase tracking-wider">flexible</span>
       </div>
-      <p class="text-cream/60 mb-6 text-sm">Annule à tout moment. Essai gratuit 7 jours.</p>
+      <p class="text-cream/60 mb-6 text-sm">Annule à tout moment. Essai gratuit prévu.</p>
       <div class="mb-8">
         <span class="font-display text-5xl font-medium">3,99&nbsp;€</span>
         <span class="text-cream/50 text-sm">&nbsp;/&nbsp;mois</span>
       </div>
       <ul class="space-y-3 text-sm mb-8 flex-1">
-        <li class="flex gap-2"><span class="check">✓</span><span>Tab Claude Code intégrée</span></li>
-        <li class="flex gap-2"><span class="check">✓</span><span>Tab Codex intégrée</span></li>
-        <li class="flex gap-2"><span class="check">✓</span><span>Toutes les futures features IA</span></li>
-        <li class="flex gap-2"><span class="check">✓</span><span>3 Mac inclus</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Onglet Claude Code intégré</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Onglet Codex intégré</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>Toutes les futures fonctionnalités IA</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>1 Mac inclus</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span>Mises à jour incluses</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span>Annulation en 1 clic</span></li>
       </ul>
-      <button data-plan="monthly" class="cta-secondary py-3 px-6 rounded-full text-sm font-medium">
-        Démarrer l'essai gratuit
+      <button type="button" disabled aria-disabled="true" class="cta-secondary py-3 px-6 rounded-full text-sm font-medium">
+        Bientôt disponible
       </button>
     </article>
 
     <!-- Lifetime -->
     <article class="card-pro rounded-2xl p-8 flex flex-col relative">
       <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-        <span class="grad-bg text-ink text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Best value</span>
+        <span class="grad-bg text-ink text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Meilleur prix</span>
       </div>
       <div class="flex items-baseline gap-2 mb-2">
         <h2 class="font-display text-2xl"><span class="grad-text">À vie</span></h2>
-        <span class="text-xs text-cream/50 font-mono uppercase tracking-wider">one-shot</span>
+        <span class="text-xs text-cream/50 font-mono uppercase tracking-wider">achat unique</span>
       </div>
       <p class="text-cream/60 mb-6 text-sm">Un seul paiement. Toutes les futures versions incluses.</p>
       <div class="mb-8">
@@ -149,10 +150,10 @@
         <li class="flex gap-2"><span class="check">✓</span><span>Pas de renouvellement</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span>Mises à jour à vie</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span>Rentable dès 10 mois</span></li>
-        <li class="flex gap-2"><span class="check">✓</span><span>3 Mac inclus</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span>2 Mac inclus</span></li>
       </ul>
-      <button data-plan="lifetime" class="cta-primary py-3 px-6 rounded-full text-sm">
-        Passer à la version à vie
+      <button type="button" disabled aria-disabled="true" class="cta-primary py-3 px-6 rounded-full text-sm">
+        Bientôt disponible
       </button>
     </article>
   </div>
@@ -166,12 +167,12 @@
 
     <details class="card rounded-xl px-5 py-4">
       <summary class="cursor-pointer font-medium">Que se passe-t-il si j'arrête de payer ?</summary>
-      <p class="text-cream/70 text-sm mt-3">Les fonctionnalités Pro (Claude Code et Codex) deviennent inaccessibles. Le reste de NotchIA continue de marcher normalement (média, calendrier, étagère). Tu peux toujours réactiver plus tard.</p>
+      <p class="text-cream/70 text-sm mt-3">Quand le paiement sera disponible, les fonctionnalités Pro (Claude Code et Codex) pourront être arrêtées à tout moment. Le reste de NotchIA continuera de marcher normalement.</p>
     </details>
 
     <details class="card rounded-xl px-5 py-4">
       <summary class="cursor-pointer font-medium">Sur combien de Mac puis-je l'installer ?</summary>
-      <p class="text-cream/70 text-sm mt-3">3 Mac par licence. Si tu en changes un, contacte le support pour libérer un slot.</p>
+      <p class="text-cream/70 text-sm mt-3">Le forfait mensuel est prévu pour 1 Mac. La licence à vie est prévue pour 2 Mac.</p>
     </details>
 
     <details class="card rounded-xl px-5 py-4">
@@ -181,59 +182,24 @@
 
     <details class="card rounded-xl px-5 py-4">
       <summary class="cursor-pointer font-medium">J'ai perdu ma clé de licence. Que faire ?</summary>
-      <p class="text-cream/70 text-sm mt-3">Va sur <a href="/account" class="underline">/account</a>, entre l'email d'achat — on te renvoie une nouvelle clé. L'ancienne est invalidée pour ta sécurité.</p>
+      <p class="text-cream/70 text-sm mt-3">Quand les achats seront ouverts, la page <a href="/account" class="underline">/account</a> permettra de retrouver une clé depuis l'email d'achat.</p>
     </details>
   </section>
 
   <p class="text-center text-cream/40 text-xs mt-12">
-    Paiement sécurisé Stripe. Achat ferme et définitif — voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.
+    Paiement bientôt disponible. La version gratuite reste accessible dès maintenant. Voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.
   </p>
 
 </main>
 
 <script>
-  const API_BASE = 'https://notchia-license.axel-courty.workers.dev';
-
-  // Show banner if Stripe redirected back here with ?status=cancel.
   (function(){
-    const params = new URLSearchParams(window.location.search);
-    const status = params.get('status');
     const banner = document.getElementById('status');
-    if (status === 'cancel') {
-      banner.textContent = "Paiement annulé. Tu peux reprendre quand tu veux.";
-      banner.style.background = "rgba(237,232,220,0.06)";
-      banner.style.color = "#EDE8DC";
-      banner.classList.remove('hidden');
-    }
+    banner.textContent = "Les achats Pro seront bientôt disponibles. La version gratuite reste téléchargeable.";
+    banner.style.background = "rgba(237,232,220,0.06)";
+    banner.style.color = "#EDE8DC";
+    banner.classList.remove('hidden');
   })();
-
-  document.querySelectorAll('button[data-plan]').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const plan = btn.getAttribute('data-plan');
-      const original = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = 'Redirection vers Stripe…';
-      try {
-        const res = await fetch(API_BASE + '/v1/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ plan }),
-        });
-        const data = await res.json();
-        if (!res.ok || !data.url) {
-          alert("Impossible de démarrer le paiement. Réessaie dans un instant.");
-          btn.textContent = original;
-          btn.disabled = false;
-          return;
-        }
-        window.location.href = data.url;
-      } catch (e) {
-        alert("Erreur réseau. Réessaie.");
-        btn.textContent = original;
-        btn.disabled = false;
-      }
-    });
-  });
 </script>
 
 </body>
