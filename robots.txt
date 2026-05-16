@@ -6,7 +6,6 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /*.json$
-Disallow: /cdn-cgi/
 
 # === Crawlers IA (CRITIQUE pour GEO — citation par les LLM) ===
 
