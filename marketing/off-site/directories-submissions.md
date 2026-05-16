@@ -321,7 +321,7 @@ notchia.app@gmail.com
 
 | Directory | Account needed | Submitted | Public URL | Notes |
 |---|---:|---:|---|---|
-| Product Hunt | Yes | No | | Use `https://www.producthunt.com/posts/new` |
+| Product Hunt | Yes | Yes | Pending public URL | Submitted by Axel; add the Product Hunt URL to `/press`, `llms.txt` and `llms-full.txt` when public |
 | MacUpdate | Yes | No | | Use `https://www.macupdate.com/content/submit` |
 | AlternativeTo | Yes | No | | Add app + suggest alternatives |
 | Setapp | Email/dev account | No | | Email `developers@setapp.com` |
