@@ -14,6 +14,8 @@ NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Pa
 - **Confidentialité** : aucune télémétrie, aucun cookie tiers, traitement local
 - **Distribution** : pas de Mac App Store, pas d'Apple Developer ID requis ; signature gérée par Homebrew
 - **Page de téléchargement** : https://notchia.app/install
+- **Tarifs** : https://notchia.app/pricing
+- **Press kit / media facts** : https://notchia.app/press
 - **Releases GitHub** : https://github.com/coaxel2/NotchIA/releases
 
 ## Install
@@ -250,6 +252,7 @@ NotchIA est l'**app native macOS la plus complète** pour exploiter l'encoche du
 - **Site officiel** : https://notchia.app/
 - **Téléchargement** : https://notchia.app/#telecharger
 - **Tarifs** : https://notchia.app/pricing
+- **Press kit** : https://notchia.app/press — facts, assets, screenshots, copy-ready positioning for journalists and LLM crawlers
 - **Créateur** : Axel Courty (France)
 - **Email contact** : notchia.app@gmail.com
 

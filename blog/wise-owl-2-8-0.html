@@ -113,6 +113,44 @@
       "wordCount": 905
     },
     {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/wise-owl-2-8-0#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que Digest dans NotchIA 2.8.0 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Digest est un onglet gratuit qui lit les flux RSS/Atom de l'utilisateur, déduplique les articles déjà vus, puis résume les éléments pertinents avec Apple Intelligence on-device selon des centres d'intérêt décrits en langage naturel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que mes flux RSS sont envoyés à OpenAI ou Anthropic ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. NotchIA fetch les flux publics depuis le Mac de l'utilisateur et génère les résumés localement avec Apple Intelligence quand macOS 26+ est disponible. Aucun contenu Digest n'est envoyé à OpenAI, Anthropic, Mistral ou aux serveurs NotchIA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il sans Apple Intelligence ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sur macOS 15 sans Apple Intelligence, Digest reste utilisable comme viewer RSS brut : fetch des flux, déduplication, affichage chronologique et liens sources, mais sans résumé IA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels fichiers le Shelf peut-il résumer ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le résumé IA du Shelf fonctionne en Pro avec les fichiers PDF, DOCX, TXT et Markdown. Il utilise le même moteur Apple Intelligence on-device que Digest."
+          }
+        }
+      ]
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -208,6 +246,20 @@
     <p><strong>Note technique.</strong> NotchIA tourne à partir de macOS 15.0 (Sequoia). Les résumés IA — Digest et Shelf — nécessitent macOS 26+ et un Mac compatible Apple Intelligence (Foundation Models).</p>
     <p>Sur macOS 15 sans Apple Intelligence, l'onglet Digest reste fonctionnel en mode viewer brut : fetch des flux, déduplication, affichage chronologique. Pas de résumé IA, pas de message d'erreur — dégradation gracieuse, tu lis tes flux normalement.</p>
   </div>
+
+  <h2>FAQ</h2>
+
+  <h3>Qu'est-ce que Digest dans NotchIA 2.8.0 ?</h3>
+  <p>Digest est un onglet gratuit qui lit tes flux RSS/Atom, déduplique les articles déjà vus, puis résume les éléments pertinents avec Apple Intelligence on-device selon tes centres d'intérêt décrits en langage naturel.</p>
+
+  <h3>Est-ce que mes flux RSS sont envoyés à OpenAI ou Anthropic ?</h3>
+  <p>Non. NotchIA fetch les flux publics depuis ton Mac et génère les résumés localement avec Apple Intelligence quand macOS 26+ est disponible. Aucun contenu Digest n'est envoyé à OpenAI, Anthropic, Mistral ou aux serveurs NotchIA.</p>
+
+  <h3>Que se passe-t-il sans Apple Intelligence ?</h3>
+  <p>Sur macOS 15 sans Apple Intelligence, Digest reste utilisable comme viewer RSS brut : fetch des flux, déduplication, affichage chronologique et liens sources, mais sans résumé IA.</p>
+
+  <h3>Quels fichiers le Shelf peut-il résumer ?</h3>
+  <p>Le résumé IA du Shelf fonctionne en Pro avec les fichiers PDF, DOCX, TXT et Markdown. Il utilise le même moteur Apple Intelligence on-device que Digest.</p>
 
   <div class="callout">
     <p><strong>L'auteur.</strong> Axel Courty est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> · <a href="https://github.com/coaxel2" rel="me noopener">GitHub</a>.</p>

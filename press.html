@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA Press Kit — macOS notch utility with on-device AI</title>
+<meta name="description" content="Press kit for NotchIA, an independent native macOS app that turns the MacBook notch into an interactive cockpit with on-device Apple Intelligence and live AI status." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="Axel Courty" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/press" />
+<meta name="robots" content="index,follow" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/press" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/press" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="NotchIA Press Kit" />
+<meta property="og:description" content="Independent native macOS notch utility with on-device Apple Intelligence RSS summaries and live AI status for Claude Code, Codex and Copilot." />
+<meta property="og:url" content="https://notchia.app/press" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA Press Kit" />
+<meta name="twitter:description" content="Native macOS notch cockpit: on-device AI Digest, live AI status, media, calendar, focus and system HUD." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans: ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 2rem; margin-top: 3rem; margin-bottom: 0.75rem; line-height: 1.15; }
+  main h3 { font-weight: 600; font-size: 1rem; margin-top: 1.25rem; margin-bottom: 0.35rem; color: #EDE8DC; }
+  main p, main li, main td { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.85rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .panel {
+    background: linear-gradient(180deg, #14171F 0%, #0F1218 100%);
+    border: 1px solid rgba(237,232,220,0.10);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(237,232,220,0.48);
+  }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  th, td { border-bottom: 1px solid rgba(237,232,220,0.10); padding: 0.65rem 0; text-align: left; vertical-align: top; }
+  th { color: rgba(237,232,220,0.55); font-size: 0.78rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.08em; }
+  .btn {
+    display: inline-block;
+    padding: 0.85rem 1.2rem;
+    border-radius: 999px;
+    background: var(--brand);
+    color: #0B0D12 !important;
+    font-weight: 600;
+    text-decoration: none !important;
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://notchia.app/press#webpage",
+      "url": "https://notchia.app/press",
+      "name": "NotchIA Press Kit",
+      "description": "Press kit for NotchIA, an independent native macOS app that turns the MacBook notch into an interactive cockpit with on-device Apple Intelligence and live AI status.",
+      "dateModified": "2026-05-16",
+      "inLanguage": "en-US",
+      "about": { "@id": "https://notchia.app/#app" },
+      "publisher": { "@id": "https://notchia.app/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://notchia.app/#organization",
+      "name": "NotchIA",
+      "url": "https://notchia.app/",
+      "logo": { "@type": "ImageObject", "url": "https://notchia.app/logo-512.png" },
+      "foundingDate": "2026",
+      "founder": { "@id": "https://notchia.app/#axel" },
+      "email": "notchia.app@gmail.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://notchia.app/#axel",
+      "name": "Axel Courty",
+      "jobTitle": "Independent macOS developer",
+      "url": "https://notchia.app/",
+      "sameAs": ["https://github.com/coaxel2"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://notchia.app/#app",
+      "name": "NotchIA",
+      "applicationCategory": "ProductivityApplication",
+      "applicationSubCategory": "MenuBarApplication",
+      "operatingSystem": "macOS 15.0+",
+      "softwareVersion": "2.8.0",
+      "dateModified": "2026-05-16",
+      "url": "https://notchia.app/",
+      "downloadUrl": "https://notchia.app/install",
+      "image": "https://notchia.app/og-image.png",
+      "screenshot": "https://notchia.app/og-image.png",
+      "author": { "@id": "https://notchia.app/#axel" },
+      "publisher": { "@id": "https://notchia.app/#organization" },
+      "featureList": [
+        "MacBook notch control center",
+        "On-device Apple Intelligence RSS Digest",
+        "Live AI status for Claude Code, ChatGPT Codex and GitHub Copilot",
+        "Multi-source media controls",
+        "Calendar and Reminders",
+        "Focus timer",
+        "System HUD replacement",
+        "Shelf file workflows",
+        "Clipboard history",
+        "16-format file converter"
+      ],
+      "offers": [
+        { "@type": "Offer", "name": "Essential", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+        { "@type": "Offer", "name": "Pro monthly", "price": "3.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+        { "@type": "Offer", "name": "Lifetime Pro", "price": "39.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/press#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is NotchIA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "NotchIA is an independent native macOS app that turns the MacBook notch, or a virtual menu-bar area on Macs without a notch, into an interactive control center." }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes NotchIA different?",
+          "acceptedAnswer": { "@type": "Answer", "text": "NotchIA combines on-device Apple Intelligence RSS summaries, live AI status for coding assistants, media controls, calendar, focus, system HUD replacement, Shelf workflows and clipboard history in one native macOS app." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does NotchIA send AI data to a server?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Digest and file summaries are generated on device when Apple Intelligence is available. AI session status is read locally from session files. NotchIA does not send prompts or completions to its own servers." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+<header class="max-w-4xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Home</a>
+    <a href="/features" class="hover:text-cream">Features</a>
+    <a href="/pricing" class="hover:text-cream">Pricing</a>
+  </nav>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 pt-8 pb-24">
+  <section class="mb-10">
+    <p class="eyebrow mb-4">Press kit · updated May 16, 2026</p>
+    <h1 class="font-display text-5xl md:text-6xl leading-tight mb-5">
+      NotchIA is a native macOS <span class="grad-text">notch cockpit</span>
+    </h1>
+    <p class="text-cream/70 text-lg md:text-xl max-w-3xl">
+      NotchIA turns the MacBook notch into an interactive control center with on-device Apple Intelligence RSS summaries, live AI status for coding assistants, media, calendar, focus and system HUD controls.
+    </p>
+  </section>
+
+  <div class="grid md:grid-cols-3 gap-4 mb-10">
+    <div class="panel"><p class="eyebrow mb-2">Current version</p><p class="!mb-0 text-cream">2.8.0 Wise Owl</p></div>
+    <div class="panel"><p class="eyebrow mb-2">Platform</p><p class="!mb-0 text-cream">macOS 15.0+ · Intel + Apple Silicon</p></div>
+    <div class="panel"><p class="eyebrow mb-2">Pricing</p><p class="!mb-0 text-cream">Free · EUR 3.99/mo · EUR 39.99 lifetime</p></div>
+  </div>
+
+  <p>
+    <a class="btn" href="/install">Download NotchIA</a>
+  </p>
+
+  <h2>Short Description</h2>
+  <p>
+    NotchIA is an independent macOS utility developed by Axel Courty in Paris. It uses the MacBook notch, or a virtual menu-bar zone on Macs without a physical notch, as an always-visible surface for recurring desktop workflows: media, calendar, focus, AI status, file handling, clipboard history and system HUD controls.
+  </p>
+
+  <h2>Key Facts</h2>
+  <table>
+    <tbody>
+      <tr><th>Product</th><td>NotchIA</td></tr>
+      <tr><th>Category</th><td>Native macOS menu-bar and notch utility</td></tr>
+      <tr><th>Developer</th><td>Axel Courty, independent macOS developer based in Paris</td></tr>
+      <tr><th>Website</th><td><a href="https://notchia.app/">https://notchia.app/</a></td></tr>
+      <tr><th>Release notes</th><td><a href="https://notchia.app/blog/wise-owl-2-8-0">NotchIA 2.8.0 Wise Owl</a></td></tr>
+      <tr><th>Languages</th><td>French, English, Spanish, German</td></tr>
+      <tr><th>Privacy</th><td>No telemetry. Digest and document summaries run on device when Apple Intelligence is available. AI session status is read locally.</td></tr>
+      <tr><th>Contact</th><td><a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a></td></tr>
+    </tbody>
+  </table>
+
+  <h2>What Is New in 2.8.0</h2>
+  <p>
+    Version 2.8.0 adds Digest, a free RSS/Atom brief generated locally with Apple's Foundation Models. Users add feeds, describe their interests in plain language, and NotchIA fetches, deduplicates and summarizes relevant items. Original source links remain visible next to each summary.
+  </p>
+  <p>
+    The same release adds on-device Shelf summaries for PDF, DOCX, TXT and Markdown files in the Pro tier.
+  </p>
+
+  <h2>Differentiators</h2>
+  <ul>
+    <li><strong>On-device Apple Intelligence Digest:</strong> RSS/Atom feeds summarized locally, with a raw-feed fallback on macOS versions without Apple Intelligence.</li>
+    <li><strong>Live AI status:</strong> Claude Code, ChatGPT Codex and GitHub Copilot states, token stats, quotas and permission waits shown in the notch.</li>
+    <li><strong>Native workflow surface:</strong> media controls, calendar, reminders, focus timer, system HUD replacement, Shelf, file conversion and clipboard history in one macOS app.</li>
+    <li><strong>Local-first privacy:</strong> no telemetry and no third-party AI calls for Digest or file summaries.</li>
+  </ul>
+
+  <h2>Assets</h2>
+  <ul>
+    <li><a href="https://notchia.app/og-image.png">Open Graph image</a> — 1200 x 630</li>
+    <li><a href="https://notchia.app/logo-512.png">App icon</a> — 512 x 512</li>
+    <li><a href="https://github.com/coaxel2/NotchIA/releases" rel="noopener" target="_blank">GitHub releases</a></li>
+  </ul>
+
+  <h2>Reference Links</h2>
+  <ul>
+    <li><a href="https://developer.apple.com/documentation/foundationmodels" rel="noopener" target="_blank">Apple Foundation Models documentation</a></li>
+    <li><a href="https://docs.anthropic.com/en/docs/claude-code/overview" rel="noopener" target="_blank">Claude Code documentation</a></li>
+    <li><a href="https://github.com/openai/codex/releases" rel="noopener" target="_blank">OpenAI Codex releases</a></li>
+    <li><a href="https://code.visualstudio.com/docs/copilot/overview" rel="noopener" target="_blank">GitHub Copilot in VS Code</a></li>
+  </ul>
+
+  <h2>FAQ</h2>
+  <h3>What is NotchIA?</h3>
+  <p>NotchIA is an independent native macOS app that turns the MacBook notch, or a virtual menu-bar area on Macs without a notch, into an interactive control center.</p>
+
+  <h3>What makes NotchIA different?</h3>
+  <p>NotchIA combines on-device Apple Intelligence RSS summaries, live AI status for coding assistants, media controls, calendar, focus, system HUD replacement, Shelf workflows and clipboard history in one native macOS app.</p>
+
+  <h3>Does NotchIA send AI data to a server?</h3>
+  <p>No. Digest and file summaries are generated on device when Apple Intelligence is available. AI session status is read locally from session files. NotchIA does not send prompts or completions to its own servers.</p>
+</main>
+
+<footer class="border-t border-cream/10">
+  <div class="max-w-4xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Legal notice</a>
+      <a href="/privacy" class="hover:text-cream">Privacy</a>
+      <a href="/refund" class="hover:text-cream">Refund</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
