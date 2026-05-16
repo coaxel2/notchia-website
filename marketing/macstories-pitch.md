@@ -32,7 +32,7 @@ Hi John,
 
 Long-time reader. I noticed your write-ups on NotchNook and Alcove, and I wanted to put a new app on your radar — NotchIA.
 
-NotchIA is an indie macOS app built on top of the open-source Boring Notch. It adds two things that aren't covered by any of the notch utilities currently reviewed on MacStories:
+NotchIA is an independent native macOS app. It adds two things that aren't covered by any of the notch utilities currently reviewed on MacStories:
 
 1. **Live AI status in the notch.** It auto-detects active Claude Code, ChatGPT Codex, and GitHub Copilot sessions and shows what they're doing in real time — 10 states (Compiling, Reading, Editing, Writing, Sub-agent, etc.), token statistics, 5h/7d rate-limit quotas, and notifications when an assistant is waiting for permission. All read locally from ~/.claude/projects/, no cloud calls.
 
@@ -85,7 +85,7 @@ Axel
 
 ### Ce qui marche pour MacStories
 - Pitch **technique précis** (ils sont devs/power users, pas marketing). Mentionner l'XPC helper, EdDSA Sparkle, lecture locale `~/.claude/projects/`, Foundation Models on-device, etc. — pas "the best app ever made"
-- **Reconnaître l'existant** : "Boring Notch" et "NotchNook" en premier paragraphe — ça montre que tu connais le territoire
+- **Reconnaître l'existant** : "NotchNook" en premier paragraphe — ça montre que tu connais le territoire
 - **Pas d'embargos**, pas de "release exclusivity" tant que tu n'as pas de relation établie
 - **Email court** : 250-400 mots max. Voir le premier essai ci-dessus
 

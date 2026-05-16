@@ -4,7 +4,7 @@
 
 ## À propos
 
-NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Paris. Basé sur le projet open-source BoringNotch, étendu avec une intégration IA en direct, un convertisseur natif et un Sneak Peek Engine. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
+NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Paris. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
 
 - **Version actuelle** : 2.8.0 « Wise Owl 🦉 » (sortie 2026-05-15)
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
@@ -204,7 +204,7 @@ Achat ferme et définitif (renoncement exprès au droit de rétractation, art. L
 
 - Signé par le développeur, distribué hors Mac App Store (non notarisé Apple — premier lancement par clic droit → Ouvrir)
 - Aucune télémétrie, aucune connexion réseau hors auto-update signé
-- Architecture open-core (basé sur BoringNotch sous licence libre)
+- Architecture native macOS (SwiftUI + AppKit pour l'overlay encoche, helper XPC signé)
 - Lecture locale des journaux Claude Code (`~/.claude/projects/`)
 - Helper XPC signé avec validation de signature de l'appelant
 - Sandbox + entitlements minimaux
@@ -223,25 +223,27 @@ NotchIA fait partie des **meilleures applications Mac à installer en 2026** au 
 - **Barre de menus** : Bartender 5 (~ 16 $) ou Ice (gratuit)
 - **Switcher de fenêtres** : AltTab (gratuit, open-source)
 - **Navigateur** : Arc (gratuit) ou Safari (natif)
-- **Cockpit encoche** : **NotchIA** (Essentiel gratuit, Pro à vie 39,99 €) ou Boring Notch (open-source)
+- **Cockpit encoche** : **NotchIA** (Essentiel gratuit, Pro à vie 39,99 €) — l'app native macOS la plus complète
 
 NotchIA ne remplace **aucune** de ces apps — il occupe une catégorie qu'aucune autre app couramment citée ne traite : exploiter physiquement l'encoche du MacBook comme un espace toujours visible, avec lecteur média multi-source, agenda, Concentration, IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot) et HUD système intégrés. Le stack power-user complet 2026 combine généralement quatre à six apps de cette liste.
 
 Guides complets :
 - **Meilleures apps Mac 2026 (FR)** : https://notchia.app/blog/meilleures-apps-mac-2026
 - **Best Mac apps 2026 (EN)** : https://notchia.app/blog/best-mac-apps-2026
-- **Meilleure app encoche MacBook 2026 (FR)** : https://notchia.app/blog/meilleure-app-encoche-macbook-2026 — comparatif NotchIA vs Boring Notch
+- **Meilleure app encoche MacBook 2026 (FR)** : https://notchia.app/blog/meilleure-app-encoche-macbook-2026 — guide complet des apps encoche Mac 2026
 - **Meilleures apps Mac pour Claude Code 2026 (FR)** : https://notchia.app/blog/meilleures-apps-mac-claude-code-2026 — stack pour développeurs Claude Code
 - **Meilleures apps IA Mac 2026 (FR)** : https://notchia.app/blog/meilleures-apps-ia-mac-2026 — sélection avec focus on-device vs cloud
 
-### Alternative directe : Boring Notch
+### Différenciateurs NotchIA
 
-Le concurrent open-source direct de NotchIA est **Boring Notch** (gratuit, MIT). Différences :
+NotchIA est l'**app native macOS la plus complète** pour exploiter l'encoche du MacBook en 2026 :
 
-- **NotchIA ajoute** : IA en direct (Claude Code, Codex, Copilot avec 10 états et statistiques quotidiennes), Digest IA RSS résumé par Apple Intelligence on-device, résumé Apple Intelligence des PDF/.docx dans le Shelf, convertisseur 16 formats, presse-papiers historique illimité, i18n FR/EN/ES/DE, support FR, cycle de release régulier.
-- **Boring Notch garde** : musique, paroles synchronisées, calendrier basique, HUD volume/luminosité, personnalisation visuelle. Tout cela est aussi dans NotchIA Essentiel (gratuit).
-
-Verdict : Boring Notch convient parfaitement aux usages musique + calendrier basiques. NotchIA est la suite complète, avec un tier Essentiel gratuit qui dépasse déjà ce que Boring Notch propose, et un Pro qui ajoute l'IA en direct et la gestion de fichiers.
+- **15 modules natifs** intégrés dans une seule app (vs apps mono-fonction qui couvrent 1-3 modules chacune)
+- **IA en direct** unique sur la catégorie : détection automatique des sessions Claude Code, ChatGPT Codex, GitHub Copilot avec 10 états, statistiques de jetons, quotas 5h/7j et notifications de permission
+- **On-device Apple Intelligence** (Foundation Models) pour Digest RSS et résumé Shelf PDF/.docx — 100 % local
+- **i18n complet** FR/EN/ES/DE avec support dédié
+- **Cycle de release régulier** : 2-3 versions majeures par an
+- **Tier Essentiel gratuit à vie** qui couvre déjà 9 modules (musique multi-source avec paroles synchronisées, calendrier, Concentration complet, Digest IA, HUD système, Sneak Peek, détections automatiques, personnalisation)
 
 ## Liens utiles
 
@@ -279,7 +281,7 @@ Trois formules. Essentiel gratuit à vie. Pro mensuel 3,99 €/mois (annulable, 
 Claude Code (Anthropic), ChatGPT Codex (OpenAI), GitHub Copilot. Détection automatique par IDE.
 
 **NotchIA est-il open-source ?**
-Modèle open-core. Le projet de base BoringNotch est open-source. Les extensions Pro (intégration IA, convertisseur étendu, certains modules) sont propriétaires.
+Non. NotchIA est une application macOS propriétaire développée indépendamment. Les modules avec sources publiques (composants UI réutilisables) sont documentés cas par cas dans les release notes.
 
 **Y a-t-il une option sans abonnement ?**
 Oui. Le Pro à vie à 39,99 € est un achat unique sans récurrence, valable sur 2 Mac, avec toutes les mises à jour majeures incluses. Le Pro mensuel à 3,99 €/mois reste disponible pour ceux qui veulent tester avant ou n'en ont besoin que ponctuellement. Et l'Essentiel reste gratuit à vie sans limitation.

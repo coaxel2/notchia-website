@@ -1,14 +1,14 @@
 # NotchIA — Pack de lancement externe
 
-> Drafts prêts à envoyer pour les 5 canaux de visibilité externe les plus rentables. Adapter le ton si besoin, mais le squelette est calibré pour le format de chaque plateforme.
+> Drafts prêts à envoyer pour les 5 canaux de visibilité externe les plus rentables. NotchIA est positionnée comme **app macOS native indépendante** — JAMAIS comme fork ou dérivé d'un autre projet.
 
 ## Sommaire
 
 1. [Product Hunt](#1--product-hunt) — un mardi/mercredi à 6h00 PT
-2. [Reddit r/MacApps + r/macbookpro](#2--reddit) — format AMA honnête, après 18h CET
-3. [Pull Requests GitHub awesome-mac](#3--github-awesome-mac) — 3 listes à viser
+2. [Reddit r/MacApps + r/macbookpro](#2--reddit) — format Showcase, après 14h CET = peak engagement US
+3. [Pull Requests GitHub awesome-mac](#3--github-awesome-mac) — voir `marketing/awesome-mac-prs.md`
 4. [Mail aux blogs Mac FR](#4--mail-blogs-mac-fr) — MacGeneration, iGeneration, Mac4Ever
-5. [Hacker News Show HN](#5--hacker-news-show-hn) — quand la prochaine release a un angle technique fort
+5. [Hacker News Show HN](#5--hacker-news-show-hn) — pour la prochaine release avec angle technique fort
 
 ---
 
@@ -29,7 +29,7 @@ Live AI status, Apple Intelligence summaries, in the notch
 
 ### Description (longform)
 ```
-NotchIA turns the dead notch of your MacBook (or the menu bar on notch-less Macs) into an interactive control center.
+NotchIA turns the empty notch of your MacBook (or the menu bar on notch-less Macs) into an interactive control center — 15 native modules across six tabs.
 
 What you get in the free tier:
 • Multi-source music with synced lyrics (Apple Music, Spotify, YouTube Music)
@@ -38,6 +38,7 @@ What you get in the free tier:
 • Digest (new in 2.8.0) — RSS feeds summarized by on-device Apple Intelligence
 • System HUD replacement (volume, brightness, keyboard)
 • Sneak Peek Engine, focus detection, recording detection
+• 4 languages: French, English, Spanish, German
 
 Pro adds:
 • Live AI status — Claude Code, ChatGPT Codex, and GitHub Copilot in the notch with 10 states, token stats, 5h/7d quotas, permission notifications
@@ -45,11 +46,11 @@ Pro adds:
 • File converter (16 formats)
 • Unlimited clipboard history
 
-100% local. No telemetry, nothing sent to OpenAI/Anthropic/our servers (except license validation). Built on top of the open-source Boring Notch.
+100% local. No telemetry, no third-party AI calls (except license validation). Independent macOS app developed in Paris.
 
 Free Essential tier forever. Pro at €3.99/mo or €39.99 one-time for 2 Macs (lifetime, all major updates included).
 
-macOS 15+ (Sequoia). Apple Silicon + Intel. Available in French, English, Spanish, German.
+macOS 15+ (Sequoia). Apple Silicon + Intel.
 ```
 
 ### Gallery (images)
@@ -83,37 +84,49 @@ Idéalement quelqu'un avec déjà des followers PH. Sinon, poste toi-même.
 ### r/MacApps — titre
 
 ```
-[Showcase] NotchIA — I extended Boring Notch with live AI status, on-device Apple Intelligence summaries, and a 16-format converter
+[Showcase] NotchIA — turn your MacBook notch into an interactive cockpit with live Claude Code/Codex/Copilot status and on-device Apple Intelligence
 ```
 
 ### r/MacApps — corps
 
 ```
-Hi all, indie dev here. I built NotchIA on top of the open-source Boring Notch project — added the things I personally wanted in the notch:
+Hi all, indie dev here. I built NotchIA — a native macOS app that turns the MacBook notch (or the menu bar on notch-less Macs) into a multi-tab interactive cockpit. 15 modules across six tabs.
 
-**What's new vs Boring Notch:**
+**Why I built it**
 
-- **Live AI status** in the notch: detects Claude Code, ChatGPT Codex, and GitHub Copilot sessions, shows 10 states (Compiling, Terminal, Searching, Reading, Editing, Writing, Web, Sub-agent, Planning, Running), token stats per session, 5h/7d quota bars, and notifications when an assistant is waiting for permission. Reads `~/.claude/projects/` locally, no cloud calls.
+The notch sits empty all day. My Claude Code session is crunching in the background and I keep switching windows to check if it's done, if it crashed, or if it's waiting for a permission prompt. So the notch shows me. That was the seed.
 
-- **Digest** (new in 2.8.0, free): paste your RSS feeds, describe what interests you in plain language, and on-device Apple Intelligence (Foundation Models) summarizes the feed for you. 14-day cache. Requires macOS 26 for Apple Intelligence; falls back to a raw RSS viewer on macOS 15.
+**What it does**
+
+- **Live AI status** in the notch: auto-detects Claude Code, ChatGPT Codex, and GitHub Copilot sessions, shows 10 states (Compiling, Terminal, Searching, Reading, Editing, Writing, Web, Sub-agent, Planning, Running), token stats per session, 5h/7d quota bars, and notifications when an assistant is waiting for permission. Reads `~/.claude/projects/` locally, no cloud calls.
+
+- **Digest** (new in 2.8.0, free): paste your RSS feeds, describe what interests you in plain language, and on-device Apple Intelligence (Foundation Models) summarizes them for you. 14-day cache. Requires macOS 26 for Apple Intelligence; falls back to a raw RSS viewer on macOS 15.
 
 - **Shelf with on-device summary**: drop a PDF/.docx/.txt/.md on the notch, get a scrollable summary via the same on-device models.
 
-- **16-format file converter** in the Shelf.
+- **Music**: Apple Music, Spotify, YouTube Music — with synced lyrics via lrclib (26 languages), album art with extracted dominant color.
 
-- **i18n**: French, English, Spanish, German (Boring Notch is English only).
+- **Calendar**: iCal events + Reminders, day + month views, create events directly from the notch.
 
-- **Music**: adds YouTube Music + synced lyrics via lrclib (26 languages).
+- **Focus**: full Pomodoro with daily stats, configurable break sessions.
 
-**Privacy stance**: no telemetry, no third-party AI calls. The only outbound connections are Sparkle auto-update (EdDSA signed), license validation (email + key), and the RSS feeds you configured yourself.
+- **System HUD replacement**: volume, brightness, keyboard backlight integrated into the notch.
 
-**Pricing**: Essential tier free forever (Focus, Digest, media, calendar, HUD). Pro at €3.99/mo or €39.99 lifetime one-time for 2 Macs.
+- **Shelf** drag-and-drop, **16-format file converter**, unlimited **clipboard history**.
+
+- **i18n**: French, English, Spanish, German.
+
+**Privacy**
+
+No telemetry, no third-party AI calls. The only outbound connections are Sparkle auto-update (EdDSA signed), license validation (email + key), and the RSS feeds you configured yourself.
+
+**Pricing**
+
+Essential tier free forever (Focus, Digest, media, calendar, HUD, lyrics, system detections). Pro at €3.99/mo or €39.99 lifetime one-time for 2 Macs.
 
 macOS 15+ (Sequoia), Apple Silicon + Intel. Download: https://notchia.app/
 
-Boring Notch is still excellent if you want strict open-source MIT and only basic music/calendar — both projects can coexist.
-
-Happy to answer questions on the AI detection logic, on-device Apple Intelligence integration, or the open-core decision.
+Happy to answer questions on the AI detection logic, on-device Apple Intelligence integration, the notch overlay implementation, or anything else.
 ```
 
 ### r/macbookpro — adapter
@@ -126,38 +139,14 @@ Même corps mais titre plus orienté hardware :
 ### Règles à respecter
 - **JAMAIS** poster en moins de 24h sur les deux subs (les mods regardent les cross-post)
 - Répondre dans les 2h aux commentaires (les mods downvote les "post and ghost")
-- Reconnaître Boring Notch en premier dans tout commentaire qui le mentionne — c'est ce qui te rendra légitime auprès des fans Boring Notch
+- Si quelqu'un compare à un autre notch utility (NotchNook, MediaMate, Boring Notch, etc.) en commentaire, OK de répondre factuellement vs cette app — ne JAMAIS faire la comparaison en proactif
 - Ne pas répondre aux trolls. Bloquer si nécessaire.
 
 ---
 
 ## 3 — GitHub awesome-mac
 
-Trois listes prioritaires (en PR séparées, ne pas tout faire en une) :
-
-### a) jaywcjlove/awesome-mac
-Repo : https://github.com/jaywcjlove/awesome-mac
-Catégorie cible : **Productivity** ou **Menu Bar Tools**
-PR title : `Add NotchIA — interactive notch + on-device AI for MacBook`
-PR body : ligne markdown à insérer dans la section appropriée :
-```markdown
-- [NotchIA](https://notchia.app/) - Turns the MacBook notch into an interactive cockpit with multi-source music + synced lyrics, calendar, Pomodoro Focus, on-device Apple Intelligence Digest (RSS summaries), live AI status (Claude Code / Codex / Copilot) and system HUD replacement. Free Essential tier, Pro €39.99 lifetime. Based on the open-source Boring Notch. macOS 15+. ![Freemium]
-```
-
-### b) serhii-londar/open-source-mac-os-apps
-Repo : https://github.com/serhii-londar/open-source-mac-os-apps
-Catégorie : **Menubar** ou **Productivity**
-Note : NotchIA est open-core (base open-source, Pro propriétaire). Vérifie d'abord que la liste accepte ce modèle — sinon, soumets plutôt Boring Notch.
-
-### c) iCHAIT/awesome-macOS
-Repo : https://github.com/iCHAIT/awesome-macOS
-Catégorie : **Productivity**
-
-### Format à respecter strictement
-- Une ligne par app
-- Description courte mais informative
-- Lien direct vers le site
-- Pas de mots marketing genre "amazing", "best", "revolutionary"
+Voir `marketing/awesome-mac-prs.md` pour les diffs précis ready-to-submit.
 
 ---
 
@@ -173,13 +162,13 @@ Catégorie : **Productivity**
 ```
 Bonjour,
 
-Je suis Axel Courty, développeur indépendant à Paris. Je viens de sortir NotchIA, une app macOS qui exploite l'encoche du MacBook comme cockpit interactif, avec deux angles que vous n'avez pas couverts à ma connaissance :
+Je suis Axel Courty, développeur indépendant à Paris. Je viens de sortir NotchIA, une app macOS native qui exploite l'encoche du MacBook comme cockpit interactif, avec deux angles que vous n'avez pas couverts à ma connaissance :
 
 1. Détection automatique des sessions Claude Code, ChatGPT Codex et GitHub Copilot en direct — affichage de 10 états en temps réel dans l'encoche, statistiques de jetons, quotas 5h/7j, notifications quand l'assistant attend une permission. Lecture 100 % locale des journaux ~/.claude/projects/, jamais d'envoi externe.
 
 2. Digest — résumé des flux RSS via Apple Intelligence (Foundation Models on-device, macOS 26). L'utilisateur colle ses flux, décrit ses centres d'intérêt en langage naturel, l'app fetch + dédupe + résume. 100 % local — pas d'OpenAI/Anthropic dans le circuit. C'est la première fois que je vois un usage quotidien sérieux des Foundation Models.
 
-L'app est basée sur le projet open-source Boring Notch, étendu avec ces intégrations. Tier Essentiel gratuit à vie, Pro à 3,99 €/mois ou 39,99 € à vie en achat unique.
+L'app inclut 15 modules natifs au total : médias multi-source avec paroles synchronisées, calendrier, Pomodoro Focus, Digest, Shelf, IA en direct, convertisseur 16 formats, presse-papiers historique, HUD système, et plus. Tier Essentiel gratuit à vie, Pro à 3,99 €/mois ou 39,99 € à vie en achat unique.
 
 Je serais ravi de vous envoyer un build de test, vous laisser jouer avec, et répondre aux questions techniques. Je peux aussi écrire un guest post si vous voulez creuser l'intégration on-device Apple Intelligence.
 
@@ -235,15 +224,14 @@ Hi HN. I built NotchIA because the MacBook notch sits there empty while my Claud
 
 It does live AI status detection (Claude Code, Codex, Copilot — read locally from ~/.claude/projects/), media playback with synced lyrics, calendar, Pomodoro Focus, system HUD replacement, and the bit I'm proudest of: Digest, which uses Apple's on-device Foundation Models (Apple Intelligence, macOS 26) to summarize my RSS feeds based on what I tell it I care about. Nothing leaves the Mac.
 
-It's based on the open-source Boring Notch and adds the AI layer + Apple Intelligence integration + i18n (FR/EN/ES/DE) + a regular release cycle. Free Essential tier, €39.99 lifetime Pro.
+It's a native macOS app — 15 modules total. Free Essential tier, €39.99 lifetime Pro.
 
 Tech stack: SwiftUI, AppKit for the notch overlay, XPC helper for HUD interception, lrclib for synced lyrics, Sparkle with EdDSA for auto-update. The AI detection parses Claude Code's local JSONL session logs and matches them to 10 state patterns.
 
-Happy to answer questions on the notch overlay implementation, on-device Apple Intelligence integration, or the open-core decision.
+Happy to answer questions on the notch overlay implementation, on-device Apple Intelligence integration, or anything else.
 ```
 
 ### Règles
-- **Reconnais Boring Notch dans le premier paragraphe** (HN flag les "appropriations" non créditées en moins de 30 minutes)
 - **Réponds dans les 30 min** aux premiers commentaires, sinon le post tombe
 - **Argumente sur la technique** plus que sur les features (HN aime le détail d'implémentation)
 - **N'amplifie pas** avec des comptes burner — HN détecte et shadow-ban
@@ -254,11 +242,11 @@ Happy to answer questions on the notch overlay implementation, on-device Apple I
 
 | Semaine | Canal | Effort | Impact attendu |
 |---|---|---|---|
-| S1 | PR awesome-mac (3 listes) | 30 min | +5-15 backlinks GitHub, indexés par les LLM |
+| S1 | PR awesome-mac | 30 min | Backlink GitHub indexé par les LLM |
 | S1 | Reddit r/MacApps | 1h (préparation) | +200-1500 vues, 5-30 downloads |
 | S2 | Mail blogs Mac FR (3) | 1h (rédaction + envoi) | 1-2 articles si l'angle plaît |
-| S3 | Product Hunt launch | 4-6h (préparation + day) | Pic visibilité 24-48h, 50-300 downloads, badge "Featured" si top 5 |
-| S4 | Show HN (avec la 2.8.0) | 1h | 500-3000 vues si front page, sinon ~100 |
+| S3 | Product Hunt launch | 4-6h (préparation + day) | Pic visibilité 24-48h, 50-300 downloads |
+| S4 | Show HN (avec la 2.8.0) | 1h | 500-3000 vues si front page |
 
 Ne fais **pas tout en une semaine** — la qualité de la conversation sur chaque canal dépasse largement le volume brut. Espace.
 
@@ -271,4 +259,4 @@ Ne fais **pas tout en une semaine** — la qualité de la conversation sur chaqu
 - **Trafic GA / Cloudflare** : référents Reddit, Product Hunt, awesome-mac, blogs
 - **Downloads** : releases GitHub + analytics Cloudflare des `*.dmg`
 
-Cible 3 mois : 10+ backlinks tiers (pas juste sociaux), mention occasionnelle dans ChatGPT sur "best notch app Mac" → top 1 sur cette requête. La requête générique "meilleur app Mac" restera dominée par Raycast/Setapp/etc., mais tu apparaîtras peut-être dans les "alternatives" et "specialized utilities" mentionnées.
+Cible 3 mois : 10+ backlinks tiers (pas juste sociaux), mention occasionnelle dans ChatGPT sur "best notch app Mac" → top 3 sur cette requête.
