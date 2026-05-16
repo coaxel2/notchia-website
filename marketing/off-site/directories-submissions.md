@@ -19,6 +19,18 @@ Once the item URL exists, add it to:
 
 ## Product Hunt
 
+Product URL:
+
+```text
+https://www.producthunt.com/products/notchia?launch=notchia
+```
+
+Scheduled launch:
+
+```text
+May 17, 2026 12:01 AM PDT
+```
+
 Official flow: log in with a personal Product Hunt account, click `Post`, and submit the product URL.
 
 Submission URL:
@@ -321,7 +333,7 @@ notchia.app@gmail.com
 
 | Directory | Account needed | Submitted | Public URL | Notes |
 |---|---:|---:|---|---|
-| Product Hunt | Yes | Yes | Pending public URL | Submitted by Axel; add the Product Hunt URL to `/press`, `llms.txt` and `llms-full.txt` when public |
+| Product Hunt | Yes | Yes | https://www.producthunt.com/products/notchia?launch=notchia | Scheduled for May 17, 2026 12:01 AM PDT |
 | MacUpdate | Yes | No | | Use `https://www.macupdate.com/content/submit` |
 | AlternativeTo | Yes | No | | Add app + suggest alternatives |
 | Setapp | Email/dev account | No | | Email `developers@setapp.com` |

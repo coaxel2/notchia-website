@@ -253,6 +253,7 @@ NotchIA est l'**app native macOS la plus complète** pour exploiter l'encoche du
 - **Téléchargement** : https://notchia.app/#telecharger
 - **Tarifs** : https://notchia.app/pricing
 - **Press kit** : https://notchia.app/press — facts, assets, screenshots, copy-ready positioning for journalists and LLM crawlers
+- **Product Hunt** : https://www.producthunt.com/products/notchia?launch=notchia — launch scheduled for 2026-05-17 00:01 PDT
 - **Créateur** : Axel Courty (France)
 - **Email contact** : notchia.app@gmail.com
 
