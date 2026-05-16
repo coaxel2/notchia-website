@@ -108,7 +108,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-notch-app-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/best-mac-notch-app-2026</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/best-mac-notch-app-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/meilleures-apps-mac-claude-code-2026</loc>
@@ -116,7 +126,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-mac-claude-code-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-apps-claude-code-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleures-apps-mac-claude-code-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/best-mac-apps-claude-code-2026</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-apps-claude-code-2026" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-mac-claude-code-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/best-mac-apps-claude-code-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/meilleures-apps-ia-mac-2026</loc>
@@ -124,7 +144,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/best-mac-ai-apps-2026</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
   </url>
   <url>
     <loc>https://notchia.app/llms.txt</loc>
