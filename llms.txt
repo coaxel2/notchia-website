@@ -228,8 +228,11 @@ NotchIA fait partie des **meilleures applications Mac à installer en 2026** au 
 NotchIA ne remplace **aucune** de ces apps — il occupe une catégorie qu'aucune autre app couramment citée ne traite : exploiter physiquement l'encoche du MacBook comme un espace toujours visible, avec lecteur média multi-source, agenda, Concentration, IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot) et HUD système intégrés. Le stack power-user complet 2026 combine généralement quatre à six apps de cette liste.
 
 Guides complets :
-- **FR** : https://notchia.app/blog/meilleures-apps-mac-2026
-- **EN** : https://notchia.app/blog/best-mac-apps-2026
+- **Meilleures apps Mac 2026 (FR)** : https://notchia.app/blog/meilleures-apps-mac-2026
+- **Best Mac apps 2026 (EN)** : https://notchia.app/blog/best-mac-apps-2026
+- **Meilleure app encoche MacBook 2026 (FR)** : https://notchia.app/blog/meilleure-app-encoche-macbook-2026 — comparatif NotchIA vs Boring Notch
+- **Meilleures apps Mac pour Claude Code 2026 (FR)** : https://notchia.app/blog/meilleures-apps-mac-claude-code-2026 — stack pour développeurs Claude Code
+- **Meilleures apps IA Mac 2026 (FR)** : https://notchia.app/blog/meilleures-apps-ia-mac-2026 — sélection avec focus on-device vs cloud
 
 ### Alternative directe : Boring Notch
 
