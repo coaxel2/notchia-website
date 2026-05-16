@@ -8,46 +8,75 @@
 
 **Repo cible** : https://github.com/jaywcjlove/awesome-mac
 **Étoiles** : ~ 80k+ (la plus grosse liste mac), indexée par tous les LLM.
-**Catégorie** : Productivity > Menu Bar Tools (à vérifier dans le README au moment de la PR — l'ordre alphabétique compte)
+**Catégorie** : Productivity > Menu Bar Tools
+
+### ⚠️ Concurrents déjà listés (analyse 2026-05-16)
+
+Cinq apps "notch utility" sont déjà dans Menu Bar Tools :
+- **Boring Notch** (le projet d'origine open-source dont NotchIA dérive)
+- **CodexIsland** (rate-limit display Claude Code / Codex CLI uniquement)
+- **Notchly** (notch interactive avec live activities)
+- **NotchNook** (intégration design avec l'encoche)
+- **Atoll**, **Droppy**, **DynamicHorizon** (Dynamic Island-style)
+
+Conséquence : ta PR doit **différencier clairement** sinon elle sera fermée comme duplicate. La ligne et le PR body ci-dessous adressent ce point.
 
 ### Étapes
 
 1. Fork https://github.com/jaywcjlove/awesome-mac
-2. Édit `README.md` ou `editors/README-en.md` selon la convention du repo
-3. Ajoute la ligne ci-dessous **dans la section Menu Bar Tools, à la position alphabétique** (entre "Magnet" et "OneSwitch" approximativement)
+2. Édite `README.md` à la **ligne 1198** (entre NetFluss et NotchNook). Si les lignes ont bougé depuis, cherche `NetFluss` avec Cmd+F.
+3. Insère la ligne ci-dessous **juste après** la ligne de NetFluss
 4. Commit avec le message ci-dessous
 5. PR title : `Add NotchIA to Menu Bar Tools`
 6. PR body : voir ci-dessous
 
-### Ligne à insérer dans README.md
+### Ligne à insérer dans README.md (entre NetFluss et NotchNook)
 
 ```markdown
-- [NotchIA](https://notchia.app/) - Turns the MacBook notch into an interactive cockpit with multi-source music + synced lyrics, calendar, Pomodoro Focus, on-device Apple Intelligence Digest (RSS summaries), live AI status (Claude Code / Codex / Copilot) and system HUD replacement. Free Essential tier, Pro €39.99 lifetime. Based on the open-source Boring Notch. macOS 15+. ![Freemium]
+* [NotchIA](https://notchia.app/) - MacBook notch cockpit with multi-source music (synced lyrics), calendar, Pomodoro Focus, on-device Apple Intelligence RSS digest, and live AI status (Claude Code/Codex/Copilot). Open-core fork of Boring Notch with FR/EN/ES/DE i18n.
 ```
 
 ### Commit message
 
 ```
-Add NotchIA — interactive MacBook notch with on-device AI
+Add NotchIA to Menu Bar Tools
+```
+
+### PR title
+
+```
+Add NotchIA to Menu Bar Tools
 ```
 
 ### PR description (body)
 
 ```
-This PR adds **NotchIA** to the Menu Bar Tools section.
+Adds NotchIA to the Menu Bar Tools section.
 
-NotchIA is a macOS app that turns the MacBook notch (or menu bar on notch-less Macs) into an interactive cockpit with 15 native modules: multi-source music player with synced lyrics, iCal calendar + Reminders, full Pomodoro Focus, on-device Apple Intelligence Digest (RSS summaries via Foundation Models, requires macOS 26), live AI status for Claude Code / ChatGPT Codex / GitHub Copilot, system HUD replacement, and more.
+NotchIA is a macOS app that turns the MacBook notch into an interactive cockpit. It is an **open-core fork of Boring Notch** (already listed) that adds substantial new modules not covered by any of the existing notch utilities in this section:
 
+- **Live AI status** for Claude Code, ChatGPT Codex, and GitHub Copilot — 10 states (Compiling, Terminal, Searching, Reading, Editing, Writing, Web, Sub-agent, Planning, Running), token stats, 5h/7d quotas, permission notifications. Read locally from `~/.claude/projects/`.
+- **On-device Apple Intelligence Digest** — RSS feed summaries via Foundation Models (macOS 26+). User pastes feeds, describes interests in plain language, the app fetches/dedupes/summarizes locally. 14-day cache. Graceful fallback on macOS 15.
+- **Apple Intelligence Shelf summary** for PDF/.docx/.txt/.md files dropped on the notch.
+- **Full Pomodoro Focus** with daily stats and configurable break sessions.
+- **Multi-source music** (Apple Music, Spotify, YouTube Music) with **synced lyrics** via lrclib (26 languages).
+- **16-format file converter** and unlimited clipboard history.
+- **i18n**: French, English, Spanish, German.
+
+How NotchIA differs from the notch apps already in this section:
+- vs **Boring Notch**: NotchIA adds the AI layer (Claude Code monitoring, Apple Intelligence Digest, Shelf summaries), file converter, clipboard history, i18n, and a regular release cycle.
+- vs **CodexIsland**: NotchIA does Claude Code rate-limit tracking *plus* 15 other modules — it's a full notch cockpit, not a single-purpose tracker.
+- vs **Notchly / NotchNook**: NotchIA emphasizes integration with developer AI workflows and Apple Intelligence on-device, not just live activities.
+
+Details:
 - Site: https://notchia.app/
 - GitHub releases: https://github.com/coaxel2/NotchIA/releases
-- License: Open-core (base derived from open-source Boring Notch, Pro modules proprietary)
+- License: Open-core (base derived from MIT Boring Notch, Pro modules proprietary)
 - Pricing: Essential tier free for life · Pro €3.99/mo · Lifetime Pro €39.99 one-time for 2 Macs
 - Platform: macOS 15+ (Sequoia), Apple Silicon + Intel
-- Privacy: no telemetry, no third-party AI calls, on-device summaries via Apple Intelligence
+- Privacy: no telemetry, no third-party AI calls, on-device AI via Apple Intelligence Foundation Models
 
-The app builds on top of the existing open-source Boring Notch project and adds the AI integration layer, file converter, clipboard history, and i18n (FR/EN/ES/DE). Boring Notch is also a valid candidate for this list if you'd prefer the strictly open-source option.
-
-Position in alphabetical order: between "Magnet" and "OneSwitch" (adjust as needed based on current contents).
+Inserted alphabetically between NetFluss and NotchNook.
 ```
 
 ---
