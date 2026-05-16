@@ -1,0 +1,23 @@
+# Cloudflare Pages — redirects + rewrites
+# Doc: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Pretty URLs → .html (rewrite, statut 200)
+/install              /install.html              200
+/features             /features.html             200
+/pricing              /pricing.html              200
+/refund               /refund.html               200
+/privacy              /privacy.html              200
+/cgv                  /cgv.html                  200
+/mentions-legales     /mentions-legales.html     200
+/account              /account.html              200
+
+# Blog : slugs sans .html
+/blog                  /                          301
+/blog/                 /                          301
+/blog/:slug            /blog/:slug.html           200
+
+# Anciens chemins éventuels (à compléter au besoin)
+# /old-path          /new-path                  301
+
+# Catch-all : vrai 404 sur tout le reste
+/*                    /404.html                  404

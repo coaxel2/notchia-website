@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>404 — Page introuvable · NotchIA</title>
+<meta name="description" content="Cette page n'existe pas (ou plus). Retour à l'accueil NotchIA ou consultez la liste des articles." />
+<meta name="robots" content="noindex, follow" />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/404" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root { --ink:#0B0D12; --cream:#EDE8DC; --violet:#A855F7; --magenta:#FF4D88; --orange:#FF7A2D; --cyan:#4DA8FF; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--ink); color: var(--cream);
+    font-family: 'Instrument Sans', system-ui, sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    padding: 2rem; text-align: center;
+    background-image: radial-gradient(ellipse at top, rgba(168,85,247,.12), transparent 50%),
+                      radial-gradient(ellipse at bottom right, rgba(77,168,255,.08), transparent 50%);
+  }
+  .wrap { max-width: 640px; }
+  .num {
+    font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-style: italic;
+    font-size: clamp(96px, 22vw, 220px); line-height: .9; letter-spacing: -.04em;
+    background: linear-gradient(90deg, var(--violet), var(--magenta), var(--orange), var(--cyan));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    padding-bottom: .15em;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif; font-weight: 500;
+    font-size: clamp(24px, 5vw, 36px); margin-top: 1rem; letter-spacing: -.01em;
+  }
+  p { font-size: clamp(15px, 2.2vw, 18px); margin-top: 1rem; opacity: .8; line-height: 1.55; }
+  .actions { margin-top: 2rem; display: flex; gap: .75rem; flex-wrap: wrap; justify-content: center; }
+  a.btn {
+    display: inline-block; padding: .75rem 1.25rem; border-radius: 12px;
+    text-decoration: none; font-weight: 500; font-size: 15px;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  a.btn:hover { transform: translateY(-1px); }
+  a.primary { background: var(--cream); color: var(--ink); }
+  a.ghost { border: 1px solid rgba(237,232,220,.2); color: var(--cream); }
+  .langs { margin-top: 2rem; display: flex; gap: .5rem; justify-content: center; opacity: .55; font-size: 13px; }
+  .langs button { background: transparent; border: 0; color: inherit; cursor: pointer; padding: .25rem .5rem; font: inherit; }
+  .langs button.on { opacity: 1; text-decoration: underline; }
+  .sub-en, .sub-es, .sub-de { display: none; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="num">404</div>
+  <h1 data-i18n="t">Cette page n'existe pas.</h1>
+  <p data-i18n="d">Le lien que tu as suivi est cassé, déplacé, ou n'a jamais existé. Aucun problème — voilà où aller.</p>
+  <div class="actions">
+    <a href="/" class="btn primary" data-i18n="home">Retour à l'accueil</a>
+    <a href="/install" class="btn ghost" data-i18n="install">Télécharger NotchIA</a>
+    <a href="/blog/meilleures-apps-mac-2026" class="btn ghost" data-i18n="blog">Lire le blog</a>
+  </div>
+  <div class="langs">
+    <button data-lang="fr" class="on">FR</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="es">ES</button>
+    <button data-lang="de">DE</button>
+  </div>
+</main>
+<script>
+  const I = {
+    fr: { t: "Cette page n'existe pas.", d: "Le lien que tu as suivi est cassé, déplacé, ou n'a jamais existé. Aucun problème — voilà où aller.", home: "Retour à l'accueil", install: "Télécharger NotchIA", blog: "Lire le blog" },
+    en: { t: "This page doesn't exist.", d: "The link you followed is broken, moved, or never existed. No worries — here's where to go.", home: "Back to home", install: "Download NotchIA", blog: "Read the blog" },
+    es: { t: "Esta página no existe.", d: "El enlace que seguiste está roto, se ha movido, o nunca existió. Sin problema — aquí tienes adónde ir.", home: "Volver al inicio", install: "Descargar NotchIA", blog: "Leer el blog" },
+    de: { t: "Diese Seite existiert nicht.", d: "Der Link, dem du gefolgt bist, ist defekt, verschoben oder hat nie existiert. Kein Problem — hier geht es weiter.", home: "Zur Startseite", install: "NotchIA herunterladen", blog: "Zum Blog" }
+  };
+  function apply(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      if (I[lang] && I[lang][k]) el.textContent = I[lang][k];
+    });
+    document.querySelectorAll('.langs button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+  }
+  const nav = (navigator.language || 'fr').slice(0, 2);
+  apply(['fr','en','es','de'].includes(nav) ? nav : 'fr');
+  document.querySelectorAll('.langs button').forEach(b => b.addEventListener('click', () => apply(b.dataset.lang)));
+</script>
+</body>
+</html>

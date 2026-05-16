@@ -83,7 +83,8 @@
       "author": {
         "@type": "Person",
         "name": "Axel Courty",
-        "url": "https://notchia.app/"
+        "url": "https://notchia.app/",
+        "sameAs": ["https://github.com/coaxel2", "https://notchia.app/"]
       },
       "publisher": {
         "@type": "Organization",
@@ -161,6 +162,44 @@
           "name": "Ollama",
           "url": "https://ollama.com/",
           "description": "Run open-source LLMs locally on Mac (Llama 3, Mistral, etc.)."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/best-mac-ai-apps-2026#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best AI app for Mac in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depends on use case: NotchIA for on-device use cases (RSS summarization, PDF, Claude Code monitoring in the notch), Raycast Pro AI for a fast LLM in the launcher, Cursor for agentic AI in the IDE, MacWhisper for local audio transcription."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Mac AI apps are 100% on-device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three apps in this selection are 100% on-device: NotchIA (Apple Intelligence + local Claude Code session reading), MacWhisper (local Whisper) and Ollama (local open-source LLMs). The others send requests to OpenAI, Anthropic, or Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which app to summarize my RSS feeds without sending my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NotchIA Digest is designed exactly for this: it locally fetches your RSS/Atom feeds, dedupes, and summarizes via on-device Apple Intelligence (Foundation Models) based on your interests described in plain language. 14-day cache, free in 2.8.0, no external transmission. Requires macOS 26+ for Apple Intelligence; on macOS 15, graceful degradation to raw viewer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Apple Intelligence reliable for serious summaries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On-device Foundation Models (~ 3 billion parameters) are less powerful than GPT-4 or Claude 4.x but excellent on short structured tasks: article summary, key-point extraction, interest filtering. That's enough for Digest (RSS) and short Shelf summaries (PDF). For complex tasks (long-form writing, multi-step reasoning), use Claude / GPT-4."
+          }
         }
       ]
     },
@@ -343,6 +382,10 @@
 
   <h3>Is Apple Intelligence reliable for serious summaries?</h3>
   <p>On-device Foundation Models (~ 3 billion parameters) are less powerful than GPT-4 or Claude 4.x but excellent on short structured tasks: article summary, key-point extraction, interest filtering. That's enough for Digest (RSS) and short Shelf summaries (PDF). For complex tasks (long-form writing, multi-step reasoning), use Claude / GPT-4.</p>
+
+  <div class="mt-8 rounded-xl border border-cream/10 bg-gradient-to-b from-[#14171F] to-[#0F1218] px-5 py-4">
+    <p><strong>About the author.</strong> Axel Courty is an indie developer and creator of NotchIA, a macOS app that turns the MacBook notch into an interactive control center with on-device Apple Intelligence (Digest, Shelf summary) and live AI status (Claude Code, ChatGPT Codex, GitHub Copilot). This AI-on-Mac guide is updated at every major release. Contact: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> · <a href="https://github.com/coaxel2" rel="me noopener">GitHub</a>.</p>
+  </div>
 
   <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
     <a href="/#telecharger" class="btn-primary">Download NotchIA</a>

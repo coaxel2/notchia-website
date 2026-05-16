@@ -19,14 +19,12 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="generator" content="NotchIA — site officiel" />
 
-<!-- Canonical & alternates — remplacer le domaine au déploiement -->
+<!-- Canonical & alternates — homepage servie en FR uniquement côté SEO.
+     L'i18n JS (fr/en/es/de) reste opérationnel runtime mais sans hreflang
+     factice : Google exigeait des URLs distinctes par langue, ce qu'on n'a pas.
+     Promouvoir vers /fr/, /en/, /es/, /de/ si on traduit vraiment server-side. -->
 <link rel="canonical" href="https://notchia.app/" />
 <link rel="alternate" hreflang="fr" href="https://notchia.app/" />
-<link rel="alternate" hreflang="fr-FR" href="https://notchia.app/" />
-<link rel="alternate" hreflang="en" href="https://notchia.app/" />
-<link rel="alternate" hreflang="en-US" href="https://notchia.app/" />
-<link rel="alternate" hreflang="es" href="https://notchia.app/" />
-<link rel="alternate" hreflang="de" href="https://notchia.app/" />
 <link rel="alternate" hreflang="x-default" href="https://notchia.app/" />
 
 <!-- llms.txt (convention llmstxt.org — résumé pour les LLM) -->
@@ -121,9 +119,9 @@
       "softwareVersion": "2.8.0",
       "releaseNotes": "https://notchia.app/#telecharger",
       "datePublished": "2026-04-12",
-      "dateModified": "2026-05-06",
-      "inLanguage": ["fr", "en", "de", "es"],
-      "fileSize": "47MB",
+      "dateModified": "2026-05-16",
+      "inLanguage": ["fr"],
+      "fileSize": "30MB",
       "downloadUrl": "https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg",
       "installUrl": "https://notchia.app/install",
       "author": { "@id": "https://notchia.app/#axel" },
@@ -306,7 +304,7 @@
       "name": "NotchIA",
       "description": "L'encoche pense maintenant. Centre de contrôle interactif pour macOS.",
       "publisher": { "@id": "https://notchia.app/#organization" },
-      "inLanguage": ["fr-FR", "en-US", "es-ES", "de-DE"]
+      "inLanguage": ["fr-FR"]
     }
   ]
 }

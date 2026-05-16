@@ -1,6 +1,9 @@
 # Cloudflare Wrangler local cache
 .wrangler/
 
+# Claude Code project state (local only)
+.claude/
+
 # macOS
 .DS_Store
 ._*
