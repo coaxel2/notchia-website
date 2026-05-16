@@ -9,7 +9,7 @@
  *   GEMINI_API_KEY = clé gratuite générée sur https://aistudio.google.com/apikey
  */
 
-const MODEL = "gemini-2.5-flash";
+const MODEL = "gemini-2.0-flash"; // free tier : 15 RPM, 1500 RPD, 1M TPM
 const MAX_USER_MSG_LEN = 1000;
 const MAX_HISTORY = 12; // messages échangés gardés en contexte
 const MAX_OUTPUT_TOKENS = 500;
@@ -185,7 +185,7 @@ export async function onRequestPost(context) {
   if (!geminiRes.ok) {
     const status = geminiRes.status;
     if (status === 429) {
-      return json({ error: "Quota IA atteint pour aujourd'hui. Réessaie demain ou écris à notchia.app@gmail.com." }, 429);
+      return json({ error: "Trop de questions d'un coup, attends quelques secondes et réessaie." }, 429);
     }
     return json({ error: `Erreur IA (${status}). Réessaie plus tard.` }, 502);
   }
