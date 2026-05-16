@@ -639,6 +639,9 @@
   .swatch { width: 28px; height: 28px; border-radius: 999px; border: 2px solid rgba(237,232,220,0.12); transition: transform .2s ease, border-color .2s ease; cursor: pointer; }
   .swatch:hover { transform: scale(1.12); }
   .swatch.is-active { border-color: var(--cream); box-shadow: 0 0 0 2px rgba(237,232,220,0.15); }
+  .swatch-theme { display: inline-block; border: 2px solid rgba(237,232,220,0.15); cursor: pointer; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+  .swatch-theme:hover { transform: translateY(-2px) scale(1.06); }
+  .swatch-theme.is-active { border-color: var(--cream); box-shadow: 0 0 0 2px rgba(237,232,220,0.18); }
 
   /* Sneak peek carrousel dot */
   @keyframes sp-cycle { 0%, 18% { background: var(--magenta); } 20%, 38% { background: var(--orange); } 40%, 58% { background: var(--cyan); } 60%, 78% { background: var(--violet); } 80%, 100% { background: #9DD9B7; } }
@@ -989,14 +992,109 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §01 — IA EN DIRECT
+     §01 — PERSONNALISATION
+═══════════════════════════════════════════════════════════════════════ -->
+<section class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
+      <div class="lg:col-span-5 reveal">
+        <div class="eyebrow mb-5 sm:mb-6" data-i18n="perso.eyebrow">§01 — personnalisation</div>
+        <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
+          <span data-i18n="perso.title1">À votre</span>
+          <span class="display-italic grad-text" data-i18n="perso.title2">image.</span>
+        </h2>
+        <p class="mt-6 sm:mt-7 text-fog text-base sm:text-lg leading-relaxed max-w-md" data-i18n="perso.intro">
+          Couleur d'accent (système, presets, picker libre), icône d'app
+          remplaçable, forme de l'encoche ajustable, hauteur séparée
+          pour écrans avec et sans encoche.
+        </p>
+        <ul class="mt-7 space-y-2.5 text-fog text-sm">
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b1">Onglets visibles configurables</span></li>
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b2">Visualizers custom importables</span></li>
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b3">Visage animé au repos (clignements)</span></li>
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b4">Animations spring naturelles</span></li>
+          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b5">Retour haptique trackpad</span></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+        <div class="rounded-3xl border border-line bg-ink2 p-6 sm:p-8">
+          <!-- Theme presets -->
+          <div class="mb-7">
+            <div class="eyebrow mb-4">thème de couleurs</div>
+            <div class="flex flex-wrap gap-3">
+              <span class="swatch-theme is-active" data-theme="brand"  title="Brand"  style="width:38px;height:38px;border-radius:999px;background:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%);"></span>
+              <span class="swatch-theme"           data-theme="sunset" title="Sunset" style="width:38px;height:38px;border-radius:999px;background:linear-gradient(90deg,#FF9F40 0%,#FF6450 30%,#DC3C82 60%,#8232C8 100%);"></span>
+              <span class="swatch-theme"           data-theme="ocean"  title="Ocean"  style="width:38px;height:38px;border-radius:999px;background:linear-gradient(90deg,#40E0D0 0%,#00B4DC 30%,#3282F0 60%,#8264F0 100%);"></span>
+              <span class="swatch-theme"           data-theme="forest" title="Forest" style="width:38px;height:38px;border-radius:999px;background:linear-gradient(90deg,#82DC6E 0%,#32C882 30%,#1EAAAA 60%,#50C8DC 100%);"></span>
+              <span class="swatch-theme"           data-theme="noir"   title="Noir"   style="width:38px;height:38px;border-radius:999px;background:linear-gradient(90deg,#08090E 0%,#1A1B22 30%,#32343E 60%,#5A5C69 100%);"></span>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+
+          <!-- Notch shape -->
+          <div class="my-7">
+            <div class="flex items-center justify-between mb-4">
+              <div class="eyebrow">forme de l'encoche</div>
+              <span class="text-mist text-xs font-mono">rayon · ombre · hauteur</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-mist text-xs font-mono w-12">rayon</span>
+              <div class="hud-bar flex-1"><div class="hud-fill" style="width: 60%"></div></div>
+              <span class="text-cream text-xs font-mono">18</span>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+
+          <!-- Tab toggles -->
+          <div class="mt-7">
+            <div class="eyebrow mb-4">onglets visibles dans l'encoche</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
+                <span class="text-cream text-sm">Média</span>
+                <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
+              </label>
+              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
+                <span class="text-cream text-sm">Calendrier</span>
+                <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
+              </label>
+              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
+                <span class="text-cream text-sm">IA</span>
+                <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
+              </label>
+              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
+                <span class="text-fog text-sm">Shelf</span>
+                <span class="w-8 h-4 rounded-full bg-line relative"><span class="absolute left-0.5 top-0.5 w-3 h-3 rounded-full bg-fog"></span></span>
+              </label>
+              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
+                <span class="text-cream text-sm">Concentration</span>
+                <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
+              </label>
+              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
+                <span class="text-fog text-sm">Clipboard</span>
+                <span class="w-8 h-4 rounded-full bg-line relative"><span class="absolute left-0.5 top-0.5 w-3 h-3 rounded-full bg-fog"></span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §02 — IA EN DIRECT
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="ia" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
       <div class="lg:col-span-5 reveal">
-        <div class="eyebrow mb-5 sm:mb-6" data-i18n="ia.eyebrow">§01 — IA en direct</div>
+        <div class="eyebrow mb-5 sm:mb-6" data-i18n="ia.eyebrow">§02 — IA en direct</div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="ia.title1">l'IA travaille.</span>
           <br/>
@@ -1118,14 +1216,14 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §02 — MÉDIAS
+     §03 — MÉDIAS
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="medias" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14 reveal">
       <div>
-        <div class="eyebrow mb-4 sm:mb-5" data-i18n="medias.eyebrow">§02 — médias & musique</div>
+        <div class="eyebrow mb-4 sm:mb-5" data-i18n="medias.eyebrow">§03 — médias & musique</div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="medias.title1">Apple Music, Spotify, YouTube.</span>
           <br/>
@@ -1260,14 +1358,14 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §03 — CALENDRIER & RAPPELS
+     §04 — CALENDRIER & RAPPELS
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="agenda" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
       <div class="lg:col-span-5 reveal">
-        <div class="eyebrow mb-5 sm:mb-6" data-i18n="agenda.eyebrow">§03 — calendrier & rappels</div>
+        <div class="eyebrow mb-5 sm:mb-6" data-i18n="agenda.eyebrow">§04 — calendrier & rappels</div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="agenda.title1">Votre prochain rendez-vous.</span>
           <br/>
@@ -1336,7 +1434,7 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §04 — DIGEST (NEW 2.8.0)
+     §05 — DIGEST (NEW 2.8.0)
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="digest" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
@@ -1344,7 +1442,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
       <div class="lg:col-span-5 reveal">
         <div class="eyebrow mb-5 sm:mb-6 flex items-center gap-3 flex-wrap">
-          <span data-i18n="digest.eyebrow">§04 — digest IA on-device</span>
+          <span data-i18n="digest.eyebrow">§05 — digest IA on-device</span>
           <span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider" style="background:linear-gradient(90deg,#A855F7,#4DA8FF);color:#0B0D12">Nouveau · 2.8.0</span>
         </div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
@@ -1420,14 +1518,14 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §05 — PRODUCTIVITÉ
+     §06 — PRODUCTIVITÉ
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="productivite" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14 reveal">
       <div>
-        <div class="eyebrow mb-4 sm:mb-5" data-i18n="prod.eyebrow">§05 — productivité</div>
+        <div class="eyebrow mb-4 sm:mb-5" data-i18n="prod.eyebrow">§06 — productivité</div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="prod.title1">Une boîte à outils.</span>
           <br/>
@@ -1559,13 +1657,13 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §06 — SYSTÈME (HUD + Sneak Peek + Détections)
+     §07 — SYSTÈME (HUD + Sneak Peek + Détections)
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="systeme" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="text-center mb-12 sm:mb-16 reveal">
-      <div class="eyebrow mb-4 sm:mb-5" data-i18n="sys.eyebrow">§06 — système réinventé</div>
+      <div class="eyebrow mb-4 sm:mb-5" data-i18n="sys.eyebrow">§07 — système réinventé</div>
       <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
         <span data-i18n="sys.title1">macOS,</span>
         <span class="display-italic grad-text" data-i18n="sys.title2">réinventé.</span>
@@ -1695,113 +1793,13 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §06 — PERSONNALISATION
-═══════════════════════════════════════════════════════════════════════ -->
-<section class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
-      <div class="lg:col-span-5 reveal">
-        <div class="eyebrow mb-5 sm:mb-6" data-i18n="perso.eyebrow">§06 — personnalisation</div>
-        <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
-          <span data-i18n="perso.title1">À votre</span>
-          <span class="display-italic grad-text" data-i18n="perso.title2">image.</span>
-        </h2>
-        <p class="mt-6 sm:mt-7 text-fog text-base sm:text-lg leading-relaxed max-w-md" data-i18n="perso.intro">
-          Couleur d'accent (système, presets, picker libre), icône d'app
-          remplaçable, forme de l'encoche ajustable, hauteur séparée
-          pour écrans avec et sans encoche.
-        </p>
-        <ul class="mt-7 space-y-2.5 text-fog text-sm">
-          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b1">Onglets visibles configurables</span></li>
-          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b2">Visualizers custom importables</span></li>
-          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b3">Visage animé au repos (clignements)</span></li>
-          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b4">Animations spring naturelles</span></li>
-          <li class="flex gap-3"><span class="grad-text">→</span> <span data-i18n="perso.b5">Retour haptique trackpad</span></li>
-        </ul>
-      </div>
-
-      <div class="lg:col-span-7 reveal">
-        <div class="rounded-3xl border border-line bg-ink2 p-6 sm:p-8">
-          <!-- Color presets -->
-          <div class="mb-7">
-            <div class="eyebrow mb-4">couleur d'accent</div>
-            <div class="flex flex-wrap gap-2.5">
-              <span class="swatch" style="background: var(--brand);" title="Auto"></span>
-              <span class="swatch is-active" style="background: #4DA8FF" title="Bleu"></span>
-              <span class="swatch" style="background: #A855F7" title="Violet"></span>
-              <span class="swatch" style="background: #FF4D88" title="Rose"></span>
-              <span class="swatch" style="background: #EF4444" title="Rouge"></span>
-              <span class="swatch" style="background: #FF7A2D" title="Orange"></span>
-              <span class="swatch" style="background: #FFB454" title="Jaune"></span>
-              <span class="swatch" style="background: #9DD9B7" title="Vert"></span>
-              <span class="swatch" style="background: #6B7280" title="Graphite"></span>
-              <span class="swatch flex items-center justify-center text-mist" style="background: transparent; border: 2px dashed rgba(237,232,220,0.25)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m-8-8h16"/></svg></span>
-            </div>
-          </div>
-
-          <div class="rule"></div>
-
-          <!-- Notch shape -->
-          <div class="my-7">
-            <div class="flex items-center justify-between mb-4">
-              <div class="eyebrow">forme de l'encoche</div>
-              <span class="text-mist text-xs font-mono">rayon · ombre · hauteur</span>
-            </div>
-            <div class="flex items-center gap-4">
-              <span class="text-mist text-xs font-mono w-12">rayon</span>
-              <div class="hud-bar flex-1"><div class="hud-fill" style="width: 60%"></div></div>
-              <span class="text-cream text-xs font-mono">18</span>
-            </div>
-          </div>
-
-          <div class="rule"></div>
-
-          <!-- Tab toggles -->
-          <div class="mt-7">
-            <div class="eyebrow mb-4">onglets visibles dans l'encoche</div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-cream text-sm">Média</span>
-                <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
-              </label>
-              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-cream text-sm">Calendrier</span>
-                <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
-              </label>
-              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-cream text-sm">IA</span>
-                <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
-              </label>
-              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-fog text-sm">Shelf</span>
-                <span class="w-8 h-4 rounded-full bg-line relative"><span class="absolute left-0.5 top-0.5 w-3 h-3 rounded-full bg-fog"></span></span>
-              </label>
-              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-cream text-sm">Concentration</span>
-                <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
-              </label>
-              <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-fog text-sm">Clipboard</span>
-                <span class="w-8 h-4 rounded-full bg-line relative"><span class="absolute left-0.5 top-0.5 w-3 h-3 rounded-full bg-fog"></span></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════════════════════
-     §07 — COMPORTEMENTS & GESTES
+     §08 — COMPORTEMENTS & GESTES
 ═══════════════════════════════════════════════════════════════════════ -->
 <section class="relative py-20 sm:py-28 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="text-center mb-10 sm:mb-14 reveal">
-      <div class="eyebrow mb-4 sm:mb-5" data-i18n="behav.eyebrow">§07 — comportements & gestes</div>
+      <div class="eyebrow mb-4 sm:mb-5" data-i18n="behav.eyebrow">§08 — comportements & gestes</div>
       <h2 class="display text-cream" style="font-size: clamp(2rem, 6vw, 3.5rem);">
         <span data-i18n="behav.title1">L'encoche s'ouvre</span>
         <span class="display-italic grad-text" data-i18n="behav.title2">comme vous voulez.</span>
@@ -1831,11 +1829,11 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §08 — MANIFESTO
+     §09 — MANIFESTO
 ═══════════════════════════════════════════════════════════════════════ -->
 <section class="relative py-20 sm:py-32 border-t border-line">
   <div class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10 reveal">
-    <div class="eyebrow mb-6 sm:mb-8" data-i18n="manifesto.eyebrow">§08 — manifeste</div>
+    <div class="eyebrow mb-6 sm:mb-8" data-i18n="manifesto.eyebrow">§09 — manifeste</div>
     <p class="display text-cream leading-[1.1]" style="font-size: clamp(1.6rem, 4.5vw, 3rem);" data-i18n-html="manifesto.quote">
       <span class="text-mist">«</span> L'encoche n'est pas un défaut à cacher.
       C'est <span class="display-italic grad-text">la seule zone d'écran</span>
@@ -1853,13 +1851,13 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §09 — PRICING
+     §10 — PRICING
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="tarif" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="text-center mb-12 sm:mb-16 reveal">
-      <div class="eyebrow mb-4 sm:mb-5" data-i18n="price.section.eyebrow">§09 — tarif</div>
+      <div class="eyebrow mb-4 sm:mb-5" data-i18n="price.section.eyebrow">§10 — tarif</div>
       <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
         <span data-i18n="price.section.title1">Trois formules.</span>
         <span class="display-italic grad-text" data-i18n="price.section.title2">À votre rythme.</span>
@@ -2088,7 +2086,7 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §10 — DOWNLOAD CTA
+     §11 — DOWNLOAD CTA
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="telecharger" class="relative py-24 sm:py-32 lg:py-40 border-t border-line overflow-hidden">
 
@@ -2246,7 +2244,7 @@
       'meta.description': "NotchIA transforme l'encoche du MacBook en centre de contrôle interactif : Claude Code, médias, calendrier, Concentration, HUD système.",
 
       // Pricing — section + bullets
-      'price.section.eyebrow': '§09 — tarif',
+      'price.section.eyebrow': '§10 — tarif',
       'price.section.title1': 'Trois formules.',
       'price.section.title2': 'À votre rythme.',
       'price.section.intro': "Gratuit à vie pour démarrer, mensuel pour tester l'IA quelques mois, ou licence à vie pour ne plus jamais y penser.",
@@ -2308,21 +2306,21 @@
       'stats.states': 'états en direct',
       'stats.size': 'poids signé',
 
-      // §01 IA
-      'ia.eyebrow': '§01 — IA en direct',
+      // §02 IA
+      'ia.eyebrow': '§02 — IA en direct',
       'ia.title1': "l'IA travaille.",
       'ia.title2': 'vous le voyez.',
       'ia.intro1': 'NotchIA détecte automatiquement vos sessions <span class="text-cream">Claude Code</span>, <span class="text-cream">ChatGPT Codex</span> et <span class="text-cream">GitHub Copilot</span> par IDE. Activité, tâches en cours, permissions requises, quotas 5 h et 7 j — tout est lu en local, rien ne quitte votre machine.',
       'ia.intro2': "Un point coloré sous l'encoche fermée par session active. Au clic, l'IDE concerné passe au premier plan.",
 
-      // §02 Médias
-      'medias.eyebrow': '§02 — médias & musique',
+      // §03 Médias
+      'medias.eyebrow': '§03 — médias & musique',
       'medias.title1': 'Apple Music, Spotify, YouTube.',
       'medias.title2': 'La même barre.',
       'medias.intro': "Lecteur multi-source natif via Now Playing macOS — l'encoche fermée affiche la pochette, ouverte vous donne contrôles, paroles synchronisées et visualizer. Sneak peek discret au changement de morceau.",
 
-      // §03 Agenda
-      'agenda.eyebrow': '§03 — calendrier & rappels',
+      // §04 Agenda
+      'agenda.eyebrow': '§04 — calendrier & rappels',
       'agenda.title1': 'Votre prochain rendez-vous.',
       'agenda.title2': "Pas tout l'agenda.",
       'agenda.intro': "Vue jour défilante avec marqueur sous chaque date occupée. Vue mois en grille classique. Événements et rappels affichés côte à côte. Création directe depuis l'encoche.",
@@ -2331,8 +2329,8 @@
       'agenda.b3': 'Auto-scroll vers le prochain événement',
       'agenda.b4': 'Sélection des calendriers à afficher',
 
-      // §04 Digest (NEW 2.8.0)
-      'digest.eyebrow': '§04 — digest IA on-device',
+      // §05 Digest (NEW 2.8.0)
+      'digest.eyebrow': '§05 — digest IA on-device',
       'digest.title1': "Ton brief d'actu.",
       'digest.title2': 'Résumé sur ton Mac.',
       'digest.intro': "Tu colles tes flux RSS/Atom. Tu dis ce qui t'intéresse en langage naturel. Apple Intelligence fait le tri, résume, priorise — sans qu'aucun octet ne quitte ta machine.",
@@ -2341,20 +2339,20 @@
       'digest.b3': 'Résumé Apple Intelligence on-device',
       'digest.b4': 'Cache 14 jours · 100 % local · zéro envoi externe',
       'digest.note': 'Requiert macOS 26+ pour Apple Intelligence. Sans, dégradation gracieuse : viewer brut sans résumé IA.',
-      // §05 Productivité
-      'prod.eyebrow': '§05 — productivité',
+      // §06 Productivité
+      'prod.eyebrow': '§06 — productivité',
       'prod.title1': 'Une boîte à outils.',
       'prod.title2': 'Pas une fenêtre.',
       'prod.intro': "Concentration, presse-papiers historique, étagère de fichiers, convertisseur, Quick Share, QuickLook — tous chargés à la demande dans l'encoche.",
 
-      // §06 Système
-      'sys.eyebrow': '§06 — système réinventé',
+      // §07 Système
+      'sys.eyebrow': '§07 — système réinventé',
       'sys.title1': 'macOS,',
       'sys.title2': 'réinventé.',
       'sys.intro': "NotchIA remplace les HUD natifs, fait défiler des mini-widgets dans l'encoche fermée, et détecte automatiquement appels, focus mode et enregistrements.",
 
-      // §06 Personnalisation
-      'perso.eyebrow': '§06 — personnalisation',
+      // §01 Personnalisation
+      'perso.eyebrow': '§01 — personnalisation',
       'perso.title1': 'À votre',
       'perso.title2': 'image.',
       'perso.intro': "Couleur d'accent (système, presets, picker libre), icône d'app remplaçable, forme de l'encoche ajustable, hauteur séparée pour écrans avec et sans encoche.",
@@ -2364,8 +2362,8 @@
       'perso.b4': 'Animations spring naturelles',
       'perso.b5': 'Retour haptique trackpad',
 
-      // §07 Comportements
-      'behav.eyebrow': '§07 — comportements & gestes',
+      // §08 Comportements
+      'behav.eyebrow': '§08 — comportements & gestes',
       'behav.title1': "L'encoche s'ouvre",
       'behav.title2': 'comme vous voulez.',
       'behav.c1.title': 'Survol',
@@ -2377,12 +2375,12 @@
       'behav.c4.title': 'Mémoire',
       'behav.c4.desc': 'Mémorise le dernier onglet ouvert. Affichage sur écran verrouillé.',
 
-      // §08 Manifeste
-      'manifesto.eyebrow': '§08 — manifeste',
+      // §09 Manifeste
+      'manifesto.eyebrow': '§09 — manifeste',
       'manifesto.quote': '<span class="text-mist">«</span> L\'encoche n\'est pas un défaut à cacher. C\'est <span class="display-italic grad-text">la seule zone d\'écran</span> qui ne se ferme jamais. Autant lui confier ce qui compte. <span class="text-mist">»</span>',
       'manifesto.role': 'créateur · NotchIA',
 
-      // §10 CTA final
+      // §11 CTA final
       'cta.title1': 'Donnez du travail',
       'cta.title2': 'à votre encoche.',
       'cta.subtitle': "Téléchargement direct du .dmg : glissez dans Applications, clic droit → Ouvrir au premier lancement.",
@@ -2442,7 +2440,7 @@
       'meta.description': 'NotchIA turns your MacBook notch into an interactive control center: Claude Code, media, calendar, Concentration, system HUD.',
 
       // Pricing
-      'price.section.eyebrow': '§09 — pricing',
+      'price.section.eyebrow': '§10 — pricing',
       'price.section.title1': 'Three plans.',
       'price.section.title2': 'Your pace.',
       'price.section.intro': 'Free forever to start, monthly to try the AI for a few months, or lifetime so you never have to think about it again.',
@@ -2504,21 +2502,21 @@
       'stats.states': 'live states',
       'stats.size': 'signed size',
 
-      // §01 AI
-      'ia.eyebrow': '§01 — live AI',
+      // §02 AI
+      'ia.eyebrow': '§02 — live AI',
       'ia.title1': 'AI is working.',
       'ia.title2': 'you see it.',
       'ia.intro1': 'NotchIA automatically detects your <span class="text-cream">Claude Code</span>, <span class="text-cream">ChatGPT Codex</span> and <span class="text-cream">GitHub Copilot</span> sessions per IDE. Activity, current tasks, permission prompts, 5h and 7d quotas — everything is read locally, nothing leaves your machine.',
       'ia.intro2': 'A colored dot under the closed notch per active session. One click brings the right IDE to the front.',
 
-      // §02 Media
-      'medias.eyebrow': '§02 — media & music',
+      // §03 Media
+      'medias.eyebrow': '§03 — media & music',
       'medias.title1': 'Apple Music, Spotify, YouTube.',
       'medias.title2': 'One control bar.',
       'medias.intro': 'Native multi-source player via macOS Now Playing — closed notch shows the album art, opened gives you controls, synced lyrics and visualizer. Discreet sneak peek on track change.',
 
-      // §03 Calendar
-      'agenda.eyebrow': '§03 — calendar & reminders',
+      // §04 Calendar
+      'agenda.eyebrow': '§04 — calendar & reminders',
       'agenda.title1': 'Just the next thing.',
       'agenda.title2': 'Not the whole calendar.',
       'agenda.intro': 'Scrollable day view with a marker under every busy date. Classic month grid. Events and reminders side by side. Create directly from the notch.',
@@ -2527,8 +2525,8 @@
       'agenda.b3': 'Auto-scroll to the next event',
       'agenda.b4': 'Pick which calendars to show',
 
-      // §04 Digest (NEW 2.8.0)
-      'digest.eyebrow': '§04 — on-device AI digest',
+      // §05 Digest (NEW 2.8.0)
+      'digest.eyebrow': '§05 — on-device AI digest',
       'digest.title1': 'Your news brief.',
       'digest.title2': 'Summarized on your Mac.',
       'digest.intro': "You paste your RSS/Atom feeds. You say what matters in plain language. Apple Intelligence filters, summarizes, prioritizes — without a single byte leaving your machine.",
@@ -2537,20 +2535,20 @@
       'digest.b3': 'On-device Apple Intelligence summary',
       'digest.b4': '14-day cache · 100% local · zero external upload',
       'digest.note': 'Requires macOS 26+ for Apple Intelligence. Without it, graceful fallback: raw viewer without AI summary.',
-      // §05 Productivity
-      'prod.eyebrow': '§05 — productivity',
+      // §06 Productivity
+      'prod.eyebrow': '§06 — productivity',
       'prod.title1': 'A toolkit.',
       'prod.title2': 'Not a window.',
       'prod.intro': 'Concentration, clipboard history, file shelf, converter, Quick Share, QuickLook — all loaded on demand inside the notch.',
 
-      // §06 System
-      'sys.eyebrow': '§06 — system reinvented',
+      // §07 System
+      'sys.eyebrow': '§07 — system reinvented',
       'sys.title1': 'macOS,',
       'sys.title2': 'reimagined.',
       'sys.intro': 'NotchIA replaces native HUDs, rotates mini-widgets inside the closed notch, and automatically detects calls, focus mode and recordings.',
 
-      // §06 Customization
-      'perso.eyebrow': '§06 — customization',
+      // §01 Customization
+      'perso.eyebrow': '§01 — customization',
       'perso.title1': 'To your',
       'perso.title2': 'image.',
       'perso.intro': 'Accent color (system, presets, free picker), replaceable app icon, adjustable notch shape, separate height for screens with and without a physical notch.',
@@ -2560,8 +2558,8 @@
       'perso.b4': 'Natural spring animations',
       'perso.b5': 'Optional trackpad haptics',
 
-      // §07 Behaviors
-      'behav.eyebrow': '§07 — behaviors & gestures',
+      // §08 Behaviors
+      'behav.eyebrow': '§08 — behaviors & gestures',
       'behav.title1': 'The notch opens',
       'behav.title2': 'how you want.',
       'behav.c1.title': 'Hover',
@@ -2573,12 +2571,12 @@
       'behav.c4.title': 'Memory',
       'behav.c4.desc': 'Remembers the last opened tab. Shows on locked screen.',
 
-      // §08 Manifesto
-      'manifesto.eyebrow': '§08 — manifesto',
+      // §09 Manifesto
+      'manifesto.eyebrow': '§09 — manifesto',
       'manifesto.quote': '<span class="text-mist">"</span> The notch is not a flaw to hide. It\'s <span class="display-italic grad-text">the only screen area</span> that never closes. Might as well give it what matters. <span class="text-mist">"</span>',
       'manifesto.role': 'creator · NotchIA',
 
-      // §10 Final CTA
+      // §11 Final CTA
       'cta.title1': 'Put your notch',
       'cta.title2': 'to work.',
       'cta.subtitle': 'Direct .dmg download: drag into Applications, right-click → Open on first launch.',
@@ -2638,7 +2636,7 @@
       'meta.description': 'NotchIA convierte la muesca de tu MacBook en un centro de control interactivo: Claude Code, medios, calendario, Concentration, HUD del sistema.',
 
       // Pricing
-      'price.section.eyebrow': '§09 — precio',
+      'price.section.eyebrow': '§10 — precio',
       'price.section.title1': 'Tres planes.',
       'price.section.title2': 'A tu ritmo.',
       'price.section.intro': 'Gratis para siempre para empezar, mensual para probar la IA unos meses, o licencia de por vida para no pensar más en ello.',
@@ -2700,21 +2698,21 @@
       'stats.states': 'estados en directo',
       'stats.size': 'peso firmado',
 
-      // §01 IA
-      'ia.eyebrow': '§01 — IA en directo',
+      // §02 IA
+      'ia.eyebrow': '§02 — IA en directo',
       'ia.title1': 'la IA trabaja.',
       'ia.title2': 'tú lo ves.',
       'ia.intro1': 'NotchIA detecta automáticamente tus sesiones de <span class="text-cream">Claude Code</span>, <span class="text-cream">ChatGPT Codex</span> y <span class="text-cream">GitHub Copilot</span> por IDE. Actividad, tareas en curso, permisos requeridos, cuotas de 5 h y 7 d — todo se lee localmente, nada sale de tu máquina.',
       'ia.intro2': 'Un punto de color bajo la muesca cerrada por sesión activa. Al hacer clic, el IDE pasa al primer plano.',
 
-      // §02 Medios
-      'medias.eyebrow': '§02 — medios & música',
+      // §03 Medios
+      'medias.eyebrow': '§03 — medios & música',
       'medias.title1': 'Apple Music, Spotify, YouTube.',
       'medias.title2': 'La misma barra.',
       'medias.intro': 'Reproductor multifuente nativo vía Now Playing macOS — la muesca cerrada muestra la portada, abierta da controles, letras sincronizadas y visualizador. Sneak peek discreto al cambiar de canción.',
 
-      // §03 Calendario
-      'agenda.eyebrow': '§03 — calendario & recordatorios',
+      // §04 Calendario
+      'agenda.eyebrow': '§04 — calendario & recordatorios',
       'agenda.title1': 'Tu próxima cita.',
       'agenda.title2': 'No toda la agenda.',
       'agenda.intro': 'Vista de día desplazable con marcador bajo cada fecha ocupada. Vista de mes en cuadrícula clásica. Eventos y recordatorios uno al lado del otro. Creación directa desde la muesca.',
@@ -2723,8 +2721,8 @@
       'agenda.b3': 'Auto-scroll al próximo evento',
       'agenda.b4': 'Selección de calendarios a mostrar',
 
-      // §04 Digest (NEW 2.8.0)
-      'digest.eyebrow': '§04 — digest IA on-device',
+      // §05 Digest (NEW 2.8.0)
+      'digest.eyebrow': '§05 — digest IA on-device',
       'digest.title1': 'Tu briefing de actualidad.',
       'digest.title2': 'Resumido en tu Mac.',
       'digest.intro': "Pegas tus feeds RSS/Atom. Indicas lo que te interesa en lenguaje natural. Apple Intelligence filtra, resume, prioriza — sin que un solo byte salga de tu máquina.",
@@ -2733,20 +2731,20 @@
       'digest.b3': 'Resumen Apple Intelligence on-device',
       'digest.b4': 'Caché 14 días · 100% local · cero envío externo',
       'digest.note': 'Requiere macOS 26+ para Apple Intelligence. Sin él, degradación elegante: viewer sin resumen IA.',
-      // §05 Productividad
-      'prod.eyebrow': '§05 — productividad',
+      // §06 Productividad
+      'prod.eyebrow': '§06 — productividad',
       'prod.title1': 'Una caja de herramientas.',
       'prod.title2': 'No una ventana.',
       'prod.intro': 'Concentration, historial del portapapeles, estantería de archivos, conversor, Quick Share, QuickLook — todos cargados bajo demanda en la muesca.',
 
-      // §06 Sistema
-      'sys.eyebrow': '§06 — sistema reinventado',
+      // §07 Sistema
+      'sys.eyebrow': '§07 — sistema reinventado',
       'sys.title1': 'macOS,',
       'sys.title2': 'reimaginado.',
       'sys.intro': 'NotchIA reemplaza los HUD nativos, hace rotar mini-widgets en la muesca cerrada y detecta automáticamente llamadas, modo focus y grabaciones.',
 
-      // §06 Personalización
-      'perso.eyebrow': '§06 — personalización',
+      // §01 Personalización
+      'perso.eyebrow': '§01 — personalización',
       'perso.title1': 'A tu',
       'perso.title2': 'imagen.',
       'perso.intro': 'Color de acento (sistema, presets, selector libre), icono de app reemplazable, forma de la muesca ajustable, altura separada para pantallas con y sin muesca.',
@@ -2756,8 +2754,8 @@
       'perso.b4': 'Animaciones spring naturales',
       'perso.b5': 'Háptica del trackpad opcional',
 
-      // §07 Comportamientos
-      'behav.eyebrow': '§07 — comportamientos & gestos',
+      // §08 Comportamientos
+      'behav.eyebrow': '§08 — comportamientos & gestos',
       'behav.title1': 'La muesca se abre',
       'behav.title2': 'como tú quieras.',
       'behav.c1.title': 'Hover',
@@ -2769,12 +2767,12 @@
       'behav.c4.title': 'Memoria',
       'behav.c4.desc': 'Recuerda la última pestaña abierta. Visible en pantalla bloqueada.',
 
-      // §08 Manifiesto
-      'manifesto.eyebrow': '§08 — manifiesto',
+      // §09 Manifiesto
+      'manifesto.eyebrow': '§09 — manifiesto',
       'manifesto.quote': '<span class="text-mist">«</span> La muesca no es un defecto que ocultar. Es <span class="display-italic grad-text">la única zona de la pantalla</span> que nunca se cierra. Mejor confiarle lo que importa. <span class="text-mist">»</span>',
       'manifesto.role': 'creador · NotchIA',
 
-      // §10 CTA final
+      // §11 CTA final
       'cta.title1': 'Pon tu muesca',
       'cta.title2': 'a trabajar.',
       'cta.subtitle': 'Descarga directa del .dmg: arrastra a Aplicaciones, clic derecho → Abrir en el primer lanzamiento.',
@@ -2834,7 +2832,7 @@
       'meta.description': 'NotchIA verwandelt die Aussparung Ihres MacBooks in ein interaktives Kontrollzentrum: Claude Code, Medien, Kalender, Concentration, System-HUD.',
 
       // Pricing
-      'price.section.eyebrow': '§09 — preis',
+      'price.section.eyebrow': '§10 — preis',
       'price.section.title1': 'Drei Pläne.',
       'price.section.title2': 'In Ihrem Tempo.',
       'price.section.intro': 'Kostenlos für immer zum Einstieg, monatlich um die KI ein paar Monate zu testen, oder lebenslange Lizenz, damit Sie nie wieder daran denken müssen.',
@@ -2896,21 +2894,21 @@
       'stats.states': 'Live-Zustände',
       'stats.size': 'Signierte Größe',
 
-      // §01 KI
-      'ia.eyebrow': '§01 — Live-KI',
+      // §02 KI
+      'ia.eyebrow': '§02 — Live-KI',
       'ia.title1': 'Die KI arbeitet.',
       'ia.title2': 'Sie sehen es.',
       'ia.intro1': 'NotchIA erkennt automatisch Ihre Sitzungen von <span class="text-cream">Claude Code</span>, <span class="text-cream">ChatGPT Codex</span> und <span class="text-cream">GitHub Copilot</span> pro IDE. Aktivität, laufende Aufgaben, erforderliche Berechtigungen, Quoten 5 h und 7 T — alles wird lokal gelesen, nichts verlässt Ihren Mac.',
       'ia.intro2': 'Ein farbiger Punkt unter der geschlossenen Aussparung pro aktiver Sitzung. Per Klick rückt die zugehörige IDE in den Vordergrund.',
 
-      // §02 Medien
-      'medias.eyebrow': '§02 — Medien & Musik',
+      // §03 Medien
+      'medias.eyebrow': '§03 — Medien & Musik',
       'medias.title1': 'Apple Music, Spotify, YouTube.',
       'medias.title2': 'Eine Leiste.',
       'medias.intro': 'Nativer Multi-Source-Player über macOS Now Playing — die geschlossene Aussparung zeigt das Cover, geöffnet bietet sie Steuerung, synchronisierte Songtexte und Visualizer. Dezenter Sneak Peek beim Songwechsel.',
 
-      // §03 Kalender
-      'agenda.eyebrow': '§03 — Kalender & Erinnerungen',
+      // §04 Kalender
+      'agenda.eyebrow': '§04 — Kalender & Erinnerungen',
       'agenda.title1': 'Nur das Nächste.',
       'agenda.title2': 'Nicht der ganze Kalender.',
       'agenda.intro': 'Scrollbare Tagesansicht mit Marker unter jedem belegten Datum. Klassische Monats-Rasteransicht. Termine und Erinnerungen nebeneinander. Direktes Erstellen aus der Aussparung.',
@@ -2919,8 +2917,8 @@
       'agenda.b3': 'Auto-Scroll zum nächsten Termin',
       'agenda.b4': 'Auswahl der angezeigten Kalender',
 
-      // §04 Digest (NEW 2.8.0)
-      'digest.eyebrow': '§04 — On-Device-KI-Digest',
+      // §05 Digest (NEW 2.8.0)
+      'digest.eyebrow': '§05 — On-Device-KI-Digest',
       'digest.title1': 'Dein News-Briefing.',
       'digest.title2': 'Auf deinem Mac zusammengefasst.',
       'digest.intro': "Du fügst deine RSS/Atom-Feeds ein. Du sagst in natürlicher Sprache, was zählt. Apple Intelligence filtert, fasst zusammen, priorisiert — ohne dass ein einziges Byte deine Maschine verlässt.",
@@ -2929,20 +2927,20 @@
       'digest.b3': 'On-Device Apple Intelligence Zusammenfassung',
       'digest.b4': '14-Tage-Cache · 100% lokal · null externer Upload',
       'digest.note': 'Benötigt macOS 26+ für Apple Intelligence. Ansonsten elegante Degradation: Roh-Viewer ohne KI-Zusammenfassung.',
-      // §05 Produktivität
-      'prod.eyebrow': '§05 — Produktivität',
+      // §06 Produktivität
+      'prod.eyebrow': '§06 — Produktivität',
       'prod.title1': 'Ein Werkzeugkasten.',
       'prod.title2': 'Kein Fenster.',
       'prod.intro': 'Concentration, Zwischenablage-Verlauf, Datei-Shelf, Konverter, Quick Share, QuickLook — alle bei Bedarf in die Aussparung geladen.',
 
-      // §06 System
-      'sys.eyebrow': '§06 — System neu erfunden',
+      // §07 System
+      'sys.eyebrow': '§07 — System neu erfunden',
       'sys.title1': 'macOS,',
       'sys.title2': 'neu gedacht.',
       'sys.intro': 'NotchIA ersetzt native HUDs, lässt Mini-Widgets in der geschlossenen Aussparung rotieren und erkennt automatisch Anrufe, Fokusmodus und Aufnahmen.',
 
-      // §06 Anpassung
-      'perso.eyebrow': '§06 — Anpassung',
+      // §01 Anpassung
+      'perso.eyebrow': '§01 — Anpassung',
       'perso.title1': 'Ganz nach',
       'perso.title2': 'Ihrem Bild.',
       'perso.intro': 'Akzentfarbe (System, Presets, freier Picker), austauschbares App-Icon, anpassbare Aussparungsform, separate Höhe für Bildschirme mit und ohne physische Aussparung.',
@@ -2952,8 +2950,8 @@
       'perso.b4': 'Natürliche Spring-Animationen',
       'perso.b5': 'Optionales Trackpad-Haptik',
 
-      // §07 Verhalten
-      'behav.eyebrow': '§07 — Verhalten & Gesten',
+      // §08 Verhalten
+      'behav.eyebrow': '§08 — Verhalten & Gesten',
       'behav.title1': 'Die Aussparung öffnet sich,',
       'behav.title2': 'wie Sie wollen.',
       'behav.c1.title': 'Hover',
@@ -2965,12 +2963,12 @@
       'behav.c4.title': 'Erinnerung',
       'behav.c4.desc': 'Merkt sich den zuletzt geöffneten Tab. Anzeige auf gesperrtem Bildschirm.',
 
-      // §08 Manifest
-      'manifesto.eyebrow': '§08 — Manifest',
+      // §09 Manifest
+      'manifesto.eyebrow': '§09 — Manifest',
       'manifesto.quote': '<span class="text-mist">„</span> Die Aussparung ist kein Makel zum Verstecken. Sie ist <span class="display-italic grad-text">der einzige Bildschirmbereich</span>, der sich nie schließt. Geben Sie ihr also, was zählt. <span class="text-mist">"</span>',
       'manifesto.role': 'Schöpfer · NotchIA',
 
-      // §10 Final CTA
+      // §11 Final CTA
       'cta.title1': 'Geben Sie Ihrer Aussparung',
       'cta.title2': 'Arbeit.',
       'cta.subtitle': 'Direkter .dmg-Download: in Programme ziehen, Rechtsklick → Öffnen beim ersten Start.',
@@ -3857,6 +3855,37 @@
       }
     });
   });
+</script>
+
+<!-- ──────────────── Theme switcher (5 presets, persisted) ──────────────── -->
+<script>
+(() => {
+  const THEMES = {
+    brand:  { c1:'#A855F7', c2:'#FF4D88', c3:'#FF7A2D', c4:'#4DA8FF' },
+    sunset: { c1:'#FF9F40', c2:'#FF6450', c3:'#DC3C82', c4:'#8232C8' },
+    ocean:  { c1:'#40E0D0', c2:'#00B4DC', c3:'#3282F0', c4:'#8264F0' },
+    forest: { c1:'#82DC6E', c2:'#32C882', c3:'#1EAAAA', c4:'#50C8DC' },
+    noir:   { c1:'#08090E', c2:'#1A1B22', c3:'#32343E', c4:'#5A5C69' },
+  };
+  function applyTheme(id) {
+    const t = THEMES[id] || THEMES.brand;
+    const r = document.documentElement.style;
+    r.setProperty('--violet', t.c1);
+    r.setProperty('--magenta', t.c2);
+    r.setProperty('--orange', t.c3);
+    r.setProperty('--cyan', t.c4);
+    r.setProperty('--brand', `linear-gradient(90deg, ${t.c1} 0%, ${t.c2} 30%, ${t.c3} 60%, ${t.c4} 100%)`);
+    document.querySelectorAll('[data-theme]').forEach(el => el.classList.toggle('is-active', el.dataset.theme === id));
+    try { localStorage.setItem('notchia-theme', id); } catch (e) {}
+  }
+  let stored = 'brand';
+  try { stored = localStorage.getItem('notchia-theme') || 'brand'; } catch (e) {}
+  if (THEMES[stored]) applyTheme(stored);
+  document.querySelectorAll('[data-theme]').forEach(el => {
+    el.addEventListener('click', () => applyTheme(el.dataset.theme));
+    el.style.cursor = 'pointer';
+  });
+})();
 </script>
 
 <!-- ──────────────── Chatbot widget (Gemini Flash via /api/chat) ──────────────── -->
