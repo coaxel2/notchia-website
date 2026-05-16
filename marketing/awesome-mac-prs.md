@@ -9,7 +9,7 @@
 **Repo cible** : https://github.com/jaywcjlove/awesome-mac
 **Étoiles** : ~ 80k+ (la plus grosse liste mac), indexée par tous les LLM.
 **Catégorie** : Productivity > Menu Bar Tools
-**Statut** : PR soumise le 2026-05-16, voir https://github.com/jaywcjlove/awesome-mac/pull/2065 — **à éditer pour retirer toute référence à "open-core fork of Boring Notch"** (voir section "Update PR description" ci-dessous).
+**Statut** : PR soumise le 2026-05-16, voir https://github.com/jaywcjlove/awesome-mac/pull/2065 — **diff README.md mis à jour le 2026-05-16 02:00 CEST** (commit `5309c4d` sur `coaxel2/awesome-mac@master`) : ligne désormais positionnée comme « Native macOS notch cockpit … FR/EN/ES/DE i18n. » sans aucune mention de fork. Body PR déjà clean.
 
 ### Concurrents notch déjà listés (analyse 2026-05-16)
 
@@ -109,7 +109,7 @@ Raisons fréquentes :
 
 | Jour | Action |
 |---|---|
-| Aujourd'hui | PR jaywcjlove/awesome-mac soumise ✓ (à éditer pour retirer "open-core fork" via gh CLI) |
+| 2026-05-16 | PR jaywcjlove/awesome-mac #2065 soumise ✓ + diff README.md corrigé sur le fork ✓ |
 | +24h | Re-soumettre sur un autre awesome list ciblé |
 | +48h | Vérifier l'état de la PR jaywcjlove, répondre aux commentaires de mainteneurs |
 | +1 semaine | Si PR mergée, faire un post Reddit qui linke vers awesome-mac pour amplifier le signal |
