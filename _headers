@@ -1,5 +1,6 @@
 # Cloudflare Pages — security & performance headers
 # Doc: https://developers.cloudflare.com/pages/configuration/headers/
+# IMPORTANT : un seul bloc par path matcher — sinon le dernier override les précédents.
 
 /*
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
@@ -9,13 +10,9 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   X-DNS-Prefetch-Control: on
-
-# CSP en mode Report-Only pendant rodage (Tailwind CDN + Google Fonts inline).
-# Passer en `Content-Security-Policy` strict après 7 jours sans violation.
-/*
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
 
-# Assets statiques — cache long
+# Assets statiques — cache long immutable
 /logo.png
   Cache-Control: public, max-age=31536000, immutable
 /logo-512.png
@@ -33,7 +30,7 @@
 /Apple_logo_black.svg
   Cache-Control: public, max-age=31536000, immutable
 
-# llms.txt / llms-full.txt — révalidation modérée
+# llms.txt / llms-full.txt
 /llms.txt
   Cache-Control: public, max-age=3600, must-revalidate
   Content-Type: text/plain; charset=utf-8
@@ -41,7 +38,7 @@
   Cache-Control: public, max-age=3600, must-revalidate
   Content-Type: text/plain; charset=utf-8
 
-# Robots & sitemap — revalidate court
+# Robots & sitemap
 /robots.txt
   Cache-Control: public, max-age=3600, must-revalidate
 /sitemap.xml

@@ -1,23 +1,12 @@
-# Cloudflare Pages — redirects + rewrites
+# Cloudflare Pages — redirects
 # Doc: https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# Cloudflare Pages gère par défaut les "pretty URLs" :
+#  - Un fichier `install.html` est servi nativement au path `/install` (200)
+#  - `/install.html` redirige 308 vers `/install` (canonicalisation)
+# Donc on n'ajoute PAS de règles `/path → /path.html` (causent une boucle 308).
+#
+# On garde uniquement le catch-all 404 pour empêcher le soft-404 (avant ce fix
+# tout chemin inexistant retournait 200 avec la homepage).
 
-# Pretty URLs → .html (rewrite, statut 200)
-/install              /install.html              200
-/features             /features.html             200
-/pricing              /pricing.html              200
-/refund               /refund.html               200
-/privacy              /privacy.html              200
-/cgv                  /cgv.html                  200
-/mentions-legales     /mentions-legales.html     200
-/account              /account.html              200
-
-# Blog : slugs sans .html
-/blog                  /                          301
-/blog/                 /                          301
-/blog/:slug            /blog/:slug.html           200
-
-# Anciens chemins éventuels (à compléter au besoin)
-# /old-path          /new-path                  301
-
-# Catch-all : vrai 404 sur tout le reste
-/*                    /404.html                  404
+/*  /404.html  404
