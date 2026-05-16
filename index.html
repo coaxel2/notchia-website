@@ -3859,5 +3859,271 @@
   });
 </script>
 
+<!-- ──────────────── Chatbot widget (Gemini Flash via /api/chat) ──────────────── -->
+<style>
+  #nia-chat-btn{position:fixed;right:18px;bottom:18px;z-index:90;width:56px;height:56px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(135deg,#A855F7 0%,#FF4D88 35%,#FF7A2D 70%,#4DA8FF 100%);box-shadow:0 8px 24px rgba(168,85,247,.35),0 2px 6px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s ease, box-shadow .2s ease;color:#0B0D12;font-family:'Instrument Sans',system-ui,sans-serif;}
+  #nia-chat-btn:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 12px 32px rgba(168,85,247,.5),0 4px 8px rgba(0,0,0,.5);}
+  #nia-chat-btn svg{width:26px;height:26px;}
+  #nia-chat-btn .ping{position:absolute;top:-3px;right:-3px;width:12px;height:12px;border-radius:50%;background:#FF7A2D;border:2px solid #0B0D12;animation:nia-ping 2.2s ease-in-out infinite;}
+  @keyframes nia-ping{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.25);opacity:.6}}
+  #nia-chat-panel{position:fixed;right:18px;bottom:86px;z-index:100;width:min(380px,calc(100vw - 36px));height:min(560px,calc(100vh - 120px));background:#0F1218;border:1px solid rgba(168,85,247,.25);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.6),0 4px 12px rgba(168,85,247,.2);display:none;flex-direction:column;overflow:hidden;font-family:'Instrument Sans',system-ui,sans-serif;color:#EDE8DC;}
+  #nia-chat-panel.open{display:flex;animation:nia-pop .25s cubic-bezier(.2,.9,.3,1.2);}
+  @keyframes nia-pop{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
+  .nia-header{padding:14px 16px;border-bottom:1px solid rgba(237,232,220,.08);display:flex;align-items:center;gap:10px;background:linear-gradient(180deg,rgba(168,85,247,.12) 0%,transparent 100%);}
+  .nia-header-dot{width:8px;height:8px;border-radius:50%;background:#9DD9B7;box-shadow:0 0 8px #9DD9B7;}
+  .nia-header-title{font-weight:600;font-size:15px;flex:1;}
+  .nia-header-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(237,232,220,.45);text-transform:uppercase;letter-spacing:.05em;}
+  .nia-close{background:transparent;border:0;color:rgba(237,232,220,.6);cursor:pointer;padding:4px;border-radius:6px;line-height:0;}
+  .nia-close:hover{background:rgba(237,232,220,.08);color:#EDE8DC;}
+  .nia-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;}
+  .nia-msgs::-webkit-scrollbar{width:6px;}
+  .nia-msgs::-webkit-scrollbar-thumb{background:rgba(237,232,220,.15);border-radius:3px;}
+  .nia-msg{max-width:85%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;}
+  .nia-msg.user{align-self:flex-end;background:linear-gradient(135deg,#A855F7 0%,#FF4D88 100%);color:#0B0D12;border-bottom-right-radius:4px;}
+  .nia-msg.bot{align-self:flex-start;background:#171B24;border:1px solid rgba(237,232,220,.06);border-bottom-left-radius:4px;color:rgba(237,232,220,.92);}
+  .nia-msg.error{align-self:flex-start;background:rgba(255,77,136,.1);border:1px solid rgba(255,77,136,.35);color:#FFB3CC;}
+  .nia-typing{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;background:#171B24;border:1px solid rgba(237,232,220,.06);border-radius:14px;border-bottom-left-radius:4px;}
+  .nia-typing span{width:6px;height:6px;border-radius:50%;background:rgba(237,232,220,.5);animation:nia-bounce 1.2s ease-in-out infinite;}
+  .nia-typing span:nth-child(2){animation-delay:.15s}.nia-typing span:nth-child(3){animation-delay:.3s}
+  @keyframes nia-bounce{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
+  .nia-input-wrap{padding:10px 12px;border-top:1px solid rgba(237,232,220,.08);display:flex;gap:8px;align-items:flex-end;background:#0B0D12;}
+  .nia-input{flex:1;background:#171B24;border:1px solid rgba(237,232,220,.1);border-radius:12px;padding:9px 12px;color:#EDE8DC;font-family:inherit;font-size:14px;resize:none;outline:none;max-height:100px;line-height:1.4;}
+  .nia-input:focus{border-color:rgba(168,85,247,.6);}
+  .nia-send{background:linear-gradient(135deg,#A855F7,#FF4D88);border:0;border-radius:12px;width:38px;height:38px;cursor:pointer;color:#0B0D12;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .15s;}
+  .nia-send:disabled{opacity:.4;cursor:not-allowed;}
+  .nia-send svg{width:16px;height:16px;}
+  .nia-footer{padding:6px 12px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(237,232,220,.35);text-align:center;letter-spacing:.04em;text-transform:uppercase;background:#0B0D12;}
+  .nia-footer a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
+  @media (max-width:480px){
+    #nia-chat-panel{right:8px;bottom:74px;width:calc(100vw - 16px);height:calc(100vh - 100px);}
+    #nia-chat-btn{right:14px;bottom:14px;width:52px;height:52px;}
+  }
+</style>
+
+<button id="nia-chat-btn" aria-label="Ouvrir le chat" type="button">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+  </svg>
+  <span class="ping" aria-hidden="true"></span>
+</button>
+
+<div id="nia-chat-panel" role="dialog" aria-label="NotchIA assistant" aria-hidden="true">
+  <div class="nia-header">
+    <span class="nia-header-dot"></span>
+    <div style="flex:1;display:flex;flex-direction:column;gap:1px;">
+      <span class="nia-header-title" data-nia-i18n="title">Demande à NotchIA</span>
+      <span class="nia-header-sub" data-nia-i18n="sub">en ligne · réponse instantanée</span>
+    </div>
+    <button class="nia-close" type="button" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="nia-msgs" id="nia-msgs"></div>
+  <div class="nia-input-wrap">
+    <textarea id="nia-input" class="nia-input" rows="1" maxlength="1000" data-nia-ph="ph"></textarea>
+    <button id="nia-send" class="nia-send" type="button" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+  <div class="nia-footer">
+    <span data-nia-i18n="powered">Propulsé par Gemini Flash · </span><a href="/privacy" data-nia-i18n="privacy">Confidentialité</a>
+  </div>
+</div>
+
+<script>
+(() => {
+  const NIA_I18N = {
+    fr: {
+      title: "Demande à NotchIA",
+      sub: "en ligne · réponse instantanée",
+      ph: "Pose ta question sur NotchIA…",
+      hello: "Salut 👋 Je connais tout sur NotchIA : installation, fonctionnalités, tarifs, Digest IA, Claude Code… Dis-moi ce que tu veux savoir.",
+      powered: "Propulsé par Gemini Flash · ",
+      privacy: "Confidentialité",
+      networkError: "Connexion impossible. Réessaie dans un instant.",
+      genericError: "Quelque chose a coincé. Réessaie ou écris à notchia.app@gmail.com.",
+    },
+    en: {
+      title: "Ask NotchIA",
+      sub: "online · instant reply",
+      ph: "Ask anything about NotchIA…",
+      hello: "Hi 👋 I know everything about NotchIA: install, features, pricing, AI Digest, Claude Code… What do you want to know?",
+      powered: "Powered by Gemini Flash · ",
+      privacy: "Privacy",
+      networkError: "Connection failed. Try again in a moment.",
+      genericError: "Something went wrong. Try again or email notchia.app@gmail.com.",
+    },
+    es: {
+      title: "Pregunta a NotchIA",
+      sub: "en línea · respuesta instantánea",
+      ph: "Pregunta lo que quieras sobre NotchIA…",
+      hello: "Hola 👋 Sé todo sobre NotchIA: instalación, funciones, precios, Digest IA, Claude Code… ¿Qué quieres saber?",
+      powered: "Impulsado por Gemini Flash · ",
+      privacy: "Privacidad",
+      networkError: "Conexión imposible. Inténtalo de nuevo.",
+      genericError: "Algo salió mal. Inténtalo o escribe a notchia.app@gmail.com.",
+    },
+    de: {
+      title: "Frag NotchIA",
+      sub: "online · sofortige Antwort",
+      ph: "Frag alles über NotchIA…",
+      hello: "Hi 👋 Ich weiß alles über NotchIA: Installation, Funktionen, Preise, KI-Digest, Claude Code… Was willst du wissen?",
+      powered: "Bereitgestellt von Gemini Flash · ",
+      privacy: "Datenschutz",
+      networkError: "Verbindung fehlgeschlagen. Versuche es erneut.",
+      genericError: "Etwas ist schiefgelaufen. Versuche es erneut oder schreib an notchia.app@gmail.com.",
+    },
+  };
+
+  function currentLang() {
+    const l = (document.documentElement.lang || "fr").toLowerCase().split("-")[0];
+    return NIA_I18N[l] ? l : "fr";
+  }
+
+  function applyNiaLang() {
+    const dict = NIA_I18N[currentLang()];
+    document.querySelectorAll("[data-nia-i18n]").forEach((el) => {
+      const k = el.dataset.niaI18n;
+      if (dict[k] != null) el.textContent = dict[k];
+    });
+    document.querySelectorAll("[data-nia-ph]").forEach((el) => {
+      const k = el.dataset.niaPh;
+      if (dict[k] != null) el.placeholder = dict[k];
+    });
+  }
+
+  const btn = document.getElementById("nia-chat-btn");
+  const panel = document.getElementById("nia-chat-panel");
+  const closeBtn = panel.querySelector(".nia-close");
+  const msgsEl = document.getElementById("nia-msgs");
+  const inputEl = document.getElementById("nia-input");
+  const sendBtn = document.getElementById("nia-send");
+  const history = []; // {role, content}
+  let busy = false;
+  let greeted = false;
+
+  function scrollDown() {
+    requestAnimationFrame(() => { msgsEl.scrollTop = msgsEl.scrollHeight; });
+  }
+
+  function addMsg(role, text) {
+    const div = document.createElement("div");
+    div.className = "nia-msg " + role;
+    div.textContent = text;
+    msgsEl.appendChild(div);
+    scrollDown();
+    return div;
+  }
+
+  function addError(text) {
+    const div = document.createElement("div");
+    div.className = "nia-msg error";
+    div.textContent = text;
+    msgsEl.appendChild(div);
+    scrollDown();
+  }
+
+  function showTyping() {
+    const div = document.createElement("div");
+    div.className = "nia-typing";
+    div.id = "nia-typing";
+    div.innerHTML = "<span></span><span></span><span></span>";
+    msgsEl.appendChild(div);
+    scrollDown();
+  }
+
+  function hideTyping() {
+    document.getElementById("nia-typing")?.remove();
+  }
+
+  function setBusy(v) {
+    busy = v;
+    sendBtn.disabled = v;
+    inputEl.disabled = v;
+  }
+
+  function openPanel() {
+    applyNiaLang();
+    panel.classList.add("open");
+    panel.setAttribute("aria-hidden", "false");
+    if (!greeted) {
+      addMsg("bot", NIA_I18N[currentLang()].hello);
+      greeted = true;
+    }
+    setTimeout(() => inputEl.focus(), 100);
+  }
+
+  function closePanel() {
+    panel.classList.remove("open");
+    panel.setAttribute("aria-hidden", "true");
+  }
+
+  async function send() {
+    if (busy) return;
+    const text = inputEl.value.trim();
+    if (!text) return;
+
+    addMsg("user", text);
+    history.push({ role: "user", content: text });
+    inputEl.value = "";
+    inputEl.style.height = "auto";
+
+    setBusy(true);
+    showTyping();
+
+    const dict = NIA_I18N[currentLang()];
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: history, lang: currentLang() }),
+      });
+      const data = await res.json().catch(() => ({}));
+      hideTyping();
+
+      if (!res.ok || !data.reply) {
+        addError(data.error || dict.genericError);
+        history.pop(); // n'inclut pas un user-msg sans réponse dans l'historique futur
+      } else {
+        addMsg("bot", data.reply);
+        history.push({ role: "assistant", content: data.reply });
+      }
+    } catch (e) {
+      hideTyping();
+      addError(dict.networkError);
+      history.pop();
+    } finally {
+      setBusy(false);
+      inputEl.focus();
+    }
+  }
+
+  btn.addEventListener("click", () => {
+    if (panel.classList.contains("open")) closePanel();
+    else openPanel();
+  });
+  closeBtn.addEventListener("click", closePanel);
+  sendBtn.addEventListener("click", send);
+
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  });
+  inputEl.addEventListener("input", () => {
+    inputEl.style.height = "auto";
+    inputEl.style.height = Math.min(inputEl.scrollHeight, 100) + "px";
+  });
+
+  // Refresh i18n if main applyLang re-runs
+  document.addEventListener("languagechange", applyNiaLang);
+  const langSel = document.getElementById("lang-switch");
+  if (langSel) langSel.addEventListener("change", () => setTimeout(applyNiaLang, 50));
+
+  applyNiaLang();
+})();
+</script>
+
 </body>
 </html>
