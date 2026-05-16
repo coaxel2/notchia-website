@@ -343,10 +343,10 @@
           cream:    '#EDE8DC',
           fog:      'rgba(237, 232, 220, 0.62)',
           mist:     'rgba(237, 232, 220, 0.40)',
-          violet:   '#A855F7',
-          magenta:  '#FF4D88',
-          orange:   '#FF7A2D',
-          cyan:     '#4DA8FF',
+          violet:   'var(--violet)',
+          magenta:  'var(--magenta)',
+          orange:   'var(--orange)',
+          cyan:     'var(--cyan)',
           mint:     '#9DD9B7',
         },
         fontFamily: {
@@ -367,15 +367,19 @@
     --magenta: #FF4D88;
     --orange: #FF7A2D;
     --cyan: #4DA8FF;
+    --violet-rgb: 168 85 247;
+    --magenta-rgb: 255 77 136;
+    --orange-rgb: 255 122 45;
+    --cyan-rgb: 77 168 255;
     /* Gradient horizontal 90° → chaque lettre a sa propre couleur,
        pas de bande mi-ton qui traverse les glyphes. Couleurs warm
        collées (violet → magenta → orange) avant le saut au cyan
        pour éviter un mid-tone sombre. */
-    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+    --brand: linear-gradient(90deg, var(--violet) 0%, var(--magenta) 30%, var(--orange) 60%, var(--cyan) 100%);
   }
   html, body { background: var(--ink); color: var(--cream); }
   body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-  ::selection { background: rgba(255, 77, 136, 0.85); color: #fff; }
+  ::selection { background: rgb(var(--magenta-rgb) / 0.85); color: #fff; }
 
   .grain::before {
     content: '';
@@ -412,7 +416,7 @@
     padding: 0;
     line-height: inherit;
     white-space: nowrap;
-    background-image: linear-gradient(90deg, #FF4D88 0%, #FF7A2D 100%);
+    background-image: linear-gradient(90deg, var(--magenta) 0%, var(--orange) 100%);
     font-variation-settings: "opsz" 48, "SOFT" 0, "WONK" 0;
     font-feature-settings: "liga" 0, "calt" 0;
   }
@@ -428,10 +432,10 @@
   /* Mesh principal du hero — multi-halo gradient */
   .mesh {
     background:
-      radial-gradient(60% 40% at 50% -10%, rgba(255, 77, 136, 0.22) 0%, rgba(255, 77, 136, 0) 60%),
-      radial-gradient(50% 35% at 78% 18%, rgba(77, 168, 255, 0.16) 0%, rgba(77, 168, 255, 0) 60%),
-      radial-gradient(50% 35% at 20% 24%, rgba(168, 85, 247, 0.14) 0%, rgba(168, 85, 247, 0) 70%),
-      radial-gradient(40% 30% at 50% 80%, rgba(255, 122, 45, 0.10) 0%, rgba(255, 122, 45, 0) 70%),
+      radial-gradient(60% 40% at 50% -10%, rgb(var(--magenta-rgb) / 0.22) 0%, rgb(var(--magenta-rgb) / 0) 60%),
+      radial-gradient(50% 35% at 78% 18%, rgb(var(--cyan-rgb) / 0.16) 0%, rgb(var(--cyan-rgb) / 0) 60%),
+      radial-gradient(50% 35% at 20% 24%, rgb(var(--violet-rgb) / 0.14) 0%, rgb(var(--violet-rgb) / 0) 70%),
+      radial-gradient(40% 30% at 50% 80%, rgb(var(--orange-rgb) / 0.10) 0%, rgb(var(--orange-rgb) / 0) 70%),
       var(--ink);
   }
 
@@ -561,9 +565,9 @@
   .btn-grad {
     color: #fff;
     background: var(--brand);
-    box-shadow: 0 14px 38px -10px rgba(255, 77, 136, 0.5);
+    box-shadow: 0 14px 38px -10px rgb(var(--magenta-rgb) / 0.5);
   }
-  .btn-grad:hover { transform: translateY(-2px); box-shadow: 0 18px 46px -10px rgba(255, 77, 136, 0.6); }
+  .btn-grad:hover { transform: translateY(-2px); box-shadow: 0 18px 46px -10px rgb(var(--magenta-rgb) / 0.6); }
   .btn-ghost {
     border: 1px solid rgba(237, 232, 220, 0.2);
     color: var(--cream);
@@ -576,10 +580,10 @@
   .state-marker { width: 6px; height: 6px; border-radius: 999px; flex: none; }
 
   .fmt-btn { transition: background .2s ease, color .2s ease, transform .2s ease; }
-  .fmt-btn:hover { background: rgba(255, 122, 45, 0.12); color: var(--orange); transform: translateY(-1px); }
+  .fmt-btn:hover { background: rgb(var(--orange-rgb) / 0.12); color: var(--orange); transform: translateY(-1px); }
 
-  @keyframes rec-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,77,136,0.7); } 50% { box-shadow: 0 0 0 6px rgba(255,77,136,0); } }
-  .rec-dot { width: 10px; height: 10px; border-radius: 999px; background: #FF4D88; animation: rec-pulse 1.6s infinite; }
+  @keyframes rec-pulse { 0%,100% { box-shadow: 0 0 0 0 rgb(var(--magenta-rgb) / 0.7); } 50% { box-shadow: 0 0 0 6px rgb(var(--magenta-rgb) / 0); } }
+  .rec-dot { width: 10px; height: 10px; border-radius: 999px; background: var(--magenta); animation: rec-pulse 1.6s infinite; }
 
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
   .reveal.in { opacity: 1; transform: none; }
@@ -595,7 +599,7 @@
     position: absolute;
     left: 0; right: 0; bottom: 0.05em;
     height: 0.32em;
-    background: linear-gradient(120deg, rgba(255,77,136,0) 0%, rgba(255,77,136,0.32) 30%, rgba(255,122,45,0.32) 70%, rgba(77,168,255,0) 100%);
+    background: linear-gradient(120deg, rgb(var(--magenta-rgb) / 0) 0%, rgb(var(--magenta-rgb) / 0.32) 30%, rgb(var(--orange-rgb) / 0.32) 70%, rgb(var(--cyan-rgb) / 0) 100%);
     z-index: -1;
     pointer-events: none;
   }
@@ -622,7 +626,7 @@
     width: var(--size); height: var(--size);
     border-radius: 999px;
     background:
-      conic-gradient(#FF7A2D calc(var(--p) * 1%), rgba(237,232,220,0.08) 0);
+      conic-gradient(var(--orange) calc(var(--p) * 1%), rgba(237,232,220,0.08) 0);
     display: grid; place-items: center;
     position: relative;
   }
@@ -724,7 +728,7 @@
   }
   .copy-btn:hover { background: #232732; border-color: rgba(237,232,220,0.28); }
   .copy-btn:active { transform: translateY(calc(-50% + 1px)); }
-  .copy-btn.copied { color: #FF7A2D; border-color: rgba(255,122,45,0.45); }
+  .copy-btn.copied { color: var(--orange); border-color: rgb(var(--orange-rgb) / 0.45); }
 
   /* Cursor trail — fin trait de lumière qui suit la souris.
      Le filter:blur procure le glow doux ; pas besoin de shadowBlur Canvas
@@ -844,10 +848,10 @@
           <svg class="hero-word" viewBox="0 0 460 230" preserveAspectRatio="xMinYMid meet" aria-label="pense" role="img">
             <defs>
               <linearGradient id="heroBrand" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#A855F7"/>
-                <stop offset="35%" stop-color="#FF4D88"/>
-                <stop offset="65%" stop-color="#FF7A2D"/>
-                <stop offset="100%" stop-color="#4DA8FF"/>
+                <stop offset="0%" stop-color="var(--violet)"/>
+                <stop offset="35%" stop-color="var(--magenta)"/>
+                <stop offset="65%" stop-color="var(--orange)"/>
+                <stop offset="100%" stop-color="var(--cyan)"/>
               </linearGradient>
             </defs>
             <text x="10" y="170" font-family="Fraunces, serif" font-style="italic" font-weight="500" font-size="180" fill="url(#heroBrand)" letter-spacing="-4" style='font-variation-settings: "opsz" 144, "SOFT" 80, "WONK" 0;'>pense</text>
@@ -884,7 +888,7 @@
 
       <div class="pointer-events-none absolute inset-x-0 -top-12 sm:-top-20 flex justify-center">
         <div class="w-[80%] max-w-[640px] h-[120px] sm:h-[200px] rounded-full"
-             style="background: radial-gradient(closest-side, rgba(255,77,136,0.32), rgba(168,85,247,0.18) 50%, transparent 70%); filter: blur(20px);"></div>
+             style="background: radial-gradient(closest-side, rgb(var(--magenta-rgb) / 0.32), rgb(var(--violet-rgb) / 0.18) 50%, transparent 70%); filter: blur(20px);"></div>
       </div>
 
       <!-- Floating chips — masqués sur très petit écran -->
@@ -914,11 +918,11 @@
           <div class="notch is-large" role="img" aria-label="Encoche MacBook affichant l'état de Claude Code en direct">
             <div class="marquee text-cream" aria-hidden="true">
               <div id="marquee-track" class="marquee-track text-[12px] sm:text-[13px] font-mono">
-                <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#FF7A2D"></span><span style="color:#FF7A2D">Compilation</span><span style="color:rgba(237,232,220,0.55)">xcodebuild · 12 sec</span></span>
+                <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:var(--orange)"></span><span style="color:var(--orange)">Compilation</span><span style="color:rgba(237,232,220,0.55)">xcodebuild · 12 sec</span></span>
                 <span style="color:rgba(237,232,220,0.25)">·</span>
-                <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#FF4D88"></span><span style="color:#FF4D88">Terminal</span><span style="color:rgba(237,232,220,0.55)">npm install</span></span>
+                <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:var(--magenta)"></span><span style="color:var(--magenta)">Terminal</span><span style="color:rgba(237,232,220,0.55)">npm install</span></span>
                 <span style="color:rgba(237,232,220,0.25)">·</span>
-                <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#4DA8FF"></span><span style="color:#4DA8FF">Recherche</span><span style="color:rgba(237,232,220,0.55)">grep "auth"</span></span>
+                <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:var(--cyan)"></span><span style="color:var(--cyan)">Recherche</span><span style="color:rgba(237,232,220,0.55)">grep "auth"</span></span>
               </div>
             </div>
           </div>
@@ -1244,7 +1248,7 @@
         <div class="flex items-center gap-4 sm:gap-6">
           <!-- Album art -->
           <div id="player-art" class="relative w-20 h-20 sm:w-28 sm:h-28 rounded-xl sm:rounded-2xl flex-none overflow-hidden border border-line transition-transform duration-300">
-            <div id="player-art-bg" class="absolute inset-0 transition-all duration-500" style="background: linear-gradient(135deg, #FF4D88 0%, #FF7A2D 50%, #A855F7 100%);"></div>
+            <div id="player-art-bg" class="absolute inset-0 transition-all duration-500" style="background: linear-gradient(135deg, var(--magenta) 0%, var(--orange) 50%, var(--violet) 100%);"></div>
             <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.32), transparent 55%);"></div>
             <div class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-300" id="player-art-glow" style="box-shadow: inset 0 0 40px rgba(255,255,255,0.25);"></div>
           </div>
@@ -1343,7 +1347,7 @@
             <p class="text-fog mt-2 max-w-lg text-sm sm:text-base">Affichage 3 secondes du titre/artiste à chaque transition. Pas de notification. Pas de pop-up. Pas de bruit.</p>
           </div>
           <div id="sneak-peek" class="flex items-center gap-3 rounded-2xl border border-line bg-surface px-5 py-3.5 transition-all duration-300">
-            <div id="sneak-art" class="w-9 h-9 rounded-lg transition-all duration-300" style="background: linear-gradient(135deg, #4DA8FF, #A855F7);"></div>
+            <div id="sneak-art" class="w-9 h-9 rounded-lg transition-all duration-300" style="background: linear-gradient(135deg, var(--cyan), var(--violet));"></div>
             <div class="min-w-0">
               <div id="sneak-title" class="text-cream text-sm font-medium truncate">Solar</div>
               <div id="sneak-artist" class="text-mist text-xs truncate">DELTA WAVE</div>
@@ -1443,7 +1447,7 @@
       <div class="lg:col-span-5 reveal">
         <div class="eyebrow mb-5 sm:mb-6 flex items-center gap-3 flex-wrap">
           <span data-i18n="digest.eyebrow">§05 — digest IA on-device</span>
-          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider" style="background:linear-gradient(90deg,#A855F7,#4DA8FF);color:#0B0D12">Nouveau · 2.8.0</span>
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider" style="background:linear-gradient(90deg,var(--violet),var(--cyan));color:#0B0D12">Nouveau · 2.8.0</span>
         </div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="digest.title1">Ton brief d'actu.</span>
@@ -2091,7 +2095,7 @@
 <section id="telecharger" class="relative py-24 sm:py-32 lg:py-40 border-t border-line overflow-hidden">
 
   <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
-    <div class="w-[90%] max-w-[800px] h-[300px] sm:h-[400px] rounded-full" style="background: radial-gradient(closest-side, rgba(255,77,136,0.20), rgba(168,85,247,0.10) 50%, transparent 70%); filter: blur(40px);"></div>
+    <div class="w-[90%] max-w-[800px] h-[300px] sm:h-[400px] rounded-full" style="background: radial-gradient(closest-side, rgb(var(--magenta-rgb) / 0.20), rgb(var(--violet-rgb) / 0.10) 50%, transparent 70%); filter: blur(40px);"></div>
   </div>
 
   <div class="relative mx-auto max-w-4xl px-5 sm:px-8 lg:px-10 text-center reveal">
@@ -2099,11 +2103,11 @@
       <div class="notch is-large">
         <div class="marquee text-cream">
           <div class="marquee-track text-[12px] sm:text-[13px] font-mono">
-            <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#FF4D88;animation:pulse 1.6s infinite"></span><span style="color:#FF4D88">NotchIA</span><span style="color:rgba(237,232,220,0.55)">prêt à installer</span></span>
+            <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:var(--magenta);animation:pulse 1.6s infinite"></span><span style="color:var(--magenta)">NotchIA</span><span style="color:rgba(237,232,220,0.55)">prêt à installer</span></span>
             <span style="color:rgba(237,232,220,0.25)">·</span>
             <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#9DD9B7"></span><span style="color:#9DD9B7">macOS 15.0+</span></span>
             <span style="color:rgba(237,232,220,0.25)">·</span>
-            <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#4DA8FF"></span><span style="color:#4DA8FF">47 Mo</span></span>
+            <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:var(--cyan)"></span><span style="color:var(--cyan)">47 Mo</span></span>
           </div>
         </div>
       </div>
@@ -3047,15 +3051,15 @@
 
   /* ──────────────── states marquee ──────────────── */
   const states = [
-    { label: 'Compilation', sub: 'xcodebuild · 12 sec', color: '#FF7A2D' },
-    { label: 'Terminal',    sub: 'npm install',         color: '#FF4D88' },
-    { label: 'Recherche',   sub: 'grep "auth"',         color: '#4DA8FF' },
+    { label: 'Compilation', sub: 'xcodebuild · 12 sec', color: 'var(--orange)' },
+    { label: 'Terminal',    sub: 'npm install',         color: 'var(--magenta)' },
+    { label: 'Recherche',   sub: 'grep "auth"',         color: 'var(--cyan)' },
     { label: 'Lecture',     sub: 'BoringViewModel.swift', color: '#cdb6e8' },
     { label: 'Modification', sub: 'ContentView.swift:1248', color: '#9DD9B7' },
-    { label: 'Web',         sub: 'webfetch · docs',     color: '#FF4D88' },
+    { label: 'Web',         sub: 'webfetch · docs',     color: 'var(--magenta)' },
     { label: 'Écriture',    sub: 'NotchIA.swift',       color: '#ffd29a' },
     { label: 'Sous-agent',  sub: 'task · code-reviewer', color: '#EDE8DC' },
-    { label: 'Planification', sub: 'todowrite · 5 étapes', color: '#A855F7' },
+    { label: 'Planification', sub: 'todowrite · 5 étapes', color: 'var(--violet)' },
     { label: 'Exécution',   sub: 'swift run',           color: '#EDE8DC' },
   ];
 
@@ -3094,8 +3098,8 @@
     {
       title: 'Sundown', artist: 'KORDIA — Long Way Home',
       source: { name: 'Apple Music', icon: 'apple', rate: '256 kbps' },
-      gradient: 'linear-gradient(135deg, #FF4D88 0%, #FF7A2D 50%, #A855F7 100%)',
-      sneakGrad: 'linear-gradient(135deg, #FF4D88, #FF7A2D)',
+      gradient: 'linear-gradient(135deg, var(--magenta) 0%, var(--orange) 50%, var(--violet) 100%)',
+      sneakGrad: 'linear-gradient(135deg, var(--magenta), var(--orange))',
       duration: 248, baseFreq: 220, // A3, mode mineur méditatif
       chord: [0, 3, 7, 10, 14], // Am9
       filterCutoff: 850, lfoRate: 0.25, dryGain: 0.10,
@@ -3113,8 +3117,8 @@
     {
       title: 'Solar', artist: 'Delta Wave — Sun Cycle',
       source: { name: 'Spotify', icon: 'spotify', rate: '320 kbps' },
-      gradient: 'linear-gradient(135deg, #4DA8FF 0%, #9DD9B7 50%, #FFB454 100%)',
-      sneakGrad: 'linear-gradient(135deg, #4DA8FF, #9DD9B7)',
+      gradient: 'linear-gradient(135deg, var(--cyan) 0%, #9DD9B7 50%, #FFB454 100%)',
+      sneakGrad: 'linear-gradient(135deg, var(--cyan), #9DD9B7)',
       duration: 218, baseFreq: 261.63, // C4, mode majeur lumineux
       chord: [0, 4, 7, 11, 14], // Cmaj9
       filterCutoff: 1400, lfoRate: 0.45, dryGain: 0.09,
@@ -3131,8 +3135,8 @@
     {
       title: 'Riverside', artist: 'VAPOR — Field Tones',
       source: { name: 'YouTube Music', icon: 'youtube', rate: '256 kbps' },
-      gradient: 'linear-gradient(135deg, #A855F7 0%, #4DA8FF 60%, #1B1F2A 100%)',
-      sneakGrad: 'linear-gradient(135deg, #A855F7, #4DA8FF)',
+      gradient: 'linear-gradient(135deg, var(--violet) 0%, var(--cyan) 60%, #1B1F2A 100%)',
+      sneakGrad: 'linear-gradient(135deg, var(--violet), var(--cyan))',
       duration: 268, baseFreq: 174.61, // F3, mode mineur contemplatif
       chord: [0, 3, 7, 10], // Fm7
       filterCutoff: 650, lfoRate: 0.18, dryGain: 0.11,
@@ -3355,7 +3359,7 @@
       const el = document.getElementById('sneak-peek');
       if (!el) return;
       el.style.transform = 'scale(1.04)';
-      el.style.borderColor = 'rgba(255, 77, 136, 0.5)';
+      el.style.borderColor = 'rgb(var(--magenta-rgb) / 0.5)';
       setTimeout(() => {
         el.style.transform = '';
         el.style.borderColor = '';
@@ -3369,7 +3373,7 @@
     }
 
     renderLoop() {
-      const COLORS = ['#FF4D88','#FF7A2D','#A855F7','#4DA8FF','#9DD9B7','#FFB454'];
+      const COLORS = ['var(--magenta)','var(--orange)','var(--violet)','var(--cyan)','#9DD9B7','#FFB454'];
       const tick = () => {
         const track = this.tracks();
         const now = performance.now();
@@ -3545,10 +3549,10 @@
       // Gradient brand le long du trail (premier → dernier point)
       const first = trail[0], newest = trail[N - 1];
       const grad = ctx.createLinearGradient(first.x, first.y, newest.x, newest.y);
-      grad.addColorStop(0,    '#A855F7');
-      grad.addColorStop(0.35, '#FF4D88');
-      grad.addColorStop(0.70, '#FF7A2D');
-      grad.addColorStop(1,    '#4DA8FF');
+      grad.addColorStop(0,    'var(--violet)');
+      grad.addColorStop(0.35, 'var(--magenta)');
+      grad.addColorStop(0.70, 'var(--orange)');
+      grad.addColorStop(1,    'var(--cyan)');
       ctx.strokeStyle = grad;
 
       // Dessine N-1 segments avec alpha + width par segment.
@@ -3875,6 +3879,20 @@
     r.setProperty('--orange', t.c3);
     r.setProperty('--cyan', t.c4);
     r.setProperty('--brand', `linear-gradient(90deg, ${t.c1} 0%, ${t.c2} 30%, ${t.c3} 60%, ${t.c4} 100%)`);
+    // Propagate RGB triplets for rgba() auras / shadows
+    function toRgb(hex) {
+      const m = hex.replace('#','').match(/^([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/);
+      return m ? `${parseInt(m[1],16)} ${parseInt(m[2],16)} ${parseInt(m[3],16)}` : '0 0 0';
+    }
+    r.setProperty('--violet-rgb',  toRgb(t.c1));
+    r.setProperty('--magenta-rgb', toRgb(t.c2));
+    r.setProperty('--orange-rgb',  toRgb(t.c3));
+    r.setProperty('--cyan-rgb',    toRgb(t.c4));
+    // Update hero SVG gradient stops (CSS vars don't always apply to inline SVG stop-color)
+    document.querySelectorAll('#heroBrand stop').forEach((stop, i) => {
+      const colors = [t.c1, t.c2, t.c3, t.c4];
+      if (colors[i]) stop.setAttribute('stop-color', colors[i]);
+    });
     document.querySelectorAll('[data-theme]').forEach(el => el.classList.toggle('is-active', el.dataset.theme === id));
     try { localStorage.setItem('notchia-theme', id); } catch (e) {}
   }
@@ -3890,15 +3908,15 @@
 
 <!-- ──────────────── Chatbot widget (Gemini Flash via /api/chat) ──────────────── -->
 <style>
-  #nia-chat-btn{position:fixed;right:18px;bottom:18px;z-index:90;width:56px;height:56px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(135deg,#A855F7 0%,#FF4D88 35%,#FF7A2D 70%,#4DA8FF 100%);box-shadow:0 8px 24px rgba(168,85,247,.35),0 2px 6px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s ease, box-shadow .2s ease;color:#0B0D12;font-family:'Instrument Sans',system-ui,sans-serif;}
-  #nia-chat-btn:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 12px 32px rgba(168,85,247,.5),0 4px 8px rgba(0,0,0,.5);}
+  #nia-chat-btn{position:fixed;right:18px;bottom:18px;z-index:90;width:56px;height:56px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(135deg,var(--violet) 0%,var(--magenta) 35%,var(--orange) 70%,var(--cyan) 100%);box-shadow:0 8px 24px rgb(var(--violet-rgb) / .35),0 2px 6px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;transition:transform .2s ease, box-shadow .2s ease;color:#0B0D12;font-family:'Instrument Sans',system-ui,sans-serif;}
+  #nia-chat-btn:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 12px 32px rgb(var(--violet-rgb) / .5),0 4px 8px rgba(0,0,0,.5);}
   #nia-chat-btn svg{width:26px;height:26px;}
-  #nia-chat-btn .ping{position:absolute;top:-3px;right:-3px;width:12px;height:12px;border-radius:50%;background:#FF7A2D;border:2px solid #0B0D12;animation:nia-ping 2.2s ease-in-out infinite;}
+  #nia-chat-btn .ping{position:absolute;top:-3px;right:-3px;width:12px;height:12px;border-radius:50%;background:var(--orange);border:2px solid #0B0D12;animation:nia-ping 2.2s ease-in-out infinite;}
   @keyframes nia-ping{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.25);opacity:.6}}
-  #nia-chat-panel{position:fixed;right:18px;bottom:86px;z-index:100;width:min(380px,calc(100vw - 36px));height:min(560px,calc(100vh - 120px));background:#0F1218;border:1px solid rgba(168,85,247,.25);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.6),0 4px 12px rgba(168,85,247,.2);display:none;flex-direction:column;overflow:hidden;font-family:'Instrument Sans',system-ui,sans-serif;color:#EDE8DC;}
+  #nia-chat-panel{position:fixed;right:18px;bottom:86px;z-index:100;width:min(380px,calc(100vw - 36px));height:min(560px,calc(100vh - 120px));background:#0F1218;border:1px solid rgb(var(--violet-rgb) / .25);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.6),0 4px 12px rgb(var(--violet-rgb) / .2);display:none;flex-direction:column;overflow:hidden;font-family:'Instrument Sans',system-ui,sans-serif;color:#EDE8DC;}
   #nia-chat-panel.open{display:flex;animation:nia-pop .25s cubic-bezier(.2,.9,.3,1.2);}
   @keyframes nia-pop{from{opacity:0;transform:translateY(8px) scale(.97)}to{opacity:1;transform:none}}
-  .nia-header{padding:14px 16px;border-bottom:1px solid rgba(237,232,220,.08);display:flex;align-items:center;gap:10px;background:linear-gradient(180deg,rgba(168,85,247,.12) 0%,transparent 100%);}
+  .nia-header{padding:14px 16px;border-bottom:1px solid rgba(237,232,220,.08);display:flex;align-items:center;gap:10px;background:linear-gradient(180deg,rgb(var(--violet-rgb) / .12) 0%,transparent 100%);}
   .nia-header-dot{width:8px;height:8px;border-radius:50%;background:#9DD9B7;box-shadow:0 0 8px #9DD9B7;}
   .nia-header-title{font-weight:600;font-size:15px;flex:1;}
   .nia-header-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(237,232,220,.45);text-transform:uppercase;letter-spacing:.05em;}
@@ -3908,17 +3926,17 @@
   .nia-msgs::-webkit-scrollbar{width:6px;}
   .nia-msgs::-webkit-scrollbar-thumb{background:rgba(237,232,220,.15);border-radius:3px;}
   .nia-msg{max-width:85%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;}
-  .nia-msg.user{align-self:flex-end;background:linear-gradient(135deg,#A855F7 0%,#FF4D88 100%);color:#0B0D12;border-bottom-right-radius:4px;}
+  .nia-msg.user{align-self:flex-end;background:linear-gradient(135deg,var(--violet) 0%,var(--magenta) 100%);color:#0B0D12;border-bottom-right-radius:4px;}
   .nia-msg.bot{align-self:flex-start;background:#171B24;border:1px solid rgba(237,232,220,.06);border-bottom-left-radius:4px;color:rgba(237,232,220,.92);}
-  .nia-msg.error{align-self:flex-start;background:rgba(255,77,136,.1);border:1px solid rgba(255,77,136,.35);color:#FFB3CC;}
+  .nia-msg.error{align-self:flex-start;background:rgb(var(--magenta-rgb) / .1);border:1px solid rgb(var(--magenta-rgb) / .35);color:#FFB3CC;}
   .nia-typing{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;background:#171B24;border:1px solid rgba(237,232,220,.06);border-radius:14px;border-bottom-left-radius:4px;}
   .nia-typing span{width:6px;height:6px;border-radius:50%;background:rgba(237,232,220,.5);animation:nia-bounce 1.2s ease-in-out infinite;}
   .nia-typing span:nth-child(2){animation-delay:.15s}.nia-typing span:nth-child(3){animation-delay:.3s}
   @keyframes nia-bounce{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
   .nia-input-wrap{padding:10px 12px;border-top:1px solid rgba(237,232,220,.08);display:flex;gap:8px;align-items:flex-end;background:#0B0D12;}
   .nia-input{flex:1;background:#171B24;border:1px solid rgba(237,232,220,.1);border-radius:12px;padding:9px 12px;color:#EDE8DC;font-family:inherit;font-size:14px;resize:none;outline:none;max-height:100px;line-height:1.4;}
-  .nia-input:focus{border-color:rgba(168,85,247,.6);}
-  .nia-send{background:linear-gradient(135deg,#A855F7,#FF4D88);border:0;border-radius:12px;width:38px;height:38px;cursor:pointer;color:#0B0D12;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .15s;}
+  .nia-input:focus{border-color:rgb(var(--violet-rgb) / .6);}
+  .nia-send{background:linear-gradient(135deg,var(--violet),var(--magenta));border:0;border-radius:12px;width:38px;height:38px;cursor:pointer;color:#0B0D12;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .15s;}
   .nia-send:disabled{opacity:.4;cursor:not-allowed;}
   .nia-send svg{width:16px;height:16px;}
   .nia-footer{padding:6px 12px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(237,232,220,.35);text-align:center;letter-spacing:.04em;text-transform:uppercase;background:#0B0D12;}
