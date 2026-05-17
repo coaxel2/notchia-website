@@ -12,8 +12,10 @@
 <link rel="canonical" href="https://notchia.app/mentions-legales" />
 <meta name="robots" content="index,follow" />
 <link rel="alternate" hreflang="fr" href="https://notchia.app/mentions-legales" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/mentions-legales" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/mentions-legales" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/mentions-legales" />
 <link rel="alternate" hreflang="x-default" href="https://notchia.app/mentions-legales" />
-<!-- TODO i18n: traductions EN/ES/DE à fournir par un relecteur juridique avant publication des versions traduites. -->
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
@@ -52,6 +54,8 @@
   .todo { background: rgba(255,77,136,0.10); border: 1px dashed rgba(255,77,136,0.45); color: #FF9DB6; padding: 0.15rem 0.5rem; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
   .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
   .warn { background: rgba(255,77,136,0.08); border: 1px solid rgba(255,77,136,0.35); }
+  .lang-sw { appearance: none; background: transparent; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -68,84 +72,265 @@
     <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
     <span class="font-display text-xl">NotchIA</span>
   </a>
-  <nav class="flex items-center gap-6 text-sm text-cream/70">
-    <a href="/" class="hover:text-cream">Accueil</a>
-    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
+    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+    <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
   </nav>
 </header>
 
 <main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
 
   <section class="mb-2">
-    <h1 class="font-display text-4xl md:text-5xl mb-3">Mentions <span class="grad-text">légales</span></h1>
-    <p class="text-cream/60 text-sm font-mono">Dernière mise à jour : 15 mai 2026</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-3" data-i18n-html="h1">Mentions <span class="grad-text">légales</span></h1>
+    <p class="text-cream/60 text-sm font-mono" data-i18n="updated">Dernière mise à jour : 15 mai 2026</p>
   </section>
 
   <div class="callout warn">
-    <p class="!mb-0"><strong>⚠ Page incomplète avant immatriculation.</strong> Plusieurs informations obligatoires (SIRET, adresse, statut juridique définitif) sont marquées <span class="todo">[À COMPLÉTER]</span>. Tant qu'elles ne sont pas remplies, la mise à disposition publique d'un service payant via ce site n'est pas conforme à l'article 6 III de la <strong>Loi pour la confiance dans l'économie numérique</strong> (LCEN, n° 2004-575) ni à l'article L111-1 du Code de la consommation.</p>
+    <p class="!mb-0" data-i18n-html="warn"><strong>⚠ Page incomplète avant immatriculation.</strong> Plusieurs informations obligatoires (SIRET, adresse, statut juridique définitif) sont marquées <span class="todo">[À COMPLÉTER]</span>. Tant qu'elles ne sont pas remplies, la mise à disposition publique d'un service payant via ce site n'est pas conforme à l'article 6 III de la <strong>Loi pour la confiance dans l'économie numérique</strong> (LCEN, n° 2004-575) ni à l'article L111-1 du Code de la consommation.</p>
   </div>
 
-  <h2>Éditeur du site</h2>
+  <h2 data-i18n="ed.h2">Éditeur du site</h2>
   <ul>
-    <li><strong>Nom commercial</strong> : NotchIA</li>
-    <li><strong>Éditeur</strong> : Axel Courty</li>
-    <li><strong>Statut juridique</strong> : Auto-entrepreneur (régime micro-BNC/BIC) — <span class="todo">[immatriculation en cours]</span></li>
-    <li><strong>Adresse</strong> : <span class="todo">[À COMPLÉTER]</span></li>
-    <li><strong>SIRET</strong> : <span class="todo">[À COMPLÉTER]</span></li>
-    <li><strong>Code APE / NAF</strong> : <span class="todo">[À COMPLÉTER — typiquement 62.01Z « Programmation informatique »]</span></li>
-    <li><strong>TVA intracommunautaire</strong> : non applicable, art. 293 B du CGI (franchise en base de TVA) <span class="todo">[À CONFIRMER]</span></li>
-    <li><strong>Email contact</strong> : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a></li>
+    <li data-i18n-html="ed.li1"><strong>Nom commercial</strong> : NotchIA</li>
+    <li data-i18n-html="ed.li2"><strong>Éditeur</strong> : Axel Courty</li>
+    <li data-i18n-html="ed.li3"><strong>Statut juridique</strong> : Auto-entrepreneur (régime micro-BNC/BIC) — <span class="todo">[immatriculation en cours]</span></li>
+    <li data-i18n-html="ed.li4"><strong>Adresse</strong> : <span class="todo">[À COMPLÉTER]</span></li>
+    <li data-i18n-html="ed.li5"><strong>SIRET</strong> : <span class="todo">[À COMPLÉTER]</span></li>
+    <li data-i18n-html="ed.li6"><strong>Code APE / NAF</strong> : <span class="todo">[À COMPLÉTER — typiquement 62.01Z « Programmation informatique »]</span></li>
+    <li data-i18n-html="ed.li7"><strong>TVA intracommunautaire</strong> : non applicable, art. 293 B du CGI (franchise en base de TVA) <span class="todo">[À CONFIRMER]</span></li>
+    <li data-i18n-html="ed.li8"><strong>Email contact</strong> : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a></li>
   </ul>
 
-  <h2>Directeur de la publication</h2>
-  <p>Axel Courty, en sa qualité d'éditeur du site.</p>
+  <h2 data-i18n="dir.h2">Directeur de la publication</h2>
+  <p data-i18n="dir.p">Axel Courty, en sa qualité d'éditeur du site.</p>
 
-  <h2>Hébergement du site</h2>
-  <p>Le site <a href="https://notchia.app">notchia.app</a> est hébergé par :</p>
+  <h2 data-i18n="host.h2">Hébergement du site</h2>
+  <p data-i18n-html="host.p">Le site <a href="https://notchia.app">notchia.app</a> est hébergé par :</p>
   <ul>
-    <li><strong>Cloudflare, Inc.</strong></li>
-    <li>101 Townsend Street, San Francisco, CA 94107, États-Unis</li>
-    <li>Site : <a href="https://www.cloudflare.com" target="_blank" rel="noopener">cloudflare.com</a></li>
+    <li data-i18n-html="host.li1"><strong>Cloudflare, Inc.</strong></li>
+    <li data-i18n="host.li2">101 Townsend Street, San Francisco, CA 94107, États-Unis</li>
+    <li data-i18n-html="host.li3">Site : <a href="https://www.cloudflare.com" target="_blank" rel="noopener">cloudflare.com</a></li>
   </ul>
 
-  <h2>Hébergement de l'API et des téléchargements</h2>
+  <h2 data-i18n="api.h2">Hébergement de l'API et des téléchargements</h2>
   <ul>
-    <li><strong>API de licences</strong> (<code class="font-mono text-xs">notchia-license.axel-courty.workers.dev</code>) : Cloudflare Workers + Workers KV — Cloudflare, Inc., adresse ci-dessus.</li>
-    <li><strong>Fichiers d'installation</strong> (DMG signés et mises à jour Sparkle) : <strong>GitHub, Inc.</strong> (filiale de Microsoft Corporation), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.</li>
+    <li data-i18n-html="api.li1"><strong>API de licences</strong> (<code class="font-mono text-xs">notchia-license.axel-courty.workers.dev</code>) : Cloudflare Workers + Workers KV — Cloudflare, Inc., adresse ci-dessus.</li>
+    <li data-i18n-html="api.li2"><strong>Fichiers d'installation</strong> (DMG signés et mises à jour Sparkle) : <strong>GitHub, Inc.</strong> (filiale de Microsoft Corporation), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.</li>
   </ul>
 
-  <h2>Propriété intellectuelle</h2>
-  <p>L'ensemble des éléments de ce site et de l'application NotchIA — nom, logo, gabarit graphique, textes, illustrations, captures, code source propriétaire — sont la propriété exclusive d'Axel Courty, sauf mention contraire. Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable, est interdite et constitue une contrefaçon sanctionnée par les articles L335-2 et suivants du Code de la propriété intellectuelle.</p>
+  <h2 data-i18n="ip.h2">Propriété intellectuelle</h2>
+  <p data-i18n="ip.p">L'ensemble des éléments de ce site et de l'application NotchIA — nom, logo, gabarit graphique, textes, illustrations, captures, code source propriétaire — sont la propriété exclusive d'Axel Courty, sauf mention contraire. Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable, est interdite et constitue une contrefaçon sanctionnée par les articles L335-2 et suivants du Code de la propriété intellectuelle.</p>
 
-  <h3>Marques et noms tiers</h3>
-  <p>Apple, macOS, MacBook et Apple Intelligence sont des marques d'Apple Inc. Claude et Claude Code sont des marques d'Anthropic PBC. Codex et GitHub Copilot sont des marques de OpenAI / GitHub Inc. Spotify est une marque de Spotify AB. Ces marques sont utilisées à des fins descriptives uniquement, sans affiliation officielle.</p>
+  <h3 data-i18n="trademarks.h3">Marques et noms tiers</h3>
+  <p data-i18n="trademarks.p">Apple, macOS, MacBook et Apple Intelligence sont des marques d'Apple Inc. Claude et Claude Code sont des marques d'Anthropic PBC. Codex et GitHub Copilot sont des marques de OpenAI / GitHub Inc. Spotify est une marque de Spotify AB. Ces marques sont utilisées à des fins descriptives uniquement, sans affiliation officielle.</p>
 
-  <h2>Crédits</h2>
-  <p>Design, développement, copywriting : Axel Courty.</p>
+  <h2 data-i18n="credits.h2">Crédits</h2>
+  <p data-i18n="credits.p">Design, développement, copywriting : Axel Courty.</p>
 
-  <h2>Signalement de contenu illicite</h2>
-  <p>Conformément à l'article 6-I-5 de la LCEN, toute personne peut notifier un contenu manifestement illicite présent sur ce site en écrivant à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> avec : la date de la notification, son identité, la description du contenu litigieux et sa localisation (URL), les motifs légaux pour lesquels ce contenu doit être retiré, copie de la correspondance préalable adressée à l'auteur le cas échéant.</p>
+  <h2 data-i18n="report.h2">Signalement de contenu illicite</h2>
+  <p data-i18n-html="report.p">Conformément à l'article 6-I-5 de la LCEN, toute personne peut notifier un contenu manifestement illicite présent sur ce site en écrivant à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> avec : la date de la notification, son identité, la description du contenu litigieux et sa localisation (URL), les motifs légaux pour lesquels ce contenu doit être retiré, copie de la correspondance préalable adressée à l'auteur le cas échéant.</p>
 
-  <h2>Liens utiles</h2>
+  <h2 data-i18n="links.h2">Liens utiles</h2>
   <ul>
-    <li><a href="/cgv">Conditions générales de vente</a></li>
-    <li><a href="/privacy">Politique de confidentialité</a></li>
-    <li><a href="/refund">Politique de remboursement</a></li>
+    <li><a href="/cgv" data-i18n="links.cgv">Conditions générales de vente</a></li>
+    <li><a href="/privacy" data-i18n="links.privacy">Politique de confidentialité</a></li>
+    <li><a href="/refund" data-i18n="links.refund">Politique de remboursement</a></li>
   </ul>
 
 </main>
 
 <footer class="border-t border-cream/10 mt-12">
   <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
-    <div>© 2026 NotchIA · Axel Courty</div>
+    <div data-i18n="footer.copy">© 2026 NotchIA · Axel Courty</div>
     <nav class="flex flex-wrap gap-x-5 gap-y-2">
-      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
-      <a href="/cgv" class="hover:text-cream">CGV</a>
-      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
-      <a href="/refund" class="hover:text-cream">Remboursement</a>
+      <a href="/mentions-legales" class="hover:text-cream" data-i18n="footer.legal">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream" data-i18n="footer.terms">CGV</a>
+      <a href="/privacy" class="hover:text-cream" data-i18n="footer.privacy">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream" data-i18n="footer.refund">Remboursement</a>
     </nav>
   </div>
 </footer>
+
+<script>
+  const I18N = {
+    fr: {
+      'nav.home':'Accueil','nav.pricing':'Tarifs',
+      'h1':'Mentions <span class="grad-text">légales</span>',
+      'updated':'Dernière mise à jour : 15 mai 2026',
+      'warn':"<strong>⚠ Page incomplète avant immatriculation.</strong> Plusieurs informations obligatoires (SIRET, adresse, statut juridique définitif) sont marquées <span class=\"todo\">[À COMPLÉTER]</span>. Tant qu'elles ne sont pas remplies, la mise à disposition publique d'un service payant via ce site n'est pas conforme à l'article 6 III de la <strong>Loi pour la confiance dans l'économie numérique</strong> (LCEN, n° 2004-575) ni à l'article L111-1 du Code de la consommation.",
+      'ed.h2':'Éditeur du site',
+      'ed.li1':'<strong>Nom commercial</strong> : NotchIA',
+      'ed.li2':'<strong>Éditeur</strong> : Axel Courty',
+      'ed.li3':'<strong>Statut juridique</strong> : Auto-entrepreneur (régime micro-BNC/BIC) — <span class="todo">[immatriculation en cours]</span>',
+      'ed.li4':'<strong>Adresse</strong> : <span class="todo">[À COMPLÉTER]</span>',
+      'ed.li5':'<strong>SIRET</strong> : <span class="todo">[À COMPLÉTER]</span>',
+      'ed.li6':'<strong>Code APE / NAF</strong> : <span class="todo">[À COMPLÉTER — typiquement 62.01Z « Programmation informatique »]</span>',
+      'ed.li7':'<strong>TVA intracommunautaire</strong> : non applicable, art. 293 B du CGI (franchise en base de TVA) <span class="todo">[À CONFIRMER]</span>',
+      'ed.li8':'<strong>Email contact</strong> : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>',
+      'dir.h2':'Directeur de la publication',
+      'dir.p':"Axel Courty, en sa qualité d'éditeur du site.",
+      'host.h2':'Hébergement du site',
+      'host.p':'Le site <a href="https://notchia.app">notchia.app</a> est hébergé par :',
+      'host.li1':'<strong>Cloudflare, Inc.</strong>',
+      'host.li2':'101 Townsend Street, San Francisco, CA 94107, États-Unis',
+      'host.li3':'Site : <a href="https://www.cloudflare.com" target="_blank" rel="noopener">cloudflare.com</a>',
+      'api.h2':"Hébergement de l'API et des téléchargements",
+      'api.li1':'<strong>API de licences</strong> (<code class="font-mono text-xs">notchia-license.axel-courty.workers.dev</code>) : Cloudflare Workers + Workers KV — Cloudflare, Inc., adresse ci-dessus.',
+      'api.li2':"<strong>Fichiers d'installation</strong> (DMG signés et mises à jour Sparkle) : <strong>GitHub, Inc.</strong> (filiale de Microsoft Corporation), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. <a href=\"https://github.com\" target=\"_blank\" rel=\"noopener\">github.com</a>.",
+      'ip.h2':'Propriété intellectuelle',
+      'ip.p':"L'ensemble des éléments de ce site et de l'application NotchIA — nom, logo, gabarit graphique, textes, illustrations, captures, code source propriétaire — sont la propriété exclusive d'Axel Courty, sauf mention contraire. Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable, est interdite et constitue une contrefaçon sanctionnée par les articles L335-2 et suivants du Code de la propriété intellectuelle.",
+      'trademarks.h3':'Marques et noms tiers',
+      'trademarks.p':"Apple, macOS, MacBook et Apple Intelligence sont des marques d'Apple Inc. Claude et Claude Code sont des marques d'Anthropic PBC. Codex et GitHub Copilot sont des marques de OpenAI / GitHub Inc. Spotify est une marque de Spotify AB. Ces marques sont utilisées à des fins descriptives uniquement, sans affiliation officielle.",
+      'credits.h2':'Crédits',
+      'credits.p':'Design, développement, copywriting : Axel Courty.',
+      'report.h2':'Signalement de contenu illicite',
+      'report.p':"Conformément à l'article 6-I-5 de la LCEN, toute personne peut notifier un contenu manifestement illicite présent sur ce site en écrivant à <a href=\"mailto:notchia.app@gmail.com\">notchia.app@gmail.com</a> avec : la date de la notification, son identité, la description du contenu litigieux et sa localisation (URL), les motifs légaux pour lesquels ce contenu doit être retiré, copie de la correspondance préalable adressée à l'auteur le cas échéant.",
+      'links.h2':'Liens utiles',
+      'links.cgv':'Conditions générales de vente',
+      'links.privacy':'Politique de confidentialité',
+      'links.refund':'Politique de remboursement',
+      'footer.copy':'© 2026 NotchIA · Axel Courty',
+      'footer.legal':'Mentions légales','footer.terms':'CGV','footer.privacy':'Confidentialité','footer.refund':'Remboursement',
+    },
+    en: {
+      'nav.home':'Home','nav.pricing':'Pricing',
+      'h1':'Legal <span class="grad-text">notice</span>',
+      'updated':'Last updated: May 15, 2026',
+      'warn':"<strong>⚠ Page incomplete before registration.</strong> Several mandatory pieces of information (SIRET, address, final legal status) are marked <span class=\"todo\">[À COMPLÉTER]</span>. Until they are filled in, publicly offering a paid service via this site does not comply with article 6 III of the <strong>Loi pour la confiance dans l'économie numérique</strong> (LCEN, no. 2004-575) nor with article L111-1 of the Code de la consommation.",
+      'ed.h2':'Site publisher',
+      'ed.li1':'<strong>Trade name</strong>: NotchIA',
+      'ed.li2':'<strong>Publisher</strong>: Axel Courty',
+      'ed.li3':'<strong>Legal status</strong>: French "auto-entrepreneur" (micro-BNC/BIC regime) — <span class="todo">[immatriculation en cours]</span>',
+      'ed.li4':'<strong>Address</strong>: <span class="todo">[À COMPLÉTER]</span>',
+      'ed.li5':'<strong>SIRET</strong>: <span class="todo">[À COMPLÉTER]</span>',
+      'ed.li6':'<strong>APE / NAF code</strong>: <span class="todo">[À COMPLÉTER — typiquement 62.01Z « Programmation informatique »]</span>',
+      'ed.li7':'<strong>Intra-EU VAT</strong>: not applicable, art. 293 B CGI (French VAT exemption regime) <span class="todo">[À CONFIRMER]</span>',
+      'ed.li8':'<strong>Contact email</strong>: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>',
+      'dir.h2':'Publication director',
+      'dir.p':'Axel Courty, in his capacity as site publisher.',
+      'host.h2':'Site hosting',
+      'host.p':'The site <a href="https://notchia.app">notchia.app</a> is hosted by:',
+      'host.li1':'<strong>Cloudflare, Inc.</strong>',
+      'host.li2':'101 Townsend Street, San Francisco, CA 94107, United States',
+      'host.li3':'Site: <a href="https://www.cloudflare.com" target="_blank" rel="noopener">cloudflare.com</a>',
+      'api.h2':'API and download hosting',
+      'api.li1':'<strong>License API</strong> (<code class="font-mono text-xs">notchia-license.axel-courty.workers.dev</code>): Cloudflare Workers + Workers KV — Cloudflare, Inc., address above.',
+      'api.li2':'<strong>Installation files</strong> (signed DMGs and Sparkle updates): <strong>GitHub, Inc.</strong> (subsidiary of Microsoft Corporation), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States. <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.',
+      'ip.h2':'Intellectual property',
+      'ip.p':'All elements of this site and of the NotchIA application — name, logo, graphic template, texts, illustrations, screenshots, proprietary source code — are the exclusive property of Axel Courty, unless otherwise stated. Any reproduction, representation, modification or exploitation, in whole or in part, without prior written authorization, is prohibited and constitutes an infringement punishable by articles L335-2 and following of the Code de la propriété intellectuelle.',
+      'trademarks.h3':'Third-party trademarks and names',
+      'trademarks.p':'Apple, macOS, MacBook and Apple Intelligence are trademarks of Apple Inc. Claude and Claude Code are trademarks of Anthropic PBC. Codex and GitHub Copilot are trademarks of OpenAI / GitHub Inc. Spotify is a trademark of Spotify AB. These trademarks are used for descriptive purposes only, without official affiliation.',
+      'credits.h2':'Credits',
+      'credits.p':'Design, development, copywriting: Axel Courty.',
+      'report.h2':'Reporting unlawful content',
+      'report.p':'In accordance with article 6-I-5 of the LCEN, any person may notify manifestly unlawful content present on this site by writing to <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> with: the date of the notification, their identity, a description of the disputed content and its location (URL), the legal grounds for which this content must be removed, and a copy of any prior correspondence sent to the author where applicable.',
+      'links.h2':'Useful links',
+      'links.cgv':'Terms and conditions of sale',
+      'links.privacy':'Privacy policy',
+      'links.refund':'Refund policy',
+      'footer.copy':'© 2026 NotchIA · Axel Courty',
+      'footer.legal':'Legal notice','footer.terms':'Terms of sale','footer.privacy':'Privacy','footer.refund':'Refund',
+    },
+    es: {
+      'nav.home':'Inicio','nav.pricing':'Precio',
+      'h1':'Aviso <span class="grad-text">legal</span>',
+      'updated':'Última actualización: 15 de mayo de 2026',
+      'warn':"<strong>⚠ Página incompleta antes del registro.</strong> Varias informaciones obligatorias (SIRET, dirección, estatuto jurídico definitivo) están marcadas como <span class=\"todo\">[À COMPLÉTER]</span>. Mientras no se completen, la oferta pública de un servicio de pago a través de este sitio no es conforme al artículo 6 III de la <strong>Loi pour la confiance dans l'économie numérique</strong> (LCEN, n.º 2004-575) ni al artículo L111-1 del Code de la consommation.",
+      'ed.h2':'Editor del sitio',
+      'ed.li1':'<strong>Nombre comercial</strong>: NotchIA',
+      'ed.li2':'<strong>Editor</strong>: Axel Courty',
+      'ed.li3':'<strong>Estatuto jurídico</strong>: «auto-entrepreneur» francés (régimen micro-BNC/BIC) — <span class="todo">[immatriculation en cours]</span>',
+      'ed.li4':'<strong>Dirección</strong>: <span class="todo">[À COMPLÉTER]</span>',
+      'ed.li5':'<strong>SIRET</strong>: <span class="todo">[À COMPLÉTER]</span>',
+      'ed.li6':'<strong>Código APE / NAF</strong>: <span class="todo">[À COMPLÉTER — typiquement 62.01Z « Programmation informatique »]</span>',
+      'ed.li7':'<strong>IVA intracomunitario</strong>: no aplicable, art. 293 B del CGI (régimen francés de franquicia de IVA) <span class="todo">[À CONFIRMER]</span>',
+      'ed.li8':'<strong>Email de contacto</strong>: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>',
+      'dir.h2':'Director de la publicación',
+      'dir.p':'Axel Courty, en su calidad de editor del sitio.',
+      'host.h2':'Alojamiento del sitio',
+      'host.p':'El sitio <a href="https://notchia.app">notchia.app</a> está alojado por:',
+      'host.li1':'<strong>Cloudflare, Inc.</strong>',
+      'host.li2':'101 Townsend Street, San Francisco, CA 94107, Estados Unidos',
+      'host.li3':'Sitio: <a href="https://www.cloudflare.com" target="_blank" rel="noopener">cloudflare.com</a>',
+      'api.h2':'Alojamiento de la API y de las descargas',
+      'api.li1':'<strong>API de licencias</strong> (<code class="font-mono text-xs">notchia-license.axel-courty.workers.dev</code>): Cloudflare Workers + Workers KV — Cloudflare, Inc., dirección arriba.',
+      'api.li2':'<strong>Archivos de instalación</strong> (DMG firmados y actualizaciones Sparkle): <strong>GitHub, Inc.</strong> (filial de Microsoft Corporation), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Estados Unidos. <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.',
+      'ip.h2':'Propiedad intelectual',
+      'ip.p':"Todos los elementos de este sitio y de la aplicación NotchIA — nombre, logotipo, plantilla gráfica, textos, ilustraciones, capturas, código fuente propietario — son propiedad exclusiva de Axel Courty, salvo mención contraria. Cualquier reproducción, representación, modificación o explotación, total o parcial, sin autorización escrita previa, está prohibida y constituye una falsificación sancionada por los artículos L335-2 y siguientes del Code de la propriété intellectuelle.",
+      'trademarks.h3':'Marcas y nombres de terceros',
+      'trademarks.p':'Apple, macOS, MacBook y Apple Intelligence son marcas de Apple Inc. Claude y Claude Code son marcas de Anthropic PBC. Codex y GitHub Copilot son marcas de OpenAI / GitHub Inc. Spotify es una marca de Spotify AB. Estas marcas se utilizan con fines descriptivos únicamente, sin afiliación oficial.',
+      'credits.h2':'Créditos',
+      'credits.p':'Diseño, desarrollo, copywriting: Axel Courty.',
+      'report.h2':'Denuncia de contenidos ilícitos',
+      'report.p':'De conformidad con el artículo 6-I-5 de la LCEN, cualquier persona puede notificar un contenido manifiestamente ilícito presente en este sitio escribiendo a <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> con: la fecha de la notificación, su identidad, la descripción del contenido litigioso y su localización (URL), los motivos legales por los que debe retirarse, y copia de la correspondencia previa enviada al autor en su caso.',
+      'links.h2':'Enlaces útiles',
+      'links.cgv':'Condiciones generales de venta',
+      'links.privacy':'Política de privacidad',
+      'links.refund':'Política de reembolso',
+      'footer.copy':'© 2026 NotchIA · Axel Courty',
+      'footer.legal':'Aviso legal','footer.terms':'CGV','footer.privacy':'Privacidad','footer.refund':'Reembolso',
+    },
+    de: {
+      'nav.home':'Startseite','nav.pricing':'Preis',
+      'h1':'<span class="grad-text">Impressum</span>',
+      'updated':'Zuletzt aktualisiert: 15. Mai 2026',
+      'warn':"<strong>⚠ Seite vor Eintragung unvollständig.</strong> Mehrere obligatorische Angaben (SIRET, Adresse, endgültiger Rechtsstatus) sind als <span class=\"todo\">[À COMPLÉTER]</span> markiert. Solange sie nicht ausgefüllt sind, ist das öffentliche Anbieten eines kostenpflichtigen Dienstes über diese Seite nicht konform mit Artikel 6 III der <strong>Loi pour la confiance dans l'économie numérique</strong> (LCEN, Nr. 2004-575) noch mit Artikel L111-1 des Code de la consommation.",
+      'ed.h2':'Anbieter der Seite',
+      'ed.li1':'<strong>Handelsname</strong>: NotchIA',
+      'ed.li2':'<strong>Anbieter</strong>: Axel Courty',
+      'ed.li3':'<strong>Rechtsstatus</strong>: französischer „auto-entrepreneur" (Regime micro-BNC/BIC) — <span class="todo">[immatriculation en cours]</span>',
+      'ed.li4':'<strong>Adresse</strong>: <span class="todo">[À COMPLÉTER]</span>',
+      'ed.li5':'<strong>SIRET</strong>: <span class="todo">[À COMPLÉTER]</span>',
+      'ed.li6':'<strong>APE-/NAF-Code</strong>: <span class="todo">[À COMPLÉTER — typiquement 62.01Z « Programmation informatique »]</span>',
+      'ed.li7':'<strong>Innergemeinschaftliche USt-IdNr.</strong>: nicht anwendbar, art. 293 B CGI (französische Umsatzsteuerbefreiung) <span class="todo">[À CONFIRMER]</span>',
+      'ed.li8':'<strong>Kontakt-E-Mail</strong>: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>',
+      'dir.h2':'Verantwortlich für den Inhalt',
+      'dir.p':'Axel Courty, in seiner Eigenschaft als Anbieter der Seite.',
+      'host.h2':'Hosting der Seite',
+      'host.p':'Die Seite <a href="https://notchia.app">notchia.app</a> wird gehostet von:',
+      'host.li1':'<strong>Cloudflare, Inc.</strong>',
+      'host.li2':'101 Townsend Street, San Francisco, CA 94107, Vereinigte Staaten',
+      'host.li3':'Seite: <a href="https://www.cloudflare.com" target="_blank" rel="noopener">cloudflare.com</a>',
+      'api.h2':'Hosting der API und der Downloads',
+      'api.li1':'<strong>Lizenz-API</strong> (<code class="font-mono text-xs">notchia-license.axel-courty.workers.dev</code>): Cloudflare Workers + Workers KV — Cloudflare, Inc., Adresse oben.',
+      'api.li2':'<strong>Installationsdateien</strong> (signierte DMGs und Sparkle-Updates): <strong>GitHub, Inc.</strong> (Tochtergesellschaft von Microsoft Corporation), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Vereinigte Staaten. <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.',
+      'ip.h2':'Geistiges Eigentum',
+      'ip.p':"Alle Elemente dieser Seite und der NotchIA-Anwendung — Name, Logo, grafische Vorlage, Texte, Illustrationen, Screenshots, proprietärer Quellcode — sind ausschließliches Eigentum von Axel Courty, sofern nicht anders angegeben. Jede vollständige oder teilweise Vervielfältigung, Darstellung, Änderung oder Verwertung ohne vorherige schriftliche Genehmigung ist untersagt und stellt eine Fälschung dar, die nach den Artikeln L335-2 ff. des Code de la propriété intellectuelle geahndet wird.",
+      'trademarks.h3':'Marken und Namen Dritter',
+      'trademarks.p':'Apple, macOS, MacBook und Apple Intelligence sind Marken von Apple Inc. Claude und Claude Code sind Marken von Anthropic PBC. Codex und GitHub Copilot sind Marken von OpenAI / GitHub Inc. Spotify ist eine Marke von Spotify AB. Diese Marken werden ausschließlich zu beschreibenden Zwecken verwendet, ohne offizielle Zugehörigkeit.',
+      'credits.h2':'Credits',
+      'credits.p':'Design, Entwicklung, Copywriting: Axel Courty.',
+      'report.h2':'Meldung rechtswidriger Inhalte',
+      'report.p':'Gemäß Artikel 6-I-5 der LCEN kann jede Person einen offensichtlich rechtswidrigen Inhalt auf dieser Seite melden, indem sie an <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> schreibt mit: dem Datum der Meldung, ihrer Identität, der Beschreibung des strittigen Inhalts und seiner Lokalisierung (URL), den rechtlichen Gründen, aus denen dieser Inhalt entfernt werden muss, sowie ggf. einer Kopie der zuvor an den Autor gerichteten Korrespondenz.',
+      'links.h2':'Nützliche Links',
+      'links.cgv':'Allgemeine Verkaufsbedingungen',
+      'links.privacy':'Datenschutzerklärung',
+      'links.refund':'Rückerstattungs-Richtlinie',
+      'footer.copy':'© 2026 NotchIA · Axel Courty',
+      'footer.legal':'Impressum','footer.terms':'AGB','footer.privacy':'Datenschutz','footer.refund':'Rückerstattung',
+    },
+  };
+
+  function detectLang() {
+    try { const s = localStorage.getItem('notchia-lang'); if (s && I18N[s]) return s; } catch (e) {}
+    const b = (navigator.language || 'en').toLowerCase().split('-')[0];
+    return I18N[b] ? b : 'en';
+  }
+  function applyLang(lang) {
+    if (!I18N[lang]) lang = 'en';
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { const v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
+    const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
+    try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+  }
+  applyLang(detectLang());
+  document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
+</script>
 
 </body>
 </html>

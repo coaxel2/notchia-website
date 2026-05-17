@@ -10,6 +10,11 @@
 <meta name="author" content="Axel Courty" /><link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="canonical" href="https://notchia.app/account" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/account" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/account" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/account" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/account" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/account" />
 <meta name="robots" content="noindex,nofollow" />
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -67,6 +72,8 @@
     border: 1px solid rgba(237,232,220,0.10);
   }
   .cta-secondary:hover { background: rgba(237,232,220,0.10); }
+  .lang-sw { appearance: none; background: transparent; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
 </style>
 </head>
 
@@ -77,17 +84,20 @@
     <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
     <span class="font-display text-xl">NotchIA</span>
   </a>
-  <nav class="flex items-center gap-6 text-sm text-cream/70">
-    <a href="/" class="hover:text-cream">Accueil</a>
-    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
+    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+    <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
   </nav>
 </header>
 
 <main class="max-w-3xl mx-auto px-6 pt-8 pb-24 space-y-10">
 
   <section class="text-center mb-4">
-    <h1 class="font-display text-4xl md:text-5xl mb-3">Mon <span class="grad-text">compte</span></h1>
-    <p class="text-cream/70">Retrouver ta clé, gérer ton abonnement.</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-3" data-i18n-html="h1">Mon <span class="grad-text">compte</span></h1>
+    <p class="text-cream/70" data-i18n="lead">Retrouver ta clé, gérer ton abonnement.</p>
   </section>
 
   <!-- Bandeau retour Stripe -->
@@ -95,19 +105,19 @@
     <div class="flex items-start gap-3">
       <span class="text-orange text-xl">✓</span>
       <div>
-        <p class="font-semibold mb-1">Paiement reçu — merci !</p>
-        <p class="text-cream/70">Ta clé de licence vient d'être envoyée par email. Si tu ne la vois pas, vérifie tes spams ou utilise le formulaire ci-dessous pour te la renvoyer.</p>
+        <p class="font-semibold mb-1" data-i18n="success.title">Paiement reçu — merci !</p>
+        <p class="text-cream/70" data-i18n="success.body">Ta clé de licence vient d'être envoyée par email. Si tu ne la vois pas, vérifie tes spams ou utilise le formulaire ci-dessous pour te la renvoyer.</p>
       </div>
     </div>
   </div>
 
   <!-- Renvoi de la clé -->
   <section class="card rounded-2xl p-7">
-    <h2 class="font-display text-2xl mb-2">Récupérer ma clé</h2>
-    <p class="text-cream/60 text-sm mb-5">Entre ton email d'achat. On te renvoie une nouvelle clé (l'ancienne est invalidée).</p>
+    <h2 class="font-display text-2xl mb-2" data-i18n="activate.title">Récupérer ma clé</h2>
+    <p class="text-cream/60 text-sm mb-5" data-i18n="activate.sub">Entre ton email d'achat. On te renvoie une nouvelle clé (l'ancienne est invalidée).</p>
     <form id="activateForm" class="space-y-4">
-      <input type="email" name="email" placeholder="ton@email.com" required autocomplete="email" />
-      <button type="submit" class="cta-primary py-2.5 px-5 rounded-full text-sm w-full md:w-auto">
+      <input type="email" name="email" placeholder="ton@email.com" required autocomplete="email" data-i18n-placeholder="activate.email_ph" />
+      <button type="submit" class="cta-primary py-2.5 px-5 rounded-full text-sm w-full md:w-auto" data-i18n="activate.cta">
         M'envoyer ma clé
       </button>
       <p id="activateMessage" class="text-sm text-cream/70 hidden"></p>
@@ -116,19 +126,19 @@
 
   <!-- Customer Portal -->
   <section class="card rounded-2xl p-7">
-    <h2 class="font-display text-2xl mb-2">Gérer mon abonnement</h2>
-    <p class="text-cream/60 text-sm mb-5">Annuler, changer de carte, voir tes factures. Hébergé par Stripe (sécurisé).</p>
+    <h2 class="font-display text-2xl mb-2" data-i18n="portal.title">Gérer mon abonnement</h2>
+    <p class="text-cream/60 text-sm mb-5" data-i18n="portal.sub">Annuler, changer de carte, voir tes factures. Hébergé par Stripe (sécurisé).</p>
     <form id="portalForm" class="space-y-4">
-      <input type="email" name="email" placeholder="ton@email.com" required autocomplete="email" />
-      <input type="text" name="key" placeholder="nia_live_…" required autocomplete="off" spellcheck="false" />
-      <button type="submit" class="cta-secondary py-2.5 px-5 rounded-full text-sm w-full md:w-auto">
+      <input type="email" name="email" placeholder="ton@email.com" required autocomplete="email" data-i18n-placeholder="portal.email_ph" />
+      <input type="text" name="key" placeholder="nia_live_…" required autocomplete="off" spellcheck="false" data-i18n-placeholder="portal.key_ph" />
+      <button type="submit" class="cta-secondary py-2.5 px-5 rounded-full text-sm w-full md:w-auto" data-i18n="portal.cta">
         Ouvrir le portail Stripe
       </button>
       <p id="portalMessage" class="text-sm text-cream/70 hidden"></p>
     </form>
   </section>
 
-  <p class="text-center text-cream/40 text-xs">
+  <p class="text-center text-cream/40 text-xs" data-i18n-html="footnote">
     Une question ? Écris à <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>.
   </p>
 
@@ -136,6 +146,124 @@
 
 <script>
   const API_BASE = 'https://notchia-license.axel-courty.workers.dev';
+
+  const I18N = {
+    fr: {
+      'nav.home':'Accueil','nav.pricing':'Tarifs',
+      'h1':'Mon <span class="grad-text">compte</span>',
+      'lead':'Retrouver ta clé, gérer ton abonnement.',
+      'success.title':'Paiement reçu — merci !',
+      'success.body':"Ta clé de licence vient d'être envoyée par email. Si tu ne la vois pas, vérifie tes spams ou utilise le formulaire ci-dessous pour te la renvoyer.",
+      'activate.title':'Récupérer ma clé',
+      'activate.sub':"Entre ton email d'achat. On te renvoie une nouvelle clé (l'ancienne est invalidée).",
+      'activate.email_ph':'ton@email.com',
+      'activate.cta':"M'envoyer ma clé",
+      'activate.sending':'Envoi…',
+      'activate.ok':"Si un compte existe pour cet email, la clé arrive dans quelques secondes. Vérifie tes spams.",
+      'activate.err_net':'Erreur réseau. Réessaie.',
+      'portal.title':'Gérer mon abonnement',
+      'portal.sub':'Annuler, changer de carte, voir tes factures. Hébergé par Stripe (sécurisé).',
+      'portal.email_ph':'ton@email.com',
+      'portal.key_ph':'nia_live_…',
+      'portal.cta':'Ouvrir le portail Stripe',
+      'portal.connecting':'Connexion…',
+      'portal.err_invalid':'Email ou clé invalide.',
+      'portal.err_net':'Erreur réseau. Réessaie.',
+      'footnote':'Une question ? Écris à <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>.',
+    },
+    en: {
+      'nav.home':'Home','nav.pricing':'Pricing',
+      'h1':'My <span class="grad-text">account</span>',
+      'lead':'Retrieve your key, manage your subscription.',
+      'success.title':'Payment received — thank you!',
+      'success.body':"Your license key has just been emailed. If you don't see it, check your spam folder or use the form below to resend it.",
+      'activate.title':'Retrieve my key',
+      'activate.sub':"Enter your purchase email. We'll send a new key (the old one is invalidated).",
+      'activate.email_ph':'you@email.com',
+      'activate.cta':'Send me my key',
+      'activate.sending':'Sending…',
+      'activate.ok':'If an account exists for this email, the key will arrive in a few seconds. Check your spam.',
+      'activate.err_net':'Network error. Try again.',
+      'portal.title':'Manage my subscription',
+      'portal.sub':'Cancel, change card, view invoices. Hosted by Stripe (secure).',
+      'portal.email_ph':'you@email.com',
+      'portal.key_ph':'nia_live_…',
+      'portal.cta':'Open Stripe portal',
+      'portal.connecting':'Connecting…',
+      'portal.err_invalid':'Invalid email or key.',
+      'portal.err_net':'Network error. Try again.',
+      'footnote':'A question? Write to <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>.',
+    },
+    es: {
+      'nav.home':'Inicio','nav.pricing':'Precios',
+      'h1':'Mi <span class="grad-text">cuenta</span>',
+      'lead':'Recupera tu clave, gestiona tu suscripción.',
+      'success.title':'¡Pago recibido — gracias!',
+      'success.body':'Tu clave de licencia se acaba de enviar por email. Si no la ves, revisa tu carpeta de spam o usa el formulario de abajo para reenviarla.',
+      'activate.title':'Recuperar mi clave',
+      'activate.sub':'Introduce tu email de compra. Te enviamos una nueva clave (la antigua queda invalidada).',
+      'activate.email_ph':'tu@email.com',
+      'activate.cta':'Enviarme mi clave',
+      'activate.sending':'Enviando…',
+      'activate.ok':'Si existe una cuenta con este email, la clave llegará en unos segundos. Revisa tu spam.',
+      'activate.err_net':'Error de red. Inténtalo de nuevo.',
+      'portal.title':'Gestionar mi suscripción',
+      'portal.sub':'Cancela, cambia de tarjeta, ve tus facturas. Alojado por Stripe (seguro).',
+      'portal.email_ph':'tu@email.com',
+      'portal.key_ph':'nia_live_…',
+      'portal.cta':'Abrir el portal Stripe',
+      'portal.connecting':'Conectando…',
+      'portal.err_invalid':'Email o clave no válidos.',
+      'portal.err_net':'Error de red. Inténtalo de nuevo.',
+      'footnote':'¿Una pregunta? Escribe a <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>.',
+    },
+    de: {
+      'nav.home':'Startseite','nav.pricing':'Preise',
+      'h1':'Mein <span class="grad-text">Konto</span>',
+      'lead':'Schlüssel abrufen, Abo verwalten.',
+      'success.title':'Zahlung erhalten — danke!',
+      'success.body':'Dein Lizenzschlüssel wurde gerade per E-Mail verschickt. Wenn du ihn nicht siehst, prüfe deinen Spam-Ordner oder nutze das Formular unten, um ihn erneut zu senden.',
+      'activate.title':'Meinen Schlüssel abrufen',
+      'activate.sub':'Gib deine Kauf-E-Mail ein. Wir senden dir einen neuen Schlüssel (der alte wird ungültig).',
+      'activate.email_ph':'du@email.com',
+      'activate.cta':'Schlüssel senden',
+      'activate.sending':'Senden…',
+      'activate.ok':'Wenn ein Konto für diese E-Mail existiert, kommt der Schlüssel in wenigen Sekunden. Prüfe deinen Spam.',
+      'activate.err_net':'Netzwerkfehler. Bitte erneut versuchen.',
+      'portal.title':'Mein Abo verwalten',
+      'portal.sub':'Kündigen, Karte ändern, Rechnungen ansehen. Gehostet von Stripe (sicher).',
+      'portal.email_ph':'du@email.com',
+      'portal.key_ph':'nia_live_…',
+      'portal.cta':'Stripe-Portal öffnen',
+      'portal.connecting':'Verbinden…',
+      'portal.err_invalid':'E-Mail oder Schlüssel ungültig.',
+      'portal.err_net':'Netzwerkfehler. Bitte erneut versuchen.',
+      'footnote':'Eine Frage? Schreib an <a href="mailto:support@notchia.app" class="underline">support@notchia.app</a>.',
+    },
+  };
+
+  let CURRENT_LANG = 'fr';
+  function dictNow() { return I18N[CURRENT_LANG] || I18N.en; }
+
+  function detectLang() {
+    try { const s = localStorage.getItem('notchia-lang'); if (s && I18N[s]) return s; } catch (e) {}
+    const b = (navigator.language || 'en').toLowerCase().split('-')[0];
+    return I18N[b] ? b : 'en';
+  }
+  function applyLang(lang) {
+    if (!I18N[lang]) lang = 'en';
+    CURRENT_LANG = lang;
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { const v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { const v = dict[el.dataset.i18nPlaceholder]; if (v != null) el.placeholder = v; });
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => { const v = dict[el.dataset.i18nAria]; if (v != null) el.setAttribute('aria-label', v); });
+    const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
+    try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+  }
+  applyLang(detectLang());
+  document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
 
   // Show success banner if Stripe redirected here with ?status=success.
   (function(){
@@ -158,7 +286,7 @@
     const btn = form.querySelector('button');
     const original = btn.textContent;
     btn.disabled = true;
-    btn.textContent = 'Envoi…';
+    btn.textContent = dictNow()['activate.sending'];
     const email = new FormData(form).get('email');
     try {
       await fetch(API_BASE + '/v1/license/activate', {
@@ -167,10 +295,10 @@
         body: JSON.stringify({ email }),
       });
       // Always show generic confirmation (anti-enum on the backend).
-      showMessage('activateMessage', "Si un compte existe pour cet email, la clé arrive dans quelques secondes. Vérifie tes spams.", true);
+      showMessage('activateMessage', dictNow()['activate.ok'], true);
       form.reset();
     } catch (err) {
-      showMessage('activateMessage', "Erreur réseau. Réessaie.", false);
+      showMessage('activateMessage', dictNow()['activate.err_net'], false);
     } finally {
       btn.disabled = false;
       btn.textContent = original;
@@ -183,7 +311,7 @@
     const btn = form.querySelector('button');
     const original = btn.textContent;
     btn.disabled = true;
-    btn.textContent = 'Connexion…';
+    btn.textContent = dictNow()['portal.connecting'];
     const data = Object.fromEntries(new FormData(form));
     try {
       const res = await fetch(API_BASE + '/v1/license/portal', {
@@ -193,12 +321,12 @@
       });
       const json = await res.json();
       if (!res.ok || !json.url) {
-        showMessage('portalMessage', "Email ou clé invalide.", false);
+        showMessage('portalMessage', dictNow()['portal.err_invalid'], false);
         return;
       }
       window.location.href = json.url;
     } catch (err) {
-      showMessage('portalMessage', "Erreur réseau. Réessaie.", false);
+      showMessage('portalMessage', dictNow()['portal.err_net'], false);
     } finally {
       btn.disabled = false;
       btn.textContent = original;

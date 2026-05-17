@@ -8,6 +8,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="canonical" href="https://notchia.app/install" />
 <link rel="alternate" hreflang="fr" href="https://notchia.app/install" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/install" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/install" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/install" />
 <link rel="alternate" hreflang="x-default" href="https://notchia.app/install" />
 <meta name="theme-color" content="#0B0D12" />
 
@@ -106,6 +109,8 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.9em;
   }
+  .lang-sw { appearance: none; background: transparent; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -126,11 +131,8 @@
     <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
     <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
     <a href="/account" class="hover:text-cream" data-i18n="nav.account">Mon compte</a>
-    <select id="lang-switch" aria-label="Choisir la langue" class="bg-transparent border border-cream/15 text-cream/70 text-xs font-mono rounded-full px-2.5 py-1.5 hover:text-cream hover:border-cream/30 transition cursor-pointer focus:outline-none focus:border-orange">
-      <option value="fr">FR</option>
-      <option value="en">EN</option>
-      <option value="es">ES</option>
-      <option value="de">DE</option>
+    <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
     </select>
   </nav>
 </header>

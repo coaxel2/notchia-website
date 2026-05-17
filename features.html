@@ -12,6 +12,9 @@
 <link rel="canonical" href="https://notchia.app/features" />
 <meta name="robots" content="index,follow" />
 <link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/features" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/features" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/features" />
 <link rel="alternate" hreflang="x-default" href="https://notchia.app/features" />
 
 <meta property="og:type" content="website" />
@@ -175,6 +178,8 @@
     border: 1px solid rgba(255,122,45,0.22);
     margin-top: 1rem;
   }
+  .lang-sw { appearance: none; background: transparent; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -191,10 +196,13 @@
     <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
     <span class="font-display text-xl">NotchIA</span>
   </a>
-  <nav class="flex items-center gap-6 text-sm text-cream/70">
-    <a href="/" class="hover:text-cream">Accueil</a>
-    <a href="/features" class="nav-current">Fonctionnalités</a>
-    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
+    <a href="/features" class="nav-current" data-i18n="nav.features">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+    <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
   </nav>
 </header>
 
@@ -202,377 +210,377 @@
 
   <!-- HERO -->
   <section class="mb-10">
-    <h1 class="font-display text-4xl md:text-6xl mb-5 leading-tight">Toutes les <span class="grad-text">fonctionnalités</span></h1>
-    <p class="text-cream/75 text-lg md:text-xl max-w-3xl mb-3">L'encoche de ton Mac devient un véritable assistant. Musique, calendrier, digest d'actualité IA, concentration et toutes les détections live sont <strong class="text-cream">gratuits</strong>.</p>
-    <p class="text-cream/75 text-lg md:text-xl max-w-3xl mb-5">Passe Pro <span class="badge-pro">💎 Pro</span> pour débloquer la Shelf (drag-drop universel + résumé IA de fichiers), le suivi temps réel de ton assistant de code et l'historique presse-papier.</p>
-    <p class="meta-line">v2.8.0 Wise Owl 🦉 · macOS 15+ · Apple Silicon ou Intel</p>
+    <h1 class="font-display text-4xl md:text-6xl mb-5 leading-tight" data-i18n-html="hero.title">Toutes les <span class="grad-text">fonctionnalités</span></h1>
+    <p class="text-cream/75 text-lg md:text-xl max-w-3xl mb-3" data-i18n-html="hero.lead1">L'encoche de ton Mac devient un véritable assistant. Musique, calendrier, digest d'actualité IA, concentration et toutes les détections live sont <strong class="text-cream">gratuits</strong>.</p>
+    <p class="text-cream/75 text-lg md:text-xl max-w-3xl mb-5" data-i18n-html="hero.lead2">Passe Pro <span class="badge-pro">💎 Pro</span> pour débloquer la Shelf (drag-drop universel + résumé IA de fichiers), le suivi temps réel de ton assistant de code et l'historique presse-papier.</p>
+    <p class="meta-line" data-i18n="hero.meta">v2.8.0 Wise Owl 🦉 · macOS 15+ · Apple Silicon ou Intel</p>
   </section>
 
   <div class="callout">
-    <p class="!mb-0">L'encoche pense maintenant. Sept onglets, des dizaines de détections, et toute l'intelligence reste sur ton Mac — aucun flux, aucun fichier, aucun token n'est envoyé à nos serveurs.</p>
+    <p class="!mb-0" data-i18n="hero.callout">L'encoche pense maintenant. Sept onglets, des dizaines de détections, et toute l'intelligence reste sur ton Mac — aucun flux, aucun fichier, aucun token n'est envoyé à nos serveurs.</p>
   </div>
 
   <!-- ============ GRATUIT ============ -->
   <div class="divider"></div>
-  <div class="section-eyebrow">Inclus dans la version gratuite</div>
+  <div class="section-eyebrow" data-i18n="free.eyebrow">Inclus dans la version gratuite</div>
 
   <!-- MUSIQUE -->
-  <h2>Onglet <span class="grad-text">Musique</span> <span class="badge-free">Gratuit</span></h2>
-  <p class="lede">La piste qui tourne, sous la main, sans ouvrir d'app.</p>
+  <h2 data-i18n-html="music.title">Onglet <span class="grad-text">Musique</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede" data-i18n="music.lede">La piste qui tourne, sous la main, sans ouvrir d'app.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>Ce que tu vois en un coup d'œil</h3>
+      <h3 data-i18n="music.h1">Ce que tu vois en un coup d'œil</h3>
       <ul>
-        <li>Pochette, titre, artiste, progression temps réel.</li>
-        <li>Marquee fluide quand le titre est trop long.</li>
-        <li>Tinting dynamique : l'encoche prend la couleur dominante de la pochette.</li>
-        <li>Spectrogramme audio coloré et visualiseur custom.</li>
+        <li data-i18n="music.b1_1">Pochette, titre, artiste, progression temps réel.</li>
+        <li data-i18n="music.b1_2">Marquee fluide quand le titre est trop long.</li>
+        <li data-i18n="music.b1_3">Tinting dynamique : l'encoche prend la couleur dominante de la pochette.</li>
+        <li data-i18n="music.b1_4">Spectrogramme audio coloré et visualiseur custom.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>4 controllers, un seul UI</h3>
+      <h3 data-i18n="music.h2">4 controllers, un seul UI</h3>
       <ul>
-        <li>Now Playing système (tout ce qui joue, navigateur inclus).</li>
-        <li>Apple Music dédié.</li>
-        <li>Spotify dédié.</li>
-        <li>YouTube Music dédié.</li>
+        <li data-i18n="music.b2_1">Now Playing système (tout ce qui joue, navigateur inclus).</li>
+        <li data-i18n="music.b2_2">Apple Music dédié.</li>
+        <li data-i18n="music.b2_3">Spotify dédié.</li>
+        <li data-i18n="music.b2_4">YouTube Music dédié.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Contrôles configurables</h3>
+      <h3 data-i18n="music.h3">Contrôles configurables</h3>
       <ul>
-        <li>Boutons activables individuellement : play/pause, suivant, précédent, like.</li>
-        <li>Like rapide via ⇧⌘L.</li>
-        <li>Lyrics optionnels quand le controller les expose.</li>
+        <li data-i18n="music.b3_1">Boutons activables individuellement : play/pause, suivant, précédent, like.</li>
+        <li data-i18n="music.b3_2">Like rapide via ⇧⌘L.</li>
+        <li data-i18n="music.b3_3">Lyrics optionnels quand le controller les expose.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Couleur à ta main</h3>
+      <h3 data-i18n="music.h4">Couleur à ta main</h3>
       <ul>
-        <li>Slider de teinte : blanc neutre, couleur de la pochette, ou ta teinte d'accent.</li>
-        <li>Anti-flash quand la pochette change d'image.</li>
+        <li data-i18n="music.b4_1">Slider de teinte : blanc neutre, couleur de la pochette, ou ta teinte d'accent.</li>
+        <li data-i18n="music.b4_2">Anti-flash quand la pochette change d'image.</li>
       </ul>
     </div>
   </div>
 
   <!-- CALENDRIER -->
-  <h2>Onglet <span class="grad-text">Calendrier</span> <span class="badge-free">Gratuit</span></h2>
-  <p class="lede">Tes prochains événements en survol, sans contexte switch.</p>
+  <h2 data-i18n-html="cal.title">Onglet <span class="grad-text">Calendrier</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede" data-i18n="cal.lede">Tes prochains événements en survol, sans contexte switch.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>Vue d'ensemble</h3>
+      <h3 data-i18n="cal.h1">Vue d'ensemble</h3>
       <ul>
-        <li>Mini calendrier qui apparaît au survol de l'encoche.</li>
-        <li>Liste des prochains événements à droite.</li>
-        <li>Auto-scroll vers le prochain rendez-vous.</li>
-        <li>Premier jour de la semaine configurable (lundi ou dimanche).</li>
+        <li data-i18n="cal.b1_1">Mini calendrier qui apparaît au survol de l'encoche.</li>
+        <li data-i18n="cal.b1_2">Liste des prochains événements à droite.</li>
+        <li data-i18n="cal.b1_3">Auto-scroll vers le prochain rendez-vous.</li>
+        <li data-i18n="cal.b1_4">Premier jour de la semaine configurable (lundi ou dimanche).</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Affichage maîtrisé</h3>
+      <h3 data-i18n="cal.h2">Affichage maîtrisé</h3>
       <ul>
-        <li>Choix des calendriers visibles (perso, pro, partagés).</li>
-        <li>Masquer les évènements « toute la journée » pour ne garder que ce qui a une heure.</li>
-        <li>Titres complets ou tronqués selon ta densité d'affichage.</li>
-        <li>Rappels intégrés depuis Reminders.app, dans la même vue.</li>
+        <li data-i18n="cal.b2_1">Choix des calendriers visibles (perso, pro, partagés).</li>
+        <li data-i18n="cal.b2_2">Masquer les évènements « toute la journée » pour ne garder que ce qui a une heure.</li>
+        <li data-i18n="cal.b2_3">Titres complets ou tronqués selon ta densité d'affichage.</li>
+        <li data-i18n="cal.b2_4">Rappels intégrés depuis Reminders.app, dans la même vue.</li>
       </ul>
     </div>
   </div>
 
   <!-- DIGEST -->
-  <h2>Onglet <span class="grad-text">Digest</span> <span class="badge-new">Nouveau · 2.8.0</span> <span class="badge-free">Gratuit</span></h2>
-  <p class="lede">Ton brief d'actualité matinal, résumé par ton Mac, jamais par un serveur.</p>
+  <h2 data-i18n-html="dig.title">Onglet <span class="grad-text">Digest</span> <span class="badge-new">Nouveau · 2.8.0</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede" data-i18n="dig.lede">Ton brief d'actualité matinal, résumé par ton Mac, jamais par un serveur.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>Tes flux, ton sujet</h3>
+      <h3 data-i18n="dig.h1">Tes flux, ton sujet</h3>
       <ul>
-        <li>Ajoute n'importe quel flux RSS ou Atom (blogs, médias, newsletters).</li>
-        <li>Définis un sujet à suivre — par exemple « IA vidéo, macOS, SwiftUI ».</li>
-        <li>L'IA filtre les articles pertinents, résume et priorise.</li>
+        <li data-i18n="dig.b1_1">Ajoute n'importe quel flux RSS ou Atom (blogs, médias, newsletters).</li>
+        <li data-i18n="dig.b1_2">Définis un sujet à suivre — par exemple « IA vidéo, macOS, SwiftUI ».</li>
+        <li data-i18n="dig.b1_3">L'IA filtre les articles pertinents, résume et priorise.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>100% on-device</h3>
+      <h3 data-i18n="dig.h2">100% on-device</h3>
       <ul>
-        <li>Résumés générés par Apple Intelligence Foundation Models, en local.</li>
-        <li>Aucun flux ne sort de ton Mac.</li>
-        <li>Cache local de 14 jours pour relire un brief offline.</li>
+        <li data-i18n="dig.b2_1">Résumés générés par Apple Intelligence Foundation Models, en local.</li>
+        <li data-i18n="dig.b2_2">Aucun flux ne sort de ton Mac.</li>
+        <li data-i18n="dig.b2_3">Cache local de 14 jours pour relire un brief offline.</li>
       </ul>
     </div>
   </div>
-  <p class="text-sm text-cream/55"><em>Note :</em> les résumés IA nécessitent macOS 26+ avec Apple Intelligence. Sur macOS 15, l'onglet fonctionne en mode viewer brut (flux + tri chronologique, sans résumé).</p>
+  <p class="text-sm text-cream/55" data-i18n-html="dig.note"><em>Note :</em> les résumés IA nécessitent macOS 26+ avec Apple Intelligence. Sur macOS 15, l'onglet fonctionne en mode viewer brut (flux + tri chronologique, sans résumé).</p>
 
   <!-- CONCENTRATION -->
-  <h2>Onglet <span class="grad-text">Concentration</span> <span class="badge-free">Gratuit</span></h2>
-  <p class="lede">Concentration intégré, stats journalières, badges discrets.</p>
+  <h2 data-i18n-html="foc.title">Onglet <span class="grad-text">Concentration</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede" data-i18n="foc.lede">Concentration intégré, stats journalières, badges discrets.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>Le minuteur</h3>
+      <h3 data-i18n="foc.h1">Le minuteur</h3>
       <ul>
-        <li>Ring de progression animé autour de l'encoche.</li>
-        <li>Durées configurables : focus, pause courte, pause longue.</li>
-        <li>Nombre de sessions avant pause longue ajustable.</li>
-        <li>Commandes Démarrer, Pause, Skip, Reset.</li>
+        <li data-i18n="foc.b1_1">Ring de progression animé autour de l'encoche.</li>
+        <li data-i18n="foc.b1_2">Durées configurables : focus, pause courte, pause longue.</li>
+        <li data-i18n="foc.b1_3">Nombre de sessions avant pause longue ajustable.</li>
+        <li data-i18n="foc.b1_4">Commandes Démarrer, Pause, Skip, Reset.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Tes habitudes en clair</h3>
+      <h3 data-i18n="foc.h2">Tes habitudes en clair</h3>
       <ul>
-        <li>Stats journalières et historique en graphique.</li>
-        <li>Mini badges Focus et Cycle pendant les sessions.</li>
-        <li>Audio feedback en fin de focus et fin de pause.</li>
-        <li>Sneak peek : un rappel discret quand il reste 1 minute.</li>
+        <li data-i18n="foc.b2_1">Stats journalières et historique en graphique.</li>
+        <li data-i18n="foc.b2_2">Mini badges Focus et Cycle pendant les sessions.</li>
+        <li data-i18n="foc.b2_3">Audio feedback en fin de focus et fin de pause.</li>
+        <li data-i18n="foc.b2_4">Sneak peek : un rappel discret quand il reste 1 minute.</li>
       </ul>
     </div>
   </div>
 
   <!-- DÉTECTIONS LIVE -->
-  <h2>Détections <span class="grad-text">live</span> <span class="badge-free">Gratuit</span></h2>
-  <p class="lede">L'encoche réagit à ce qui se passe sur ton Mac, en temps réel. Toutes les détections sont toggleables individuellement.</p>
+  <h2 data-i18n-html="live.title">Détections <span class="grad-text">live</span> <span class="badge-free">Gratuit</span></h2>
+  <p class="lede" data-i18n="live.lede">L'encoche réagit à ce qui se passe sur ton Mac, en temps réel. Toutes les détections sont toggleables individuellement.</p>
   <div class="feature-grid cols-3">
     <div class="callout">
-      <h3>Appel vidéo</h3>
-      <p class="!mb-0">FaceTime, Zoom, Google Meet, Microsoft Teams, Slack Huddle. Indicateur dédié pendant l'appel.</p>
+      <h3 data-i18n="live.h1">Appel vidéo</h3>
+      <p class="!mb-0" data-i18n="live.p1">FaceTime, Zoom, Google Meet, Microsoft Teams, Slack Huddle. Indicateur dédié pendant l'appel.</p>
     </div>
     <div class="callout">
-      <h3>Focus / Ne pas déranger</h3>
-      <p class="!mb-0">L'encoche reflète ton mode Focus actif. Visuel adapté pour ne pas distraire.</p>
+      <h3 data-i18n="live.h2">Focus / Ne pas déranger</h3>
+      <p class="!mb-0" data-i18n="live.p2">L'encoche reflète ton mode Focus actif. Visuel adapté pour ne pas distraire.</p>
     </div>
     <div class="callout">
-      <h3>Enregistrement d'écran</h3>
-      <p class="!mb-0">Détection auto. Option pour cacher l'encoche pendant la capture si tu veux un rendu propre.</p>
+      <h3 data-i18n="live.h3">Enregistrement d'écran</h3>
+      <p class="!mb-0" data-i18n="live.p3">Détection auto. Option pour cacher l'encoche pendant la capture si tu veux un rendu propre.</p>
     </div>
     <div class="callout">
-      <h3>AirPods & Bluetooth</h3>
-      <p class="!mb-0">Connexion, déconnexion, batterie affichée en sneak peek au moment du pairing.</p>
+      <h3 data-i18n="live.h4">AirPods & Bluetooth</h3>
+      <p class="!mb-0" data-i18n="live.p4">Connexion, déconnexion, batterie affichée en sneak peek au moment du pairing.</p>
     </div>
     <div class="callout">
-      <h3>HUD volume & luminosité</h3>
-      <p class="!mb-0">Remplace le HUD système. Mode inline dans l'encoche ou rendu classique au choix.</p>
+      <h3 data-i18n="live.h5">HUD volume & luminosité</h3>
+      <p class="!mb-0" data-i18n="live.p5">Remplace le HUD système. Mode inline dans l'encoche ou rendu classique au choix.</p>
     </div>
     <div class="callout">
-      <h3>Événements système</h3>
-      <p class="!mb-0">Gradient ou couleur d'accent quand un événement notable se déclenche.</p>
+      <h3 data-i18n="live.h6">Événements système</h3>
+      <p class="!mb-0" data-i18n="live.p6">Gradient ou couleur d'accent quand un événement notable se déclenche.</p>
     </div>
     <div class="callout">
-      <h3>Téléchargements</h3>
-      <p class="!mb-0">Animation download visible pour AirDrop entrant et téléchargements navigateur.</p>
+      <h3 data-i18n="live.h7">Téléchargements</h3>
+      <p class="!mb-0" data-i18n="live.p7">Animation download visible pour AirDrop entrant et téléchargements navigateur.</p>
     </div>
     <div class="callout">
-      <h3>Webcam active</h3>
-      <p class="!mb-0">Détection précise de l'usage caméra par n'importe quelle app.</p>
+      <h3 data-i18n="live.h8">Webcam active</h3>
+      <p class="!mb-0" data-i18n="live.p8">Détection précise de l'usage caméra par n'importe quelle app.</p>
     </div>
     <div class="callout">
-      <h3>Sneak Peek Engine</h3>
-      <p class="!mb-0">Widgets en rotation pendant que tu bosses : musique, Concentration, presse-papier, volume, luminosité. Intervalle et durée configurables.</p>
+      <h3 data-i18n="live.h9">Sneak Peek Engine</h3>
+      <p class="!mb-0" data-i18n="live.p9">Widgets en rotation pendant que tu bosses : musique, Concentration, presse-papier, volume, luminosité. Intervalle et durée configurables.</p>
     </div>
   </div>
 
   <!-- PERSONNALISATION -->
-  <h2><span class="grad-text">Personnalisation</span> complète <span class="badge-free">Gratuit</span></h2>
-  <p class="lede">L'encoche s'adapte à toi, pas l'inverse.</p>
+  <h2 data-i18n-html="pers.title"><span class="grad-text">Personnalisation</span> complète <span class="badge-free">Gratuit</span></h2>
+  <p class="lede" data-i18n="pers.lede">L'encoche s'adapte à toi, pas l'inverse.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>5 thèmes inclus</h3>
+      <h3 data-i18n="pers.h1">5 thèmes inclus</h3>
       <ul>
-        <li><strong>Marque</strong> — violet → cyan, signature NotchIA.</li>
-        <li><strong>Crépuscule</strong> — orange → magenta.</li>
-        <li><strong>Océan</strong> — turquoise → violet.</li>
-        <li><strong>Forêt</strong> — vert → cyan.</li>
-        <li><strong>Noir</strong> — pour les puristes.</li>
-        <li>Couleur d'accent custom via color picker, sur n'importe quel thème.</li>
+        <li data-i18n-html="pers.b1_1"><strong>Marque</strong> — violet → cyan, signature NotchIA.</li>
+        <li data-i18n-html="pers.b1_2"><strong>Crépuscule</strong> — orange → magenta.</li>
+        <li data-i18n-html="pers.b1_3"><strong>Océan</strong> — turquoise → violet.</li>
+        <li data-i18n-html="pers.b1_4"><strong>Forêt</strong> — vert → cyan.</li>
+        <li data-i18n-html="pers.b1_5"><strong>Noir</strong> — pour les puristes.</li>
+        <li data-i18n="pers.b1_6">Couleur d'accent custom via color picker, sur n'importe quel thème.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Apparence</h3>
+      <h3 data-i18n="pers.h2">Apparence</h3>
       <ul>
-        <li>Icône d'app uploadable (la tienne ou un dock perso).</li>
-        <li>3 densités d'affichage : compact, normal, large.</li>
-        <li>Hauteur d'encoche : menu bar, encoche physique, ou taille custom.</li>
-        <li>Effet lumineux, ombre, scaling animé — chacun toggleable.</li>
-        <li>Langue : français, anglais, espagnol, allemand.</li>
+        <li data-i18n="pers.b2_1">Icône d'app uploadable (la tienne ou un dock perso).</li>
+        <li data-i18n="pers.b2_2">3 densités d'affichage : compact, normal, large.</li>
+        <li data-i18n="pers.b2_3">Hauteur d'encoche : menu bar, encoche physique, ou taille custom.</li>
+        <li data-i18n="pers.b2_4">Effet lumineux, ombre, scaling animé — chacun toggleable.</li>
+        <li data-i18n="pers.b2_5">Langue : français, anglais, espagnol, allemand.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Comportement</h3>
+      <h3 data-i18n="pers.h3">Comportement</h3>
       <ul>
-        <li>Sensibilité des gestes (hover, drag, tap).</li>
-        <li>Hover area étendue au-delà de l'encoche.</li>
-        <li>Délai de fermeture configurable.</li>
-        <li>Cacher l'encoche pendant un screen recording.</li>
-        <li>Afficher (ou non) sur l'écran de verrouillage.</li>
-        <li>Retours haptiques sur les MacBook qui les supportent.</li>
-        <li>Auto-switch d'écran en multi-display.</li>
+        <li data-i18n="pers.b3_1">Sensibilité des gestes (hover, drag, tap).</li>
+        <li data-i18n="pers.b3_2">Hover area étendue au-delà de l'encoche.</li>
+        <li data-i18n="pers.b3_3">Délai de fermeture configurable.</li>
+        <li data-i18n="pers.b3_4">Cacher l'encoche pendant un screen recording.</li>
+        <li data-i18n="pers.b3_5">Afficher (ou non) sur l'écran de verrouillage.</li>
+        <li data-i18n="pers.b3_6">Retours haptiques sur les MacBook qui les supportent.</li>
+        <li data-i18n="pers.b3_7">Auto-switch d'écran en multi-display.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Raccourcis clavier</h3>
+      <h3 data-i18n="pers.h4">Raccourcis clavier</h3>
       <ul>
-        <li>7 raccourcis 100% éditables.</li>
-        <li>Ouvrir/fermer l'encoche, basculer un onglet, play/pause musique, like, démarrer Concentration, ouvrir Shelf, etc.</li>
-        <li>Aucune combinaison forcée — tu remappes tout.</li>
+        <li data-i18n="pers.b4_1">7 raccourcis 100% éditables.</li>
+        <li data-i18n="pers.b4_2">Ouvrir/fermer l'encoche, basculer un onglet, play/pause musique, like, démarrer Concentration, ouvrir Shelf, etc.</li>
+        <li data-i18n="pers.b4_3">Aucune combinaison forcée — tu remappes tout.</li>
       </ul>
     </div>
   </div>
 
   <!-- ============ PRO ============ -->
   <div class="divider"></div>
-  <div class="section-eyebrow">Débloqué avec NotchIA Pro 💎</div>
+  <div class="section-eyebrow" data-i18n="pro.eyebrow">Débloqué avec NotchIA Pro 💎</div>
 
   <div class="pro-band">
-    <p class="!mb-0 text-cream/80">Trois onglets puissants pour aller plus loin : un dock universel pour partager et convertir n'importe quoi, le suivi temps réel de ton assistant IA de code, et un historique presse-papier intelligent.</p>
+    <p class="!mb-0 text-cream/80" data-i18n="pro.band">Trois onglets puissants pour aller plus loin : un dock universel pour partager et convertir n'importe quoi, le suivi temps réel de ton assistant IA de code, et un historique presse-papier intelligent.</p>
   </div>
 
   <!-- SHELF -->
-  <h2>Onglet <span class="grad-text">Shelf</span> <span class="badge-pro">💎 Pro</span></h2>
-  <p class="lede">Drag, drop, partage, résume. L'encoche devient ton hub pour les fichiers.</p>
+  <h2 data-i18n-html="shelf.title">Onglet <span class="grad-text">Shelf</span> <span class="badge-pro">💎 Pro</span></h2>
+  <p class="lede" data-i18n="shelf.lede">Drag, drop, partage, résume. L'encoche devient ton hub pour les fichiers.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>Drag-drop universel</h3>
+      <h3 data-i18n="shelf.h1">Drag-drop universel</h3>
       <ul>
-        <li>Drague un fichier vers l'encoche : la zone de drop s'agrandit automatiquement.</li>
-        <li>Empile plusieurs fichiers en attente.</li>
-        <li>Copy-on-drag ou move, au choix par fichier.</li>
-        <li>Auto-remove après partage (toggleable).</li>
+        <li data-i18n="shelf.b1_1">Drague un fichier vers l'encoche : la zone de drop s'agrandit automatiquement.</li>
+        <li data-i18n="shelf.b1_2">Empile plusieurs fichiers en attente.</li>
+        <li data-i18n="shelf.b1_3">Copy-on-drag ou move, au choix par fichier.</li>
+        <li data-i18n="shelf.b1_4">Auto-remove après partage (toggleable).</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Quick Share intelligent</h3>
+      <h3 data-i18n="shelf.h2">Quick Share intelligent</h3>
       <ul>
-        <li>Auto-découverte des cibles compatibles : AirDrop, Messages, Mail, WhatsApp, Slack…</li>
-        <li>Un clic pour envoyer, pas de menu Partage natif.</li>
+        <li data-i18n="shelf.b2_1">Auto-découverte des cibles compatibles : AirDrop, Messages, Mail, WhatsApp, Slack…</li>
+        <li data-i18n="shelf.b2_2">Un clic pour envoyer, pas de menu Partage natif.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Convertisseur intégré</h3>
+      <h3 data-i18n="shelf.h3">Convertisseur intégré</h3>
       <ul>
-        <li><strong>Images</strong> : PNG, JPG, HEIC, WebP entre tous les formats.</li>
-        <li><strong>PDF</strong> : conversion PDF ↔ images.</li>
-        <li><strong>Audio</strong> : mp3, wav, aac, m4a.</li>
-        <li><strong>Vidéo</strong> : mp4, mov.</li>
+        <li data-i18n-html="shelf.b3_1"><strong>Images</strong> : PNG, JPG, HEIC, WebP entre tous les formats.</li>
+        <li data-i18n-html="shelf.b3_2"><strong>PDF</strong> : conversion PDF ↔ images.</li>
+        <li data-i18n-html="shelf.b3_3"><strong>Audio</strong> : mp3, wav, aac, m4a.</li>
+        <li data-i18n-html="shelf.b3_4"><strong>Vidéo</strong> : mp4, mov.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Résumé IA d'un fichier <span class="badge-new">on-device</span></h3>
+      <h3 data-i18n-html="shelf.h4">Résumé IA d'un fichier <span class="badge-new">on-device</span></h3>
       <ul>
-        <li>Drop un PDF, .txt, .md ou .docx.</li>
-        <li>Résumé scrollable en quelques secondes.</li>
-        <li>Animation aura rainbow pendant la génération.</li>
-        <li>Bouton « Copier » pour récupérer le texte.</li>
-        <li>Apple Intelligence Foundation Models, 100% local.</li>
+        <li data-i18n="shelf.b4_1">Drop un PDF, .txt, .md ou .docx.</li>
+        <li data-i18n="shelf.b4_2">Résumé scrollable en quelques secondes.</li>
+        <li data-i18n="shelf.b4_3">Animation aura rainbow pendant la génération.</li>
+        <li data-i18n="shelf.b4_4">Bouton « Copier » pour récupérer le texte.</li>
+        <li data-i18n="shelf.b4_5">Apple Intelligence Foundation Models, 100% local.</li>
       </ul>
     </div>
   </div>
-  <p class="text-sm text-cream/55"><em>Note :</em> le résumé IA de fichier nécessite macOS 26+. Sans Apple Intelligence, la Shelf garde le drag-drop, le Quick Share et le convertisseur.</p>
+  <p class="text-sm text-cream/55" data-i18n-html="shelf.note"><em>Note :</em> le résumé IA de fichier nécessite macOS 26+. Sans Apple Intelligence, la Shelf garde le drag-drop, le Quick Share et le convertisseur.</p>
 
   <!-- IA CODE -->
-  <h2>Onglet <span class="grad-text">IA Code</span> <span class="badge-pro">💎 Pro</span></h2>
-  <p class="lede">Ton assistant de code, dans l'encoche, sans alt-tab.</p>
+  <h2 data-i18n-html="iacode.title">Onglet <span class="grad-text">IA Code</span> <span class="badge-pro">💎 Pro</span></h2>
+  <p class="lede" data-i18n="iacode.lede">Ton assistant de code, dans l'encoche, sans alt-tab.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>Providers supportés</h3>
+      <h3 data-i18n="iacode.h1">Providers supportés</h3>
       <ul>
-        <li><strong>Claude Code</strong> (Anthropic) — lecture de <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>.</li>
-        <li><strong>Codex</strong> (ChatGPT) — lecture de <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.</li>
-        <li><strong>GitHub Copilot</strong> — lecture des logs Copilot.</li>
-        <li>Un seul provider actif à la fois — celui que tu choisis.</li>
+        <li data-i18n-html="iacode.b1_1"><strong>Claude Code</strong> (Anthropic) — lecture de <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>.</li>
+        <li data-i18n-html="iacode.b1_2"><strong>Codex</strong> (ChatGPT) — lecture de <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.</li>
+        <li data-i18n-html="iacode.b1_3"><strong>GitHub Copilot</strong> — lecture des logs Copilot.</li>
+        <li data-i18n="iacode.b1_4">Un seul provider actif à la fois — celui que tu choisis.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Mode compact</h3>
+      <h3 data-i18n="iacode.h2">Mode compact</h3>
       <ul>
-        <li>Le tool en cours d'exécution (Read, Edit, Bash…).</li>
-        <li>La session active.</li>
-        <li>Tient dans l'encoche pendant que tu codes.</li>
+        <li data-i18n="iacode.b2_1">Le tool en cours d'exécution (Read, Edit, Bash…).</li>
+        <li data-i18n="iacode.b2_2">La session active.</li>
+        <li data-i18n="iacode.b2_3">Tient dans l'encoche pendant que tu codes.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Mode étendu</h3>
+      <h3 data-i18n="iacode.h3">Mode étendu</h3>
       <ul>
-        <li>Dots indicator des sessions ouvertes.</li>
-        <li>Context bar : pourcentage du context window utilisé.</li>
-        <li>Stats tokens en temps réel.</li>
-        <li>Session picker pour switcher en un clic.</li>
+        <li data-i18n="iacode.b3_1">Dots indicator des sessions ouvertes.</li>
+        <li data-i18n="iacode.b3_2">Context bar : pourcentage du context window utilisé.</li>
+        <li data-i18n="iacode.b3_3">Stats tokens en temps réel.</li>
+        <li data-i18n="iacode.b3_4">Session picker pour switcher en un clic.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>100% local</h3>
+      <h3 data-i18n="iacode.h4">100% local</h3>
       <ul>
-        <li>NotchIA lit les sessions depuis <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code> et les logs Copilot.</li>
-        <li>Aucune requête réseau vers Anthropic, OpenAI ou GitHub depuis NotchIA.</li>
-        <li>Tes prompts et réponses ne transitent jamais par nos serveurs.</li>
+        <li data-i18n-html="iacode.b4_1">NotchIA lit les sessions depuis <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code> et les logs Copilot.</li>
+        <li data-i18n="iacode.b4_2">Aucune requête réseau vers Anthropic, OpenAI ou GitHub depuis NotchIA.</li>
+        <li data-i18n="iacode.b4_3">Tes prompts et réponses ne transitent jamais par nos serveurs.</li>
       </ul>
     </div>
   </div>
 
   <!-- PRESSE-PAPIER -->
-  <h2>Onglet <span class="grad-text">Presse-papier</span> <span class="badge-pro">💎 Pro</span></h2>
-  <p class="lede">Tout ce que tu as copié, retrouvable instantanément.</p>
+  <h2 data-i18n-html="clip.title">Onglet <span class="grad-text">Presse-papier</span> <span class="badge-pro">💎 Pro</span></h2>
+  <p class="lede" data-i18n="clip.lede">Tout ce que tu as copié, retrouvable instantanément.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>Historique intelligent</h3>
+      <h3 data-i18n="clip.h1">Historique intelligent</h3>
       <ul>
-        <li>Jusqu'à 48 entrées (configurable).</li>
-        <li>Recherche full-text sur tout l'historique.</li>
-        <li>Groupement par app source : Safari, VSCode, Slack, etc.</li>
-        <li>Raccourci d'ouverture : ⇧⌘C.</li>
+        <li data-i18n="clip.b1_1">Jusqu'à 48 entrées (configurable).</li>
+        <li data-i18n="clip.b1_2">Recherche full-text sur tout l'historique.</li>
+        <li data-i18n="clip.b1_3">Groupement par app source : Safari, VSCode, Slack, etc.</li>
+        <li data-i18n="clip.b1_4">Raccourci d'ouverture : ⇧⌘C.</li>
       </ul>
     </div>
     <div class="callout">
-      <h3>Sécurité par défaut</h3>
+      <h3 data-i18n="clip.h2">Sécurité par défaut</h3>
       <ul>
-        <li>Auto-clear du contenu sensible détecté (mots de passe, numéros de carte).</li>
-        <li>Restauration en un clic d'une entrée passée.</li>
-        <li>Rien ne sort de ton Mac.</li>
+        <li data-i18n="clip.b2_1">Auto-clear du contenu sensible détecté (mots de passe, numéros de carte).</li>
+        <li data-i18n="clip.b2_2">Restauration en un clic d'une entrée passée.</li>
+        <li data-i18n="clip.b2_3">Rien ne sort de ton Mac.</li>
       </ul>
     </div>
   </div>
 
   <!-- ============ CONFIANCE ============ -->
   <div class="divider"></div>
-  <h2>Confiance & <span class="grad-text">vie privée</span></h2>
-  <p class="lede">On a conçu NotchIA pour qu'elle ne puisse pas trahir tes données — pas juste pour qu'elle promette de ne pas le faire.</p>
+  <h2 data-i18n-html="trust.title">Confiance & <span class="grad-text">vie privée</span></h2>
+  <p class="lede" data-i18n="trust.lede">On a conçu NotchIA pour qu'elle ne puisse pas trahir tes données — pas juste pour qu'elle promette de ne pas le faire.</p>
   <div class="feature-grid cols-2">
     <div class="callout">
-      <h3>IA on-device uniquement</h3>
-      <p class="!mb-0">Tous les résumés (Digest, Shelf) passent par Apple Intelligence Foundation Models, qui tourne entièrement sur ton appareil. Aucun appel à OpenAI, Anthropic ou un autre fournisseur tiers.</p>
+      <h3 data-i18n="trust.h1">IA on-device uniquement</h3>
+      <p class="!mb-0" data-i18n="trust.p1">Tous les résumés (Digest, Shelf) passent par Apple Intelligence Foundation Models, qui tourne entièrement sur ton appareil. Aucun appel à OpenAI, Anthropic ou un autre fournisseur tiers.</p>
     </div>
     <div class="callout">
-      <h3>Données locales, jamais envoyées</h3>
-      <p class="!mb-0">Calendrier, rappels, presse-papier, sessions Claude/Codex/Copilot, statut Focus, état Bluetooth — rien de tout ça ne quitte ton Mac.</p>
+      <h3 data-i18n="trust.h2">Données locales, jamais envoyées</h3>
+      <p class="!mb-0" data-i18n="trust.p2">Calendrier, rappels, presse-papier, sessions Claude/Codex/Copilot, statut Focus, état Bluetooth — rien de tout ça ne quitte ton Mac.</p>
     </div>
     <div class="callout">
-      <h3>Backend minimal</h3>
-      <p class="!mb-0">Un seul Cloudflare Worker, qui ne sait faire qu'une chose : valider une clé de licence. Zéro télémétrie, zéro analytics tiers, pas de pixel, pas de Sentry.</p>
+      <h3 data-i18n="trust.h3">Backend minimal</h3>
+      <p class="!mb-0" data-i18n="trust.p3">Un seul Cloudflare Worker, qui ne sait faire qu'une chose : valider une clé de licence. Zéro télémétrie, zéro analytics tiers, pas de pixel, pas de Sentry.</p>
     </div>
     <div class="callout">
-      <h3>Anti-piratage discret</h3>
-      <p class="!mb-0">Vérification de licence par signature Ed25519 et <code class="font-mono text-xs">PT_DENY_ATTACH</code> en production. Transparent pour l'utilisateur légitime, frustrant pour qui essaie de cracker.</p>
+      <h3 data-i18n="trust.h4">Anti-piratage discret</h3>
+      <p class="!mb-0" data-i18n-html="trust.p4">Vérification de licence par signature Ed25519 et <code class="font-mono text-xs">PT_DENY_ATTACH</code> en production. Transparent pour l'utilisateur légitime, frustrant pour qui essaie de cracker.</p>
     </div>
   </div>
 
   <!-- ============ PRÉREQUIS ============ -->
-  <h2>Prérequis <span class="grad-text">techniques</span></h2>
-  <p class="lede">Ce qu'il te faut pour lancer NotchIA aujourd'hui.</p>
+  <h2 data-i18n-html="req.title">Prérequis <span class="grad-text">techniques</span></h2>
+  <p class="lede" data-i18n="req.lede">Ce qu'il te faut pour lancer NotchIA aujourd'hui.</p>
   <div class="callout">
     <ul>
-      <li><strong>macOS 15.0 Sequoia minimum.</strong></li>
-      <li><strong>Apple Silicon ou Intel</strong> — binaire universal.</li>
-      <li><strong>Mac avec encoche recommandé</strong> (MacBook Pro / Air 2021 et plus). Fonctionne aussi sans : NotchIA simule une encoche sous la menu bar.</li>
-      <li><strong>macOS 26+ requis</strong> pour les résumés IA Shelf et le brief Digest (Apple Intelligence). Sans ça, dégradation gracieuse — les onglets restent fonctionnels.</li>
-      <li><strong>~30 Mo</strong> d'espace disque.</li>
-      <li><strong>Réseau</strong> utilisé uniquement pour : validation de licence, mises à jour Sparkle, fetch des flux RSS du Digest. Rien d'autre.</li>
+      <li data-i18n-html="req.b1"><strong>macOS 15.0 Sequoia minimum.</strong></li>
+      <li data-i18n-html="req.b2"><strong>Apple Silicon ou Intel</strong> — binaire universal.</li>
+      <li data-i18n-html="req.b3"><strong>Mac avec encoche recommandé</strong> (MacBook Pro / Air 2021 et plus). Fonctionne aussi sans : NotchIA simule une encoche sous la menu bar.</li>
+      <li data-i18n-html="req.b4"><strong>macOS 26+ requis</strong> pour les résumés IA Shelf et le brief Digest (Apple Intelligence). Sans ça, dégradation gracieuse — les onglets restent fonctionnels.</li>
+      <li data-i18n-html="req.b5"><strong>~30 Mo</strong> d'espace disque.</li>
+      <li data-i18n-html="req.b6"><strong>Réseau</strong> utilisé uniquement pour : validation de licence, mises à jour Sparkle, fetch des flux RSS du Digest. Rien d'autre.</li>
     </ul>
   </div>
 
   <!-- ============ CTA ============ -->
   <div class="divider"></div>
   <section class="text-center mt-8 mb-4">
-    <h2 class="!mt-0 font-display text-3xl md:text-4xl">Prêt à essayer ?</h2>
-    <p class="text-cream/70 max-w-xl mx-auto mb-6">Télécharge la version gratuite. Si elle te plaît, débloque les onglets Pro quand tu veux.</p>
+    <h2 class="!mt-0 font-display text-3xl md:text-4xl" data-i18n="cta.title">Prêt à essayer ?</h2>
+    <p class="text-cream/70 max-w-xl mx-auto mb-6" data-i18n="cta.lead">Télécharge la version gratuite. Si elle te plaît, débloque les onglets Pro quand tu veux.</p>
     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-      <a href="/#telecharger" class="cta-primary">Télécharger gratuit</a>
-      <a href="/pricing" class="cta-secondary">Voir les tarifs Pro</a>
+      <a href="/#telecharger" class="cta-primary" data-i18n="cta.primary">Télécharger gratuit</a>
+      <a href="/pricing" class="cta-secondary" data-i18n="cta.secondary">Voir les tarifs Pro</a>
     </div>
   </section>
 
@@ -580,15 +588,781 @@
 
 <footer class="border-t border-cream/10 mt-12">
   <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
-    <div>© 2026 NotchIA · Axel Courty</div>
+    <div data-i18n="foot.copy">© 2026 NotchIA · Axel Courty</div>
     <nav class="flex flex-wrap gap-x-5 gap-y-2">
-      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
-      <a href="/cgv" class="hover:text-cream">CGV</a>
-      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
-      <a href="/refund" class="hover:text-cream">Remboursement</a>
+      <a href="/mentions-legales" class="hover:text-cream" data-i18n="foot.legal">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream" data-i18n="foot.cgv">CGV</a>
+      <a href="/privacy" class="hover:text-cream" data-i18n="foot.privacy">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream" data-i18n="foot.refund">Remboursement</a>
     </nav>
   </div>
 </footer>
+
+<script>
+  const I18N = {
+    fr: {
+      'nav.home':'Accueil','nav.features':'Fonctionnalités','nav.pricing':'Tarifs',
+      'hero.title':'Toutes les <span class="grad-text">fonctionnalités</span>',
+      'hero.lead1':"L'encoche de ton Mac devient un véritable assistant. Musique, calendrier, digest d'actualité IA, concentration et toutes les détections live sont <strong class=\"text-cream\">gratuits</strong>.",
+      'hero.lead2':'Passe Pro <span class="badge-pro">💎 Pro</span> pour débloquer la Shelf (drag-drop universel + résumé IA de fichiers), le suivi temps réel de ton assistant de code et l\'historique presse-papier.',
+      'hero.meta':'v2.8.0 Wise Owl 🦉 · macOS 15+ · Apple Silicon ou Intel',
+      'hero.callout':"L'encoche pense maintenant. Sept onglets, des dizaines de détections, et toute l'intelligence reste sur ton Mac — aucun flux, aucun fichier, aucun token n'est envoyé à nos serveurs.",
+      'free.eyebrow':'Inclus dans la version gratuite',
+      'music.title':'Onglet <span class="grad-text">Musique</span> <span class="badge-free">Gratuit</span>',
+      'music.lede':"La piste qui tourne, sous la main, sans ouvrir d'app.",
+      'music.h1':"Ce que tu vois en un coup d'œil",
+      'music.b1_1':'Pochette, titre, artiste, progression temps réel.',
+      'music.b1_2':'Marquee fluide quand le titre est trop long.',
+      'music.b1_3':"Tinting dynamique : l'encoche prend la couleur dominante de la pochette.",
+      'music.b1_4':'Spectrogramme audio coloré et visualiseur custom.',
+      'music.h2':'4 controllers, un seul UI',
+      'music.b2_1':'Now Playing système (tout ce qui joue, navigateur inclus).',
+      'music.b2_2':'Apple Music dédié.','music.b2_3':'Spotify dédié.','music.b2_4':'YouTube Music dédié.',
+      'music.h3':'Contrôles configurables',
+      'music.b3_1':'Boutons activables individuellement : play/pause, suivant, précédent, like.',
+      'music.b3_2':'Like rapide via ⇧⌘L.',
+      'music.b3_3':'Lyrics optionnels quand le controller les expose.',
+      'music.h4':'Couleur à ta main',
+      'music.b4_1':"Slider de teinte : blanc neutre, couleur de la pochette, ou ta teinte d'accent.",
+      'music.b4_2':"Anti-flash quand la pochette change d'image.",
+      'cal.title':'Onglet <span class="grad-text">Calendrier</span> <span class="badge-free">Gratuit</span>',
+      'cal.lede':'Tes prochains événements en survol, sans contexte switch.',
+      'cal.h1':"Vue d'ensemble",
+      'cal.b1_1':"Mini calendrier qui apparaît au survol de l'encoche.",
+      'cal.b1_2':'Liste des prochains événements à droite.',
+      'cal.b1_3':'Auto-scroll vers le prochain rendez-vous.',
+      'cal.b1_4':'Premier jour de la semaine configurable (lundi ou dimanche).',
+      'cal.h2':'Affichage maîtrisé',
+      'cal.b2_1':'Choix des calendriers visibles (perso, pro, partagés).',
+      'cal.b2_2':"Masquer les évènements « toute la journée » pour ne garder que ce qui a une heure.",
+      'cal.b2_3':"Titres complets ou tronqués selon ta densité d'affichage.",
+      'cal.b2_4':'Rappels intégrés depuis Reminders.app, dans la même vue.',
+      'dig.title':'Onglet <span class="grad-text">Digest</span> <span class="badge-new">Nouveau · 2.8.0</span> <span class="badge-free">Gratuit</span>',
+      'dig.lede':"Ton brief d'actualité matinal, résumé par ton Mac, jamais par un serveur.",
+      'dig.h1':'Tes flux, ton sujet',
+      'dig.b1_1':"Ajoute n'importe quel flux RSS ou Atom (blogs, médias, newsletters).",
+      'dig.b1_2':"Définis un sujet à suivre — par exemple « IA vidéo, macOS, SwiftUI ».",
+      'dig.b1_3':"L'IA filtre les articles pertinents, résume et priorise.",
+      'dig.h2':'100% on-device',
+      'dig.b2_1':'Résumés générés par Apple Intelligence Foundation Models, en local.',
+      'dig.b2_2':'Aucun flux ne sort de ton Mac.',
+      'dig.b2_3':'Cache local de 14 jours pour relire un brief offline.',
+      'dig.note':"<em>Note :</em> les résumés IA nécessitent macOS 26+ avec Apple Intelligence. Sur macOS 15, l'onglet fonctionne en mode viewer brut (flux + tri chronologique, sans résumé).",
+      'foc.title':'Onglet <span class="grad-text">Concentration</span> <span class="badge-free">Gratuit</span>',
+      'foc.lede':'Concentration intégré, stats journalières, badges discrets.',
+      'foc.h1':'Le minuteur',
+      'foc.b1_1':"Ring de progression animé autour de l'encoche.",
+      'foc.b1_2':'Durées configurables : focus, pause courte, pause longue.',
+      'foc.b1_3':'Nombre de sessions avant pause longue ajustable.',
+      'foc.b1_4':'Commandes Démarrer, Pause, Skip, Reset.',
+      'foc.h2':'Tes habitudes en clair',
+      'foc.b2_1':'Stats journalières et historique en graphique.',
+      'foc.b2_2':'Mini badges Focus et Cycle pendant les sessions.',
+      'foc.b2_3':'Audio feedback en fin de focus et fin de pause.',
+      'foc.b2_4':'Sneak peek : un rappel discret quand il reste 1 minute.',
+      'live.title':'Détections <span class="grad-text">live</span> <span class="badge-free">Gratuit</span>',
+      'live.lede':"L'encoche réagit à ce qui se passe sur ton Mac, en temps réel. Toutes les détections sont toggleables individuellement.",
+      'live.h1':'Appel vidéo',
+      'live.p1':"FaceTime, Zoom, Google Meet, Microsoft Teams, Slack Huddle. Indicateur dédié pendant l'appel.",
+      'live.h2':'Focus / Ne pas déranger',
+      'live.p2':"L'encoche reflète ton mode Focus actif. Visuel adapté pour ne pas distraire.",
+      'live.h3':"Enregistrement d'écran",
+      'live.p3':"Détection auto. Option pour cacher l'encoche pendant la capture si tu veux un rendu propre.",
+      'live.h4':'AirPods & Bluetooth',
+      'live.p4':'Connexion, déconnexion, batterie affichée en sneak peek au moment du pairing.',
+      'live.h5':'HUD volume & luminosité',
+      'live.p5':"Remplace le HUD système. Mode inline dans l'encoche ou rendu classique au choix.",
+      'live.h6':'Événements système',
+      'live.p6':"Gradient ou couleur d'accent quand un événement notable se déclenche.",
+      'live.h7':'Téléchargements',
+      'live.p7':'Animation download visible pour AirDrop entrant et téléchargements navigateur.',
+      'live.h8':'Webcam active',
+      'live.p8':"Détection précise de l'usage caméra par n'importe quelle app.",
+      'live.h9':'Sneak Peek Engine',
+      'live.p9':'Widgets en rotation pendant que tu bosses : musique, Concentration, presse-papier, volume, luminosité. Intervalle et durée configurables.',
+      'pers.title':'<span class="grad-text">Personnalisation</span> complète <span class="badge-free">Gratuit</span>',
+      'pers.lede':"L'encoche s'adapte à toi, pas l'inverse.",
+      'pers.h1':'5 thèmes inclus',
+      'pers.b1_1':'<strong>Marque</strong> — violet → cyan, signature NotchIA.',
+      'pers.b1_2':'<strong>Crépuscule</strong> — orange → magenta.',
+      'pers.b1_3':'<strong>Océan</strong> — turquoise → violet.',
+      'pers.b1_4':'<strong>Forêt</strong> — vert → cyan.',
+      'pers.b1_5':'<strong>Noir</strong> — pour les puristes.',
+      'pers.b1_6':"Couleur d'accent custom via color picker, sur n'importe quel thème.",
+      'pers.h2':'Apparence',
+      'pers.b2_1':"Icône d'app uploadable (la tienne ou un dock perso).",
+      'pers.b2_2':"3 densités d'affichage : compact, normal, large.",
+      'pers.b2_3':"Hauteur d'encoche : menu bar, encoche physique, ou taille custom.",
+      'pers.b2_4':'Effet lumineux, ombre, scaling animé — chacun toggleable.',
+      'pers.b2_5':'Langue : français, anglais, espagnol, allemand.',
+      'pers.h3':'Comportement',
+      'pers.b3_1':'Sensibilité des gestes (hover, drag, tap).',
+      'pers.b3_2':"Hover area étendue au-delà de l'encoche.",
+      'pers.b3_3':'Délai de fermeture configurable.',
+      'pers.b3_4':"Cacher l'encoche pendant un screen recording.",
+      'pers.b3_5':"Afficher (ou non) sur l'écran de verrouillage.",
+      'pers.b3_6':'Retours haptiques sur les MacBook qui les supportent.',
+      'pers.b3_7':"Auto-switch d'écran en multi-display.",
+      'pers.h4':'Raccourcis clavier',
+      'pers.b4_1':'7 raccourcis 100% éditables.',
+      'pers.b4_2':"Ouvrir/fermer l'encoche, basculer un onglet, play/pause musique, like, démarrer Concentration, ouvrir Shelf, etc.",
+      'pers.b4_3':'Aucune combinaison forcée — tu remappes tout.',
+      'pro.eyebrow':'Débloqué avec NotchIA Pro 💎',
+      'pro.band':"Trois onglets puissants pour aller plus loin : un dock universel pour partager et convertir n'importe quoi, le suivi temps réel de ton assistant IA de code, et un historique presse-papier intelligent.",
+      'shelf.title':'Onglet <span class="grad-text">Shelf</span> <span class="badge-pro">💎 Pro</span>',
+      'shelf.lede':"Drag, drop, partage, résume. L'encoche devient ton hub pour les fichiers.",
+      'shelf.h1':'Drag-drop universel',
+      'shelf.b1_1':"Drague un fichier vers l'encoche : la zone de drop s'agrandit automatiquement.",
+      'shelf.b1_2':'Empile plusieurs fichiers en attente.',
+      'shelf.b1_3':'Copy-on-drag ou move, au choix par fichier.',
+      'shelf.b1_4':'Auto-remove après partage (toggleable).',
+      'shelf.h2':'Quick Share intelligent',
+      'shelf.b2_1':'Auto-découverte des cibles compatibles : AirDrop, Messages, Mail, WhatsApp, Slack…',
+      'shelf.b2_2':'Un clic pour envoyer, pas de menu Partage natif.',
+      'shelf.h3':'Convertisseur intégré',
+      'shelf.b3_1':'<strong>Images</strong> : PNG, JPG, HEIC, WebP entre tous les formats.',
+      'shelf.b3_2':'<strong>PDF</strong> : conversion PDF ↔ images.',
+      'shelf.b3_3':'<strong>Audio</strong> : mp3, wav, aac, m4a.',
+      'shelf.b3_4':'<strong>Vidéo</strong> : mp4, mov.',
+      'shelf.h4':"Résumé IA d'un fichier <span class=\"badge-new\">on-device</span>",
+      'shelf.b4_1':'Drop un PDF, .txt, .md ou .docx.',
+      'shelf.b4_2':'Résumé scrollable en quelques secondes.',
+      'shelf.b4_3':'Animation aura rainbow pendant la génération.',
+      'shelf.b4_4':'Bouton « Copier » pour récupérer le texte.',
+      'shelf.b4_5':'Apple Intelligence Foundation Models, 100% local.',
+      'shelf.note':'<em>Note :</em> le résumé IA de fichier nécessite macOS 26+. Sans Apple Intelligence, la Shelf garde le drag-drop, le Quick Share et le convertisseur.',
+      'iacode.title':'Onglet <span class="grad-text">IA Code</span> <span class="badge-pro">💎 Pro</span>',
+      'iacode.lede':"Ton assistant de code, dans l'encoche, sans alt-tab.",
+      'iacode.h1':'Providers supportés',
+      'iacode.b1_1':'<strong>Claude Code</strong> (Anthropic) — lecture de <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>.',
+      'iacode.b1_2':'<strong>Codex</strong> (ChatGPT) — lecture de <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.',
+      'iacode.b1_3':'<strong>GitHub Copilot</strong> — lecture des logs Copilot.',
+      'iacode.b1_4':'Un seul provider actif à la fois — celui que tu choisis.',
+      'iacode.h2':'Mode compact',
+      'iacode.b2_1':"Le tool en cours d'exécution (Read, Edit, Bash…).",
+      'iacode.b2_2':'La session active.',
+      'iacode.b2_3':"Tient dans l'encoche pendant que tu codes.",
+      'iacode.h3':'Mode étendu',
+      'iacode.b3_1':'Dots indicator des sessions ouvertes.',
+      'iacode.b3_2':'Context bar : pourcentage du context window utilisé.',
+      'iacode.b3_3':'Stats tokens en temps réel.',
+      'iacode.b3_4':'Session picker pour switcher en un clic.',
+      'iacode.h4':'100% local',
+      'iacode.b4_1':'NotchIA lit les sessions depuis <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code> et les logs Copilot.',
+      'iacode.b4_2':'Aucune requête réseau vers Anthropic, OpenAI ou GitHub depuis NotchIA.',
+      'iacode.b4_3':'Tes prompts et réponses ne transitent jamais par nos serveurs.',
+      'clip.title':'Onglet <span class="grad-text">Presse-papier</span> <span class="badge-pro">💎 Pro</span>',
+      'clip.lede':'Tout ce que tu as copié, retrouvable instantanément.',
+      'clip.h1':'Historique intelligent',
+      'clip.b1_1':"Jusqu'à 48 entrées (configurable).",
+      'clip.b1_2':"Recherche full-text sur tout l'historique.",
+      'clip.b1_3':'Groupement par app source : Safari, VSCode, Slack, etc.',
+      'clip.b1_4':"Raccourci d'ouverture : ⇧⌘C.",
+      'clip.h2':'Sécurité par défaut',
+      'clip.b2_1':'Auto-clear du contenu sensible détecté (mots de passe, numéros de carte).',
+      'clip.b2_2':"Restauration en un clic d'une entrée passée.",
+      'clip.b2_3':'Rien ne sort de ton Mac.',
+      'trust.title':'Confiance & <span class="grad-text">vie privée</span>',
+      'trust.lede':"On a conçu NotchIA pour qu'elle ne puisse pas trahir tes données — pas juste pour qu'elle promette de ne pas le faire.",
+      'trust.h1':'IA on-device uniquement',
+      'trust.p1':'Tous les résumés (Digest, Shelf) passent par Apple Intelligence Foundation Models, qui tourne entièrement sur ton appareil. Aucun appel à OpenAI, Anthropic ou un autre fournisseur tiers.',
+      'trust.h2':'Données locales, jamais envoyées',
+      'trust.p2':'Calendrier, rappels, presse-papier, sessions Claude/Codex/Copilot, statut Focus, état Bluetooth — rien de tout ça ne quitte ton Mac.',
+      'trust.h3':'Backend minimal',
+      'trust.p3':'Un seul Cloudflare Worker, qui ne sait faire qu\'une chose : valider une clé de licence. Zéro télémétrie, zéro analytics tiers, pas de pixel, pas de Sentry.',
+      'trust.h4':'Anti-piratage discret',
+      'trust.p4':'Vérification de licence par signature Ed25519 et <code class="font-mono text-xs">PT_DENY_ATTACH</code> en production. Transparent pour l\'utilisateur légitime, frustrant pour qui essaie de cracker.',
+      'req.title':'Prérequis <span class="grad-text">techniques</span>',
+      'req.lede':"Ce qu'il te faut pour lancer NotchIA aujourd'hui.",
+      'req.b1':'<strong>macOS 15.0 Sequoia minimum.</strong>',
+      'req.b2':'<strong>Apple Silicon ou Intel</strong> — binaire universal.',
+      'req.b3':'<strong>Mac avec encoche recommandé</strong> (MacBook Pro / Air 2021 et plus). Fonctionne aussi sans : NotchIA simule une encoche sous la menu bar.',
+      'req.b4':'<strong>macOS 26+ requis</strong> pour les résumés IA Shelf et le brief Digest (Apple Intelligence). Sans ça, dégradation gracieuse — les onglets restent fonctionnels.',
+      'req.b5':"<strong>~30 Mo</strong> d'espace disque.",
+      'req.b6':"<strong>Réseau</strong> utilisé uniquement pour : validation de licence, mises à jour Sparkle, fetch des flux RSS du Digest. Rien d'autre.",
+      'cta.title':'Prêt à essayer ?',
+      'cta.lead':'Télécharge la version gratuite. Si elle te plaît, débloque les onglets Pro quand tu veux.',
+      'cta.primary':'Télécharger gratuit','cta.secondary':'Voir les tarifs Pro',
+      'foot.copy':'© 2026 NotchIA · Axel Courty',
+      'foot.legal':'Mentions légales','foot.cgv':'CGV','foot.privacy':'Confidentialité','foot.refund':'Remboursement',
+    },
+    en: {
+      'nav.home':'Home','nav.features':'Features','nav.pricing':'Pricing',
+      'hero.title':'All the <span class="grad-text">features</span>',
+      'hero.lead1':'Your Mac\'s notch becomes a real assistant. Music, calendar, AI news digest, focus and all live detections are <strong class="text-cream">free</strong>.',
+      'hero.lead2':'Go Pro <span class="badge-pro">💎 Pro</span> to unlock the Shelf (universal drag-drop + AI file summaries), real-time tracking of your code assistant, and clipboard history.',
+      'hero.meta':'v2.8.0 Wise Owl 🦉 · macOS 15+ · Apple Silicon or Intel',
+      'hero.callout':'The notch thinks now. Seven tabs, dozens of detections, and all the intelligence stays on your Mac — no stream, no file, no token is sent to our servers.',
+      'free.eyebrow':'Included in the free version',
+      'music.title':'<span class="grad-text">Music</span> tab <span class="badge-free">Free</span>',
+      'music.lede':'The track that\'s playing, right at hand, without opening an app.',
+      'music.h1':'What you see at a glance',
+      'music.b1_1':'Artwork, title, artist, real-time progress.',
+      'music.b1_2':'Smooth marquee when the title is too long.',
+      'music.b1_3':'Dynamic tinting: the notch picks up the dominant color of the artwork.',
+      'music.b1_4':'Colored audio spectrogram and custom visualizer.',
+      'music.h2':'4 controllers, one UI',
+      'music.b2_1':'System Now Playing (anything that plays, browser included).',
+      'music.b2_2':'Dedicated Apple Music.','music.b2_3':'Dedicated Spotify.','music.b2_4':'Dedicated YouTube Music.',
+      'music.h3':'Configurable controls',
+      'music.b3_1':'Buttons toggleable individually: play/pause, next, previous, like.',
+      'music.b3_2':'Quick like via ⇧⌘L.',
+      'music.b3_3':'Optional lyrics when the controller exposes them.',
+      'music.h4':'Color your way',
+      'music.b4_1':'Tint slider: neutral white, artwork color, or your accent tint.',
+      'music.b4_2':'Anti-flash when the artwork changes.',
+      'cal.title':'<span class="grad-text">Calendar</span> tab <span class="badge-free">Free</span>',
+      'cal.lede':'Your upcoming events on hover, no context switch.',
+      'cal.h1':'Overview',
+      'cal.b1_1':'Mini calendar that appears on notch hover.',
+      'cal.b1_2':'List of upcoming events on the right.',
+      'cal.b1_3':'Auto-scroll to the next appointment.',
+      'cal.b1_4':'Configurable first day of the week (Monday or Sunday).',
+      'cal.h2':'Controlled display',
+      'cal.b2_1':'Choose visible calendars (personal, work, shared).',
+      'cal.b2_2':'Hide "all-day" events to keep only timed ones.',
+      'cal.b2_3':'Full or truncated titles depending on your display density.',
+      'cal.b2_4':'Reminders integrated from Reminders.app, in the same view.',
+      'dig.title':'<span class="grad-text">Digest</span> tab <span class="badge-new">New · 2.8.0</span> <span class="badge-free">Free</span>',
+      'dig.lede':'Your morning news brief, summarized by your Mac, never by a server.',
+      'dig.h1':'Your feeds, your topic',
+      'dig.b1_1':'Add any RSS or Atom feed (blogs, media, newsletters).',
+      'dig.b1_2':'Set a topic to follow — for example "AI video, macOS, SwiftUI".',
+      'dig.b1_3':'The AI filters relevant articles, summarizes and prioritizes.',
+      'dig.h2':'100% on-device',
+      'dig.b2_1':'Summaries generated by Apple Intelligence Foundation Models, locally.',
+      'dig.b2_2':'No feed leaves your Mac.',
+      'dig.b2_3':'Local 14-day cache to re-read a brief offline.',
+      'dig.note':'<em>Note:</em> AI summaries require macOS 26+ with Apple Intelligence. On macOS 15, the tab works as a raw viewer (feeds + chronological sorting, no summary).',
+      'foc.title':'<span class="grad-text">Focus</span> tab <span class="badge-free">Free</span>',
+      'foc.lede':'Built-in focus timer, daily stats, discreet badges.',
+      'foc.h1':'The timer',
+      'foc.b1_1':'Animated progress ring around the notch.',
+      'foc.b1_2':'Configurable durations: focus, short break, long break.',
+      'foc.b1_3':'Adjustable number of sessions before long break.',
+      'foc.b1_4':'Start, Pause, Skip, Reset commands.',
+      'foc.h2':'Your habits, clearly',
+      'foc.b2_1':'Daily stats and history graph.',
+      'foc.b2_2':'Mini Focus and Cycle badges during sessions.',
+      'foc.b2_3':'Audio feedback at end of focus and end of break.',
+      'foc.b2_4':'Sneak peek: a discreet reminder when 1 minute remains.',
+      'live.title':'<span class="grad-text">Live</span> detections <span class="badge-free">Free</span>',
+      'live.lede':'The notch reacts to what\'s happening on your Mac, in real time. All detections are toggleable individually.',
+      'live.h1':'Video call',
+      'live.p1':'FaceTime, Zoom, Google Meet, Microsoft Teams, Slack Huddle. Dedicated indicator during the call.',
+      'live.h2':'Focus / Do Not Disturb',
+      'live.p2':'The notch reflects your active Focus mode. Visual tuned to not distract.',
+      'live.h3':'Screen recording',
+      'live.p3':'Auto-detection. Option to hide the notch during capture for a clean shot.',
+      'live.h4':'AirPods & Bluetooth',
+      'live.p4':'Connection, disconnection, battery shown in sneak peek at pairing time.',
+      'live.h5':'Volume & brightness HUD',
+      'live.p5':'Replaces the system HUD. Inline mode in the notch or classic rendering — your choice.',
+      'live.h6':'System events',
+      'live.p6':'Gradient or accent color when a notable event fires.',
+      'live.h7':'Downloads',
+      'live.p7':'Visible download animation for incoming AirDrop and browser downloads.',
+      'live.h8':'Active webcam',
+      'live.p8':'Precise detection of camera use by any app.',
+      'live.h9':'Sneak Peek Engine',
+      'live.p9':'Rotating widgets while you work: music, Focus, clipboard, volume, brightness. Configurable interval and duration.',
+      'pers.title':'Full <span class="grad-text">customization</span> <span class="badge-free">Free</span>',
+      'pers.lede':'The notch adapts to you, not the other way around.',
+      'pers.h1':'5 themes included',
+      'pers.b1_1':'<strong>Brand</strong> — violet → cyan, NotchIA signature.',
+      'pers.b1_2':'<strong>Twilight</strong> — orange → magenta.',
+      'pers.b1_3':'<strong>Ocean</strong> — turquoise → violet.',
+      'pers.b1_4':'<strong>Forest</strong> — green → cyan.',
+      'pers.b1_5':'<strong>Black</strong> — for purists.',
+      'pers.b1_6':'Custom accent color via color picker, on any theme.',
+      'pers.h2':'Appearance',
+      'pers.b2_1':'Uploadable app icon (yours or a custom dock).',
+      'pers.b2_2':'3 display densities: compact, normal, large.',
+      'pers.b2_3':'Notch height: menu bar, physical notch, or custom size.',
+      'pers.b2_4':'Glow effect, shadow, animated scaling — each toggleable.',
+      'pers.b2_5':'Language: French, English, Spanish, German.',
+      'pers.h3':'Behavior',
+      'pers.b3_1':'Gesture sensitivity (hover, drag, tap).',
+      'pers.b3_2':'Hover area extended beyond the notch.',
+      'pers.b3_3':'Configurable close delay.',
+      'pers.b3_4':'Hide the notch during screen recording.',
+      'pers.b3_5':'Show (or not) on the lock screen.',
+      'pers.b3_6':'Haptic feedback on MacBooks that support it.',
+      'pers.b3_7':'Auto screen switch in multi-display.',
+      'pers.h4':'Keyboard shortcuts',
+      'pers.b4_1':'7 shortcuts 100% editable.',
+      'pers.b4_2':'Open/close the notch, switch a tab, music play/pause, like, start Focus, open Shelf, etc.',
+      'pers.b4_3':'No forced combo — you remap everything.',
+      'pro.eyebrow':'Unlocked with NotchIA Pro 💎',
+      'pro.band':'Three powerful tabs to go further: a universal dock to share and convert anything, real-time tracking of your AI code assistant, and a smart clipboard history.',
+      'shelf.title':'<span class="grad-text">Shelf</span> tab <span class="badge-pro">💎 Pro</span>',
+      'shelf.lede':'Drag, drop, share, summarize. The notch becomes your file hub.',
+      'shelf.h1':'Universal drag-drop',
+      'shelf.b1_1':'Drag a file to the notch: the drop zone expands automatically.',
+      'shelf.b1_2':'Stack several files in queue.',
+      'shelf.b1_3':'Copy-on-drag or move, per-file choice.',
+      'shelf.b1_4':'Auto-remove after sharing (toggleable).',
+      'shelf.h2':'Smart Quick Share',
+      'shelf.b2_1':'Auto-discovery of compatible targets: AirDrop, Messages, Mail, WhatsApp, Slack…',
+      'shelf.b2_2':'One click to send, no native Share menu.',
+      'shelf.h3':'Built-in converter',
+      'shelf.b3_1':'<strong>Images</strong>: PNG, JPG, HEIC, WebP between all formats.',
+      'shelf.b3_2':'<strong>PDF</strong>: PDF ↔ images conversion.',
+      'shelf.b3_3':'<strong>Audio</strong>: mp3, wav, aac, m4a.',
+      'shelf.b3_4':'<strong>Video</strong>: mp4, mov.',
+      'shelf.h4':'AI file summary <span class="badge-new">on-device</span>',
+      'shelf.b4_1':'Drop a PDF, .txt, .md or .docx.',
+      'shelf.b4_2':'Scrollable summary in a few seconds.',
+      'shelf.b4_3':'Rainbow aura animation during generation.',
+      'shelf.b4_4':'"Copy" button to grab the text.',
+      'shelf.b4_5':'Apple Intelligence Foundation Models, 100% local.',
+      'shelf.note':'<em>Note:</em> AI file summary requires macOS 26+. Without Apple Intelligence, Shelf keeps drag-drop, Quick Share and the converter.',
+      'iacode.title':'<span class="grad-text">AI Code</span> tab <span class="badge-pro">💎 Pro</span>',
+      'iacode.lede':'Your code assistant, in the notch, no alt-tab.',
+      'iacode.h1':'Supported providers',
+      'iacode.b1_1':'<strong>Claude Code</strong> (Anthropic) — reads <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>.',
+      'iacode.b1_2':'<strong>Codex</strong> (ChatGPT) — reads <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.',
+      'iacode.b1_3':'<strong>GitHub Copilot</strong> — reads Copilot logs.',
+      'iacode.b1_4':'One active provider at a time — the one you choose.',
+      'iacode.h2':'Compact mode',
+      'iacode.b2_1':'The tool currently running (Read, Edit, Bash…).',
+      'iacode.b2_2':'The active session.',
+      'iacode.b2_3':'Fits in the notch while you code.',
+      'iacode.h3':'Extended mode',
+      'iacode.b3_1':'Dots indicator of open sessions.',
+      'iacode.b3_2':'Context bar: percentage of context window used.',
+      'iacode.b3_3':'Real-time token stats.',
+      'iacode.b3_4':'Session picker to switch in one click.',
+      'iacode.h4':'100% local',
+      'iacode.b4_1':'NotchIA reads sessions from <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code> and Copilot logs.',
+      'iacode.b4_2':'No network request to Anthropic, OpenAI or GitHub from NotchIA.',
+      'iacode.b4_3':'Your prompts and responses never pass through our servers.',
+      'clip.title':'<span class="grad-text">Clipboard</span> tab <span class="badge-pro">💎 Pro</span>',
+      'clip.lede':'Everything you\'ve copied, instantly retrievable.',
+      'clip.h1':'Smart history',
+      'clip.b1_1':'Up to 48 entries (configurable).',
+      'clip.b1_2':'Full-text search across the whole history.',
+      'clip.b1_3':'Grouping by source app: Safari, VSCode, Slack, etc.',
+      'clip.b1_4':'Open shortcut: ⇧⌘C.',
+      'clip.h2':'Security by default',
+      'clip.b2_1':'Auto-clear of detected sensitive content (passwords, card numbers).',
+      'clip.b2_2':'One-click restore of a past entry.',
+      'clip.b2_3':'Nothing leaves your Mac.',
+      'trust.title':'Trust & <span class="grad-text">privacy</span>',
+      'trust.lede':'We designed NotchIA so it can\'t betray your data — not just so it promises not to.',
+      'trust.h1':'On-device AI only',
+      'trust.p1':'All summaries (Digest, Shelf) go through Apple Intelligence Foundation Models, which runs entirely on your device. No call to OpenAI, Anthropic or any other third-party provider.',
+      'trust.h2':'Local data, never sent',
+      'trust.p2':'Calendar, reminders, clipboard, Claude/Codex/Copilot sessions, Focus status, Bluetooth state — none of that leaves your Mac.',
+      'trust.h3':'Minimal backend',
+      'trust.p3':'A single Cloudflare Worker, that can do only one thing: validate a license key. Zero telemetry, zero third-party analytics, no pixel, no Sentry.',
+      'trust.h4':'Discreet anti-piracy',
+      'trust.p4':'License verification via Ed25519 signature and <code class="font-mono text-xs">PT_DENY_ATTACH</code> in production. Transparent for legitimate users, frustrating for those trying to crack.',
+      'req.title':'<span class="grad-text">Technical</span> requirements',
+      'req.lede':'What you need to run NotchIA today.',
+      'req.b1':'<strong>macOS 15.0 Sequoia minimum.</strong>',
+      'req.b2':'<strong>Apple Silicon or Intel</strong> — universal binary.',
+      'req.b3':'<strong>Mac with notch recommended</strong> (MacBook Pro / Air 2021 and later). Also works without: NotchIA simulates a notch under the menu bar.',
+      'req.b4':'<strong>macOS 26+ required</strong> for Shelf AI summaries and the Digest brief (Apple Intelligence). Without it, graceful degradation — the tabs stay functional.',
+      'req.b5':'<strong>~30 MB</strong> of disk space.',
+      'req.b6':'<strong>Network</strong> used only for: license validation, Sparkle updates, RSS feed fetching for the Digest. Nothing else.',
+      'cta.title':'Ready to try?',
+      'cta.lead':'Download the free version. If you like it, unlock the Pro tabs whenever you want.',
+      'cta.primary':'Download free','cta.secondary':'See Pro pricing',
+      'foot.copy':'© 2026 NotchIA · Axel Courty',
+      'foot.legal':'Legal','foot.cgv':'Terms','foot.privacy':'Privacy','foot.refund':'Refund',
+    },
+    es: {
+      'nav.home':'Inicio','nav.features':'Funcionalidades','nav.pricing':'Precios',
+      'hero.title':'Todas las <span class="grad-text">funcionalidades</span>',
+      'hero.lead1':'La muesca de tu Mac se convierte en un verdadero asistente. Música, calendario, resumen de actualidad IA, concentración y todas las detecciones en vivo son <strong class="text-cream">gratis</strong>.',
+      'hero.lead2':'Pasa a Pro <span class="badge-pro">💎 Pro</span> para desbloquear el Shelf (drag-drop universal + resumen IA de archivos), el seguimiento en tiempo real de tu asistente de código y el historial del portapapeles.',
+      'hero.meta':'v2.8.0 Wise Owl 🦉 · macOS 15+ · Apple Silicon o Intel',
+      'hero.callout':'La muesca ahora piensa. Siete pestañas, decenas de detecciones, y toda la inteligencia se queda en tu Mac — ningún flujo, ningún archivo, ningún token se envía a nuestros servidores.',
+      'free.eyebrow':'Incluido en la versión gratuita',
+      'music.title':'Pestaña <span class="grad-text">Música</span> <span class="badge-free">Gratis</span>',
+      'music.lede':'La pista que suena, a mano, sin abrir una app.',
+      'music.h1':'Lo que ves de un vistazo',
+      'music.b1_1':'Portada, título, artista, progreso en tiempo real.',
+      'music.b1_2':'Marquee fluido cuando el título es demasiado largo.',
+      'music.b1_3':'Tintado dinámico: la muesca toma el color dominante de la portada.',
+      'music.b1_4':'Espectrograma de audio coloreado y visualizador personalizado.',
+      'music.h2':'4 controladores, una sola UI',
+      'music.b2_1':'Now Playing del sistema (todo lo que suena, navegador incluido).',
+      'music.b2_2':'Apple Music dedicado.','music.b2_3':'Spotify dedicado.','music.b2_4':'YouTube Music dedicado.',
+      'music.h3':'Controles configurables',
+      'music.b3_1':'Botones activables individualmente: play/pause, siguiente, anterior, like.',
+      'music.b3_2':'Like rápido con ⇧⌘L.',
+      'music.b3_3':'Letras opcionales cuando el controlador las expone.',
+      'music.h4':'Color a tu gusto',
+      'music.b4_1':'Slider de tinte: blanco neutro, color de la portada o tu tinte de acento.',
+      'music.b4_2':'Anti-flash cuando la portada cambia de imagen.',
+      'cal.title':'Pestaña <span class="grad-text">Calendario</span> <span class="badge-free">Gratis</span>',
+      'cal.lede':'Tus próximos eventos al pasar el ratón, sin cambio de contexto.',
+      'cal.h1':'Vista general',
+      'cal.b1_1':'Mini calendario que aparece al pasar el ratón por la muesca.',
+      'cal.b1_2':'Lista de próximos eventos a la derecha.',
+      'cal.b1_3':'Auto-scroll hacia la siguiente cita.',
+      'cal.b1_4':'Primer día de la semana configurable (lunes o domingo).',
+      'cal.h2':'Visualización controlada',
+      'cal.b2_1':'Elige los calendarios visibles (personal, trabajo, compartidos).',
+      'cal.b2_2':'Oculta los eventos de «todo el día» para quedarte solo con los que tienen hora.',
+      'cal.b2_3':'Títulos completos o truncados según tu densidad de visualización.',
+      'cal.b2_4':'Recordatorios integrados desde Reminders.app, en la misma vista.',
+      'dig.title':'Pestaña <span class="grad-text">Digest</span> <span class="badge-new">Nuevo · 2.8.0</span> <span class="badge-free">Gratis</span>',
+      'dig.lede':'Tu brief matinal, resumido por tu Mac, nunca por un servidor.',
+      'dig.h1':'Tus feeds, tu tema',
+      'dig.b1_1':'Añade cualquier feed RSS o Atom (blogs, medios, newsletters).',
+      'dig.b1_2':'Define un tema a seguir — por ejemplo «IA vídeo, macOS, SwiftUI».',
+      'dig.b1_3':'La IA filtra los artículos relevantes, resume y prioriza.',
+      'dig.h2':'100% on-device',
+      'dig.b2_1':'Resúmenes generados por Apple Intelligence Foundation Models, en local.',
+      'dig.b2_2':'Ningún feed sale de tu Mac.',
+      'dig.b2_3':'Caché local de 14 días para releer un brief sin conexión.',
+      'dig.note':'<em>Nota:</em> los resúmenes IA requieren macOS 26+ con Apple Intelligence. En macOS 15, la pestaña funciona como visor bruto (feeds + orden cronológico, sin resumen).',
+      'foc.title':'Pestaña <span class="grad-text">Concentración</span> <span class="badge-free">Gratis</span>',
+      'foc.lede':'Concentración integrada, estadísticas diarias, badges discretos.',
+      'foc.h1':'El temporizador',
+      'foc.b1_1':'Anillo de progreso animado alrededor de la muesca.',
+      'foc.b1_2':'Duraciones configurables: foco, pausa corta, pausa larga.',
+      'foc.b1_3':'Número de sesiones antes de la pausa larga ajustable.',
+      'foc.b1_4':'Comandos Iniciar, Pausa, Skip, Reset.',
+      'foc.h2':'Tus hábitos, claros',
+      'foc.b2_1':'Estadísticas diarias e historial en gráfico.',
+      'foc.b2_2':'Mini badges Focus y Cycle durante las sesiones.',
+      'foc.b2_3':'Feedback de audio al final del foco y al final de la pausa.',
+      'foc.b2_4':'Sneak peek: un recordatorio discreto cuando queda 1 minuto.',
+      'live.title':'Detecciones <span class="grad-text">en vivo</span> <span class="badge-free">Gratis</span>',
+      'live.lede':'La muesca reacciona a lo que pasa en tu Mac, en tiempo real. Todas las detecciones son activables individualmente.',
+      'live.h1':'Videollamada',
+      'live.p1':'FaceTime, Zoom, Google Meet, Microsoft Teams, Slack Huddle. Indicador dedicado durante la llamada.',
+      'live.h2':'Focus / No molestar',
+      'live.p2':'La muesca refleja tu modo Focus activo. Visual adaptado para no distraer.',
+      'live.h3':'Grabación de pantalla',
+      'live.p3':'Detección automática. Opción para ocultar la muesca durante la captura si quieres un render limpio.',
+      'live.h4':'AirPods y Bluetooth',
+      'live.p4':'Conexión, desconexión, batería mostrada en sneak peek al emparejar.',
+      'live.h5':'HUD volumen y brillo',
+      'live.p5':'Reemplaza el HUD del sistema. Modo inline en la muesca o renderizado clásico, a elegir.',
+      'live.h6':'Eventos del sistema',
+      'live.p6':'Gradiente o color de acento cuando se dispara un evento notable.',
+      'live.h7':'Descargas',
+      'live.p7':'Animación de descarga visible para AirDrop entrante y descargas del navegador.',
+      'live.h8':'Webcam activa',
+      'live.p8':'Detección precisa del uso de cámara por cualquier app.',
+      'live.h9':'Sneak Peek Engine',
+      'live.p9':'Widgets rotando mientras trabajas: música, Concentración, portapapeles, volumen, brillo. Intervalo y duración configurables.',
+      'pers.title':'<span class="grad-text">Personalización</span> completa <span class="badge-free">Gratis</span>',
+      'pers.lede':'La muesca se adapta a ti, no al revés.',
+      'pers.h1':'5 temas incluidos',
+      'pers.b1_1':'<strong>Marca</strong> — violeta → cian, firma NotchIA.',
+      'pers.b1_2':'<strong>Crepúsculo</strong> — naranja → magenta.',
+      'pers.b1_3':'<strong>Océano</strong> — turquesa → violeta.',
+      'pers.b1_4':'<strong>Bosque</strong> — verde → cian.',
+      'pers.b1_5':'<strong>Negro</strong> — para los puristas.',
+      'pers.b1_6':'Color de acento personalizado vía color picker, en cualquier tema.',
+      'pers.h2':'Apariencia',
+      'pers.b2_1':'Icono de app subible (el tuyo o un dock personal).',
+      'pers.b2_2':'3 densidades de visualización: compacta, normal, grande.',
+      'pers.b2_3':'Altura de la muesca: barra de menú, muesca física o tamaño personalizado.',
+      'pers.b2_4':'Efecto luminoso, sombra, escalado animado — cada uno activable.',
+      'pers.b2_5':'Idioma: francés, inglés, español, alemán.',
+      'pers.h3':'Comportamiento',
+      'pers.b3_1':'Sensibilidad de gestos (hover, drag, tap).',
+      'pers.b3_2':'Zona de hover extendida más allá de la muesca.',
+      'pers.b3_3':'Retraso de cierre configurable.',
+      'pers.b3_4':'Ocultar la muesca durante una grabación de pantalla.',
+      'pers.b3_5':'Mostrar (o no) en la pantalla de bloqueo.',
+      'pers.b3_6':'Feedback háptico en los MacBook que lo soportan.',
+      'pers.b3_7':'Cambio automático de pantalla en multi-display.',
+      'pers.h4':'Atajos de teclado',
+      'pers.b4_1':'7 atajos 100% editables.',
+      'pers.b4_2':'Abrir/cerrar la muesca, cambiar de pestaña, play/pause música, like, iniciar Concentración, abrir Shelf, etc.',
+      'pers.b4_3':'Ninguna combinación forzada — lo remapeas todo.',
+      'pro.eyebrow':'Desbloqueado con NotchIA Pro 💎',
+      'pro.band':'Tres pestañas potentes para ir más lejos: un dock universal para compartir y convertir cualquier cosa, el seguimiento en tiempo real de tu asistente IA de código y un historial del portapapeles inteligente.',
+      'shelf.title':'Pestaña <span class="grad-text">Shelf</span> <span class="badge-pro">💎 Pro</span>',
+      'shelf.lede':'Drag, drop, comparte, resume. La muesca se convierte en tu hub de archivos.',
+      'shelf.h1':'Drag-drop universal',
+      'shelf.b1_1':'Arrastra un archivo a la muesca: la zona de drop se agranda automáticamente.',
+      'shelf.b1_2':'Apila varios archivos en cola.',
+      'shelf.b1_3':'Copy-on-drag o move, a elegir por archivo.',
+      'shelf.b1_4':'Auto-remove tras compartir (activable).',
+      'shelf.h2':'Quick Share inteligente',
+      'shelf.b2_1':'Auto-descubrimiento de destinos compatibles: AirDrop, Messages, Mail, WhatsApp, Slack…',
+      'shelf.b2_2':'Un clic para enviar, sin menú Compartir nativo.',
+      'shelf.h3':'Conversor integrado',
+      'shelf.b3_1':'<strong>Imágenes</strong>: PNG, JPG, HEIC, WebP entre todos los formatos.',
+      'shelf.b3_2':'<strong>PDF</strong>: conversión PDF ↔ imágenes.',
+      'shelf.b3_3':'<strong>Audio</strong>: mp3, wav, aac, m4a.',
+      'shelf.b3_4':'<strong>Vídeo</strong>: mp4, mov.',
+      'shelf.h4':'Resumen IA de un archivo <span class="badge-new">on-device</span>',
+      'shelf.b4_1':'Suelta un PDF, .txt, .md o .docx.',
+      'shelf.b4_2':'Resumen desplazable en pocos segundos.',
+      'shelf.b4_3':'Animación aura rainbow durante la generación.',
+      'shelf.b4_4':'Botón «Copiar» para recuperar el texto.',
+      'shelf.b4_5':'Apple Intelligence Foundation Models, 100% local.',
+      'shelf.note':'<em>Nota:</em> el resumen IA de archivos requiere macOS 26+. Sin Apple Intelligence, Shelf conserva el drag-drop, Quick Share y el conversor.',
+      'iacode.title':'Pestaña <span class="grad-text">IA Code</span> <span class="badge-pro">💎 Pro</span>',
+      'iacode.lede':'Tu asistente de código, en la muesca, sin alt-tab.',
+      'iacode.h1':'Proveedores soportados',
+      'iacode.b1_1':'<strong>Claude Code</strong> (Anthropic) — lectura de <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>.',
+      'iacode.b1_2':'<strong>Codex</strong> (ChatGPT) — lectura de <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.',
+      'iacode.b1_3':'<strong>GitHub Copilot</strong> — lectura de los logs de Copilot.',
+      'iacode.b1_4':'Un solo proveedor activo a la vez — el que elijas.',
+      'iacode.h2':'Modo compacto',
+      'iacode.b2_1':'La tool en ejecución (Read, Edit, Bash…).',
+      'iacode.b2_2':'La sesión activa.',
+      'iacode.b2_3':'Cabe en la muesca mientras codeas.',
+      'iacode.h3':'Modo extendido',
+      'iacode.b3_1':'Dots indicator de las sesiones abiertas.',
+      'iacode.b3_2':'Context bar: porcentaje de context window utilizado.',
+      'iacode.b3_3':'Estadísticas de tokens en tiempo real.',
+      'iacode.b3_4':'Session picker para cambiar con un clic.',
+      'iacode.h4':'100% local',
+      'iacode.b4_1':'NotchIA lee las sesiones desde <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code> y los logs de Copilot.',
+      'iacode.b4_2':'Ninguna petición de red hacia Anthropic, OpenAI o GitHub desde NotchIA.',
+      'iacode.b4_3':'Tus prompts y respuestas nunca pasan por nuestros servidores.',
+      'clip.title':'Pestaña <span class="grad-text">Portapapeles</span> <span class="badge-pro">💎 Pro</span>',
+      'clip.lede':'Todo lo que has copiado, recuperable al instante.',
+      'clip.h1':'Historial inteligente',
+      'clip.b1_1':'Hasta 48 entradas (configurable).',
+      'clip.b1_2':'Búsqueda full-text en todo el historial.',
+      'clip.b1_3':'Agrupación por app origen: Safari, VSCode, Slack, etc.',
+      'clip.b1_4':'Atajo de apertura: ⇧⌘C.',
+      'clip.h2':'Seguridad por defecto',
+      'clip.b2_1':'Auto-clear del contenido sensible detectado (contraseñas, números de tarjeta).',
+      'clip.b2_2':'Restauración con un clic de una entrada pasada.',
+      'clip.b2_3':'Nada sale de tu Mac.',
+      'trust.title':'Confianza y <span class="grad-text">privacidad</span>',
+      'trust.lede':'Hemos diseñado NotchIA para que no pueda traicionar tus datos — no solo para que prometa no hacerlo.',
+      'trust.h1':'IA on-device únicamente',
+      'trust.p1':'Todos los resúmenes (Digest, Shelf) pasan por Apple Intelligence Foundation Models, que corre por completo en tu dispositivo. Ninguna llamada a OpenAI, Anthropic u otro proveedor tercero.',
+      'trust.h2':'Datos locales, nunca enviados',
+      'trust.p2':'Calendario, recordatorios, portapapeles, sesiones Claude/Codex/Copilot, estado Focus, estado Bluetooth — nada de eso sale de tu Mac.',
+      'trust.h3':'Backend mínimo',
+      'trust.p3':'Un único Cloudflare Worker, que solo sabe hacer una cosa: validar una clave de licencia. Cero telemetría, cero analytics de terceros, ni pixel, ni Sentry.',
+      'trust.h4':'Antipiratería discreto',
+      'trust.p4':'Verificación de licencia por firma Ed25519 y <code class="font-mono text-xs">PT_DENY_ATTACH</code> en producción. Transparente para el usuario legítimo, frustrante para quien intenta crackear.',
+      'req.title':'Requisitos <span class="grad-text">técnicos</span>',
+      'req.lede':'Lo que necesitas para lanzar NotchIA hoy.',
+      'req.b1':'<strong>macOS 15.0 Sequoia mínimo.</strong>',
+      'req.b2':'<strong>Apple Silicon o Intel</strong> — binario universal.',
+      'req.b3':'<strong>Mac con muesca recomendado</strong> (MacBook Pro / Air 2021 y posteriores). También funciona sin: NotchIA simula una muesca bajo la barra de menú.',
+      'req.b4':'<strong>macOS 26+ requerido</strong> para los resúmenes IA de Shelf y el brief Digest (Apple Intelligence). Sin esto, degradación elegante — las pestañas siguen siendo funcionales.',
+      'req.b5':'<strong>~30 MB</strong> de espacio en disco.',
+      'req.b6':'<strong>Red</strong> utilizada únicamente para: validación de licencia, actualizaciones Sparkle, fetch de feeds RSS del Digest. Nada más.',
+      'cta.title':'¿Listo para probar?',
+      'cta.lead':'Descarga la versión gratuita. Si te gusta, desbloquea las pestañas Pro cuando quieras.',
+      'cta.primary':'Descargar gratis','cta.secondary':'Ver precios Pro',
+      'foot.copy':'© 2026 NotchIA · Axel Courty',
+      'foot.legal':'Aviso legal','foot.cgv':'CGV','foot.privacy':'Privacidad','foot.refund':'Reembolso',
+    },
+    de: {
+      'nav.home':'Startseite','nav.features':'Funktionen','nav.pricing':'Preise',
+      'hero.title':'Alle <span class="grad-text">Funktionen</span>',
+      'hero.lead1':'Die Aussparung deines Macs wird zum echten Assistenten. Musik, Kalender, KI-News-Digest, Fokus und alle Live-Erkennungen sind <strong class="text-cream">kostenlos</strong>.',
+      'hero.lead2':'Werde Pro <span class="badge-pro">💎 Pro</span>, um die Shelf (universelles Drag-Drop + KI-Datei-Zusammenfassung), das Echtzeit-Tracking deines Code-Assistenten und den Zwischenablage-Verlauf freizuschalten.',
+      'hero.meta':'v2.8.0 Wise Owl 🦉 · macOS 15+ · Apple Silicon oder Intel',
+      'hero.callout':'Die Aussparung denkt jetzt. Sieben Tabs, dutzende Erkennungen, und die ganze Intelligenz bleibt auf deinem Mac — kein Stream, keine Datei, kein Token wird an unsere Server gesendet.',
+      'free.eyebrow':'In der kostenlosen Version enthalten',
+      'music.title':'<span class="grad-text">Musik</span>-Tab <span class="badge-free">Kostenlos</span>',
+      'music.lede':'Der laufende Track, direkt zur Hand, ohne eine App zu öffnen.',
+      'music.h1':'Was du auf einen Blick siehst',
+      'music.b1_1':'Cover, Titel, Künstler, Echtzeit-Fortschritt.',
+      'music.b1_2':'Flüssiges Marquee, wenn der Titel zu lang ist.',
+      'music.b1_3':'Dynamisches Tinting: die Aussparung übernimmt die dominante Farbe des Covers.',
+      'music.b1_4':'Farbiges Audio-Spektrogramm und Custom-Visualizer.',
+      'music.h2':'4 Controller, eine UI',
+      'music.b2_1':'System-Now Playing (alles was läuft, inkl. Browser).',
+      'music.b2_2':'Apple Music dediziert.','music.b2_3':'Spotify dediziert.','music.b2_4':'YouTube Music dediziert.',
+      'music.h3':'Konfigurierbare Steuerung',
+      'music.b3_1':'Buttons einzeln aktivierbar: Play/Pause, Weiter, Zurück, Like.',
+      'music.b3_2':'Schnelles Like via ⇧⌘L.',
+      'music.b3_3':'Optionale Lyrics, wenn der Controller sie ausgibt.',
+      'music.h4':'Farbe nach deinem Geschmack',
+      'music.b4_1':'Farbton-Slider: neutrales Weiß, Cover-Farbe oder dein Akzentton.',
+      'music.b4_2':'Anti-Flash, wenn das Cover wechselt.',
+      'cal.title':'<span class="grad-text">Kalender</span>-Tab <span class="badge-free">Kostenlos</span>',
+      'cal.lede':'Deine nächsten Termine beim Hovern, ohne Kontextwechsel.',
+      'cal.h1':'Übersicht',
+      'cal.b1_1':'Mini-Kalender, der beim Hovern der Aussparung erscheint.',
+      'cal.b1_2':'Liste der nächsten Termine rechts.',
+      'cal.b1_3':'Auto-Scroll zum nächsten Termin.',
+      'cal.b1_4':'Erster Wochentag konfigurierbar (Montag oder Sonntag).',
+      'cal.h2':'Gezielte Anzeige',
+      'cal.b2_1':'Auswahl der sichtbaren Kalender (privat, beruflich, geteilt).',
+      'cal.b2_2':'„Ganztägige" Ereignisse ausblenden, um nur Termine mit Uhrzeit zu behalten.',
+      'cal.b2_3':'Vollständige oder gekürzte Titel je nach Anzeigedichte.',
+      'cal.b2_4':'Erinnerungen aus Reminders.app integriert, in derselben Ansicht.',
+      'dig.title':'<span class="grad-text">Digest</span>-Tab <span class="badge-new">Neu · 2.8.0</span> <span class="badge-free">Kostenlos</span>',
+      'dig.lede':'Dein morgendliches News-Briefing, zusammengefasst von deinem Mac, niemals von einem Server.',
+      'dig.h1':'Deine Feeds, dein Thema',
+      'dig.b1_1':'Füge jeden RSS- oder Atom-Feed hinzu (Blogs, Medien, Newsletter).',
+      'dig.b1_2':'Definiere ein Thema zum Verfolgen — z. B. „KI-Video, macOS, SwiftUI".',
+      'dig.b1_3':'Die KI filtert relevante Artikel, fasst zusammen und priorisiert.',
+      'dig.h2':'100% on-device',
+      'dig.b2_1':'Zusammenfassungen lokal generiert durch Apple Intelligence Foundation Models.',
+      'dig.b2_2':'Kein Feed verlässt deinen Mac.',
+      'dig.b2_3':'Lokaler 14-Tage-Cache, um ein Briefing offline erneut zu lesen.',
+      'dig.note':'<em>Hinweis:</em> KI-Zusammenfassungen erfordern macOS 26+ mit Apple Intelligence. Unter macOS 15 funktioniert der Tab als reiner Viewer (Feeds + chronologische Sortierung, ohne Zusammenfassung).',
+      'foc.title':'<span class="grad-text">Fokus</span>-Tab <span class="badge-free">Kostenlos</span>',
+      'foc.lede':'Integrierter Fokus-Timer, Tagesstatistiken, dezente Badges.',
+      'foc.h1':'Der Timer',
+      'foc.b1_1':'Animierter Fortschrittsring um die Aussparung.',
+      'foc.b1_2':'Konfigurierbare Dauern: Fokus, kurze Pause, lange Pause.',
+      'foc.b1_3':'Anzahl der Sessions vor langer Pause anpassbar.',
+      'foc.b1_4':'Befehle Start, Pause, Skip, Reset.',
+      'foc.h2':'Deine Gewohnheiten, klar im Bild',
+      'foc.b2_1':'Tagesstatistiken und Verlauf als Diagramm.',
+      'foc.b2_2':'Mini-Badges Focus und Cycle während der Sessions.',
+      'foc.b2_3':'Audio-Feedback am Ende von Fokus und Pause.',
+      'foc.b2_4':'Sneak Peek: ein dezenter Hinweis, wenn noch 1 Minute übrig ist.',
+      'live.title':'<span class="grad-text">Live</span>-Erkennungen <span class="badge-free">Kostenlos</span>',
+      'live.lede':'Die Aussparung reagiert in Echtzeit auf das, was auf deinem Mac passiert. Alle Erkennungen sind einzeln aktivierbar.',
+      'live.h1':'Videoanruf',
+      'live.p1':'FaceTime, Zoom, Google Meet, Microsoft Teams, Slack Huddle. Dedizierter Indikator während des Anrufs.',
+      'live.h2':'Fokus / Nicht stören',
+      'live.p2':'Die Aussparung spiegelt deinen aktiven Fokus-Modus. Visual angepasst, um nicht abzulenken.',
+      'live.h3':'Bildschirmaufnahme',
+      'live.p3':'Auto-Erkennung. Option, die Aussparung während der Aufnahme auszublenden, wenn du ein sauberes Rendering willst.',
+      'live.h4':'AirPods & Bluetooth',
+      'live.p4':'Verbindung, Trennung, Akkustand als Sneak Peek beim Pairing.',
+      'live.h5':'Lautstärke- & Helligkeits-HUD',
+      'live.p5':'Ersetzt das System-HUD. Inline-Modus in der Aussparung oder klassisches Rendering — deine Wahl.',
+      'live.h6':'Systemereignisse',
+      'live.p6':'Gradient oder Akzentfarbe, wenn ein bemerkenswertes Ereignis ausgelöst wird.',
+      'live.h7':'Downloads',
+      'live.p7':'Sichtbare Download-Animation für eingehende AirDrops und Browser-Downloads.',
+      'live.h8':'Aktive Webcam',
+      'live.p8':'Präzise Erkennung der Kameranutzung durch jede App.',
+      'live.h9':'Sneak Peek Engine',
+      'live.p9':'Rotierende Widgets während du arbeitest: Musik, Fokus, Zwischenablage, Lautstärke, Helligkeit. Intervall und Dauer konfigurierbar.',
+      'pers.title':'Vollständige <span class="grad-text">Anpassung</span> <span class="badge-free">Kostenlos</span>',
+      'pers.lede':'Die Aussparung passt sich dir an, nicht umgekehrt.',
+      'pers.h1':'5 Themes enthalten',
+      'pers.b1_1':'<strong>Marke</strong> — violett → cyan, NotchIA-Signatur.',
+      'pers.b1_2':'<strong>Dämmerung</strong> — orange → magenta.',
+      'pers.b1_3':'<strong>Ozean</strong> — türkis → violett.',
+      'pers.b1_4':'<strong>Wald</strong> — grün → cyan.',
+      'pers.b1_5':'<strong>Schwarz</strong> — für Puristen.',
+      'pers.b1_6':'Eigene Akzentfarbe per Color Picker, auf jedem Theme.',
+      'pers.h2':'Aussehen',
+      'pers.b2_1':'App-Icon hochladbar (deins oder ein eigenes Dock).',
+      'pers.b2_2':'3 Anzeigedichten: kompakt, normal, groß.',
+      'pers.b2_3':'Aussparungshöhe: Menüleiste, physische Aussparung oder eigene Größe.',
+      'pers.b2_4':'Leuchteffekt, Schatten, animiertes Scaling — jeweils umschaltbar.',
+      'pers.b2_5':'Sprache: Französisch, Englisch, Spanisch, Deutsch.',
+      'pers.h3':'Verhalten',
+      'pers.b3_1':'Gestensensibilität (Hover, Drag, Tap).',
+      'pers.b3_2':'Hover-Bereich über die Aussparung hinaus erweitert.',
+      'pers.b3_3':'Konfigurierbare Schließverzögerung.',
+      'pers.b3_4':'Aussparung während Bildschirmaufnahme ausblenden.',
+      'pers.b3_5':'Auf dem Sperrbildschirm anzeigen (oder nicht).',
+      'pers.b3_6':'Haptisches Feedback auf MacBooks, die es unterstützen.',
+      'pers.b3_7':'Automatischer Bildschirmwechsel im Multi-Display.',
+      'pers.h4':'Tastaturkürzel',
+      'pers.b4_1':'7 Shortcuts zu 100% editierbar.',
+      'pers.b4_2':'Aussparung öffnen/schließen, Tab wechseln, Musik Play/Pause, Like, Fokus starten, Shelf öffnen usw.',
+      'pers.b4_3':'Keine erzwungene Kombination — du belegst alles neu.',
+      'pro.eyebrow':'Mit NotchIA Pro freigeschaltet 💎',
+      'pro.band':'Drei mächtige Tabs für mehr: ein universelles Dock zum Teilen und Konvertieren von allem, Echtzeit-Tracking deines KI-Code-Assistenten und ein intelligenter Zwischenablage-Verlauf.',
+      'shelf.title':'<span class="grad-text">Shelf</span>-Tab <span class="badge-pro">💎 Pro</span>',
+      'shelf.lede':'Drag, Drop, teilen, zusammenfassen. Die Aussparung wird zu deinem Datei-Hub.',
+      'shelf.h1':'Universelles Drag-Drop',
+      'shelf.b1_1':'Ziehe eine Datei zur Aussparung: die Drop-Zone vergrößert sich automatisch.',
+      'shelf.b1_2':'Stapele mehrere Dateien in der Warteschlange.',
+      'shelf.b1_3':'Copy-on-Drag oder Move, pro Datei wählbar.',
+      'shelf.b1_4':'Auto-Remove nach dem Teilen (umschaltbar).',
+      'shelf.h2':'Intelligentes Quick Share',
+      'shelf.b2_1':'Auto-Erkennung kompatibler Ziele: AirDrop, Messages, Mail, WhatsApp, Slack…',
+      'shelf.b2_2':'Ein Klick zum Senden, kein natives Teilen-Menü.',
+      'shelf.h3':'Integrierter Konverter',
+      'shelf.b3_1':'<strong>Bilder</strong>: PNG, JPG, HEIC, WebP zwischen allen Formaten.',
+      'shelf.b3_2':'<strong>PDF</strong>: Konvertierung PDF ↔ Bilder.',
+      'shelf.b3_3':'<strong>Audio</strong>: mp3, wav, aac, m4a.',
+      'shelf.b3_4':'<strong>Video</strong>: mp4, mov.',
+      'shelf.h4':'KI-Zusammenfassung einer Datei <span class="badge-new">on-device</span>',
+      'shelf.b4_1':'Lege ein PDF, .txt, .md oder .docx ab.',
+      'shelf.b4_2':'Scrollbare Zusammenfassung in wenigen Sekunden.',
+      'shelf.b4_3':'Rainbow-Aura-Animation während der Generierung.',
+      'shelf.b4_4':'„Kopieren"-Button, um den Text zu übernehmen.',
+      'shelf.b4_5':'Apple Intelligence Foundation Models, 100% lokal.',
+      'shelf.note':'<em>Hinweis:</em> Die KI-Datei-Zusammenfassung benötigt macOS 26+. Ohne Apple Intelligence behält Shelf Drag-Drop, Quick Share und den Konverter.',
+      'iacode.title':'<span class="grad-text">AI Code</span>-Tab <span class="badge-pro">💎 Pro</span>',
+      'iacode.lede':'Dein Code-Assistent, in der Aussparung, ohne Alt-Tab.',
+      'iacode.h1':'Unterstützte Provider',
+      'iacode.b1_1':'<strong>Claude Code</strong> (Anthropic) — Lesen von <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>.',
+      'iacode.b1_2':'<strong>Codex</strong> (ChatGPT) — Lesen von <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.',
+      'iacode.b1_3':'<strong>GitHub Copilot</strong> — Lesen der Copilot-Logs.',
+      'iacode.b1_4':'Nur ein aktiver Provider gleichzeitig — der, den du wählst.',
+      'iacode.h2':'Kompakter Modus',
+      'iacode.b2_1':'Das gerade laufende Tool (Read, Edit, Bash…).',
+      'iacode.b2_2':'Die aktive Sitzung.',
+      'iacode.b2_3':'Passt in die Aussparung, während du codest.',
+      'iacode.h3':'Erweiterter Modus',
+      'iacode.b3_1':'Dots-Indikator der offenen Sitzungen.',
+      'iacode.b3_2':'Context-Bar: Prozentsatz des verwendeten Context Window.',
+      'iacode.b3_3':'Token-Statistiken in Echtzeit.',
+      'iacode.b3_4':'Session Picker zum Umschalten mit einem Klick.',
+      'iacode.h4':'100% lokal',
+      'iacode.b4_1':'NotchIA liest die Sitzungen aus <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code> und den Copilot-Logs.',
+      'iacode.b4_2':'Keine Netzwerkanfrage an Anthropic, OpenAI oder GitHub von NotchIA aus.',
+      'iacode.b4_3':'Deine Prompts und Antworten passieren niemals unsere Server.',
+      'clip.title':'<span class="grad-text">Zwischenablage</span>-Tab <span class="badge-pro">💎 Pro</span>',
+      'clip.lede':'Alles, was du kopiert hast, sofort wiederfindbar.',
+      'clip.h1':'Intelligenter Verlauf',
+      'clip.b1_1':'Bis zu 48 Einträge (konfigurierbar).',
+      'clip.b1_2':'Volltextsuche im gesamten Verlauf.',
+      'clip.b1_3':'Gruppierung nach Quell-App: Safari, VSCode, Slack usw.',
+      'clip.b1_4':'Öffnungs-Shortcut: ⇧⌘C.',
+      'clip.h2':'Sicherheit standardmäßig',
+      'clip.b2_1':'Auto-Clear erkannter sensibler Inhalte (Passwörter, Kartennummern).',
+      'clip.b2_2':'Wiederherstellung eines früheren Eintrags mit einem Klick.',
+      'clip.b2_3':'Nichts verlässt deinen Mac.',
+      'trust.title':'Vertrauen & <span class="grad-text">Privatsphäre</span>',
+      'trust.lede':'Wir haben NotchIA so entworfen, dass sie deine Daten nicht verraten kann — nicht nur, dass sie verspricht, es nicht zu tun.',
+      'trust.h1':'Nur On-Device-KI',
+      'trust.p1':'Alle Zusammenfassungen (Digest, Shelf) laufen über Apple Intelligence Foundation Models, das vollständig auf deinem Gerät ausgeführt wird. Kein Aufruf an OpenAI, Anthropic oder einen anderen Drittanbieter.',
+      'trust.h2':'Lokale Daten, niemals gesendet',
+      'trust.p2':'Kalender, Erinnerungen, Zwischenablage, Claude/Codex/Copilot-Sitzungen, Fokus-Status, Bluetooth-Zustand — nichts davon verlässt deinen Mac.',
+      'trust.h3':'Minimales Backend',
+      'trust.p3':'Ein einziger Cloudflare Worker, der nur eines kann: einen Lizenzschlüssel validieren. Null Telemetrie, null Drittanbieter-Analytics, kein Pixel, kein Sentry.',
+      'trust.h4':'Diskreter Anti-Piraterie-Schutz',
+      'trust.p4':'Lizenzprüfung per Ed25519-Signatur und <code class="font-mono text-xs">PT_DENY_ATTACH</code> in der Produktion. Transparent für legitime Nutzer, frustrierend für Cracker.',
+      'req.title':'<span class="grad-text">Technische</span> Voraussetzungen',
+      'req.lede':'Was du brauchst, um NotchIA heute zu starten.',
+      'req.b1':'<strong>Mindestens macOS 15.0 Sequoia.</strong>',
+      'req.b2':'<strong>Apple Silicon oder Intel</strong> — Universal-Binary.',
+      'req.b3':'<strong>Mac mit Aussparung empfohlen</strong> (MacBook Pro / Air 2021 und neuer). Funktioniert auch ohne: NotchIA simuliert eine Aussparung unter der Menüleiste.',
+      'req.b4':'<strong>macOS 26+ erforderlich</strong> für Shelf-KI-Zusammenfassungen und das Digest-Briefing (Apple Intelligence). Ohne das: graceful Degradation — die Tabs bleiben funktional.',
+      'req.b5':'<strong>~30 MB</strong> Speicherplatz.',
+      'req.b6':'<strong>Netzwerk</strong> nur verwendet für: Lizenzvalidierung, Sparkle-Updates, RSS-Feed-Abruf für den Digest. Sonst nichts.',
+      'cta.title':'Bereit zum Ausprobieren?',
+      'cta.lead':'Lade die kostenlose Version herunter. Wenn sie dir gefällt, schalte die Pro-Tabs frei, wann du willst.',
+      'cta.primary':'Kostenlos herunterladen','cta.secondary':'Pro-Preise ansehen',
+      'foot.copy':'© 2026 NotchIA · Axel Courty',
+      'foot.legal':'Impressum','foot.cgv':'AGB','foot.privacy':'Datenschutz','foot.refund':'Rückerstattung',
+    },
+  };
+
+  function detectLang() {
+    try { const s = localStorage.getItem('notchia-lang'); if (s && I18N[s]) return s; } catch (e) {}
+    const b = (navigator.language || 'en').toLowerCase().split('-')[0];
+    return I18N[b] ? b : 'en';
+  }
+  function applyLang(lang) {
+    if (!I18N[lang]) lang = 'en';
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { const v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
+    const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
+    try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+  }
+  applyLang(detectLang());
+  document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
+</script>
 
 </body>
 </html>

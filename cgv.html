@@ -12,8 +12,11 @@
 <link rel="canonical" href="https://notchia.app/cgv" />
 <meta name="robots" content="index,follow" />
 <link rel="alternate" hreflang="fr" href="https://notchia.app/cgv" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/cgv" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/cgv" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/cgv" />
 <link rel="alternate" hreflang="x-default" href="https://notchia.app/cgv" />
-<!-- TODO i18n: traductions EN/ES/DE à fournir par un relecteur juridique avant publication des versions traduites. -->
+<!-- i18n FR/EN/ES/DE : la version FR fait foi (droit français applicable). -->
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
@@ -52,6 +55,8 @@
   .todo { background: rgba(255,77,136,0.10); border: 1px dashed rgba(255,77,136,0.45); color: #FF9DB6; padding: 0.15rem 0.5rem; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
   .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
   .warn { background: rgba(255,77,136,0.08); border: 1px solid rgba(255,77,136,0.35); }
+  .lang-sw { appearance: none; background: transparent; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
@@ -68,108 +73,111 @@
     <img src="logo.png" alt="NotchIA" class="h-8 w-8" />
     <span class="font-display text-xl">NotchIA</span>
   </a>
-  <nav class="flex items-center gap-6 text-sm text-cream/70">
-    <a href="/" class="hover:text-cream">Accueil</a>
-    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
+    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+    <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
   </nav>
 </header>
 
 <main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
 
   <section class="mb-2">
-    <h1 class="font-display text-4xl md:text-5xl mb-3">Conditions <span class="grad-text">générales de vente</span></h1>
-    <p class="text-cream/60 text-sm font-mono">Version 1.0 — En vigueur au 15 mai 2026</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-3" data-i18n-html="h1">Conditions <span class="grad-text">générales de vente</span></h1>
+    <p class="text-cream/60 text-sm font-mono" data-i18n="version">Version 1.0 — En vigueur au 15 mai 2026</p>
   </section>
 
   <div class="callout warn">
-    <p class="!mb-0"><strong>⚠ Bloquant avant ouverture publique du checkout.</strong> Tant que l'auto-entreprise n'est pas immatriculée (SIRET attribué) et que les coordonnées complètes ne figurent pas en mentions légales, la vente publique est non conforme à la LCEN art. 6 III et au Code de commerce. À régler avant tout encaissement.</p>
+    <p class="!mb-0" data-i18n-html="warn"><strong>⚠ Bloquant avant ouverture publique du checkout.</strong> Tant que l'auto-entreprise n'est pas immatriculée (SIRET attribué) et que les coordonnées complètes ne figurent pas en mentions légales, la vente publique est non conforme à la LCEN art. 6 III et au Code de commerce. À régler avant tout encaissement.</p>
   </div>
 
-  <h2>Article 1 — Identification du vendeur</h2>
+  <h2 data-i18n="art1.title">Article 1 — Identification du vendeur</h2>
   <ul>
-    <li>Nom commercial : <strong>NotchIA</strong></li>
-    <li>Éditeur : Axel Courty, auto-entrepreneur <span class="todo">[immatriculation en cours]</span></li>
-    <li>Adresse : <span class="todo">[À COMPLÉTER]</span></li>
-    <li>SIRET : <span class="todo">[À COMPLÉTER]</span></li>
-    <li>TVA : non applicable, art. 293 B du CGI (franchise en base de TVA) <span class="todo">[À CONFIRMER après immatriculation]</span></li>
-    <li>Email contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a></li>
+    <li data-i18n-html="art1.li1">Nom commercial : <strong>NotchIA</strong></li>
+    <li data-i18n-html="art1.li2">Éditeur : Axel Courty, auto-entrepreneur <span class="todo">[immatriculation en cours]</span></li>
+    <li data-i18n-html="art1.li3">Adresse : <span class="todo">[À COMPLÉTER]</span></li>
+    <li data-i18n-html="art1.li4">SIRET : <span class="todo">[À COMPLÉTER]</span></li>
+    <li data-i18n-html="art1.li5">TVA : non applicable, art. 293 B du CGI (franchise en base de TVA) <span class="todo">[À CONFIRMER après immatriculation]</span></li>
+    <li data-i18n-html="art1.li6">Email contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a></li>
   </ul>
-  <p>Les présentes CGV régissent les ventes du logiciel <strong>NotchIA Pro</strong> aux consommateurs et professionnels, conclues à distance via le site <a href="https://notchia.app">notchia.app</a>.</p>
+  <p data-i18n-html="art1.p1">Les présentes CGV régissent les ventes du logiciel <strong>NotchIA Pro</strong> aux consommateurs et professionnels, conclues à distance via le site <a href="https://notchia.app">notchia.app</a>.</p>
 
-  <h2>Article 2 — Produit</h2>
-  <p>NotchIA Pro est un logiciel pour macOS qui transforme l'encoche du MacBook en zone interactive (médias, calendrier, raccourcis, intégrations IA Claude / Codex / Copilot). L'achat de NotchIA Pro débloque l'ensemble des fonctionnalités payantes décrites sur la page <a href="/">d'accueil</a> et la page <a href="/pricing">tarifs</a>.</p>
+  <h2 data-i18n="art2.title">Article 2 — Produit</h2>
+  <p data-i18n-html="art2.p1">NotchIA Pro est un logiciel pour macOS qui transforme l'encoche du MacBook en zone interactive (médias, calendrier, raccourcis, intégrations IA Claude / Codex / Copilot). L'achat de NotchIA Pro débloque l'ensemble des fonctionnalités payantes décrites sur la page <a href="/">d'accueil</a> et la page <a href="/pricing">tarifs</a>.</p>
 
-  <h3>Prérequis techniques</h3>
+  <h3 data-i18n="art2.h3">Prérequis techniques</h3>
   <ul>
-    <li>macOS 15.0 (Sequoia) minimum. Apple Intelligence (résumés Shelf, Digest) nécessite macOS 26+ et un Mac Apple Silicon (M1 ou plus récent).</li>
-    <li>Mac Apple Silicon ou Intel x86_64 récent.</li>
-    <li>Environ 100 Mo d'espace disque.</li>
-    <li>Connexion Internet requise uniquement pour l'activation de la licence et les mises à jour.</li>
+    <li data-i18n="art2.li1">macOS 15.0 (Sequoia) minimum. Apple Intelligence (résumés Shelf, Digest) nécessite macOS 26+ et un Mac Apple Silicon (M1 ou plus récent).</li>
+    <li data-i18n="art2.li2">Mac Apple Silicon ou Intel x86_64 récent.</li>
+    <li data-i18n="art2.li3">Environ 100 Mo d'espace disque.</li>
+    <li data-i18n="art2.li4">Connexion Internet requise uniquement pour l'activation de la licence et les mises à jour.</li>
   </ul>
 
-  <h2>Article 3 — Prix et paiement</h2>
-  <p>Les prix sont indiqués en euros, toutes taxes comprises (TTC). En tant qu'auto-entrepreneur sous le régime de franchise en base, la TVA n'est <em>pas</em> facturée par NotchIA (art. 293 B CGI).</p>
+  <h2 data-i18n="art3.title">Article 3 — Prix et paiement</h2>
+  <p data-i18n-html="art3.p1">Les prix sont indiqués en euros, toutes taxes comprises (TTC). En tant qu'auto-entrepreneur sous le régime de franchise en base, la TVA n'est <em>pas</em> facturée par NotchIA (art. 293 B CGI).</p>
   <ul>
-    <li><strong>NotchIA Pro mensuel</strong> : 3,99 € / mois, reconduit automatiquement chaque mois jusqu'à résiliation.</li>
-    <li><strong>NotchIA Pro à vie</strong> : 39,99 € en une fois, accès illimité à l'ensemble des versions de NotchIA Pro publiées à compter de la date d'achat.</li>
+    <li data-i18n-html="art3.li1"><strong>NotchIA Pro mensuel</strong> : 3,99 € / mois, reconduit automatiquement chaque mois jusqu'à résiliation.</li>
+    <li data-i18n-html="art3.li2"><strong>NotchIA Pro à vie</strong> : 39,99 € en une fois, accès illimité à l'ensemble des versions de NotchIA Pro publiées à compter de la date d'achat.</li>
   </ul>
-  <p>Le paiement est réalisé en ligne par carte bancaire via notre prestataire <strong>Stripe Payments Europe Ltd</strong>. NotchIA n'a jamais accès à ton numéro de carte. Le paiement est exigible immédiatement à la commande.</p>
+  <p data-i18n-html="art3.p2">Le paiement est réalisé en ligne par carte bancaire via notre prestataire <strong>Stripe Payments Europe Ltd</strong>. NotchIA n'a jamais accès à ton numéro de carte. Le paiement est exigible immédiatement à la commande.</p>
 
-  <h3>Reconduction et résiliation de l'abonnement mensuel</h3>
-  <p>L'abonnement mensuel se reconduit tacitement, mois après mois. Tu peux y mettre fin à tout moment depuis la page <a href="/account">Mon compte</a> → « Gérer mon abonnement » (portail Stripe), ou en écrivant à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. La résiliation prend effet à la fin de la période en cours : aucune somme déjà prélevée n'est remboursée au prorata.</p>
+  <h3 data-i18n="art3.h3">Reconduction et résiliation de l'abonnement mensuel</h3>
+  <p data-i18n-html="art3.p3">L'abonnement mensuel se reconduit tacitement, mois après mois. Tu peux y mettre fin à tout moment depuis la page <a href="/account">Mon compte</a> → « Gérer mon abonnement » (portail Stripe), ou en écrivant à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. La résiliation prend effet à la fin de la période en cours : aucune somme déjà prélevée n'est remboursée au prorata.</p>
 
-  <h2>Article 4 — Livraison de la licence</h2>
-  <p>Après réception du paiement, ta clé de licence (chaîne signée Ed25519 du type <code class="font-mono text-xs">nia_live_…</code>) est générée et envoyée par email <strong>dans un délai maximal de quelques minutes</strong>. En cas de non-réception au-delà de 15 minutes, vérifie tes spams ou utilise le formulaire de récupération sur <a href="/account">/account</a>.</p>
-  <p>L'installation du logiciel se fait via le DMG signé téléchargeable depuis <a href="/install">/install</a>. La clé débloque les fonctionnalités Pro au lancement.</p>
+  <h2 data-i18n="art4.title">Article 4 — Livraison de la licence</h2>
+  <p data-i18n-html="art4.p1">Après réception du paiement, ta clé de licence (chaîne signée Ed25519 du type <code class="font-mono text-xs">nia_live_…</code>) est générée et envoyée par email <strong>dans un délai maximal de quelques minutes</strong>. En cas de non-réception au-delà de 15 minutes, vérifie tes spams ou utilise le formulaire de récupération sur <a href="/account">/account</a>.</p>
+  <p data-i18n-html="art4.p2">L'installation du logiciel se fait via le DMG signé téléchargeable depuis <a href="/install">/install</a>. La clé débloque les fonctionnalités Pro au lancement.</p>
 
-  <h2>Article 5 — Droit de rétractation — RENONCEMENT EXPRÈS</h2>
-  <p>NotchIA Pro est un <strong>contenu numérique non fourni sur support matériel</strong>, dont l'exécution commence immédiatement après le paiement (génération et envoi de la clé, accès aux fonctionnalités Pro).</p>
+  <h2 data-i18n="art5.title">Article 5 — Droit de rétractation — RENONCEMENT EXPRÈS</h2>
+  <p data-i18n-html="art5.p1">NotchIA Pro est un <strong>contenu numérique non fourni sur support matériel</strong>, dont l'exécution commence immédiatement après le paiement (génération et envoi de la clé, accès aux fonctionnalités Pro).</p>
   <div class="callout">
-    <p class="!mb-0">En validant ta commande, tu reconnais avoir été expressément informé que, conformément à l'<strong>article L221-28 13° du Code de la consommation</strong>, le droit de rétractation de 14 jours ne s'applique pas aux contrats de fourniture de contenu numérique non fourni sur support matériel dont l'exécution a commencé avec ton accord préalable exprès et le renoncement exprès à ton droit de rétractation. <strong>Tu renonces expressément à ton droit de rétractation de 14 jours.</strong></p>
+    <p class="!mb-0" data-i18n-html="art5.callout">En validant ta commande, tu reconnais avoir été expressément informé que, conformément à l'<strong>article L221-28 13° du Code de la consommation</strong>, le droit de rétractation de 14 jours ne s'applique pas aux contrats de fourniture de contenu numérique non fourni sur support matériel dont l'exécution a commencé avec ton accord préalable exprès et le renoncement exprès à ton droit de rétractation. <strong>Tu renonces expressément à ton droit de rétractation de 14 jours.</strong></p>
   </div>
-  <p>Ce renoncement est matérialisé au moment du paiement par une case à cocher obligatoire dans Stripe Checkout <span class="todo">[À CONFIGURER côté Stripe : custom field « J'accepte les CGV et renonce à mon droit de rétractation de 14 jours »]</span>.</p>
-  <p>Voir aussi la <a href="/refund">politique de remboursement</a> pour les exceptions commerciales (bug bloquant non corrigé, double facturation, etc.).</p>
+  <p data-i18n-html="art5.p2">Ce renoncement est matérialisé au moment du paiement par une case à cocher obligatoire dans Stripe Checkout <span class="todo">[À CONFIGURER côté Stripe : custom field « J'accepte les CGV et renonce à mon droit de rétractation de 14 jours »]</span>.</p>
+  <p data-i18n-html="art5.p3">Voir aussi la <a href="/refund">politique de remboursement</a> pour les exceptions commerciales (bug bloquant non corrigé, double facturation, etc.).</p>
 
-  <h2>Article 6 — Garanties légales</h2>
-  <p>Indépendamment des garanties commerciales éventuelles, tu bénéficies de plein droit des garanties suivantes :</p>
+  <h2 data-i18n="art6.title">Article 6 — Garanties légales</h2>
+  <p data-i18n="art6.p1">Indépendamment des garanties commerciales éventuelles, tu bénéficies de plein droit des garanties suivantes :</p>
   <ul>
-    <li><strong>Garantie légale de conformité</strong> (art. L217-3 à L217-17 Code de la consommation) : 2 ans à compter de la délivrance du logiciel. Elle couvre les défauts de conformité au contrat.</li>
-    <li><strong>Garantie des vices cachés</strong> (art. 1641 à 1649 Code civil) : 2 ans à compter de la découverte du vice.</li>
-    <li>Pour les contenus numériques, la garantie légale de conformité couvre également la fourniture des <strong>mises à jour nécessaires</strong> au maintien de la conformité pendant la période raisonnable que le consommateur peut attendre (art. L217-19 Code conso). Pour les abonnements, cette obligation s'étend pendant toute la durée de l'abonnement.</li>
+    <li data-i18n-html="art6.li1"><strong>Garantie légale de conformité</strong> (art. L217-3 à L217-17 Code de la consommation) : 2 ans à compter de la délivrance du logiciel. Elle couvre les défauts de conformité au contrat.</li>
+    <li data-i18n-html="art6.li2"><strong>Garantie des vices cachés</strong> (art. 1641 à 1649 Code civil) : 2 ans à compter de la découverte du vice.</li>
+    <li data-i18n-html="art6.li3">Pour les contenus numériques, la garantie légale de conformité couvre également la fourniture des <strong>mises à jour nécessaires</strong> au maintien de la conformité pendant la période raisonnable que le consommateur peut attendre (art. L217-19 Code conso). Pour les abonnements, cette obligation s'étend pendant toute la durée de l'abonnement.</li>
   </ul>
-  <p>Pour faire jouer une garantie, écris à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> en décrivant le défaut.</p>
+  <p data-i18n-html="art6.p2">Pour faire jouer une garantie, écris à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> en décrivant le défaut.</p>
 
-  <h2>Article 7 — Licence d'utilisation</h2>
-  <p>NotchIA Pro reste la propriété exclusive d'Axel Courty. L'achat te concède une <strong>licence personnelle, non exclusive, non transférable et non cessible</strong> d'utilisation du logiciel sur les Mac que tu utilises personnellement.</p>
-  <p>Sont notamment interdits :</p>
+  <h2 data-i18n="art7.title">Article 7 — Licence d'utilisation</h2>
+  <p data-i18n-html="art7.p1">NotchIA Pro reste la propriété exclusive d'Axel Courty. L'achat te concède une <strong>licence personnelle, non exclusive, non transférable et non cessible</strong> d'utilisation du logiciel sur les Mac que tu utilises personnellement.</p>
+  <p data-i18n="art7.p2">Sont notamment interdits :</p>
   <ul>
-    <li>la redistribution, la revente, le partage ou la sous-licence de la clé ;</li>
-    <li>la rétro-ingénierie, la décompilation, le désassemblage, sauf dans les limites strictement prévues par la loi (art. L122-6-1 Code de la propriété intellectuelle) ;</li>
-    <li>la suppression ou la modification des mentions de propriété intellectuelle ;</li>
-    <li>l'usage du logiciel pour développer un produit concurrent.</li>
+    <li data-i18n="art7.li1">la redistribution, la revente, le partage ou la sous-licence de la clé ;</li>
+    <li data-i18n="art7.li2">la rétro-ingénierie, la décompilation, le désassemblage, sauf dans les limites strictement prévues par la loi (art. L122-6-1 Code de la propriété intellectuelle) ;</li>
+    <li data-i18n="art7.li3">la suppression ou la modification des mentions de propriété intellectuelle ;</li>
+    <li data-i18n="art7.li4">l'usage du logiciel pour développer un produit concurrent.</li>
   </ul>
-  <p>NotchIA est un logiciel propriétaire développé indépendamment par Axel Courty. L'ensemble du code source est sous copyright Axel Courty.</p>
+  <p data-i18n="art7.p3">NotchIA est un logiciel propriétaire développé indépendamment par Axel Courty. L'ensemble du code source est sous copyright Axel Courty.</p>
 
-  <h2>Article 8 — Mises à jour</h2>
-  <p>Les mises à jour sont distribuées via <strong>Sparkle</strong> et téléchargées depuis GitHub Releases. Chaque mise à jour est signée numériquement (EdDSA) et vérifiée par Sparkle avant installation. Les mises à jour mineures (correctifs, sécurité) sont incluses sans frais pour tous les détenteurs d'une licence active. Les mises à jour majeures sont incluses dans la durée de l'abonnement ou, pour l'achat à vie, à compter de la date d'achat.</p>
+  <h2 data-i18n="art8.title">Article 8 — Mises à jour</h2>
+  <p data-i18n-html="art8.p1">Les mises à jour sont distribuées via <strong>Sparkle</strong> et téléchargées depuis GitHub Releases. Chaque mise à jour est signée numériquement (EdDSA) et vérifiée par Sparkle avant installation. Les mises à jour mineures (correctifs, sécurité) sont incluses sans frais pour tous les détenteurs d'une licence active. Les mises à jour majeures sont incluses dans la durée de l'abonnement ou, pour l'achat à vie, à compter de la date d'achat.</p>
 
-  <h2>Article 9 — Responsabilité</h2>
-  <p>NotchIA est fourni « en l'état ». Axel Courty s'engage à fournir ses meilleurs efforts pour assurer le bon fonctionnement du logiciel et la disponibilité de l'API de licences, sans engagement de résultat (obligation de moyens).</p>
-  <p>Sauf en cas de faute lourde ou intentionnelle, et dans les limites permises par la loi française, la responsabilité d'Axel Courty est limitée aux dommages directs et plafonnée au <strong>montant effectivement payé par le client au titre des 12 derniers mois</strong>. Les dispositions impératives du Code de la consommation s'appliquent prioritairement et ne peuvent être écartées au détriment du consommateur.</p>
+  <h2 data-i18n="art9.title">Article 9 — Responsabilité</h2>
+  <p data-i18n="art9.p1">NotchIA est fourni « en l'état ». Axel Courty s'engage à fournir ses meilleurs efforts pour assurer le bon fonctionnement du logiciel et la disponibilité de l'API de licences, sans engagement de résultat (obligation de moyens).</p>
+  <p data-i18n-html="art9.p2">Sauf en cas de faute lourde ou intentionnelle, et dans les limites permises par la loi française, la responsabilité d'Axel Courty est limitée aux dommages directs et plafonnée au <strong>montant effectivement payé par le client au titre des 12 derniers mois</strong>. Les dispositions impératives du Code de la consommation s'appliquent prioritairement et ne peuvent être écartées au détriment du consommateur.</p>
 
-  <h2>Article 10 — Données personnelles</h2>
-  <p>Le traitement de tes données est détaillé dans la <a href="/privacy">politique de confidentialité</a>, qui fait partie intégrante des présentes CGV.</p>
+  <h2 data-i18n="art10.title">Article 10 — Données personnelles</h2>
+  <p data-i18n-html="art10.p1">Le traitement de tes données est détaillé dans la <a href="/privacy">politique de confidentialité</a>, qui fait partie intégrante des présentes CGV.</p>
 
-  <h2>Article 11 — Médiation de la consommation</h2>
-  <p>Conformément à l'article L612-1 du Code de la consommation, en cas de litige non résolu après réclamation écrite préalable adressée à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>, tu peux recourir gratuitement au médiateur de la consommation :</p>
-  <p><span class="todo">[À COMPLÉTER : nom du médiateur conso adhéré par NotchIA — ex. CMAP, SMC, Médiation FEVAD, ou Médiateur indépendant choisi. Obligation L612-1 d'adhérer à un dispositif de médiation.]</span></p>
-  <p>Tu peux aussi utiliser la plateforme européenne de Règlement en Ligne des Litiges : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+  <h2 data-i18n="art11.title">Article 11 — Médiation de la consommation</h2>
+  <p data-i18n-html="art11.p1">Conformément à l'article L612-1 du Code de la consommation, en cas de litige non résolu après réclamation écrite préalable adressée à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>, tu peux recourir gratuitement au médiateur de la consommation :</p>
+  <p data-i18n-html="art11.p2"><span class="todo">[À COMPLÉTER : nom du médiateur conso adhéré par NotchIA — ex. CMAP, SMC, Médiation FEVAD, ou Médiateur indépendant choisi. Obligation L612-1 d'adhérer à un dispositif de médiation.]</span></p>
+  <p data-i18n-html="art11.p3">Tu peux aussi utiliser la plateforme européenne de Règlement en Ligne des Litiges : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
 
-  <h2>Article 12 — Droit applicable et juridiction</h2>
-  <p>Les présentes CGV sont régies par le <strong>droit français</strong>. En cas de litige, et après tentative de résolution amiable, le consommateur peut saisir, à son choix, l'une des juridictions territorialement compétentes en vertu du Code de procédure civile, ou la juridiction du lieu où il demeurait au moment de la conclusion du contrat ou de la survenance du fait dommageable (art. R631-3 Code conso).</p>
+  <h2 data-i18n="art12.title">Article 12 — Droit applicable et juridiction</h2>
+  <p data-i18n-html="art12.p1">Les présentes CGV sont régies par le <strong>droit français</strong>. En cas de litige, et après tentative de résolution amiable, le consommateur peut saisir, à son choix, l'une des juridictions territorialement compétentes en vertu du Code de procédure civile, ou la juridiction du lieu où il demeurait au moment de la conclusion du contrat ou de la survenance du fait dommageable (art. R631-3 Code conso).</p>
 
-  <h2>Article 13 — Modification des CGV</h2>
-  <p>Axel Courty se réserve le droit de modifier les présentes CGV. Les CGV applicables sont celles en vigueur à la date de la commande. Les clients sous abonnement actif sont informés par email de toute modification substantielle au moins 30 jours avant son entrée en vigueur ; à défaut d'acceptation, ils peuvent résilier sans frais.</p>
+  <h2 data-i18n="art13.title">Article 13 — Modification des CGV</h2>
+  <p data-i18n="art13.p1">Axel Courty se réserve le droit de modifier les présentes CGV. Les CGV applicables sont celles en vigueur à la date de la commande. Les clients sous abonnement actif sont informés par email de toute modification substantielle au moins 30 jours avant son entrée en vigueur ; à défaut d'acceptation, ils peuvent résilier sans frais.</p>
 
 </main>
 
@@ -177,13 +185,299 @@
   <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
     <div>© 2026 NotchIA · Axel Courty</div>
     <nav class="flex flex-wrap gap-x-5 gap-y-2">
-      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
-      <a href="/cgv" class="hover:text-cream">CGV</a>
-      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
-      <a href="/refund" class="hover:text-cream">Remboursement</a>
+      <a href="/mentions-legales" class="hover:text-cream" data-i18n="footer.legal">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream" data-i18n="footer.cgv">CGV</a>
+      <a href="/privacy" class="hover:text-cream" data-i18n="footer.privacy">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream" data-i18n="footer.refund">Remboursement</a>
     </nav>
   </div>
 </footer>
+
+<script>
+  const I18N = {
+    fr: {
+      'nav.home':'Accueil','nav.pricing':'Tarifs',
+      'h1':'Conditions <span class="grad-text">générales de vente</span>',
+      'version':'Version 1.0 — En vigueur au 15 mai 2026',
+      'warn':'<strong>⚠ Bloquant avant ouverture publique du checkout.</strong> Tant que l\'auto-entreprise n\'est pas immatriculée (SIRET attribué) et que les coordonnées complètes ne figurent pas en mentions légales, la vente publique est non conforme à la LCEN art. 6 III et au Code de commerce. À régler avant tout encaissement.',
+      'art1.title':'Article 1 — Identification du vendeur',
+      'art1.li1':'Nom commercial : <strong>NotchIA</strong>',
+      'art1.li2':'Éditeur : Axel Courty, auto-entrepreneur <span class="todo">[immatriculation en cours]</span>',
+      'art1.li3':'Adresse : <span class="todo">[À COMPLÉTER]</span>',
+      'art1.li4':'SIRET : <span class="todo">[À COMPLÉTER]</span>',
+      'art1.li5':'TVA : non applicable, art. 293 B du CGI (franchise en base de TVA) <span class="todo">[À CONFIRMER après immatriculation]</span>',
+      'art1.li6':'Email contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>',
+      'art1.p1':'Les présentes CGV régissent les ventes du logiciel <strong>NotchIA Pro</strong> aux consommateurs et professionnels, conclues à distance via le site <a href="https://notchia.app">notchia.app</a>.',
+      'art2.title':'Article 2 — Produit',
+      'art2.p1':'NotchIA Pro est un logiciel pour macOS qui transforme l\'encoche du MacBook en zone interactive (médias, calendrier, raccourcis, intégrations IA Claude / Codex / Copilot). L\'achat de NotchIA Pro débloque l\'ensemble des fonctionnalités payantes décrites sur la page <a href="/">d\'accueil</a> et la page <a href="/pricing">tarifs</a>.',
+      'art2.h3':'Prérequis techniques',
+      'art2.li1':'macOS 15.0 (Sequoia) minimum. Apple Intelligence (résumés Shelf, Digest) nécessite macOS 26+ et un Mac Apple Silicon (M1 ou plus récent).',
+      'art2.li2':'Mac Apple Silicon ou Intel x86_64 récent.',
+      'art2.li3':'Environ 100 Mo d\'espace disque.',
+      'art2.li4':'Connexion Internet requise uniquement pour l\'activation de la licence et les mises à jour.',
+      'art3.title':'Article 3 — Prix et paiement',
+      'art3.p1':'Les prix sont indiqués en euros, toutes taxes comprises (TTC). En tant qu\'auto-entrepreneur sous le régime de franchise en base, la TVA n\'est <em>pas</em> facturée par NotchIA (art. 293 B CGI).',
+      'art3.li1':'<strong>NotchIA Pro mensuel</strong> : 3,99 € / mois, reconduit automatiquement chaque mois jusqu\'à résiliation.',
+      'art3.li2':'<strong>NotchIA Pro à vie</strong> : 39,99 € en une fois, accès illimité à l\'ensemble des versions de NotchIA Pro publiées à compter de la date d\'achat.',
+      'art3.p2':'Le paiement est réalisé en ligne par carte bancaire via notre prestataire <strong>Stripe Payments Europe Ltd</strong>. NotchIA n\'a jamais accès à ton numéro de carte. Le paiement est exigible immédiatement à la commande.',
+      'art3.h3':'Reconduction et résiliation de l\'abonnement mensuel',
+      'art3.p3':'L\'abonnement mensuel se reconduit tacitement, mois après mois. Tu peux y mettre fin à tout moment depuis la page <a href="/account">Mon compte</a> → « Gérer mon abonnement » (portail Stripe), ou en écrivant à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. La résiliation prend effet à la fin de la période en cours : aucune somme déjà prélevée n\'est remboursée au prorata.',
+      'art4.title':'Article 4 — Livraison de la licence',
+      'art4.p1':'Après réception du paiement, ta clé de licence (chaîne signée Ed25519 du type <code class="font-mono text-xs">nia_live_…</code>) est générée et envoyée par email <strong>dans un délai maximal de quelques minutes</strong>. En cas de non-réception au-delà de 15 minutes, vérifie tes spams ou utilise le formulaire de récupération sur <a href="/account">/account</a>.',
+      'art4.p2':'L\'installation du logiciel se fait via le DMG signé téléchargeable depuis <a href="/install">/install</a>. La clé débloque les fonctionnalités Pro au lancement.',
+      'art5.title':'Article 5 — Droit de rétractation — RENONCEMENT EXPRÈS',
+      'art5.p1':'NotchIA Pro est un <strong>contenu numérique non fourni sur support matériel</strong>, dont l\'exécution commence immédiatement après le paiement (génération et envoi de la clé, accès aux fonctionnalités Pro).',
+      'art5.callout':'En validant ta commande, tu reconnais avoir été expressément informé que, conformément à l\'<strong>article L221-28 13° du Code de la consommation</strong>, le droit de rétractation de 14 jours ne s\'applique pas aux contrats de fourniture de contenu numérique non fourni sur support matériel dont l\'exécution a commencé avec ton accord préalable exprès et le renoncement exprès à ton droit de rétractation. <strong>Tu renonces expressément à ton droit de rétractation de 14 jours.</strong>',
+      'art5.p2':'Ce renoncement est matérialisé au moment du paiement par une case à cocher obligatoire dans Stripe Checkout <span class="todo">[À CONFIGURER côté Stripe : custom field « J\'accepte les CGV et renonce à mon droit de rétractation de 14 jours »]</span>.',
+      'art5.p3':'Voir aussi la <a href="/refund">politique de remboursement</a> pour les exceptions commerciales (bug bloquant non corrigé, double facturation, etc.).',
+      'art6.title':'Article 6 — Garanties légales',
+      'art6.p1':'Indépendamment des garanties commerciales éventuelles, tu bénéficies de plein droit des garanties suivantes :',
+      'art6.li1':'<strong>Garantie légale de conformité</strong> (art. L217-3 à L217-17 Code de la consommation) : 2 ans à compter de la délivrance du logiciel. Elle couvre les défauts de conformité au contrat.',
+      'art6.li2':'<strong>Garantie des vices cachés</strong> (art. 1641 à 1649 Code civil) : 2 ans à compter de la découverte du vice.',
+      'art6.li3':'Pour les contenus numériques, la garantie légale de conformité couvre également la fourniture des <strong>mises à jour nécessaires</strong> au maintien de la conformité pendant la période raisonnable que le consommateur peut attendre (art. L217-19 Code conso). Pour les abonnements, cette obligation s\'étend pendant toute la durée de l\'abonnement.',
+      'art6.p2':'Pour faire jouer une garantie, écris à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> en décrivant le défaut.',
+      'art7.title':'Article 7 — Licence d\'utilisation',
+      'art7.p1':'NotchIA Pro reste la propriété exclusive d\'Axel Courty. L\'achat te concède une <strong>licence personnelle, non exclusive, non transférable et non cessible</strong> d\'utilisation du logiciel sur les Mac que tu utilises personnellement.',
+      'art7.p2':'Sont notamment interdits :',
+      'art7.li1':'la redistribution, la revente, le partage ou la sous-licence de la clé ;',
+      'art7.li2':'la rétro-ingénierie, la décompilation, le désassemblage, sauf dans les limites strictement prévues par la loi (art. L122-6-1 Code de la propriété intellectuelle) ;',
+      'art7.li3':'la suppression ou la modification des mentions de propriété intellectuelle ;',
+      'art7.li4':'l\'usage du logiciel pour développer un produit concurrent.',
+      'art7.p3':'NotchIA est un logiciel propriétaire développé indépendamment par Axel Courty. L\'ensemble du code source est sous copyright Axel Courty.',
+      'art8.title':'Article 8 — Mises à jour',
+      'art8.p1':'Les mises à jour sont distribuées via <strong>Sparkle</strong> et téléchargées depuis GitHub Releases. Chaque mise à jour est signée numériquement (EdDSA) et vérifiée par Sparkle avant installation. Les mises à jour mineures (correctifs, sécurité) sont incluses sans frais pour tous les détenteurs d\'une licence active. Les mises à jour majeures sont incluses dans la durée de l\'abonnement ou, pour l\'achat à vie, à compter de la date d\'achat.',
+      'art9.title':'Article 9 — Responsabilité',
+      'art9.p1':'NotchIA est fourni « en l\'état ». Axel Courty s\'engage à fournir ses meilleurs efforts pour assurer le bon fonctionnement du logiciel et la disponibilité de l\'API de licences, sans engagement de résultat (obligation de moyens).',
+      'art9.p2':'Sauf en cas de faute lourde ou intentionnelle, et dans les limites permises par la loi française, la responsabilité d\'Axel Courty est limitée aux dommages directs et plafonnée au <strong>montant effectivement payé par le client au titre des 12 derniers mois</strong>. Les dispositions impératives du Code de la consommation s\'appliquent prioritairement et ne peuvent être écartées au détriment du consommateur.',
+      'art10.title':'Article 10 — Données personnelles',
+      'art10.p1':'Le traitement de tes données est détaillé dans la <a href="/privacy">politique de confidentialité</a>, qui fait partie intégrante des présentes CGV.',
+      'art11.title':'Article 11 — Médiation de la consommation',
+      'art11.p1':'Conformément à l\'article L612-1 du Code de la consommation, en cas de litige non résolu après réclamation écrite préalable adressée à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>, tu peux recourir gratuitement au médiateur de la consommation :',
+      'art11.p2':'<span class="todo">[À COMPLÉTER : nom du médiateur conso adhéré par NotchIA — ex. CMAP, SMC, Médiation FEVAD, ou Médiateur indépendant choisi. Obligation L612-1 d\'adhérer à un dispositif de médiation.]</span>',
+      'art11.p3':'Tu peux aussi utiliser la plateforme européenne de Règlement en Ligne des Litiges : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.',
+      'art12.title':'Article 12 — Droit applicable et juridiction',
+      'art12.p1':'Les présentes CGV sont régies par le <strong>droit français</strong>. En cas de litige, et après tentative de résolution amiable, le consommateur peut saisir, à son choix, l\'une des juridictions territorialement compétentes en vertu du Code de procédure civile, ou la juridiction du lieu où il demeurait au moment de la conclusion du contrat ou de la survenance du fait dommageable (art. R631-3 Code conso).',
+      'art13.title':'Article 13 — Modification des CGV',
+      'art13.p1':'Axel Courty se réserve le droit de modifier les présentes CGV. Les CGV applicables sont celles en vigueur à la date de la commande. Les clients sous abonnement actif sont informés par email de toute modification substantielle au moins 30 jours avant son entrée en vigueur ; à défaut d\'acceptation, ils peuvent résilier sans frais.',
+      'footer.legal':'Mentions légales','footer.cgv':'CGV','footer.privacy':'Confidentialité','footer.refund':'Remboursement',
+    },
+    en: {
+      'nav.home':'Home','nav.pricing':'Pricing',
+      'h1':'<span class="grad-text">Terms</span> of Sale',
+      'version':'Version 1.0 — In force as of 15 May 2026',
+      'warn':'<strong>⚠ Blocker before public checkout opens.</strong> Until the "auto-entrepreneur" business is registered (SIRET assigned) and full contact details appear in the legal notice, public sales are non-compliant with LCEN art. 6 III and the French Commercial Code. To be fixed before any payment is taken. The French version of these Terms of Sale prevails.',
+      'art1.title':'Article 1 — Seller identification',
+      'art1.li1':'Trade name: <strong>NotchIA</strong>',
+      'art1.li2':'Publisher: Axel Courty, "auto-entrepreneur" status <span class="todo">[immatriculation en cours]</span>',
+      'art1.li3':'Address: <span class="todo">[À COMPLÉTER]</span>',
+      'art1.li4':'SIRET: <span class="todo">[À COMPLÉTER]</span>',
+      'art1.li5':'VAT: not applicable, art. 293 B of the French Tax Code (VAT exemption regime) <span class="todo">[À CONFIRMER après immatriculation]</span>',
+      'art1.li6':'Contact email: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>',
+      'art1.p1':'These Terms of Sale govern sales of the <strong>NotchIA Pro</strong> software to consumers and professionals, concluded remotely via the <a href="https://notchia.app">notchia.app</a> website.',
+      'art2.title':'Article 2 — Product',
+      'art2.p1':'NotchIA Pro is a macOS software that turns the MacBook notch into an interactive zone (media, calendar, shortcuts, AI integrations Claude / Codex / Copilot). Purchasing NotchIA Pro unlocks all paid features described on the <a href="/">home</a> and <a href="/pricing">pricing</a> pages.',
+      'art2.h3':'Technical requirements',
+      'art2.li1':'macOS 15.0 (Sequoia) minimum. Apple Intelligence (Shelf summaries, Digest) requires macOS 26+ and an Apple Silicon Mac (M1 or newer).',
+      'art2.li2':'Apple Silicon Mac or recent Intel x86_64.',
+      'art2.li3':'About 100 MB of disk space.',
+      'art2.li4':'Internet connection required only for license activation and updates.',
+      'art3.title':'Article 3 — Price and payment',
+      'art3.p1':'Prices are stated in euros, all taxes included. As an "auto-entrepreneur" under the basic exemption scheme, VAT is <em>not</em> charged by NotchIA (art. 293 B CGI).',
+      'art3.li1':'<strong>NotchIA Pro monthly</strong>: 3,99 € / month, automatically renewed each month until cancellation.',
+      'art3.li2':'<strong>NotchIA Pro lifetime</strong>: 39,99 € one-time, unlimited access to all NotchIA Pro versions released from the purchase date onwards.',
+      'art3.p2':'Payment is made online by bank card via our provider <strong>Stripe Payments Europe Ltd</strong>. NotchIA never has access to your card number. Payment is due immediately at the time of order.',
+      'art3.h3':'Renewal and cancellation of the monthly subscription',
+      'art3.p3':'The monthly subscription renews tacitly, month after month. You can end it at any time from the <a href="/account">My account</a> page → "Manage my subscription" (Stripe portal), or by writing to <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. Cancellation takes effect at the end of the current period: no amount already paid is refunded pro rata.',
+      'art4.title':'Article 4 — License delivery',
+      'art4.p1':'After payment is received, your license key (Ed25519-signed string like <code class="font-mono text-xs">nia_live_…</code>) is generated and sent by email <strong>within a few minutes at most</strong>. If not received after 15 minutes, check your spam folder or use the recovery form on <a href="/account">/account</a>.',
+      'art4.p2':'Software installation is done via the signed DMG downloadable from <a href="/install">/install</a>. The key unlocks Pro features on launch.',
+      'art5.title':'Article 5 — Right of withdrawal — EXPRESS WAIVER',
+      'art5.p1':'NotchIA Pro is <strong>digital content not supplied on a tangible medium</strong>, whose performance begins immediately after payment (generation and dispatch of the key, access to Pro features).',
+      'art5.callout':'By validating your order, you acknowledge having been expressly informed that, in accordance with <strong>article L221-28 13° of the French Consumer Code</strong>, the 14-day right of withdrawal does not apply to contracts for the supply of digital content not supplied on a tangible medium whose performance has begun with your prior express consent and express waiver of your right of withdrawal. <strong>You expressly waive your 14-day right of withdrawal.</strong>',
+      'art5.p2':'This waiver is materialised at the time of payment by a mandatory checkbox in Stripe Checkout <span class="todo">[À CONFIGURER côté Stripe : custom field « J\'accepte les CGV et renonce à mon droit de rétractation de 14 jours »]</span>.',
+      'art5.p3':'See also the <a href="/refund">refund policy</a> for commercial exceptions (uncorrected blocking bug, double billing, etc.).',
+      'art6.title':'Article 6 — Legal warranties',
+      'art6.p1':'Independently of any commercial warranties, you benefit by right from the following warranties:',
+      'art6.li1':'<strong>Legal warranty of conformity</strong> (art. L217-3 to L217-17 French Consumer Code): 2 years from delivery of the software. It covers non-conformities with the contract.',
+      'art6.li2':'<strong>Warranty against hidden defects</strong> (art. 1641 to 1649 French Civil Code): 2 years from the discovery of the defect.',
+      'art6.li3':'For digital content, the legal warranty of conformity also covers the supply of <strong>updates necessary</strong> to keep the product in conformity for the reasonable period the consumer can expect (art. L217-19 Code conso). For subscriptions, this obligation extends throughout the subscription period.',
+      'art6.p2':'To invoke a warranty, write to <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> describing the defect.',
+      'art7.title':'Article 7 — Usage licence',
+      'art7.p1':'NotchIA Pro remains the exclusive property of Axel Courty. The purchase grants you a <strong>personal, non-exclusive, non-transferable and non-assignable licence</strong> to use the software on the Macs you personally use.',
+      'art7.p2':'The following are notably prohibited:',
+      'art7.li1':'redistribution, resale, sharing or sub-licensing of the key;',
+      'art7.li2':'reverse-engineering, decompilation, disassembly, except within the strict limits provided by law (art. L122-6-1 French Intellectual Property Code);',
+      'art7.li3':'removal or modification of intellectual property notices;',
+      'art7.li4':'use of the software to develop a competing product.',
+      'art7.p3':'NotchIA is a proprietary software independently developed by Axel Courty. All source code is copyright Axel Courty.',
+      'art8.title':'Article 8 — Updates',
+      'art8.p1':'Updates are distributed via <strong>Sparkle</strong> and downloaded from GitHub Releases. Each update is digitally signed (EdDSA) and verified by Sparkle before installation. Minor updates (fixes, security) are included free of charge for all holders of an active licence. Major updates are included for the duration of the subscription or, for lifetime purchase, from the date of purchase.',
+      'art9.title':'Article 9 — Liability',
+      'art9.p1':'NotchIA is supplied "as is". Axel Courty undertakes to use his best efforts to ensure the proper functioning of the software and the availability of the licence API, without commitment to results (obligation of means).',
+      'art9.p2':'Except in case of gross or wilful misconduct, and within the limits permitted by French law, Axel Courty\'s liability is limited to direct damages and capped at the <strong>amount actually paid by the customer over the last 12 months</strong>. The mandatory provisions of the French Consumer Code apply with priority and may not be set aside to the detriment of the consumer.',
+      'art10.title':'Article 10 — Personal data',
+      'art10.p1':'Processing of your data is detailed in the <a href="/privacy">privacy policy</a>, which forms an integral part of these Terms of Sale.',
+      'art11.title':'Article 11 — Consumer mediation',
+      'art11.p1':'In accordance with article L612-1 of the French Consumer Code, in case of a dispute not resolved after a prior written complaint addressed to <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>, you may use the consumer mediator free of charge:',
+      'art11.p2':'<span class="todo">[À COMPLÉTER : nom du médiateur conso adhéré par NotchIA — ex. CMAP, SMC, Médiation FEVAD, ou Médiateur indépendant choisi. Obligation L612-1 d\'adhérer à un dispositif de médiation.]</span>',
+      'art11.p3':'You can also use the European Online Dispute Resolution platform: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.',
+      'art12.title':'Article 12 — Applicable law and jurisdiction',
+      'art12.p1':'These Terms of Sale are governed by <strong>French law</strong>. In case of a dispute, and after attempting an amicable resolution, the consumer may bring proceedings, at his or her choice, before one of the territorially competent courts under the French Code of Civil Procedure, or before the court of the place where he or she resided at the time of conclusion of the contract or of the occurrence of the harmful event (art. R631-3 Code conso).',
+      'art13.title':'Article 13 — Modification of the Terms of Sale',
+      'art13.p1':'Axel Courty reserves the right to modify these Terms of Sale. The applicable Terms are those in force at the date of the order. Customers with an active subscription are notified by email of any substantial modification at least 30 days before it takes effect; failing acceptance, they may terminate free of charge.',
+      'footer.legal':'Legal notice','footer.cgv':'Terms of sale','footer.privacy':'Privacy','footer.refund':'Refund',
+    },
+    es: {
+      'nav.home':'Inicio','nav.pricing':'Precio',
+      'h1':'Condiciones <span class="grad-text">generales de venta</span>',
+      'version':'Versión 1.0 — En vigor el 15 de mayo de 2026',
+      'warn':'<strong>⚠ Bloqueante antes de abrir el checkout al público.</strong> Mientras la "auto-entrepreneur" no esté registrada (SIRET asignado) y los datos completos no aparezcan en el aviso legal, la venta pública no cumple con LCEN art. 6 III y el Código de comercio francés. A resolver antes de cualquier cobro. La versión francesa de las CGV prevalece.',
+      'art1.title':'Artículo 1 — Identificación del vendedor',
+      'art1.li1':'Nombre comercial: <strong>NotchIA</strong>',
+      'art1.li2':'Editor: Axel Courty, estatuto "auto-entrepreneur" <span class="todo">[immatriculation en cours]</span>',
+      'art1.li3':'Dirección: <span class="todo">[À COMPLÉTER]</span>',
+      'art1.li4':'SIRET: <span class="todo">[À COMPLÉTER]</span>',
+      'art1.li5':'IVA: no aplicable, art. 293 B del CGI francés (franquicia base de IVA) <span class="todo">[À CONFIRMER après immatriculation]</span>',
+      'art1.li6':'Email de contacto: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>',
+      'art1.p1':'Las presentes CGV rigen las ventas del software <strong>NotchIA Pro</strong> a consumidores y profesionales, celebradas a distancia a través del sitio <a href="https://notchia.app">notchia.app</a>.',
+      'art2.title':'Artículo 2 — Producto',
+      'art2.p1':'NotchIA Pro es un software para macOS que transforma la muesca del MacBook en una zona interactiva (media, calendario, atajos, integraciones IA Claude / Codex / Copilot). La compra de NotchIA Pro desbloquea todas las funcionalidades de pago descritas en la página de <a href="/">inicio</a> y la página de <a href="/pricing">precios</a>.',
+      'art2.h3':'Requisitos técnicos',
+      'art2.li1':'macOS 15.0 (Sequoia) mínimo. Apple Intelligence (resúmenes Shelf, Digest) requiere macOS 26+ y un Mac Apple Silicon (M1 o más reciente).',
+      'art2.li2':'Mac Apple Silicon o Intel x86_64 reciente.',
+      'art2.li3':'Aproximadamente 100 MB de espacio en disco.',
+      'art2.li4':'Conexión a Internet necesaria únicamente para la activación de la licencia y las actualizaciones.',
+      'art3.title':'Artículo 3 — Precio y pago',
+      'art3.p1':'Los precios se indican en euros, todos los impuestos incluidos. Como "auto-entrepreneur" bajo el régimen de franquicia base, el IVA <em>no</em> es facturado por NotchIA (art. 293 B CGI).',
+      'art3.li1':'<strong>NotchIA Pro mensual</strong>: 3,99 € / mes, renovado automáticamente cada mes hasta cancelación.',
+      'art3.li2':'<strong>NotchIA Pro de por vida</strong>: 39,99 € en un solo pago, acceso ilimitado a todas las versiones de NotchIA Pro publicadas a partir de la fecha de compra.',
+      'art3.p2':'El pago se realiza en línea mediante tarjeta bancaria a través de nuestro proveedor <strong>Stripe Payments Europe Ltd</strong>. NotchIA nunca tiene acceso a tu número de tarjeta. El pago es exigible inmediatamente en el momento del pedido.',
+      'art3.h3':'Renovación y cancelación de la suscripción mensual',
+      'art3.p3':'La suscripción mensual se renueva tácitamente, mes tras mes. Puedes ponerle fin en cualquier momento desde la página <a href="/account">Mi cuenta</a> → "Gestionar mi suscripción" (portal Stripe), o escribiendo a <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. La cancelación surte efecto al final del periodo en curso: ningún importe ya cobrado se reembolsa prorrateado.',
+      'art4.title':'Artículo 4 — Entrega de la licencia',
+      'art4.p1':'Tras la recepción del pago, tu clave de licencia (cadena firmada Ed25519 del tipo <code class="font-mono text-xs">nia_live_…</code>) se genera y envía por email <strong>en pocos minutos como máximo</strong>. Si no la recibes en 15 minutos, comprueba tu spam o usa el formulario de recuperación en <a href="/account">/account</a>.',
+      'art4.p2':'La instalación del software se hace mediante el DMG firmado descargable desde <a href="/install">/install</a>. La clave desbloquea las funcionalidades Pro al iniciar.',
+      'art5.title':'Artículo 5 — Derecho de retractación — RENUNCIA EXPRESA',
+      'art5.p1':'NotchIA Pro es un <strong>contenido digital no suministrado en soporte material</strong>, cuya ejecución comienza inmediatamente después del pago (generación y envío de la clave, acceso a las funcionalidades Pro).',
+      'art5.callout':'Al validar tu pedido, reconoces haber sido expresamente informado de que, conforme al <strong>artículo L221-28 13° del Código del consumidor francés</strong>, el derecho de retractación de 14 días no se aplica a los contratos de suministro de contenido digital no suministrado en soporte material cuya ejecución haya comenzado con tu acuerdo previo expreso y la renuncia expresa a tu derecho de retractación. <strong>Renuncias expresamente a tu derecho de retractación de 14 días.</strong>',
+      'art5.p2':'Esta renuncia se materializa en el momento del pago mediante una casilla obligatoria en Stripe Checkout <span class="todo">[À CONFIGURER côté Stripe : custom field « J\'accepte les CGV et renonce à mon droit de rétractation de 14 jours »]</span>.',
+      'art5.p3':'Ver también la <a href="/refund">política de reembolso</a> para las excepciones comerciales (bug bloqueante no corregido, doble facturación, etc.).',
+      'art6.title':'Artículo 6 — Garantías legales',
+      'art6.p1':'Independientemente de las eventuales garantías comerciales, te beneficias de pleno derecho de las siguientes garantías:',
+      'art6.li1':'<strong>Garantía legal de conformidad</strong> (art. L217-3 a L217-17 Código del consumidor francés): 2 años a partir de la entrega del software. Cubre los defectos de conformidad con el contrato.',
+      'art6.li2':'<strong>Garantía de vicios ocultos</strong> (art. 1641 a 1649 Código civil francés): 2 años a partir del descubrimiento del vicio.',
+      'art6.li3':'Para los contenidos digitales, la garantía legal de conformidad cubre también el suministro de <strong>actualizaciones necesarias</strong> para mantener la conformidad durante el periodo razonable que el consumidor pueda esperar (art. L217-19 Code conso). Para las suscripciones, esta obligación se extiende durante toda la duración de la suscripción.',
+      'art6.p2':'Para hacer valer una garantía, escribe a <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> describiendo el defecto.',
+      'art7.title':'Artículo 7 — Licencia de uso',
+      'art7.p1':'NotchIA Pro sigue siendo propiedad exclusiva de Axel Courty. La compra te concede una <strong>licencia personal, no exclusiva, no transferible y no cesible</strong> de uso del software en los Mac que utilizas personalmente.',
+      'art7.p2':'Están en particular prohibidos:',
+      'art7.li1':'la redistribución, reventa, compartición o sublicencia de la clave;',
+      'art7.li2':'la ingeniería inversa, descompilación, desensamblado, salvo en los límites estrictamente previstos por la ley (art. L122-6-1 Código de la propiedad intelectual francés);',
+      'art7.li3':'la supresión o modificación de las menciones de propiedad intelectual;',
+      'art7.li4':'el uso del software para desarrollar un producto competidor.',
+      'art7.p3':'NotchIA es un software propietario desarrollado independientemente por Axel Courty. Todo el código fuente está bajo copyright de Axel Courty.',
+      'art8.title':'Artículo 8 — Actualizaciones',
+      'art8.p1':'Las actualizaciones se distribuyen mediante <strong>Sparkle</strong> y se descargan desde GitHub Releases. Cada actualización está firmada digitalmente (EdDSA) y verificada por Sparkle antes de la instalación. Las actualizaciones menores (correcciones, seguridad) están incluidas sin coste para todos los titulares de una licencia activa. Las actualizaciones mayores están incluidas durante la duración de la suscripción o, para la compra de por vida, a partir de la fecha de compra.',
+      'art9.title':'Artículo 9 — Responsabilidad',
+      'art9.p1':'NotchIA se suministra "tal cual". Axel Courty se compromete a aportar sus mejores esfuerzos para asegurar el buen funcionamiento del software y la disponibilidad de la API de licencias, sin compromiso de resultado (obligación de medios).',
+      'art9.p2':'Salvo en caso de falta grave o intencional, y dentro de los límites permitidos por la ley francesa, la responsabilidad de Axel Courty está limitada a los daños directos y limitada al <strong>importe efectivamente pagado por el cliente durante los últimos 12 meses</strong>. Las disposiciones imperativas del Código del consumidor francés se aplican con prioridad y no pueden ser apartadas en detrimento del consumidor.',
+      'art10.title':'Artículo 10 — Datos personales',
+      'art10.p1':'El tratamiento de tus datos se detalla en la <a href="/privacy">política de privacidad</a>, que forma parte integral de las presentes CGV.',
+      'art11.title':'Artículo 11 — Mediación del consumo',
+      'art11.p1':'Conforme al artículo L612-1 del Código del consumidor francés, en caso de litigio no resuelto tras una reclamación escrita previa dirigida a <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>, puedes recurrir gratuitamente al mediador del consumo:',
+      'art11.p2':'<span class="todo">[À COMPLÉTER : nom du médiateur conso adhéré par NotchIA — ex. CMAP, SMC, Médiation FEVAD, ou Médiateur indépendant choisi. Obligation L612-1 d\'adhérer à un dispositif de médiation.]</span>',
+      'art11.p3':'También puedes utilizar la plataforma europea de Resolución de Litigios en Línea: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.',
+      'art12.title':'Artículo 12 — Derecho aplicable y jurisdicción',
+      'art12.p1':'Las presentes CGV se rigen por el <strong>derecho francés</strong>. En caso de litigio, y tras un intento de resolución amistosa, el consumidor puede acudir, a su elección, a una de las jurisdicciones territorialmente competentes en virtud del Código de procedimiento civil francés, o a la jurisdicción del lugar en el que residía en el momento de la conclusión del contrato o de la ocurrencia del hecho dañoso (art. R631-3 Code conso).',
+      'art13.title':'Artículo 13 — Modificación de las CGV',
+      'art13.p1':'Axel Courty se reserva el derecho de modificar las presentes CGV. Las CGV aplicables son las vigentes en la fecha del pedido. Los clientes con una suscripción activa son informados por email de toda modificación sustancial al menos 30 días antes de su entrada en vigor; a falta de aceptación, pueden cancelar sin coste.',
+      'footer.legal':'Aviso legal','footer.cgv':'CGV','footer.privacy':'Privacidad','footer.refund':'Reembolso',
+    },
+    de: {
+      'nav.home':'Startseite','nav.pricing':'Preis',
+      'h1':'Allgemeine <span class="grad-text">Verkaufsbedingungen</span>',
+      'version':'Version 1.0 — Gültig ab 15. Mai 2026',
+      'warn':'<strong>⚠ Blocker vor öffentlicher Eröffnung des Checkouts.</strong> Solange das "auto-entrepreneur"-Unternehmen nicht eingetragen ist (SIRET zugewiesen) und die vollständigen Kontaktdaten nicht im Impressum stehen, ist der öffentliche Verkauf nicht konform mit LCEN art. 6 III und dem französischen Handelsgesetzbuch. Vor jeder Zahlungsannahme zu regeln. Die französische Fassung dieser AGB ist maßgeblich.',
+      'art1.title':'Artikel 1 — Identifikation des Verkäufers',
+      'art1.li1':'Handelsname: <strong>NotchIA</strong>',
+      'art1.li2':'Herausgeber: Axel Courty, "auto-entrepreneur"-Status <span class="todo">[immatriculation en cours]</span>',
+      'art1.li3':'Adresse: <span class="todo">[À COMPLÉTER]</span>',
+      'art1.li4':'SIRET: <span class="todo">[À COMPLÉTER]</span>',
+      'art1.li5':'MwSt.: nicht anwendbar, Art. 293 B des französischen Steuergesetzbuches (Kleinunternehmer-Regelung) <span class="todo">[À CONFIRMER après immatriculation]</span>',
+      'art1.li6':'Kontakt-E-Mail: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>',
+      'art1.p1':'Diese AGB regeln den Verkauf der Software <strong>NotchIA Pro</strong> an Verbraucher und Gewerbetreibende, im Fernabsatz über die Website <a href="https://notchia.app">notchia.app</a> abgeschlossen.',
+      'art2.title':'Artikel 2 — Produkt',
+      'art2.p1':'NotchIA Pro ist eine macOS-Software, die die MacBook-Notch in eine interaktive Zone verwandelt (Medien, Kalender, Shortcuts, KI-Integrationen Claude / Codex / Copilot). Der Kauf von NotchIA Pro schaltet alle kostenpflichtigen Funktionen frei, die auf der <a href="/">Startseite</a> und der <a href="/pricing">Preisseite</a> beschrieben sind.',
+      'art2.h3':'Technische Voraussetzungen',
+      'art2.li1':'macOS 15.0 (Sequoia) mindestens. Apple Intelligence (Shelf-Zusammenfassungen, Digest) erfordert macOS 26+ und einen Apple-Silicon-Mac (M1 oder neuer).',
+      'art2.li2':'Apple-Silicon-Mac oder aktueller Intel x86_64.',
+      'art2.li3':'Etwa 100 MB Speicherplatz.',
+      'art2.li4':'Internetverbindung nur für die Lizenzaktivierung und Updates erforderlich.',
+      'art3.title':'Artikel 3 — Preis und Zahlung',
+      'art3.p1':'Die Preise sind in Euro inklusive aller Steuern angegeben. Als "auto-entrepreneur" unter der Kleinunternehmer-Regelung wird die MwSt. von NotchIA <em>nicht</em> in Rechnung gestellt (Art. 293 B CGI).',
+      'art3.li1':'<strong>NotchIA Pro monatlich</strong>: 3,99 € / Monat, automatisch jeden Monat verlängert bis zur Kündigung.',
+      'art3.li2':'<strong>NotchIA Pro lebenslang</strong>: 39,99 € einmalig, unbegrenzter Zugang zu allen ab dem Kaufdatum veröffentlichten NotchIA-Pro-Versionen.',
+      'art3.p2':'Die Zahlung erfolgt online per Bankkarte über unseren Dienstleister <strong>Stripe Payments Europe Ltd</strong>. NotchIA hat niemals Zugriff auf deine Kartennummer. Die Zahlung ist sofort bei Bestellung fällig.',
+      'art3.h3':'Verlängerung und Kündigung des Monatsabos',
+      'art3.p3':'Das Monatsabo verlängert sich stillschweigend von Monat zu Monat. Du kannst es jederzeit auf der Seite <a href="/account">Mein Konto</a> → "Mein Abo verwalten" (Stripe-Portal) beenden, oder per E-Mail an <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. Die Kündigung wird zum Ende der laufenden Periode wirksam: bereits gezahlte Beträge werden nicht anteilig erstattet.',
+      'art4.title':'Artikel 4 — Lieferung der Lizenz',
+      'art4.p1':'Nach Zahlungseingang wird dein Lizenzschlüssel (mit Ed25519 signierte Zeichenkette wie <code class="font-mono text-xs">nia_live_…</code>) generiert und per E-Mail <strong>innerhalb weniger Minuten</strong> versandt. Falls du ihn nach 15 Minuten nicht erhältst, prüfe deinen Spam-Ordner oder nutze das Wiederherstellungsformular auf <a href="/account">/account</a>.',
+      'art4.p2':'Die Installation der Software erfolgt über das signierte DMG, herunterladbar von <a href="/install">/install</a>. Der Schlüssel schaltet die Pro-Funktionen beim Start frei.',
+      'art5.title':'Artikel 5 — Widerrufsrecht — AUSDRÜCKLICHER VERZICHT',
+      'art5.p1':'NotchIA Pro ist ein <strong>digitaler Inhalt, der nicht auf einem körperlichen Datenträger geliefert wird</strong>, dessen Ausführung unmittelbar nach der Zahlung beginnt (Generierung und Versand des Schlüssels, Zugang zu den Pro-Funktionen).',
+      'art5.callout':'Mit der Bestätigung deiner Bestellung erkennst du an, ausdrücklich darüber informiert worden zu sein, dass gemäß <strong>Artikel L221-28 13° des französischen Verbrauchergesetzbuches</strong> das 14-tägige Widerrufsrecht nicht für Verträge über die Lieferung digitaler Inhalte gilt, die nicht auf einem körperlichen Datenträger geliefert werden, deren Ausführung mit deiner vorherigen ausdrücklichen Zustimmung und unter ausdrücklichem Verzicht auf dein Widerrufsrecht begonnen hat. <strong>Du verzichtest ausdrücklich auf dein 14-tägiges Widerrufsrecht.</strong>',
+      'art5.p2':'Dieser Verzicht wird zum Zeitpunkt der Zahlung durch eine Pflicht-Checkbox im Stripe Checkout dokumentiert <span class="todo">[À CONFIGURER côté Stripe : custom field « J\'accepte les CGV et renonce à mon droit de rétractation de 14 jours »]</span>.',
+      'art5.p3':'Siehe auch die <a href="/refund">Rückerstattungsrichtlinie</a> für kommerzielle Ausnahmen (nicht behobener blockierender Bug, Doppelabrechnung usw.).',
+      'art6.title':'Artikel 6 — Gesetzliche Garantien',
+      'art6.p1':'Unabhängig von etwaigen kommerziellen Garantien profitierst du von Rechts wegen von folgenden Garantien:',
+      'art6.li1':'<strong>Gesetzliche Konformitätsgarantie</strong> (Art. L217-3 bis L217-17 französisches Verbrauchergesetzbuch): 2 Jahre ab Lieferung der Software. Sie deckt Vertragsabweichungen ab.',
+      'art6.li2':'<strong>Garantie gegen verborgene Mängel</strong> (Art. 1641 bis 1649 französisches Zivilgesetzbuch): 2 Jahre ab Entdeckung des Mangels.',
+      'art6.li3':'Für digitale Inhalte umfasst die gesetzliche Konformitätsgarantie auch die Bereitstellung von <strong>notwendigen Updates</strong> zur Erhaltung der Konformität über den vom Verbraucher vernünftigerweise zu erwartenden Zeitraum (Art. L217-19 Code conso). Bei Abonnements erstreckt sich diese Pflicht über die gesamte Abodauer.',
+      'art6.p2':'Um eine Garantie geltend zu machen, schreibe an <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> und beschreibe den Mangel.',
+      'art7.title':'Artikel 7 — Nutzungslizenz',
+      'art7.p1':'NotchIA Pro bleibt das ausschließliche Eigentum von Axel Courty. Der Kauf gewährt dir eine <strong>persönliche, nicht-exklusive, nicht-übertragbare und nicht-abtretbare Lizenz</strong> zur Nutzung der Software auf den Macs, die du persönlich verwendest.',
+      'art7.p2':'Insbesondere sind verboten:',
+      'art7.li1':'Weiterverbreitung, Weiterverkauf, Teilen oder Unterlizenzieren des Schlüssels;',
+      'art7.li2':'Reverse Engineering, Dekompilierung, Disassemblierung, außer in den vom Gesetz strikt vorgesehenen Grenzen (Art. L122-6-1 französisches Gesetzbuch über geistiges Eigentum);',
+      'art7.li3':'Entfernen oder Ändern der Hinweise zum geistigen Eigentum;',
+      'art7.li4':'Nutzung der Software zur Entwicklung eines konkurrierenden Produkts.',
+      'art7.p3':'NotchIA ist eine proprietäre, von Axel Courty unabhängig entwickelte Software. Der gesamte Quellcode steht unter dem Copyright von Axel Courty.',
+      'art8.title':'Artikel 8 — Updates',
+      'art8.p1':'Updates werden über <strong>Sparkle</strong> verteilt und von GitHub Releases heruntergeladen. Jedes Update ist digital signiert (EdDSA) und wird von Sparkle vor der Installation verifiziert. Kleinere Updates (Bugfixes, Sicherheit) sind für alle Inhaber einer aktiven Lizenz kostenlos enthalten. Größere Updates sind während der Abodauer oder, beim Lebenslang-Kauf, ab dem Kaufdatum enthalten.',
+      'art9.title':'Artikel 9 — Haftung',
+      'art9.p1':'NotchIA wird "wie besehen" geliefert. Axel Courty verpflichtet sich, sein Bestes zu geben, um das ordnungsgemäße Funktionieren der Software und die Verfügbarkeit der Lizenz-API sicherzustellen, ohne Erfolgsverpflichtung (Bemühenspflicht).',
+      'art9.p2':'Außer im Fall grober Fahrlässigkeit oder Vorsatz, und im Rahmen des nach französischem Recht Zulässigen, ist die Haftung von Axel Courty auf direkte Schäden beschränkt und auf den <strong>tatsächlich vom Kunden in den letzten 12 Monaten gezahlten Betrag</strong> gedeckelt. Die zwingenden Bestimmungen des französischen Verbrauchergesetzbuches gelten vorrangig und können nicht zum Nachteil des Verbrauchers ausgeschlossen werden.',
+      'art10.title':'Artikel 10 — Personenbezogene Daten',
+      'art10.p1':'Die Verarbeitung deiner Daten ist in der <a href="/privacy">Datenschutzerklärung</a> beschrieben, die integraler Bestandteil dieser AGB ist.',
+      'art11.title':'Artikel 11 — Verbrauchermediation',
+      'art11.p1':'Gemäß Artikel L612-1 des französischen Verbrauchergesetzbuches kannst du im Falle eines nach vorheriger schriftlicher Beschwerde an <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> nicht beigelegten Streits kostenlos den Verbrauchermediator anrufen:',
+      'art11.p2':'<span class="todo">[À COMPLÉTER : nom du médiateur conso adhéré par NotchIA — ex. CMAP, SMC, Médiation FEVAD, ou Médiateur indépendant choisi. Obligation L612-1 d\'adhérer à un dispositif de médiation.]</span>',
+      'art11.p3':'Du kannst auch die europäische Plattform zur Online-Streitbeilegung nutzen: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.',
+      'art12.title':'Artikel 12 — Anwendbares Recht und Gerichtsstand',
+      'art12.p1':'Diese AGB unterliegen dem <strong>französischen Recht</strong>. Im Streitfall, und nach Versuch einer gütlichen Einigung, kann der Verbraucher nach seiner Wahl eines der gemäß französischer Zivilprozessordnung örtlich zuständigen Gerichte oder das Gericht des Ortes anrufen, an dem er zum Zeitpunkt des Vertragsabschlusses oder des schädigenden Ereignisses wohnte (Art. R631-3 Code conso).',
+      'art13.title':'Artikel 13 — Änderung der AGB',
+      'art13.p1':'Axel Courty behält sich das Recht vor, diese AGB zu ändern. Anwendbar sind die zum Bestelldatum geltenden AGB. Kunden mit aktivem Abo werden mindestens 30 Tage vor Inkrafttreten per E-Mail über jede wesentliche Änderung informiert; bei Nichtannahme können sie kostenlos kündigen.',
+      'footer.legal':'Impressum','footer.cgv':'AGB','footer.privacy':'Datenschutz','footer.refund':'Erstattung',
+    },
+  };
+
+  function detectLang() {
+    try { const s = localStorage.getItem('notchia-lang'); if (s && I18N[s]) return s; } catch (e) {}
+    const b = (navigator.language || 'en').toLowerCase().split('-')[0];
+    return I18N[b] ? b : 'en';
+  }
+  function applyLang(lang) {
+    if (!I18N[lang]) lang = 'en';
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { const v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
+    const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
+    try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+  }
+  applyLang(detectLang());
+  document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
+</script>
 
 </body>
 </html>

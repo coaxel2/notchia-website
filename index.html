@@ -895,12 +895,12 @@
       </div>
       <div class="hidden md:block absolute right-4 top-10 drift-b">
         <div class="rounded-xl border border-line bg-surface/70 backdrop-blur-md px-3 py-2 text-xs text-fog font-mono flex items-center gap-2">
-          <span class="state-marker bg-cyan"></span> 24 outils utilisés
+          <span class="state-marker bg-cyan"></span> <span data-i18n="notch.tools_used">24 outils utilisés</span>
         </div>
       </div>
       <div class="hidden md:block absolute right-12 -bottom-2 drift-c">
         <div class="rounded-xl border border-line bg-surface/70 backdrop-blur-md px-3 py-2 text-xs text-fog font-mono flex items-center gap-2">
-          <span class="state-marker bg-mint"></span> 4 200 jetons · 32 % cache
+          <span class="state-marker bg-mint"></span> <span data-i18n="notch.tokens_cache">4 200 jetons · 32 % cache</span>
         </div>
       </div>
       <div class="hidden md:block absolute left-12 bottom-4 drift-a">
@@ -936,35 +936,35 @@
             <div class="p-3 sm:p-4">
               <div class="eyebrow mb-1 sm:mb-2">Claude</div>
               <div class="text-xl sm:text-2xl display ticker">12,4k</div>
-              <div class="text-[10px] sm:text-xs text-mist mt-1">jetons / heure</div>
+              <div class="text-[10px] sm:text-xs text-mist mt-1" data-i18n="notch.tokens_per_hour">jetons / heure</div>
             </div>
             <div class="p-3 sm:p-4">
               <div class="eyebrow mb-1 sm:mb-2">Cache</div>
               <div class="text-xl sm:text-2xl display ticker text-orange">32%</div>
-              <div class="text-[10px] sm:text-xs text-mist mt-1">épargnés</div>
+              <div class="text-[10px] sm:text-xs text-mist mt-1" data-i18n="notch.cache_saved">épargnés</div>
             </div>
             <div class="p-3 sm:p-4 border-t sm:border-t-0 border-line">
               <div class="eyebrow mb-1 sm:mb-2">Outils</div>
               <div class="text-xl sm:text-2xl display ticker">24</div>
-              <div class="text-[10px] sm:text-xs text-mist mt-1">cette session</div>
+              <div class="text-[10px] sm:text-xs text-mist mt-1" data-i18n="notch.tools_session">cette session</div>
             </div>
             <div class="p-3 sm:p-4 border-t sm:border-t-0 border-line">
               <div class="eyebrow mb-1 sm:mb-2">Latence</div>
               <div class="text-xl sm:text-2xl display ticker text-cyan">412 <span class="text-xs text-fog">ms</span></div>
-              <div class="text-[10px] sm:text-xs text-mist mt-1">médiane</div>
+              <div class="text-[10px] sm:text-xs text-mist mt-1" data-i18n="notch.latency_median">médiane</div>
             </div>
           </div>
           <div class="font-mono text-[11px] sm:text-[12px] text-fog px-3 sm:px-4 py-2.5 sm:py-3 leading-6 sm:leading-7 overflow-x-auto whitespace-nowrap sm:whitespace-normal">
-            <div><span class="text-orange">→</span> Edit · ContentView.swift:1248 <span class="text-mist">— grid 2 col</span></div>
-            <div><span class="text-cyan">→</span> Read · BoringViewModel.swift <span class="text-mist">— 392 lignes</span></div>
-            <div><span class="text-mint">✓</span> Build réussi <span class="text-mist">— 8,3 s</span></div>
+            <div><span class="text-orange">→</span> Edit · ContentView.swift:1248 <span class="text-mist" data-i18n="notch.edit_grid">— grid 2 col</span></div>
+            <div><span class="text-cyan">→</span> Read · BoringViewModel.swift <span class="text-mist" data-i18n="notch.read_lines">— 392 lignes</span></div>
+            <div><span class="text-mint">✓</span> <span data-i18n="notch.build_ok">Build réussi</span> <span class="text-mist">— 8,3 s</span></div>
             <div class="text-cream">$ <span class="caret"></span></div>
           </div>
         </div>
       </div>
 
       <p class="text-center text-[11px] sm:text-sm text-mist mt-5 sm:mt-6 font-mono px-4">
-        Aperçu de la zone d'encoche. <span class="text-fog">Le marquee se met à jour à la seconde.</span>
+        <span data-i18n="notch.preview_caption">Aperçu de la zone d'encoche.</span> <span class="text-fog" data-i18n="notch.preview_marquee">Le marquee se met à jour à la seconde.</span>
       </p>
     </div>
 
@@ -1022,7 +1022,7 @@
         <div class="rounded-3xl border border-line bg-ink2 p-6 sm:p-8">
           <!-- Theme presets -->
           <div class="mb-7">
-            <div class="eyebrow mb-4">thème de couleurs</div>
+            <div class="eyebrow mb-4" data-i18n="perso.theme">thème de couleurs</div>
             <div class="flex flex-wrap gap-3">
               <span class="swatch-theme is-active" data-theme="brand"  title="Brand"  style="width:38px;height:38px;border-radius:999px;background:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%);"></span>
               <span class="swatch-theme"           data-theme="sunset" title="Sunset" style="width:38px;height:38px;border-radius:999px;background:linear-gradient(90deg,#FF9F40 0%,#FF6450 30%,#DC3C82 60%,#8232C8 100%);"></span>
@@ -1037,11 +1037,11 @@
           <!-- Notch shape -->
           <div class="my-7">
             <div class="flex items-center justify-between mb-4">
-              <div class="eyebrow">forme de l'encoche</div>
-              <span class="text-mist text-xs font-mono">rayon · ombre · hauteur</span>
+              <div class="eyebrow" data-i18n="perso.shape">forme de l'encoche</div>
+              <span class="text-mist text-xs font-mono" data-i18n="perso.shape_hint">rayon · ombre · hauteur</span>
             </div>
             <div class="flex items-center gap-4">
-              <span class="text-mist text-xs font-mono w-12">rayon</span>
+              <span class="text-mist text-xs font-mono w-12" data-i18n="perso.radius">rayon</span>
               <div class="hud-bar flex-1"><div class="hud-fill" style="width: 60%"></div></div>
               <span class="text-cream text-xs font-mono">18</span>
             </div>
@@ -1051,30 +1051,30 @@
 
           <!-- Tab toggles -->
           <div class="mt-7">
-            <div class="eyebrow mb-4">onglets visibles dans l'encoche</div>
+            <div class="eyebrow mb-4" data-i18n="perso.tabs">onglets visibles dans l'encoche</div>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
               <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-cream text-sm">Média</span>
+                <span class="text-cream text-sm" data-i18n="perso.tab.media">Média</span>
                 <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
               </label>
               <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-cream text-sm">Calendrier</span>
+                <span class="text-cream text-sm" data-i18n="perso.tab.calendar">Calendrier</span>
                 <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
               </label>
               <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-cream text-sm">IA</span>
+                <span class="text-cream text-sm" data-i18n="perso.tab.ai">IA</span>
                 <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
               </label>
               <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-fog text-sm">Shelf</span>
+                <span class="text-fog text-sm" data-i18n="perso.tab.shelf">Shelf</span>
                 <span class="w-8 h-4 rounded-full bg-line relative"><span class="absolute left-0.5 top-0.5 w-3 h-3 rounded-full bg-fog"></span></span>
               </label>
               <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-cream text-sm">Concentration</span>
+                <span class="text-cream text-sm" data-i18n="perso.tab.concentration">Concentration</span>
                 <span class="w-8 h-4 rounded-full grad-bg relative"><span class="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white"></span></span>
               </label>
               <label class="flex items-center justify-between rounded-lg border border-line bg-surface px-3 py-2.5">
-                <span class="text-fog text-sm">Clipboard</span>
+                <span class="text-fog text-sm" data-i18n="perso.tab.clipboard">Clipboard</span>
                 <span class="w-8 h-4 rounded-full bg-line relative"><span class="absolute left-0.5 top-0.5 w-3 h-3 rounded-full bg-fog"></span></span>
               </label>
             </div>
@@ -1115,14 +1115,14 @@
 
         <!-- Multi-session indicator preview -->
         <div class="mt-7 inline-flex items-center gap-3 rounded-xl border border-line bg-ink2 px-4 py-3">
-          <span class="text-mist font-mono text-xs">indicateur multi-session</span>
+          <span class="text-mist font-mono text-xs" data-i18n="ia.multi_session">indicateur multi-session</span>
           <div class="flex gap-1.5">
             <span class="w-2 h-2 rounded-full bg-orange"></span>
             <span class="w-2 h-2 rounded-full bg-cyan"></span>
             <span class="w-2 h-2 rounded-full bg-mint"></span>
             <span class="w-2 h-2 rounded-full bg-violet"></span>
           </div>
-          <span class="text-cream font-mono text-xs">4 actives</span>
+          <span class="text-cream font-mono text-xs" data-i18n="ia.multi_session_count">4 actives</span>
         </div>
       </div>
 
@@ -1130,49 +1130,49 @@
       <div class="lg:col-span-7 reveal">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow text-orange"><span class="state-marker bg-orange pulse-dot"></span> Terminal</div>
+            <div class="flex items-center gap-2 eyebrow text-orange"><span class="state-marker bg-orange pulse-dot"></span> <span data-i18n="ia.state.terminal">Terminal</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">bash · zsh</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">commande shell</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.terminal_desc">commande shell</div>
           </div>
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow text-orange"><span class="state-marker bg-orange"></span> Compilation</div>
+            <div class="flex items-center gap-2 eyebrow text-orange"><span class="state-marker bg-orange"></span> <span data-i18n="ia.state.compilation">Compilation</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">xcodebuild</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">build en cours</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.compilation_desc">build en cours</div>
           </div>
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow"><span class="state-marker bg-cream"></span> Exécution</div>
+            <div class="flex items-center gap-2 eyebrow"><span class="state-marker bg-cream"></span> <span data-i18n="ia.state.execution">Exécution</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">npm run · swift</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">script lancé</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.execution_desc">script lancé</div>
           </div>
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow text-cyan"><span class="state-marker bg-cyan"></span> Recherche</div>
+            <div class="flex items-center gap-2 eyebrow text-cyan"><span class="state-marker bg-cyan"></span> <span data-i18n="ia.state.search">Recherche</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">grep · glob · ls</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">repère un symbole</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.search_desc">repère un symbole</div>
           </div>
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow"><span class="state-marker" style="background:#cdb6e8"></span> Lecture</div>
+            <div class="flex items-center gap-2 eyebrow"><span class="state-marker" style="background:#cdb6e8"></span> <span data-i18n="ia.state.read">Lecture</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">read · cat</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">fichier ouvert</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.read_desc">fichier ouvert</div>
           </div>
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow text-mint"><span class="state-marker bg-mint"></span> Modification</div>
+            <div class="flex items-center gap-2 eyebrow text-mint"><span class="state-marker bg-mint"></span> <span data-i18n="ia.state.edit">Modification</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">edit · str_replace</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">code édité</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.edit_desc">code édité</div>
           </div>
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow"><span class="state-marker" style="background:#ffd29a"></span> Écriture</div>
+            <div class="flex items-center gap-2 eyebrow"><span class="state-marker" style="background:#ffd29a"></span> <span data-i18n="ia.state.write">Écriture</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">write · create</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">nouveau fichier</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.write_desc">nouveau fichier</div>
           </div>
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow text-magenta"><span class="state-marker bg-magenta"></span> Web</div>
+            <div class="flex items-center gap-2 eyebrow text-magenta"><span class="state-marker bg-magenta"></span> <span data-i18n="ia.state.web">Web</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">webfetch</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">requête réseau</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.web_desc">requête réseau</div>
           </div>
           <div class="lift rounded-2xl border border-line bg-ink2 p-4 sm:p-5">
-            <div class="flex items-center gap-2 eyebrow"><span class="state-marker bg-violet"></span> Planification</div>
+            <div class="flex items-center gap-2 eyebrow"><span class="state-marker bg-violet"></span> <span data-i18n="ia.state.plan">Planification</span></div>
             <div class="font-mono text-xs text-fog mt-2 sm:mt-3">todowrite</div>
-            <div class="text-mist text-[11px] sm:text-xs mt-1">structure le travail</div>
+            <div class="text-mist text-[11px] sm:text-xs mt-1" data-i18n="ia.state.plan_desc">structure le travail</div>
           </div>
         </div>
 
@@ -1182,10 +1182,10 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
           </div>
           <div class="min-w-0">
-            <div class="text-cream font-medium text-sm sm:text-base">Claude attend votre permission</div>
-            <div class="text-mist text-xs sm:text-sm font-mono mt-0.5 truncate">$ rm -rf node_modules — autoriser ?</div>
+            <div class="text-cream font-medium text-sm sm:text-base" data-i18n="ia.permission.title">Claude attend votre permission</div>
+            <div class="text-mist text-xs sm:text-sm font-mono mt-0.5 truncate" data-i18n="ia.permission.cmd">$ rm -rf node_modules — autoriser ?</div>
           </div>
-          <button class="ml-auto btn btn-grad text-xs sm:text-sm flex-none">Autoriser</button>
+          <button class="ml-auto btn btn-grad text-xs sm:text-sm flex-none" data-i18n="ia.permission.btn">Autoriser</button>
         </div>
       </div>
     </div>
@@ -1196,18 +1196,18 @@
         <div class="flex items-center justify-between px-4 sm:px-5 py-2.5 sm:py-3 border-b border-line">
           <div class="flex items-center gap-3">
             <span class="rec-dot"></span>
-            <span class="eyebrow">flux de session — capture</span>
+            <span class="eyebrow" data-i18n="ia.tape.eyebrow">flux de session — capture</span>
           </div>
           <span class="text-[10px] sm:text-xs text-mist font-mono hidden sm:inline">~/.claude/projects/notchia/log</span>
         </div>
         <div class="font-mono text-[12px] sm:text-[13px] leading-7 text-fog px-4 sm:px-5 py-4 sm:py-5 overflow-x-auto whitespace-nowrap">
-          <span class="text-mist">[14:02:11]</span> <span class="text-orange">Terminal</span> <span class="text-cream">$ xcodebuild</span> <span class="text-mist">→ 12,4 s</span>
+          <span class="text-mist">[14:02:11]</span> <span class="text-orange" data-i18n="ia.state.terminal">Terminal</span> <span class="text-cream">$ xcodebuild</span> <span class="text-mist">→ 12,4 s</span>
           &nbsp;&nbsp;<span class="text-mist">|</span>&nbsp;&nbsp;
-          <span class="text-mist">[14:02:24]</span> <span class="text-cyan">Recherche</span> <span class="text-cream">grep "Recording"</span> <span class="text-mist">→ 27 résultats</span>
+          <span class="text-mist">[14:02:24]</span> <span class="text-cyan" data-i18n="ia.state.search">Recherche</span> <span class="text-cream">grep "Recording"</span> <span class="text-mist" data-i18n="ia.tape.results27">→ 27 résultats</span>
           &nbsp;&nbsp;<span class="text-mist">|</span>&nbsp;&nbsp;
-          <span class="text-mist">[14:02:31]</span> <span class="text-mint">Modification</span> <span class="text-cream">ContentView:1248</span>
+          <span class="text-mist">[14:02:31]</span> <span class="text-mint" data-i18n="ia.state.edit">Modification</span> <span class="text-cream">ContentView:1248</span>
           &nbsp;&nbsp;<span class="text-mist">|</span>&nbsp;&nbsp;
-          <span class="text-mist">[14:02:39]</span> <span class="text-orange">Compilation</span> <span class="text-cream">build · 8,3 s</span> <span class="text-mint">✓</span>
+          <span class="text-mist">[14:02:39]</span> <span class="text-orange" data-i18n="ia.state.compilation">Compilation</span> <span class="text-cream">build · 8,3 s</span> <span class="text-mint">✓</span>
         </div>
       </div>
     </div>
@@ -1313,24 +1313,24 @@
         <div class="rule my-5 sm:my-6"></div>
         <div class="flex items-center justify-between gap-4">
           <div id="visualizer" class="flex items-end gap-1 h-10 flex-1" aria-hidden="true"></div>
-          <span class="text-mist text-xs font-mono whitespace-nowrap">spectrogramme</span>
+          <span class="text-mist text-xs font-mono whitespace-nowrap" data-i18n="medias.spectrogram">spectrogramme</span>
         </div>
       </div>
 
       <!-- Lyrics scroll -->
       <div class="lg:col-span-5 lift rounded-3xl border border-line bg-ink2 p-6 sm:p-8 reveal">
         <div class="flex items-center justify-between mb-5 sm:mb-6">
-          <div class="eyebrow">paroles · synchronisées</div>
+          <div class="eyebrow" data-i18n="medias.lyrics_eyebrow">paroles · synchronisées</div>
           <span class="text-mist text-xs font-mono">lrclib</span>
         </div>
         <div id="lyrics" class="space-y-3 text-base sm:text-lg leading-relaxed min-h-[14rem]"></div>
         <div class="mt-7 flex items-center gap-3 text-mist font-mono text-xs">
           <span class="inline-flex items-center gap-2">
             <span id="lyric-status-dot" class="w-2 h-2 rounded-full bg-mint"></span>
-            <span id="lyric-status">défilement temps réel</span>
+            <span id="lyric-status" data-i18n="medias.lyrics_realtime">défilement temps réel</span>
           </span>
           <span>·</span>
-          <span>26 langues</span>
+          <span data-i18n="medias.lyrics_langs">26 langues</span>
         </div>
       </div>
 
@@ -1338,9 +1338,9 @@
       <div class="lg:col-span-12 lift rounded-3xl border border-line bg-ink2 p-6 sm:p-8 reveal">
         <div class="flex items-center justify-between flex-wrap gap-4">
           <div>
-            <div class="eyebrow">sneak peek · changement de morceau</div>
-            <div class="display text-2xl sm:text-3xl mt-2">L'encoche s'élargit. <span class="display-italic grad-text">Discrètement.</span></div>
-            <p class="text-fog mt-2 max-w-lg text-sm sm:text-base">Affichage 3 secondes du titre/artiste à chaque transition. Pas de notification. Pas de pop-up. Pas de bruit.</p>
+            <div class="eyebrow" data-i18n="medias.sneak_eyebrow">sneak peek · changement de morceau</div>
+            <div class="display text-2xl sm:text-3xl mt-2"><span data-i18n="medias.sneak_title1">L'encoche s'élargit.</span> <span class="display-italic grad-text" data-i18n="medias.sneak_title2">Discrètement.</span></div>
+            <p class="text-fog mt-2 max-w-lg text-sm sm:text-base" data-i18n="medias.sneak_desc">Affichage 3 secondes du titre/artiste à chaque transition. Pas de notification. Pas de pop-up. Pas de bruit.</p>
           </div>
           <div id="sneak-peek" class="flex items-center gap-3 rounded-2xl border border-line bg-surface px-5 py-3.5 transition-all duration-300">
             <div id="sneak-art" class="w-9 h-9 rounded-lg transition-all duration-300" style="background: linear-gradient(135deg, var(--cyan), var(--violet));"></div>
@@ -1390,20 +1390,20 @@
           <!-- Day strip -->
           <div class="px-5 sm:px-6 py-4 sm:py-5 border-b border-line">
             <div class="flex items-center justify-between mb-4">
-              <div class="display text-xl sm:text-2xl">Mai 2026</div>
+              <div class="display text-xl sm:text-2xl" data-i18n="agenda.cal_month">Mai 2026</div>
               <div class="flex items-center gap-2 text-mist">
                 <button class="w-7 h-7 rounded-full border border-line flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
                 <button class="w-7 h-7 rounded-full border border-line flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
               </div>
             </div>
             <div class="grid grid-cols-7 gap-1 sm:gap-2">
-              <div class="text-center text-[10px] text-mist font-mono">L</div>
-              <div class="text-center text-[10px] text-mist font-mono">M</div>
-              <div class="text-center text-[10px] text-mist font-mono">M</div>
-              <div class="text-center text-[10px] text-mist font-mono">J</div>
-              <div class="text-center text-[10px] text-mist font-mono">V</div>
-              <div class="text-center text-[10px] text-mist font-mono">S</div>
-              <div class="text-center text-[10px] text-mist font-mono">D</div>
+              <div class="text-center text-[10px] text-mist font-mono" data-i18n="agenda.day.l">L</div>
+              <div class="text-center text-[10px] text-mist font-mono" data-i18n="agenda.day.m1">M</div>
+              <div class="text-center text-[10px] text-mist font-mono" data-i18n="agenda.day.m2">M</div>
+              <div class="text-center text-[10px] text-mist font-mono" data-i18n="agenda.day.j">J</div>
+              <div class="text-center text-[10px] text-mist font-mono" data-i18n="agenda.day.v">V</div>
+              <div class="text-center text-[10px] text-mist font-mono" data-i18n="agenda.day.s">S</div>
+              <div class="text-center text-[10px] text-mist font-mono" data-i18n="agenda.day.d">D</div>
               <div data-day="3" class="text-center text-fog text-sm py-2 relative">3<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-fog"></span></div>
               <div data-day="4" class="text-center text-fog text-sm py-2">4</div>
               <div data-day="5" class="text-center text-cream text-sm py-2 rounded-lg grad-bg font-medium relative">5<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-cream"></span></div>
@@ -1418,11 +1418,11 @@
           <div id="cal-date-label" class="px-5 sm:px-6 pt-4 pb-1 eyebrow text-cream">Mardi 5 mai</div>
           <div class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-line">
             <div class="p-5 sm:p-6">
-              <div class="eyebrow mb-3">événements</div>
+              <div class="eyebrow mb-3" data-i18n="agenda.events_title">événements</div>
               <div id="cal-events" class="space-y-2.5"></div>
             </div>
             <div class="p-5 sm:p-6">
-              <div class="eyebrow mb-3">rappels</div>
+              <div class="eyebrow mb-3" data-i18n="agenda.reminders_title">rappels</div>
               <div id="cal-reminders" class="space-y-2.5"></div>
             </div>
           </div>
@@ -1443,7 +1443,7 @@
       <div class="lg:col-span-5 reveal">
         <div class="eyebrow mb-5 sm:mb-6 flex items-center gap-3 flex-wrap">
           <span data-i18n="digest.eyebrow">§05 — digest IA on-device</span>
-          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider" style="background:linear-gradient(90deg,var(--violet),var(--cyan));color:#0B0D12">Nouveau · 2.8.0</span>
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider" style="background:linear-gradient(90deg,var(--violet),var(--cyan));color:#0B0D12" data-i18n="digest.tag_new">Nouveau · 2.8.0</span>
         </div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="digest.title1">Ton brief d'actu.</span>
@@ -1469,8 +1469,8 @@
             <div class="flex items-center gap-3">
               <div class="w-7 h-7 rounded-full grad-bg flex items-center justify-center text-[14px]">🦉</div>
               <div>
-                <div class="display text-base sm:text-lg">Digest du matin</div>
-                <div class="text-mist text-[11px] font-mono">15 mai · 07:42 · 4 sources · 18 items → 3 résumés</div>
+                <div class="display text-base sm:text-lg" data-i18n="digest.brief_title">Digest du matin</div>
+                <div class="text-mist text-[11px] font-mono" data-i18n="digest.brief_meta">15 mai · 07:42 · 4 sources · 18 items → 3 résumés</div>
               </div>
             </div>
             <span class="text-[10px] font-mono text-mist">on-device</span>
@@ -1479,36 +1479,36 @@
           <div class="divide-y divide-line">
             <div class="p-5 sm:p-6">
               <div class="flex items-center gap-2 mb-2">
-                <span class="text-[10px] font-mono text-orange uppercase tracking-wider">IA vidéo</span>
-                <span class="text-mist text-[10px] font-mono">· 3 sources</span>
+                <span class="text-[10px] font-mono text-orange uppercase tracking-wider" data-i18n="digest.topic_ai_video">IA vidéo</span>
+                <span class="text-mist text-[10px] font-mono" data-i18n="digest.sources_3">· 3 sources</span>
               </div>
-              <p class="text-cream text-sm sm:text-base leading-relaxed">
+              <p class="text-cream text-sm sm:text-base leading-relaxed" data-i18n="digest.summary_video">
                 Sora 2.4 ouvre la génération longue à 60 s côté API ; Runway répond avec un mode « gen-4 director » qui accepte des storyboards JSON. Pika reste en retrait sur la durée mais améliore la cohérence faciale.
               </p>
             </div>
             <div class="p-5 sm:p-6">
               <div class="flex items-center gap-2 mb-2">
                 <span class="text-[10px] font-mono text-magenta uppercase tracking-wider">macOS 26</span>
-                <span class="text-mist text-[10px] font-mono">· 2 sources</span>
+                <span class="text-mist text-[10px] font-mono" data-i18n="digest.sources_2">· 2 sources</span>
               </div>
-              <p class="text-cream text-sm sm:text-base leading-relaxed">
+              <p class="text-cream text-sm sm:text-base leading-relaxed" data-i18n="digest.summary_macos">
                 La bêta 4 livre une API stable pour Foundation Models avec exécution en arrière-plan ; les apps en sandbox y accèdent désormais sans entitlement spécial.
               </p>
             </div>
             <div class="p-5 sm:p-6">
               <div class="flex items-center gap-2 mb-2">
                 <span class="text-[10px] font-mono text-cyan uppercase tracking-wider">SwiftUI</span>
-                <span class="text-mist text-[10px] font-mono">· 1 source</span>
+                <span class="text-mist text-[10px] font-mono" data-i18n="digest.sources_1">· 1 source</span>
               </div>
-              <p class="text-cream text-sm sm:text-base leading-relaxed">
+              <p class="text-cream text-sm sm:text-base leading-relaxed" data-i18n-html="digest.summary_swiftui">
                 Le nouveau modificateur <code class="font-mono text-xs">.scrollPosition(idType:)</code> remplace les hacks GeometryReader pour la pagination ; rétro-compatible iOS 17 via shim.
               </p>
             </div>
           </div>
 
           <div class="px-5 sm:px-6 py-3 border-t border-line flex items-center justify-between text-[11px] font-mono text-mist">
-            <span>résumé par Apple Intelligence · 0 ko envoyé au cloud</span>
-            <span>↻ régénérer</span>
+            <span data-i18n="digest.summary_credit">résumé par Apple Intelligence · 0 ko envoyé au cloud</span>
+            <span data-i18n="digest.regenerate">↻ régénérer</span>
           </div>
         </div>
       </div>
@@ -1544,59 +1544,59 @@
       <!-- Concentration -->
       <div class="lg:col-span-5 lift rounded-3xl border border-line bg-ink2 p-6 sm:p-8 reveal">
         <div class="flex items-center justify-between">
-          <div class="eyebrow">Concentration</div>
+          <div class="eyebrow" data-i18n="perso.tab.concentration">Concentration</div>
           <span class="text-xs text-mist font-mono">⌘+P</span>
         </div>
-        <h3 class="display text-2xl sm:text-3xl mt-4 sm:mt-5">25 / 5. Automatique.</h3>
+        <h3 class="display text-2xl sm:text-3xl mt-4 sm:mt-5" data-i18n="prod.conc.title">25 / 5. Automatique.</h3>
         <div class="mt-6 sm:mt-7 flex items-center gap-5 sm:gap-6">
           <div class="pomo-ring relative" style="--p: 64;">
             <span class="relative z-10 display text-2xl">17:32</span>
           </div>
           <div class="space-y-2 text-sm">
-            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-orange"></span><span class="text-cream">Concentration</span><span class="text-mist text-xs ml-auto">3 / 4</span></div>
-            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan"></span><span class="text-fog">Pause courte</span><span class="text-mist text-xs ml-auto">5 min</span></div>
-            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-violet"></span><span class="text-fog">Pause longue</span><span class="text-mist text-xs ml-auto">15 min</span></div>
+            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-orange"></span><span class="text-cream" data-i18n="perso.tab.concentration">Concentration</span><span class="text-mist text-xs ml-auto">3 / 4</span></div>
+            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan"></span><span class="text-fog" data-i18n="prod.conc.short">Pause courte</span><span class="text-mist text-xs ml-auto">5 min</span></div>
+            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-violet"></span><span class="text-fog" data-i18n="prod.conc.long">Pause longue</span><span class="text-mist text-xs ml-auto">15 min</span></div>
           </div>
         </div>
         <div class="rule my-5"></div>
         <div class="flex items-center justify-between text-xs text-mist font-mono">
-          <span>aujourd'hui · 4 h 12 min</span>
+          <span data-i18n="prod.conc.today">aujourd'hui · 4 h 12 min</span>
           <span>·</span>
-          <span>cette semaine · 21 h</span>
+          <span data-i18n="prod.conc.week">cette semaine · 21 h</span>
         </div>
       </div>
 
       <!-- Presse-papiers -->
       <div class="lg:col-span-7 lift rounded-3xl border border-line bg-ink2 p-6 sm:p-8 reveal">
         <div class="flex items-center justify-between">
-          <div class="eyebrow">Presse-papiers</div>
+          <div class="eyebrow" data-i18n="prod.clip.eyebrow">Presse-papiers</div>
           <span class="text-xs text-mist font-mono">⌘+⇧+V</span>
         </div>
-        <h3 class="display text-2xl sm:text-3xl mt-4 sm:mt-5">Historique complet de votre presse-papiers.</h3>
+        <h3 class="display text-2xl sm:text-3xl mt-4 sm:mt-5" data-i18n="prod.clip.title">Historique complet de votre presse-papiers.</h3>
         <div class="mt-6 space-y-2">
           <div class="flex items-center gap-3 rounded-lg border border-line bg-surface px-3 py-2.5">
             <span class="text-magenta font-mono text-xs flex-none">★</span>
             <span class="text-mist font-mono text-xs flex-none">Xcode</span>
             <span class="text-cream text-sm truncate">final NotchViewModel: ObservableObject</span>
-            <span class="ml-auto text-mist text-xs font-mono flex-none">il y a 3 m</span>
+            <span class="ml-auto text-mist text-xs font-mono flex-none" data-i18n="prod.clip.ago_3m">il y a 3 m</span>
           </div>
           <div class="flex items-center gap-3 rounded-lg border border-line bg-surface px-3 py-2.5">
             <span class="text-mist font-mono text-xs flex-none w-3"></span>
             <span class="text-mist font-mono text-xs flex-none">Safari</span>
             <span class="text-cream text-sm truncate">https://developer.apple.com/documentation/swiftui</span>
-            <span class="ml-auto text-mist text-xs font-mono flex-none hidden sm:inline">7 m</span>
+            <span class="ml-auto text-mist text-xs font-mono flex-none hidden sm:inline" data-i18n="prod.clip.ago_7m">7 m</span>
           </div>
           <div class="flex items-center gap-3 rounded-lg border border-line bg-surface px-3 py-2.5">
             <span class="text-mist font-mono text-xs flex-none w-3"></span>
             <span class="text-mist font-mono text-xs flex-none">Notes</span>
             <span class="text-cream text-sm truncate">commit -m "fix: hit-test on file converter"</span>
-            <span class="ml-auto text-mist text-xs font-mono flex-none hidden sm:inline">12 m</span>
+            <span class="ml-auto text-mist text-xs font-mono flex-none hidden sm:inline" data-i18n="prod.clip.ago_12m">12 m</span>
           </div>
         </div>
         <div class="rule my-5"></div>
         <div class="flex items-center justify-between text-xs text-mist font-mono">
-          <span>recherche · regroupement par app · épinglage</span>
-          <span class="hidden sm:inline">cache : 500 entrées</span>
+          <span data-i18n="prod.clip.footer">recherche · regroupement par app · épinglage</span>
+          <span class="hidden sm:inline" data-i18n="prod.clip.cache">cache : 500 entrées</span>
         </div>
       </div>
 
@@ -1606,7 +1606,7 @@
           <div class="eyebrow">Shelf</div>
           <span class="text-xs text-mist font-mono">⌘+S</span>
         </div>
-        <h3 class="display text-xl sm:text-2xl mt-4 sm:mt-5">Glissez. Déposez. Oubliez.</h3>
+        <h3 class="display text-xl sm:text-2xl mt-4 sm:mt-5" data-i18n="prod.shelf.title">Glissez. Déposez. Oubliez.</h3>
         <div class="mt-5 grid grid-cols-3 gap-2">
           <div class="aspect-square rounded-lg border border-line bg-surface flex items-center justify-center text-mist text-xs font-mono">.png</div>
           <div class="aspect-square rounded-lg border border-line bg-surface flex items-center justify-center text-mist text-xs font-mono">.pdf</div>
@@ -1615,16 +1615,16 @@
           <div class="aspect-square rounded-lg grad-border bg-magenta/10 flex items-center justify-center grad-text text-xs font-mono">+</div>
           <div class="aspect-square rounded-lg border border-line bg-surface flex items-center justify-center text-mist text-xs font-mono">.txt</div>
         </div>
-        <p class="mt-5 text-fog text-sm">QuickLook intégré. Quick Share AirDrop / Mail / Messages.</p>
+        <p class="mt-5 text-fog text-sm" data-i18n="prod.shelf.desc">QuickLook intégré. Quick Share AirDrop / Mail / Messages.</p>
       </div>
 
       <!-- Convertisseur -->
       <div class="lg:col-span-4 lift rounded-3xl border border-line bg-ink2 p-6 sm:p-8 reveal">
         <div class="flex items-center justify-between">
-          <div class="eyebrow">Convertisseur</div>
+          <div class="eyebrow" data-i18n="prod.conv.eyebrow">Convertisseur</div>
           <span class="text-xs text-mist font-mono">drag&drop</span>
         </div>
-        <h3 class="display text-xl sm:text-2xl mt-4 sm:mt-5">Un format. Un clic.</h3>
+        <h3 class="display text-xl sm:text-2xl mt-4 sm:mt-5" data-i18n="prod.conv.title">Un format. Un clic.</h3>
         <div class="mt-5 grid grid-cols-2 gap-2">
           <button class="fmt-btn rounded-lg border border-line bg-surface px-3 py-2 text-cream text-sm">JPG</button>
           <button class="fmt-btn rounded-lg border border-line bg-surface px-3 py-2 text-cream text-sm">WebP</button>
@@ -1633,7 +1633,7 @@
           <button class="fmt-btn rounded-lg border border-line bg-surface px-3 py-2 text-cream text-sm">AVIF</button>
           <button class="fmt-btn rounded-lg border border-line bg-surface px-3 py-2 text-cream text-sm">TIFF</button>
         </div>
-        <p class="mt-5 text-fog text-sm">Images, PDF, formats divers. Traitement local.</p>
+        <p class="mt-5 text-fog text-sm" data-i18n="prod.conv.desc">Images, PDF, formats divers. Traitement local.</p>
       </div>
 
       <!-- Quick Share -->
@@ -1642,14 +1642,14 @@
           <div class="eyebrow">Quick Share</div>
           <span class="text-xs text-mist font-mono">⌘+⇧+S</span>
         </div>
-        <h3 class="display text-xl sm:text-2xl mt-4 sm:mt-5">Partage instantané.</h3>
+        <h3 class="display text-xl sm:text-2xl mt-4 sm:mt-5" data-i18n="prod.share.title">Partage instantané.</h3>
         <div class="mt-5 flex flex-wrap gap-2">
           <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-fog flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-cyan"></span> AirDrop</span>
           <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-fog flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-mint"></span> Messages</span>
           <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-fog flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-orange"></span> Mail</span>
           <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-fog flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-magenta"></span> Notes</span>
         </div>
-        <p class="mt-5 text-fog text-sm">Service par défaut configurable. Aucune intermédiation.</p>
+        <p class="mt-5 text-fog text-sm" data-i18n="prod.share.desc">Service par défaut configurable. Aucune intermédiation.</p>
       </div>
     </div>
   </div>
@@ -1680,30 +1680,30 @@
       <!-- HUD -->
       <div class="lg:col-span-7 lift rounded-3xl border border-line bg-ink2 p-6 sm:p-8 reveal">
         <div class="flex items-center justify-between">
-          <div class="eyebrow">HUD système · remplacement</div>
+          <div class="eyebrow" data-i18n="sys.hud.eyebrow">HUD système · remplacement</div>
           <span class="text-xs text-mist font-mono">capsule · inline</span>
         </div>
-        <h3 class="display text-2xl sm:text-3xl mt-4 sm:mt-5">Volume, luminosité, clavier — sous l'encoche.</h3>
-        <p class="text-fog text-sm sm:text-base mt-3 sm:mt-4 max-w-md">Adieu la grosse capsule grise au milieu de l'écran. NotchIA intègre les HUD dans l'encoche elle-même.</p>
+        <h3 class="display text-2xl sm:text-3xl mt-4 sm:mt-5" data-i18n="sys.hud.title">Volume, luminosité, clavier — sous l'encoche.</h3>
+        <p class="text-fog text-sm sm:text-base mt-3 sm:mt-4 max-w-md" data-i18n="sys.hud.desc">Adieu la grosse capsule grise au milieu de l'écran. NotchIA intègre les HUD dans l'encoche elle-même.</p>
 
         <div class="mt-6 sm:mt-7 space-y-4">
           <div>
             <div class="flex items-center justify-between text-xs text-mist mb-1.5">
-              <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4.03v8.05c1.48-.74 2.5-2.27 2.5-4.02z"/></svg> Volume</span>
+              <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4.03v8.05c1.48-.74 2.5-2.27 2.5-4.02z"/></svg> <span data-i18n="sys.hud.volume">Volume</span></span>
               <span class="font-mono">62 %</span>
             </div>
             <div class="hud-bar"><div class="hud-fill" style="width: 62%"></div></div>
           </div>
           <div>
             <div class="flex items-center justify-between text-xs text-mist mb-1.5">
-              <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none"/></svg> Luminosité écran</span>
+              <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none"/></svg> <span data-i18n="sys.hud.brightness">Luminosité écran</span></span>
               <span class="font-mono">88 %</span>
             </div>
             <div class="hud-bar"><div class="hud-fill" style="width: 88%"></div></div>
           </div>
           <div>
             <div class="flex items-center justify-between text-xs text-mist mb-1.5">
-              <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/></svg> Rétroéclairage clavier</span>
+              <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/></svg> <span data-i18n="sys.hud.keyboard">Rétroéclairage clavier</span></span>
               <span class="font-mono">30 %</span>
             </div>
             <div class="hud-bar"><div class="hud-fill" style="width: 30%"></div></div>
@@ -1712,7 +1712,7 @@
 
         <div class="rule my-5 sm:my-6"></div>
         <div class="flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-mist font-mono">
-          <span>style classique</span><span>·</span><span>style inline</span><span>·</span><span>action Option configurable</span>
+          <span data-i18n="sys.hud.classic">style classique</span><span>·</span><span data-i18n="sys.hud.inline">style inline</span><span>·</span><span data-i18n="sys.hud.option">action Option configurable</span>
         </div>
       </div>
 
@@ -1722,39 +1722,39 @@
           <div class="eyebrow">Sneak Peek Engine</div>
           <span class="sp-dot"></span>
         </div>
-        <h3 class="display text-2xl sm:text-3xl mt-4 sm:mt-5">L'encoche fermée tourne.</h3>
-        <p class="text-fog text-sm sm:text-base mt-3 max-w-sm">Mini-widgets affichés en rotation : musique, Concentration, presse-papiers, volume, luminosité. Uniquement quand il y a du contenu actif.</p>
+        <h3 class="display text-2xl sm:text-3xl mt-4 sm:mt-5" data-i18n="sys.sneak.title">L'encoche fermée tourne.</h3>
+        <p class="text-fog text-sm sm:text-base mt-3 max-w-sm" data-i18n="sys.sneak.desc">Mini-widgets affichés en rotation : musique, Concentration, presse-papiers, volume, luminosité. Uniquement quand il y a du contenu actif.</p>
         <div class="mt-6 grid grid-cols-2 gap-2">
           <div class="rounded-lg border border-line bg-surface px-3 py-2.5 flex items-center gap-2 text-sm">
-            <span class="w-1.5 h-1.5 rounded-full bg-magenta"></span><span class="text-cream">Musique</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-magenta"></span><span class="text-cream" data-i18n="sys.sneak.music">Musique</span>
           </div>
           <div class="rounded-lg border border-line bg-surface px-3 py-2.5 flex items-center gap-2 text-sm">
-            <span class="w-1.5 h-1.5 rounded-full bg-orange"></span><span class="text-cream">Concentration</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-orange"></span><span class="text-cream" data-i18n="perso.tab.concentration">Concentration</span>
           </div>
           <div class="rounded-lg border border-line bg-surface px-3 py-2.5 flex items-center gap-2 text-sm">
-            <span class="w-1.5 h-1.5 rounded-full bg-cyan"></span><span class="text-cream">Volume</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan"></span><span class="text-cream" data-i18n="sys.hud.volume">Volume</span>
           </div>
           <div class="rounded-lg border border-line bg-surface px-3 py-2.5 flex items-center gap-2 text-sm">
-            <span class="w-1.5 h-1.5 rounded-full bg-violet"></span><span class="text-cream">Clipboard</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-violet"></span><span class="text-cream" data-i18n="perso.tab.clipboard">Clipboard</span>
           </div>
           <div class="rounded-lg border border-line bg-surface px-3 py-2.5 flex items-center gap-2 text-sm">
-            <span class="w-1.5 h-1.5 rounded-full bg-mint"></span><span class="text-cream">Luminosité</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-mint"></span><span class="text-cream" data-i18n="sys.sneak.brightness">Luminosité</span>
           </div>
           <div class="rounded-lg border border-line bg-surface px-3 py-2.5 flex items-center gap-2 text-sm">
-            <span class="w-1.5 h-1.5 rounded-full" style="background:#ffd29a"></span><span class="text-cream">Météo</span>
+            <span class="w-1.5 h-1.5 rounded-full" style="background:#ffd29a"></span><span class="text-cream" data-i18n="sys.sneak.weather">Météo</span>
           </div>
         </div>
-        <p class="mt-5 text-mist text-xs font-mono">intervalle + durée configurables</p>
+        <p class="mt-5 text-mist text-xs font-mono" data-i18n="sys.sneak.config">intervalle + durée configurables</p>
       </div>
 
       <!-- Détections automatiques -->
       <div class="lg:col-span-12 lift rounded-3xl border border-line bg-ink2 p-6 sm:p-8 reveal">
         <div class="flex items-center justify-between flex-wrap gap-4 mb-6 sm:mb-7">
           <div>
-            <div class="eyebrow">Détections automatiques</div>
-            <h3 class="display text-2xl sm:text-3xl mt-3">Le contexte, sans l'effort.</h3>
+            <div class="eyebrow" data-i18n="sys.detect.eyebrow">Détections automatiques</div>
+            <h3 class="display text-2xl sm:text-3xl mt-3" data-i18n="sys.detect.title">Le contexte, sans l'effort.</h3>
           </div>
-          <p class="text-fog text-sm max-w-md">NotchIA reconnaît ce qui se passe sur votre Mac et adapte l'encoche en conséquence.</p>
+          <p class="text-fog text-sm max-w-md" data-i18n="sys.detect.intro">NotchIA reconnaît ce qui se passe sur votre Mac et adapte l'encoche en conséquence.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
@@ -1763,27 +1763,27 @@
               <div class="w-9 h-9 rounded-full grad-bg flex items-center justify-center text-white">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
               </div>
-              <div class="text-cream font-medium">Appels en cours</div>
+              <div class="text-cream font-medium" data-i18n="sys.detect.calls">Appels en cours</div>
             </div>
-            <p class="text-fog text-sm">Indicateur dans l'encoche pendant FaceTime, Zoom, Teams, Meet…</p>
+            <p class="text-fog text-sm" data-i18n="sys.detect.calls_desc">Indicateur dans l'encoche pendant FaceTime, Zoom, Teams, Meet…</p>
           </div>
           <div class="rounded-2xl border border-line bg-surface p-5">
             <div class="flex items-center gap-3 mb-3">
               <div class="w-9 h-9 rounded-full grad-bg flex items-center justify-center text-white">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
               </div>
-              <div class="text-cream font-medium">Mode Concentration</div>
+              <div class="text-cream font-medium" data-i18n="sys.detect.focus">Mode Concentration</div>
             </div>
-            <p class="text-fog text-sm">Affiche le Focus Mode actif : Ne pas déranger, Travail, Sommeil…</p>
+            <p class="text-fog text-sm" data-i18n="sys.detect.focus_desc">Affiche le Focus Mode actif : Ne pas déranger, Travail, Sommeil…</p>
           </div>
           <div class="rounded-2xl border border-line bg-surface p-5">
             <div class="flex items-center gap-3 mb-3">
               <div class="w-9 h-9 rounded-full grad-bg flex items-center justify-center text-white">
                 <span class="rec-dot"></span>
               </div>
-              <div class="text-cream font-medium">Enregistrement d'écran</div>
+              <div class="text-cream font-medium" data-i18n="sys.detect.recording">Enregistrement d'écran</div>
             </div>
-            <p class="text-fog text-sm">QuickTime, OBS, etc. — masquage auto du notch durant la capture.</p>
+            <p class="text-fog text-sm" data-i18n="sys.detect.recording_desc">QuickTime, OBS, etc. — masquage auto du notch durant la capture.</p>
           </div>
         </div>
       </div>
@@ -2099,7 +2099,7 @@
       <div class="notch is-large">
         <div class="marquee text-cream">
           <div class="marquee-track text-[12px] sm:text-[13px] font-mono">
-            <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:var(--magenta);animation:pulse 1.6s infinite"></span><span style="color:var(--magenta)">NotchIA</span><span style="color:rgba(237,232,220,0.55)">prêt à installer</span></span>
+            <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:var(--magenta);animation:pulse 1.6s infinite"></span><span style="color:var(--magenta)">NotchIA</span><span style="color:rgba(237,232,220,0.55)" data-i18n="cta.ready_install">prêt à installer</span></span>
             <span style="color:rgba(237,232,220,0.25)">·</span>
             <span style="display:inline-flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:999px;background:#9DD9B7"></span><span style="color:#9DD9B7">macOS 15.0+</span></span>
             <span style="color:rgba(237,232,220,0.25)">·</span>
@@ -2407,6 +2407,142 @@
       'footer.legal.l4': 'Mentions légales',
       'footer.copyright': '© 2026 NotchIA · Axel Courty',
       'footer.madein': 'fait avec Swift 6 · à Paris · sans télémétrie',
+
+      // === Notch stage (§00) ===
+      'notch.tools_used': '24 outils utilisés',
+      'notch.tokens_cache': '4 200 jetons · 32 % cache',
+      'notch.tokens_per_hour': 'jetons / heure',
+      'notch.cache_saved': 'épargnés',
+      'notch.tools_session': 'cette session',
+      'notch.latency_median': 'médiane',
+      'notch.read_lines': '— 392 lignes',
+      'notch.edit_grid': '— grid 2 col',
+      'notch.build_ok': 'Build réussi',
+      'notch.preview_caption': "Aperçu de la zone d'encoche.",
+      'notch.preview_marquee': 'Le marquee se met à jour à la seconde.',
+
+      // === Personnalisation right panel (§01) ===
+      'perso.theme': 'thème de couleurs',
+      'perso.shape': "forme de l'encoche",
+      'perso.shape_hint': 'rayon · ombre · hauteur',
+      'perso.radius': 'rayon',
+      'perso.tabs': "onglets visibles dans l'encoche",
+      'perso.tab.media': 'Média',
+      'perso.tab.calendar': 'Calendrier',
+      'perso.tab.ai': 'IA',
+      'perso.tab.shelf': 'Shelf',
+      'perso.tab.concentration': 'Concentration',
+      'perso.tab.clipboard': 'Clipboard',
+
+      // === IA states (§02) ===
+      'ia.multi_session': 'indicateur multi-session',
+      'ia.multi_session_count': '4 actives',
+      'ia.state.terminal': 'Terminal',
+      'ia.state.terminal_desc': 'commande shell',
+      'ia.state.compilation': 'Compilation',
+      'ia.state.compilation_desc': 'build en cours',
+      'ia.state.execution': 'Exécution',
+      'ia.state.execution_desc': 'script lancé',
+      'ia.state.search': 'Recherche',
+      'ia.state.search_desc': 'repère un symbole',
+      'ia.state.read': 'Lecture',
+      'ia.state.read_desc': 'fichier ouvert',
+      'ia.state.edit': 'Modification',
+      'ia.state.edit_desc': 'code édité',
+      'ia.state.write': 'Écriture',
+      'ia.state.write_desc': 'nouveau fichier',
+      'ia.state.web': 'Web',
+      'ia.state.web_desc': 'requête réseau',
+      'ia.state.plan': 'Planification',
+      'ia.state.plan_desc': 'structure le travail',
+      'ia.state.subagent': 'Sous-agent',
+      'ia.permission.title': 'Claude attend votre permission',
+      'ia.permission.cmd': '$ rm -rf node_modules — autoriser ?',
+      'ia.permission.btn': 'Autoriser',
+      'ia.tape.eyebrow': 'flux de session — capture',
+      'ia.tape.results27': '→ 27 résultats',
+
+      // === Médias (§03) ===
+      'medias.lyrics_eyebrow': 'paroles · synchronisées',
+      'medias.lyrics_realtime': 'défilement temps réel',
+      'medias.lyrics_langs': '26 langues',
+      'medias.spectrogram': 'spectrogramme',
+      'medias.sneak_eyebrow': 'sneak peek · changement de morceau',
+      'medias.sneak_title1': "L'encoche s'élargit.",
+      'medias.sneak_title2': 'Discrètement.',
+      'medias.sneak_desc': 'Affichage 3 secondes du titre/artiste à chaque transition. Pas de notification. Pas de pop-up. Pas de bruit.',
+
+      // === Agenda (§04) ===
+      'agenda.cal_month': 'Mai 2026',
+      'agenda.events_title': 'événements',
+      'agenda.reminders_title': 'rappels',
+      'agenda.no_events': 'Aucun événement',
+      'agenda.no_reminders': 'Aucun rappel',
+      'agenda.day.l': 'L', 'agenda.day.m1': 'M', 'agenda.day.m2': 'M', 'agenda.day.j': 'J', 'agenda.day.v': 'V', 'agenda.day.s': 'S', 'agenda.day.d': 'D',
+
+      // === Digest mock (§05) ===
+      'digest.tag_new': 'Nouveau · 2.8.0',
+      'digest.brief_title': 'Digest du matin',
+      'digest.brief_meta': '15 mai · 07:42 · 4 sources · 18 items → 3 résumés',
+      'digest.topic_ai_video': 'IA vidéo',
+      'digest.sources_3': '· 3 sources',
+      'digest.sources_2': '· 2 sources',
+      'digest.sources_1': '· 1 source',
+      'digest.summary_video': 'Sora 2.4 ouvre la génération longue à 60 s côté API ; Runway répond avec un mode « gen-4 director » qui accepte des storyboards JSON. Pika reste en retrait sur la durée mais améliore la cohérence faciale.',
+      'digest.summary_macos': 'La bêta 4 livre une API stable pour Foundation Models avec exécution en arrière-plan ; les apps en sandbox y accèdent désormais sans entitlement spécial.',
+      'digest.summary_swiftui': 'Le nouveau modificateur <code class="font-mono text-xs">.scrollPosition(idType:)</code> remplace les hacks GeometryReader pour la pagination ; rétro-compatible iOS 17 via shim.',
+      'digest.summary_credit': 'résumé par Apple Intelligence · 0 ko envoyé au cloud',
+      'digest.regenerate': '↻ régénérer',
+
+      // === Productivité (§06) ===
+      'prod.conc.title': '25 / 5. Automatique.',
+      'prod.conc.short': 'Pause courte',
+      'prod.conc.long': 'Pause longue',
+      'prod.conc.today': "aujourd'hui · 4 h 12 min",
+      'prod.conc.week': 'cette semaine · 21 h',
+      'prod.clip.eyebrow': 'Presse-papiers',
+      'prod.clip.title': 'Historique complet de votre presse-papiers.',
+      'prod.clip.ago_3m': 'il y a 3 m',
+      'prod.clip.ago_7m': '7 m',
+      'prod.clip.ago_12m': '12 m',
+      'prod.clip.footer': 'recherche · regroupement par app · épinglage',
+      'prod.clip.cache': 'cache : 500 entrées',
+      'prod.shelf.title': 'Glissez. Déposez. Oubliez.',
+      'prod.shelf.desc': 'QuickLook intégré. Quick Share AirDrop / Mail / Messages.',
+      'prod.conv.eyebrow': 'Convertisseur',
+      'prod.conv.title': 'Un format. Un clic.',
+      'prod.conv.desc': 'Images, PDF, formats divers. Traitement local.',
+      'prod.share.title': 'Partage instantané.',
+      'prod.share.desc': 'Service par défaut configurable. Aucune intermédiation.',
+
+      // === Système (§07) ===
+      'sys.hud.eyebrow': 'HUD système · remplacement',
+      'sys.hud.title': "Volume, luminosité, clavier — sous l'encoche.",
+      'sys.hud.desc': "Adieu la grosse capsule grise au milieu de l'écran. NotchIA intègre les HUD dans l'encoche elle-même.",
+      'sys.hud.volume': 'Volume',
+      'sys.hud.brightness': 'Luminosité écran',
+      'sys.hud.keyboard': 'Rétroéclairage clavier',
+      'sys.hud.classic': 'style classique',
+      'sys.hud.inline': 'style inline',
+      'sys.hud.option': 'action Option configurable',
+      'sys.sneak.title': "L'encoche fermée tourne.",
+      'sys.sneak.desc': 'Mini-widgets affichés en rotation : musique, Concentration, presse-papiers, volume, luminosité. Uniquement quand il y a du contenu actif.',
+      'sys.sneak.music': 'Musique',
+      'sys.sneak.brightness': 'Luminosité',
+      'sys.sneak.weather': 'Météo',
+      'sys.sneak.config': 'intervalle + durée configurables',
+      'sys.detect.eyebrow': 'Détections automatiques',
+      'sys.detect.title': "Le contexte, sans l'effort.",
+      'sys.detect.intro': "NotchIA reconnaît ce qui se passe sur votre Mac et adapte l'encoche en conséquence.",
+      'sys.detect.calls': 'Appels en cours',
+      'sys.detect.calls_desc': 'Indicateur dans l\'encoche pendant FaceTime, Zoom, Teams, Meet…',
+      'sys.detect.focus': 'Mode Concentration',
+      'sys.detect.focus_desc': 'Affiche le Focus Mode actif : Ne pas déranger, Travail, Sommeil…',
+      'sys.detect.recording': "Enregistrement d'écran",
+      'sys.detect.recording_desc': 'QuickTime, OBS, etc. — masquage auto du notch durant la capture.',
+
+      // === §11 CTA notch marquee ===
+      'cta.ready_install': 'prêt à installer',
     },
     en: {
       'a11y.skip': 'Skip to content',
@@ -2603,6 +2739,142 @@
       'footer.legal.l4': 'Legal notice',
       'footer.copyright': '© 2026 NotchIA · Axel Courty',
       'footer.madein': 'made with Swift 6 · in Paris · no telemetry',
+
+      // === Notch stage (§00) ===
+      'notch.tools_used': '24 tools used',
+      'notch.tokens_cache': '4,200 tokens · 32% cache',
+      'notch.tokens_per_hour': 'tokens / hour',
+      'notch.cache_saved': 'saved',
+      'notch.tools_session': 'this session',
+      'notch.latency_median': 'median',
+      'notch.read_lines': '— 392 lines',
+      'notch.edit_grid': '— grid 2 col',
+      'notch.build_ok': 'Build succeeded',
+      'notch.preview_caption': 'Notch area preview.',
+      'notch.preview_marquee': 'Marquee updates every second.',
+
+      // === Personnalisation right panel (§01) ===
+      'perso.theme': 'color theme',
+      'perso.shape': 'notch shape',
+      'perso.shape_hint': 'radius · shadow · height',
+      'perso.radius': 'radius',
+      'perso.tabs': 'tabs visible in the notch',
+      'perso.tab.media': 'Media',
+      'perso.tab.calendar': 'Calendar',
+      'perso.tab.ai': 'AI',
+      'perso.tab.shelf': 'Shelf',
+      'perso.tab.concentration': 'Concentration',
+      'perso.tab.clipboard': 'Clipboard',
+
+      // === IA states (§02) ===
+      'ia.multi_session': 'multi-session indicator',
+      'ia.multi_session_count': '4 active',
+      'ia.state.terminal': 'Terminal',
+      'ia.state.terminal_desc': 'shell command',
+      'ia.state.compilation': 'Build',
+      'ia.state.compilation_desc': 'build in progress',
+      'ia.state.execution': 'Running',
+      'ia.state.execution_desc': 'script started',
+      'ia.state.search': 'Search',
+      'ia.state.search_desc': 'finds a symbol',
+      'ia.state.read': 'Read',
+      'ia.state.read_desc': 'file opened',
+      'ia.state.edit': 'Edit',
+      'ia.state.edit_desc': 'code edited',
+      'ia.state.write': 'Write',
+      'ia.state.write_desc': 'new file',
+      'ia.state.web': 'Web',
+      'ia.state.web_desc': 'network request',
+      'ia.state.plan': 'Plan',
+      'ia.state.plan_desc': 'structures the work',
+      'ia.state.subagent': 'Sub-agent',
+      'ia.permission.title': 'Claude is waiting for permission',
+      'ia.permission.cmd': '$ rm -rf node_modules — allow?',
+      'ia.permission.btn': 'Allow',
+      'ia.tape.eyebrow': 'session log — capture',
+      'ia.tape.results27': '→ 27 results',
+
+      // === Media (§03) ===
+      'medias.lyrics_eyebrow': 'lyrics · synced',
+      'medias.lyrics_realtime': 'real-time scroll',
+      'medias.lyrics_langs': '26 languages',
+      'medias.spectrogram': 'spectrogram',
+      'medias.sneak_eyebrow': 'sneak peek · track change',
+      'medias.sneak_title1': 'The notch widens.',
+      'medias.sneak_title2': 'Discreetly.',
+      'medias.sneak_desc': 'Title/artist shown for 3 seconds at every transition. No notification. No pop-up. No noise.',
+
+      // === Calendar (§04) ===
+      'agenda.cal_month': 'May 2026',
+      'agenda.events_title': 'events',
+      'agenda.reminders_title': 'reminders',
+      'agenda.no_events': 'No events',
+      'agenda.no_reminders': 'No reminders',
+      'agenda.day.l': 'M', 'agenda.day.m1': 'T', 'agenda.day.m2': 'W', 'agenda.day.j': 'T', 'agenda.day.v': 'F', 'agenda.day.s': 'S', 'agenda.day.d': 'S',
+
+      // === Digest mock (§05) ===
+      'digest.tag_new': 'New · 2.8.0',
+      'digest.brief_title': 'Morning Digest',
+      'digest.brief_meta': 'May 15 · 07:42 · 4 sources · 18 items → 3 summaries',
+      'digest.topic_ai_video': 'AI video',
+      'digest.sources_3': '· 3 sources',
+      'digest.sources_2': '· 2 sources',
+      'digest.sources_1': '· 1 source',
+      'digest.summary_video': 'Sora 2.4 opens long-form generation to 60 s via API; Runway counters with a "gen-4 director" mode that accepts JSON storyboards. Pika still lags on duration but improves facial coherence.',
+      'digest.summary_macos': 'Beta 4 ships a stable Foundation Models API with background execution; sandboxed apps now access it without a special entitlement.',
+      'digest.summary_swiftui': 'The new <code class="font-mono text-xs">.scrollPosition(idType:)</code> modifier replaces GeometryReader hacks for pagination; iOS 17 backward-compatible via shim.',
+      'digest.summary_credit': 'summarized by Apple Intelligence · 0 KB sent to the cloud',
+      'digest.regenerate': '↻ regenerate',
+
+      // === Productivity (§06) ===
+      'prod.conc.title': '25 / 5. Automatic.',
+      'prod.conc.short': 'Short break',
+      'prod.conc.long': 'Long break',
+      'prod.conc.today': 'today · 4 h 12 min',
+      'prod.conc.week': 'this week · 21 h',
+      'prod.clip.eyebrow': 'Clipboard',
+      'prod.clip.title': 'Full history of your clipboard.',
+      'prod.clip.ago_3m': '3 m ago',
+      'prod.clip.ago_7m': '7 m',
+      'prod.clip.ago_12m': '12 m',
+      'prod.clip.footer': 'search · group by app · pinning',
+      'prod.clip.cache': 'cache: 500 entries',
+      'prod.shelf.title': 'Drag. Drop. Forget.',
+      'prod.shelf.desc': 'Built-in QuickLook. Quick Share AirDrop / Mail / Messages.',
+      'prod.conv.eyebrow': 'Converter',
+      'prod.conv.title': 'One format. One click.',
+      'prod.conv.desc': 'Images, PDF, various formats. Local processing.',
+      'prod.share.title': 'Instant sharing.',
+      'prod.share.desc': 'Configurable default service. No intermediary.',
+
+      // === System (§07) ===
+      'sys.hud.eyebrow': 'system HUD · replacement',
+      'sys.hud.title': 'Volume, brightness, keyboard — under the notch.',
+      'sys.hud.desc': 'Goodbye to the big grey capsule in the middle of the screen. NotchIA embeds the HUDs in the notch itself.',
+      'sys.hud.volume': 'Volume',
+      'sys.hud.brightness': 'Screen brightness',
+      'sys.hud.keyboard': 'Keyboard backlight',
+      'sys.hud.classic': 'classic style',
+      'sys.hud.inline': 'inline style',
+      'sys.hud.option': 'configurable Option action',
+      'sys.sneak.title': 'The closed notch rotates.',
+      'sys.sneak.desc': 'Mini-widgets shown in rotation: music, Concentration, clipboard, volume, brightness. Only when there is active content.',
+      'sys.sneak.music': 'Music',
+      'sys.sneak.brightness': 'Brightness',
+      'sys.sneak.weather': 'Weather',
+      'sys.sneak.config': 'interval + duration configurable',
+      'sys.detect.eyebrow': 'Automatic detection',
+      'sys.detect.title': 'Context, effortlessly.',
+      'sys.detect.intro': 'NotchIA recognizes what is happening on your Mac and adapts the notch accordingly.',
+      'sys.detect.calls': 'Active calls',
+      'sys.detect.calls_desc': 'Indicator in the notch during FaceTime, Zoom, Teams, Meet…',
+      'sys.detect.focus': 'Focus Mode',
+      'sys.detect.focus_desc': 'Shows the active Focus Mode: Do Not Disturb, Work, Sleep…',
+      'sys.detect.recording': 'Screen recording',
+      'sys.detect.recording_desc': 'QuickTime, OBS, etc. — notch auto-hidden during capture.',
+
+      // === §11 CTA notch marquee ===
+      'cta.ready_install': 'ready to install',
     },
     es: {
       'a11y.skip': 'Saltar al contenido',
@@ -2799,6 +3071,142 @@
       'footer.legal.l4': 'Aviso legal',
       'footer.copyright': '© 2026 NotchIA · Axel Courty',
       'footer.madein': 'hecho con Swift 6 · en París · sin telemetría',
+
+      // === Notch stage (§00) ===
+      'notch.tools_used': '24 herramientas usadas',
+      'notch.tokens_cache': '4.200 tokens · 32 % caché',
+      'notch.tokens_per_hour': 'tokens / hora',
+      'notch.cache_saved': 'ahorrados',
+      'notch.tools_session': 'esta sesión',
+      'notch.latency_median': 'mediana',
+      'notch.read_lines': '— 392 líneas',
+      'notch.edit_grid': '— grid 2 col',
+      'notch.build_ok': 'Build correcto',
+      'notch.preview_caption': 'Vista previa de la zona de muesca.',
+      'notch.preview_marquee': 'El marquee se actualiza cada segundo.',
+
+      // === Personalización panel (§01) ===
+      'perso.theme': 'tema de color',
+      'perso.shape': 'forma de la muesca',
+      'perso.shape_hint': 'radio · sombra · altura',
+      'perso.radius': 'radio',
+      'perso.tabs': 'pestañas visibles en la muesca',
+      'perso.tab.media': 'Medios',
+      'perso.tab.calendar': 'Calendario',
+      'perso.tab.ai': 'IA',
+      'perso.tab.shelf': 'Shelf',
+      'perso.tab.concentration': 'Concentration',
+      'perso.tab.clipboard': 'Clipboard',
+
+      // === IA states (§02) ===
+      'ia.multi_session': 'indicador multisesión',
+      'ia.multi_session_count': '4 activas',
+      'ia.state.terminal': 'Terminal',
+      'ia.state.terminal_desc': 'comando shell',
+      'ia.state.compilation': 'Compilación',
+      'ia.state.compilation_desc': 'build en curso',
+      'ia.state.execution': 'Ejecución',
+      'ia.state.execution_desc': 'script lanzado',
+      'ia.state.search': 'Búsqueda',
+      'ia.state.search_desc': 'localiza un símbolo',
+      'ia.state.read': 'Lectura',
+      'ia.state.read_desc': 'archivo abierto',
+      'ia.state.edit': 'Modificación',
+      'ia.state.edit_desc': 'código editado',
+      'ia.state.write': 'Escritura',
+      'ia.state.write_desc': 'archivo nuevo',
+      'ia.state.web': 'Web',
+      'ia.state.web_desc': 'petición de red',
+      'ia.state.plan': 'Planificación',
+      'ia.state.plan_desc': 'estructura el trabajo',
+      'ia.state.subagent': 'Subagente',
+      'ia.permission.title': 'Claude espera tu permiso',
+      'ia.permission.cmd': '$ rm -rf node_modules — ¿permitir?',
+      'ia.permission.btn': 'Permitir',
+      'ia.tape.eyebrow': 'flujo de sesión — captura',
+      'ia.tape.results27': '→ 27 resultados',
+
+      // === Medios (§03) ===
+      'medias.lyrics_eyebrow': 'letras · sincronizadas',
+      'medias.lyrics_realtime': 'desplazamiento en tiempo real',
+      'medias.lyrics_langs': '26 idiomas',
+      'medias.spectrogram': 'espectrograma',
+      'medias.sneak_eyebrow': 'sneak peek · cambio de canción',
+      'medias.sneak_title1': 'La muesca se expande.',
+      'medias.sneak_title2': 'Discretamente.',
+      'medias.sneak_desc': 'Título/artista durante 3 segundos en cada transición. Sin notificación. Sin pop-up. Sin ruido.',
+
+      // === Calendario (§04) ===
+      'agenda.cal_month': 'Mayo 2026',
+      'agenda.events_title': 'eventos',
+      'agenda.reminders_title': 'recordatorios',
+      'agenda.no_events': 'Sin eventos',
+      'agenda.no_reminders': 'Sin recordatorios',
+      'agenda.day.l': 'L', 'agenda.day.m1': 'M', 'agenda.day.m2': 'X', 'agenda.day.j': 'J', 'agenda.day.v': 'V', 'agenda.day.s': 'S', 'agenda.day.d': 'D',
+
+      // === Digest mock (§05) ===
+      'digest.tag_new': 'Nuevo · 2.8.0',
+      'digest.brief_title': 'Digest matutino',
+      'digest.brief_meta': '15 mayo · 07:42 · 4 fuentes · 18 ítems → 3 resúmenes',
+      'digest.topic_ai_video': 'IA vídeo',
+      'digest.sources_3': '· 3 fuentes',
+      'digest.sources_2': '· 2 fuentes',
+      'digest.sources_1': '· 1 fuente',
+      'digest.summary_video': 'Sora 2.4 abre la generación larga a 60 s vía API; Runway responde con un modo «gen-4 director» que acepta storyboards JSON. Pika sigue atrás en duración pero mejora la coherencia facial.',
+      'digest.summary_macos': 'La beta 4 entrega una API estable para Foundation Models con ejecución en segundo plano; las apps en sandbox acceden ya sin entitlement especial.',
+      'digest.summary_swiftui': 'El nuevo modificador <code class="font-mono text-xs">.scrollPosition(idType:)</code> sustituye los hacks de GeometryReader para paginación; retrocompatible con iOS 17 vía shim.',
+      'digest.summary_credit': 'resumido por Apple Intelligence · 0 KB enviados a la nube',
+      'digest.regenerate': '↻ regenerar',
+
+      // === Productividad (§06) ===
+      'prod.conc.title': '25 / 5. Automático.',
+      'prod.conc.short': 'Pausa corta',
+      'prod.conc.long': 'Pausa larga',
+      'prod.conc.today': 'hoy · 4 h 12 min',
+      'prod.conc.week': 'esta semana · 21 h',
+      'prod.clip.eyebrow': 'Portapapeles',
+      'prod.clip.title': 'Historial completo de tu portapapeles.',
+      'prod.clip.ago_3m': 'hace 3 m',
+      'prod.clip.ago_7m': '7 m',
+      'prod.clip.ago_12m': '12 m',
+      'prod.clip.footer': 'búsqueda · agrupación por app · fijado',
+      'prod.clip.cache': 'caché: 500 entradas',
+      'prod.shelf.title': 'Arrastra. Suelta. Olvida.',
+      'prod.shelf.desc': 'QuickLook integrado. Quick Share AirDrop / Mail / Messages.',
+      'prod.conv.eyebrow': 'Conversor',
+      'prod.conv.title': 'Un formato. Un clic.',
+      'prod.conv.desc': 'Imágenes, PDF, formatos diversos. Procesamiento local.',
+      'prod.share.title': 'Compartir al instante.',
+      'prod.share.desc': 'Servicio por defecto configurable. Sin intermediación.',
+
+      // === Sistema (§07) ===
+      'sys.hud.eyebrow': 'HUD del sistema · reemplazo',
+      'sys.hud.title': 'Volumen, brillo, teclado — bajo la muesca.',
+      'sys.hud.desc': 'Adiós a la gran cápsula gris en el centro de la pantalla. NotchIA integra los HUD en la propia muesca.',
+      'sys.hud.volume': 'Volumen',
+      'sys.hud.brightness': 'Brillo de pantalla',
+      'sys.hud.keyboard': 'Retroiluminación del teclado',
+      'sys.hud.classic': 'estilo clásico',
+      'sys.hud.inline': 'estilo inline',
+      'sys.hud.option': 'acción Option configurable',
+      'sys.sneak.title': 'La muesca cerrada rota.',
+      'sys.sneak.desc': 'Mini-widgets en rotación: música, Concentration, portapapeles, volumen, brillo. Solo cuando hay contenido activo.',
+      'sys.sneak.music': 'Música',
+      'sys.sneak.brightness': 'Brillo',
+      'sys.sneak.weather': 'Tiempo',
+      'sys.sneak.config': 'intervalo + duración configurables',
+      'sys.detect.eyebrow': 'Detecciones automáticas',
+      'sys.detect.title': 'El contexto, sin esfuerzo.',
+      'sys.detect.intro': 'NotchIA reconoce lo que pasa en tu Mac y adapta la muesca en consecuencia.',
+      'sys.detect.calls': 'Llamadas en curso',
+      'sys.detect.calls_desc': 'Indicador en la muesca durante FaceTime, Zoom, Teams, Meet…',
+      'sys.detect.focus': 'Modo Concentración',
+      'sys.detect.focus_desc': 'Muestra el Focus Mode activo: No molestar, Trabajo, Sueño…',
+      'sys.detect.recording': 'Grabación de pantalla',
+      'sys.detect.recording_desc': 'QuickTime, OBS, etc. — ocultación automática del notch durante la captura.',
+
+      // === §11 CTA notch marquee ===
+      'cta.ready_install': 'listo para instalar',
     },
     de: {
       'a11y.skip': 'Zum Inhalt springen',
@@ -2995,6 +3403,142 @@
       'footer.legal.l4': 'Impressum',
       'footer.copyright': '© 2026 NotchIA · Axel Courty',
       'footer.madein': 'mit Swift 6 gemacht · in Paris · keine Telemetrie',
+
+      // === Notch stage (§00) ===
+      'notch.tools_used': '24 Tools verwendet',
+      'notch.tokens_cache': '4.200 Tokens · 32 % Cache',
+      'notch.tokens_per_hour': 'Tokens / Stunde',
+      'notch.cache_saved': 'gespart',
+      'notch.tools_session': 'diese Sitzung',
+      'notch.latency_median': 'Median',
+      'notch.read_lines': '— 392 Zeilen',
+      'notch.edit_grid': '— Grid 2 Spalten',
+      'notch.build_ok': 'Build erfolgreich',
+      'notch.preview_caption': 'Vorschau des Aussparungsbereichs.',
+      'notch.preview_marquee': 'Das Marquee aktualisiert jede Sekunde.',
+
+      // === Personalisierung Panel (§01) ===
+      'perso.theme': 'Farbthema',
+      'perso.shape': 'Aussparungsform',
+      'perso.shape_hint': 'Radius · Schatten · Höhe',
+      'perso.radius': 'Radius',
+      'perso.tabs': 'sichtbare Tabs in der Aussparung',
+      'perso.tab.media': 'Medien',
+      'perso.tab.calendar': 'Kalender',
+      'perso.tab.ai': 'KI',
+      'perso.tab.shelf': 'Shelf',
+      'perso.tab.concentration': 'Concentration',
+      'perso.tab.clipboard': 'Clipboard',
+
+      // === KI states (§02) ===
+      'ia.multi_session': 'Multi-Sitzungs-Indikator',
+      'ia.multi_session_count': '4 aktiv',
+      'ia.state.terminal': 'Terminal',
+      'ia.state.terminal_desc': 'Shell-Befehl',
+      'ia.state.compilation': 'Kompilierung',
+      'ia.state.compilation_desc': 'Build läuft',
+      'ia.state.execution': 'Ausführung',
+      'ia.state.execution_desc': 'Skript gestartet',
+      'ia.state.search': 'Suche',
+      'ia.state.search_desc': 'findet ein Symbol',
+      'ia.state.read': 'Lesen',
+      'ia.state.read_desc': 'Datei geöffnet',
+      'ia.state.edit': 'Bearbeitung',
+      'ia.state.edit_desc': 'Code bearbeitet',
+      'ia.state.write': 'Schreiben',
+      'ia.state.write_desc': 'neue Datei',
+      'ia.state.web': 'Web',
+      'ia.state.web_desc': 'Netzwerkanfrage',
+      'ia.state.plan': 'Planung',
+      'ia.state.plan_desc': 'strukturiert die Arbeit',
+      'ia.state.subagent': 'Sub-Agent',
+      'ia.permission.title': 'Claude wartet auf Berechtigung',
+      'ia.permission.cmd': '$ rm -rf node_modules — erlauben?',
+      'ia.permission.btn': 'Erlauben',
+      'ia.tape.eyebrow': 'Sitzungslog — Erfassung',
+      'ia.tape.results27': '→ 27 Ergebnisse',
+
+      // === Medien (§03) ===
+      'medias.lyrics_eyebrow': 'Songtexte · synchronisiert',
+      'medias.lyrics_realtime': 'Echtzeit-Scroll',
+      'medias.lyrics_langs': '26 Sprachen',
+      'medias.spectrogram': 'Spektrogramm',
+      'medias.sneak_eyebrow': 'Sneak Peek · Songwechsel',
+      'medias.sneak_title1': 'Die Aussparung erweitert sich.',
+      'medias.sneak_title2': 'Dezent.',
+      'medias.sneak_desc': '3 Sekunden Titel/Künstler bei jedem Wechsel. Keine Benachrichtigung. Kein Pop-up. Kein Lärm.',
+
+      // === Kalender (§04) ===
+      'agenda.cal_month': 'Mai 2026',
+      'agenda.events_title': 'Termine',
+      'agenda.reminders_title': 'Erinnerungen',
+      'agenda.no_events': 'Keine Termine',
+      'agenda.no_reminders': 'Keine Erinnerungen',
+      'agenda.day.l': 'M', 'agenda.day.m1': 'D', 'agenda.day.m2': 'M', 'agenda.day.j': 'D', 'agenda.day.v': 'F', 'agenda.day.s': 'S', 'agenda.day.d': 'S',
+
+      // === Digest Mock (§05) ===
+      'digest.tag_new': 'Neu · 2.8.0',
+      'digest.brief_title': 'Morgen-Digest',
+      'digest.brief_meta': '15. Mai · 07:42 · 4 Quellen · 18 Items → 3 Zusammenfassungen',
+      'digest.topic_ai_video': 'KI-Video',
+      'digest.sources_3': '· 3 Quellen',
+      'digest.sources_2': '· 2 Quellen',
+      'digest.sources_1': '· 1 Quelle',
+      'digest.summary_video': 'Sora 2.4 öffnet die Langform-Generierung auf 60 s via API; Runway antwortet mit einem „gen-4 director"-Modus, der JSON-Storyboards akzeptiert. Pika hinkt bei der Dauer hinterher, verbessert aber die Gesichtskohärenz.',
+      'digest.summary_macos': 'Beta 4 liefert eine stabile Foundation-Models-API mit Hintergrundausführung; Sandbox-Apps greifen jetzt ohne spezielles Entitlement zu.',
+      'digest.summary_swiftui': 'Der neue <code class="font-mono text-xs">.scrollPosition(idType:)</code>-Modifier ersetzt GeometryReader-Hacks für die Pagination; rückwärtskompatibel mit iOS 17 via Shim.',
+      'digest.summary_credit': 'zusammengefasst von Apple Intelligence · 0 KB an Cloud gesendet',
+      'digest.regenerate': '↻ neu generieren',
+
+      // === Produktivität (§06) ===
+      'prod.conc.title': '25 / 5. Automatisch.',
+      'prod.conc.short': 'Kurze Pause',
+      'prod.conc.long': 'Lange Pause',
+      'prod.conc.today': 'heute · 4 h 12 min',
+      'prod.conc.week': 'diese Woche · 21 h',
+      'prod.clip.eyebrow': 'Zwischenablage',
+      'prod.clip.title': 'Vollständiger Verlauf Ihrer Zwischenablage.',
+      'prod.clip.ago_3m': 'vor 3 Min',
+      'prod.clip.ago_7m': '7 Min',
+      'prod.clip.ago_12m': '12 Min',
+      'prod.clip.footer': 'Suche · Gruppierung nach App · Pinning',
+      'prod.clip.cache': 'Cache: 500 Einträge',
+      'prod.shelf.title': 'Ziehen. Ablegen. Vergessen.',
+      'prod.shelf.desc': 'QuickLook integriert. Quick Share AirDrop / Mail / Messages.',
+      'prod.conv.eyebrow': 'Konverter',
+      'prod.conv.title': 'Ein Format. Ein Klick.',
+      'prod.conv.desc': 'Bilder, PDF, verschiedene Formate. Lokale Verarbeitung.',
+      'prod.share.title': 'Sofortiges Teilen.',
+      'prod.share.desc': 'Konfigurierbarer Standarddienst. Keine Vermittlung.',
+
+      // === System (§07) ===
+      'sys.hud.eyebrow': 'System-HUD · Ersatz',
+      'sys.hud.title': 'Lautstärke, Helligkeit, Tastatur — unter der Aussparung.',
+      'sys.hud.desc': 'Schluss mit der großen grauen Kapsel in der Bildschirmmitte. NotchIA integriert HUDs in die Aussparung selbst.',
+      'sys.hud.volume': 'Lautstärke',
+      'sys.hud.brightness': 'Bildschirmhelligkeit',
+      'sys.hud.keyboard': 'Tastaturbeleuchtung',
+      'sys.hud.classic': 'klassischer Stil',
+      'sys.hud.inline': 'Inline-Stil',
+      'sys.hud.option': 'konfigurierbare Option-Aktion',
+      'sys.sneak.title': 'Die geschlossene Aussparung rotiert.',
+      'sys.sneak.desc': 'Mini-Widgets in Rotation: Musik, Concentration, Zwischenablage, Lautstärke, Helligkeit. Nur bei aktivem Inhalt.',
+      'sys.sneak.music': 'Musik',
+      'sys.sneak.brightness': 'Helligkeit',
+      'sys.sneak.weather': 'Wetter',
+      'sys.sneak.config': 'Intervall + Dauer konfigurierbar',
+      'sys.detect.eyebrow': 'Automatische Erkennung',
+      'sys.detect.title': 'Kontext, mühelos.',
+      'sys.detect.intro': 'NotchIA erkennt, was auf Ihrem Mac passiert, und passt die Aussparung entsprechend an.',
+      'sys.detect.calls': 'Aktive Anrufe',
+      'sys.detect.calls_desc': 'Indikator in der Aussparung während FaceTime, Zoom, Teams, Meet…',
+      'sys.detect.focus': 'Fokusmodus',
+      'sys.detect.focus_desc': 'Zeigt den aktiven Fokusmodus: Nicht stören, Arbeit, Schlaf…',
+      'sys.detect.recording': 'Bildschirmaufnahme',
+      'sys.detect.recording_desc': 'QuickTime, OBS, etc. — Aussparung wird während Aufnahme automatisch ausgeblendet.',
+
+      // === §11 CTA notch marquee ===
+      'cta.ready_install': 'bereit zur Installation',
     },
   };
 
@@ -3038,7 +3582,14 @@
     if (sel) sel.value = lang;
 
     try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+
+    // Re-render dynamic mocks (calendar + marquee states) so they follow language
+    if (typeof window.__renderCalendarForLang === 'function') window.__renderCalendarForLang(lang);
+    if (typeof window.__rebuildMarquees === 'function') window.__rebuildMarquees(lang);
   }
+
+  // Expose globally so other scripts (calendar, marquee) can read the dict
+  window.I18N = I18N;
 
   // Détection + application synchrones — aucun flash, aucune requête réseau
   applyLang(detectLang());
@@ -3046,31 +3597,42 @@
   document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
 
   /* ──────────────── states marquee ──────────────── */
-  const states = [
-    { label: 'Compilation', sub: 'xcodebuild · 12 sec', color: 'var(--orange)' },
-    { label: 'Terminal',    sub: 'npm install',         color: 'var(--magenta)' },
-    { label: 'Recherche',   sub: 'grep "auth"',         color: 'var(--cyan)' },
-    { label: 'Lecture',     sub: 'BoringViewModel.swift', color: '#cdb6e8' },
-    { label: 'Modification', sub: 'ContentView.swift:1248', color: '#9DD9B7' },
-    { label: 'Web',         sub: 'webfetch · docs',     color: 'var(--magenta)' },
-    { label: 'Écriture',    sub: 'NotchIA.swift',       color: '#ffd29a' },
-    { label: 'Sous-agent',  sub: 'task · code-reviewer', color: '#EDE8DC' },
-    { label: 'Planification', sub: 'todowrite · 5 étapes', color: 'var(--violet)' },
-    { label: 'Exécution',   sub: 'swift run',           color: '#EDE8DC' },
+  // Les sub sont du contenu mock technique (commandes/fichiers), ils restent identiques.
+  // Seuls les labels (Compilation, Terminal, …) sont traduits via dict[ia.state.*].
+  const STATE_KEYS = [
+    { key: 'ia.state.compilation', fallback: 'Compilation', sub: 'xcodebuild · 12 sec',     color: 'var(--orange)' },
+    { key: 'ia.state.terminal',    fallback: 'Terminal',    sub: 'npm install',             color: 'var(--magenta)' },
+    { key: 'ia.state.search',      fallback: 'Recherche',   sub: 'grep "auth"',             color: 'var(--cyan)' },
+    { key: 'ia.state.read',        fallback: 'Lecture',     sub: 'BoringViewModel.swift',   color: '#cdb6e8' },
+    { key: 'ia.state.edit',        fallback: 'Modification',sub: 'ContentView.swift:1248',  color: '#9DD9B7' },
+    { key: 'ia.state.web',         fallback: 'Web',         sub: 'webfetch · docs',         color: 'var(--magenta)' },
+    { key: 'ia.state.write',       fallback: 'Écriture',    sub: 'NotchIA.swift',           color: '#ffd29a' },
+    { key: 'ia.state.subagent',    fallback: 'Sous-agent',  sub: 'task · code-reviewer',    color: '#EDE8DC' },
+    { key: 'ia.state.plan',        fallback: 'Planification',sub: 'todowrite · 5 étapes',   color: 'var(--violet)' },
+    { key: 'ia.state.execution',   fallback: 'Exécution',   sub: 'swift run',               color: '#EDE8DC' },
   ];
 
-  function buildMarquee(track) {
-    const make = () => states.map(s => `
-      <span style="display:inline-flex;align-items:center;gap:8px;color:#EDE8DC">
-        <span style="width:6px;height:6px;border-radius:999px;background:${s.color};box-shadow:0 0 8px ${s.color}80"></span>
-        <span style="color:${s.color}">${s.label}</span>
-        <span style="color:rgba(237,232,220,0.55)">${s.sub}</span>
-      </span>
-    `).join('<span style="color:rgba(237,232,220,0.25)">·</span>');
+  function buildMarqueeForLang(track, lang) {
+    const dict = (window.I18N && window.I18N[lang]) || {};
+    const make = () => STATE_KEYS.map(s => {
+      const label = dict[s.key] || s.fallback;
+      return `
+        <span style="display:inline-flex;align-items:center;gap:8px;color:#EDE8DC">
+          <span style="width:6px;height:6px;border-radius:999px;background:${s.color};box-shadow:0 0 8px ${s.color}80"></span>
+          <span style="color:${s.color}">${label}</span>
+          <span style="color:rgba(237,232,220,0.55)">${s.sub}</span>
+        </span>
+      `;
+    }).join('<span style="color:rgba(237,232,220,0.25)">·</span>');
     track.innerHTML = make() + make();
   }
 
-  document.querySelectorAll('#marquee-track').forEach(t => buildMarquee(t));
+  window.__rebuildMarquees = function (lang) {
+    document.querySelectorAll('#marquee-track').forEach(t => buildMarqueeForLang(t, lang));
+  };
+
+  // Build initial (la langue courante a déjà été appliquée)
+  window.__rebuildMarquees(document.documentElement.lang || 'fr');
 
   // Nav blur
   const nav = document.getElementById('nav');
@@ -3669,72 +4231,50 @@
       génériques ici qui pourraient entrer en conflit.) */
 
   /* ── Calendrier : sélection d'une date + contenu différent par jour ─ */
-  const CAL_DATA = {
-    3: {
-      label: 'Dimanche 3 mai',
-      events: [
-        { color: 'bg-fog', title: 'Brunch — Marais', time: '11:00 · 1h30' },
-      ],
-      reminders: [
-        { text: 'Acheter du café', done: false },
-        { text: 'Ranger le bureau', done: true },
-      ],
+  /* Mock localisé : conserve la sémantique mais traduit labels/titres/rappels.
+     Couleurs et horaires identiques entre langues — seul le texte change. */
+  const CAL_DATA_I18N = {
+    fr: {
+      3: { label: 'Dimanche 3 mai',  events: [{ color:'bg-fog',     title:'Brunch — Marais',         time:'11:00 · 1h30' }], reminders:[{text:'Acheter du café',done:false},{text:'Ranger le bureau',done:true}] },
+      4: { label: 'Lundi 4 mai',     events: [], reminders:[{text:'Relire le contrat',done:false},{text:'Envoyer la facture #214',done:false}] },
+      5: { label: 'Mardi 5 mai',     events: [{ color:'grad-bg',    title:'Standup équipe',          time:'10:30 · 30 min'},{ color:'bg-cyan', title:'Démo NotchIA · Léa', time:'14:00 · 45 min'}], reminders:[{text:'Préparer pitch',done:false},{text:'Backup machine',done:true},{text:'Café 18h',done:false}] },
+      6: { label: 'Mercredi 6 mai',  events: [{ color:'bg-orange',  title:'Atelier design system',    time:'09:30 · 2h'},{ color:'bg-mint', title:'Tech meeting · Q3', time:'15:00 · 1h'}], reminders:[{text:'Préparer slides Q3',done:false}] },
+      7: { label: 'Jeudi 7 mai',     events: [{ color:'bg-magenta', title:'Pitch investisseur',       time:'11:00 · 45 min'}], reminders:[{text:'Imprimer le deck',done:false},{text:'Confirmer Uber',done:false},{text:'Appeler Maman',done:false}] },
+      8: { label: 'Vendredi 8 mai',  events: [], reminders:[] },
+      9: { label: 'Samedi 9 mai',    events: [], reminders:[{text:'Apporter le badge',done:false}] },
     },
-    4: {
-      label: 'Lundi 4 mai',
-      events: [],
-      reminders: [
-        { text: 'Relire le contrat', done: false },
-        { text: 'Envoyer la facture #214', done: false },
-      ],
+    en: {
+      3: { label: 'Sunday May 3',    events: [{ color:'bg-fog',     title:'Brunch — Marais',          time:'11:00 · 1h30' }], reminders:[{text:'Buy coffee',done:false},{text:'Tidy the desk',done:true}] },
+      4: { label: 'Monday May 4',    events: [], reminders:[{text:'Re-read the contract',done:false},{text:'Send invoice #214',done:false}] },
+      5: { label: 'Tuesday May 5',   events: [{ color:'grad-bg',    title:'Team standup',             time:'10:30 · 30 min'},{ color:'bg-cyan', title:'NotchIA demo · Léa', time:'14:00 · 45 min'}], reminders:[{text:'Prepare pitch',done:false},{text:'Machine backup',done:true},{text:'Coffee 6pm',done:false}] },
+      6: { label: 'Wednesday May 6', events: [{ color:'bg-orange',  title:'Design system workshop',    time:'09:30 · 2h'},{ color:'bg-mint', title:'Tech meeting · Q3', time:'15:00 · 1h'}], reminders:[{text:'Prep Q3 slides',done:false}] },
+      7: { label: 'Thursday May 7',  events: [{ color:'bg-magenta', title:'Investor pitch',            time:'11:00 · 45 min'}], reminders:[{text:'Print the deck',done:false},{text:'Confirm Uber',done:false},{text:'Call Mum',done:false}] },
+      8: { label: 'Friday May 8',    events: [], reminders:[] },
+      9: { label: 'Saturday May 9',  events: [], reminders:[{text:'Bring the badge',done:false}] },
     },
-    5: {
-      label: 'Mardi 5 mai',
-      events: [
-        { color: 'grad-bg', title: 'Standup équipe', time: '10:30 · 30 min' },
-        { color: 'bg-cyan', title: 'Démo NotchIA · Léa', time: '14:00 · 45 min' },
-      ],
-      reminders: [
-        { text: 'Préparer pitch', done: false },
-        { text: 'Backup machine', done: true },
-        { text: 'Café 18h', done: false },
-      ],
+    es: {
+      3: { label: 'Domingo 3 mayo',  events: [{ color:'bg-fog',     title:'Brunch — Marais',          time:'11:00 · 1h30' }], reminders:[{text:'Comprar café',done:false},{text:'Ordenar la mesa',done:true}] },
+      4: { label: 'Lunes 4 mayo',    events: [], reminders:[{text:'Releer el contrato',done:false},{text:'Enviar la factura #214',done:false}] },
+      5: { label: 'Martes 5 mayo',   events: [{ color:'grad-bg',    title:'Daily del equipo',         time:'10:30 · 30 min'},{ color:'bg-cyan', title:'Demo NotchIA · Léa', time:'14:00 · 45 min'}], reminders:[{text:'Preparar pitch',done:false},{text:'Backup de la máquina',done:true},{text:'Café 18:00',done:false}] },
+      6: { label: 'Miércoles 6 mayo',events: [{ color:'bg-orange',  title:'Taller design system',     time:'09:30 · 2h'},{ color:'bg-mint', title:'Tech meeting · Q3', time:'15:00 · 1h'}], reminders:[{text:'Preparar slides Q3',done:false}] },
+      7: { label: 'Jueves 7 mayo',   events: [{ color:'bg-magenta', title:'Pitch a inversores',       time:'11:00 · 45 min'}], reminders:[{text:'Imprimir el deck',done:false},{text:'Confirmar Uber',done:false},{text:'Llamar a Mamá',done:false}] },
+      8: { label: 'Viernes 8 mayo',  events: [], reminders:[] },
+      9: { label: 'Sábado 9 mayo',   events: [], reminders:[{text:'Llevar la acreditación',done:false}] },
     },
-    6: {
-      label: 'Mercredi 6 mai',
-      events: [
-        { color: 'bg-orange', title: 'Atelier design system', time: '09:30 · 2h' },
-        { color: 'bg-mint', title: 'Tech meeting · Q3', time: '15:00 · 1h' },
-      ],
-      reminders: [
-        { text: 'Préparer slides Q3', done: false },
-      ],
-    },
-    7: {
-      label: 'Jeudi 7 mai',
-      events: [
-        { color: 'bg-magenta', title: 'Pitch investisseur', time: '11:00 · 45 min' },
-      ],
-      reminders: [
-        { text: 'Imprimer le deck', done: false },
-        { text: 'Confirmer Uber', done: false },
-        { text: 'Appeler Maman', done: false },
-      ],
-    },
-    8: {
-      label: 'Vendredi 8 mai',
-      events: [],
-      reminders: [],
-    },
-    9: {
-      label: 'Samedi 9 mai',
-      events: [],
-      reminders: [
-        { text: 'Apporter le badge', done: false },
-      ],
+    de: {
+      3: { label: 'Sonntag, 3. Mai', events: [{ color:'bg-fog',     title:'Brunch — Marais',          time:'11:00 · 1h30' }], reminders:[{text:'Kaffee kaufen',done:false},{text:'Schreibtisch aufräumen',done:true}] },
+      4: { label: 'Montag, 4. Mai',  events: [], reminders:[{text:'Vertrag erneut lesen',done:false},{text:'Rechnung #214 senden',done:false}] },
+      5: { label: 'Dienstag, 5. Mai',events: [{ color:'grad-bg',    title:'Team-Standup',             time:'10:30 · 30 min'},{ color:'bg-cyan', title:'NotchIA-Demo · Léa', time:'14:00 · 45 min'}], reminders:[{text:'Pitch vorbereiten',done:false},{text:'Maschinen-Backup',done:true},{text:'Kaffee 18 Uhr',done:false}] },
+      6: { label: 'Mittwoch, 6. Mai',events: [{ color:'bg-orange',  title:'Design-System-Workshop',    time:'09:30 · 2h'},{ color:'bg-mint', title:'Tech-Meeting · Q3', time:'15:00 · 1h'}], reminders:[{text:'Q3-Slides vorbereiten',done:false}] },
+      7: { label: 'Donnerstag, 7. Mai', events: [{ color:'bg-magenta', title:'Investoren-Pitch',      time:'11:00 · 45 min'}], reminders:[{text:'Deck drucken',done:false},{text:'Uber bestätigen',done:false},{text:'Mama anrufen',done:false}] },
+      8: { label: 'Freitag, 8. Mai', events: [], reminders:[] },
+      9: { label: 'Samstag, 9. Mai', events: [], reminders:[{text:'Badge mitnehmen',done:false}] },
     },
   };
 
+  // État courant : préserve les checkboxes cochées entre les changements de langue
+  let CAL_LANG = (document.documentElement.lang in CAL_DATA_I18N) ? document.documentElement.lang : 'fr';
+  let CAL_CURRENT_DAY = '5';
   const eventsEl = document.getElementById('cal-events');
   const remindersEl = document.getElementById('cal-reminders');
   const dateLabelEl = document.getElementById('cal-date-label');
@@ -3744,8 +4284,10 @@
   }
 
   function renderDay(day) {
-    const data = CAL_DATA[day];
+    CAL_CURRENT_DAY = String(day);
+    const data = CAL_DATA_I18N[CAL_LANG]?.[day];
     if (!data) return;
+    const dict = (window.I18N && window.I18N[CAL_LANG]) || {};
 
     if (dateLabelEl) dateLabelEl.textContent = data.label;
 
@@ -3760,7 +4302,7 @@
               </div>
             </div>
           `).join('')
-        : emptyState('Aucun événement');
+        : emptyState(dict['agenda.no_events'] || 'Aucun événement');
     }
 
     if (remindersEl) {
@@ -3771,7 +4313,7 @@
               <span class="text-sm ${r.done ? 'text-mist line-through' : 'text-cream'}">${r.text}</span>
             </label>
           `).join('')
-        : emptyState('Aucun rappel');
+        : emptyState(dict['agenda.no_reminders'] || 'Aucun rappel');
 
       // Re-bind les checkboxes nouvellement injectées
       remindersEl.querySelectorAll('input[type="checkbox"]').forEach(cb => {
@@ -3779,7 +4321,10 @@
         cb.addEventListener('change', () => {
           const d = +cb.dataset.calDay;
           const idx = +cb.dataset.calI;
-          if (CAL_DATA[d]?.reminders[idx]) CAL_DATA[d].reminders[idx].done = cb.checked;
+          // Propage l'état coché à toutes les langues pour rester cohérent au switch
+          Object.keys(CAL_DATA_I18N).forEach(L => {
+            if (CAL_DATA_I18N[L][d]?.reminders[idx]) CAL_DATA_I18N[L][d].reminders[idx].done = cb.checked;
+          });
           if (cb.checked) {
             text.classList.add('text-mist', 'line-through');
             text.classList.remove('text-cream');
@@ -3791,6 +4336,14 @@
       });
     }
   }
+
+  // Re-render le calendrier quand la langue change
+  window.__renderCalendarForLang = function (lang) {
+    if (CAL_DATA_I18N[lang]) {
+      CAL_LANG = lang;
+      renderDay(CAL_CURRENT_DAY);
+    }
+  };
 
   document.querySelectorAll('section#agenda [data-day]').forEach(cell => {
     cell.style.cursor = 'pointer';
