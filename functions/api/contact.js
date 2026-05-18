@@ -108,7 +108,14 @@ export async function onRequestPost(context) {
   const to = env.CONTACT_TO;
   const ua = request.headers.get("User-Agent") || "unknown";
 
-  // 4. Envoi via Resend
+  // Mode test : ?test=1 → renvoie ok sans appeler Resend.
+  // Permet d'isoler les bugs Resend vs bugs function (routing, env, etc.).
+  const url = new URL(request.url);
+  if (url.searchParams.get("test") === "1") {
+    return json({ ok: true, test: true, would_send: { from, to, subject: `[NotchIA · ${category}] ${name}` } });
+  }
+
+  // 4. Envoi via Resend avec timeout strict
   const subject = `[NotchIA · ${category}] ${name}`;
   const body = [
     `De     : ${name} <${email}>`,
@@ -122,8 +129,17 @@ export async function onRequestPost(context) {
     message,
     "----------------------------------------------------------------------",
     "",
-    "Pour répondre, utilise simplement Reply — l'expéditeur d'origine est en Reply-To.",
+    "Pour repondre, utilise Reply — expediteur d'origine en Reply-To.",
   ].join("\n");
+
+  // AbortController force le rejet du fetch après 12 s, bien avant les 30 s
+  // du timeout Cloudflare Pages Functions. Évite que CF kill notre worker
+  // et renvoie sa propre page 502 HTML (intercept impossible côté code).
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 12_000);
+
+  let resendStatus = 0;
+  let resendBody = "";
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
@@ -139,21 +155,28 @@ export async function onRequestPost(context) {
         subject,
         text: body,
       }),
+      signal: controller.signal,
     });
+    clearTimeout(timeoutId);
+    resendStatus = res.status;
+    resendBody = await res.text().catch(() => "(unread)");
+
     if (!res.ok) {
-      const errText = await res.text().catch(() => "");
-      console.log("Resend error", res.status, errText);
-      // DEBUG : on remonte le détail Resend dans la réponse pour faciliter
-      // le diagnostic. À retirer une fois le formulaire opérationnel.
+      console.log("Resend error", resendStatus, resendBody);
       return json({
-        error: "Envoi impossible. Réessaie ou écris à notchia.app@gmail.com.",
-        debug: { status: res.status, resend: errText.slice(0, 600), from, to_first_char: (to || "").slice(0, 3) + "..." }
+        error: "Envoi impossible. Reessaie ou ecris a notchia.app@gmail.com.",
+        debug: { stage: "resend_not_ok", status: resendStatus, body: resendBody.slice(0, 800), from, to_masked: to.replace(/(?<=.{2}).+(?=@)/, "***") },
       }, 502);
     }
-    return json({ ok: true });
+    return json({ ok: true, resend_status: resendStatus });
   } catch (e) {
-    console.log("Resend fetch error", e?.message);
-    return json({ error: "Service email indisponible. Réessaie dans un moment.", debug: { exception: e?.message } }, 502);
+    clearTimeout(timeoutId);
+    const isAbort = e?.name === "AbortError";
+    console.log("Resend fetch threw", e?.name, e?.message);
+    return json({
+      error: isAbort ? "Le service email a mis trop longtemps a repondre. Reessaie." : "Service email indisponible. Reessaie dans un moment.",
+      debug: { stage: isAbort ? "timeout" : "fetch_threw", name: e?.name, message: e?.message, partial_status: resendStatus, partial_body: resendBody.slice(0, 400) },
+    }, 502);
   }
 }
 
