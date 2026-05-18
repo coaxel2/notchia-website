@@ -1,4 +1,4 @@
-// Deploy bump pour redeploy après config env vars Resend.
+// Deploy bump pour rebuild après changement de CONTACT_FROM (2026-05-18).
 /**
  * NotchIA contact form — Cloudflare Pages Function
  *
