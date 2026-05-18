@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — NotchIA</title>
+<meta name="description" content="Contacte l'équipe NotchIA : support, bug, licence, presse, partenariat. Réponse sous 48h." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="Axel Courty" />
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/contact" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/contact" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/contact" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/contact" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/contact" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/contact" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&display=optional" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+      fontFamily: {
+        display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+        sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+      }
+    }}
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12; --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  .grad-bg { background: var(--brand); }
+  .card {
+    background: linear-gradient(180deg, #14171F 0%, #0F1218 100%);
+    border: 1px solid rgba(237,232,220,0.08);
+  }
+  .field label { display: block; font-size: 11px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.18em; color: rgba(237,232,220,0.55); margin-bottom: 6px; }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    background: #14171F;
+    border: 1px solid rgba(237,232,220,0.12);
+    color: #EDE8DC;
+    font-family: inherit; font-size: 15px;
+    padding: 10px 14px; border-radius: 10px;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: rgba(168,85,247,0.6);
+    box-shadow: 0 0 0 3px rgba(168,85,247,0.18);
+  }
+  .field textarea { min-height: 160px; resize: vertical; line-height: 1.5; }
+  .field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 10px 10px;
+    padding-right: 36px;
+  }
+  .cta {
+    background: var(--brand);
+    color: #0B0D12;
+    font-weight: 700;
+    border: 0;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform .15s ease, opacity .15s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .cta:hover:not(:disabled) { transform: translateY(-1px); }
+  .cta:disabled { opacity: 0.5; cursor: not-allowed; }
+  .lang-sw { appearance: none; background: transparent; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
+  .alert { padding: 12px 14px; border-radius: 10px; font-size: 14px; line-height: 1.45; }
+  .alert.success { background: rgba(157,217,183,0.10); border: 1px solid rgba(157,217,183,0.40); color: #C8EDD8; }
+  .alert.error   { background: rgba(255,77,136,0.10); border: 1px solid rgba(255,77,136,0.40); color: #FFB3CC; }
+  .char-count { font-size: 11px; font-family: 'JetBrains Mono', monospace; color: rgba(237,232,220,0.40); text-align: right; margin-top: 4px; }
+  .char-count.warn { color: #FF7A2D; }
+  .spinner { width: 14px; height: 14px; border: 2px solid rgba(11,13,18,0.25); border-top-color: #0B0D12; border-radius: 50%; animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Accueil","item":"https://notchia.app/"},
+    {"@type":"ListItem","position":2,"name":"Contact","item":"https://notchia.app/contact"}
+  ]},
+  {"@type":"ContactPage","name":"Contact NotchIA","url":"https://notchia.app/contact","inLanguage":["fr","en","es","de"]}
+]}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <picture>
+      <source srcset="logo.avif" type="image/avif" />
+      <img src="logo.png" alt="" width="32" height="32" class="rounded-md h-8 w-8" loading="lazy" decoding="async" />
+    </picture>
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
+    <a href="/install" class="hover:text-cream" data-i18n="nav.install">Installer</a>
+    <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="text-center mb-10">
+    <h1 class="font-display text-5xl md:text-6xl mb-3">
+      <span data-i18n="h1.line1">Une question ?</span> <span class="grad-text" data-i18n="h1.line2">Écris-nous.</span>
+    </h1>
+    <p class="text-cream/70 max-w-xl mx-auto" data-i18n="lead">Support, bug, licence, presse, partenariat — on lit tous les messages et on répond sous 48h ouvrées.</p>
+  </section>
+
+  <form id="contact-form" class="card rounded-2xl p-6 sm:p-8 space-y-5">
+    <div class="grid sm:grid-cols-2 gap-5">
+      <div class="field">
+        <label for="name" data-i18n="f.name">Nom</label>
+        <input id="name" name="name" type="text" required maxlength="80" autocomplete="name" data-i18n-placeholder="f.name.ph" placeholder="Ton nom" />
+      </div>
+      <div class="field">
+        <label for="email" data-i18n="f.email">Email</label>
+        <input id="email" name="email" type="email" required maxlength="120" autocomplete="email" data-i18n-placeholder="f.email.ph" placeholder="toi@exemple.com" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="category" data-i18n="f.cat">Catégorie</label>
+      <select id="category" name="category" required>
+        <option value="support"     data-i18n="f.cat.support">Support — installation, bug, problème d'utilisation</option>
+        <option value="bug"         data-i18n="f.cat.bug">Bug à reporter</option>
+        <option value="license"     data-i18n="f.cat.license">Licence — paiement, clé, remboursement</option>
+        <option value="press"       data-i18n="f.cat.press">Presse / interview / review</option>
+        <option value="partnership" data-i18n="f.cat.partnership">Partenariat / collaboration</option>
+        <option value="feedback"    data-i18n="f.cat.feedback">Feedback / suggestion</option>
+        <option value="other"       data-i18n="f.cat.other">Autre</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="message" data-i18n="f.msg">Message</label>
+      <textarea id="message" name="message" required minlength="10" maxlength="4000" data-i18n-placeholder="f.msg.ph" placeholder="Décris-nous ta demande. Plus c'est précis, plus on est rapide à répondre."></textarea>
+      <div class="char-count"><span id="char-count">0</span> / 4000</div>
+    </div>
+
+    <div id="alert-zone" class="hidden"></div>
+
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <p class="text-cream/45 text-xs" data-i18n-html="privacy.note">
+        En envoyant, tu acceptes que NotchIA traite ton message selon notre
+        <a href="/privacy" class="underline">politique de confidentialité</a>.
+        Ton email n'est utilisé que pour te répondre.
+      </p>
+      <button type="submit" id="submit-btn" class="cta">
+        <span id="submit-label" data-i18n="cta.send">Envoyer</span>
+      </button>
+    </div>
+  </form>
+
+  <!-- Alternatives directes -->
+  <section class="mt-10 grid sm:grid-cols-2 gap-4">
+    <div class="card rounded-xl p-5">
+      <div class="text-[11px] font-mono uppercase tracking-[0.18em] text-cream/45 mb-2" data-i18n="alt.direct">Email direct</div>
+      <p class="text-sm text-cream/75 mb-3" data-i18n="alt.direct.desc">Si tu préfères, tu peux aussi écrire directement :</p>
+      <a href="mailto:notchia.app@gmail.com" class="text-orange text-sm font-mono underline">notchia.app@gmail.com</a>
+    </div>
+    <div class="card rounded-xl p-5">
+      <div class="text-[11px] font-mono uppercase tracking-[0.18em] text-cream/45 mb-2" data-i18n="alt.chat">Chat IA</div>
+      <p class="text-sm text-cream/75" data-i18n-html="alt.chat.desc">Pour une question rapide sur NotchIA, utilise le <strong>bouton chat</strong> en bas à droite — réponse instantanée.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream" data-i18n="ft.legal">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream" data-i18n="ft.tos">CGV</a>
+      <a href="/privacy" class="hover:text-cream" data-i18n="ft.privacy">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream" data-i18n="ft.refund">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  const I18N = {
+    fr: {
+      'nav.home':'Accueil','nav.install':'Installer',
+      'h1.line1':'Une question ?','h1.line2':'Écris-nous.',
+      'lead':'Support, bug, licence, presse, partenariat — on lit tous les messages et on répond sous 48h ouvrées.',
+      'f.name':'Nom','f.name.ph':'Ton nom',
+      'f.email':'Email','f.email.ph':'toi@exemple.com',
+      'f.cat':'Catégorie',
+      'f.cat.support':'Support — installation, bug, problème d\'utilisation',
+      'f.cat.bug':'Bug à reporter',
+      'f.cat.license':'Licence — paiement, clé, remboursement',
+      'f.cat.press':'Presse / interview / review',
+      'f.cat.partnership':'Partenariat / collaboration',
+      'f.cat.feedback':'Feedback / suggestion',
+      'f.cat.other':'Autre',
+      'f.msg':'Message','f.msg.ph':'Décris-nous ta demande. Plus c\'est précis, plus on est rapide à répondre.',
+      'privacy.note':'En envoyant, tu acceptes que NotchIA traite ton message selon notre <a href="/privacy" class="underline">politique de confidentialité</a>. Ton email n\'est utilisé que pour te répondre.',
+      'cta.send':'Envoyer','cta.sending':'Envoi…',
+      'alt.direct':'Email direct','alt.direct.desc':'Si tu préfères, tu peux aussi écrire directement :',
+      'alt.chat':'Chat IA','alt.chat.desc':'Pour une question rapide sur NotchIA, utilise le <strong>bouton chat</strong> en bas à droite — réponse instantanée.',
+      'ft.legal':'Mentions légales','ft.tos':'CGV','ft.privacy':'Confidentialité','ft.refund':'Remboursement',
+      'ok':'Message envoyé. On te répond sous 48h ouvrées à l\'adresse fournie. Merci 👋',
+      'err.generic':'Envoi impossible. Réessaie dans un moment ou écris à notchia.app@gmail.com.',
+      'err.network':'Connexion impossible. Vérifie ta connexion internet.',
+      'err.invalid':'Vérifie les champs : nom, email valide, message d\'au moins 10 caractères.',
+      'err.rate':'Trop d\'envois récents. Réessaie dans {n} secondes.',
+    },
+    en: {
+      'nav.home':'Home','nav.install':'Install',
+      'h1.line1':'A question?','h1.line2':'Write to us.',
+      'lead':'Support, bugs, licensing, press, partnerships — we read every message and reply within 48 business hours.',
+      'f.name':'Name','f.name.ph':'Your name',
+      'f.email':'Email','f.email.ph':'you@example.com',
+      'f.cat':'Category',
+      'f.cat.support':'Support — installation, bug, usage issue',
+      'f.cat.bug':'Bug to report',
+      'f.cat.license':'License — payment, key, refund',
+      'f.cat.press':'Press / interview / review',
+      'f.cat.partnership':'Partnership / collaboration',
+      'f.cat.feedback':'Feedback / suggestion',
+      'f.cat.other':'Other',
+      'f.msg':'Message','f.msg.ph':'Describe your request. The more specific, the faster we reply.',
+      'privacy.note':'By sending, you agree that NotchIA processes your message according to our <a href="/privacy" class="underline">privacy policy</a>. Your email is only used to reply to you.',
+      'cta.send':'Send','cta.sending':'Sending…',
+      'alt.direct':'Direct email','alt.direct.desc':'If you prefer, you can also write directly to:',
+      'alt.chat':'AI chat','alt.chat.desc':'For a quick question about NotchIA, use the <strong>chat button</strong> in the bottom right — instant reply.',
+      'ft.legal':'Legal notice','ft.tos':'Terms','ft.privacy':'Privacy','ft.refund':'Refund',
+      'ok':'Message sent. We reply within 48 business hours at the email you provided. Thanks 👋',
+      'err.generic':'Send failed. Try again later or email notchia.app@gmail.com.',
+      'err.network':'Connection failed. Check your internet connection.',
+      'err.invalid':'Check the fields: name, valid email, message of at least 10 characters.',
+      'err.rate':'Too many recent submissions. Try again in {n} seconds.',
+    },
+    es: {
+      'nav.home':'Inicio','nav.install':'Instalar',
+      'h1.line1':'¿Una pregunta?','h1.line2':'Escríbenos.',
+      'lead':'Soporte, bugs, licencia, prensa, colaboraciones — leemos todos los mensajes y respondemos en 48h laborables.',
+      'f.name':'Nombre','f.name.ph':'Tu nombre',
+      'f.email':'Email','f.email.ph':'tu@ejemplo.com',
+      'f.cat':'Categoría',
+      'f.cat.support':'Soporte — instalación, bug, problema de uso',
+      'f.cat.bug':'Bug a reportar',
+      'f.cat.license':'Licencia — pago, clave, reembolso',
+      'f.cat.press':'Prensa / entrevista / reseña',
+      'f.cat.partnership':'Colaboración / partnership',
+      'f.cat.feedback':'Feedback / sugerencia',
+      'f.cat.other':'Otro',
+      'f.msg':'Mensaje','f.msg.ph':'Descríbenos tu petición. Cuanto más preciso, más rápido respondemos.',
+      'privacy.note':'Al enviar, aceptas que NotchIA trate tu mensaje según nuestra <a href="/privacy" class="underline">política de privacidad</a>. Tu email solo se usa para responderte.',
+      'cta.send':'Enviar','cta.sending':'Enviando…',
+      'alt.direct':'Email directo','alt.direct.desc':'Si prefieres, también puedes escribir directamente:',
+      'alt.chat':'Chat IA','alt.chat.desc':'Para una pregunta rápida sobre NotchIA, usa el <strong>botón chat</strong> abajo a la derecha — respuesta instantánea.',
+      'ft.legal':'Aviso legal','ft.tos':'CGV','ft.privacy':'Privacidad','ft.refund':'Reembolso',
+      'ok':'Mensaje enviado. Respondemos en 48h laborables al email indicado. Gracias 👋',
+      'err.generic':'Envío imposible. Inténtalo más tarde o escribe a notchia.app@gmail.com.',
+      'err.network':'Conexión imposible. Comprueba tu conexión a internet.',
+      'err.invalid':'Verifica los campos: nombre, email válido, mensaje de al menos 10 caracteres.',
+      'err.rate':'Demasiados envíos recientes. Inténtalo en {n} segundos.',
+    },
+    de: {
+      'nav.home':'Startseite','nav.install':'Installieren',
+      'h1.line1':'Eine Frage?','h1.line2':'Schreib uns.',
+      'lead':'Support, Bugs, Lizenz, Presse, Partnerschaften — wir lesen jede Nachricht und antworten innerhalb von 48 Werktagsstunden.',
+      'f.name':'Name','f.name.ph':'Dein Name',
+      'f.email':'E-Mail','f.email.ph':'du@beispiel.de',
+      'f.cat':'Kategorie',
+      'f.cat.support':'Support — Installation, Bug, Nutzungsproblem',
+      'f.cat.bug':'Bug zu melden',
+      'f.cat.license':'Lizenz — Zahlung, Schlüssel, Rückerstattung',
+      'f.cat.press':'Presse / Interview / Review',
+      'f.cat.partnership':'Partnerschaft / Zusammenarbeit',
+      'f.cat.feedback':'Feedback / Vorschlag',
+      'f.cat.other':'Sonstiges',
+      'f.msg':'Nachricht','f.msg.ph':'Beschreibe dein Anliegen. Je präziser, desto schneller antworten wir.',
+      'privacy.note':'Mit dem Senden akzeptierst du, dass NotchIA deine Nachricht gemäß unserer <a href="/privacy" class="underline">Datenschutzerklärung</a> verarbeitet. Deine E-Mail wird nur zur Antwort verwendet.',
+      'cta.send':'Senden','cta.sending':'Senden…',
+      'alt.direct':'Direkte E-Mail','alt.direct.desc':'Falls du möchtest, kannst du auch direkt schreiben:',
+      'alt.chat':'KI-Chat','alt.chat.desc':'Für eine schnelle Frage zu NotchIA, nutze den <strong>Chat-Button</strong> unten rechts — sofortige Antwort.',
+      'ft.legal':'Impressum','ft.tos':'AGB','ft.privacy':'Datenschutz','ft.refund':'Rückerstattung',
+      'ok':'Nachricht gesendet. Wir antworten innerhalb von 48 Werktagsstunden an die angegebene E-Mail. Danke 👋',
+      'err.generic':'Senden fehlgeschlagen. Versuche es später oder schreib an notchia.app@gmail.com.',
+      'err.network':'Verbindung fehlgeschlagen. Überprüfe deine Internetverbindung.',
+      'err.invalid':'Felder überprüfen: Name, gültige E-Mail, Nachricht mit mindestens 10 Zeichen.',
+      'err.rate':'Zu viele kürzliche Sendungen. Versuche es in {n} Sekunden erneut.',
+    },
+  };
+
+  function detectLang() {
+    try { const s = localStorage.getItem('notchia-lang'); if (s && I18N[s]) return s; } catch (e) {}
+    const b = (navigator.language || 'en').toLowerCase().split('-')[0];
+    return I18N[b] ? b : 'en';
+  }
+  let currentLang = detectLang();
+  function applyLang(lang) {
+    if (!I18N[lang]) lang = 'en';
+    currentLang = lang;
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { const v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { const v = dict[el.dataset.i18nPlaceholder]; if (v != null) el.placeholder = v; });
+    const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
+    try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+  }
+  applyLang(currentLang);
+  document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
+
+  // Char count
+  const msg = document.getElementById('message');
+  const count = document.getElementById('char-count');
+  msg.addEventListener('input', () => {
+    const n = msg.value.length;
+    count.textContent = n;
+    count.parentElement.classList.toggle('warn', n > 3800);
+  });
+
+  // Submit
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitLabel = document.getElementById('submit-label');
+  const alertZone = document.getElementById('alert-zone');
+
+  function setAlert(kind, text) {
+    if (!text) { alertZone.classList.add('hidden'); return; }
+    alertZone.className = 'alert ' + kind;
+    alertZone.textContent = text;
+  }
+
+  let cooldown = false;
+  function lockSubmit(label) {
+    cooldown = true;
+    submitBtn.disabled = true;
+    submitLabel.innerHTML = '<span class="spinner"></span> <span>' + label + '</span>';
+  }
+  function unlockSubmit() {
+    cooldown = false;
+    submitBtn.disabled = false;
+    submitLabel.textContent = I18N[currentLang]['cta.send'];
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (cooldown) return;
+    const dict = I18N[currentLang];
+
+    const payload = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      category: form.category.value,
+      message: form.message.value.trim(),
+      lang: currentLang,
+    };
+
+    if (!payload.name || !payload.email || payload.message.length < 10) {
+      setAlert('error', dict['err.invalid']);
+      return;
+    }
+
+    setAlert('', null);
+    lockSubmit(dict['cta.sending']);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.ok) {
+        setAlert('success', dict['ok']);
+        form.reset();
+        count.textContent = '0';
+        unlockSubmit();
+      } else if (res.status === 429 && data.retryAfter) {
+        let remaining = data.retryAfter;
+        setAlert('error', dict['err.rate'].replace('{n}', remaining));
+        const tick = () => {
+          remaining--;
+          if (remaining <= 0) { setAlert('', null); unlockSubmit(); return; }
+          setAlert('error', dict['err.rate'].replace('{n}', remaining));
+          setTimeout(tick, 1000);
+        };
+        setTimeout(tick, 1000);
+      } else {
+        setAlert('error', data.error || dict['err.generic']);
+        unlockSubmit();
+      }
+    } catch (e) {
+      setAlert('error', dict['err.network']);
+      unlockSubmit();
+    }
+  });
+</script>
+
+</body>
+</html>
