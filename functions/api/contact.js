@@ -1,3 +1,4 @@
+// Deploy bump pour redeploy après config env vars Resend.
 /**
  * NotchIA contact form — Cloudflare Pages Function
  *
