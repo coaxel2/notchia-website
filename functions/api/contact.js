@@ -143,12 +143,17 @@ export async function onRequestPost(context) {
     if (!res.ok) {
       const errText = await res.text().catch(() => "");
       console.log("Resend error", res.status, errText);
-      return json({ error: "Envoi impossible. Réessaie ou écris à notchia.app@gmail.com." }, 502);
+      // DEBUG : on remonte le détail Resend dans la réponse pour faciliter
+      // le diagnostic. À retirer une fois le formulaire opérationnel.
+      return json({
+        error: "Envoi impossible. Réessaie ou écris à notchia.app@gmail.com.",
+        debug: { status: res.status, resend: errText.slice(0, 600), from, to_first_char: (to || "").slice(0, 3) + "..." }
+      }, 502);
     }
     return json({ ok: true });
   } catch (e) {
     console.log("Resend fetch error", e?.message);
-    return json({ error: "Service email indisponible. Réessaie dans un moment." }, 502);
+    return json({ error: "Service email indisponible. Réessaie dans un moment.", debug: { exception: e?.message } }, 502);
   }
 }
 
@@ -157,6 +162,10 @@ export async function onRequestGet({ env }) {
   return json({
     status: "ok",
     configured: Boolean(env.RESEND_API_KEY && env.CONTACT_TO),
+    has_api_key: Boolean(env.RESEND_API_KEY),
+    has_to: Boolean(env.CONTACT_TO),
+    from: env.CONTACT_FROM || "(default onboarding@resend.dev)",
+    to_masked: env.CONTACT_TO ? env.CONTACT_TO.replace(/(?<=.{2}).+(?=@)/, "***") : null,
     docs: "POST { name, email, category, message, lang } to this endpoint.",
   });
 }
