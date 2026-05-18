@@ -322,7 +322,15 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<!-- Polices : axes SOFT/WONK retirés (économie ~150 KB).
+     Fraunces (display, gros impact CLS) en `optional` : si pas chargée en
+     100ms le fallback serif reste affiché → 0 layout shift sur le H1 hero.
+     Instrument Sans + JetBrains Mono (body) en `swap` : leur fallback
+     system-ui/monospace est quasi-identique métriquement, swap invisible. -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&display=optional" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<!-- Preload du logo hero (LCP candidate) — version AVIF si supportée -->
+<link rel="preload" as="image" href="logo.avif" type="image/avif" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -772,7 +780,10 @@
 <header id="nav" role="banner" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 h-14 sm:h-16 flex items-center justify-between">
     <a href="#" class="flex items-center gap-2.5 group" aria-label="NotchIA — accueil">
-      <img src="logo.png" alt="" width="28" height="28" class="rounded-md w-7 h-7 sm:w-8 sm:h-8" />
+      <picture>
+        <source srcset="logo.avif" type="image/avif" />
+        <img src="logo.png" alt="" width="32" height="32" class="rounded-md w-7 h-7 sm:w-8 sm:h-8" decoding="async" fetchpriority="high" />
+      </picture>
       <span class="font-display text-lg sm:text-xl leading-none tracking-tight">NotchIA</span>
       <span class="eyebrow ml-2 hidden md:inline">v2.8 · macOS</span>
     </a>
@@ -841,7 +852,7 @@
         <h1 class="display text-cream leading-[1.02]" style="font-size: clamp(2.6rem, 10.5vw, 7.6rem); padding-bottom: 0.1em;">
           <span data-i18n="hero.title.line1">L'encoche</span>
           <br/>
-          <svg class="hero-word" viewBox="0 0 460 230" preserveAspectRatio="xMinYMid meet" aria-label="pense" role="img">
+          <svg class="hero-word" viewBox="0 0 460 230" width="460" height="230" preserveAspectRatio="xMinYMid meet" aria-label="pense" role="img" style="height:0.95em;width:auto;display:inline-block;vertical-align:baseline;">
             <defs>
               <linearGradient id="heroBrand" x1="0%" y1="100%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="var(--violet)"/>
@@ -850,7 +861,7 @@
                 <stop offset="100%" stop-color="var(--cyan)"/>
               </linearGradient>
             </defs>
-            <text x="10" y="170" font-family="Fraunces, serif" font-style="italic" font-weight="500" font-size="180" fill="url(#heroBrand)" letter-spacing="-4" style='font-variation-settings: "opsz" 144, "SOFT" 80, "WONK" 0;'>pense</text>
+            <text x="10" y="170" font-family="Fraunces, serif" font-style="italic" font-weight="500" font-size="180" fill="url(#heroBrand)" letter-spacing="-4" style='font-variation-settings: "opsz" 144;'>pense</text>
           </svg>
           <br/>
           <span data-i18n="hero.title.line3">maintenant.</span>
@@ -1840,7 +1851,10 @@
       qui ne se ferme jamais. Autant lui confier ce qui compte. <span class="text-mist">»</span>
     </p>
     <div class="mt-8 sm:mt-10 flex items-center gap-4">
-      <img src="logo.png" alt="" width="40" height="40" class="rounded-lg w-10 h-10" />
+      <picture>
+        <source srcset="logo.avif" type="image/avif" />
+        <img src="logo.png" alt="" width="40" height="40" class="rounded-lg w-10 h-10" loading="lazy" decoding="async" />
+      </picture>
       <div>
         <div class="text-cream">Axel Courty</div>
         <div class="text-xs text-mist font-mono" data-i18n="manifesto.role">créateur · NotchIA</div>
@@ -2149,7 +2163,10 @@
     <div class="grid grid-cols-2 sm:grid-cols-12 gap-8 sm:gap-10">
       <div class="col-span-2 sm:col-span-5">
         <div class="flex items-center gap-2.5">
-          <img src="logo.png" alt="" width="32" height="32" class="rounded-md w-8 h-8" />
+          <picture>
+            <source srcset="logo.avif" type="image/avif" />
+            <img src="logo.png" alt="" width="32" height="32" class="rounded-md w-8 h-8" loading="lazy" decoding="async" />
+          </picture>
           <span class="font-display text-xl tracking-tight">NotchIA</span>
         </div>
         <p class="mt-5 text-fog text-sm max-w-sm" data-i18n="footer.tagline">
