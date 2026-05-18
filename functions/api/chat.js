@@ -9,7 +9,13 @@
  *   GEMINI_API_KEY = clé gratuite générée sur https://aistudio.google.com/apikey
  */
 
-const MODEL = "gemini-2.0-flash"; // free tier : 15 RPM, 1500 RPD, 1M TPM
+// Free-tier quotas (au 2026-05) :
+//   gemini-2.5-flash-lite : 30 RPM, 1000 RPD  ← choisi (RPM 2x meilleur)
+//   gemini-2.0-flash      : 15 RPM, 1500 RPD
+//   gemini-2.5-flash      : 10 RPM, 250 RPD
+// Le bottleneck visiteurs simultanés = RPM. Lite donne le plus de souffle.
+const MODEL = "gemini-2.5-flash-lite";
+const RETRY_ON_429_MS = 1500; // backoff avant 1 seul retry sur quota
 const MAX_USER_MSG_LEN = 1000;
 const MAX_HISTORY = 12; // messages échangés gardés en contexte
 const MAX_OUTPUT_TOKENS = 500;
@@ -157,27 +163,39 @@ export async function onRequestPost(context) {
 
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${env.GEMINI_API_KEY}`;
 
-  let geminiRes;
-  try {
-    geminiRes = await fetch(apiUrl, {
+  const requestBody = JSON.stringify({
+    systemInstruction: { parts: [{ text: systemPrompt }] },
+    contents,
+    generationConfig: {
+      temperature: 0.6,
+      maxOutputTokens: MAX_OUTPUT_TOKENS,
+      topP: 0.9,
+    },
+    safetySettings: [
+      { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
+      { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
+      { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
+      { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" },
+    ],
+  });
+
+  // Premier appel, puis 1 retry après backoff si 429 (limite RPM dépassée
+  // momentanément — souvent provoqué par un utilisateur qui spamme).
+  async function callGemini() {
+    return fetch(apiUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: systemPrompt }] },
-        contents,
-        generationConfig: {
-          temperature: 0.6,
-          maxOutputTokens: MAX_OUTPUT_TOKENS,
-          topP: 0.9,
-        },
-        safetySettings: [
-          { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
-          { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
-          { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
-          { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" },
-        ],
-      }),
+      body: requestBody,
     });
+  }
+
+  let geminiRes;
+  try {
+    geminiRes = await callGemini();
+    if (geminiRes.status === 429) {
+      await new Promise((r) => setTimeout(r, RETRY_ON_429_MS));
+      geminiRes = await callGemini();
+    }
   } catch (e) {
     return json({ error: "Service IA indisponible. Réessaie dans un moment." }, 502);
   }
@@ -185,7 +203,14 @@ export async function onRequestPost(context) {
   if (!geminiRes.ok) {
     const status = geminiRes.status;
     if (status === 429) {
-      return json({ error: "Trop de questions d'un coup, attends quelques secondes et réessaie." }, 429);
+      // Retry-After permet au frontend d'afficher un vrai compte à rebours.
+      // Gemini ne renvoie pas toujours ce header ; on met 10 s en fallback.
+      const ra = geminiRes.headers.get("Retry-After") || "10";
+      return json(
+        { error: `Limite de questions atteinte. Réessaie dans ${ra} secondes.`, retryAfter: parseInt(ra, 10) || 10 },
+        429,
+        { "Retry-After": ra }
+      );
     }
     return json({ error: `Erreur IA (${status}). Réessaie plus tard.` }, 502);
   }

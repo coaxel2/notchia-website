@@ -4617,6 +4617,7 @@
     div.textContent = text;
     msgsEl.appendChild(div);
     scrollDown();
+    return div;
   }
 
   function showTyping() {
@@ -4677,18 +4678,44 @@
       const data = await res.json().catch(() => ({}));
       hideTyping();
 
+      let cooldownActive = false;
+
       if (!res.ok || !data.reply) {
-        addError(data.error || dict.genericError);
+        // 429 : on désactive l'input pendant retryAfter secondes avec un compteur visible
+        if (res.status === 429 && data.retryAfter) {
+          cooldownActive = true;
+          const baseMsg = data.error || dict.genericError;
+          const errEl = addError(baseMsg);
+          let remaining = Math.max(2, Math.min(60, parseInt(data.retryAfter, 10) || 10));
+          const tick = () => {
+            if (remaining <= 0) {
+              setBusy(false);
+              inputEl.focus();
+              return;
+            }
+            errEl.textContent = baseMsg.replace(/\d+\s*(s|seconds|sec|sek|segundos|secondes|Sekunden|segundo)/i, remaining + ' s');
+            remaining--;
+            setTimeout(tick, 1000);
+          };
+          tick();
+        } else {
+          addError(data.error || dict.genericError);
+        }
         history.pop(); // n'inclut pas un user-msg sans réponse dans l'historique futur
       } else {
         addMsg("bot", data.reply);
         history.push({ role: "assistant", content: data.reply });
       }
+
+      // Cas normal : on libère. Cas cooldown : c'est tick() qui libèrera après le compte à rebours.
+      if (!cooldownActive) {
+        setBusy(false);
+        inputEl.focus();
+      }
     } catch (e) {
       hideTyping();
       addError(dict.networkError);
       history.pop();
-    } finally {
       setBusy(false);
       inputEl.focus();
     }
