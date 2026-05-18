@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Téléchargement NotchIA…</title>
+<meta name="robots" content="noindex, follow" />
+<meta name="theme-color" content="#0B0D12" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+
+<!-- Cloudflare Web Analytics est injecté automatiquement par Cloudflare Pages
+     quand Web Analytics est activé sur le projet (dashboard CF → Pages → Settings).
+     Aucun script à coller ici manuellement. -->
+
+<!-- Redirige immédiatement vers le DMG (laisse 200 ms au beacon pour partir) -->
+<meta http-equiv="refresh" content="0; url=https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg" />
+
+<style>
+  :root { --ink:#0B0D12; --cream:#EDE8DC; --violet:#A855F7; --magenta:#FF4D88; --orange:#FF7A2D; --cyan:#4DA8FF; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { height:100%; }
+  body {
+    background: var(--ink); color: var(--cream);
+    font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+    display:flex; align-items:center; justify-content:center;
+    padding:2rem; text-align:center;
+    background-image:
+      radial-gradient(ellipse at top, rgba(168,85,247,.12), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(77,168,255,.08), transparent 50%);
+  }
+  .wrap { max-width: 480px; }
+  .logo { width:64px; height:64px; margin:0 auto 1.5rem; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.4); }
+  h1 { font-size: 1.5rem; font-weight: 500; margin-bottom: .5rem; letter-spacing:-.01em; }
+  p { opacity: .7; font-size: .95rem; line-height: 1.5; margin-bottom: 1.5rem; }
+  .spinner {
+    width:32px; height:32px; margin:0 auto 1.5rem;
+    border:3px solid rgba(237,232,220,.15);
+    border-top-color: var(--magenta);
+    border-radius:50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  a { color: var(--orange); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--magenta); }
+  .fallback { margin-top: 1rem; font-size: .85rem; opacity: .55; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <img src="/logo.png" alt="" width="64" height="64" class="logo" />
+  <div class="spinner" aria-hidden="true"></div>
+  <h1>Téléchargement de NotchIA…</h1>
+  <p>NotchIA.dmg s'ouvre automatiquement dans quelques secondes.</p>
+  <p class="fallback">
+    Si le téléchargement ne démarre pas,
+    <a href="https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg">clique ici</a>.
+  </p>
+</main>
+<script>
+  // Fallback JS au cas où meta refresh bloqué (Safari strict, certaines extensions)
+  setTimeout(() => {
+    window.location.href = "https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg";
+  }, 250);
+</script>
+</body>
+</html>
