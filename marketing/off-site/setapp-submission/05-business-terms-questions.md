@@ -16,8 +16,8 @@ These are the open points we want answered (and where useful, negotiated) before
 
 - Does Setapp require **exclusivity** for the Pro tier? Specifically:
   - Can we keep the **Essentiel (free) tier** available for direct download on notchia.app? (Critical for our funnel: free tier feeds Product Hunt / SEO / Homebrew install and converts later.)
-  - Can we keep the **Pro Lifetime (€39.99 one-time)** sold direct on notchia.app for users outside Setapp's covered countries or who prefer a perpetual license? Open to making it Setapp-priority (e.g. discount inside Setapp, full price outside).
-  - Can we keep the **Pro Monthly (€3.99/mo)** direct subscription, or does Setapp require we pull it from direct sale?
+  - Can we keep the **Pro Lifetime (€24.99 one-time)** sold direct on notchia.app for users outside Setapp's covered countries or who prefer a perpetual license? Open to making it Setapp-priority (e.g. discount inside Setapp, full price outside).
+  - Can we keep the **Pro Monthly (€2.99/mo)** direct subscription, or does Setapp require we pull it from direct sale?
 - If exclusivity is required on **one** SKU, our preference order: 1) drop Pro Monthly direct sale, 2) keep Pro Lifetime + Essentiel direct.
 
 ## 3. Payout schedule

@@ -38,7 +38,7 @@ A new indie macOS app shipped this spring — NotchIA — and it's the first not
 
 Notable for indie coverage:
 - Built solo by one developer in Paris.
-- Lifetime Pro at 39.99 EUR (not a subscription).
+- Lifetime Pro at 24.99 EUR (not a subscription).
 - Free Essential tier (media, calendar, Focus, Digest, HUD).
 - macOS 15+, Apple Silicon and Intel, ~30 MB.
 - No telemetry, signed with Sparkle/EdDSA auto-updates.
@@ -76,7 +76,7 @@ NotchIA is a new indie macOS app that puts live status of Claude Code, ChatGPT C
 
 - Solo developer (Paris)
 - macOS 15+, Apple Silicon + Intel
-- Free Essential, lifetime Pro 39.99 EUR
+- Free Essential, lifetime Pro 24.99 EUR
 - Shipped publicly this spring, version 2.8.0
 - No telemetry, no cloud, signed auto-updates
 

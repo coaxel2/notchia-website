@@ -43,7 +43,7 @@ Two things make it different from the apps you've already covered:
 
 Standard stack alongside: media with synced lyrics, iCal + Reminders, Focus, Shelf, clipboard history, file converter, HUD replacement.
 
-Pricing: Essential tier free for life. Pro 3.99 EUR/mo or 39.99 EUR lifetime (two Macs). No telemetry, no analytics, signed app with Sparkle/EdDSA auto-updates.
+Pricing: Essential tier free for life. Pro 2.99 EUR/mo or 24.99 EUR lifetime (two Macs). No telemetry, no analytics, signed app with Sparkle/EdDSA auto-updates.
 
 Site: https://notchia.app/
 Release notes 2.8.0 (the on-device Apple Intelligence release): https://notchia.app/blog/wise-owl-2-8-0

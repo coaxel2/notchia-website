@@ -46,7 +46,7 @@ I'm Axel, indie dev from Paris. I shipped **NotchIA** this week on Product Hunt 
 
 **Tech**: SwiftUI + AppKit overlay for the notch zone, signed XPC helper for system HUD interception, native macOS sandbox.
 
-**Pricing**: Essential free forever. Pro €3.99/mo or €39.99 lifetime (one Mac / two Macs).
+**Pricing**: Essential free forever. Pro €2.99/mo or €24.99 lifetime (one Mac / two Macs).
 
 **What I'm struggling with**
 Product Hunt launch fell flat — 1 upvote, 0 comments. No prior community, no Twitter audience, just shipped and hoped. Now trying to figure out how to get it in front of real Mac power users.

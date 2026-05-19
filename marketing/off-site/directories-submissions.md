@@ -142,7 +142,7 @@ System Utilities
 Price:
 
 ```text
-Free Essential tier. Pro: EUR 3.99/month or EUR 39.99 lifetime.
+Free Essential tier. Pro: EUR 2.99/month or EUR 24.99 lifetime.
 ```
 
 Short description:

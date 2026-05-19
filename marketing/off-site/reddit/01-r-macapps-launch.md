@@ -76,7 +76,7 @@ categories. Sandbox + minimal entitlements.
   notarisation hoop is on the to-do list, not done yet.
 - Pricing isn't live yet. Free tier is real and unlimited (9 of
   15 modules including the Digest, music, calendar, focus, HUD).
-  Pro will be €3.99/month or €39.99 lifetime (2 Macs, no recurring)
+  Pro will be €2.99/month or €24.99 lifetime (2 Macs, no recurring)
   in a couple of weeks.
 - The AI session detection has only been battle-tested on the IDEs
   I use daily (VS Code, Cursor, Zed, Terminal). If you use
@@ -154,7 +154,7 @@ there exactly so you can verify the app behaves the way I claim
 or LuLu will show you.
 ```
 
-### Objection 3 — "Why €39.99 lifetime when Boring is free?"
+### Objection 3 — "Why €24.99 lifetime when Boring is free?"
 
 ```
 Fair question. Two reasons:
@@ -165,8 +165,8 @@ Fair question. Two reasons:
    with conversion, AI session monitor, on-device RSS digest, etc.
    The Pro tier unlocks 6 of those; the other 9 are free forever.
 
-2. Solo dev economics. €39.99 once on 2 Macs, no subscription, no
-   data harvested. That's roughly 11 months of the monthly plan,
+2. Solo dev economics. €24.99 once on 2 Macs, no subscription, no
+   data harvested. That's roughly 9 months of the monthly plan,
    and after that you've paid nothing more for life. I'm not
    pretending to compete with free — I'm building something I'd
    pay for myself.

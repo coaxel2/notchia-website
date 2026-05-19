@@ -80,7 +80,7 @@ The pitch: macOS hides interesting state in 12 places (menu bar, Dock, Spotlight
 — System HUD replacement (volume, brightness, keyboard backlight)
 — Clipboard history, file converter (16 formats), Quick Share
 
-Free Essential tier forever. Pro €3.99/mo or €39.99 lifetime (one-time, no subscription).
+Free Essential tier forever. Pro €2.99/mo or €24.99 lifetime (one-time, no subscription).
 
 Tech: SwiftUI + AppKit overlay, signed XPC helper, native sandbox. Zero telemetry, zero cookies — only license + email leave the Mac, and only for license verification.
 

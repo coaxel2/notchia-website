@@ -48,7 +48,7 @@ Pro adds:
 
 100% local. No telemetry, no third-party AI calls (except license validation). Independent macOS app developed in Paris.
 
-Free Essential tier forever. Pro at €3.99/mo or €39.99 one-time for 2 Macs (lifetime, all major updates included).
+Free Essential tier forever. Pro at €2.99/mo or €24.99 one-time for 2 Macs (lifetime, all major updates included).
 
 macOS 15+ (Sequoia). Apple Silicon + Intel.
 ```
@@ -69,7 +69,7 @@ I built NotchIA because the MacBook notch sits there doing nothing all day while
 
 Two months later it does music with synced lyrics, calendar, Pomodoro Focus, file conversion, clipboard history, and — the bit I'm proudest of — Digest, which fetches my RSS feeds and lets Apple's on-device Foundation Models summarize them based on what I tell it I care about. Nothing leaves the Mac.
 
-Free Essential tier is full Focus + Digest + media + calendar + HUD. Pro is €39.99 once for the live-AI integration and file management.
+Free Essential tier is full Focus + Digest + media + calendar + HUD. Pro is €24.99 once for the live-AI integration and file management.
 
 AMA on architecture, on-device AI implementation, why no Mac App Store, anything.
 ```
@@ -122,7 +122,7 @@ No telemetry, no third-party AI calls. The only outbound connections are Sparkle
 
 **Pricing**
 
-Essential tier free forever (Focus, Digest, media, calendar, HUD, lyrics, system detections). Pro at €3.99/mo or €39.99 lifetime one-time for 2 Macs.
+Essential tier free forever (Focus, Digest, media, calendar, HUD, lyrics, system detections). Pro at €2.99/mo or €24.99 lifetime one-time for 2 Macs.
 
 macOS 15+ (Sequoia), Apple Silicon + Intel. Download: https://notchia.app/
 
@@ -168,7 +168,7 @@ Je suis Axel Courty, développeur indépendant à Paris. Je viens de sortir Notc
 
 2. Digest — résumé des flux RSS via Apple Intelligence (Foundation Models on-device, macOS 26). L'utilisateur colle ses flux, décrit ses centres d'intérêt en langage naturel, l'app fetch + dédupe + résume. 100 % local — pas d'OpenAI/Anthropic dans le circuit. C'est la première fois que je vois un usage quotidien sérieux des Foundation Models.
 
-L'app inclut 15 modules natifs au total : médias multi-source avec paroles synchronisées, calendrier, Pomodoro Focus, Digest, Shelf, IA en direct, convertisseur 16 formats, presse-papiers historique, HUD système, et plus. Tier Essentiel gratuit à vie, Pro à 3,99 €/mois ou 39,99 € à vie en achat unique.
+L'app inclut 15 modules natifs au total : médias multi-source avec paroles synchronisées, calendrier, Pomodoro Focus, Digest, Shelf, IA en direct, convertisseur 16 formats, presse-papiers historique, HUD système, et plus. Tier Essentiel gratuit à vie, Pro à 2,99 €/mois ou 24,99 € à vie en achat unique.
 
 Je serais ravi de vous envoyer un build de test, vous laisser jouer avec, et répondre aux questions techniques. Je peux aussi écrire un guest post si vous voulez creuser l'intégration on-device Apple Intelligence.
 
@@ -224,7 +224,7 @@ Hi HN. I built NotchIA because the MacBook notch sits there empty while my Claud
 
 It does live AI status detection (Claude Code, Codex, Copilot — read locally from ~/.claude/projects/), media playback with synced lyrics, calendar, Pomodoro Focus, system HUD replacement, and the bit I'm proudest of: Digest, which uses Apple's on-device Foundation Models (Apple Intelligence, macOS 26) to summarize my RSS feeds based on what I tell it I care about. Nothing leaves the Mac.
 
-It's a native macOS app — 15 modules total. Free Essential tier, €39.99 lifetime Pro.
+It's a native macOS app — 15 modules total. Free Essential tier, €24.99 lifetime Pro.
 
 Tech stack: SwiftUI, AppKit for the notch overlay, XPC helper for HUD interception, lrclib for synced lyrics, Sparkle with EdDSA for auto-update. The AI detection parses Claude Code's local JSONL session logs and matches them to 10 state patterns.
 

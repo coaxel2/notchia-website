@@ -22,7 +22,7 @@ J'ai lancé NotchIA sur Product Hunt cette semaine. 1 upvote. Solitaire.
 → médias multi-source, calendrier, focus, HUD système
 → 15 modules natifs dans une seule app freemium
 
-Le tier Essentiel est gratuit à vie. Pro à 39,99 € en achat unique (pas d'abonnement).
+Le tier Essentiel est gratuit à vie. Pro à 24,99 € en achat unique (pas d'abonnement).
 
 Je passe à côté de la phase de lancement PH par manque de réseau early. Si tu utilises un Mac et que tu veux soutenir un indie dev français, l'upvote prend 10 secondes :
 
@@ -46,7 +46,7 @@ I've been building this indie macOS app for months — it turns the MacBook notc
 → multi-source media, calendar, focus, system HUD
 → 15 native modules in one freemium app
 
-The Essential tier is free forever. Pro is a one-time $39.99 (no subscription).
+The Essential tier is free forever. Pro is a one-time $24.99 (no subscription).
 
 I'm missing the PH launch momentum because I don't have an early network. If you use a Mac and want to support a French indie dev, the upvote takes 10 seconds:
 

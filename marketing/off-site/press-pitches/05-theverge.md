@@ -38,7 +38,7 @@ I built NotchIA, an independent macOS app, alone from Paris and shipped it publi
 
 Specs:
 - macOS 15+, Apple Silicon and Intel
-- Free Essential tier; lifetime Pro for 39.99 EUR (no subscription)
+- Free Essential tier; lifetime Pro for 24.99 EUR (no subscription)
 - No telemetry, no analytics
 - UI in English, French, Spanish, German
 

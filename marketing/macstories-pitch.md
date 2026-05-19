@@ -40,7 +40,7 @@ NotchIA is an independent native macOS app. It adds two things that aren't cover
 
 Beyond that: multi-source media with synced lyrics (Apple Music / Spotify / YouTube Music), iCal calendar + Reminders, full Pomodoro Focus, 16-format file converter, unlimited clipboard history, FR/EN/ES/DE i18n, on-device Shelf summary for PDF/.docx via Apple Intelligence.
 
-Pricing: Essential tier free for life. Pro at €3.99/mo or €39.99 lifetime one-time for 2 Macs (vs NotchNook's $25 lifetime — comparable territory but with the AI stack).
+Pricing: Essential tier free for life. Pro at €2.99/mo or €24.99 lifetime one-time for 2 Macs (vs NotchNook's $25 lifetime — comparable territory but with the AI stack).
 
 Site: https://notchia.app/
 Release notes 2.8.0 (the Apple Intelligence Digest release): https://notchia.app/blog/wise-owl-2-8-0

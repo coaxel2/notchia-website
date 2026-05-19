@@ -35,7 +35,7 @@ Dashboard → **Products** → **+ Add product** :
 - **Description** : Live AI tabs + Shelf + clipboard history + converter
 - **Pricing** :
   - Type : **Recurring**
-  - Price : `3.99 EUR`
+  - Price : `2.99 EUR`
   - Billing period : **Monthly**
 - Save → note le **Price ID** (commence par `price_`) → c'est `STRIPE_PRICE_MONTHLY`
 
@@ -44,7 +44,7 @@ Dashboard → **Products** → **+ Add product** :
 - **Name** : NotchIA Pro Lifetime
 - **Pricing** :
   - Type : **One-time**
-  - Price : `39.99 EUR`
+  - Price : `24.99 EUR`
 - Save → note le **Price ID** → c'est `STRIPE_PRICE_LIFETIME`
 
 ## 3. Créer une API key restricted
@@ -124,7 +124,7 @@ La **clé publique** sera embarquée dans NotchIA.app (Swift CryptoKit) pour la 
 1. Cloudflare Pages → Deployments → Retry last deployment (les env vars sont prises en compte).
 2. Va sur https://notchia.app/pricing → clique **Souscrire Pro mensuel**.
 3. Tu es redirigé vers `checkout.stripe.com/...`
-4. Utilise une vraie carte avec un petit montant test (3,99 €) ou une carte test pour vérifier le flow.
+4. Utilise une vraie carte avec un petit montant test (2,99 €) ou une carte test pour vérifier le flow.
 
    **Cartes test Stripe** (à utiliser SEULEMENT si tu mets temporairement `STRIPE_SECRET_KEY` en mode test `sk_test_xxx`) :
    - `4242 4242 4242 4242` — paiement OK

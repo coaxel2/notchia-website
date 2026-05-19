@@ -80,7 +80,7 @@
 
 ## License model — current and Setapp scenario
 
-- **Current model:** freemium. Essentiel is free forever. Pro tiers (Monthly 3.99 €/month, Lifetime 39.99 €) launch shortly via a custom license-key system backed by a Cloudflare Worker that stores `{email, license_key, IP_of_worker_request}` only — no Mac fingerprinting, no usage logs.
+- **Current model:** freemium. Essentiel is free forever. Pro tiers (Monthly 2.99 €/month, Lifetime 24.99 €) launch shortly via a custom license-key system backed by a Cloudflare Worker that stores `{email, license_key, IP_of_worker_request}` only — no Mac fingerprinting, no usage logs.
 - **For Setapp:** we are prepared to replace the license-key check with Setapp's authentication SDK so that Setapp subscribers transparently get the full Pro feature set without entering a key. The license validation module is isolated behind a `LicenseProvider` protocol — swapping it for Setapp's auth is a localised change (~ 1 day of work).
 - **Parallel sales:** we'd like to keep the direct-sale Lifetime Pro tier available on notchia.app for users outside Setapp's regions or who prefer one-time purchase. Open to discussion on this point (see `05-business-terms-questions.md`).
 

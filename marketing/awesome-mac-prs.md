@@ -50,7 +50,7 @@ How NotchIA differs from the notch apps already in this section:
 Details:
 - Site: https://notchia.app/
 - GitHub releases: https://github.com/coaxel2/NotchIA/releases
-- Pricing: Essential tier free for life · Pro €3.99/mo · Lifetime Pro €39.99 one-time for 2 Macs
+- Pricing: Essential tier free for life · Pro €2.99/mo · Lifetime Pro €24.99 one-time for 2 Macs
 - Platform: macOS 15+ (Sequoia), Apple Silicon + Intel
 - Privacy: no telemetry, no third-party AI calls, on-device AI via Apple Intelligence Foundation Models
 

@@ -42,7 +42,7 @@ I build NotchIA, an independent macOS notch app, and I think it'd fit your compa
 
 Quick facts for the table:
 - Version 2.8.0 — macOS 15+, Apple Silicon and Intel (Apple Intelligence features need macOS 26+)
-- Free Essential tier, lifetime Pro at 39.99 EUR (no subscription)
+- Free Essential tier, lifetime Pro at 24.99 EUR (no subscription)
 - UI in FR / EN / ES / DE
 - Site: https://notchia.app/  •  Press kit: https://notchia.app/press
 
@@ -85,7 +85,7 @@ Je développe NotchIA, une app indé macOS pour l'encoche, et je pense qu'elle a
 
 Specs rapides pour le tableau :
 - Version 2.8.0 — macOS 15+, Apple Silicon et Intel (Apple Intelligence requiert macOS 26+)
-- Tier Essentiel gratuit, Pro à vie 39,99 EUR (pas d'abonnement)
+- Tier Essentiel gratuit, Pro à vie 24,99 EUR (pas d'abonnement)
 - UI en FR / EN / ES / DE
 - Site : https://notchia.app/  •  Kit presse : https://notchia.app/press
 

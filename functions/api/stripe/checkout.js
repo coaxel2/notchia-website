@@ -7,8 +7,8 @@
  *
  * Env vars Cloudflare Pages :
  *   STRIPE_SECRET_KEY     = sk_live_xxx (Restricted key avec write:checkout_sessions)
- *   STRIPE_PRICE_MONTHLY  = price_xxx (Pro mensuel 3,99 €/mois)
- *   STRIPE_PRICE_LIFETIME = price_xxx (Pro à vie 39,99 € one-time)
+ *   STRIPE_PRICE_MONTHLY  = price_xxx (Pro mensuel 2,99 €/mois)
+ *   STRIPE_PRICE_LIFETIME = price_xxx (Pro à vie 24,99 € one-time)
  */
 
 const ALLOWED_PLANS = ["monthly", "lifetime"];

@@ -44,7 +44,7 @@ What it adds vs. the apps you covered:
 
 Quick specs for the table:
 - macOS 15+, Apple Silicon and Intel, ~30 MB
-- Free Essential tier, lifetime Pro 39.99 EUR (one-time, two Macs)
+- Free Essential tier, lifetime Pro 24.99 EUR (one-time, two Macs)
 - UI in EN / FR / ES / DE
 - Site: https://notchia.app/  •  Press kit: https://notchia.app/press
 

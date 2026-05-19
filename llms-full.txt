@@ -6,7 +6,7 @@ Ce fichier est la version étendue de `llms.txt` selon la convention llmstxt.org
 
 # NotchIA
 
-> NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif : médias multi-source, calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro bientôt disponible (3,99 €/mois ou 39,99 € à vie). Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
+> NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif : médias multi-source, calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro bientôt disponible (2,99 €/mois ou 24,99 € à vie). Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
 
 ## À propos
 
@@ -179,15 +179,15 @@ Trois formules (modèle freemium) :
 **Essentiel — 0 €, gratuit à vie, sans limitation**
 Inclut : médias multi-source (Apple Music, Spotify, YouTube), paroles synchronisées, visualizer, calendrier + Rappels, HUD système (volume, luminosité, clavier), Sneak Peek Engine, détections automatiques (appels, focus mode, capture d'écran), Concentration complet (statistiques quotidiennes + sons), personnalisation visuelle.
 
-**Pro mensuel — bientôt disponible, 3,99 €/mois, annulable à tout moment, 1 Mac**
+**Pro mensuel — bientôt disponible, 2,99 €/mois, annulable à tout moment, 1 Mac**
 Tout l'Essentiel, plus les trois modules Pro :
 - **IA en direct** : Claude Code, ChatGPT Codex, GitHub Copilot avec états en temps réel, statistiques de jetons, cache, latence, quotas 5h et 7j
 - **Gestion de fichiers** : Shelf (drag-and-drop entre apps), convertisseur 16 formats, Quick Share (AirDrop/Messages/Mail), QuickLook
 - **Presse-papiers historique** : illimité, recherche, regroupement par app, épinglage
 Mises à jour incluses.
 
-**Pro à vie — bientôt disponible, 39,99 € en achat unique, 2 Mac, aucune récurrence**
-Tout le Pro mensuel sans limite de durée, sur 2 Mac. Toutes les mises à jour majeures à venir incluses. Visualizers et icônes custom, couleurs illimitées. Support prioritaire FR. Rentabilisé en moins de 11 mois face à l'abonnement.
+**Pro à vie — bientôt disponible, 24,99 € en achat unique, 2 Mac, aucune récurrence**
+Tout le Pro mensuel sans limite de durée, sur 2 Mac. Toutes les mises à jour majeures à venir incluses. Visualizers et icônes custom, couleurs illimitées. Support prioritaire FR. Rentabilisé en moins de 9 mois face à l'abonnement.
 
 Les paiements Pro seront bientôt disponibles. La version Essentiel reste téléchargeable gratuitement dès maintenant.
 
@@ -286,7 +286,7 @@ Non. Tous les modules fonctionnent localement. La seule connexion réseau est l'
 Un onglet gratuit ajouté en 2.8.0 (Wise Owl). Tu colles tes flux RSS/Atom préférés et tu dis ce qui t'intéresse en langage naturel (ex : « IA vidéo, macOS 26, SwiftUI »). NotchIA fetch les flux, déduplique, et demande à Apple Intelligence (Foundation Models, on-device) de te résumer le tout selon ton intérêt. Brief court à scanner en 30 secondes, cache 14 jours, 100% local. Requiert macOS 26+ pour Apple Intelligence ; sans, dégradation gracieuse en viewer brut.
 
 **Combien coûte NotchIA ?**
-Trois formules. Essentiel gratuit à vie. Pro mensuel 3,99 €/mois (annulable, 1 Mac) et Pro à vie 39,99 € en achat unique (2 Mac, aucune récurrence, mises à jour majeures incluses) seront bientôt disponibles.
+Trois formules. Essentiel gratuit à vie. Pro mensuel 2,99 €/mois (annulable, 1 Mac) et Pro à vie 24,99 € en achat unique (2 Mac, aucune récurrence, mises à jour majeures incluses) seront bientôt disponibles.
 
 **Quels assistants IA sont supportés ?**
 Claude Code (Anthropic), ChatGPT Codex (OpenAI), GitHub Copilot. Détection automatique par IDE.
@@ -295,7 +295,7 @@ Claude Code (Anthropic), ChatGPT Codex (OpenAI), GitHub Copilot. Détection auto
 Non. NotchIA est une application macOS propriétaire développée indépendamment. Les modules avec sources publiques (composants UI réutilisables) sont documentés cas par cas dans les release notes.
 
 **Y a-t-il une option sans abonnement ?**
-Oui, c'est prévu. Le Pro à vie à 39,99 € sera un achat unique sans récurrence, valable sur 2 Mac, avec toutes les mises à jour majeures incluses. Le Pro mensuel à 3,99 €/mois servira à tester avant ou à l'utiliser ponctuellement. Pour l'instant, l'Essentiel reste gratuit à vie sans limitation.
+Oui, c'est prévu. Le Pro à vie à 24,99 € sera un achat unique sans récurrence, valable sur 2 Mac, avec toutes les mises à jour majeures incluses. Le Pro mensuel à 2,99 €/mois servira à tester avant ou à l'utiliser ponctuellement. Pour l'instant, l'Essentiel reste gratuit à vie sans limitation.
 
 ---
 

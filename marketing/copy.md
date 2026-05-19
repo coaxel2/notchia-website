@@ -53,7 +53,7 @@
 **A.**
 L'encoche pense maintenant. 🦉
 NotchIA 2.8.0 Wise Owl est dehors : brief d'actu IA généré on-device dans l'encoche, presse-papier intelligent, Shelf universelle.
-Gratuit ou 39,99 € à vie. macOS 15+.
+Gratuit ou 24,99 € à vie. macOS 15+.
 👉 https://notchia.app/
 
 **B.**
@@ -93,7 +93,7 @@ NotchIA 2.8.0 🦉 → https://notchia.app/
 ### Description (260 chars max)
 
 **FR**
-NotchIA transforme l'encoche du MacBook en hub interactif : musique, calendrier, concentration, détections live, brief d'actu IA on-device. Pro 💎 : Shelf, presse-papier intelligent, IA Code. Zéro tracking. Lifetime 39,99 €.
+NotchIA transforme l'encoche du MacBook en hub interactif : musique, calendrier, concentration, détections live, brief d'actu IA on-device. Pro 💎 : Shelf, presse-papier intelligent, IA Code. Zéro tracking. Lifetime 24,99 €.
 
 **EN**
 NotchIA turns the MacBook notch into an interactive hub: music, calendar, concentration, live detections, on-device AI news digest. Pro 💎 adds Shelf, smart clipboard, AI Code. Zero tracking. $44 lifetime.
@@ -110,7 +110,7 @@ NotchIA, c'est ma tentative d'en faire quelque chose d'utile sans tomber dans le
 
 Trois choses qui me tiennent à cœur :
 - **Tout tourne en local.** Aucun résumé, aucun brief, aucun clic ne quitte le Mac. Pas d'analytics tiers.
-- **Pas de SaaS forcé.** 3,99 €/mois OU 39,99 € à vie. Le lifetime existe vraiment.
+- **Pas de SaaS forcé.** 2,99 €/mois OU 24,99 € à vie. Le lifetime existe vraiment.
 - **Personnalisation totale.** 5 thèmes, accent custom, icône, 7 raccourcis éditables.
 
 Heureux de répondre à toutes vos questions techniques (Apple Intelligence, Foundation Models, archi, etc.). Merci ❤️
@@ -137,7 +137,7 @@ Happy to dig into any technical questions (Apple Intelligence, Foundation Models
 ### Short description (~500 chars)
 
 **FR**
-NotchIA transforme l'encoche du MacBook en hub interactif. Contrôlez votre musique, votre calendrier, votre concentration et vos AirPods sans quitter la barre supérieure. La version 2.8.0 « Wise Owl » ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence. Aucune télémétrie, aucun tracker tiers. Gratuit avec un Pro optionnel pour Shelf, presse-papier intelligent et intégration IA Code. Disponible en abonnement 3,99 €/mois ou en achat unique 39,99 € à vie. macOS 15 Sequoia minimum, Apple Silicon et Intel.
+NotchIA transforme l'encoche du MacBook en hub interactif. Contrôlez votre musique, votre calendrier, votre concentration et vos AirPods sans quitter la barre supérieure. La version 2.8.0 « Wise Owl » ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence. Aucune télémétrie, aucun tracker tiers. Gratuit avec un Pro optionnel pour Shelf, presse-papier intelligent et intégration IA Code. Disponible en abonnement 2,99 €/mois ou en achat unique 24,99 € à vie. macOS 15 Sequoia minimum, Apple Silicon et Intel.
 
 **EN**
 NotchIA turns your MacBook's notch into an interactive hub. Control your music, calendar, concentration and AirPods without ever leaving the menu bar. Version 2.8.0 "Wise Owl" adds Digest, an AI news brief generated entirely on-device through Apple Intelligence. No telemetry, no third-party trackers. Free, with an optional Pro tier unlocking Shelf, smart clipboard and AI Code integration. Available as a $5/month subscription or a $44 one-time lifetime purchase. macOS 15 Sequoia minimum, Apple Silicon and Intel.
@@ -157,7 +157,7 @@ NotchIA habite l'encoche de votre MacBook et la transforme en hub interactif, ca
 - Personnalisation totale : 5 thèmes, couleur d'accent libre, icône personnalisable, 7 raccourcis éditables
 - **Digest** (nouveau en 2.8.0) — votre brief d'actu IA généré on-device
 
-**Pro 💎 (3,99 €/mois ou 39,99 € à vie) :**
+**Pro 💎 (2,99 €/mois ou 24,99 € à vie) :**
 - Shelf — drag-and-drop universel, convertisseur 16 formats, résumé IA on-device d'un PDF ou document
 - IA Code — Claude Code, Codex, GitHub Copilot pilotés en temps réel depuis l'encoche
 - Presse-papier intelligent — 48 entrées, recherche full-text, épinglage
@@ -216,7 +216,7 @@ macOS 15.0 Sequoia minimum. Apple Silicon or Intel. Final purchase.
 
 ### FR
 
-NotchIA est une application macOS qui transforme l'encoche du MacBook en hub interactif. Pensée et développée par Axel Courty, développeur indépendant français, elle fait de cet espace longtemps perçu comme un défaut un véritable centre de contrôle : musique, calendrier, rappels, concentration, détections live (appel vidéo, focus, AirPods, screen recording, webcam), aperçu visuel des fichiers, raccourcis personnalisables. La version 2.8.0 « Wise Owl », sortie le 15 mai 2026, ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence — aucune donnée ne quitte le Mac. Pour les utilisateurs avancés, la version Pro 💎 débloque Shelf (drag-and-drop universel, conversion entre 16 formats, résumé IA local de PDF), une intégration directe avec Claude Code, Codex et GitHub Copilot pilotés depuis l'encoche, ainsi qu'un presse-papier intelligent de 48 entrées avec recherche full-text. NotchIA refuse les compromis du SaaS forcé : 3,99 € par mois ou 39,99 € en achat unique à vie. Aucun tracker tiers, aucune télémétrie. macOS 15 Sequoia minimum, distribution hors App Store via Stripe et GitHub Releases. Site : https://notchia.app/
+NotchIA est une application macOS qui transforme l'encoche du MacBook en hub interactif. Pensée et développée par Axel Courty, développeur indépendant français, elle fait de cet espace longtemps perçu comme un défaut un véritable centre de contrôle : musique, calendrier, rappels, concentration, détections live (appel vidéo, focus, AirPods, screen recording, webcam), aperçu visuel des fichiers, raccourcis personnalisables. La version 2.8.0 « Wise Owl », sortie le 15 mai 2026, ajoute Digest, un brief d'actu IA généré entièrement on-device via Apple Intelligence — aucune donnée ne quitte le Mac. Pour les utilisateurs avancés, la version Pro 💎 débloque Shelf (drag-and-drop universel, conversion entre 16 formats, résumé IA local de PDF), une intégration directe avec Claude Code, Codex et GitHub Copilot pilotés depuis l'encoche, ainsi qu'un presse-papier intelligent de 48 entrées avec recherche full-text. NotchIA refuse les compromis du SaaS forcé : 2,99 € par mois ou 24,99 € en achat unique à vie. Aucun tracker tiers, aucune télémétrie. macOS 15 Sequoia minimum, distribution hors App Store via Stripe et GitHub Releases. Site : https://notchia.app/
 
 ### EN
 
@@ -342,7 +342,7 @@ Toute l'intelligence artificielle de NotchIA tourne sur votre Mac via Apple Inte
 
 TARIFS HONNÊTES
 
-NotchIA est gratuite avec ses features de base. Pro 💎 est disponible en abonnement à 3,99 € par mois OU en achat unique à 39,99 € à vie. Le lifetime existe vraiment, et ne disparaîtra pas dans un futur changement de plan.
+NotchIA est gratuite avec ses features de base. Pro 💎 est disponible en abonnement à 2,99 € par mois OU en achat unique à 24,99 € à vie. Le lifetime existe vraiment, et ne disparaîtra pas dans un futur changement de plan.
 
 PRÉ-REQUIS
 
