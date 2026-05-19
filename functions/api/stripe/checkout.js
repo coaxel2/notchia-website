@@ -1,3 +1,4 @@
+// Trigger redeploy : env vars Stripe au complet (2026-05-19).
 /**
  * NotchIA — Stripe Checkout session creator
  *
