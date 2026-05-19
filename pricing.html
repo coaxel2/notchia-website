@@ -134,8 +134,8 @@
         <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b5">Mises à jour incluses</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b6">Annulation en 1 clic</span></li>
       </ul>
-      <button type="button" disabled aria-disabled="true" class="cta-secondary py-3 px-6 rounded-full text-sm font-medium" data-i18n="cta.soon">
-        Bientôt disponible
+      <button type="button" data-plan="monthly" class="js-checkout cta-secondary py-3 px-6 rounded-full text-sm font-medium" data-i18n="cta.buy_monthly">
+        Souscrire Pro mensuel
       </button>
     </article>
 
@@ -160,13 +160,13 @@
         <li class="flex gap-2"><span class="check">✓</span><span data-i18n="lifetime.b4">Rentable dès 10 mois</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span data-i18n="lifetime.b5">2 Mac inclus</span></li>
       </ul>
-      <button type="button" disabled aria-disabled="true" class="cta-primary py-3 px-6 rounded-full text-sm" data-i18n="cta.soon">
-        Bientôt disponible
+      <button type="button" data-plan="lifetime" class="js-checkout cta-primary py-3 px-6 rounded-full text-sm" data-i18n="cta.buy_lifetime">
+        Acheter Pro à vie
       </button>
     </article>
   </div>
 
-  <!-- Status banner (si redirection ?status=cancel) -->
+  <!-- Status banner (si redirection ?status=cancel ou erreur checkout) -->
   <div id="status" class="hidden text-center text-sm py-3 px-5 rounded-xl mb-8"></div>
 
   <!-- FAQ légère -->
@@ -205,7 +205,7 @@
     fr: {
       'nav.home':'Accueil','nav.account':'Mon compte',
       'h1':'<span class="grad-text">Pro</span>, sans abonnement obligatoire',
-      'lead':'Les offres Pro seront bientôt disponibles. En attendant, la version gratuite reste téléchargeable.',
+      'lead':'Pro mensuel ou Pro à vie, au choix. Paiement sécurisé Stripe, clé livrée par email immédiatement.',
       'monthly.title':'Mensuel','monthly.tag':'flexible','monthly.sub':"Annule à tout moment. Essai gratuit prévu.",'monthly.per':' / mois',
       'monthly.b1':'Onglet Claude Code intégré','monthly.b2':'Onglet Codex intégré','monthly.b3':'Toutes les futures fonctionnalités IA',
       'monthly.b4':'1 Mac inclus','monthly.b5':'Mises à jour incluses','monthly.b6':'Annulation en 1 clic',
@@ -213,18 +213,22 @@
       'lifetime.sub':'Un seul paiement. Toutes les futures versions incluses.','lifetime.per':' une seule fois',
       'lifetime.b1':"<strong>Tout ce qu'il y a dans Mensuel</strong>",'lifetime.b2':'Pas de renouvellement','lifetime.b3':'Mises à jour à vie','lifetime.b4':'Rentable dès 10 mois','lifetime.b5':'2 Mac inclus',
       'cta.soon':'Bientôt disponible',
+      'cta.buy_monthly':'Souscrire Pro mensuel',
+      'cta.buy_lifetime':'Acheter Pro à vie',
+      'cta.loading':'Redirection…',
+      'cta.error':'Paiement indisponible pour le moment. Réessaie ou écris à /contact.',
+      'status.cancelled':'Paiement annulé. Aucun débit. Tu peux retenter à tout moment.',
       'faq.title':'Questions fréquentes',
       'faq.q1':"Que se passe-t-il si j'arrête de payer ?",'faq.a1':"Quand le paiement sera disponible, les fonctionnalités Pro (Claude Code et Codex) pourront être arrêtées à tout moment. Le reste de NotchIA continuera de marcher normalement.",
       'faq.q2':"Sur combien de Mac puis-je l'installer ?",'faq.a2':"Le forfait mensuel est prévu pour 1 Mac. La licence à vie est prévue pour 2 Mac.",
       'faq.q3':"Le lifetime inclut-il les futures versions majeures ?",'faq.a3':"Oui. Toutes les mises à jour de NotchIA, y compris les versions majeures, sont incluses pour les acheteurs lifetime.",
       'faq.q4':"J'ai perdu ma clé de licence. Que faire ?",'faq.a4':'Quand les achats seront ouverts, la page <a href="/account" class="underline">/account</a> permettra de retrouver une clé depuis l\'email d\'achat.',
-      'footnote':'Paiement bientôt disponible. La version gratuite reste accessible dès maintenant. Voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.',
-      'status.soon':"Les achats Pro seront bientôt disponibles. La version gratuite reste téléchargeable.",
+      'footnote':'Paiement sécurisé via Stripe. Voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.',
     },
     en: {
       'nav.home':'Home','nav.account':'My account',
       'h1':'<span class="grad-text">Pro</span>, no mandatory subscription',
-      'lead':'Pro plans are coming soon. Until then, the free version is available to download.',
+      'lead':'Pro monthly or Pro lifetime, your choice. Secure Stripe checkout, key delivered by email instantly.',
       'monthly.title':'Monthly','monthly.tag':'flexible','monthly.sub':'Cancel anytime. Free trial planned.','monthly.per':' / month',
       'monthly.b1':'Claude Code tab integrated','monthly.b2':'Codex tab integrated','monthly.b3':'All future AI features',
       'monthly.b4':'1 Mac included','monthly.b5':'Updates included','monthly.b6':'One-click cancellation',
@@ -232,18 +236,22 @@
       'lifetime.sub':'One payment. All future versions included.','lifetime.per':' one-time',
       'lifetime.b1':'<strong>Everything in Monthly</strong>','lifetime.b2':'No renewal','lifetime.b3':'Lifetime updates','lifetime.b4':'Pays off after 10 months','lifetime.b5':'2 Macs included',
       'cta.soon':'Coming soon',
+      'cta.buy_monthly':'Subscribe to Pro monthly',
+      'cta.buy_lifetime':'Buy Pro lifetime',
+      'cta.loading':'Redirecting…',
+      'cta.error':'Payment unavailable right now. Try again or use /contact.',
+      'status.cancelled':'Payment cancelled. No charge. You can retry anytime.',
       'faq.title':'Frequently asked',
       'faq.q1':'What happens if I stop paying?','faq.a1':'When payment is available, Pro features (Claude Code and Codex) can be stopped at any time. The rest of NotchIA keeps working normally.',
       'faq.q2':'How many Macs can I install it on?','faq.a2':'The monthly plan is for 1 Mac. The lifetime license is for 2 Macs.',
       'faq.q3':'Does Lifetime include future major versions?','faq.a3':'Yes. All NotchIA updates, including major versions, are included for lifetime buyers.',
       'faq.q4':'I lost my license key. What now?','faq.a4':'When purchases open, the <a href="/account" class="underline">/account</a> page will let you retrieve a key from the purchase email.',
-      'footnote':'Payment coming soon. The free version is available right now. See our <a href="/refund" class="underline">refund policy</a>, our <a href="/cgv" class="underline">terms of sale</a> and our <a href="/privacy" class="underline">privacy policy</a>.',
-      'status.soon':'Pro purchases are coming soon. The free version is available to download.',
+      'footnote':'Secure payment via Stripe. See our <a href="/refund" class="underline">refund policy</a>, our <a href="/cgv" class="underline">terms of sale</a> and our <a href="/privacy" class="underline">privacy policy</a>.',
     },
     es: {
       'nav.home':'Inicio','nav.account':'Mi cuenta',
       'h1':'<span class="grad-text">Pro</span>, sin suscripción obligatoria',
-      'lead':'Los planes Pro estarán disponibles próximamente. Mientras tanto, la versión gratuita sigue descargable.',
+      'lead':'Pro mensual o Pro de por vida, tú eliges. Pago seguro Stripe, clave por email al instante.',
       'monthly.title':'Mensual','monthly.tag':'flexible','monthly.sub':'Cancela cuando quieras. Prueba gratuita prevista.','monthly.per':' / mes',
       'monthly.b1':'Pestaña Claude Code integrada','monthly.b2':'Pestaña Codex integrada','monthly.b3':'Todas las futuras funciones IA',
       'monthly.b4':'1 Mac incluido','monthly.b5':'Actualizaciones incluidas','monthly.b6':'Cancelación en 1 clic',
@@ -251,18 +259,22 @@
       'lifetime.sub':'Un solo pago. Todas las futuras versiones incluidas.','lifetime.per':' una sola vez',
       'lifetime.b1':'<strong>Todo lo de Mensual</strong>','lifetime.b2':'Sin renovación','lifetime.b3':'Actualizaciones de por vida','lifetime.b4':'Rentable a partir de 10 meses','lifetime.b5':'2 Mac incluidos',
       'cta.soon':'Próximamente',
+      'cta.buy_monthly':'Suscribir Pro mensual',
+      'cta.buy_lifetime':'Comprar Pro de por vida',
+      'cta.loading':'Redirigiendo…',
+      'cta.error':'Pago no disponible ahora. Inténtalo o usa /contact.',
+      'status.cancelled':'Pago cancelado. Sin cargo. Puedes reintentar en cualquier momento.',
       'faq.title':'Preguntas frecuentes',
       'faq.q1':'¿Qué pasa si dejo de pagar?','faq.a1':'Cuando el pago esté disponible, las funciones Pro (Claude Code y Codex) podrán detenerse en cualquier momento. El resto de NotchIA seguirá funcionando normalmente.',
       'faq.q2':'¿En cuántos Mac puedo instalarlo?','faq.a2':'El plan mensual es para 1 Mac. La licencia de por vida es para 2 Mac.',
       'faq.q3':'¿La licencia de por vida incluye futuras versiones mayores?','faq.a3':'Sí. Todas las actualizaciones de NotchIA, incluidas las versiones mayores, están incluidas para los compradores de por vida.',
       'faq.q4':'Perdí mi clave de licencia. ¿Qué hago?','faq.a4':'Cuando se abran las compras, la página <a href="/account" class="underline">/account</a> permitirá recuperar una clave desde el email de compra.',
-      'footnote':'Pago próximamente. La versión gratuita sigue accesible desde ahora. Ver nuestra <a href="/refund" class="underline">política de reembolso</a>, nuestras <a href="/cgv" class="underline">CGV</a> y nuestra <a href="/privacy" class="underline">política de privacidad</a>.',
-      'status.soon':'Las compras Pro estarán disponibles próximamente. La versión gratuita sigue descargable.',
+      'footnote':'Pago seguro vía Stripe. Ver nuestra <a href="/refund" class="underline">política de reembolso</a>, nuestras <a href="/cgv" class="underline">CGV</a> y nuestra <a href="/privacy" class="underline">política de privacidad</a>.',
     },
     de: {
       'nav.home':'Startseite','nav.account':'Mein Konto',
       'h1':'<span class="grad-text">Pro</span>, ohne Pflicht-Abo',
-      'lead':'Die Pro-Pläne kommen bald. Bis dahin bleibt die kostenlose Version verfügbar.',
+      'lead':'Pro monatlich oder Pro lebenslang, deine Wahl. Sichere Stripe-Zahlung, Schlüssel sofort per E-Mail.',
       'monthly.title':'Monatlich','monthly.tag':'flexibel','monthly.sub':'Jederzeit kündbar. Kostenlose Testphase geplant.','monthly.per':' / Monat',
       'monthly.b1':'Claude-Code-Tab integriert','monthly.b2':'Codex-Tab integriert','monthly.b3':'Alle künftigen KI-Funktionen',
       'monthly.b4':'1 Mac inklusive','monthly.b5':'Updates inklusive','monthly.b6':'Kündigung mit 1 Klick',
@@ -270,13 +282,17 @@
       'lifetime.sub':'Eine Zahlung. Alle künftigen Versionen inklusive.','lifetime.per':' einmalig',
       'lifetime.b1':'<strong>Alles aus Monatlich</strong>','lifetime.b2':'Keine Verlängerung','lifetime.b3':'Lebenslange Updates','lifetime.b4':'Rentabel nach 10 Monaten','lifetime.b5':'2 Macs inklusive',
       'cta.soon':'Demnächst verfügbar',
+      'cta.buy_monthly':'Pro monatlich abonnieren',
+      'cta.buy_lifetime':'Pro lebenslang kaufen',
+      'cta.loading':'Weiterleitung…',
+      'cta.error':'Zahlung gerade nicht verfügbar. Versuch erneut oder nutze /contact.',
+      'status.cancelled':'Zahlung abgebrochen. Keine Belastung. Du kannst es jederzeit erneut versuchen.',
       'faq.title':'Häufige Fragen',
       'faq.q1':'Was passiert, wenn ich aufhöre zu zahlen?','faq.a1':'Wenn die Zahlung verfügbar ist, können die Pro-Funktionen (Claude Code und Codex) jederzeit gestoppt werden. Der Rest von NotchIA funktioniert weiterhin normal.',
       'faq.q2':'Auf wie vielen Macs kann ich es installieren?','faq.a2':'Der Monatsplan ist für 1 Mac. Die Lebenslang-Lizenz ist für 2 Macs.',
       'faq.q3':'Enthält Lebenslang künftige Hauptversionen?','faq.a3':'Ja. Alle NotchIA-Updates, einschließlich Hauptversionen, sind für Lebenslang-Käufer inklusive.',
       'faq.q4':'Ich habe meinen Lizenzschlüssel verloren. Was nun?','faq.a4':'Sobald Käufe geöffnet sind, kannst du auf der Seite <a href="/account" class="underline">/account</a> einen Schlüssel über die Kauf-E-Mail wiederfinden.',
-      'footnote':'Zahlung demnächst verfügbar. Die kostenlose Version ist jetzt zugänglich. Siehe unsere <a href="/refund" class="underline">Rückerstattungs-Richtlinie</a>, unsere <a href="/cgv" class="underline">AGB</a> und unsere <a href="/privacy" class="underline">Datenschutzerklärung</a>.',
-      'status.soon':'Pro-Käufe sind bald verfügbar. Die kostenlose Version ist verfügbar zum Download.',
+      'footnote':'Sichere Zahlung über Stripe. Siehe unsere <a href="/refund" class="underline">Rückerstattungs-Richtlinie</a>, unsere <a href="/cgv" class="underline">AGB</a> und unsere <a href="/privacy" class="underline">Datenschutzerklärung</a>.',
     },
   };
 
@@ -285,25 +301,79 @@
     const b = (navigator.language || 'en').toLowerCase().split('-')[0];
     return I18N[b] ? b : 'en';
   }
+  let currentLang = detectLang();
   function applyLang(lang) {
     if (!I18N[lang]) lang = 'en';
+    currentLang = lang;
     const dict = I18N[lang];
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
     document.querySelectorAll('[data-i18n-html]').forEach(el => { const v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
     const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
     try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
-    // Banner status
+    // Banner conditionnel : seulement si ?status=cancelled dans l'URL
     const banner = document.getElementById('status');
     if (banner) {
-      banner.textContent = dict['status.soon'];
-      banner.style.background = "rgba(237,232,220,0.06)";
-      banner.style.color = "#EDE8DC";
-      banner.classList.remove('hidden');
+      const params = new URLSearchParams(location.search);
+      if (params.get('status') === 'cancelled') {
+        banner.textContent = dict['status.cancelled'];
+        banner.style.background = "rgba(255,122,45,0.10)";
+        banner.style.color = "#FFB58A";
+        banner.style.border = "1px solid rgba(255,122,45,0.35)";
+        banner.classList.remove('hidden');
+      } else {
+        banner.classList.add('hidden');
+      }
     }
   }
-  applyLang(detectLang());
+  applyLang(currentLang);
   document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
+
+  // ── Stripe Checkout ───────────────────────────────────────────────
+  document.querySelectorAll('.js-checkout').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (btn.disabled) return;
+      const dict = I18N[currentLang];
+      const plan = btn.dataset.plan;
+      const originalLabel = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = dict['cta.loading'];
+
+      try {
+        const res = await fetch('/api/stripe/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ plan, lang: currentLang }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.url) {
+          // Redirection vers Stripe Checkout hosted
+          window.location.href = data.url;
+          return; // pas de finally — la page va quitter
+        }
+        // Erreur côté serveur (Stripe non configuré, etc.)
+        const banner = document.getElementById('status');
+        if (banner) {
+          banner.textContent = (data.error || dict['cta.error']);
+          banner.style.background = "rgba(255,77,136,0.10)";
+          banner.style.color = "#FFB3CC";
+          banner.style.border = "1px solid rgba(255,77,136,0.35)";
+          banner.classList.remove('hidden');
+        }
+      } catch (e) {
+        const banner = document.getElementById('status');
+        if (banner) {
+          banner.textContent = dict['cta.error'];
+          banner.style.background = "rgba(255,77,136,0.10)";
+          banner.style.color = "#FFB3CC";
+          banner.classList.remove('hidden');
+        }
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalLabel;
+      }
+    });
+  });
 </script>
 
 </body>
