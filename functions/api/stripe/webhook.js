@@ -337,3 +337,5 @@ async function sendLicenseEmail(env, email, licenseKey, plan, lang) {
     console.log("Resend send license threw", e?.message);
   }
 }
+
+// redeploy: reload RESEND_API_KEY (fixed ❯ prefix) 2026-05-21
