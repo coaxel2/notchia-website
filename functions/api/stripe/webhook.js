@@ -306,12 +306,23 @@ function emailBody(licenseKey, plan, lang) {
 </body></html>`;
 }
 
+// Nettoie une clé Resend : retire espaces et tout caractère parasite avant
+// le "re_" (ex: un "❯ " collé depuis un prompt terminal). Évite l'erreur
+// "API key is invalid" / header Authorization non-ASCII.
+function cleanResendKey(raw) {
+  if (!raw) return "";
+  const s = String(raw).trim();
+  const i = s.indexOf("re_");
+  return i >= 0 ? s.slice(i) : s;
+}
+
 async function sendLicenseEmail(env, email, licenseKey, plan, lang) {
-  if (!env.RESEND_API_KEY) {
+  const apiKey = cleanResendKey(env.RESEND_API_KEY);
+  if (!apiKey) {
     console.log("RESEND_API_KEY missing — license generated but email NOT sent for", email);
     return;
   }
-  const from = env.CONTACT_FROM || "contact@notchia.app";
+  const from = (env.CONTACT_FROM || "contact@notchia.app").trim();
   const subject = EMAIL_SUBJECTS[lang] || EMAIL_SUBJECTS.en;
   const html = emailBody(licenseKey, plan, lang);
 
@@ -319,7 +330,7 @@ async function sendLicenseEmail(env, email, licenseKey, plan, lang) {
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${env.RESEND_API_KEY}`,
+        "Authorization": `Bearer ${apiKey}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

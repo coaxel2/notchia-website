@@ -104,9 +104,11 @@ export async function onRequestPost(context) {
     );
   }
 
-  const from = env.CONTACT_FROM || "onboarding@resend.dev";
-  const to = env.CONTACT_TO;
+  const from = (env.CONTACT_FROM || "onboarding@resend.dev").trim();
+  const to = env.CONTACT_TO.trim();
   const ua = request.headers.get("User-Agent") || "unknown";
+  // Nettoie la clé Resend (retire un éventuel "❯ " ou espace collé depuis un prompt)
+  const resendKey = (() => { const s = String(env.RESEND_API_KEY).trim(); const i = s.indexOf("re_"); return i >= 0 ? s.slice(i) : s; })();
 
   // Mode test : ?test=1 → renvoie ok sans appeler Resend.
   // Permet d'isoler les bugs Resend vs bugs function (routing, env, etc.).
@@ -145,7 +147,7 @@ export async function onRequestPost(context) {
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${env.RESEND_API_KEY}`,
+        "Authorization": `Bearer ${resendKey}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
