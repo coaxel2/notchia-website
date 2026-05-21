@@ -169,7 +169,7 @@
           "description": "Toutes les fonctionnalités Pro : assistants IA, Concentration complet, presse-papiers illimité, convertisseur 16 formats. Annulable à tout moment, 1 Mac.",
           "price": "2.99",
           "priceCurrency": "EUR",
-          "availability": "https://schema.org/PreOrder",
+          "availability": "https://schema.org/InStock",
           "category": "subscription",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
@@ -187,7 +187,7 @@
           "description": "Toutes les fonctionnalités Pro pour toujours, sur 2 Mac. Achat unique, aucune récurrence, toutes les mises à jour majeures incluses.",
           "price": "24.99",
           "priceCurrency": "EUR",
-          "availability": "https://schema.org/PreOrder",
+          "availability": "https://schema.org/InStock",
           "category": "lifetime license",
           "priceValidUntil": "2027-12-31"
         }
@@ -226,7 +226,7 @@
           "name": "Combien coûte NotchIA et quelles sont les formules disponibles ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Trois formules. Essentiel : 0 € à vie, sans limitation, avec les médias multi-source, le calendrier, le HUD système, le Sneak Peek, les détections automatiques, le Concentration complet (statistiques + sons) et la personnalisation visuelle. Pro mensuel : 2,99 € par mois, annulable à tout moment, 1 Mac. Ajoute trois modules payants : IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot avec états et statistiques), gestion de fichiers (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et presse-papiers historique illimité avec recherche et épinglage. Pro à vie : 24,99 € en achat unique, 2 Mac, aucune récurrence, toutes les mises à jour majeures incluses, support prioritaire. Les paiements Pro seront bientôt disponibles ; la version Essentiel reste gratuite."
+            "text": "Trois formules. Essentiel : 0 € à vie, sans limitation, avec les médias multi-source, le calendrier, le HUD système, le Sneak Peek, les détections automatiques, le Concentration complet (statistiques + sons) et la personnalisation visuelle. Pro mensuel : 2,99 € par mois, annulable à tout moment, 1 Mac. Ajoute trois modules payants : IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot avec états et statistiques), gestion de fichiers (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et presse-papiers historique illimité avec recherche et épinglage. Pro à vie : 24,99 € en achat unique, 2 Mac, aucune récurrence, toutes les mises à jour majeures incluses, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite."
           }
         },
         {
@@ -266,7 +266,7 @@
           "name": "NotchIA fait-il partie des meilleures apps Mac à installer en 2026 ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui, NotchIA figure dans les sélections d'apps Mac essentielles 2026 au titre de notch utility — la catégorie qui exploite l'encoche du MacBook en cockpit interactif. Aux côtés de Raycast (launcher universel), Rectangle (gestion de fenêtres), CleanShot X (captures pro), 1Password (mots de passe), Things 3 (tâches personnelles) et Bartender 5 (barre de menus), NotchIA couvre un usage que les autres ne traitent pas : musique multi-source, calendrier, Concentration, IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot) et HUD système, le tout intégré dans l'encoche elle-même. Tier Essentiel gratuit à vie, Pro bientôt disponible à 2,99 €/mois ou 24,99 € à vie. Voir le guide complet des meilleures apps Mac 2026 : https://notchia.app/blog/meilleures-apps-mac-2026"
+            "text": "Oui, NotchIA figure dans les sélections d'apps Mac essentielles 2026 au titre de notch utility — la catégorie qui exploite l'encoche du MacBook en cockpit interactif. Aux côtés de Raycast (launcher universel), Rectangle (gestion de fenêtres), CleanShot X (captures pro), 1Password (mots de passe), Things 3 (tâches personnelles) et Bartender 5 (barre de menus), NotchIA couvre un usage que les autres ne traitent pas : musique multi-source, calendrier, Concentration, IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot) et HUD système, le tout intégré dans l'encoche elle-même. Tier Essentiel gratuit à vie, Pro à 2,99 €/mois ou 24,99 € à vie. Voir le guide complet des meilleures apps Mac 2026 : https://notchia.app/blog/meilleures-apps-mac-2026"
           }
         },
         {
@@ -1933,10 +1933,10 @@
           <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.monthly.b6">1 Mac · mises à jour incluses</span></li>
         </ul>
 
-        <button type="button" disabled aria-disabled="true" class="btn btn-ghost mt-7 sm:mt-8 w-full justify-center opacity-70 cursor-not-allowed">
-          <span data-i18n="price.monthly.cta">Bientôt disponible</span>
+        <button type="button" data-plan="monthly" class="js-checkout btn btn-ghost mt-7 sm:mt-8 w-full justify-center">
+          <span data-i18n="price.monthly.cta">Souscrire Pro mensuel</span>
         </button>
-        <p class="text-[11px] text-mist mt-3 text-center font-mono" data-i18n="price.monthly.note">paiement bientôt disponible</p>
+        <p class="text-[11px] text-mist mt-3 text-center font-mono" data-i18n="price.monthly.note">paiement sécurisé Stripe · annulable à tout moment</p>
       </div>
 
       <!-- 3. Pro à vie (recommandé) -->
@@ -1962,10 +1962,10 @@
           <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b7">Aucune récurrence, aucun renouvellement</span></li>
         </ul>
 
-        <button type="button" disabled aria-disabled="true" class="btn mt-7 sm:mt-8 w-full justify-center opacity-70 cursor-not-allowed" style="background:#0B0D12; color:#EDE8DC;">
-          <span data-i18n="price.lifetime_pro.cta">Bientôt disponible</span>
+        <button type="button" data-plan="lifetime" class="js-checkout btn mt-7 sm:mt-8 w-full justify-center" style="background:#0B0D12; color:#EDE8DC;">
+          <span data-i18n="price.lifetime_pro.cta">Acheter Pro à vie</span>
         </button>
-        <p class="text-xs text-ink2/50 mt-3 text-center font-mono" data-i18n="price.refund">Paiement bientôt disponible · version gratuite disponible</p>
+        <p class="text-xs text-ink2/50 mt-3 text-center font-mono" data-i18n="price.refund">Paiement unique sécurisé Stripe · clé par email</p>
       </div>
     </div>
 
@@ -2060,7 +2060,7 @@
           <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
         <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a4">
-          Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Concentration complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">2,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro — <b class="text-cream">IA en direct</b> (Claude Code, Codex, Copilot), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et <b class="text-cream">presse-papiers historique</b> illimité. <span class="text-cream">Pro à vie</span> : <span class="text-cream">24,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire. Les paiements Pro seront bientôt disponibles ; la version Essentiel reste gratuite.
+          Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Concentration complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">2,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro — <b class="text-cream">IA en direct</b> (Claude Code, Codex, Copilot), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et <b class="text-cream">presse-papiers historique</b> illimité. <span class="text-cream">Pro à vie</span> : <span class="text-cream">24,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite.
 </p>
       </details>
 
@@ -2080,7 +2080,7 @@
           <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
         <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a10">
-          <span class="text-cream">Oui</span>, NotchIA figure dans les sélections d'apps Mac essentielles 2026 au titre de <span class="text-cream">notch utility</span> — la catégorie qui exploite l'encoche du MacBook en cockpit interactif. Aux côtés de <span class="text-cream">Raycast</span> (launcher), <span class="text-cream">Rectangle</span> (gestion de fenêtres), <span class="text-cream">CleanShot X</span> (captures), <span class="text-cream">1Password</span> (mots de passe) et <span class="text-cream">Things 3</span> (tâches), NotchIA couvre un usage que les autres ne traitent pas : musique, calendrier, Concentration, IA en direct (Claude Code, Codex, Copilot) et HUD système, le tout intégré <span class="text-cream">dans l'encoche elle-même</span>. Tier <b class="text-cream">Essentiel gratuit à vie</b>, Pro bientôt disponible à <b class="text-cream">2,99 €/mois</b> ou <b class="text-cream">24,99 € à vie</b>. Voir le <a href="/blog/meilleures-apps-mac-2026" class="text-orange hover:underline">guide complet des meilleures apps Mac 2026</a>.
+          <span class="text-cream">Oui</span>, NotchIA figure dans les sélections d'apps Mac essentielles 2026 au titre de <span class="text-cream">notch utility</span> — la catégorie qui exploite l'encoche du MacBook en cockpit interactif. Aux côtés de <span class="text-cream">Raycast</span> (launcher), <span class="text-cream">Rectangle</span> (gestion de fenêtres), <span class="text-cream">CleanShot X</span> (captures), <span class="text-cream">1Password</span> (mots de passe) et <span class="text-cream">Things 3</span> (tâches), NotchIA couvre un usage que les autres ne traitent pas : musique, calendrier, Concentration, IA en direct (Claude Code, Codex, Copilot) et HUD système, le tout intégré <span class="text-cream">dans l'encoche elle-même</span>. Tier <b class="text-cream">Essentiel gratuit à vie</b>, Pro à <b class="text-cream">2,99 €/mois</b> ou <b class="text-cream">24,99 € à vie</b>. Voir le <a href="/blog/meilleures-apps-mac-2026" class="text-orange hover:underline">guide complet des meilleures apps Mac 2026</a>.
         </p>
       </details>
 
@@ -2239,7 +2239,7 @@
       'hero.svg': 'pense',
       'hero.subtitle': 'NotchIA transforme la zone morte de votre MacBook en <span class="text-cream">centre de contrôle interactif</span> : médias, calendrier, IA en direct, Concentration, presse-papiers, HUD — tout ce qui comptait, à hauteur de regard.',
       'hero.cta.download': 'Télécharger NotchIA', 'hero.cta.demo': 'Voir en action',
-      'hero.tagline': 'Gratuit à vie · Pro bientôt disponible (2,99 €/mois ou 24,99 € à vie)',
+      'hero.tagline': 'Gratuit à vie · Pro 2,99 €/mois ou 24,99 € à vie',
       'hero.cta.alt': '~ 12 Mo · macOS 15+ · <a href="install.html" class="underline hover:text-cream">ou via Homebrew</a>',
       'price.essential.name': 'Essentiel', 'price.essential.tag': 'gratuit',
       'price.lifetime': 'à vie',
@@ -2248,13 +2248,13 @@
       'price.monthly.name': 'Pro mensuel', 'price.monthly.tag': 'flexible',
       'price.monthly.period': '/ mois',
       'price.monthly.subtitle': "Toutes les fonctionnalités Pro. Annulable à tout moment.",
-      'price.monthly.cta': 'Bientôt disponible',
-      'price.monthly.note': 'paiement bientôt disponible',
+      'price.monthly.cta': 'Souscrire Pro mensuel',
+      'price.monthly.note': 'paiement sécurisé Stripe · annulable à tout moment',
       'price.lifetime_pro.name': 'Pro à vie', 'price.lifetime_pro.tag': 'meilleur prix',
       'price.lifetime_pro.period': 'une fois',
       'price.lifetime_pro.subtitle': "Rentabilisé en moins de 9 mois face à l'abonnement.",
-      'price.lifetime_pro.cta': 'Bientôt disponible',
-      'price.refund': 'Paiement bientôt disponible · version gratuite disponible',
+      'price.lifetime_pro.cta': 'Acheter Pro à vie',
+      'price.refund': 'Paiement unique sécurisé Stripe · clé par email',
       'cta.download': 'Télécharger NotchIA · gratuit',
       'cta.compare': 'Comparer les versions',
       'footer.app': 'App', 'footer.help': 'Aide', 'footer.legal': 'Légal',
@@ -2303,7 +2303,7 @@
       'faq.q3': 'NotchIA fonctionne-t-il sur un Mac sans encoche physique ?',
       'faq.a3': "Oui. Sur les Mac sans encoche physique (iMac, MacBook Air anciennes générations, Mac mini connecté à un écran externe), NotchIA crée une zone d'encoche virtuelle dans la barre de menu. La hauteur est configurable séparément pour les deux contextes.",
       'faq.q4': 'Combien coûte NotchIA et quelles sont les formules ?',
-      'faq.a4': 'Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Concentration complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">2,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro — <b class="text-cream">IA en direct</b> (Claude Code, Codex, Copilot), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et <b class="text-cream">presse-papiers historique</b> illimité. <span class="text-cream">Pro à vie</span> : <span class="text-cream">24,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire. Les paiements Pro seront bientôt disponibles ; la version Essentiel reste gratuite.',
+      'faq.a4': 'Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Concentration complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">2,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro — <b class="text-cream">IA en direct</b> (Claude Code, Codex, Copilot), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et <b class="text-cream">presse-papiers historique</b> illimité. <span class="text-cream">Pro à vie</span> : <span class="text-cream">24,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite.',
       'faq.q5': 'Quels assistants IA NotchIA supporte-t-il ?',
       'faq.a5': 'NotchIA détecte automatiquement les sessions actives de trois assistants : <span class="text-cream">Claude Code</span> (Anthropic), <span class="text-cream">ChatGPT Codex</span> (OpenAI) et <span class="text-cream">GitHub Copilot</span>. L\'application affiche en direct 10 états (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution), les statistiques de jetons et de cache, les quotas 5h et 7j, et notifie quand un assistant attend une permission.',
       'faq.q6': 'Quels lecteurs musicaux sont supportés ?',
@@ -2313,7 +2313,7 @@
       'faq.q9': 'Qu\'est-ce que Digest et comment fonctionne-t-il ?',
       'faq.a9': '<span class="text-cream">Digest</span> est un nouvel onglet <span class="text-cream">gratuit</span> ajouté en 2.8.0 (Wise Owl 🦉). Tu colles tes flux RSS/Atom préférés, tu écris en langage naturel ce qui t\'intéresse (ex&nbsp;: « IA vidéo, macOS 26, SwiftUI »), et Apple Intelligence — Foundation Models on-device — filtre, résume et priorise. Brief court à scanner en 30 secondes, directement dans l\'encoche. Cache 14 jours pour éviter la régénération en boucle. <span class="text-cream">100% local</span> : les flux sont fetched depuis ton Mac, les résumés générés sur ton CPU/GPU, <b class="text-cream">jamais d\'appel</b> vers un fournisseur IA tiers ou nos serveurs. Requiert <span class="text-cream">macOS 26+</span> pour Apple Intelligence ; sur macOS 15, dégradation gracieuse (viewer brut sans résumé IA).',
       'faq.q10': 'NotchIA fait-il partie des meilleures apps Mac à installer en 2026 ?',
-      'faq.a10': '<span class="text-cream">Oui</span>, NotchIA figure dans les sélections d\'apps Mac essentielles 2026 au titre de <span class="text-cream">notch utility</span> — la catégorie qui exploite l\'encoche du MacBook en cockpit interactif. Aux côtés de <span class="text-cream">Raycast</span> (launcher), <span class="text-cream">Rectangle</span> (gestion de fenêtres), <span class="text-cream">CleanShot X</span> (captures), <span class="text-cream">1Password</span> (mots de passe) et <span class="text-cream">Things 3</span> (tâches), NotchIA couvre un usage que les autres ne traitent pas : musique, calendrier, Concentration, IA en direct (Claude Code, Codex, Copilot) et HUD système, le tout intégré <span class="text-cream">dans l\'encoche elle-même</span>. Tier <b class="text-cream">Essentiel gratuit à vie</b>, Pro bientôt disponible à <b class="text-cream">2,99 €/mois</b> ou <b class="text-cream">24,99 € à vie</b>. Voir le <a href="/blog/meilleures-apps-mac-2026" class="text-orange hover:underline">guide complet des meilleures apps Mac 2026</a>.',
+      'faq.a10': '<span class="text-cream">Oui</span>, NotchIA figure dans les sélections d\'apps Mac essentielles 2026 au titre de <span class="text-cream">notch utility</span> — la catégorie qui exploite l\'encoche du MacBook en cockpit interactif. Aux côtés de <span class="text-cream">Raycast</span> (launcher), <span class="text-cream">Rectangle</span> (gestion de fenêtres), <span class="text-cream">CleanShot X</span> (captures), <span class="text-cream">1Password</span> (mots de passe) et <span class="text-cream">Things 3</span> (tâches), NotchIA couvre un usage que les autres ne traitent pas : musique, calendrier, Concentration, IA en direct (Claude Code, Codex, Copilot) et HUD système, le tout intégré <span class="text-cream">dans l\'encoche elle-même</span>. Tier <b class="text-cream">Essentiel gratuit à vie</b>, Pro à <b class="text-cream">2,99 €/mois</b> ou <b class="text-cream">24,99 € à vie</b>. Voir le <a href="/blog/meilleures-apps-mac-2026" class="text-orange hover:underline">guide complet des meilleures apps Mac 2026</a>.',
       'faq.q11': 'Quelle est la différence entre NotchIA, Raycast, Rectangle et CleanShot X ?',
       'faq.a11': 'Ces quatre apps sont <span class="text-cream">complémentaires</span>, pas concurrentes. <span class="text-cream">Raycast</span> remplace Spotlight : tu lances tout au clavier (<code class="font-mono text-xs">⌘ Espace</code>). <span class="text-cream">Rectangle</span> redimensionne les fenêtres au raccourci. <span class="text-cream">CleanShot X</span> fait des captures pro avec annotations. <span class="text-cream">NotchIA</span> exploite l\'<b class="text-cream">encoche du MacBook</b> en cockpit toujours visible : musique, agenda, focus, IA en direct, HUD système — des usages passifs récurrents que les trois autres ne couvrent pas. Le stack power-user 2026 typique combine les quatre. Voir le <a href="/blog/meilleures-apps-mac-2026" class="text-orange hover:underline">comparatif détaillé</a>.',
 
@@ -2571,7 +2571,7 @@
       'hero.svg': 'thinks',
       'hero.subtitle': 'NotchIA turns the dead zone of your MacBook into an <span class="text-cream">interactive control center</span>: media, calendar, live AI, Concentration, clipboard, HUD — everything that mattered, right at eye level.',
       'hero.cta.download': 'Download NotchIA', 'hero.cta.demo': 'See it in action',
-      'hero.tagline': 'Free forever · Pro coming soon (€2.99/mo or €24.99 lifetime)',
+      'hero.tagline': 'Free forever · Pro €2.99/mo or €24.99 lifetime',
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="install.html" class="underline hover:text-cream">or via Homebrew</a>',
       'price.essential.name': 'Essential', 'price.essential.tag': 'free',
       'price.lifetime': 'forever',
@@ -2580,13 +2580,13 @@
       'price.monthly.name': 'Pro monthly', 'price.monthly.tag': 'flexible',
       'price.monthly.period': '/ month',
       'price.monthly.subtitle': 'All Pro features. Cancel anytime.',
-      'price.monthly.cta': 'Coming soon',
-      'price.monthly.note': 'payment coming soon',
+      'price.monthly.cta': 'Subscribe to Pro monthly',
+      'price.monthly.note': 'secure Stripe payment · cancel anytime',
       'price.lifetime_pro.name': 'Pro lifetime', 'price.lifetime_pro.tag': 'best value',
       'price.lifetime_pro.period': 'one-time',
       'price.lifetime_pro.subtitle': 'Pays for itself in under 9 months vs the subscription.',
-      'price.lifetime_pro.cta': 'Coming soon',
-      'price.refund': 'Payment coming soon · free version available',
+      'price.lifetime_pro.cta': 'Buy Pro lifetime',
+      'price.refund': 'One-time secure Stripe payment · key by email',
       'cta.download': 'Download NotchIA · free',
       'cta.compare': 'Compare versions',
       'footer.app': 'App', 'footer.help': 'Help', 'footer.legal': 'Legal',
@@ -2635,7 +2635,7 @@
       'faq.q3': 'Does NotchIA work on a Mac without a physical notch?',
       'faq.a3': 'Yes. On Macs without a physical notch (iMac, older MacBook Air, Mac mini connected to an external display), NotchIA creates a virtual notch zone in the menu bar. Height is configurable separately for both contexts.',
       'faq.q4': 'How much does NotchIA cost and what are the plans?',
-      'faq.a4': 'Three plans. <span class="text-cream">Essential</span>: free forever, with media, calendar, system HUD, Sneak Peek, detections, <b class="text-cream">full Concentration</b> and customization. <span class="text-cream">Pro monthly</span>: <span class="text-cream">€2.99/month</span>, cancel anytime, 1 Mac, adds the three Pro modules — <b class="text-cream">live AI</b> (Claude Code, Codex, Copilot), <b class="text-cream">file management</b> (Shelf, 16-format converter, Quick Share, QuickLook) and unlimited <b class="text-cream">clipboard history</b>. <span class="text-cream">Pro lifetime</span>: <span class="text-cream">€24.99</span> one-time, 2 Macs, all major updates, priority support. Pro payments are coming soon; Essential remains free.',
+      'faq.a4': 'Three plans. <span class="text-cream">Essential</span>: free forever, with media, calendar, system HUD, Sneak Peek, detections, <b class="text-cream">full Concentration</b> and customization. <span class="text-cream">Pro monthly</span>: <span class="text-cream">€2.99/month</span>, cancel anytime, 1 Mac, adds the three Pro modules — <b class="text-cream">live AI</b> (Claude Code, Codex, Copilot), <b class="text-cream">file management</b> (Shelf, 16-format converter, Quick Share, QuickLook) and unlimited <b class="text-cream">clipboard history</b>. <span class="text-cream">Pro lifetime</span>: <span class="text-cream">€24.99</span> one-time, 2 Macs, all major updates, priority support. Pro payments via secure Stripe checkout; Essential remains free.',
       'faq.q5': 'Which AI assistants does NotchIA support?',
       'faq.a5': 'NotchIA automatically detects active sessions for three assistants: <span class="text-cream">Claude Code</span> (Anthropic), <span class="text-cream">ChatGPT Codex</span> (OpenAI), and <span class="text-cream">GitHub Copilot</span>. The app shows 10 live states (Compiling, Terminal, Searching, Reading, Editing, Web, Writing, Sub-agent, Planning, Running), token and cache statistics, 5h and 7d quotas, and notifies you when an assistant is waiting for permission.',
       'faq.q6': 'Which music players are supported?',
@@ -2645,7 +2645,7 @@
       'faq.q9': 'What is Digest and how does it work?',
       'faq.a9': '<span class="text-cream">Digest</span> is a new <span class="text-cream">free</span> tab added in 2.8.0 (Wise Owl 🦉). You paste your favorite RSS/Atom feeds, you write what matters in plain language (e.g.&nbsp;"AI video, macOS 26, SwiftUI"), and Apple Intelligence — on-device Foundation Models — filters, summarizes, and prioritizes. A short brief to scan in 30 seconds, right in the notch. 14-day cache to avoid regenerating on every reopen. <span class="text-cream">100% local</span>: feeds are fetched from your Mac, summaries are generated on your CPU/GPU, <b class="text-cream">no call</b> to a third-party AI provider or our servers. Requires <span class="text-cream">macOS 26+</span> for Apple Intelligence; on macOS 15, graceful fallback (raw viewer without AI summary).',
       'faq.q10': 'Is NotchIA one of the best Mac apps to install in 2026?',
-      'faq.a10': '<span class="text-cream">Yes</span>, NotchIA is included in 2026 selections of essential Mac apps as a <span class="text-cream">notch utility</span> — the category that uses the MacBook notch as an interactive cockpit. Alongside <span class="text-cream">Raycast</span> (launcher), <span class="text-cream">Rectangle</span> (window management), <span class="text-cream">CleanShot X</span> (screenshots), <span class="text-cream">1Password</span> (passwords) and <span class="text-cream">Things 3</span> (tasks), NotchIA covers what the others don\'t: music, calendar, Focus, live AI (Claude Code, Codex, Copilot) and system HUD, all integrated <span class="text-cream">in the notch itself</span>. <b class="text-cream">Essential tier free for life</b>, Pro coming soon at <b class="text-cream">€2.99/month</b> or <b class="text-cream">€24.99 lifetime</b>. See the <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">complete guide to the best Mac apps 2026</a>.',
+      'faq.a10': '<span class="text-cream">Yes</span>, NotchIA is included in 2026 selections of essential Mac apps as a <span class="text-cream">notch utility</span> — the category that uses the MacBook notch as an interactive cockpit. Alongside <span class="text-cream">Raycast</span> (launcher), <span class="text-cream">Rectangle</span> (window management), <span class="text-cream">CleanShot X</span> (screenshots), <span class="text-cream">1Password</span> (passwords) and <span class="text-cream">Things 3</span> (tasks), NotchIA covers what the others don\'t: music, calendar, Focus, live AI (Claude Code, Codex, Copilot) and system HUD, all integrated <span class="text-cream">in the notch itself</span>. <b class="text-cream">Essential tier free for life</b>, Pro at <b class="text-cream">€2.99/month</b> or <b class="text-cream">€24.99 lifetime</b>. See the <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">complete guide to the best Mac apps 2026</a>.',
       'faq.q11': 'What\'s the difference between NotchIA, Raycast, Rectangle and CleanShot X?',
       'faq.a11': 'These four apps are <span class="text-cream">complementary</span>, not competing. <span class="text-cream">Raycast</span> replaces Spotlight: launch everything from the keyboard (<code class="font-mono text-xs">⌘ Space</code>). <span class="text-cream">Rectangle</span> resizes windows with shortcuts. <span class="text-cream">CleanShot X</span> takes pro screenshots with annotations. <span class="text-cream">NotchIA</span> uses the <b class="text-cream">MacBook notch</b> as a permanently visible cockpit: music, calendar, focus, live AI, system HUD — recurring passive uses the other three don\'t cover. The 2026 typical power-user Mac stack combines all four. See the <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">detailed comparison</a>.',
 
@@ -2903,7 +2903,7 @@
       'hero.svg': 'piensa',
       'hero.subtitle': 'NotchIA convierte la zona muerta de tu MacBook en un <span class="text-cream">centro de control interactivo</span>: medios, calendario, IA en vivo, Concentration, portapapeles, HUD — todo lo que importaba, al alcance de la vista.',
       'hero.cta.download': 'Descargar NotchIA', 'hero.cta.demo': 'Ver en acción',
-      'hero.tagline': 'Gratis para siempre · Pro próximamente (2,99 €/mes o 24,99 € de por vida)',
+      'hero.tagline': 'Gratis para siempre · Pro 2,99 €/mes o 24,99 € de por vida',
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="install.html" class="underline hover:text-cream">o vía Homebrew</a>',
       'price.essential.name': 'Esencial', 'price.essential.tag': 'gratis',
       'price.lifetime': 'para siempre',
@@ -2912,13 +2912,13 @@
       'price.monthly.name': 'Pro mensual', 'price.monthly.tag': 'flexible',
       'price.monthly.period': '/ mes',
       'price.monthly.subtitle': 'Todas las funciones Pro. Cancela cuando quieras.',
-      'price.monthly.cta': 'Próximamente',
-      'price.monthly.note': 'pago próximamente',
+      'price.monthly.cta': 'Suscribir Pro mensual',
+      'price.monthly.note': 'pago seguro Stripe · cancela cuando quieras',
       'price.lifetime_pro.name': 'Pro de por vida', 'price.lifetime_pro.tag': 'mejor precio',
       'price.lifetime_pro.period': 'una vez',
       'price.lifetime_pro.subtitle': 'Se amortiza en menos de 9 meses frente a la suscripción.',
-      'price.lifetime_pro.cta': 'Próximamente',
-      'price.refund': 'Pago próximamente · versión gratuita disponible',
+      'price.lifetime_pro.cta': 'Comprar Pro de por vida',
+      'price.refund': 'Pago único seguro Stripe · clave por email',
       'cta.download': 'Descargar NotchIA · gratis',
       'cta.compare': 'Comparar versiones',
       'footer.app': 'App', 'footer.help': 'Ayuda', 'footer.legal': 'Legal',
@@ -2967,7 +2967,7 @@
       'faq.q3': '¿Funciona NotchIA en un Mac sin muesca física?',
       'faq.a3': 'Sí. En Mac sin muesca física (iMac, MacBook Air antiguos, Mac mini con pantalla externa), NotchIA crea una zona de muesca virtual en la barra de menú. La altura es configurable por separado para ambos contextos.',
       'faq.q4': '¿Cuánto cuesta NotchIA y cuáles son los planes?',
-      'faq.a4': 'Tres planes. <span class="text-cream">Esencial</span>: gratis para siempre, con medios, calendario, HUD del sistema, Sneak Peek, detecciones, <b class="text-cream">Concentration completo</b> y personalización. <span class="text-cream">Pro mensual</span>: <span class="text-cream">2,99 €/mes</span>, cancela cuando quieras, 1 Mac, añade los tres módulos Pro — <b class="text-cream">IA en directo</b> (Claude Code, Codex, Copilot), <b class="text-cream">gestión de archivos</b> (Shelf, conversor 16 formatos, Quick Share, QuickLook) y <b class="text-cream">historial del portapapeles</b> ilimitado. <span class="text-cream">Pro de por vida</span>: <span class="text-cream">24,99 €</span> pago único, 2 Mac, todas las actualizaciones mayores, soporte prioritario. Los pagos Pro estarán disponibles próximamente; Esencial sigue siendo gratis.',
+      'faq.a4': 'Tres planes. <span class="text-cream">Esencial</span>: gratis para siempre, con medios, calendario, HUD del sistema, Sneak Peek, detecciones, <b class="text-cream">Concentration completo</b> y personalización. <span class="text-cream">Pro mensual</span>: <span class="text-cream">2,99 €/mes</span>, cancela cuando quieras, 1 Mac, añade los tres módulos Pro — <b class="text-cream">IA en directo</b> (Claude Code, Codex, Copilot), <b class="text-cream">gestión de archivos</b> (Shelf, conversor 16 formatos, Quick Share, QuickLook) y <b class="text-cream">historial del portapapeles</b> ilimitado. <span class="text-cream">Pro de por vida</span>: <span class="text-cream">24,99 €</span> pago único, 2 Mac, todas las actualizaciones mayores, soporte prioritario. Pagos Pro mediante Stripe seguro; Esencial sigue siendo gratis.',
       'faq.q5': '¿Qué asistentes de IA admite NotchIA?',
       'faq.a5': 'NotchIA detecta automáticamente las sesiones activas de tres asistentes: <span class="text-cream">Claude Code</span> (Anthropic), <span class="text-cream">ChatGPT Codex</span> (OpenAI) y <span class="text-cream">GitHub Copilot</span>. La app muestra 10 estados en directo (Compilación, Terminal, Búsqueda, Lectura, Modificación, Web, Escritura, Subagente, Planificación, Ejecución), las estadísticas de tokens y caché, las cuotas de 5h y 7d, y notifica cuando un asistente espera permiso.',
       'faq.q6': '¿Qué reproductores de música son compatibles?',
@@ -2977,7 +2977,7 @@
       'faq.q9': '¿Qué es Digest y cómo funciona?',
       'faq.a9': '<span class="text-cream">Digest</span> es una nueva pestaña <span class="text-cream">gratuita</span> añadida en 2.8.0 (Wise Owl 🦉). Pegas tus feeds RSS/Atom preferidos, escribes en lenguaje natural lo que te interesa (ej.&nbsp;«IA vídeo, macOS 26, SwiftUI»), y Apple Intelligence — Foundation Models on-device — filtra, resume y prioriza. Briefing corto para escanear en 30 segundos, directamente en la muesca. Caché de 14 días para evitar regeneración en bucle. <span class="text-cream">100% local</span>: los feeds se fetched desde tu Mac, los resúmenes se generan en tu CPU/GPU, <b class="text-cream">cero llamadas</b> a un proveedor IA tercero o a nuestros servidores. Requiere <span class="text-cream">macOS 26+</span> para Apple Intelligence; en macOS 15, degradación elegante (viewer sin resumen IA).',
       'faq.q10': '¿NotchIA forma parte de las mejores apps Mac para instalar en 2026?',
-      'faq.a10': '<span class="text-cream">Sí</span>, NotchIA figura en las selecciones de apps Mac esenciales 2026 como <span class="text-cream">notch utility</span> — la categoría que aprovecha la muesca del MacBook como cockpit interactivo. Junto a <span class="text-cream">Raycast</span> (launcher), <span class="text-cream">Rectangle</span> (gestión de ventanas), <span class="text-cream">CleanShot X</span> (capturas), <span class="text-cream">1Password</span> (contraseñas) y <span class="text-cream">Things 3</span> (tareas), NotchIA cubre un uso que los demás no tratan: música, calendario, Concentration, IA en directo (Claude Code, Codex, Copilot) y HUD del sistema, todo integrado <span class="text-cream">en la propia muesca</span>. Tier <b class="text-cream">Esencial gratis de por vida</b>, Pro próximamente a <b class="text-cream">2,99 €/mes</b> o <b class="text-cream">24,99 € de por vida</b>. Ver la <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">guía completa de las mejores apps Mac 2026</a>.',
+      'faq.a10': '<span class="text-cream">Sí</span>, NotchIA figura en las selecciones de apps Mac esenciales 2026 como <span class="text-cream">notch utility</span> — la categoría que aprovecha la muesca del MacBook como cockpit interactivo. Junto a <span class="text-cream">Raycast</span> (launcher), <span class="text-cream">Rectangle</span> (gestión de ventanas), <span class="text-cream">CleanShot X</span> (capturas), <span class="text-cream">1Password</span> (contraseñas) y <span class="text-cream">Things 3</span> (tareas), NotchIA cubre un uso que los demás no tratan: música, calendario, Concentration, IA en directo (Claude Code, Codex, Copilot) y HUD del sistema, todo integrado <span class="text-cream">en la propia muesca</span>. Tier <b class="text-cream">Esencial gratis de por vida</b>, Pro a <b class="text-cream">2,99 €/mes</b> o <b class="text-cream">24,99 € de por vida</b>. Ver la <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">guía completa de las mejores apps Mac 2026</a>.',
       'faq.q11': '¿Cuál es la diferencia entre NotchIA, Raycast, Rectangle y CleanShot X?',
       'faq.a11': 'Estas cuatro apps son <span class="text-cream">complementarias</span>, no competidoras. <span class="text-cream">Raycast</span> sustituye a Spotlight: lanzas todo desde el teclado (<code class="font-mono text-xs">⌘ Espacio</code>). <span class="text-cream">Rectangle</span> redimensiona ventanas con atajos. <span class="text-cream">CleanShot X</span> hace capturas pro con anotaciones. <span class="text-cream">NotchIA</span> aprovecha la <b class="text-cream">muesca del MacBook</b> como cockpit siempre visible: música, agenda, focus, IA en directo, HUD del sistema — usos pasivos recurrentes que las otras tres no cubren. El stack power-user 2026 típico combina las cuatro. Ver el <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">comparativo detallado</a>.',
 
@@ -3235,7 +3235,7 @@
       'hero.svg': 'denkt',
       'hero.subtitle': 'NotchIA macht die tote Zone Ihres MacBooks zu einem <span class="text-cream">interaktiven Kontrollzentrum</span>: Medien, Kalender, Live-KI, Concentration, Zwischenablage, HUD — alles Wichtige auf Augenhöhe.',
       'hero.cta.download': 'NotchIA herunterladen', 'hero.cta.demo': 'In Aktion sehen',
-      'hero.tagline': 'Kostenlos für immer · Pro demnächst verfügbar (2,99 €/Monat oder 24,99 € einmalig)',
+      'hero.tagline': 'Kostenlos für immer · Pro 2,99 €/Monat oder 24,99 € einmalig',
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="install.html" class="underline hover:text-cream">oder per Homebrew</a>',
       'price.essential.name': 'Essential', 'price.essential.tag': 'kostenlos',
       'price.lifetime': 'für immer',
@@ -3244,13 +3244,13 @@
       'price.monthly.name': 'Pro monatlich', 'price.monthly.tag': 'flexibel',
       'price.monthly.period': '/ Monat',
       'price.monthly.subtitle': 'Alle Pro-Funktionen. Jederzeit kündbar.',
-      'price.monthly.cta': 'Demnächst verfügbar',
-      'price.monthly.note': 'Zahlung demnächst verfügbar',
+      'price.monthly.cta': 'Pro monatlich abonnieren',
+      'price.monthly.note': 'sichere Stripe-Zahlung · jederzeit kündbar',
       'price.lifetime_pro.name': 'Pro lebenslang', 'price.lifetime_pro.tag': 'bester Preis',
       'price.lifetime_pro.period': 'einmalig',
       'price.lifetime_pro.subtitle': 'Amortisiert sich in unter 9 Monaten gegenüber dem Abo.',
-      'price.lifetime_pro.cta': 'Demnächst verfügbar',
-      'price.refund': 'Zahlung demnächst verfügbar · kostenlose Version verfügbar',
+      'price.lifetime_pro.cta': 'Pro lebenslang kaufen',
+      'price.refund': 'Einmalige sichere Stripe-Zahlung · Schlüssel per E-Mail',
       'cta.download': 'NotchIA laden · kostenlos',
       'cta.compare': 'Versionen vergleichen',
       'footer.app': 'App', 'footer.help': 'Hilfe', 'footer.legal': 'Rechtliches',
@@ -3299,7 +3299,7 @@
       'faq.q3': 'Funktioniert NotchIA auf einem Mac ohne physische Aussparung?',
       'faq.a3': 'Ja. Auf Macs ohne physische Aussparung (iMac, älteren MacBook Air, Mac mini mit externem Display) erstellt NotchIA eine virtuelle Aussparungszone in der Menüleiste. Die Höhe ist für beide Kontexte separat konfigurierbar.',
       'faq.q4': 'Wie viel kostet NotchIA und welche Pläne gibt es?',
-      'faq.a4': 'Drei Pläne. <span class="text-cream">Essential</span>: kostenlos für immer, mit Medien, Kalender, System-HUD, Sneak Peek, Erkennungen, <b class="text-cream">vollständigem Concentration</b> und Anpassung. <span class="text-cream">Pro monatlich</span>: <span class="text-cream">2,99 €/Monat</span>, jederzeit kündbar, 1 Mac, fügt die drei Pro-Module hinzu — <b class="text-cream">Live-KI</b> (Claude Code, Codex, Copilot), <b class="text-cream">Dateiverwaltung</b> (Shelf, 16-Format-Konverter, Quick Share, QuickLook) und unbegrenzten <b class="text-cream">Zwischenablage-Verlauf</b>. <span class="text-cream">Pro lebenslang</span>: <span class="text-cream">24,99 €</span> Einmalkauf, 2 Macs, alle großen Updates, Prioritätssupport. Pro-Zahlungen sind demnächst verfügbar; Essential bleibt kostenlos.',
+      'faq.a4': 'Drei Pläne. <span class="text-cream">Essential</span>: kostenlos für immer, mit Medien, Kalender, System-HUD, Sneak Peek, Erkennungen, <b class="text-cream">vollständigem Concentration</b> und Anpassung. <span class="text-cream">Pro monatlich</span>: <span class="text-cream">2,99 €/Monat</span>, jederzeit kündbar, 1 Mac, fügt die drei Pro-Module hinzu — <b class="text-cream">Live-KI</b> (Claude Code, Codex, Copilot), <b class="text-cream">Dateiverwaltung</b> (Shelf, 16-Format-Konverter, Quick Share, QuickLook) und unbegrenzten <b class="text-cream">Zwischenablage-Verlauf</b>. <span class="text-cream">Pro lebenslang</span>: <span class="text-cream">24,99 €</span> Einmalkauf, 2 Macs, alle großen Updates, Prioritätssupport. Pro-Zahlungen über sicheres Stripe-Checkout; Essential bleibt kostenlos.',
       'faq.q5': 'Welche KI-Assistenten unterstützt NotchIA?',
       'faq.a5': 'NotchIA erkennt automatisch aktive Sitzungen von drei Assistenten: <span class="text-cream">Claude Code</span> (Anthropic), <span class="text-cream">ChatGPT Codex</span> (OpenAI) und <span class="text-cream">GitHub Copilot</span>. Die App zeigt 10 Live-Zustände (Kompilieren, Terminal, Suchen, Lesen, Bearbeiten, Web, Schreiben, Sub-Agent, Planung, Ausführung), die Token- und Cache-Statistiken, die 5h- und 7d-Quoten und benachrichtigt, wenn ein Assistent auf eine Berechtigung wartet.',
       'faq.q6': 'Welche Musikplayer werden unterstützt?',
@@ -3309,7 +3309,7 @@
       'faq.q9': 'Was ist Digest und wie funktioniert es?',
       'faq.a9': '<span class="text-cream">Digest</span> ist ein neuer <span class="text-cream">kostenloser</span> Tab, hinzugefügt in 2.8.0 (Wise Owl 🦉). Sie fügen Ihre bevorzugten RSS/Atom-Feeds ein, schreiben in natürlicher Sprache, was zählt (z.&nbsp;B. «KI-Video, macOS 26, SwiftUI»), und Apple Intelligence — On-Device-Foundation-Models — filtert, fasst zusammen und priorisiert. Kurzes Briefing zum Scannen in 30 Sekunden, direkt in der Aussparung. 14-Tage-Cache, um eine ständige Neugenerierung zu vermeiden. <span class="text-cream">100% lokal</span>: Feeds werden von Ihrem Mac gefetcht, Zusammenfassungen auf Ihrem CPU/GPU erstellt, <b class="text-cream">kein Aufruf</b> an einen KI-Drittanbieter oder unsere Server. Erfordert <span class="text-cream">macOS 26+</span> für Apple Intelligence; auf macOS 15 elegante Degradation (Roh-Viewer ohne KI-Zusammenfassung).',
       'faq.q10': 'Gehört NotchIA zu den besten Mac-Apps, die man 2026 installieren sollte?',
-      'faq.a10': '<span class="text-cream">Ja</span>, NotchIA ist in den 2026er Auswahlen wesentlicher Mac-Apps als <span class="text-cream">Notch Utility</span> aufgeführt — die Kategorie, die die Aussparung des MacBook als interaktives Cockpit nutzt. Neben <span class="text-cream">Raycast</span> (Launcher), <span class="text-cream">Rectangle</span> (Fenstermanagement), <span class="text-cream">CleanShot X</span> (Screenshots), <span class="text-cream">1Password</span> (Passwörter) und <span class="text-cream">Things 3</span> (Aufgaben) deckt NotchIA einen Bereich ab, den die anderen nicht abdecken: Musik, Kalender, Concentration, Live-KI (Claude Code, Codex, Copilot) und System-HUD, alles integriert <span class="text-cream">in der Aussparung selbst</span>. Tier <b class="text-cream">Essential lebenslang kostenlos</b>, Pro demnächst für <b class="text-cream">2,99 €/Monat</b> oder <b class="text-cream">24,99 € lebenslang</b>. Siehe den <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">vollständigen Leitfaden zu den besten Mac-Apps 2026</a>.',
+      'faq.a10': '<span class="text-cream">Ja</span>, NotchIA ist in den 2026er Auswahlen wesentlicher Mac-Apps als <span class="text-cream">Notch Utility</span> aufgeführt — die Kategorie, die die Aussparung des MacBook als interaktives Cockpit nutzt. Neben <span class="text-cream">Raycast</span> (Launcher), <span class="text-cream">Rectangle</span> (Fenstermanagement), <span class="text-cream">CleanShot X</span> (Screenshots), <span class="text-cream">1Password</span> (Passwörter) und <span class="text-cream">Things 3</span> (Aufgaben) deckt NotchIA einen Bereich ab, den die anderen nicht abdecken: Musik, Kalender, Concentration, Live-KI (Claude Code, Codex, Copilot) und System-HUD, alles integriert <span class="text-cream">in der Aussparung selbst</span>. Tier <b class="text-cream">Essential lebenslang kostenlos</b>, Pro für <b class="text-cream">2,99 €/Monat</b> oder <b class="text-cream">24,99 € lebenslang</b>. Siehe den <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">vollständigen Leitfaden zu den besten Mac-Apps 2026</a>.',
       'faq.q11': 'Was ist der Unterschied zwischen NotchIA, Raycast, Rectangle und CleanShot X?',
       'faq.a11': 'Diese vier Apps sind <span class="text-cream">komplementär</span>, keine Konkurrenten. <span class="text-cream">Raycast</span> ersetzt Spotlight: Sie starten alles per Tastatur (<code class="font-mono text-xs">⌘ Leertaste</code>). <span class="text-cream">Rectangle</span> verändert die Fenstergröße per Shortcut. <span class="text-cream">CleanShot X</span> macht Profi-Screenshots mit Anmerkungen. <span class="text-cream">NotchIA</span> nutzt die <b class="text-cream">Aussparung des MacBook</b> als dauerhaft sichtbares Cockpit: Musik, Kalender, Fokus, Live-KI, System-HUD — wiederkehrende passive Nutzungen, die die anderen drei nicht abdecken. Der typische Power-User-Mac-Stack 2026 kombiniert alle vier. Siehe den <a href="/blog/best-mac-apps-2026" class="text-orange hover:underline">detaillierten Vergleich</a>.',
 
@@ -3612,6 +3612,40 @@
   applyLang(detectLang());
 
   document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
+
+  /* ──────────────── Stripe Checkout (boutons pricing) ──────────────── */
+  const CHECKOUT_MSG = {
+    fr: { loading: 'Redirection…', error: 'Paiement indisponible pour le moment. Réessaie ou passe par /contact.' },
+    en: { loading: 'Redirecting…',  error: 'Payment unavailable right now. Try again or use /contact.' },
+    es: { loading: 'Redirigiendo…', error: 'Pago no disponible ahora. Inténtalo o usa /contact.' },
+    de: { loading: 'Weiterleitung…',error: 'Zahlung gerade nicht verfügbar. Versuch erneut oder nutze /contact.' },
+  };
+  document.querySelectorAll('.js-checkout').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (btn.disabled) return;
+      const lang = document.documentElement.lang || 'fr';
+      const msg = CHECKOUT_MSG[lang] || CHECKOUT_MSG.en;
+      const labelEl = btn.querySelector('span') || btn;
+      const original = labelEl.textContent;
+      btn.disabled = true;
+      labelEl.textContent = msg.loading;
+      try {
+        const res = await fetch('/api/stripe/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ plan: btn.dataset.plan, lang }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.url) { window.location.href = data.url; return; }
+        alert(data.error || msg.error);
+      } catch (e) {
+        alert(msg.error);
+      } finally {
+        btn.disabled = false;
+        labelEl.textContent = original;
+      }
+    });
+  });
 
   /* ──────────────── states marquee ──────────────── */
   // Les sub sont du contenu mock technique (commandes/fichiers), ils restent identiques.
