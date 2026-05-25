@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog NotchIA — Guides Mac, IA, productivité 2026</title>
+<meta name="description" content="Tous les articles NotchIA : meilleures apps Mac 2026, apps encoche MacBook, outils Claude Code et Codex, IA on-device Apple Intelligence. Sélections honnêtes et comparatifs." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="Axel Courty" />
+<meta name="keywords" content="blog NotchIA, apps Mac 2026, encoche MacBook, Claude Code, Codex, Apple Intelligence, productivité macOS" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Blog NotchIA — Guides Mac, IA, productivité 2026" />
+<meta property="og:description" content="Tous les articles : meilleures apps Mac, encoche MacBook, Claude Code, Apple Intelligence." />
+<meta property="og:url" content="https://notchia.app/blog/" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="fr_FR" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Blog NotchIA — Guides Mac 2026" />
+<meta name="twitter:description" content="Sélections honnêtes pour macOS, productivité, IA on-device." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&display=optional" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+    fontFamily: {
+      display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+      sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+    }
+  }}}
+</script>
+<style>
+  :root {
+    --ink: #0B0D12; --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  .card-article {
+    background: linear-gradient(180deg, #14171F 0%, #0F1218 100%);
+    border: 1px solid rgba(237,232,220,0.08);
+    border-radius: 14px;
+    padding: 1.5rem 1.7rem;
+    transition: border-color .2s ease, transform .2s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card-article:hover { border-color: rgba(255,77,136,0.4); transform: translateY(-2px); }
+  .card-article h2 { font-family: 'Fraunces', serif; font-size: 1.3rem; line-height: 1.25; margin-bottom: .5rem; }
+  .card-article p { color: rgba(237,232,220,0.65); font-size: .95rem; line-height: 1.55; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 999px;
+    color: rgba(237,232,220,0.65);
+    background: rgba(237,232,220,0.06);
+    border: 1px solid rgba(237,232,220,0.12);
+  }
+  .pill.fr { color: #FFB58A; background: rgba(255,122,45,0.08); border-color: rgba(255,122,45,0.30); }
+  .pill.en { color: #9ECBFF; background: rgba(77,168,255,0.10); border-color: rgba(77,168,255,0.30); }
+  .pill.note { color: #C8B6F7; background: rgba(168,85,247,0.10); border-color: rgba(168,85,247,0.30); }
+  .meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(237,232,220,0.45); letter-spacing: 0.04em; margin-top: .8rem; display: flex; gap: .8rem; flex-wrap: wrap; }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Accueil","item":"https://notchia.app/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://notchia.app/blog/"}
+  ]},
+  {"@type":"Blog","name":"Blog NotchIA","description":"Guides Mac, encoche MacBook, IA on-device, Claude Code et Codex.","url":"https://notchia.app/blog/","inLanguage":["fr","en"],"publisher":{"@type":"Organization","name":"NotchIA","url":"https://notchia.app/"}}
+]}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-4xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <picture>
+      <source srcset="../logo.avif" type="image/avif" />
+      <img src="../logo.png" alt="NotchIA" class="h-8 w-8 rounded-md" width="32" height="32" />
+    </picture>
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/install" class="hover:text-cream">Installer</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+    <a href="/contact" class="hover:text-cream">Contact</a>
+  </nav>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="text-center mb-12">
+    <h1 class="font-display text-5xl md:text-6xl leading-tight mb-3">
+      <span class="grad-text">Blog</span>
+    </h1>
+    <p class="text-cream/70 text-lg max-w-2xl mx-auto">
+      Sélections honnêtes pour macOS, encoche du MacBook, IA on-device et outils de dev. Tout est sourcé, daté, et mis à jour au fil des versions.
+    </p>
+  </section>
+
+  <!-- ─── Notch utility (catégorie maison) ─── -->
+  <section class="mb-10">
+    <h2 class="font-display text-2xl mb-4 text-cream">Encoche MacBook & notch utility</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
+
+      <a href="/blog/meilleure-app-encoche-macbook-2026" class="card-article">
+        <span class="pill fr">Français</span>
+        <h2>La meilleure app pour l'encoche du MacBook en 2026</h2>
+        <p>Comparatif honnête : NotchIA vs alternatives, ce que la « notch utility » apporte vraiment, et pourquoi l'encoche est le seul espace écran qui ne se ferme jamais.</p>
+        <div class="meta"><span>2026-05-16</span><span>·</span><span>guide</span></div>
+      </a>
+
+      <a href="/blog/best-mac-notch-app-2026" class="card-article">
+        <span class="pill en">English</span>
+        <h2>The best MacBook notch app for 2026</h2>
+        <p>Honest comparison: NotchIA vs alternatives, what the "notch utility" category really brings, and why the notch is the only screen area that never closes.</p>
+        <div class="meta"><span>2026-05-16</span><span>·</span><span>guide</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ─── IA, Claude Code, Codex ─── -->
+  <section class="mb-10">
+    <h2 class="font-display text-2xl mb-4 text-cream">IA, Claude Code et Codex sur Mac</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
+
+      <a href="/blog/meilleures-apps-mac-claude-code-2026" class="card-article">
+        <span class="pill fr">Français</span>
+        <h2>Les meilleures apps Mac pour Claude Code en 2026</h2>
+        <p>Outils, intégrations et workflows autour de Claude Code : NotchIA en direct, Raycast, terminal, log de session. Stack power-user en 2026.</p>
+        <div class="meta"><span>2026-05-16</span><span>·</span><span>guide</span></div>
+      </a>
+
+      <a href="/blog/best-mac-apps-claude-code-2026" class="card-article">
+        <span class="pill en">English</span>
+        <h2>The best Mac apps for Claude Code in 2026</h2>
+        <p>Tools, integrations and workflows around Claude Code: live NotchIA tracking, Raycast, terminal, session logs. The 2026 power-user stack.</p>
+        <div class="meta"><span>2026-05-16</span><span>·</span><span>guide</span></div>
+      </a>
+
+      <a href="/blog/meilleures-apps-ia-mac-2026" class="card-article">
+        <span class="pill fr">Français</span>
+        <h2>Les meilleures apps IA pour Mac en 2026</h2>
+        <p>Apple Intelligence, Claude Code, Codex, Copilot, Raycast AI : la sélection 2026 qui exploite vraiment l'IA on-device sans envoyer tes données dans le cloud.</p>
+        <div class="meta"><span>2026-05-16</span><span>·</span><span>guide</span></div>
+      </a>
+
+      <a href="/blog/best-mac-ai-apps-2026" class="card-article">
+        <span class="pill en">English</span>
+        <h2>The best AI Mac apps in 2026</h2>
+        <p>Apple Intelligence, Claude Code, Codex, Copilot, Raycast AI: the 2026 picks that actually leverage on-device AI without sending your data to the cloud.</p>
+        <div class="meta"><span>2026-05-16</span><span>·</span><span>guide</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ─── Sélections globales ─── -->
+  <section class="mb-10">
+    <h2 class="font-display text-2xl mb-4 text-cream">Sélections globales d'apps Mac</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
+
+      <a href="/blog/meilleures-apps-mac-2026" class="card-article">
+        <span class="pill fr">Français</span>
+        <h2>Les meilleures apps pour Mac en 2026 : le guide complet</h2>
+        <p>Raycast, Rectangle, CleanShot X, 1Password, Things 3, NotchIA : la sélection honnête qui change vraiment la vie sur macOS en 2026.</p>
+        <div class="meta"><span>2026-05-16</span><span>·</span><span>guide</span></div>
+      </a>
+
+      <a href="/blog/best-mac-apps-2026" class="card-article">
+        <span class="pill en">English</span>
+        <h2>The best Mac apps in 2026 — the complete guide</h2>
+        <p>Raycast, Rectangle, CleanShot X, 1Password, Things 3, NotchIA: the honest 2026 pick that actually changes your daily life on macOS.</p>
+        <div class="meta"><span>2026-05-16</span><span>·</span><span>guide</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ─── Release notes ─── -->
+  <section class="mb-10">
+    <h2 class="font-display text-2xl mb-4 text-cream">Notes de version</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
+
+      <a href="/blog/wise-owl-2-8-0" class="card-article">
+        <span class="pill note">Release · 2.8.0</span>
+        <h2>NotchIA 2.8.0 — Wise Owl 🦉</h2>
+        <p>Nouveau Digest IA on-device (Apple Intelligence + RSS), reset des assistants IA après inactivité, calibrations sneak peek, fixes Bluetooth et focus.</p>
+        <div class="meta"><span>2026-05-15</span><span>·</span><span>changelog</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ─── CTA bas de page ─── -->
+  <section class="mt-16 text-center">
+    <p class="text-cream/60 mb-5">Envie de découvrir NotchIA en vrai ?</p>
+    <a href="/install" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-base font-semibold text-ink" style="background:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%);">
+      Télécharger NotchIA
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <p class="text-cream/40 text-xs font-mono mt-4">~ 12 Mo · macOS Sequoia 15+ · gratuit à vie</p>
+  </section>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-4xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

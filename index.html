@@ -2100,6 +2100,54 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
+     §10.5 — ARTICLES / BLOG (lien interne pour indexation + SEO)
+═══════════════════════════════════════════════════════════════════════ -->
+<section id="articles" class="relative py-20 sm:py-28 border-t border-line">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14 reveal">
+      <div>
+        <div class="eyebrow mb-4 sm:mb-5" data-i18n="articles.eyebrow">§ articles · guides Mac 2026</div>
+        <h2 class="display text-cream" style="font-size: clamp(2rem, 5.5vw, 3.2rem);">
+          <span data-i18n="articles.title1">Articles</span>
+          <span class="display-italic grad-text" data-i18n="articles.title2">récents.</span>
+        </h2>
+      </div>
+      <a href="/blog/" class="btn btn-ghost text-sm" data-i18n="articles.all">Voir tous les articles →</a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 reveal">
+
+      <a href="/blog/meilleure-app-encoche-macbook-2026" class="lift rounded-2xl border border-line bg-ink2 p-5 hover:border-magenta/40 transition flex flex-col">
+        <div class="eyebrow mb-3" style="color:#FFB58A;" data-i18n="articles.tag.notch">Encoche</div>
+        <h3 class="font-medium text-cream text-base sm:text-lg leading-snug flex-1" data-i18n="articles.a1">La meilleure app pour l'encoche du MacBook en 2026</h3>
+        <div class="text-mist text-xs font-mono mt-4" data-i18n="articles.date">2026-05-16</div>
+      </a>
+
+      <a href="/blog/meilleures-apps-mac-2026" class="lift rounded-2xl border border-line bg-ink2 p-5 hover:border-magenta/40 transition flex flex-col">
+        <div class="eyebrow mb-3" style="color:#9DD9B7;" data-i18n="articles.tag.mac">Sélection Mac</div>
+        <h3 class="font-medium text-cream text-base sm:text-lg leading-snug flex-1" data-i18n="articles.a2">Les meilleures apps Mac en 2026 — le guide complet</h3>
+        <div class="text-mist text-xs font-mono mt-4" data-i18n="articles.date">2026-05-16</div>
+      </a>
+
+      <a href="/blog/meilleures-apps-mac-claude-code-2026" class="lift rounded-2xl border border-line bg-ink2 p-5 hover:border-magenta/40 transition flex flex-col">
+        <div class="eyebrow mb-3" style="color:#FF7A2D;" data-i18n="articles.tag.claude">Claude Code</div>
+        <h3 class="font-medium text-cream text-base sm:text-lg leading-snug flex-1" data-i18n="articles.a3">Les meilleures apps Mac pour Claude Code en 2026</h3>
+        <div class="text-mist text-xs font-mono mt-4" data-i18n="articles.date">2026-05-16</div>
+      </a>
+
+      <a href="/blog/meilleures-apps-ia-mac-2026" class="lift rounded-2xl border border-line bg-ink2 p-5 hover:border-magenta/40 transition flex flex-col">
+        <div class="eyebrow mb-3" style="color:#C8B6F7;" data-i18n="articles.tag.ai">IA on-device</div>
+        <h3 class="font-medium text-cream text-base sm:text-lg leading-snug flex-1" data-i18n="articles.a4">Les meilleures apps IA pour Mac en 2026</h3>
+        <div class="text-mist text-xs font-mono mt-4" data-i18n="articles.date">2026-05-16</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
      §11 — DOWNLOAD CTA
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="telecharger" class="relative py-24 sm:py-32 lg:py-40 border-t border-line overflow-hidden">
@@ -2424,6 +2472,21 @@
       'footer.legal.l4': 'Mentions légales',
       'footer.copyright': '© 2026 NotchIA · Axel Courty',
       'footer.madein': 'fait avec Swift 6 · à Paris · sans télémétrie',
+
+      // === Articles section (§10.5) ===
+      'articles.eyebrow': '§ articles · guides Mac 2026',
+      'articles.title1': 'Articles',
+      'articles.title2': 'récents.',
+      'articles.all': 'Voir tous les articles →',
+      'articles.date': '2026-05-16',
+      'articles.tag.notch': 'Encoche',
+      'articles.tag.mac': 'Sélection Mac',
+      'articles.tag.claude': 'Claude Code',
+      'articles.tag.ai': 'IA on-device',
+      'articles.a1': "La meilleure app pour l'encoche du MacBook en 2026",
+      'articles.a2': 'Les meilleures apps Mac en 2026 — le guide complet',
+      'articles.a3': 'Les meilleures apps Mac pour Claude Code en 2026',
+      'articles.a4': 'Les meilleures apps IA pour Mac en 2026',
 
       // === Notch stage (§00) ===
       'notch.tools_used': '24 outils utilisés',
@@ -2757,6 +2820,21 @@
       'footer.copyright': '© 2026 NotchIA · Axel Courty',
       'footer.madein': 'made with Swift 6 · in Paris · no telemetry',
 
+      // === Articles section (§10.5) ===
+      'articles.eyebrow': '§ articles · 2026 Mac guides',
+      'articles.title1': 'Latest',
+      'articles.title2': 'articles.',
+      'articles.all': 'See all articles →',
+      'articles.date': '2026-05-16',
+      'articles.tag.notch': 'Notch',
+      'articles.tag.mac': 'Mac picks',
+      'articles.tag.claude': 'Claude Code',
+      'articles.tag.ai': 'On-device AI',
+      'articles.a1': 'The best MacBook notch app in 2026',
+      'articles.a2': 'The best Mac apps in 2026 — complete guide',
+      'articles.a3': 'The best Mac apps for Claude Code in 2026',
+      'articles.a4': 'The best AI Mac apps in 2026',
+
       // === Notch stage (§00) ===
       'notch.tools_used': '24 tools used',
       'notch.tokens_cache': '4,200 tokens · 32% cache',
@@ -3089,6 +3167,21 @@
       'footer.copyright': '© 2026 NotchIA · Axel Courty',
       'footer.madein': 'hecho con Swift 6 · en París · sin telemetría',
 
+      // === Articles section (§10.5) ===
+      'articles.eyebrow': '§ artículos · guías Mac 2026',
+      'articles.title1': 'Artículos',
+      'articles.title2': 'recientes.',
+      'articles.all': 'Ver todos los artículos →',
+      'articles.date': '2026-05-16',
+      'articles.tag.notch': 'Muesca',
+      'articles.tag.mac': 'Selección Mac',
+      'articles.tag.claude': 'Claude Code',
+      'articles.tag.ai': 'IA on-device',
+      'articles.a1': 'La mejor app para la muesca del MacBook en 2026',
+      'articles.a2': 'Las mejores apps Mac en 2026 — guía completa',
+      'articles.a3': 'Las mejores apps Mac para Claude Code en 2026',
+      'articles.a4': 'Las mejores apps IA para Mac en 2026',
+
       // === Notch stage (§00) ===
       'notch.tools_used': '24 herramientas usadas',
       'notch.tokens_cache': '4.200 tokens · 32 % caché',
@@ -3420,6 +3513,21 @@
       'footer.legal.l4': 'Impressum',
       'footer.copyright': '© 2026 NotchIA · Axel Courty',
       'footer.madein': 'mit Swift 6 gemacht · in Paris · keine Telemetrie',
+
+      // === Articles section (§10.5) ===
+      'articles.eyebrow': '§ Artikel · Mac-Guides 2026',
+      'articles.title1': 'Neue',
+      'articles.title2': 'Artikel.',
+      'articles.all': 'Alle Artikel ansehen →',
+      'articles.date': '2026-05-16',
+      'articles.tag.notch': 'Aussparung',
+      'articles.tag.mac': 'Mac-Auswahl',
+      'articles.tag.claude': 'Claude Code',
+      'articles.tag.ai': 'On-Device-KI',
+      'articles.a1': 'Die beste App für die MacBook-Aussparung 2026',
+      'articles.a2': 'Die besten Mac-Apps 2026 — der komplette Guide',
+      'articles.a3': 'Die besten Mac-Apps für Claude Code 2026',
+      'articles.a4': 'Die besten KI-Mac-Apps 2026',
 
       // === Notch stage (§00) ===
       'notch.tools_used': '24 Tools verwendet',

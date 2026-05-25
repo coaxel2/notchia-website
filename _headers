@@ -30,13 +30,17 @@
 /Apple_logo_black.svg
   Cache-Control: public, max-age=31536000, immutable
 
-# llms.txt / llms-full.txt
+# llms.txt / llms-full.txt — accessibles aux LLM mais NON indexés par Google
+# Sans X-Robots-Tag noindex, ces fichiers apparaissaient en « Détectée non
+# indexée » dans GSC et polluaient le rapport d'indexation.
 /llms.txt
   Cache-Control: public, max-age=3600, must-revalidate
   Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: noindex, follow
 /llms-full.txt
   Cache-Control: public, max-age=3600, must-revalidate
   Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: noindex, follow
 
 # Robots & sitemap
 /robots.txt
