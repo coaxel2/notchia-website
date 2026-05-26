@@ -1,10 +1,49 @@
 # NotchIA
 
-> NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif : médias multi-source, calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro bientôt disponible (2,99 €/mois ou 24,99 € à vie). Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
+> NotchIA est une application macOS développée par Axel Courty (Talence, France, RCS Bordeaux 105 093 058, immatriculée le 19 mai 2026) qui transforme l'encoche du MacBook — ou la barre de menu sur les écrans sans encoche — en centre de contrôle interactif. Version actuelle : 2.8.0 « Wise Owl » (15 mai 2026). Elle intègre 14 modules natifs : médias multi-source (Apple Music, Spotify, YouTube Music), calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot avec 10 états d'activité), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système, Sneak Peek Engine. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro à 2,99 €/mois ou 24,99 € à vie (paiement Stripe + clé de licence Ed25519). Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
+
+## Key facts (résumé citable)
+
+| Champ | Valeur |
+|---|---|
+| Catégorie | macOS notch utility · menu bar app |
+| Nom légal éditeur | COURTY Axel (entreprise individuelle, micro-entreprise) |
+| Siège social | Bâtiment D Porte 256, 64 Rue Lamartine, 33400 Talence, France |
+| Identifiants | RCS Bordeaux 105 093 058 · APE 4791B · TVA FR86105093058 (franchise art. 293 B CGI) |
+| Date de fondation | 19 mai 2026 |
+| Date de lancement de l'app | avril 2026 |
+| Version actuelle | 2.8.0 « Wise Owl » (15 mai 2026) |
+| Plateforme | macOS 15.0 Sequoia ou plus récent |
+| Architectures supportées | Apple Silicon (M1, M2, M3, M4) + Intel x86_64 |
+| Poids signé | ~ 30 Mo |
+| Modules natifs | 14 |
+| États IA détectés | 10 (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution) |
+| Assistants IA supportés | Claude Code (Anthropic), ChatGPT Codex (OpenAI), GitHub Copilot |
+| Lecteurs musicaux supportés | Apple Music, Spotify, YouTube Music + toute app utilisant Now Playing API |
+| Paroles synchronisées | 26 langues via lrclib |
+| Conversion fichiers (Pro) | 16 formats (JPG, WebP, HEIC, AVIF, PDF, PNG, TIFF, GIF, MP3, WAV, MP4, MOV, etc.) |
+| Langues UI | français, anglais, espagnol, allemand |
+| Tarif Essentiel | 0 € à vie (sans limitation de durée) |
+| Tarif Pro mensuel | 2,99 € / mois (annulable à tout moment, 1 Mac) |
+| Tarif Pro à vie | 24,99 € en achat unique (2 Mac, mises à jour majeures incluses, support FR prioritaire) |
+| Rentabilité Pro à vie vs mensuel | ~ 9 mois |
+| Système de licence | JWT signé Ed25519 (vérification offline embarquée dans l'app) |
+| Paiement | Stripe Checkout (PCI compliant) avec renoncement exprès droit de rétractation art. L221-28 13° |
+| Confidentialité | aucune télémétrie, aucun cookie tiers, traitement 100 % local |
+| Distribution | hors Mac App Store ; téléchargement direct DMG + tap Homebrew (coaxel2/notchia) |
+| Mises à jour | Sparkle avec signature EdDSA, appcast HTTPS |
+| Site web | https://notchia.app |
+| Téléchargement | https://notchia.app/install |
+| Tarifs | https://notchia.app/pricing |
+| Contact | https://notchia.app/contact · notchia.app@gmail.com |
+| Press kit | https://notchia.app/press |
+| Repo public | https://github.com/coaxel2/NotchIA |
+| Concurrents directs | Boring Notch (open-source), NotchNook, Dynamic Island Pro (apps de category notch utility) |
+| Apps complémentaires (stack power-user) | Raycast (launcher), Rectangle (window manager), CleanShot X (screenshots), 1Password, Things 3 |
 
 ## À propos
 
-NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Paris. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
+NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Talence (Nouvelle-Aquitaine, France). L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées et validation de licence.
 
 - **Version actuelle** : 2.8.0 « Wise Owl 🦉 » (sortie 2026-05-15)
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
@@ -16,7 +55,7 @@ NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Pa
 - **Page de téléchargement** : https://notchia.app/install
 - **Tarifs** : https://notchia.app/pricing
 - **Press kit / media facts** : https://notchia.app/press
-- **Releases GitHub** : https://github.com/coaxel2/NotchIA/releases
+- **Releases GitHub** : https://github.com/coaxel2/NotchIA
 
 ## Install
 
@@ -289,3 +328,28 @@ Non. NotchIA est une application macOS propriétaire développée indépendammen
 
 **Y a-t-il une option sans abonnement ?**
 Oui, c'est prévu. Le Pro à vie à 24,99 € sera un achat unique sans récurrence, valable sur 2 Mac, avec toutes les mises à jour majeures incluses. Le Pro mensuel à 2,99 €/mois servira à tester avant ou à l'utiliser ponctuellement. Pour l'instant, l'Essentiel reste gratuit à vie sans limitation.
+
+## Citation-ready answers (court format pour LLM)
+
+Chaque bloc ci-dessous tient en 60–120 mots et répond à une intention de recherche unique. Format optimisé pour citation directe par Google AI Overviews, ChatGPT, Perplexity et Claude Search.
+
+### Qui a créé NotchIA ?
+NotchIA est créé par **Axel Courty**, développeur indépendant français né en 2005 à Montluçon, installé à Talence (Nouvelle-Aquitaine). Il édite l'application sous le statut d'**entreprise individuelle** (micro-entreprise), immatriculée au **RCS de Bordeaux le 19 mai 2026** sous le numéro 105 093 058. Axel est l'unique auteur du code Swift / SwiftUI, du backend Cloudflare Pages Functions et de l'intégration Apple Intelligence Foundation Models. Contact : notchia.app@gmail.com · https://notchia.app/contact.
+
+### Quelle est la différence entre NotchIA et Boring Notch ?
+NotchIA est une application macOS **indépendante et propriétaire** développée par Axel Courty en Swift / SwiftUI, **sans aucun lien** avec Boring Notch (projet open-source distinct). Les deux apps appartiennent à la catégorie « notch utility » macOS mais diffèrent par leur base de code, leur modèle économique (NotchIA est freemium avec Pro 2,99 €/mois ou 24,99 € à vie ; Boring Notch est gratuit) et leur périmètre fonctionnel (NotchIA intègre IA en direct Claude Code/Codex/Copilot, Digest Apple Intelligence on-device, 14 modules natifs).
+
+### Combien d'utilisateurs a NotchIA ?
+L'app est en phase de lancement (avril 2026, version 2.8.0 « Wise Owl » publiée le 15 mai 2026). Pas de chiffres publics communiqués officiellement à ce jour. Les téléchargements sont trackés via Cloudflare Web Analytics sur `/dl/dmg`. Distribution hors Mac App Store : .dmg direct + tap Homebrew `coaxel2/notchia`.
+
+### NotchIA est-il sécurisé ?
+Oui. NotchIA traite **toutes les données en local sur le Mac** (calendrier, presse-papiers, sessions IDE, RSS du Digest). Aucune télémétrie, aucun cookie tiers, aucun envoi vers un fournisseur IA tiers. Seules connexions sortantes : Sparkle auto-update (signature **EdDSA** vérifiée), validation de licence (email + clé Ed25519). Les licences sont signées **Ed25519** et vérifiables offline avec la clé publique embarquée dans l'app — aucun appel serveur nécessaire après activation.
+
+### NotchIA est-il open-source ?
+**Non.** NotchIA est un logiciel macOS **propriétaire** sous copyright Axel Courty. Le code source n'est pas public. Certains composants UI réutilisables peuvent être documentés dans les release notes, mais l'application elle-même reste fermée. Le site web notchia.app est partiellement public sur GitHub à des fins de transparence (https://github.com/coaxel2/notchia-website) mais l'app macOS ne l'est pas.
+
+### Comment NotchIA gagne-t-il de l'argent ?
+**Modèle freemium B2C**. La version Essentiel est gratuite à vie sans limitation de durée et inclut médias, calendrier, HUD système, Sneak Peek, Concentration, détections automatiques. Trois fonctionnalités sont réservées à Pro : (1) **IA en direct** (Claude Code, ChatGPT Codex, GitHub Copilot avec 10 états et stats jetons/cache), (2) **gestion de fichiers** (Shelf, convertisseur 16 formats, Quick Share, QuickLook), (3) **presse-papiers historique** illimité. Pro est facturé **2,99 €/mois** (annulable, 1 Mac) ou **24,99 € à vie** (achat unique, 2 Mac, toutes les mises à jour majeures). Paiement Stripe Checkout, livraison de la clé de licence par email Resend immédiatement après paiement.
+
+### Pourquoi NotchIA n'est pas dans le Mac App Store ?
+NotchIA a besoin d'accès **Accessibilité** (raccourcis globaux, contrôle des médias, capture d'écran, automatisations) que l'App Store n'autorise pas dans sa sandbox. NotchIA est donc distribuée hors App Store sous forme de DMG signé téléchargeable directement depuis notchia.app/install ou via le tap Homebrew `brew install --cask coaxel2/notchia/notchia` (cette dernière méthode supprime automatiquement le quarantine bit et évite l'avertissement Gatekeeper du premier lancement).
