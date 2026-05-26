@@ -85,6 +85,29 @@ export async function onRequestPost({ request, env }) {
   // Collect VAT / billing address pour conformité TVA (même si franchise en base)
   params.set("billing_address_collection", "auto");
 
+  // Renoncement EXPRÈS au droit de rétractation de 14 jours (art. L221-28 13°
+  // du Code de la consommation français). Obligatoire pour livrer la clé de
+  // licence immédiatement après paiement sans risque de demande de
+  // remboursement dans les 14 jours.
+  //
+  // Stripe affiche une case à cocher OBLIGATOIRE liée aux CGV configurées
+  // dans Stripe Dashboard → Settings → Public details → Terms of Service URL.
+  // Le texte affiché AU-DESSUS de cette case est défini par custom_text.
+  params.set("consent_collection[terms_of_service]", "required");
+  const waiverMsg = {
+    fr: "En cochant ci-dessous, j'accepte les CGV de NotchIA et **renonce expressément à mon droit de rétractation de 14 jours** (art. L221-28 13° du Code de la consommation), afin de permettre la délivrance immédiate de ma clé de licence par email.",
+    en: "By checking the box below, I accept NotchIA's Terms of Sale and **expressly waive my 14-day right of withdrawal** (French Consumer Code, art. L221-28 13°), to allow immediate delivery of my license key by email.",
+    es: "Al marcar la casilla siguiente, acepto las CGV de NotchIA y **renuncio expresamente a mi derecho de retracto de 14 días** (Código del consumidor francés, art. L221-28 13°), para permitir la entrega inmediata de mi clave de licencia por email.",
+    de: "Mit Aktivierung des Kontrollkästchens unten akzeptiere ich die AGB von NotchIA und **verzichte ausdrücklich auf mein 14-tägiges Widerrufsrecht** (französisches Verbrauchergesetzbuch, art. L221-28 13°), um die sofortige Lieferung meines Lizenzschlüssels per E-Mail zu ermöglichen.",
+  }[lang];
+  params.set("custom_text[terms_of_service_acceptance][message]", waiverMsg);
+
+  // Trace pour le webhook : on garde la preuve du renoncement dans la metadata
+  params.set("metadata[withdrawal_waiver]", "L221-28-13");
+  if (mode === "subscription") {
+    params.set("subscription_data[metadata][withdrawal_waiver]", "L221-28-13");
+  }
+
   try {
     const res = await fetch("https://api.stripe.com/v1/checkout/sessions", {
       method: "POST",

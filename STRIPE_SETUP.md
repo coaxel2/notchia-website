@@ -82,6 +82,19 @@ Puis dans **Cloudflare Pages → notchia-website → Settings → Functions → 
 - Variable name : `DB`
 - D1 database : `notchia-licenses`
 
+## 4.5. ⚠️ Public details (CRITIQUE pour la conformité droit français)
+
+Dashboard Stripe → **Settings → Public details** :
+
+- **Terms of Service URL** : `https://notchia.app/cgv`
+- **Privacy Policy URL**  : `https://notchia.app/privacy`
+- **Public business name** : `NotchIA`
+- **Public phone / email** : `notchia.app@gmail.com`
+
+C'est **indispensable** : la function `checkout.js` active `consent_collection.terms_of_service = required` → Stripe affiche une case à cocher obligatoire qui renvoie vers cette URL. Sans Terms of Service URL configurée, l'appel à Stripe échouera.
+
+Cette case sert aussi de support légal au **renoncement exprès au droit de rétractation 14 j** (art. L221-28 13° Code conso, cf. CGV art. 5). Le texte spécifique du renoncement est injecté via `custom_text` côté code et s'affiche au-dessus de la case.
+
 ## 5. Créer le webhook Stripe
 
 Dashboard Stripe → **Developers → Webhooks** → **+ Add endpoint**
