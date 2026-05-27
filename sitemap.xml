@@ -54,11 +54,13 @@
   </url>
   <url>
     <loc>https://notchia.app/blog/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/" />
   </url>
   <url>
