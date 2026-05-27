@@ -1,59 +1,82 @@
 /**
- * NotchIA — Stripe Customer Portal session creator
+ * NotchIA — Stripe Customer Portal (étape 2 : ouverture via magic-link)
  *
- * POST /api/stripe/portal
- * Body : { email: string }
- * Reply : { url: "https://billing.stripe.com/p/session/..." } | { error }
+ * GET /api/stripe/portal?token=<hmac_token>
+ *   → vérifie le token, ouvre une Billing Portal Session pour le
+ *     `customerId` qu'il contient, et redirige (HTTP 303) vers
+ *     `session.url`.
  *
- * Le portail permet à l'utilisateur de :
- *   - consulter ses factures
- *   - mettre à jour sa carte
- *   - annuler / changer son abonnement
+ * Tout autre cas (token manquant, invalide, expiré, ou Stripe KO) →
+ * redirection vers /account?portal=error pour rester générique côté
+ * UX et ne PAS divulguer la raison réelle de l'échec.
  *
- * Sécurité : on retrouve le customer via l'email passé en POST. Pour
- * éviter qu'un attaquant ouvre le portail de quelqu'un d'autre, on
- * envoie un magic link par email (court-circuit ici : on renvoie l'URL
- * directement). Phase ultérieure : passer par un token signé envoyé
- * par email avant d'ouvrir le portail.
+ * IMPORTANT : la méthode POST (ancienne version qui prenait juste un
+ * email) a été SUPPRIMÉE. Toute requête non-GET reçoit 405.
+ *
+ * Étape 1 (demande de magic-link) : voir
+ *   functions/api/stripe/portal/request.js
+ *
+ * Env vars / bindings requis :
+ *   STRIPE_SECRET_KEY      — clé API Stripe live restricted
+ *   PORTAL_TOKEN_SECRET    — secret HMAC (32+ bytes hex)
  */
 
-function corsHeaders() {
-  return {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-  };
-}
-function json(b, s = 200) {
-  return new Response(JSON.stringify(b), { status: s, headers: { "Content-Type": "application/json; charset=utf-8", ...corsHeaders() } });
+import { verifyPortalToken } from "./_portal-token.js";
+
+function genericRedirect(origin, reason = "error") {
+  // Pas de leak. `reason` reste générique côté URL.
+  const url = `${origin}/account?portal=${encodeURIComponent(reason)}`;
+  return Response.redirect(url, 303);
 }
 
-export async function onRequestOptions() { return new Response(null, { status: 204, headers: corsHeaders() }); }
+function methodNotAllowed() {
+  return new Response("Method Not Allowed", {
+    status: 405,
+    headers: { "Allow": "GET", "Content-Type": "text/plain; charset=utf-8" },
+  });
+}
 
-export async function onRequestPost({ request, env }) {
-  if (!env.STRIPE_SECRET_KEY) return json({ error: "Stripe non configuré." }, 503);
-  if (!env.DB) return json({ error: "DB non disponible." }, 503);
+// Toutes les méthodes non-GET → 405. La version "POST email" est morte.
+export const onRequestPost = methodNotAllowed;
+export const onRequestPut = methodNotAllowed;
+export const onRequestDelete = methodNotAllowed;
+export const onRequestPatch = methodNotAllowed;
 
-  let payload;
-  try { payload = await request.json(); } catch { return json({ error: "JSON invalide." }, 400); }
+export async function onRequestOptions() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Allow": "GET, OPTIONS",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
+}
 
-  const email = (payload?.email || "").trim().toLowerCase();
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return json({ error: "Email invalide." }, 400);
+export async function onRequestGet({ request, env }) {
+  const url = new URL(request.url);
+  const origin = url.origin;
+
+  if (!env.STRIPE_SECRET_KEY || !env.PORTAL_TOKEN_SECRET) {
+    // On ne divulgue PAS quelle env var manque dans la réponse.
+    console.error("portal GET: missing STRIPE_SECRET_KEY or PORTAL_TOKEN_SECRET");
+    return genericRedirect(origin, "error");
   }
 
-  // Lookup customer ID via l'email dans D1 (licences)
-  const row = await env.DB
-    .prepare("SELECT stripe_customer_id FROM licenses WHERE email = ? AND stripe_customer_id IS NOT NULL ORDER BY created_at DESC LIMIT 1")
-    .bind(email).first();
+  const token = url.searchParams.get("token");
+  if (!token) return genericRedirect(origin, "invalid");
 
-  if (!row?.stripe_customer_id) {
-    return json({ error: "Aucun compte trouvé pour cet email." }, 404);
+  const check = await verifyPortalToken(token, env.PORTAL_TOKEN_SECRET);
+  if (!check.valid) {
+    // On loggue la raison côté serveur (utile pour debug) mais on
+    // renvoie une réponse générique côté client.
+    console.error("portal GET: token invalid", check.reason);
+    return genericRedirect(origin, check.reason === "expired" ? "expired" : "invalid");
   }
 
-  const origin = new URL(request.url).origin;
   const params = new URLSearchParams();
-  params.set("customer", row.stripe_customer_id);
+  params.set("customer", check.customerId);
   params.set("return_url", `${origin}/account`);
 
   try {
@@ -66,13 +89,13 @@ export async function onRequestPost({ request, env }) {
       body: params.toString(),
     });
     const data = await res.json().catch(() => ({}));
-    if (!res.ok) {
-      console.log("Stripe portal error", res.status, JSON.stringify(data).slice(0, 400));
-      return json({ error: data?.error?.message || "Stripe a refusé l'ouverture du portail." }, 502);
+    if (!res.ok || !data?.url) {
+      console.error("portal GET: stripe refused", res.status, data?.error?.code || "");
+      return genericRedirect(origin, "error");
     }
-    return json({ url: data.url });
+    return Response.redirect(data.url, 303);
   } catch (e) {
-    console.log("Stripe portal fetch error", e?.message);
-    return json({ error: "Service indisponible." }, 502);
+    console.error("portal GET: fetch threw", e?.message);
+    return genericRedirect(origin, "error");
   }
 }

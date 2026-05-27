@@ -120,8 +120,83 @@ Cloudflare → Workers & Pages → `notchia-website` → Settings → **Environm
 | `STRIPE_WEBHOOK_SECRET` | `whsec_xxx` | ✅ |
 | `LICENSE_PRIVATE_KEY` | la PKCS#8 base64 (cf. plus bas) | ✅ |
 | `LICENSE_PUBLIC_KEY` | la SPKI base64 | non |
+| `PORTAL_TOKEN_SECRET` | 32 bytes hex (cf. §6.5) | ✅ |
 
 **Les env vars existantes** (Resend, Gemini, Contact) **restent inchangées**.
+
+## 6.5. Customer Portal — magic-link auth (sécurité HAUTE)
+
+Le flow d'accès au Stripe Customer Portal est passé d'une auth « email-only »
+(trou de sécurité : n'importe qui pouvait ouvrir le portail de quelqu'un en
+connaissant son email) à un **magic-link signé HMAC-SHA256** envoyé par
+email, valable 15 minutes.
+
+### Flow utilisateur
+
+1. L'utilisateur saisit son email sur `/account` et clique « M'envoyer le
+   lien d'accès » → `POST /api/stripe/portal/request`.
+2. Si l'email correspond à un Stripe Customer, un email Resend est envoyé
+   avec un lien de la forme :
+   `https://notchia.app/api/stripe/portal?token=<base64url(payload).base64url(hmac)>`
+3. L'utilisateur clique → `GET /api/stripe/portal?token=…` valide la
+   signature en **constant-time**, vérifie l'expiration (≤ 15 min), crée
+   une Billing Portal Session via l'API Stripe, et redirige (HTTP 303)
+   vers `session.url`.
+
+Toute réponse de l'étape 1 est `{ ok: true }` (même si l'email n'existe
+pas) → **pas de leak d'existence de compte**. Tout échec de l'étape 2
+redirige vers `/account?portal=invalid|expired|error` (générique).
+
+### Générer et ajouter le secret HMAC
+
+```bash
+# Générer 32 bytes random hex
+openssl rand -hex 32
+# → ex: 6c0a1f8b...d7f3 (64 chars hex)
+
+# Pousser dans Cloudflare Pages comme variable d'env Production chiffrée
+# (interface : Workers & Pages → notchia-website → Settings →
+#  Environment variables → Add → Encrypt)
+#
+# Variable : PORTAL_TOKEN_SECRET
+# Valeur   : <la sortie de openssl rand>
+```
+
+OU via Wrangler (si le repo utilise un `wrangler.toml`/`wrangler.jsonc`,
+ce qui n'est PAS le cas aujourd'hui — Cloudflare Pages prend les env
+vars depuis le dashboard) :
+
+```bash
+# Pour info, si on bascule un jour sur wrangler-managed Pages :
+wrangler pages secret put PORTAL_TOKEN_SECRET --project-name notchia-website
+# wrangler demande la valeur en stdin → coller la sortie de openssl rand
+```
+
+### Rotation
+
+En cas de fuite suspectée du secret, regénérer un nouveau hex et écraser
+la variable. Effet : tous les magic-links déjà envoyés deviennent
+invalides (et expireront naturellement dans ≤ 15 min de toute façon).
+
+### Tester en local
+
+```bash
+# Demander un magic-link (étape 1) :
+curl -i -X POST https://notchia.app/api/stripe/portal/request \
+  -H "Content-Type: application/json" \
+  -d '{"email":"toi@exemple.com","lang":"fr"}'
+# → HTTP 200 { "ok": true } systématiquement.
+
+# L'ancien POST sur /api/stripe/portal doit renvoyer 405 :
+curl -i -X POST https://notchia.app/api/stripe/portal \
+  -H "Content-Type: application/json" \
+  -d '{"email":"toi@exemple.com"}'
+# → HTTP 405 Method Not Allowed (Allow: GET)
+
+# Ouvrir un mauvais token doit rediriger vers /account?portal=invalid :
+curl -i "https://notchia.app/api/stripe/portal?token=xxx.yyy"
+# → HTTP 303 Location: /account?portal=invalid
+```
 
 ## 7. Générer la paire Ed25519 pour les licences
 

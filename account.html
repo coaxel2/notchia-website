@@ -127,12 +127,11 @@
   <!-- Customer Portal -->
   <section class="card rounded-2xl p-7">
     <h2 class="font-display text-2xl mb-2" data-i18n="portal.title">Gérer mon abonnement</h2>
-    <p class="text-cream/60 text-sm mb-5" data-i18n="portal.sub">Annuler, changer de carte, voir tes factures. Hébergé par Stripe (sécurisé).</p>
+    <p class="text-cream/60 text-sm mb-5" data-i18n="portal.sub">Annuler, changer de carte, voir tes factures. On t'envoie un lien sécurisé par email (valable 15 minutes).</p>
     <form id="portalForm" class="space-y-4">
       <input type="email" name="email" placeholder="ton@email.com" required autocomplete="email" data-i18n-placeholder="portal.email_ph" />
-      <input type="text" name="key" placeholder="nia_live_…" required autocomplete="off" spellcheck="false" data-i18n-placeholder="portal.key_ph" />
       <button type="submit" class="cta-secondary py-2.5 px-5 rounded-full text-sm w-full md:w-auto" data-i18n="portal.cta">
-        Ouvrir le portail Stripe
+        M'envoyer le lien d'accès
       </button>
       <p id="portalMessage" class="text-sm text-cream/70 hidden"></p>
     </form>
@@ -162,13 +161,15 @@
       'activate.ok':"Si un compte existe pour cet email, la clé arrive dans quelques secondes. Vérifie tes spams.",
       'activate.err_net':'Erreur réseau. Réessaie.',
       'portal.title':'Gérer mon abonnement',
-      'portal.sub':'Annuler, changer de carte, voir tes factures. Hébergé par Stripe (sécurisé).',
+      'portal.sub':"Annuler, changer de carte, voir tes factures. On t'envoie un lien sécurisé par email (valable 15 minutes).",
       'portal.email_ph':'ton@email.com',
-      'portal.key_ph':'nia_live_…',
-      'portal.cta':'Ouvrir le portail Stripe',
-      'portal.connecting':'Connexion…',
-      'portal.err_invalid':'Email ou clé invalide.',
+      'portal.cta':"M'envoyer le lien d'accès",
+      'portal.sending':'Envoi…',
+      'portal.ok':"Si un compte existe pour cet email, un lien d'accès vient d'être envoyé. Il expire dans 15 minutes. Vérifie tes spams.",
       'portal.err_net':'Erreur réseau. Réessaie.',
+      'portal.err_expired':'Ce lien a expiré. Redemande-en un.',
+      'portal.err_invalid':"Ce lien n'est pas valide. Redemande-en un.",
+      'portal.err_generic':"Impossible d'ouvrir le portail. Réessaie.",
       'footnote':'Une question ? <a href="/contact" class="underline">Contacte-nous</a>.',
     },
     en: {
@@ -185,13 +186,15 @@
       'activate.ok':'If an account exists for this email, the key will arrive in a few seconds. Check your spam.',
       'activate.err_net':'Network error. Try again.',
       'portal.title':'Manage my subscription',
-      'portal.sub':'Cancel, change card, view invoices. Hosted by Stripe (secure).',
+      'portal.sub':"Cancel, change card, view invoices. We'll email you a secure link (valid for 15 minutes).",
       'portal.email_ph':'you@email.com',
-      'portal.key_ph':'nia_live_…',
-      'portal.cta':'Open Stripe portal',
-      'portal.connecting':'Connecting…',
-      'portal.err_invalid':'Invalid email or key.',
+      'portal.cta':'Send me the access link',
+      'portal.sending':'Sending…',
+      'portal.ok':'If an account exists for this email, an access link has just been sent. It expires in 15 minutes. Check your spam folder.',
       'portal.err_net':'Network error. Try again.',
+      'portal.err_expired':'This link has expired. Request a new one.',
+      'portal.err_invalid':'This link is not valid. Request a new one.',
+      'portal.err_generic':"Couldn't open the portal. Try again.",
       'footnote':'A question? <a href="/contact" class="underline">Contact us</a>.',
     },
     es: {
@@ -208,13 +211,15 @@
       'activate.ok':'Si existe una cuenta con este email, la clave llegará en unos segundos. Revisa tu spam.',
       'activate.err_net':'Error de red. Inténtalo de nuevo.',
       'portal.title':'Gestionar mi suscripción',
-      'portal.sub':'Cancela, cambia de tarjeta, ve tus facturas. Alojado por Stripe (seguro).',
+      'portal.sub':'Cancela, cambia de tarjeta, ve tus facturas. Te enviamos un enlace seguro por email (válido 15 minutos).',
       'portal.email_ph':'tu@email.com',
-      'portal.key_ph':'nia_live_…',
-      'portal.cta':'Abrir el portal Stripe',
-      'portal.connecting':'Conectando…',
-      'portal.err_invalid':'Email o clave no válidos.',
+      'portal.cta':'Enviarme el enlace de acceso',
+      'portal.sending':'Enviando…',
+      'portal.ok':'Si existe una cuenta con este email, acaba de enviarse un enlace de acceso. Caduca en 15 minutos. Revisa tu spam.',
       'portal.err_net':'Error de red. Inténtalo de nuevo.',
+      'portal.err_expired':'Este enlace ha caducado. Solicita uno nuevo.',
+      'portal.err_invalid':'Este enlace no es válido. Solicita uno nuevo.',
+      'portal.err_generic':'No se pudo abrir el portal. Inténtalo de nuevo.',
       'footnote':'¿Una pregunta? <a href="/contact" class="underline">Contáctanos</a>.',
     },
     de: {
@@ -231,13 +236,15 @@
       'activate.ok':'Wenn ein Konto für diese E-Mail existiert, kommt der Schlüssel in wenigen Sekunden. Prüfe deinen Spam.',
       'activate.err_net':'Netzwerkfehler. Bitte erneut versuchen.',
       'portal.title':'Mein Abo verwalten',
-      'portal.sub':'Kündigen, Karte ändern, Rechnungen ansehen. Gehostet von Stripe (sicher).',
+      'portal.sub':'Kündigen, Karte ändern, Rechnungen ansehen. Wir senden dir per E-Mail einen sicheren Link (15 Minuten gültig).',
       'portal.email_ph':'du@email.com',
-      'portal.key_ph':'nia_live_…',
-      'portal.cta':'Stripe-Portal öffnen',
-      'portal.connecting':'Verbinden…',
-      'portal.err_invalid':'E-Mail oder Schlüssel ungültig.',
+      'portal.cta':'Zugangslink senden',
+      'portal.sending':'Senden…',
+      'portal.ok':'Wenn ein Konto für diese E-Mail existiert, wurde gerade ein Zugangslink verschickt. Er läuft in 15 Minuten ab. Prüfe deinen Spam-Ordner.',
       'portal.err_net':'Netzwerkfehler. Bitte erneut versuchen.',
+      'portal.err_expired':'Dieser Link ist abgelaufen. Fordere einen neuen an.',
+      'portal.err_invalid':'Dieser Link ist nicht gültig. Fordere einen neuen an.',
+      'portal.err_generic':'Portal konnte nicht geöffnet werden. Bitte erneut versuchen.',
       'footnote':'Eine Frage? <a href="/contact" class="underline">Kontaktiere uns</a>.',
     },
   };
@@ -266,10 +273,25 @@
   document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
 
   // Show success banner if Stripe redirected here with ?status=success.
+  // Show portal error banner if the magic-link flow redirected back
+  // with ?portal=invalid|expired|error.
   (function(){
     const params = new URLSearchParams(window.location.search);
     if (params.get('status') === 'success') {
       document.getElementById('successBanner').classList.remove('hidden');
+    }
+    const p = params.get('portal');
+    if (p) {
+      const d = (k) => (I18N[detectLang()] || I18N.en)[k] || (I18N.en[k] || '');
+      const txtKey = p === 'expired' ? 'portal.err_expired'
+                   : p === 'invalid' ? 'portal.err_invalid'
+                   : 'portal.err_generic';
+      const el = document.getElementById('portalMessage');
+      if (el) {
+        el.textContent = d(txtKey);
+        el.classList.remove('hidden');
+        el.style.color = '#FF4D88';
+      }
     }
   })();
 
@@ -311,20 +333,18 @@
     const btn = form.querySelector('button');
     const original = btn.textContent;
     btn.disabled = true;
-    btn.textContent = dictNow()['portal.connecting'];
-    const data = Object.fromEntries(new FormData(form));
+    btn.textContent = dictNow()['portal.sending'];
+    const email = new FormData(form).get('email');
     try {
-      const res = await fetch(API_BASE + '/v1/license/portal', {
+      // Étape 1 du flow magic-link : on demande l'envoi du lien par email.
+      // L'API renvoie toujours { ok: true } pour éviter l'énumération.
+      await fetch('/api/stripe/portal/request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ email, lang: CURRENT_LANG }),
       });
-      const json = await res.json();
-      if (!res.ok || !json.url) {
-        showMessage('portalMessage', dictNow()['portal.err_invalid'], false);
-        return;
-      }
-      window.location.href = json.url;
+      showMessage('portalMessage', dictNow()['portal.ok'], true);
+      form.reset();
     } catch (err) {
       showMessage('portalMessage', dictNow()['portal.err_net'], false);
     } finally {
