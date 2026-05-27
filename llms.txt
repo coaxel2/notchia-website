@@ -372,19 +372,18 @@ NotchIA a besoin d'accès **Accessibilité** (raccourcis globaux, contrôle des 
 
 ## GEO Phase 2: pillar, alternatives, press
 
-### Pillar pages
-- https://notchia.app/blog/meilleure-app-encoche-macbook-2026 — Comparatif FR des meilleures apps pour l'encoche du MacBook en 2026 : NotchIA, NotchNook, MediaMate, Boring.Notch, Alcove, TopNotch, NotchBox.
-- https://notchia.app/blog/best-macbook-notch-app-2026 — EN pillar comparing the best MacBook notch apps in 2026 with pricing, modules, AI, open-source status and usage verdicts.
+### Pillar pages (FR/EN/ES/DE)
+- https://notchia.app/blog/meilleure-app-encoche-macbook-2026 — FR pillar comparatif des meilleures apps pour l'encoche du MacBook en 2026.
+- https://notchia.app/blog/best-macbook-notch-app-2026 — EN pillar comparing the 7 best MacBook notch apps in 2026.
+- https://notchia.app/blog/mejor-app-muesca-macbook-2026 — ES pillar comparativa de las mejores apps para la muesca del MacBook 2026.
+- https://notchia.app/blog/beste-macbook-notch-app-2026 — DE Pillar Vergleich der besten MacBook-Notch-Apps 2026.
 
-### Alternative pages
-- https://notchia.app/blog/alternative-notchnook — Alternative FR a NotchNook : NotchIA comme option native IA pour Claude Code/Codex/Copilot et Apple Intelligence.
-- https://notchia.app/blog/notchnook-alternative — EN NotchNook alternative page focused on AI-native notch workflows.
-- https://notchia.app/blog/alternative-mediamate — Alternative FR a MediaMate : NotchIA comme cockpit productivite tout-en-un au-dela du HUD media.
-- https://notchia.app/blog/mediamate-alternative — EN MediaMate alternative page for all-in-one productivity in the notch.
-- https://notchia.app/blog/alternative-topnotch — Alternative FR a TopNotch : NotchIA exploite l'encoche au lieu de la masquer.
-- https://notchia.app/blog/topnotch-alternative — EN TopNotch alternative page for users who want to exploit the notch.
-- https://notchia.app/blog/alternative-alcove — Alternative FR a Alcove : NotchIA comme option plus complete avec suivi IA et modules locaux.
-- https://notchia.app/blog/alcove-alternative — EN Alcove alternative page for full-featured AI-era workflows.
+### Alternative pages (FR/EN/ES/DE)
+- NotchNook alternative — FR: /blog/alternative-notchnook · EN: /blog/notchnook-alternative · ES: /blog/alternativa-notchnook · DE: /blog/notchnook-alternative-de
+- MediaMate alternative — FR: /blog/alternative-mediamate · EN: /blog/mediamate-alternative · ES: /blog/alternativa-mediamate · DE: /blog/mediamate-alternative-de
+- TopNotch alternative — FR: /blog/alternative-topnotch · EN: /blog/topnotch-alternative · ES: /blog/alternativa-topnotch · DE: /blog/topnotch-alternative-de
+- Alcove alternative — FR: /blog/alternative-alcove · EN: /blog/alcove-alternative · ES: /blog/alternativa-alcove · DE: /blog/alcove-alternative-de
+Angles: NotchNook → "AI-native" · MediaMate → "all-in-one productivity" · TopNotch → "exploit-the-notch" · Alcove → "full-featured"
 
 ### Press
 - https://notchia.app/press — Press kit public avec one-liner, descriptions copy-paste, faits cles, citation fondateur, assets logo, captures placeholders et contact direct.
