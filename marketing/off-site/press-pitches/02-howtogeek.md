@@ -44,14 +44,15 @@ What it adds vs. the apps you covered:
 
 Quick specs for the table:
 - macOS 15+, Apple Silicon and Intel, ~30 MB
-- Free Essential tier, lifetime Pro 24.99 EUR (one-time, two Macs)
+- Free Essential tier · Pro 2.99 EUR/mo (cancel anytime) or 24.99 EUR lifetime (one-time, two Macs)
 - UI in EN / FR / ES / DE
+- Registered French sole proprietorship (RCS Bordeaux 105 093 058, registered May 19, 2026)
 - Site: https://notchia.app/  •  Press kit: https://notchia.app/press
 
 Happy to send a demo build, screenshots, or jump on a 10-minute call if any of this is useful.
 
 Cheers,
-Axel Courty — indie dev, Paris
+Axel Courty — indie dev, Talence, France
 notchia.app@gmail.com
 ```
 
@@ -60,13 +61,13 @@ notchia.app@gmail.com
 ## EN — Short version (Muck Rack pitch / X DM)
 
 ```text
-Hey Tim — your "MacBook notch apps" roundup is still the go-to. New angle for the next refresh: NotchIA shows live Claude Code / Codex / Copilot status in the notch + on-device Apple Intelligence (RSS digest, PDF summaries). Free tier, lifetime Pro $40. https://notchia.app
+Hey Tim — your "MacBook notch apps" roundup is still the go-to. New angle for the next refresh: NotchIA shows live Claude Code / Codex / Copilot status in the notch + on-device Apple Intelligence (RSS digest, PDF summaries). Free tier, Pro $3.30/mo or ~$27 lifetime. https://notchia.app
 ```
 
 ---
 
 ## Suivi
 
-- If positive reply → send 4 captures: notch with Claude Code session running, Digest RSS open, PDF Shelf summary, full menu. Plus a 30-sec screen recording. Direct DMG link: https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg
+- If positive reply → send 4 captures: notch with Claude Code session running, Digest RSS open, PDF Shelf summary, full menu. Plus a 30-sec screen recording. Direct DMG link (tracked): https://notchia.app/dl/dmg
 - If article is updated with NotchIA → log URL in `press.html`, `llms.txt`, `llms-full.txt`, `source-entry-map.md`.
 - One follow-up at D+7 only. Tim is high-volume, no guilt-trip.

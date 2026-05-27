@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA vs MediaMate — 2026 comparison</title>
+<meta name="description" content="NotchIA vs MediaMate: honest 2026 comparison across 10 criteria. System HUD, Now Playing, live AI, Apple Intelligence. Two philosophies, two macOS apps." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="Axel Courty" />
+<meta name="keywords" content="NotchIA, MediaMate, macOS comparison, volume HUD, brightness HUD, Now Playing macOS, MediaMate alternative, notch utility 2026, Apple Intelligence Digest, Claude Code notch" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-mediamate-vergleich-2026" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA vs MediaMate — 2026 comparison" />
+<meta property="og:description" content="Two macOS apps, two philosophies. MediaMate elegantly replaces system HUDs; NotchIA turns the notch into a full cockpit with live AI." />
+<meta property="og:url" content="https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:published_time" content="2026-05-27" />
+<meta property="article:modified_time" content="2026-05-27" />
+<meta property="article:author" content="Axel Courty" />
+<meta property="article:section" content="macOS" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA vs MediaMate — 2026 comparison" />
+<meta name="twitter:description" content="Minimalist HUD replacement vs full cockpit with AI and Apple Intelligence: choose the app that matches your priorities." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .app-card { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 14px; padding: 1.4rem 1.5rem; margin: 1.2rem 0; }
+  .app-card h3 { margin-top: 0.2rem; font-size: 1.35rem; font-family: 'Fraunces', serif; }
+  .app-card .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(237,232,220,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .app-card .price { display: inline-block; padding: 0.1rem 0.5rem; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-radius: 999px; }
+  .app-card .free { background: rgba(157,217,183,0.12); border-color: rgba(157,217,183,0.35); color: #9DD9B7; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1.5rem 0; }
+  th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid rgba(237,232,220,0.08); vertical-align: top; }
+  th { color: #EDE8DC; font-weight: 600; }
+  td { color: rgba(237,232,220,0.78); }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tldr { background: linear-gradient(180deg, rgba(168,85,247,0.07) 0%, rgba(255,77,136,0.04) 100%); border: 1px solid rgba(168,85,247,0.18); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.5rem 0 2rem; }
+  .tldr p { color: rgba(237,232,220,0.85); margin-bottom: 0.3rem; }
+  .tldr strong { color: #FF7A2D; }
+  .toc { background: #14171F; border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.9rem; }
+  .toc ol { list-style: decimal; padding-left: 1.4rem; }
+  .toc li { margin-bottom: 0.25rem; }
+  .toc a { color: rgba(237,232,220,0.7); text-decoration: none; }
+  .toc a:hover { color: #FF7A2D; text-decoration: underline; }
+  .lang-sw { appearance: none; -webkit-appearance: none; background-color: transparent; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; background-size: 9px; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://notchia.app/blog/notchia-vs-mediamate-comparison-2026#article",
+      "headline": "NotchIA vs MediaMate — 2026 comparison",
+      "alternativeHeadline": "Elegant minimal HUD vs full cockpit with live AI",
+      "description": "NotchIA vs MediaMate: honest 2026 comparison across 10 criteria. System HUD, Now Playing, live AI, Apple Intelligence.",
+      "datePublished": "2026-05-27",
+      "dateModified": "2026-05-27",
+      "inLanguage": "en-US",
+      "image": "https://notchia.app/og-image.png",
+      "wordCount": 1900,
+      "keywords": "NotchIA, MediaMate, volume HUD, brightness HUD, Now Playing macOS, MediaMate alternative, Apple Intelligence Digest, Claude Code",
+      "author": {
+        "@type": "Person",
+        "name": "Axel Courty",
+        "url": "https://notchia.app/",
+        "sameAs": [
+          "https://github.com/coaxel2"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NotchIA",
+        "url": "https://notchia.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://notchia.app/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://notchia.app/blog/notchia-vs-mediamate-comparison-2026",
+        "about": [
+          {
+            "@type": "Thing",
+            "name": "MediaMate",
+            "description": "Free macOS app by Wouter De Schuyter that replaces system HUDs (volume, screen brightness, keyboard brightness) with a modern design, plus a subtle Now Playing HUD.",
+            "url": "https://wouter01.github.io/MediaMate"
+          },
+          {
+            "@type": "Thing",
+            "name": "NotchIA",
+            "description": "Independent freemium macOS app that turns the MacBook notch into an interactive cockpit with 14 modules, live AI and on-device Apple Intelligence.",
+            "url": "https://notchia.app/"
+          }
+        ]
+      },
+      "about": [
+        { "@type": "Thing", "name": "MacBook notch" },
+        { "@type": "Thing", "name": "macOS HUD replacement" },
+        { "@type": "Thing", "name": "Productivity" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://notchia.app/blog/notchia-vs-mediamate-comparison-2026#list",
+      "name": "NotchIA vs MediaMate — 13 modules compared",
+      "description": "Detailed comparison of 13 modules between MediaMate and NotchIA in 2026.",
+      "numberOfItems": 13,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Volume HUD" },
+        { "@type": "ListItem", "position": 2, "name": "Screen brightness HUD" },
+        { "@type": "ListItem", "position": 3, "name": "Keyboard brightness HUD" },
+        { "@type": "ListItem", "position": 4, "name": "Now Playing HUD" },
+        { "@type": "ListItem", "position": 5, "name": "Multi-source player with controls" },
+        { "@type": "ListItem", "position": 6, "name": "Synced lyrics (lrclib)" },
+        { "@type": "ListItem", "position": 7, "name": "Calendar" },
+        { "@type": "ListItem", "position": 8, "name": "Live AI (Claude Code, Codex, Copilot)" },
+        { "@type": "ListItem", "position": 9, "name": "Apple Intelligence on-device Digest" },
+        { "@type": "ListItem", "position": 10, "name": "Focus mode" },
+        { "@type": "ListItem", "position": 11, "name": "Clipboard history" },
+        { "@type": "ListItem", "position": 12, "name": "File converter (16 formats)" },
+        { "@type": "ListItem", "position": 13, "name": "Visual customization (presets + custom)" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/notchia-vs-mediamate-comparison-2026#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are NotchIA and MediaMate competitors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not really. MediaMate is primarily an aesthetic replacement for macOS system HUDs (volume, brightness, keyboard) with a subtle Now Playing HUD. NotchIA is a full cockpit for the MacBook notch with 14 modules including live AI, Apple Intelligence Digest and productivity. They share a subset of HUD features but target different audiences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is MediaMate free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. MediaMate is free, with an optional donation via Gumroad to support developer Wouter De Schuyter. Distributed via Gumroad and GitHub Releases, with no subscription or required purchase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use MediaMate and NotchIA together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Technically yes, but it's not recommended. Both apps intercept the system HUDs and Now Playing, which creates visual overlaps and duplicates. It's better to pick one based on your priority: MediaMate for elegant lightweight HUDs, NotchIA for an all-in-one cockpit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does MediaMate have AI features?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. MediaMate focuses on aesthetic replacement of system HUDs and Now Playing. It does not offer live AI (Claude Code, ChatGPT Codex, GitHub Copilot) or Apple Intelligence integration. These features are exclusive to NotchIA in the notch utility category in 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which works on macOS 13?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MediaMate works on macOS 13 (Ventura) and above, making it accessible to a broader install base. NotchIA requires macOS 15 (Sequoia) minimum, and macOS 26 for the Apple Intelligence Digest module. If your Mac runs macOS 13 or 14, MediaMate is the only option of the two."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is MediaMate so lightweight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MediaMate consumes about 5 MB of RAM because its scope is intentionally narrow: replace three native HUDs and display a Now Playing HUD. NotchIA uses 30-50 MB because it runs 14 simultaneous modules (multi-source media, calendar, Focus, Digest, live AI, clipboard, converter, etc.). The difference reflects opposite philosophies: minimalism vs cockpit."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://notchia.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "NotchIA vs MediaMate", "item": "https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Home</a>
+    <a href="/#features" class="hover:text-cream">Features</a>
+    <a href="/#telecharger" class="hover:text-cream">Pricing</a>
+      <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Comparison · macOS · May 2026</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">NotchIA vs MediaMate: <span class="grad-text">2026 comparison</span></h1>
+    <p class="text-cream/55 text-sm">By Axel Courty · May 27, 2026 · 8 min read · macOS 13+ / 15+</p>
+  </section>
+
+  <div class="tldr">
+    <p><strong>Short answer.</strong> <strong>MediaMate</strong> and <strong>NotchIA</strong> are two macOS apps that touch the notch area but with opposite intentions. MediaMate, free (by Wouter De Schuyter, macOS 13+), elegantly replaces native HUDs — volume, screen brightness, keyboard brightness — and adds a subtle Now Playing HUD for about 5 MB of RAM. NotchIA is a freemium cockpit (Essential free, Pro lifetime €24.99, macOS 15+) with 14 modules, live AI (Claude Code, Codex, Copilot), Apple Intelligence Digest and 4 languages. Pick based on priorities: ultra-light HUD or full cockpit.</p>
+  </div>
+
+  <div class="toc">
+    <p class="eyebrow mb-2">Table of contents</p>
+    <ol>
+      <li><a href="#contexte">Context: replaced HUD vs full cockpit</a></li>
+      <li><a href="#fiche-mediamate">MediaMate in a nutshell</a></li>
+      <li><a href="#fiche-notchia">NotchIA in a nutshell</a></li>
+      <li><a href="#tableau">Comparison table (13 modules)</a></li>
+      <li><a href="#quand-mediamate">When to choose MediaMate</a></li>
+      <li><a href="#quand-notchia">When to choose NotchIA</a></li>
+      <li><a href="#verdict">Verdict: two uses, two apps</a></li>
+      <li><a href="#faq">FAQ: choosing between the two</a></li>
+    </ol>
+  </div>
+
+  <h2 id="contexte">Context: <span class="grad-text">replaced HUD vs full cockpit</span></h2>
+
+  <p>Since the notch appeared on the 14" and 16" MacBook Pro in 2021, then on the MacBook Air in 2024, two families of macOS apps have coexisted around this zone: those that <strong>upgrade native HUDs</strong> (volume, brightness) with a more modern look, and those that turn the notch into an <strong>interactive cockpit</strong> with calendar, media, AI and productivity.</p>
+
+  <p>MediaMate, created by Belgian developer Wouter De Schuyter, clearly belongs to the first family. Reviewed by <a href="https://www.macstories.net/reviews/notchnook-and-mediamate-two-apps-to-add-a-dynamic-island-to-your-mac/" rel="noopener" target="_blank">MacStories in August 2024</a> and regularly mentioned on r/macapps, it has become a reference for minimalist HUD replacement. NotchIA, an independent app by Axel Courty, belongs to the second: 14 native modules, live AI, Apple Intelligence Digest.</p>
+
+  <p>This comparison is written by Axel Courty, creator of NotchIA. I disclose my bias: I know NotchIA from the inside. All claims about MediaMate come from its <a href="https://wouter01.github.io/MediaMate" rel="noopener" target="_blank">official site</a>, the <a href="https://gumroad.com/l/MediaMate" rel="noopener" target="_blank">Gumroad page</a>, the <a href="https://github.com/Wouter01/MediaMate-Releases" rel="noopener" target="_blank">MediaMate-Releases</a> repo on GitHub, and real-world testing on a 14" M3 MacBook Pro.</p>
+
+  <h2 id="fiche-mediamate">MediaMate <span class="grad-text">in a nutshell</span></h2>
+
+  <div class="app-card">
+    <p class="meta">HUD replacement · macOS 13+ · wouter01.github.io/MediaMate</p>
+    <h3>MediaMate</h3>
+    <p><span class="price free">Free (Gumroad donation)</span></p>
+    <p>MediaMate is a free macOS app developed by Wouter De Schuyter. Its scope is intentionally focused: replace the three native HUDs (volume, screen brightness, keyboard brightness) with modern-looking indicators, and add a subtle Now Playing HUD that displays the currently playing track via Apple Music, Spotify and other compatible players. It's distributed via Gumroad and GitHub Releases, runs on macOS 13 (Ventura) and uses about 5 MB of RAM.</p>
+    <p><strong>Strengths:</strong> ultra-light, beautiful aesthetics, quick install, works on macOS 13+ (broader base), total focus on HUD replacement quality.</p>
+    <p><strong>Limits:</strong> narrow scope (no calendar, no AI, no advanced productivity), basic visual customization, no built-in multi-language support.</p>
+  </div>
+
+  <h2 id="fiche-notchia">NotchIA <span class="grad-text">in a nutshell</span></h2>
+
+  <div class="app-card">
+    <p class="meta">Notch utility · macOS 15+ · notchia.app</p>
+    <h3>NotchIA</h3>
+    <p><span class="price free">Essential free forever</span> · Pro monthly €2.99/mo · <span class="price">Pro lifetime €24.99</span></p>
+    <p>NotchIA is an independent proprietary macOS app developed by Axel Courty (sole proprietorship COURTY Axel, RCS Bordeaux 105 093 058). Current version: <strong>2.8.0 "Wise Owl"</strong> released May 15, 2026. It offers 14 native modules: multi-source Media with synced lyrics via lrclib, Calendar, Focus / Pomodoro, drag-and-drop Shelf, system HUD, AirDrop, <strong>Digest</strong> (RSS summaries via on-device Apple Intelligence, macOS 26+), <strong>live AI</strong> (Claude Code, ChatGPT Codex, GitHub Copilot with 10 states), File converter (16 formats, Pro), unlimited Clipboard (Pro). 4 languages (FR / EN / ES / DE).</p>
+    <p><strong>Strengths:</strong> 14 all-in-one modules, exclusive live AI, on-device Apple Intelligence, 4 languages, direct email support, €24.99 lifetime purchase.</p>
+    <p><strong>Limits:</strong> proprietary (closed code), requires macOS 15+ for most modules, higher memory footprint (~30-50 MB) tied to module count.</p>
+  </div>
+
+  <h2 id="tableau">Comparison table <span class="grad-text">(13 modules)</span></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Module</th>
+        <th>MediaMate</th>
+        <th>NotchIA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Volume HUD</strong></td><td>✓ — exclusive focus, very polished</td><td>✓</td></tr>
+      <tr><td><strong>Screen brightness HUD</strong></td><td>✓</td><td>✓</td></tr>
+      <tr><td><strong>Keyboard brightness HUD</strong></td><td>✓</td><td>✓</td></tr>
+      <tr><td><strong>Now Playing HUD</strong></td><td>✓ — subtle</td><td>✓</td></tr>
+      <tr><td><strong>Multi-source player with controls</strong></td><td>Minimal display</td><td>✓ multi-source + full controls</td></tr>
+      <tr><td><strong>Synced lyrics (lrclib)</strong></td><td>✗</td><td>✓</td></tr>
+      <tr><td><strong>Calendar</strong></td><td>✗</td><td>✓</td></tr>
+      <tr><td><strong>Live AI (Claude Code, Codex, Copilot)</strong></td><td>✗</td><td>✓ — exclusive (Pro)</td></tr>
+      <tr><td><strong>Apple Intelligence on-device Digest</strong></td><td>✗</td><td>✓ — macOS 26+</td></tr>
+      <tr><td><strong>Focus mode</strong></td><td>✗</td><td>✓</td></tr>
+      <tr><td><strong>Clipboard history</strong></td><td>✗</td><td>✓ (Pro)</td></tr>
+      <tr><td><strong>File converter (16 formats)</strong></td><td>✗</td><td>✓ (Pro)</td></tr>
+      <tr><td><strong>Visual customization</strong></td><td>Basic</td><td>✓ 5 presets + custom</td></tr>
+      <tr><td><strong>Memory footprint</strong></td><td>~5 MB</td><td>~30-50 MB</td></tr>
+      <tr><td><strong>Minimum macOS</strong></td><td>13 (Ventura)</td><td>15 (Sequoia)</td></tr>
+      <tr><td><strong>Distribution</strong></td><td>Gumroad + GitHub Releases</td><td>Homebrew tap + direct DMG</td></tr>
+      <tr><td><strong>Pricing model</strong></td><td>Free (donation)</td><td>Freemium (Pro €24.99 lifetime)</td></tr>
+    </tbody>
+  </table>
+
+  <p>This table doesn't say one app is better than the other — they answer two different questions. MediaMate optimizes <em>the quality of a small number of HUDs</em>. NotchIA maximizes <em>functional breadth</em> around the notch.</p>
+
+  <h2 id="quand-mediamate">When to choose <span class="grad-text">MediaMate</span></h2>
+
+  <p>MediaMate is the right call in several typical cases:</p>
+
+  <ul>
+    <li><strong>You just want beautiful native HUDs.</strong> Volume, screen brightness, keyboard brightness replaced by elegant modern indicators — without adding anything else.</li>
+    <li><strong>You're on macOS 13 or 14.</strong> MediaMate accepts macOS 13+; NotchIA requires macOS 15+. If your fleet isn't up to date, MediaMate is the only option.</li>
+    <li><strong>You want the smallest possible memory footprint.</strong> About 5 MB of RAM is nearly invisible. Ideal on a MacBook Air or a setup where every megabyte counts.</li>
+    <li><strong>You love minimalism.</strong> A subtle Now Playing HUD, three system HUDs, no visual clutter on the notch. Pure aesthetics.</li>
+    <li><strong>You want 100% free, no paywall, no Pro tier.</strong> Optional donation via Gumroad, but nothing locked.</li>
+  </ul>
+
+  <p>MediaMate is a beautifully designed tool. Wouter De Schuyter has a rare design sensibility, and the result is consistent at first glance. Choosing it is never a mistake — it's a philosophical choice.</p>
+
+  <h2 id="quand-notchia">When to choose <span class="grad-text">NotchIA</span></h2>
+
+  <p>NotchIA fits better in these cases:</p>
+
+  <ul>
+    <li><strong>You want to use the notch as a cockpit.</strong> Swipeable Calendar, Focus / Pomodoro, drag-and-drop Shelf, clipboard history, 16-format converter: NotchIA does much more than replace three HUDs.</li>
+    <li><strong>You code with Claude Code, ChatGPT Codex or GitHub Copilot.</strong> NotchIA is today the only macOS notch app that displays the real-time state of those three AIs in the notch, with 10 states (Compiling, Terminal, Searching, Reading, Writing, etc.) and token consumption tracking.</li>
+    <li><strong>You want on-device Apple Intelligence.</strong> The Digest module (macOS 26+) consumes your RSS feeds and produces a summary via local Apple Intelligence models, 100% on-device, never sent to a third-party server.</li>
+    <li><strong>You use macOS in French, Spanish or German.</strong> NotchIA is translated into 4 languages; MediaMate is English-only.</li>
+    <li><strong>You want a lifetime purchase.</strong> €24.99 once gives you all Pro features in perpetuity, updates included. No mandatory subscription.</li>
+    <li><strong>You want direct support.</strong> An email to <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> gets a reply from Axel, the developer.</li>
+  </ul>
+
+  <h2 id="verdict">Verdict: <span class="grad-text">two uses, two apps</span></h2>
+
+  <p>MediaMate and NotchIA don't target the same audience, and that's a good thing. MediaMate is an elegant, ultra-light piece of software that cleanly replaces native HUDs and a Now Playing HUD. NotchIA is a modular cockpit betting on exclusive integrations (live AI, Apple Intelligence) and editor polish, funded by a freemium model.</p>
+
+  <p>If you just want prettier HUDs on macOS 13 or 14, install MediaMate — you won't need more. If you want to turn the notch into a daily tool (calendar, Focus, AI, clipboard, Apple Intelligence), NotchIA is more likely to stick. Still on the fence? MediaMate is free, and NotchIA offers Essential free for life. Two weeks of testing will tell you which one fits.</p>
+
+  <p>The macOS ecosystem wins when multiple projects explore this zone — each pushes the other up.</p>
+
+  <h2 id="faq">FAQ: <span class="grad-text">choosing between the two</span></h2>
+
+  <h3>Are NotchIA and MediaMate competitors?</h3>
+  <p>Not really. <strong>MediaMate is primarily an aesthetic replacement for macOS system HUDs</strong> (volume, brightness, keyboard) with a subtle Now Playing HUD. NotchIA is a full cockpit for the MacBook notch with 14 modules including live AI, Apple Intelligence Digest and productivity. They share a subset of HUD features but target different audiences.</p>
+
+  <h3>Is MediaMate free?</h3>
+  <p>Yes. <strong>MediaMate is free</strong>, with an optional donation via Gumroad to support developer Wouter De Schuyter. Distributed via Gumroad and GitHub Releases, with no subscription or required purchase.</p>
+
+  <h3>Can I use MediaMate and NotchIA together?</h3>
+  <p>Technically yes, but it's not recommended. Both apps intercept the system HUDs and Now Playing, which creates visual overlaps and duplicates. It's better to pick one based on your priority: MediaMate for elegant lightweight HUDs, NotchIA for an all-in-one cockpit.</p>
+
+  <h3>Does MediaMate have AI features?</h3>
+  <p>No. MediaMate focuses on aesthetic replacement of system HUDs and Now Playing. It does not offer live AI (Claude Code, ChatGPT Codex, GitHub Copilot) or Apple Intelligence integration. <strong>These features are exclusive to NotchIA</strong> in the notch utility category in 2026.</p>
+
+  <h3>Which works on macOS 13?</h3>
+  <p><strong>MediaMate works on macOS 13 (Ventura) and above</strong>, making it accessible to a broader install base. NotchIA requires macOS 15 (Sequoia) minimum, and macOS 26 for the Apple Intelligence Digest module. If your Mac runs macOS 13 or 14, MediaMate is the only option of the two.</p>
+
+  <h3>Why is MediaMate so lightweight?</h3>
+  <p>MediaMate consumes about <strong>5 MB of RAM</strong> because its scope is intentionally narrow: replace three native HUDs and display a Now Playing HUD. NotchIA uses 30-50 MB because it runs 14 simultaneous modules. The difference reflects opposite philosophies: minimalism vs cockpit.</p>
+
+  <div class="callout">
+    <p><strong>About the author.</strong> Axel Courty is an independent developer and the creator of NotchIA. This comparison is updated with every major NotchIA release (2-3 times a year). For MediaMate claims, I rely on the <a href="https://wouter01.github.io/MediaMate" rel="noopener" target="_blank">official site</a>, the <a href="https://gumroad.com/l/MediaMate" rel="noopener" target="_blank">Gumroad page</a>, the <a href="https://github.com/Wouter01/MediaMate-Releases" rel="noopener" target="_blank">MediaMate-Releases</a> repo and the <a href="https://www.macstories.net/reviews/notchnook-and-mediamate-two-apps-to-add-a-dynamic-island-to-your-mac/" rel="noopener" target="_blank">MacStories review</a>. Contact: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Download NotchIA</a>
+    <a href="/blog/best-macbook-notch-app-2026" class="btn-secondary">See the best notch app 2026</a>
+  </div>
+
+  <p class="mt-10 text-sm"><a href="/blog/" class="text-cream/55 hover:text-cream">← All articles</a></p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Legal</a>
+      <a href="/cgv" class="hover:text-cream">Terms</a>
+      <a href="/privacy" class="hover:text-cream">Privacy</a>
+      <a href="/refund" class="hover:text-cream">Refund</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const sel = document.getElementById('lang-switch');
+    if (!sel) return;
+    const currentLang = (document.documentElement.lang || 'fr').toLowerCase().split('-')[0];
+    const altMap = {};
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(l => {
+      const lang = l.getAttribute('hreflang').toLowerCase().split('-')[0];
+      const href = l.getAttribute('href');
+      if (lang && lang !== 'x-default' && href && !altMap[lang]) altMap[lang] = href;
+    });
+    Array.from(sel.options).forEach(opt => {
+      if (!altMap[opt.value]) opt.remove();
+    });
+    sel.value = altMap[currentLang] ? currentLang : sel.options[0]?.value || 'fr';
+    sel.addEventListener('change', (e) => {
+      try { localStorage.setItem('notchia-lang', e.target.value); } catch(_){}
+      const target = altMap[e.target.value];
+      if (target && target !== window.location.href) {
+        window.location.href = target;
+      }
+    });
+  })();
+</script>
+</body>
+</html>

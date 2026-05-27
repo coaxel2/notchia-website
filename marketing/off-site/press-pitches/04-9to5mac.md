@@ -37,16 +37,15 @@ A new indie macOS app shipped this spring — NotchIA — and it's the first not
 2. On-device Apple Intelligence. An RSS Digest and a Shelf PDF summarizer run 100% local via Foundation Models (macOS 26+; degrades on 15).
 
 Notable for indie coverage:
-- Built solo by one developer in Paris.
-- Lifetime Pro at 24.99 EUR (not a subscription).
-- Free Essential tier (media, calendar, Focus, Digest, HUD).
+- Built solo by one developer in Talence, France (registered as a French sole proprietorship in May 2026, RCS Bordeaux 105 093 058).
+- Pricing: free Essential tier (media, calendar, Focus, Digest, HUD) · Pro 2.99 EUR/month (cancel anytime) or 24.99 EUR lifetime (one-time, two Macs).
 - macOS 15+, Apple Silicon and Intel, ~30 MB.
 - No telemetry, signed with Sparkle/EdDSA auto-updates.
 
 Site: https://notchia.app/
 Release notes: https://notchia.app/blog/wise-owl-2-8-0
 Press kit / screenshots: https://notchia.app/press
-Direct DMG: https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg
+Direct DMG (tracked): https://notchia.app/dl/dmg
 
 Happy to send a build, screenshots, or a 60-sec screen recording today if it fits a roundup or short post.
 

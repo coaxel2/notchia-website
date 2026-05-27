@@ -38,9 +38,10 @@ I built NotchIA, an independent macOS app, alone from Paris and shipped it publi
 
 Specs:
 - macOS 15+, Apple Silicon and Intel
-- Free Essential tier; lifetime Pro for 24.99 EUR (no subscription)
+- Free Essential tier · Pro 2.99 EUR/month (cancel anytime) or 24.99 EUR lifetime (one-time, two Macs)
 - No telemetry, no analytics
 - UI in English, French, Spanish, German
+- Registered French sole proprietorship (RCS Bordeaux 105 093 058, registered May 19, 2026)
 
 Site: https://notchia.app/
 Press kit and screenshots: https://notchia.app/press
@@ -49,7 +50,7 @@ If any of this is interesting, I'd happily send a build, screenshots, or a 10-mi
 
 Thanks for reading,
 Axel Courty
-Paris, France
+Talence, France
 notchia.app@gmail.com
 ```
 
@@ -58,7 +59,7 @@ notchia.app@gmail.com
 ## EN — Short version (Muck Rack pitch / X DM, ~280 chars)
 
 ```text
-Hey Wes — loved your NotchNook piece. I'm a solo dev in Paris and just shipped NotchIA: the notch becomes a live status bar for Claude Code / Codex / Copilot, plus an on-device Apple Intelligence RSS digest and PDF summarizer. Free tier, lifetime Pro $40. https://notchia.app
+Hey Wes — loved your NotchNook piece. I'm a solo dev near Bordeaux (France) and just shipped NotchIA: the notch becomes a live status bar for Claude Code / Codex / Copilot, plus an on-device Apple Intelligence RSS digest and PDF summarizer. Free tier, Pro $3.30/mo or ~$27 lifetime. https://notchia.app
 ```
 
 ---
