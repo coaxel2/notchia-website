@@ -32,7 +32,7 @@ Détail complet : `marketing/audits/og-twitter-audit.md`.
 |---|---|---|---|---|---|
 | `logo-512.png` | 151 040 B (148 KB) | **13 696 B (13.4 KB)** | **−90.9 %** | ≤ 30 KB | OK |
 | `og-image.png` | 404 255 B (395 KB) | **94 511 B (92 KB)** | **−76.6 %** | ≤ 80 KB | ~ (légèrement au-dessus, 92 vs 80 KB, mais zéro perte visuelle) |
-| `press/notchia-logo-512.png` | 151 040 B (148 KB) | **13 696 B (13.4 KB)** | **−90.9 %** | ≤ 30 KB | OK |
+| `press-kit/notchia-logo-512.png` | 151 040 B (148 KB) | **13 696 B (13.4 KB)** | **−90.9 %** | ≤ 30 KB | OK |
 
 **Notes :**
 - L'objectif og-image.png à 80 KB est dépassé de 12 KB. À 80 KB strict (MEDIANCUT 96 couleurs), le gradient radial central montre du banding visible à l'œil. Le compromis 128 couleurs (94 KB) est très propre. Si tu veux descendre à 60 KB, il faudrait convertir en JPEG q=85 (60 KB, qualité parfaite) — mais cela imposerait de renommer le fichier en `og-image.jpg` et de mettre à jour tous les `<meta property="og:image">` (impact non négligeable). À envisager dans un second temps.
@@ -131,7 +131,7 @@ Aucun article guide supplémentaire n'a été identifié nécessitant un HowTo.
 **Images compressées (binaires) :**
 - `logo-512.png` (148 KB → 13 KB)
 - `og-image.png` (395 KB → 92 KB)
-- `press/notchia-logo-512.png` (148 KB → 13 KB)
+- `press-kit/notchia-logo-512.png` (148 KB → 13 KB)
 
 **Rapports créés :**
 - `marketing/audits/og-twitter-audit.md`

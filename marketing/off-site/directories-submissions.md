@@ -167,7 +167,7 @@ Axel Courty
 ### Assets
 
 - Video URL: `https://notchia.app/press` (placeholder until demo recorded; full 60 s demo TODO).
-- Screenshots (4–6, hosted at `https://notchia.app/press/screenshots/`):
+- Screenshots (4–6, hosted at `https://notchia.app/press-kit/screenshots/`):
   1. `notch-open-media.png` — Notch open on media module, Spotify track + lyrics + visualiser.
   2. `notch-ai-status.png` — Notch showing live Claude Code state + token counter.
   3. `digest-on-device.png` — Digest module with RSS feeds summarised by Apple Intelligence.
@@ -572,15 +572,15 @@ Axel Courty (developer, indie)
 notchia.app@gmail.com
 ```
 
-**Screenshots URLs (placeholders, host on notchia.app/press/screenshots/ before submission)**
+**Screenshots URLs (placeholders, host on notchia.app/press-kit/screenshots/ before submission)**
 
 ```text
-https://notchia.app/press/screenshots/01-notch-open-media.png
-https://notchia.app/press/screenshots/02-notch-ai-status.png
-https://notchia.app/press/screenshots/03-digest-on-device.png
-https://notchia.app/press/screenshots/04-calendar-day-month.png
-https://notchia.app/press/screenshots/05-shelf-clipboard.png
-https://notchia.app/press/screenshots/06-hud-replacement.png
+https://notchia.app/press-kit/screenshots/01-notch-open-media.png
+https://notchia.app/press-kit/screenshots/02-notch-ai-status.png
+https://notchia.app/press-kit/screenshots/03-digest-on-device.png
+https://notchia.app/press-kit/screenshots/04-calendar-day-month.png
+https://notchia.app/press-kit/screenshots/05-shelf-clipboard.png
+https://notchia.app/press-kit/screenshots/06-hud-replacement.png
 ```
 
 ### Blockers
@@ -739,7 +739,7 @@ F-Droid is Android-only. NotchIA is macOS-only. Skip (mentioned only because the
 
 ## Master checklist before any submission
 
-- [ ] 6 screenshots live at `https://notchia.app/press/screenshots/` (HTTP 200 verified).
+- [ ] 6 screenshots live at `https://notchia.app/press-kit/screenshots/` (HTTP 200 verified).
 - [ ] 60-second demo GIF + hero image ready (for PH and AlternativeTo).
 - [ ] `https://notchia.app/press` reachable and up-to-date.
 - [ ] Changelog at `https://notchia.app/blog/wise-owl-2-8-0` finalised.

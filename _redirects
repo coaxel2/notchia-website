@@ -9,8 +9,8 @@
 # On garde uniquement le catch-all 404 pour empêcher le soft-404 (avant ce fix
 # tout chemin inexistant retournait 200 avec la homepage).
 
-# Exception: le dossier /press contient les assets du press kit, mais l'URL
-# canonique /press doit continuer a servir press.html.
-/press  /press.html  200
+# Pas de regle /press → /press.html : le dossier press/ a ete renomme en
+# press-kit/ donc plus d'ambiguite. Cloudflare sert press.html naturellement
+# au path /press via les pretty URLs.
 
 /*  /404.html  404
