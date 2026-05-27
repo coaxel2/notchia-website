@@ -67,6 +67,8 @@
   .tldr { background: linear-gradient(180deg,rgba(168,85,247,0.07) 0%,rgba(255,77,136,0.04) 100%); border: 1px solid rgba(168,85,247,0.18); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.5rem 0 2rem; }
   .tldr p { color: rgba(237,232,220,0.85); margin-bottom: 0.3rem; }
   .tldr strong { color: #FF7A2D; }
+  .lang-sw { appearance: none; background: transparent; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
 </style>
 
 <script type="application/ld+json">
@@ -165,6 +167,9 @@
     <a href="/" class="hover:text-cream">Startseite</a>
     <a href="/features" class="hover:text-cream">Funktionen</a>
     <a href="/pricing" class="hover:text-cream">Preise</a>
+      <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
   </nav>
 </header>
 
@@ -326,5 +331,30 @@
   </div>
 </footer>
 
+<script>
+  // Sélecteur de langue : lit les <link rel="alternate" hreflang="X">
+  // du <head> et navigue vers l'URL équivalente dans la langue cible.
+  (function() {
+    const sel = document.getElementById('lang-switch');
+    if (!sel) return;
+    // 1. Détecte la langue courante
+    const currentLang = (document.documentElement.lang || 'fr').toLowerCase().split('-')[0];
+    sel.value = ['fr','en','es','de'].includes(currentLang) ? currentLang : 'fr';
+    // 2. Construit la map { hreflang: href } depuis les alternates
+    const altMap = {};
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(l => {
+      const lang = l.getAttribute('hreflang').toLowerCase().split('-')[0];
+      const href = l.getAttribute('href');
+      if (lang && href && !altMap[lang]) altMap[lang] = href;
+    });
+    // 3. Au change : redirige vers la version dans la langue cible
+    sel.addEventListener('change', (e) => {
+      try { localStorage.setItem('notchia-lang', e.target.value); } catch(_){} const target = altMap[e.target.value];
+      if (target && target !== window.location.href) {
+        window.location.href = target;
+      }
+    });
+  })();
+</script>
 </body>
 </html>
