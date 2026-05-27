@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA vs TopNotch — comparativa 2026</title>
+<meta name="description" content="NotchIA vs TopNotch: comparativa honesta 2026 sobre 10 criterios. Notch hider vs notch utility, dos filosofías opuestas de la muesca del MacBook. Y un truco para usar ambas." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="Axel Courty" />
+<meta name="keywords" content="NotchIA, TopNotch, comparativa muesca macbook, ocultar muesca macbook, notch hider, notch utility 2026, macOS notch app, alternativa TopNotch" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-topnotch-comparison-2026" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-topnotch-vergleich-2026" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA vs TopNotch — comparativa 2026" />
+<meta property="og:description" content="Dos apps para la muesca del MacBook, dos filosofías opuestas: ocultar visualmente la muesca (TopNotch) o transformarla en un cockpit interactivo (NotchIA)." />
+<meta property="og:url" content="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="article:published_time" content="2026-05-27" />
+<meta property="article:modified_time" content="2026-05-27" />
+<meta property="article:author" content="Axel Courty" />
+<meta property="article:section" content="macOS" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA vs TopNotch — comparativa 2026" />
+<meta name="twitter:description" content="Notch hider vs notch utility: dos filosofías opuestas de la muesca del MacBook. Y un truco para usar ambas juntas." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .app-card { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 14px; padding: 1.4rem 1.5rem; margin: 1.2rem 0; }
+  .app-card h3 { margin-top: 0.2rem; font-size: 1.35rem; font-family: 'Fraunces', serif; }
+  .app-card .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(237,232,220,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .app-card .price { display: inline-block; padding: 0.1rem 0.5rem; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-radius: 999px; }
+  .app-card .free { background: rgba(157,217,183,0.12); border-color: rgba(157,217,183,0.35); color: #9DD9B7; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1.5rem 0; }
+  th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid rgba(237,232,220,0.08); vertical-align: top; }
+  th { color: #EDE8DC; font-weight: 600; }
+  td { color: rgba(237,232,220,0.78); }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tldr { background: linear-gradient(180deg, rgba(168,85,247,0.07) 0%, rgba(255,77,136,0.04) 100%); border: 1px solid rgba(168,85,247,0.18); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.5rem 0 2rem; }
+  .tldr p { color: rgba(237,232,220,0.85); margin-bottom: 0.3rem; }
+  .tldr strong { color: #FF7A2D; }
+  .toc { background: #14171F; border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.9rem; }
+  .toc ol { list-style: decimal; padding-left: 1.4rem; }
+  .toc li { margin-bottom: 0.25rem; }
+  .toc a { color: rgba(237,232,220,0.7); text-decoration: none; }
+  .toc a:hover { color: #FF7A2D; text-decoration: underline; }
+  .lang-sw { appearance: none; -webkit-appearance: none; background-color: transparent; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; background-size: 9px; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026#article",
+      "headline": "NotchIA vs TopNotch — comparativa 2026",
+      "alternativeHeadline": "Notch hider vs notch utility: dos filosofías opuestas",
+      "description": "NotchIA vs TopNotch: comparativa honesta 2026 sobre 10 criterios. Notch hider vs notch utility, dos filosofías opuestas de la muesca del MacBook.",
+      "datePublished": "2026-05-27",
+      "dateModified": "2026-05-27",
+      "inLanguage": "es-ES",
+      "image": "https://notchia.app/og-image.png",
+      "wordCount": 1900,
+      "keywords": "NotchIA, TopNotch, comparativa muesca macbook, ocultar muesca macbook, notch hider, notch utility, macOS notch app",
+      "author": {
+        "@type": "Person",
+        "name": "Axel Courty",
+        "url": "https://notchia.app/",
+        "sameAs": [
+          "https://github.com/coaxel2"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NotchIA",
+        "url": "https://notchia.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://notchia.app/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026",
+        "about": [
+          {
+            "@type": "Thing",
+            "name": "NotchIA",
+            "description": "Aplicación macOS freemium que transforma la muesca del MacBook en un cockpit interactivo con 14 módulos nativos, IA en directo y Apple Intelligence on-device.",
+            "url": "https://notchia.app/"
+          },
+          {
+            "@type": "Thing",
+            "name": "TopNotch",
+            "description": "Aplicación macOS gratuita publicada en 2021 cuyo único objetivo es ocultar visualmente la muesca del MacBook tiñendo de negro la barra de menús y adaptándola al fondo de pantalla.",
+            "url": "https://topnotch.app"
+          }
+        ]
+      },
+      "about": [
+        { "@type": "Thing", "name": "Muesca del MacBook" },
+        { "@type": "Thing", "name": "Utilidad macOS" },
+        { "@type": "Thing", "name": "Notch hider" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026#list",
+      "name": "NotchIA vs TopNotch — comparativa 2026",
+      "description": "Comparativa honesta entre una app que oculta la muesca (TopNotch) y una app que la aprovecha (NotchIA).",
+      "numberOfItems": 2,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "NotchIA",
+          "url": "https://notchia.app/",
+          "description": "Aplicación freemium para la muesca del MacBook: 14 módulos nativos, IA en directo (Claude Code, ChatGPT Codex, GitHub Copilot), Apple Intelligence Digest, 4 idiomas."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TopNotch",
+          "url": "https://topnotch.app",
+          "description": "Aplicación gratuita (donation-ware) publicada en 2021 cuyo único objetivo es ocultar visualmente la muesca del MacBook."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Son NotchIA y TopNotch competidoras?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No realmente. TopNotch pertenece a la categoría «notch hider»: su único objetivo es hacer desaparecer visualmente la muesca tiñendo de negro la barra de menús. NotchIA pertenece a la categoría «notch utility»: aprovecha la muesca colocando 14 módulos interactivos. Las dos apps responden a filosofías opuestas y pueden incluso usarse juntas en configuraciones multipantalla."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tiene TopNotch funciones de IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. TopNotch no tiene ninguna funcionalidad de IA ni módulo interactivo. Es una app monofunción publicada en 2021 cuyo papel se limita a teñir la barra de menús para camuflar la muesca. NotchIA, por el contrario, integra el estado en directo de Claude Code, ChatGPT Codex, GitHub Copilot y el Apple Intelligence Digest on-device en macOS 26+."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se pueden usar NotchIA y TopNotch al mismo tiempo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, e incluso es un truco power-user pertinente. Activa TopNotch en tu pantalla externa principal (sin muesca física) para homogeneizar visualmente la barra de menús, y usa NotchIA en la pantalla del MacBook para aprovechar la muesca física con sus 14 módulos. Las dos apps no se pisan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es gratuita?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TopNotch es totalmente gratuita (donation-ware) desde su lanzamiento en 2021. NotchIA ofrece un nivel Essential gratuito de por vida que cubre los módulos básicos, y un nivel Pro a 2,99 €/mes o 24,99 € de por vida para la IA en directo, el conversor de archivos y el portapapeles ilimitado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona TopNotch en macOS 26?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TopNotch anuncia oficialmente macOS 12+ y sigue funcionando en versiones posteriores, incluido macOS 26, según los comentarios de la comunidad. NotchIA requiere macOS 15.0+ para la mayoría de módulos y macOS 26 para Apple Intelligence Digest on-device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué NotchIA no oculta la muesca como TopNotch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque la filosofía de NotchIA es la opuesta: la muesca existe, mejor hacerla útil. En lugar de tratar de camuflarla — lo que reduce la zona a un agujero negro inerte — NotchIA la convierte en un cockpit interactivo (media, calendario, Focus, AirDrop, IA en directo, etc.). Si prefieres hacerla desaparecer visualmente, TopNotch es la app adecuada para ello."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://notchia.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "NotchIA vs TopNotch", "item": "https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Inicio</a>
+    <a href="/#features" class="hover:text-cream">Funcionalidades</a>
+    <a href="/#telecharger" class="hover:text-cream">Precios</a>
+      <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Comparativa · macOS · Mayo 2026</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">NotchIA vs TopNotch: <span class="grad-text">comparativa 2026</span></h1>
+    <p class="text-cream/55 text-sm">Por Axel Courty · 27 de mayo de 2026 · 8 min de lectura · macOS 12+ / macOS 15+</p>
+  </section>
+
+  <div class="tldr">
+    <p><strong>Respuesta corta.</strong> <strong>TopNotch</strong> y <strong>NotchIA</strong> no son competidoras — responden a filosofías opuestas. TopNotch (gratuita, publicada en 2021) oculta visualmente la muesca del MacBook tiñendo de negro la barra de menús. NotchIA (freemium, versión 2.8.0 « Wise Owl » del 15 de mayo de 2026) transforma la muesca en un cockpit interactivo con 14 módulos nativos, IA en directo (Claude Code, Codex, Copilot) y Apple Intelligence Digest on-device. Elige TopNotch si odias la muesca, NotchIA si quieres aprovecharla. <strong>Truco power-user:</strong> las dos pueden incluso convivir.</p>
+  </div>
+
+  <div class="toc">
+    <p class="eyebrow mb-2">Índice</p>
+    <ol>
+      <li><a href="#contexte">El contexto: ¿ocultar o aprovechar la muesca?</a></li>
+      <li><a href="#fiche-topnotch">TopNotch en pocas palabras</a></li>
+      <li><a href="#fiche-notchia">NotchIA en pocas palabras</a></li>
+      <li><a href="#tableau">Tabla comparativa (10 criterios)</a></li>
+      <li><a href="#quand-topnotch">Cuándo elegir TopNotch</a></li>
+      <li><a href="#quand-notchia">Cuándo elegir NotchIA</a></li>
+      <li><a href="#hack">El truco power-user: combinar ambas</a></li>
+      <li><a href="#faq">FAQ: elegir una app para la muesca</a></li>
+    </ol>
+  </div>
+
+  <h2 id="contexte">El contexto: <span class="grad-text">¿ocultar o aprovechar la muesca?</span></h2>
+
+  <p>Desde la llegada de la muesca a los MacBook Pro de 14" y 16" en octubre de 2021, y luego al MacBook Air en 2024, se han formado dos bandos. Por un lado, los usuarios que quieren que esa zona negra desaparezca — visualmente, ya que físicamente no se puede. Por el otro, los que aceptan la muesca y prefieren convertirla en algo útil.</p>
+
+  <p>Cada uno tiene su app de referencia. <strong>TopNotch</strong> nació en 2021, pocos días después del lanzamiento del nuevo MacBook Pro, y pertenece a la categoría <em>notch hider</em>. Su autor llevó la idea hasta su extremo minimalista: teñir de negro la barra de menús para que la muesca se fundiera con ella. <strong>NotchIA</strong>, lanzada en 2024 y materializada en la versión 2.8.0 « Wise Owl » el 15 de mayo de 2026, está en la categoría opuesta: <em>notch utility</em>. Apila 14 módulos alrededor de la muesca.</p>
+
+  <p>Esta comparativa la ha redactado Axel Courty, creador de NotchIA. Mi sesgo queda declarado de entrada. Todas las afirmaciones sobre TopNotch son verificables en su <a href="https://topnotch.app" rel="noopener" target="_blank">sitio oficial</a> y en el <a href="https://9to5mac.com/2021/10/28/top-notch-app-macbook-pro-notch/" rel="noopener" target="_blank">artículo de 9to5Mac de octubre de 2021</a> que describe la app como «<em>una app simple que vive en la barra de menús, y cuando está activada, parece de verdad como si la muesca del MacBook Pro no existiera</em>».</p>
+
+  <h2 id="fiche-topnotch">TopNotch <span class="grad-text">en pocas palabras</span></h2>
+
+  <div class="app-card">
+    <p class="meta">Notch hider · Donation-ware · topnotch.app</p>
+    <h3>TopNotch</h3>
+    <p><span class="price free">Gratuita (donation-ware)</span></p>
+    <p>TopNotch es una aplicación macOS publicada en octubre de 2021 por un desarrollador independiente, distribuida gratuitamente. Su único objetivo: <strong>ocultar visualmente la muesca</strong> tiñendo de negro la barra de menús de macOS y adaptándola al fondo de pantalla. En las pantallas externas sin muesca física, TopNotch homogeneiza igualmente la barra de menús para mantener la coherencia visual.</p>
+    <p><strong>Puntos fuertes:</strong> enfoque minimalista asumido, app gratuita, baja huella de memoria, soporte macOS 12+ (y posteriores), multipantalla, tratamiento automático del fondo, modelo donation-ware sin publicidad.</p>
+    <p><strong>Limitaciones:</strong> ninguna funcionalidad interactiva, sin módulos, interfaz solo en inglés, sin IA, sin módulos de media/calendario/Focus, sin integración HUD del sistema. Esta «limitación» es en realidad una elección de producto asumida: TopNotch no quiere hacer más.</p>
+    <p>Como escribe el autor de una larga reseña publicada en <a href="https://medium.com/@adreview/i-fixed-the-notch-on-the-macbook-pro/" rel="noopener" target="_blank">Medium AD Reviews</a>: «<em>TopNotch ha arreglado la muesca del MacBook Pro</em>». La app hace exactamente lo que promete, ni más ni menos.</p>
+  </div>
+
+  <h2 id="fiche-notchia">NotchIA <span class="grad-text">en pocas palabras</span></h2>
+
+  <div class="app-card">
+    <p class="meta">Notch utility · Independiente FR · notchia.app</p>
+    <h3>NotchIA</h3>
+    <p><span class="price free">Essential gratuita de por vida</span> · Pro mensual 2,99 €/mes · <span class="price">Pro de por vida 24,99 €</span></p>
+    <p>NotchIA es una aplicación macOS propietaria desarrollada por Axel Courty (empresa individual COURTY Axel, RCS Bordeaux 105 093 058). Versión actual: <strong>2.8.0 « Wise Owl »</strong> lanzada el 15 de mayo de 2026. Ofrece 14 módulos nativos alrededor de la muesca: Media multifuente con letras sincronizadas, Calendario, Focus / Pomodoro, Shelf drag-and-drop, HUD del sistema (volumen, brillo, teclado), AirDrop visual, <strong>Digest</strong> (resúmenes RSS vía Apple Intelligence on-device, macOS 26+), <strong>IA en directo</strong> (Claude Code, ChatGPT Codex, GitHub Copilot con 10 estados), Conversor de archivos (16 formatos, Pro), Portapapeles ilimitado (Pro).</p>
+    <p><strong>Puntos fuertes:</strong> UX pulida, actualizaciones impulsadas por un solo desarrollador, 4 idiomas (FR/EN/ES/DE), exclusivas de IA y Apple Intelligence, soporte directo por email, compra de por vida disponible.</p>
+    <p><strong>Limitaciones:</strong> propietaria (código cerrado), requiere macOS 15.0+ para la mayoría de módulos y macOS 26 para Apple Intelligence Digest, no busca ocultar la muesca (al contrario, la asume).</p>
+  </div>
+
+  <h2 id="tableau">Tabla comparativa <span class="grad-text">(10 criterios)</span></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Criterio</th>
+        <th>TopNotch</th>
+        <th>NotchIA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Categoría</strong></td><td>Notch hider (oculta la muesca)</td><td>Notch utility (aprovecha la muesca)</td></tr>
+      <tr><td><strong>Modelo económico</strong></td><td>Gratuita (donation-ware)</td><td>Freemium (Essential gratuita + Pro 2,99 €/mes o 24,99 € de por vida)</td></tr>
+      <tr><td><strong>macOS requerido</strong></td><td>macOS 12+</td><td>macOS 15.0+ (macOS 26 para Apple Intelligence Digest)</td></tr>
+      <tr><td><strong>Apple Silicon / Intel</strong></td><td>Ambos soportados</td><td>Ambos soportados</td></tr>
+      <tr><td><strong>Idiomas de UI</strong></td><td>Solo inglés</td><td>4 idiomas (FR / EN / ES / DE)</td></tr>
+      <tr><td><strong>Intención del producto</strong></td><td>Eliminar visualmente la muesca</td><td>Asumir la muesca y hacerla útil</td></tr>
+      <tr><td><strong>Módulos nativos</strong></td><td>Ninguno (herramienta monofunción)</td><td>14 módulos nativos</td></tr>
+      <tr><td><strong>HUD del sistema</strong></td><td>No tocado</td><td>Sustituye volumen, brillo, teclado</td></tr>
+      <tr><td><strong>Multipantalla</strong></td><td>Sí (cada pantalla tratada)</td><td>Sí (sigue la pantalla activa)</td></tr>
+      <tr><td><strong>Público objetivo</strong></td><td>Usuarios que quieren no ver la muesca</td><td>Usuarios que quieren aprovechar la muesca</td></tr>
+    </tbody>
+  </table>
+
+  <p>La tabla lo muestra claramente: no se está comparando lo mismo. TopNotch es una herramienta monofunción, elegante y lograda en su ámbito. NotchIA es un centro de control completo. Ningún criterio designa un «mejor» — solo miden dos enfoques incompatibles del mismo problema.</p>
+
+  <h2 id="quand-topnotch">Cuándo elegir <span class="grad-text">TopNotch</span></h2>
+
+  <p>TopNotch es la elección adecuada en varios casos precisos:</p>
+
+  <ul>
+    <li><strong>La muesca te molesta visualmente.</strong> Si encuentras perturbadora esa zona negra en mitad de la barra de menús, TopNotch la borra (visualmente) en segundos.</li>
+    <li><strong>Quieres 100 % gratis, sin compromiso.</strong> Sin Pro, sin paywall, sin suscripción. Una donación opcional, nada más.</li>
+    <li><strong>No quieres nada más en la muesca.</strong> No usas la muesca como zona de interacción, solo quieres que ya no se vea.</li>
+    <li><strong>Hablas inglés sin problemas.</strong> La interfaz es solo en inglés.</li>
+    <li><strong>Tienes una configuración multipantalla con monitores externos sin muesca.</strong> TopNotch homogeneiza la barra de menús en todas las pantallas.</li>
+  </ul>
+
+  <p>TopNotch es exactamente lo que promete ser: una app simple, enfocada, que resuelve limpiamente el problema que se ha fijado. Elegirla no tiene ningún defecto si tu necesidad se limita a «hacer desaparecer» la muesca.</p>
+
+  <h2 id="quand-notchia">Cuándo elegir <span class="grad-text">NotchIA</span></h2>
+
+  <p>NotchIA encaja mejor en estos casos:</p>
+
+  <ul>
+    <li><strong>Quieres aprovechar la zona de la muesca.</strong> En lugar de ocultarla, quieres ver allí tus controles de medios, tu próximo evento del calendario, tu Pomodoro, tus drag-and-drop temporales (Shelf), tu AirDrop, tus resúmenes RSS de Apple Intelligence.</li>
+    <li><strong>Quieres IA en directo en la muesca.</strong> NotchIA muestra el estado en tiempo real de Claude Code, ChatGPT Codex y GitHub Copilot, con 10 estados (Compilando, Terminal, Buscando, Leyendo, Escribiendo, etc.) y el consumo de tokens. Ninguna otra app notch ofrece esto hoy.</li>
+    <li><strong>Quieres Apple Intelligence on-device.</strong> El módulo Digest (exclusiva 2.8.0) resume tus feeds RSS vía los modelos Apple Intelligence locales, 100 % on-device, sin envío a un servidor de terceros.</li>
+    <li><strong>Usas macOS en francés, español o alemán.</strong> NotchIA está traducida a 4 idiomas.</li>
+    <li><strong>Quieres soporte directo.</strong> Un email a <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> recibe una respuesta de Axel, el desarrollador.</li>
+    <li><strong>Quieres una compra de por vida.</strong> 24,99 € una sola vez, actualizaciones incluidas, sin suscripción obligatoria.</li>
+  </ul>
+
+  <h2 id="hack">El truco power-user: <span class="grad-text">combinar ambas</span></h2>
+
+  <p>Aquí está el detalle interesante que pocos usuarios se dan cuenta: <strong>TopNotch y NotchIA pueden convivir perfectamente</strong>, porque no tocan las mismas cosas.</p>
+
+  <p>Caso de uso típico: trabajas en un MacBook Pro de 14" conectado a una pantalla externa (por ejemplo un Studio Display o un monitor 4K clásico sin muesca). En la pantalla externa, la ausencia de muesca crea una incoherencia visual entre las dos barras de menús. En el MacBook, la muesca física sigue presente pase lo que pase.</p>
+
+  <p>El combo ganador:</p>
+
+  <ul>
+    <li><strong>TopNotch</strong> homogeneiza la barra de menús en la pantalla externa (y de paso camufla la muesca del MacBook cuando trabajas en modo pantalla completa oscuro).</li>
+    <li><strong>NotchIA</strong> permanece activa en la pantalla del MacBook y proporciona sus 14 módulos alrededor de la muesca física.</li>
+  </ul>
+
+  <p>Ningún conflicto en la práctica: TopNotch actúa sobre el color de la barra de menús, NotchIA actúa sobre la zona de la muesca. Las dos apps son gratuitas al inicio (TopNotch totalmente, NotchIA en su nivel Essential), así que probar no cuesta nada.</p>
+
+  <p>Si quieres quedarte solo con una, tu necesidad decide: <em>ocultar</em> la muesca o <em>aprovecharla</em>. Los dos verbos son antinómicos.</p>
+
+  <h2 id="faq">FAQ: <span class="grad-text">elegir una app para la muesca</span></h2>
+
+  <h3>¿Son NotchIA y TopNotch competidoras?</h3>
+  <p>No realmente. <strong>TopNotch pertenece a la categoría «notch hider»</strong>: su único objetivo es hacer desaparecer visualmente la muesca tiñendo de negro la barra de menús. <strong>NotchIA pertenece a la categoría «notch utility»</strong>: aprovecha la muesca colocando 14 módulos interactivos. Las dos apps responden a filosofías opuestas y pueden incluso usarse juntas en configuraciones multipantalla.</p>
+
+  <h3>¿Tiene TopNotch funciones de IA?</h3>
+  <p>No. TopNotch no tiene ninguna funcionalidad de IA ni módulo interactivo. Es una app monofunción publicada en 2021 cuyo papel se limita a teñir la barra de menús para camuflar la muesca. <strong>NotchIA</strong>, por el contrario, integra el estado en directo de Claude Code, ChatGPT Codex, GitHub Copilot y el Apple Intelligence Digest on-device en macOS 26+.</p>
+
+  <h3>¿Se pueden usar NotchIA y TopNotch al mismo tiempo?</h3>
+  <p>Sí, e incluso es un truco power-user pertinente. Activa TopNotch en tu pantalla externa principal (sin muesca física) para homogeneizar visualmente la barra de menús, y usa NotchIA en la pantalla del MacBook para aprovechar la muesca física con sus 14 módulos. <strong>Las dos apps no se pisan</strong>.</p>
+
+  <h3>¿Cuál es gratuita?</h3>
+  <p>TopNotch es totalmente gratuita (donation-ware) desde su lanzamiento en 2021. NotchIA ofrece un nivel <strong>Essential gratuito de por vida</strong> que cubre los módulos básicos, y un nivel Pro a 2,99 €/mes o 24,99 € de por vida para la IA en directo, el conversor de archivos y el portapapeles ilimitado.</p>
+
+  <h3>¿Funciona TopNotch en macOS 26?</h3>
+  <p>TopNotch anuncia oficialmente macOS 12+ y sigue funcionando en versiones posteriores, incluido macOS 26, según los comentarios de la comunidad. <strong>NotchIA</strong> requiere macOS 15.0+ para la mayoría de módulos y macOS 26 para Apple Intelligence Digest on-device.</p>
+
+  <h3>¿Por qué NotchIA no oculta la muesca como TopNotch?</h3>
+  <p>Porque la filosofía de NotchIA es la opuesta: <strong>la muesca existe, mejor hacerla útil</strong>. En lugar de tratar de camuflarla — lo que reduce la zona a un agujero negro inerte — NotchIA la convierte en un cockpit interactivo (media, calendario, Focus, AirDrop, IA en directo, etc.). Si prefieres hacerla desaparecer visualmente, TopNotch es la app adecuada para ello.</p>
+
+  <div class="callout">
+    <p><strong>Sobre el autor.</strong> Axel Courty es desarrollador independiente y creador de NotchIA. Esta comparativa se actualiza con cada release importante de NotchIA (2 a 3 veces al año). Las afirmaciones sobre TopNotch se basan en su <a href="https://topnotch.app" rel="noopener" target="_blank">sitio oficial</a>, en el <a href="https://9to5mac.com/2021/10/28/top-notch-app-macbook-pro-notch/" rel="noopener" target="_blank">artículo de 9to5Mac de octubre de 2021</a> y en la reseña de Medium AD Reviews. Contacto: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Descargar NotchIA</a>
+    <a href="/blog/boring-notch-vs-notchia-comparativa-2026" class="btn-secondary">Ver la comparativa Boring Notch vs NotchIA</a>
+  </div>
+
+  <p class="mt-10 text-sm"><a href="/blog/" class="text-cream/55 hover:text-cream">← Todos los artículos</a></p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Aviso legal</a>
+      <a href="/cgv" class="hover:text-cream">Condiciones</a>
+      <a href="/privacy" class="hover:text-cream">Privacidad</a>
+      <a href="/refund" class="hover:text-cream">Reembolso</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const sel = document.getElementById('lang-switch');
+    if (!sel) return;
+    const currentLang = (document.documentElement.lang || 'fr').toLowerCase().split('-')[0];
+    const altMap = {};
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(l => {
+      const lang = l.getAttribute('hreflang').toLowerCase().split('-')[0];
+      const href = l.getAttribute('href');
+      if (lang && lang !== 'x-default' && href && !altMap[lang]) altMap[lang] = href;
+    });
+    Array.from(sel.options).forEach(opt => {
+      if (!altMap[opt.value]) opt.remove();
+    });
+    sel.value = altMap[currentLang] ? currentLang : sel.options[0]?.value || 'fr';
+    sel.addEventListener('change', (e) => {
+      try { localStorage.setItem('notchia-lang', e.target.value); } catch(_){}
+      const target = altMap[e.target.value];
+      if (target && target !== window.location.href) {
+        window.location.href = target;
+      }
+    });
+  })();
+</script>
+</body>
+</html>
