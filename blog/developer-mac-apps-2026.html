@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Essential Mac apps for developers in 2026 — IDEs, terminals, AI, cockpit</title>
+<meta name="description" content="15 essential Mac apps for developers in 2026: Cursor, Zed, Xcode 26, Warp, Ghostty, Claude Code, Codex, Copilot, Raycast, NotchIA and more." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="author" content="Axel Courty" />
+<meta name="keywords" content="mac apps for developers 2026, best mac dev apps, Cursor, Zed, Xcode 26, Warp, Ghostty, Claude Code, Codex, Copilot, Raycast, NotchIA, macOS dev stack" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/developer-mac-apps-2026" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Essential Mac apps for developers in 2026" />
+<meta property="og:description" content="15 Mac apps that make a real difference for devs in 2026: IDEs, terminals, AI, productivity, cockpit. Honest selection, dev-to-dev." />
+<meta property="og:url" content="https://notchia.app/blog/developer-mac-apps-2026" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:published_time" content="2026-05-27" />
+<meta property="article:author" content="Axel Courty" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Essential Mac apps for developers in 2026" />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' }, fontFamily: { display: ['"Fraunces"','ui-serif','Georgia','serif'], sans:['"Instrument Sans"','ui-sans-serif','system-ui','sans-serif'], mono:['"JetBrains Mono"','ui-monospace','monospace'] } } } }
+</script>
+<style>
+  :root { --ink: #0B0D12; --cream: #EDE8DC; --brand: linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%); }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .app-card { background: linear-gradient(180deg,#14171F 0%,#0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 14px; padding: 1.4rem 1.5rem; margin: 1.2rem 0; }
+  .app-card h3 { margin-top: 0.2rem; font-size: 1.35rem; font-family: 'Fraunces', serif; }
+  .app-card .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(237,232,220,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .app-card .price { display: inline-block; padding: 0.1rem 0.5rem; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-radius: 999px; }
+  .app-card .free { background: rgba(157,217,183,0.12); border-color: rgba(157,217,183,0.35); color: #9DD9B7; }
+  .rank { display: inline-block; padding: 0.1rem 0.6rem; background: rgba(255,122,45,0.12); border: 1px solid rgba(255,122,45,0.4); color: #FF7A2D; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-radius: 999px; margin-bottom: 0.4rem; }
+  .category-tag { display: inline-block; padding: 0.15rem 0.7rem; background: rgba(77,168,255,0.1); border: 1px solid rgba(77,168,255,0.35); color: #4DA8FF; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1.5rem 0; }
+  th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid rgba(237,232,220,0.08); }
+  th { color: #EDE8DC; font-weight: 600; }
+  td { color: rgba(237,232,220,0.78); }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tldr { background: linear-gradient(180deg,rgba(168,85,247,0.07) 0%,rgba(255,77,136,0.04) 100%); border: 1px solid rgba(168,85,247,0.18); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.5rem 0 2rem; }
+  .tldr p { color: rgba(237,232,220,0.85); margin-bottom: 0.3rem; }
+  .tldr strong { color: #FF7A2D; }
+  .workflow { background: rgba(237,232,220,0.03); border-left: 3px solid #FF7A2D; padding: 0.9rem 1.1rem; margin: 1rem 0; border-radius: 0 10px 10px 0; }
+  .workflow h4 { font-family: 'Fraunces', serif; font-size: 1.1rem; color: #EDE8DC; margin-bottom: 0.3rem; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://notchia.app/blog/developer-mac-apps-2026#article",
+      "headline": "Essential Mac apps for developers in 2026",
+      "description": "15 Mac apps that make a real difference for devs in 2026: IDEs (Cursor, Zed, Xcode 26), terminals (Warp, Ghostty, iTerm2), AI (Claude Code, Codex, Copilot), productivity (Raycast, Rectangle, CleanShot X), cockpit (NotchIA, Stats, Tailscale).",
+      "datePublished": "2026-05-27",
+      "dateModified": "2026-05-27",
+      "inLanguage": "en-US",
+      "image": "https://notchia.app/og-image.png",
+      "author": {
+        "@type": "Person",
+        "name": "Axel Courty",
+        "url": "https://notchia.app/",
+        "sameAs": ["https://github.com/coaxel2", "https://notchia.app/"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NotchIA",
+        "url": "https://notchia.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://notchia.app/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://notchia.app/blog/developer-mac-apps-2026"
+      },
+      "wordCount": 2200
+    },
+    {
+      "@type": "ItemList",
+      "name": "15 essential Mac apps for developers in 2026",
+      "numberOfItems": 15,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Cursor", "url": "https://cursor.com/", "description": "AI-first IDE based on VS Code, built-in agent, multi-file edits." },
+        { "@type": "ListItem", "position": 2, "name": "Zed", "url": "https://zed.dev/", "description": "Native Rust editor, collaborative, blazing fast, built-in AI." },
+        { "@type": "ListItem", "position": 3, "name": "Xcode 26", "url": "https://developer.apple.com/xcode/", "description": "Official Apple IDE for Swift, SwiftUI, iOS, macOS." },
+        { "@type": "ListItem", "position": 4, "name": "Warp", "url": "https://www.warp.dev/", "description": "Modern terminal with built-in AI and command blocks." },
+        { "@type": "ListItem", "position": 5, "name": "Ghostty", "url": "https://ghostty.org/", "description": "Native macOS terminal, blazing fast, free, written in Zig by Mitchell Hashimoto." },
+        { "@type": "ListItem", "position": 6, "name": "iTerm2", "url": "https://iterm2.com/", "description": "The reference Mac terminal for 15 years: splits, profiles, hotkey window." },
+        { "@type": "ListItem", "position": 7, "name": "Claude Code", "url": "https://www.anthropic.com/claude-code", "description": "Anthropic's CLI agent for long autonomous coding tasks." },
+        { "@type": "ListItem", "position": 8, "name": "ChatGPT Codex", "url": "https://openai.com/codex/", "description": "OpenAI's CLI coding agent, alternative to Claude Code." },
+        { "@type": "ListItem", "position": 9, "name": "GitHub Copilot", "url": "https://github.com/features/copilot", "description": "In-editor AI assistant for VS Code, JetBrains, Xcode." },
+        { "@type": "ListItem", "position": 10, "name": "Raycast", "url": "https://www.raycast.com/", "description": "Universal launcher with devtool extensions and built-in AI." },
+        { "@type": "ListItem", "position": 11, "name": "Rectangle", "url": "https://rectangleapp.com/", "description": "Keyboard-driven window management, free and open-source." },
+        { "@type": "ListItem", "position": 12, "name": "CleanShot X", "url": "https://cleanshot.com/", "description": "Screenshots and recordings for technical documentation." },
+        { "@type": "ListItem", "position": 13, "name": "NotchIA", "url": "https://notchia.app/", "description": "Notch as live AI cockpit (10 states), token/cache/quota stats for Claude Code, Codex, Copilot." },
+        { "@type": "ListItem", "position": 14, "name": "Stats", "url": "https://github.com/exelban/stats", "description": "System monitor (CPU, RAM, network, disk) in the menu bar, free." },
+        { "@type": "ListItem", "position": 15, "name": "Tailscale", "url": "https://tailscale.com/", "description": "WireGuard mesh VPN to share localhost between dev machines." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/developer-mac-apps-2026#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the most-used IDE for Mac developers in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VS Code remains the most used, but Cursor (a VS Code fork with native agentic AI) has grown enormously since 2024. Zed is rising fast among devs who care about native performance (Rust). Xcode 26 is still mandatory for native iOS/macOS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cursor or Zed: which one to pick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cursor is more AI-mature (built-in agent, multi-file edits, project memory). Zed is faster natively (GPU rendering, Rust) and lighter in RAM, with a more discreet built-in AI. Cursor if AI is the core of your workflow, Zed if performance and real-time collaboration are."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to pay for both Claude Code and ChatGPT Codex?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not required. Claude Code (Claude Pro $20/mo or Max) remains the leader on long tasks and reasoning. Codex (ChatGPT Plus $20/mo) is good at fast execution and OpenAI integration. Many devs run both for $40/mo and use NotchIA to see their states in parallel and switch based on the task."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which app monitors AI agents on Mac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NotchIA is the only macOS app that automatically detects Claude Code, ChatGPT Codex and GitHub Copilot and displays their 10 live states in the MacBook notch (Compiling, Searching, Editing, Web, Sub-agent, etc.), plus token/cache/quota stats over 5h and 7d. 100% local. Essential free, Pro €2.99/mo or €24.99 lifetime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which terminal between Warp, Ghostty and iTerm2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Warp for command blocks and built-in AI, Ghostty for pure performance (GPU, written in Zig), iTerm2 for historical robustness and configurability. None is bad — it's a question of preference and ecosystem."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://notchia.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Mac apps for developers 2026", "item": "https://notchia.app/blog/developer-mac-apps-2026" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Home</a>
+    <a href="/features" class="hover:text-cream">Features</a>
+    <a href="/pricing" class="hover:text-cream">Pricing</a>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Developer guide · macOS · May 2026</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Essential Mac apps for <span class="grad-text">developers</span> in 2026</h1>
+    <p class="text-cream/55 text-sm">By Axel Courty · May 27, 2026 · 12 min read · macOS 14+</p>
+  </section>
+
+  <div class="tldr">
+    <p><strong>Short answer.</strong> In 2026, the Mac dev stack that actually changes your day fits into 15 apps across 5 categories: <strong>IDEs</strong> (Cursor, Zed, Xcode 26), <strong>terminals</strong> (Warp, Ghostty, iTerm2), <strong>AI agents</strong> (Claude Code, ChatGPT Codex, GitHub Copilot), <strong>productivity</strong> (Raycast, Rectangle, CleanShot X), <strong>cockpit / monitoring</strong> (NotchIA, Stats, Tailscale). Honest dev-to-dev pick, zero marketing bullshit.</p>
+  </div>
+
+  <h2>The 2026 Mac dev stack in <span class="grad-text">one sentence</span></h2>
+
+  <p>An AI-first IDE (Cursor or Zed), a modern terminal (Warp or Ghostty), at least one CLI AI agent (Claude Code and/or Codex), a launcher (Raycast), and a cockpit to see everything running in the background (NotchIA). Everything else is comfort.</p>
+
+  <h2>Why <span class="grad-text">this selection</span>?</h2>
+
+  <p>I use these apps daily for at least six months, across pro contexts (Notch IA as a solo SaaS, several open-source side projects) and varied stacks (Swift/SwiftUI on Xcode 26, TypeScript/Next.js, Python/FastAPI, Rust). My criteria:</p>
+
+  <ul>
+    <li><strong>Daily efficiency</strong>: do I launch it every single day? If not, out.</li>
+    <li><strong>Indie-friendly</strong>: no enterprise seat minimum, sensible pricing, lifetime purchase when possible.</li>
+    <li><strong>Reasonable price</strong>: free > one-shot > low subscription. Anything above $20/mo needs to genuinely justify itself.</li>
+    <li><strong>2026-mature</strong>: no vapor, no unstable beta. Every app cited has at least one stable public release.</li>
+  </ul>
+
+  <p>No NotchIA bias (it's my app, I know): it's mentioned for what it brings specifically to AI workflow, and only on that basis.</p>
+
+  <h2>Editors / IDEs <span class="grad-text">(3 apps)</span></h2>
+
+  <p class="category-tag">Category 1 · Code editing</p>
+
+  <p>The IDE is the center of gravity for any dev. In 2026, on Mac, the choice boils down to three main options.</p>
+
+  <div class="app-card">
+    <p class="rank">#1 · Editors</p>
+    <p class="meta">AI-first IDE · Anysphere · cursor.com</p>
+    <h3>Cursor</h3>
+    <p><span class="price">Hobby free · Pro $20/mo · Business $40/mo</span></p>
+    <p><a href="https://cursor.com/" rel="noopener" target="_blank">Cursor</a> is a VS Code fork with a native AI agent (Composer, Agent mode), multi-file edits, project context memory, supercharged <code class="font-mono text-xs">Tab</code> completion. Massively adopted by full-stack web devs since 2024. The 2026 release has stabilized Agent mode for long-running tasks. Same shortcuts as VS Code, same extensions, so switching is painless.</p>
+    <p>Limit: it's a modified VS Code, so it shares the same memory footprint (~600 MB at rest). For very large monorepos, Zed is much lighter.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Native Rust editor · Zed Industries · zed.dev</p>
+    <h3>Zed</h3>
+    <p><span class="price free">Free (personal)</span> · <span class="price">AI Pro $20/mo</span></p>
+    <p><a href="https://zed.dev/" rel="noopener" target="_blank">Zed</a> is built by Atom alumni (Nathan Sobo et al.), written in Rust, GPU-rendered, real-time multiplayer. Sub-second startup, frame-perfect latency, built-in AI (your pick of Claude, GPT, Gemini). Ideal for Rust, Go, TypeScript. The collaborative mode (channels, share project) is unique on the market.</p>
+    <p>Limit: extension ecosystem still younger than VS Code/Cursor. If you live in exotic extensions (Markdown All in One, GitLens, etc.), you'll need to detox.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Apple IDE · developer.apple.com</p>
+    <h3>Xcode 26</h3>
+    <p><span class="price free">Free</span> (Apple Developer account required)</p>
+    <p><a href="https://developer.apple.com/xcode/" rel="noopener" target="_blank">Xcode 26</a> is mandatory for anything Swift, SwiftUI, iOS, macOS, watchOS, visionOS. The 2026 release ships Predictive Code Completion (local Apple Intelligence model) and a Swift Assist (cloud) assistant. The iOS simulator has finally gotten fast. Still heavy (~15 GB install with all platforms) but unavoidable for Apple-native work.</p>
+    <p>Tip: for Swift code outside the App Store context, Cursor + Swift extension works very well and saves launching Xcode for quick snippets.</p>
+  </div>
+
+  <h2>Terminals & shell <span class="grad-text">(3 apps)</span></h2>
+
+  <p class="category-tag">Category 2 · Terminal</p>
+
+  <p>A terminal isn't just a terminal anymore in 2026 — it's where AI agents run. Three serious choices.</p>
+
+  <div class="app-card">
+    <p class="meta">AI terminal · Warp · warp.dev</p>
+    <h3>Warp</h3>
+    <p><span class="price free">Free</span> · <span class="price">Pro $15/mo (teams)</span></p>
+    <p><a href="https://www.warp.dev/" rel="noopener" target="_blank">Warp</a> invented <em>command blocks</em>: each command and its output form an isolated block you can copy, reuse, share. Combined with Warp AI (command suggestions, error explanations), it's the terminal that thinks most like a 2026 dev. Native Apple Silicon, opens in ~200 ms.</p>
+    <p>Limit: requires a Warp account (free) for AI features. Some devs prefer to stay anonymous — in which case, Ghostty.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Native Zig terminal · ghostty.org</p>
+    <h3>Ghostty</h3>
+    <p><span class="price free">Free</span> (open-source, MIT)</p>
+    <p><a href="https://ghostty.org/" rel="noopener" target="_blank">Ghostty</a> is the terminal written by <a href="https://mitchellh.com/" rel="noopener" target="_blank">Mitchell Hashimoto</a> (HashiCorp co-founder) in Zig. GPU rendering, full xterm compliance, HCL config, instant startup. Released stable end of 2024, the 2026 version adds native multiplexing. If you want pure performance without cloud AI, this is the pick.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Historical reference · iterm2.com</p>
+    <h3>iTerm2</h3>
+    <p><span class="price free">Free</span> (open-source)</p>
+    <p><a href="https://iterm2.com/" rel="noopener" target="_blank">iTerm2</a> has been the reference for 15 years. Tiling, horizontal/vertical splits, profiles, instant replay, history search, triggers, tmux integration. Less flashy than Warp, more mature than Ghostty. For long parallel Claude Code sessions across multiple projects, its profiles and hotkey window setup remain unmatched.</p>
+  </div>
+
+  <h2>AI assistants <span class="grad-text">on Mac</span> (3 apps)</h2>
+
+  <p class="category-tag">Category 3 · AI agents</p>
+
+  <p>The gap between dev with and without AI has become absurd in 2026. The real question is no longer "do I use AI?" but "which one, for what?".</p>
+
+  <div class="app-card">
+    <p class="meta">CLI agent · Anthropic · anthropic.com/claude-code</p>
+    <h3>Claude Code</h3>
+    <p><span class="price">Included in Claude Pro $20/mo · Max from $100/mo</span></p>
+    <p><a href="https://www.anthropic.com/claude-code" rel="noopener" target="_blank">Claude Code</a> is Anthropic's CLI agent. You run <code class="font-mono text-xs">claude</code> in a folder, it reads the code, runs commands, edits files, runs tests, spawns sub-agents. Excellent at long reasoning, refactoring, complex debugging. The Claude Sonnet 4.7 release (January 2026) widened the context window further.</p>
+    <p>Limit: 5h and weekly quotas on Pro — hence the value of a cockpit that shows where you stand (see NotchIA below).</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">CLI agent · OpenAI · openai.com/codex</p>
+    <h3>ChatGPT Codex</h3>
+    <p><span class="price">Included in ChatGPT Plus $20/mo</span></p>
+    <p><a href="https://openai.com/codex/" rel="noopener" target="_blank">Codex</a> is OpenAI's answer to Claude Code. Launched late 2024 with its own CLI, it ties directly into your ChatGPT account. Faster on short/repetitive tasks, excellent at code review, sometimes better than Claude at SQL and Python data work. Many devs combine both depending on the task.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">In-editor assistant · GitHub · github.com/features/copilot</p>
+    <h3>GitHub Copilot</h3>
+    <p><span class="price">Individual $10/mo · Pro $19/mo · Business $19/mo</span></p>
+    <p><a href="https://github.com/features/copilot" rel="noopener" target="_blank">GitHub Copilot</a> lives inside your editor (VS Code, JetBrains, Xcode via the official extension since 2024). Still unbeatable for fast inline completions as you type. The 2026 release lets you pick GPT-5 or Claude 4.7 inside the Chat mode. Often unfairly forgotten in comparisons: for line-by-line productivity, it remains the best UX.</p>
+  </div>
+
+  <h2>Dev productivity <span class="grad-text">(3 apps)</span></h2>
+
+  <p class="category-tag">Category 4 · Productivity</p>
+
+  <div class="app-card">
+    <p class="meta">Launcher · raycast.com</p>
+    <h3>Raycast</h3>
+    <p><span class="price free">Free</span> · <span class="price">Pro $8/mo</span></p>
+    <p><a href="https://www.raycast.com/" rel="noopener" target="_blank">Raycast</a> replaces Spotlight. <code class="font-mono text-xs">⌘ Space</code>, type what you want: open a project, run a script, kill a port, look at a GitHub PR, translate, calculate, run a snippet. The extension store has exploded: Linear, Notion, GitHub, AWS, Docker, k9s, 1500+ official extensions. Raycast Pro adds an integrated LLM (Claude / GPT), useful alongside Claude Code for micro-tasks.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Window manager · rectangleapp.com</p>
+    <h3>Rectangle</h3>
+    <p><span class="price free">Free</span> (Rectangle Pro at $10 one-shot)</p>
+    <p><a href="https://rectangleapp.com/" rel="noopener" target="_blank">Rectangle</a> manages your windows from the keyboard: <code class="font-mono text-xs">⌃⌥←</code> for left half, <code class="font-mono text-xs">⌃⌥↑</code> for fullscreen, etc. Open-source, configurable, zero friction. macOS 15 finally added its own window snapping, but Rectangle is still more powerful (custom presets, halves/thirds/sixths, multi-display).</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Screenshots + recording · cleanshot.com</p>
+    <h3>CleanShot X</h3>
+    <p><span class="price">$29 one-shot · Cloud $8/mo optional</span></p>
+    <p><a href="https://cleanshot.com/" rel="noopener" target="_blank">CleanShot X</a> is what turns your screenshots into clean documentation: annotations, blur, redaction of secrets, scroll capture, MP4 and GIF, OCR on screenshot. Essential as soon as you write a PR description, a bug report, an internal guide. Costs a bit but 0 % mandatory subscription — rare in 2026.</p>
+  </div>
+
+  <h2>Cockpit / monitoring <span class="grad-text">(3 apps)</span></h2>
+
+  <p class="category-tag">Category 5 · Cockpit</p>
+
+  <p>The real 2025-2026 novelty: AI agents run in the background while you do something else. You need a dedicated view. Three complementary apps.</p>
+
+  <div class="app-card">
+    <p class="rank">#13 · AI cockpit</p>
+    <p class="meta">Notch as AI cockpit · French indie · notchia.app</p>
+    <h3>NotchIA</h3>
+    <p><span class="price free">Essential free</span> · <span class="price">Pro €2.99/mo or €24.99 lifetime</span></p>
+    <p><strong>NotchIA</strong> turns the MacBook notch (or menu bar on notch-less Macs) into a live AI cockpit. When Claude Code, ChatGPT Codex or GitHub Copilot runs in the background, NotchIA detects the session automatically and shows its state among 10 recognized ones: <strong>Compiling, Terminal, Searching, Reading, Editing, Web, Writing, Sub-agent, Planning, Running</strong>.</p>
+    <p>Bonus: real-time token stats (input, output, cache hit, cache create), 5h and 7d quotas with progress bars, notifications when the agent waits for permission, multi-session indicator (colored dots under the closed notch for parallel sessions), bring-to-front IDE in one click. Also adds <strong>Apple Intelligence Digest</strong> (notification summary, battery, weather) for compatible Macs. 100% local reading from <code class="font-mono text-xs">~/.claude/projects/</code> and equivalents — no data leaves the Mac.</p>
+    <p>Current version: <strong>v2.8.0 "Wise Owl"</strong>, released May 15, 2026.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">System monitor · open-source · github.com/exelban/stats</p>
+    <h3>Stats</h3>
+    <p><span class="price free">Free</span> (open-source, MIT)</p>
+    <p><a href="https://github.com/exelban/stats" rel="noopener" target="_blank">Stats</a> shows in the menu bar: CPU (per P/E core on Apple Silicon), GPU, RAM, swap, network (up/down real time), disks, sensors, battery, fans. Hyper-configurable, zero ads, zero telemetry. The 2026 release supports the new M5 and M5 Pro chips.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">WireGuard mesh VPN · tailscale.com</p>
+    <h3>Tailscale</h3>
+    <p><span class="price free">Personal free (3 users, 100 devices)</span> · <span class="price">Pro $6/user/mo</span></p>
+    <p><a href="https://tailscale.com/" rel="noopener" target="_blank">Tailscale</a> creates a WireGuard mesh VPN between your machines (Mac, Linux, iPhone, NAS, servers). Access your localhost from your phone, share a dev server with a colleague without ngrok, connect your CI to an on-prem machine. SSH without keys via Tailscale SSH. Essential as soon as you work multi-machine.</p>
+  </div>
+
+  <h2>Recap table: <span class="grad-text">all 15 apps at a glance</span></h2>
+
+  <table>
+    <thead>
+      <tr><th>App</th><th>Category</th><th>Price</th><th>Free alternative</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Cursor</strong></td><td>IDE</td><td>$20/mo (Hobby free)</td><td>VS Code</td></tr>
+      <tr><td><strong>Zed</strong></td><td>IDE</td><td>Free (personal)</td><td>—</td></tr>
+      <tr><td><strong>Xcode 26</strong></td><td>IDE (Apple)</td><td>Free</td><td>—</td></tr>
+      <tr><td><strong>Warp</strong></td><td>Terminal</td><td>Free · Pro $15/mo</td><td>Ghostty, iTerm2</td></tr>
+      <tr><td><strong>Ghostty</strong></td><td>Terminal</td><td>Free (MIT)</td><td>Terminal.app</td></tr>
+      <tr><td><strong>iTerm2</strong></td><td>Terminal</td><td>Free (GPL)</td><td>Terminal.app</td></tr>
+      <tr><td><strong>Claude Code</strong></td><td>AI agent</td><td>$20/mo (Claude Pro)</td><td>Aider (open-source)</td></tr>
+      <tr><td><strong>ChatGPT Codex</strong></td><td>AI agent</td><td>$20/mo (ChatGPT Plus)</td><td>Aider</td></tr>
+      <tr><td><strong>GitHub Copilot</strong></td><td>IDE assistant</td><td>$10/mo</td><td>Continue.dev</td></tr>
+      <tr><td><strong>Raycast</strong></td><td>Launcher</td><td>Free · Pro $8/mo</td><td>Spotlight, Alfred (free limited)</td></tr>
+      <tr><td><strong>Rectangle</strong></td><td>Window manager</td><td>Free</td><td>macOS 15 native snap</td></tr>
+      <tr><td><strong>CleanShot X</strong></td><td>Screenshots</td><td>$29 one-shot</td><td>Native macOS (⌘⇧5)</td></tr>
+      <tr><td><strong>NotchIA</strong></td><td>AI cockpit</td><td>Free · Pro €2.99/mo or €24.99 lifetime</td><td>— (unique)</td></tr>
+      <tr><td><strong>Stats</strong></td><td>System monitor</td><td>Free (MIT)</td><td>Activity Monitor (limited)</td></tr>
+      <tr><td><strong>Tailscale</strong></td><td>Dev VPN</td><td>Free (3 users)</td><td>ngrok (limited), Cloudflare Tunnel</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Workflows: <span class="grad-text">3 stack templates</span> by profile</h2>
+
+  <div class="workflow">
+    <h4>Stack 1 — Full-stack web (TypeScript / Next.js / Postgres)</h4>
+    <p><strong>Cursor</strong> (IDE) + <strong>Warp</strong> (AI terminal) + <strong>Claude Code</strong> (long agent) + <strong>GitHub Copilot</strong> (inline completions) + <strong>Raycast</strong> (launcher) + <strong>NotchIA</strong> (cockpit) + <strong>Rectangle</strong> + <strong>Tailscale</strong> (share localhost to a designer).</p>
+    <p>Cost: ~$58/mo (Cursor 20 + Claude Pro 20 + Copilot 10 + Raycast Pro 8) or ~$50 if you skip Raycast Pro.</p>
+  </div>
+
+  <div class="workflow">
+    <h4>Stack 2 — iOS / macOS native (Swift / SwiftUI)</h4>
+    <p><strong>Xcode 26</strong> (mandatory) + <strong>Cursor</strong> or <strong>Zed</strong> (quick edits outside Xcode) + <strong>iTerm2</strong> (plays well with Xcode) + <strong>Claude Code</strong> (Swift refactors) + <strong>NotchIA</strong> (useful for Xcode 26: you see compilation running from the notch while doing something else) + <strong>CleanShot X</strong> (App Store screenshots).</p>
+    <p>Cost: ~$20/mo (Claude Pro 20). Apple-native is still one of the cheapest stacks in 2026.</p>
+  </div>
+
+  <div class="workflow">
+    <h4>Stack 3 — Indie SaaS solo (Rust / Go / Python)</h4>
+    <p><strong>Zed</strong> (Rust/Go perf) + <strong>Ghostty</strong> (pure terminal) + <strong>Claude Code</strong> + <strong>ChatGPT Codex</strong> (switching by task) + <strong>Raycast</strong> + <strong>NotchIA</strong> (see both agents in parallel) + <strong>Stats</strong> (watch your own workers) + <strong>Tailscale</strong> (preview to beta testers).</p>
+    <p>Cost: ~$40/mo (Claude Pro 20 + ChatGPT Plus 20). The two-agent combo has become standard among indies because Claude quotas (5h / 7d) get tight in autonomous mode — Codex takes over.</p>
+  </div>
+
+  <h2>FAQ</h2>
+
+  <h3>What is the most-used IDE for Mac developers in 2026?</h3>
+  <p>VS Code remains the most used, but <strong>Cursor</strong> (a VS Code fork with native agentic AI) has grown enormously since 2024. <strong>Zed</strong> is rising fast among devs who care about native performance (Rust). <strong>Xcode 26</strong> is still mandatory for native iOS/macOS.</p>
+
+  <h3>Cursor or Zed: which one to pick?</h3>
+  <p>Cursor is more AI-mature (built-in agent, multi-file edits, project memory). Zed is faster natively (GPU rendering, Rust) and lighter in RAM, with a more discreet built-in AI. <strong>Cursor</strong> if AI is the core of your workflow, <strong>Zed</strong> if performance and real-time collaboration are.</p>
+
+  <h3>Do I need to pay for both Claude Code and ChatGPT Codex?</h3>
+  <p>Not required. <strong>Claude Code</strong> (Claude Pro $20/mo or Max) remains the leader on long tasks and reasoning. <strong>Codex</strong> (ChatGPT Plus $20/mo) is good at fast execution and OpenAI integration. Many devs run both for $40/mo and use <a href="/">NotchIA</a> to see their states in parallel and switch based on the task.</p>
+
+  <h3>Which app monitors AI agents on Mac?</h3>
+  <p><a href="/">NotchIA</a> is the only macOS app that automatically detects Claude Code, ChatGPT Codex and GitHub Copilot and displays their 10 live states in the MacBook notch (Compiling, Searching, Editing, Web, Sub-agent, etc.), plus token/cache/quota stats over 5h and 7d. 100% local. Essential free, <a href="/pricing">Pro €2.99/mo or €24.99 lifetime</a>.</p>
+
+  <h3>Which terminal between Warp, Ghostty and iTerm2?</h3>
+  <p><strong>Warp</strong> for command blocks and built-in AI, <strong>Ghostty</strong> for pure performance (GPU, written in Zig), <strong>iTerm2</strong> for historical robustness and configurability. None is bad — it's a question of preference and ecosystem.</p>
+
+  <div class="mt-8 rounded-xl border border-cream/10 bg-gradient-to-b from-[#14171F] to-[#0F1218] px-5 py-4">
+    <p><strong>About the author.</strong> Axel Courty is an indie developer and creator of NotchIA, the macOS app that turns the MacBook notch into a live AI cockpit (Claude Code, ChatGPT Codex, GitHub Copilot). This guide is updated at every major release. Contact: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> · <a href="https://github.com/coaxel2" rel="me noopener">GitHub</a>.</p>
+  </div>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Download NotchIA</a>
+    <a href="/blog/best-mac-apps-claude-code-2026" class="btn-secondary">See the Claude Code special guide</a>
+  </div>
+
+  <p class="mt-10 text-sm"><a href="/" class="text-cream/55 hover:text-cream">← Back to home</a></p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Legal notice</a>
+      <a href="/cgv" class="hover:text-cream">Terms</a>
+      <a href="/privacy" class="hover:text-cream">Privacy</a>
+      <a href="/refund" class="hover:text-cream">Refund</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

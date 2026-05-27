@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apple Intelligence en Mac: 10 casos de uso concretos en 2026</title>
+<meta name="description" content="Apple Intelligence en Mac en 2026: 10 casos de uso concretos (Writing Tools, Image Playground, Genmoji, Siri, NotchIA Digest, Mail, Fotos…) con requisitos y activación." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="author" content="Axel Courty" />
+<meta name="keywords" content="Apple Intelligence Mac, Foundation Models, macOS Tahoe 26, Writing Tools, Image Playground, Genmoji, Siri, NotchIA Digest, IA on-device Mac, Apple Silicon" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Apple Intelligence en Mac: 10 casos de uso concretos en 2026" />
+<meta property="og:description" content="Los 10 casos de uso on-device de Apple Intelligence en macOS Tahoe: Writing Tools, Genmoji, Image Playground, Siri, NotchIA Digest, resumen de correos, transcripción…" />
+<meta property="og:url" content="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="es_ES" />
+<meta property="article:published_time" content="2026-05-27" />
+<meta property="article:author" content="Axel Courty" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Apple Intelligence en Mac: 10 casos de uso concretos en 2026" />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' }, fontFamily: { display: ['"Fraunces"','ui-serif','Georgia','serif'], sans:['"Instrument Sans"','ui-sans-serif','system-ui','sans-serif'], mono:['"JetBrains Mono"','ui-monospace','monospace'] } } } }
+</script>
+<style>
+  :root { --ink: #0B0D12; --cream: #EDE8DC; --brand: linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%); }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .app-card { background: linear-gradient(180deg,#14171F 0%,#0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 14px; padding: 1.4rem 1.5rem; margin: 1.2rem 0; }
+  .app-card h3 { margin-top: 0.2rem; font-size: 1.35rem; font-family: 'Fraunces', serif; }
+  .app-card .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(237,232,220,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .app-card .price { display: inline-block; padding: 0.1rem 0.5rem; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-radius: 999px; }
+  .app-card .free { background: rgba(157,217,183,0.12); border-color: rgba(157,217,183,0.35); color: #9DD9B7; }
+  .app-card .local { display: inline-block; padding: 0.1rem 0.5rem; background: rgba(77,168,255,0.12); border: 1px solid rgba(77,168,255,0.35); color: #4DA8FF; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-radius: 999px; margin-left: 0.3rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1.5rem 0; }
+  th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid rgba(237,232,220,0.08); }
+  th { color: #EDE8DC; font-weight: 600; }
+  td { color: rgba(237,232,220,0.78); }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tldr { background: linear-gradient(180deg,rgba(168,85,247,0.07) 0%,rgba(255,77,136,0.04) 100%); border: 1px solid rgba(168,85,247,0.18); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.5rem 0 2rem; }
+  .tldr p { color: rgba(237,232,220,0.85); margin-bottom: 0.3rem; }
+  .tldr strong { color: #FF7A2D; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://notchia.app/blog/apple-intelligence-mac-2026-es#article",
+      "headline": "Apple Intelligence en Mac: 10 casos de uso concretos en 2026",
+      "description": "Resumen factual de los 10 casos de uso on-device de Apple Intelligence en macOS Tahoe 26: Writing Tools, Image Playground, Genmoji, Siri, resumen de notificaciones, búsqueda en Fotos en lenguaje natural, NotchIA Digest, resumen de correos, transcripciones.",
+      "datePublished": "2026-05-27",
+      "dateModified": "2026-05-27",
+      "inLanguage": "es-ES",
+      "image": "https://notchia.app/og-image.png",
+      "author": {
+        "@type": "Person",
+        "name": "Axel Courty",
+        "url": "https://notchia.app/",
+        "sameAs": ["https://github.com/coaxel2", "https://notchia.app/"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NotchIA",
+        "url": "https://notchia.app/",
+        "logo": { "@type": "ImageObject", "url": "https://notchia.app/logo-512.png" }
+      },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://notchia.app/blog/apple-intelligence-mac-2026-es" },
+      "wordCount": 1620
+    },
+    {
+      "@type": "ItemList",
+      "name": "10 casos de uso de Apple Intelligence en Mac en 2026",
+      "numberOfItems": 10,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Resumen de artículos largos", "description": "Safari Reader y Notas usan Apple Intelligence para resumir un artículo o una nota en segundos, on-device." },
+        { "@type": "ListItem", "position": 2, "name": "Writing Tools", "description": "Reescritura, revisión y ajuste de tono en cualquier app de macOS con campo de texto estándar." },
+        { "@type": "ListItem", "position": 3, "name": "Image Playground", "description": "Generación de imágenes on-device en tres estilos (Animation, Illustration, Sketch) a partir de una descripción de texto." },
+        { "@type": "ListItem", "position": 4, "name": "Genmoji", "description": "Creación de emojis personalizados a partir de una descripción, utilizables como stickers o emojis en línea." },
+        { "@type": "ListItem", "position": 5, "name": "Siri con contexto personal", "description": "La nueva Siri entiende el contexto del Mac: calendario, contactos, mensajes, archivos." },
+        { "@type": "ListItem", "position": 6, "name": "Resumen de notificaciones", "description": "Notificaciones agrupadas de una misma app resumidas en una línea en el Centro de notificaciones." },
+        { "@type": "ListItem", "position": 7, "name": "Búsqueda en Fotos en lenguaje natural", "description": "«Fotos de Emma en la playa el verano pasado» funciona en español on-device en la app Fotos." },
+        { "@type": "ListItem", "position": 8, "name": "NotchIA Digest", "url": "https://notchia.app/", "description": "Primer ejemplo de app de terceros que usa Foundation Models para curación: agrega tus feeds RSS, filtra por intereses y resume en local." },
+        { "@type": "ListItem", "position": 9, "name": "Resumen de correos en Mail", "description": "Apple Mail muestra un resumen de una o dos líneas encima de cada correo largo, generado on-device." },
+        { "@type": "ListItem", "position": 10, "name": "Transcripciones en Notas y Notas de voz", "description": "Grabación y transcripción automática en Notas y Notas de voz, con resumen opcional." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/apple-intelligence-mac-2026-es#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué Mac soportan Apple Intelligence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Todos los Mac con chip Apple Silicon (M1, M2, M3, M4 y posteriores). Los Mac con Intel no son compatibles, porque Apple Intelligence depende del Neural Engine y de la arquitectura de memoria unificada. 8 GB de RAM mínimo, ~4 GB de almacenamiento para los modelos locales." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Apple Intelligence es gratis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Apple Intelligence está incluido en macOS sin coste extra. Algunas funciones opcionales pasan por ChatGPT (solo con consentimiento explícito): una cuenta de pago ChatGPT Plus aumenta las cuotas, pero el uso básico es gratuito." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mis datos salen del Mac?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No, salvo casos explícitos. Los Foundation Models se ejecutan on-device en el Neural Engine. Para peticiones más pesadas, macOS puede enrutar a Private Cloud Compute (servidores Apple Silicon con atestación criptográfica y código auditable). Ningún dato se envía a ChatGPT sin solicitud explícita del usuario." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué idiomas están soportados?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Apple Intelligence soporta inglés desde octubre de 2024, además de francés, alemán, italiano, portugués, español, japonés, coreano y chino simplificado desde 2025. La lista sigue creciendo con macOS Tahoe 26." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://notchia.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Apple Intelligence en Mac 2026", "item": "https://notchia.app/blog/apple-intelligence-mac-2026-es" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Inicio</a>
+    <a href="/features" class="hover:text-cream">Funciones</a>
+    <a href="/pricing" class="hover:text-cream">Precios</a>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Guía IA · macOS · mayo 2026</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Apple Intelligence en <span class="grad-text">Mac</span>: 10 casos de uso concretos en 2026</h1>
+    <p class="text-cream/55 text-sm">Por Axel Courty · 27 de mayo de 2026 · 9 min de lectura · macOS 15.1+ / 26 Tahoe</p>
+  </section>
+
+  <div class="tldr">
+    <p><strong>Respuesta corta.</strong> Apple Intelligence es la capa de IA on-device de Apple, presentada con <strong>macOS Sequoia 15.1</strong> en octubre de 2024 y ampliada en <strong>macOS Tahoe 26</strong> en otoño de 2025. Expone <strong>Foundation Models</strong> (~3 mil millones de parámetros) que se ejecutan en el Neural Engine de los chips Apple Silicon, sin red por defecto. En 2026, los 10 casos de uso concretos en Mac son: resumen de artículos, Writing Tools, Image Playground, Genmoji, Siri contextual, resumen de notificaciones, búsqueda en Fotos en lenguaje natural, <strong>NotchIA Digest</strong>, resumen de correos y transcripciones. Requiere Apple Silicon (M1 mínimo), ~4 GB de almacenamiento, gratis.</p>
+  </div>
+
+  <h2>¿Qué es <span class="grad-text">Apple Intelligence</span>?</h2>
+
+  <p>Apple Intelligence es el conjunto de funciones de IA on-device de Apple, integrado en iOS, iPadOS, macOS y visionOS. En Mac se apoya en <strong>Foundation Models</strong> ejecutados directamente en el Neural Engine del chip Apple Silicon, sin envío por red por defecto. Para peticiones más pesadas, macOS puede enrutar a <strong>Private Cloud Compute</strong>, una infraestructura Apple Silicon con código auditable y comunicación cifrada de extremo a extremo. La <a href="https://www.apple.com/apple-intelligence/" rel="noopener" target="_blank">página oficial de Apple Intelligence</a> y la <a href="https://developer.apple.com/documentation/foundationmodels" rel="noopener" target="_blank">documentación Foundation Models</a> son la referencia técnica.</p>
+
+  <h2>Los <span class="grad-text">10 casos de uso</span> en Mac</h2>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 1 · Lectura · Safari + Notas</p>
+    <h3>1. Resumen de artículos largos</h3>
+    <p><span class="price local">On-device</span></p>
+    <p>En <strong>Safari Reader</strong>, un botón «Resumir» genera un resumen de 3 a 5 líneas de un artículo web, en local. Lo mismo en <strong>Notas</strong> desde el menú Apple Intelligence. Ideal para echar un vistazo rápido a una página larga sin leerla entera.</p>
+    <p><strong>Requiere:</strong> macOS 15.1+. <strong>App:</strong> Safari, Notas.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 2 · Escritura · sistema</p>
+    <h3>2. Writing Tools</h3>
+    <p><span class="price local">On-device</span></p>
+    <p>Las <strong>Writing Tools</strong> aparecen en cualquier app que exponga un campo de texto estándar de macOS. Reescritura, revisión, ajuste de tono (Friendly, Professional, Concise), resumen, lista con viñetas, tabla. Disponibles en Mail, Pages, Notas, Mensajes y la mayoría de apps de terceros que usan <code class="font-mono text-xs">NSTextView</code>.</p>
+    <p><strong>Requiere:</strong> macOS 15.1+. <strong>App:</strong> cualquier app nativa.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 3 · Creación visual · Image Playground</p>
+    <h3>3. Image Playground</h3>
+    <p><span class="price local">On-device</span></p>
+    <p><strong>Image Playground</strong> es una app dedicada que genera imágenes on-device en tres estilos: <em>Animation</em>, <em>Illustration</em>, <em>Sketch</em>. Describes el sujeto, eliges un estilo y obtienes una imagen en segundos. Integrada en Mensajes, Notas, Pages y Freeform.</p>
+    <p><strong>Requiere:</strong> macOS 15.2+. <strong>App:</strong> Image Playground.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 4 · Emojis · Genmoji</p>
+    <h3>4. Genmoji</h3>
+    <p><span class="price local">On-device</span></p>
+    <p><strong>Genmoji</strong> crea emojis personalizados a partir de una descripción («un gato con gafas programando»). Los Genmoji se usan como stickers en Mensajes o como emojis en línea en cualquier campo de texto que admita la paleta del sistema.</p>
+    <p><strong>Requiere:</strong> macOS 15.2+. <strong>App:</strong> paleta de emojis del sistema.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 5 · Asistente · Siri</p>
+    <h3>5. Siri reforzada con contexto personal</h3>
+    <p><span class="price local">On-device + Private Cloud Compute</span></p>
+    <p>La nueva <strong>Siri</strong> entiende el contexto del Mac: calendario, contactos, mensajes, archivos. Puedes pedir «Encuentra el adjunto que me envió Sofía la semana pasada» y Siri busca en tus datos locales para responder. Las acciones sensibles pueden enrutarse a Private Cloud Compute cuando es necesario.</p>
+    <p><strong>Requiere:</strong> macOS 26. <strong>App:</strong> Siri del sistema.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 6 · Centro de notificaciones</p>
+    <h3>6. Resumen de notificaciones agrupadas</h3>
+    <p><span class="price local">On-device</span></p>
+    <p>Cuando varias notificaciones de la misma app se acumulan (grupo de Mensajes, hilo de Slack, correos), macOS genera un resumen de una línea en vez de apilar cada notificación. Especialmente útil al volver de una reunión.</p>
+    <p><strong>Requiere:</strong> macOS 15.1+. <strong>App:</strong> Centro de notificaciones.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 7 · Fotos · lenguaje natural</p>
+    <h3>7. Búsqueda en lenguaje natural en Fotos</h3>
+    <p><span class="price local">On-device</span></p>
+    <p>En la app <strong>Fotos</strong>, la barra de búsqueda acepta consultas en español: «fotos de Emma en la playa el verano pasado», «capturas con código», «recibos de marzo». El motor cruza reconocimiento de objetos, OCR y metadatos en local.</p>
+    <p><strong>Requiere:</strong> macOS 15.1+. <strong>App:</strong> Fotos.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 8 · Curación RSS · NotchIA</p>
+    <h3>8. NotchIA Digest — curación RSS on-device</h3>
+    <p><span class="price local">On-device</span> · <span class="price free">Gratis</span></p>
+    <p><strong>NotchIA Digest</strong>, lanzado el 15 de mayo de 2026 en la v2.8.0 «Wise Owl», es el primer ejemplo de app de terceros que usa <strong>Foundation Models</strong> para <strong>curación RSS</strong>. Pegas tus feeds Atom/RSS, describes tus intereses en lenguaje claro («infra cloud, IA on-device, regulación digital UE»), y el modelo local filtra, deduplica y resume. Todo se queda en el Mac. <a href="/">Más sobre NotchIA</a>.</p>
+    <p><strong>Requiere:</strong> macOS 26 (Foundation Models). <strong>App:</strong> NotchIA 2.8.0+.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 9 · Correo · Mail</p>
+    <h3>9. Resumen de correos en Mail</h3>
+    <p><span class="price local">On-device</span></p>
+    <p>Apple <strong>Mail</strong> muestra un resumen de una o dos líneas encima de cada correo largo, sustituyendo al snippet en bruto. Priorización automática de los mensajes importantes en la parte superior de la bandeja de entrada («Priority»). Las newsletters largas se leen de un vistazo.</p>
+    <p><strong>Requiere:</strong> macOS 15.1+. <strong>App:</strong> Apple Mail.</p>
+  </div>
+
+  <div class="app-card">
+    <p class="meta">Caso n.º 10 · Audio · Notas + Notas de voz</p>
+    <h3>10. Transcripciones de reuniones</h3>
+    <p><span class="price local">On-device</span></p>
+    <p><strong>Notas</strong> y <strong>Notas de voz</strong> ofrecen grabación de audio con transcripción automática en local. Apple Intelligence genera después un resumen opcional de los puntos clave. Práctico para conservar un rastro escrito de una videollamada sin depender de un servicio de terceros.</p>
+    <p><strong>Requiere:</strong> macOS 15.1+. <strong>App:</strong> Notas, Notas de voz.</p>
+  </div>
+
+  <h2>Cómo <span class="grad-text">activar</span> Apple Intelligence</h2>
+
+  <p>La activación se hace en dos clics:</p>
+
+  <ul>
+    <li>Abre <strong>Ajustes del Sistema</strong> → <strong>Apple Intelligence y Siri</strong>.</li>
+    <li>Activa el interruptor. macOS descarga los modelos locales (~4 GB) en segundo plano.</li>
+    <li>Elige el idioma de Apple Intelligence (puede diferir del idioma de la interfaz).</li>
+    <li>Opcional: conecta ChatGPT en el mismo panel si quieres enrutar peticiones más pesadas.</li>
+  </ul>
+
+  <h2>Los <span class="grad-text">límites</span></h2>
+
+  <p>Apple Intelligence no es universal. Tres restricciones que conviene conocer:</p>
+
+  <ul>
+    <li><strong>Apple Silicon obligatorio.</strong> M1, M2, M3, M4 y posteriores. Los Mac con Intel no son compatibles y no lo serán. 8 GB de RAM mínimo.</li>
+    <li><strong>Almacenamiento.</strong> ~4 GB para los modelos locales, más modelos especializados descargados bajo demanda (Image Playground, Genmoji).</li>
+    <li><strong>Idiomas.</strong> El inglés llegó en octubre de 2024, el francés en 2025, el español y el alemán a continuación. No todas las funciones se localizan al mismo ritmo: Writing Tools suele adelantar a Image Playground.</li>
+  </ul>
+
+  <h2>FAQ</h2>
+
+  <h3>¿Qué Mac soportan Apple Intelligence?</h3>
+  <p>Todos los Mac con chip <strong>Apple Silicon</strong> (M1, M2, M3, M4 y posteriores). Los Mac con Intel no son compatibles. 8 GB de RAM mínimo, unos 4 GB de almacenamiento para los modelos locales.</p>
+
+  <h3>¿Apple Intelligence es gratis?</h3>
+  <p>Sí. Apple Intelligence se incluye en macOS sin coste extra. Las funciones opcionales vía ChatGPT pueden requerir una cuenta ChatGPT Plus de pago para aumentar las cuotas, pero el uso básico es gratuito.</p>
+
+  <h3>¿Mis datos salen del Mac?</h3>
+  <p>No por defecto. Los Foundation Models se ejecutan on-device en el Neural Engine. Las peticiones más pesadas pueden enrutarse a <strong>Private Cloud Compute</strong>, una infraestructura Apple Silicon con código auditable. Ninguna petición se envía a ChatGPT sin solicitud explícita del usuario.</p>
+
+  <h3>¿Qué idiomas están soportados?</h3>
+  <p>Inglés desde octubre de 2024, luego francés, alemán, italiano, portugués, español, japonés, coreano y chino simplificado en 2025. La lista sigue ampliándose con macOS Tahoe 26.</p>
+
+  <div class="mt-8 rounded-xl border border-cream/10 bg-gradient-to-b from-[#14171F] to-[#0F1218] px-5 py-4">
+    <p><strong>Sobre el autor.</strong> Axel Courty es desarrollador independiente y creador de <strong>NotchIA</strong>, una app de macOS que convierte la muesca del MacBook en un panel de control interactivo con Apple Intelligence on-device (Digest, Resumen Shelf) y seguimiento en vivo de los agentes IA (Claude Code, Codex, Copilot). Guía actualizada en cada release mayor de macOS. Contacto: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> · <a href="https://github.com/coaxel2" rel="me noopener">GitHub</a>.</p>
+  </div>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Descargar NotchIA</a>
+    <a href="/pricing" class="btn-secondary">Ver precios</a>
+  </div>
+
+  <p class="mt-10 text-sm"><a href="/" class="text-cream/55 hover:text-cream">← Volver al inicio</a></p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Aviso legal</a>
+      <a href="/cgv" class="hover:text-cream">Términos</a>
+      <a href="/privacy" class="hover:text-cream">Privacidad</a>
+      <a href="/refund" class="hover:text-cream">Reembolso</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

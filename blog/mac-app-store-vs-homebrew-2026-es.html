@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mac App Store vs Homebrew: ¿qué elegir en 2026?</title>
+<meta name="description" content="¿Mac App Store o Homebrew en 2026? Comparativa técnica equilibrada sobre 10 criterios: seguridad, actualizaciones, sandbox, apps menu-bar, precio, privacidad. Veredicto y ejemplos." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="Axel Courty" />
+<meta name="keywords" content="Mac App Store vs Homebrew, Homebrew Mac 2026, App Store Mac, brew install, sandbox macOS, accessibility macOS, gestor paquetes Mac, instalar apps Mac" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-en" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-de" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Mac App Store vs Homebrew: ¿qué elegir en 2026?" />
+<meta property="og:description" content="Comparativa equilibrada entre la tienda oficial de Apple y el gestor de paquetes open-source. 10 criterios técnicos, veredicto de power user." />
+<meta property="og:url" content="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="es_ES" />
+<meta property="article:published_time" content="2026-05-27" />
+<meta property="article:modified_time" content="2026-05-27" />
+<meta property="article:author" content="Axel Courty" />
+<meta property="article:section" content="Mac" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Mac App Store vs Homebrew: ¿qué elegir en 2026?" />
+<meta name="twitter:description" content="Comparativa técnica: sandbox, seguridad, actualizaciones, precio, apps menu-bar. Veredicto 2026." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
+        fontFamily: {
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .app-card { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 14px; padding: 1.4rem 1.5rem; margin: 1.2rem 0; }
+  .app-card h3 { margin-top: 0.2rem; font-size: 1.35rem; font-family: 'Fraunces', serif; }
+  .app-card .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(237,232,220,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .app-card .price { display: inline-block; padding: 0.1rem 0.5rem; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; border-radius: 999px; }
+  .app-card .free { background: rgba(157,217,183,0.12); border-color: rgba(157,217,183,0.35); color: #9DD9B7; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1.5rem 0; }
+  th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid rgba(237,232,220,0.08); }
+  th { color: #EDE8DC; font-weight: 600; }
+  td { color: rgba(237,232,220,0.78); }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tldr { background: linear-gradient(180deg, rgba(168,85,247,0.07) 0%, rgba(255,77,136,0.04) 100%); border: 1px solid rgba(168,85,247,0.18); border-radius: 14px; padding: 1.2rem 1.4rem; margin: 1.5rem 0 2rem; }
+  .tldr p { color: rgba(237,232,220,0.85); margin-bottom: 0.3rem; }
+  .tldr strong { color: #FF7A2D; }
+  .toc { background: #14171F; border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.9rem; }
+  .toc ol { list-style: decimal; padding-left: 1.4rem; }
+  .toc li { margin-bottom: 0.25rem; }
+  .toc a { color: rgba(237,232,220,0.7); text-decoration: none; }
+  .toc a:hover { color: #FF7A2D; text-decoration: underline; }
+  pre.cmd { background: #0A0C11; border: 1px solid rgba(237,232,220,0.12); border-radius: 10px; padding: 0.9rem 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #EDE8DC; overflow-x: auto; margin: 1rem 0; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es#article",
+      "headline": "Mac App Store vs Homebrew: ¿qué elegir en 2026?",
+      "alternativeHeadline": "Comparativa técnica equilibrada entre la tienda oficial de Apple y el gestor de paquetes open-source",
+      "description": "¿Mac App Store o Homebrew en 2026? Comparativa técnica equilibrada sobre 10 criterios: seguridad, actualizaciones, sandbox, apps menu-bar, precio, privacidad. Veredicto y ejemplos.",
+      "datePublished": "2026-05-27",
+      "dateModified": "2026-05-27",
+      "inLanguage": "es-ES",
+      "image": "https://notchia.app/og-image.png",
+      "wordCount": 2100,
+      "keywords": "Mac App Store, Homebrew, brew install, sandbox macOS, accessibility, gestor paquetes Mac",
+      "author": {
+        "@type": "Person",
+        "name": "Axel Courty",
+        "url": "https://notchia.app/",
+        "sameAs": [
+          "https://github.com/coaxel2"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NotchIA",
+        "url": "https://notchia.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://notchia.app/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Mac App Store",
+          "url": "https://www.apple.com/app-store/",
+          "description": "Tienda oficial de Apple para macOS, lanzada en 2011. Apps firmadas y en sandbox."
+        },
+        {
+          "@type": "Thing",
+          "name": "Homebrew",
+          "url": "https://brew.sh/",
+          "description": "Gestor de paquetes open-source para macOS y Linux, creado por Max Howell en 2009."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Es seguro Homebrew?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Homebrew es ampliamente seguro: proyecto open-source activo desde 2009, gran base de contribuidores, código auditable en GitHub. El riesgo reside en los casks individuales — cada cask apunta al servidor del editor, sin la capa de revisión de Apple. Recomendación: instalar solo casks de editores conocidos y revisar el comando antes de ejecutarlo. Homebrew en sí no exige privilegios root desde 2020."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se pueden usar a la vez Mac App Store y Homebrew?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, y la mayoría de los power users lo hacen. Ambos sistemas conviven sin conflicto: Mac App Store para apps de gran público e iCloud-nativas (Pages, Things 3, 1Password), Homebrew para herramientas CLI y apps que requieren acceso al sistema (Raycast, NotchIA, Karabiner-Elements). Sin interferencias en actualizaciones ni gestión de archivos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hace falta una cuenta de Mac App Store para usar apps de Homebrew?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Homebrew descarga directamente desde los servidores del editor, sin pasar por Apple ID. No se requiere cuenta. Es uno de sus casos de uso clave: instalar rápidamente Chrome, VS Code o Docker en una máquina nueva sin ni siquiera iniciar sesión con una cuenta Apple."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué algunas apps como NotchIA no están en el Mac App Store?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Mac App Store impone una sandbox estricta que bloquea el acceso a la API Accessibility, a los atajos globales del sistema y a las integraciones avanzadas de Now Playing. Cualquier app menu-bar avanzada (Raycast, BetterTouchTool, Karabiner-Elements, NotchIA, AltTab) debe distribuirse fuera de la tienda mediante Homebrew o DMG directo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se instala Homebrew?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Abre Terminal y pega: /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\". La instalación dura 2 a 5 minutos según la conexión. No requiere reinicio. Verifica con: brew --version."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://notchia.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://notchia.app/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mac App Store vs Homebrew 2026",
+          "item": "https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Inicio</a>
+    <a href="/#features" class="hover:text-cream">Funciones</a>
+    <a href="/#pricing" class="hover:text-cream">Precios</a>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Guía técnica · macOS · Mayo 2026</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Mac App Store vs Homebrew: <span class="grad-text">¿qué elegir en 2026?</span></h1>
+    <p class="text-cream/55 text-sm">Por Axel Courty · 27 de mayo de 2026 · 8 min de lectura · macOS 14+ / 15+ / 26+</p>
+  </section>
+
+  <div class="tldr">
+    <p><strong>Respuesta corta.</strong> El <strong>Mac App Store</strong> y <strong>Homebrew</strong> no son competidores — son <strong>complementarios</strong>. El Mac App Store (lanzado en 2011) ofrece ~30 000 apps firmadas y en sandbox de Apple: seguro, simple, actualizaciones automáticas. Homebrew (creado en 2009 por Max Howell) reúne ~7 000 casks GUI y ~7 000 formulae CLI: más libertad, acceso completo al sistema, fuera de la sandbox. La mayoría de los power users usan <strong>los dos</strong> según la app: App Store para Things 3 o 1Password, Homebrew para Raycast, NotchIA o Karabiner-Elements.</p>
+  </div>
+
+  <div class="toc">
+    <p class="eyebrow mb-2">Índice</p>
+    <ol>
+      <li><a href="#mas">Mac App Store: ¿qué es?</a></li>
+      <li><a href="#homebrew">Homebrew: ¿qué es?</a></li>
+      <li><a href="#comparativa">Tabla comparativa en 10 criterios</a></li>
+      <li><a href="#cuando-mas">Cuándo elegir el Mac App Store</a></li>
+      <li><a href="#cuando-brew">Cuándo elegir Homebrew</a></li>
+      <li><a href="#ejemplos">Apps disponibles solo en Homebrew</a></li>
+      <li><a href="#install">Cómo instalar Homebrew</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <h2 id="mas">Mac App Store: <span class="grad-text">¿qué es?</span></h2>
+
+  <p>El <strong>Mac App Store</strong> es la tienda oficial de Apple para macOS, lanzada el 6 de enero de 2011 con Mac OS X 10.6.6 Snow Leopard. Hoy reúne unas 30 000 aplicaciones, todas sometidas al proceso de revisión de Apple, firmadas con un certificado de desarrollador, y ejecutadas dentro de una <strong>sandbox</strong> introducida en 2012 que restringe sus accesos al sistema.</p>
+
+  <h3>¿Para quién?</h3>
+  <p>El Mac App Store se dirige al <strong>gran público</strong>: usuarios que quieren instalar una app en dos clics, sin Terminal, sin gestión de firmas, con un solo Apple ID para compartir compras entre dispositivos familiares. Es la opción recomendada por defecto para cualquiera que venga del iPhone o el iPad.</p>
+
+  <h3>Ventajas</h3>
+  <ul>
+    <li><strong>Seguridad máxima</strong>: revisión Apple obligatoria, firma notarizada sistemática, sandbox estricta.</li>
+    <li><strong>Actualizaciones automáticas</strong> a través del sistema, sin intervención.</li>
+    <li><strong>Pago gestionado por Apple</strong>: Apple Pay, reembolsos automáticos, compartir en familia.</li>
+    <li><strong>Desinstalación limpia</strong>: basta con arrastrar a la Papelera, pocos residuos.</li>
+    <li><strong>Sin Terminal</strong>, accesible a personas no técnicas.</li>
+  </ul>
+
+  <h3>Limitaciones</h3>
+  <ul>
+    <li><strong>La sandbox bloquea los accesos al sistema</strong>: sin API Accessibility, sin atajos globales potentes, sin modificación de la menu bar.</li>
+    <li><strong>Sin apps menu-bar avanzadas</strong>: Raycast, BetterTouchTool, Karabiner-Elements, NotchIA, AltTab — todas inelegibles.</li>
+    <li><strong>Comisión Apple del 15–30 %</strong>: algunos editores prefieren vender directo para preservar margen.</li>
+    <li><strong>Revisión Apple lenta</strong>: actualizaciones a veces bloqueadas varios días.</li>
+    <li><strong>Catálogo limitado</strong>: ~30 000 apps frente a cientos de miles disponibles fuera de la tienda.</li>
+  </ul>
+
+  <h2 id="homebrew">Homebrew: <span class="grad-text">¿qué es?</span></h2>
+
+  <p><strong>Homebrew</strong> es un gestor de paquetes open-source para macOS y Linux, creado en 2009 por <strong>Max Howell</strong>. Se usa por línea de comandos mediante el comando <code class="font-mono text-xs">brew</code> y ofrece dos catálogos: <strong>formulae</strong> (herramientas CLI: git, node, python, ffmpeg) y <strong>casks</strong> (apps GUI: Chrome, VS Code, Slack, Docker). En 2026, hay aproximadamente 7 000 casks y 7 000 formulae disponibles, mantenidos por una comunidad de miles de contribuidores en <a href="https://github.com/Homebrew/homebrew-cask" rel="noopener" target="_blank">GitHub</a>.</p>
+
+  <h3>¿Para quién?</h3>
+  <p>Homebrew apunta a <strong>power users, desarrolladores, sysadmins</strong> y a cualquiera cómodo con Terminal. Es el estándar de facto para configurar un Mac de desarrollo en minutos con un script <code class="font-mono text-xs">Brewfile</code> reproducible.</p>
+
+  <h3>Ventajas</h3>
+  <ul>
+    <li><strong>Libertad total</strong>: acceso a apps fuera de la tienda (Raycast, NotchIA, Karabiner-Elements, Hammerspoon).</li>
+    <li><strong>Instalación scriptable</strong>: un Brewfile instala 50 apps con un solo comando, reproducible en cualquier Mac.</li>
+    <li><strong>Herramientas CLI</strong>: git, node, python, postgresql, redis — la base de un puesto de desarrollo.</li>
+    <li><strong>Actualizaciones en bloque</strong>: <code class="font-mono text-xs">brew upgrade</code> actualiza todo de una vez.</li>
+    <li><strong>Sin cuenta Apple</strong> para descargar.</li>
+    <li><strong>Open-source y auditable</strong>: cada fórmula y cask es un archivo Ruby visible en GitHub.</li>
+  </ul>
+
+  <h3>Limitaciones</h3>
+  <ul>
+    <li><strong>Requiere Terminal</strong>: barrera de entrada para usuarios no técnicos.</li>
+    <li><strong>Confianza en el mantenedor</strong>: cada cask apunta al servidor del editor, sin revisión Apple.</li>
+    <li><strong>Sin pagos integrados</strong>: compras directas con el editor (Paddle, Stripe, Gumroad).</li>
+    <li><strong>Desinstalación manual a veces necesaria</strong> mediante <code class="font-mono text-xs">brew uninstall --zap</code> para limpiar Application Support.</li>
+    <li><strong>Sin sandbox</strong>: una app instalada con brew corre con los privilegios del usuario, sin aislamiento.</li>
+  </ul>
+
+  <h2 id="comparativa">Tabla comparativa <span class="grad-text">en 10 criterios</span></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Criterio</th>
+        <th>Mac App Store</th>
+        <th>Homebrew</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Seguridad</strong></td><td>Revisión + sandbox + firma notarizada</td><td>Confianza en el mantenedor, open-source auditable</td></tr>
+      <tr><td><strong>Actualizaciones</strong></td><td>Automáticas en segundo plano</td><td><code class="font-mono text-xs">brew upgrade</code> manual o cron</td></tr>
+      <tr><td><strong>Acceso al sistema</strong></td><td>En sandbox, acceso limitado</td><td>Acceso total (Accessibility, atajos globales)</td></tr>
+      <tr><td><strong>Rendimiento de instalación</strong></td><td>Descarga rápida vía CDN de Apple</td><td>Depende del CDN del editor, a menudo similar</td></tr>
+      <tr><td><strong>Catálogo</strong></td><td>~30 000 apps</td><td>~7 000 casks + ~7 000 formulae CLI</td></tr>
+      <tr><td><strong>Precio</strong></td><td>Apple gestiona pago + comisión 15–30 %</td><td>Pago directo al editor, sin comisión</td></tr>
+      <tr><td><strong>Privacidad</strong></td><td>Apple ID requerida, telemetría Apple</td><td>Sin cuenta, telemetría anónima opt-out</td></tr>
+      <tr><td><strong>Apps menu-bar / Accessibility</strong></td><td>Imposible (sandbox)</td><td>Posible (Raycast, NotchIA, AltTab)</td></tr>
+      <tr><td><strong>Desinstalación</strong></td><td>Arrastrar a Papelera, limpio</td><td><code class="font-mono text-xs">brew uninstall --zap</code></td></tr>
+      <tr><td><strong>Público objetivo</strong></td><td>Gran público, principiantes</td><td>Power users, devs, sysadmins</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="cuando-mas">Cuándo elegir <span class="grad-text">el Mac App Store</span></h2>
+
+  <p>El Mac App Store es la buena elección en estas situaciones:</p>
+
+  <ul>
+    <li><strong>Apps que no requieren acceso avanzado al sistema</strong>: Things 3, Pages, Numbers, Pixelmator Pro, 1Password (versión App Store).</li>
+    <li><strong>Compartir en familia</strong>: una compra compartida entre 5 miembros via Family Sharing.</li>
+    <li><strong>Sincronización iCloud nativa</strong>: apps que se integran con iCloud Drive sin configuración.</li>
+    <li><strong>Mac corporativo gestionado</strong>: MDM puede limitar el App Store para controlar lo que instalan los empleados.</li>
+    <li><strong>Usuarios no técnicos</strong>: un familiar que jamás tocará Terminal.</li>
+  </ul>
+
+  <p>En 2026, editores como <strong>Cultured Code (Things 3)</strong>, <strong>Pixelmator Team</strong> u <strong>Omni Group</strong> distribuyen aún exclusivamente vía Mac App Store por simplicidad de usuario y compartir en familia.</p>
+
+  <h2 id="cuando-brew">Cuándo elegir <span class="grad-text">Homebrew</span></h2>
+
+  <p>Homebrew se vuelve indispensable en cuanto se toca una de estas situaciones:</p>
+
+  <ul>
+    <li><strong>Configurar un Mac de desarrollo</strong>: Node, Python, Postgres, Docker, Git — todo instalable en minutos.</li>
+    <li><strong>Apps menu-bar avanzadas</strong>: Raycast, BetterTouchTool, Karabiner-Elements, Hammerspoon, NotchIA.</li>
+    <li><strong>Apps que requieren la API Accessibility</strong>: automatización, atajos globales, simulación de clics.</li>
+    <li><strong>Reproducibilidad</strong>: un Brewfile versionado en Git permite reconstruir un Mac nuevo en 15 minutos.</li>
+    <li><strong>Editores que rechazan la comisión Apple</strong>: Sublime Text, IDEs de JetBrains, Sketch (distribución directa).</li>
+    <li><strong>Herramientas CLI</strong> imposibles en App Store: ffmpeg, yt-dlp, rsync, htop, jq.</li>
+  </ul>
+
+  <h2 id="ejemplos">Apps disponibles <span class="grad-text">solo en Homebrew</span></h2>
+
+  <p>Algunas apps emblemáticas del Mac <strong>nunca han pasado</strong> por el Mac App Store, debido a las restricciones de la sandbox:</p>
+
+  <div class="app-card">
+    <p class="meta">Ejemplo · Distribución fuera de la tienda</p>
+    <h3>NotchIA</h3>
+    <p><span class="price free">Essential gratis</span> · <span class="price">Lifetime Pro 24,99 €</span></p>
+    <p>NotchIA transforma la muesca del MacBook en un cockpit interactivo (multimedia, calendario, Focus, estado IA en directo, Digest RSS de Apple Intelligence). La app necesita la API <strong>Accessibility</strong> para los atajos globales, la detección del modo Focus del sistema, y la integración <strong>Now Playing</strong> multi-fuente (Apple Music, Spotify, YouTube Music). Apple no permite estos accesos en la sandbox del Mac App Store. Distribución: <strong>Homebrew cask</strong> (<code class="font-mono text-xs">brew install --cask coaxel2/notchia/notchia</code>) o DMG directo desde <a href="/">notchia.app</a>.</p>
+  </div>
+
+  <p>Otros ejemplos notables:</p>
+
+  <ul>
+    <li><strong>Raycast</strong> — lanzador universal, acceso Accessibility para sus comandos del sistema.</li>
+    <li><strong>Karabiner-Elements</strong> — remapeo de teclado de bajo nivel, kernel extension.</li>
+    <li><strong>Hammerspoon</strong> — automatización Lua, acceso completo al sistema.</li>
+    <li><strong>Rectangle</strong> — gestión de ventanas, acceso Accessibility.</li>
+    <li><strong>AltTab</strong> — switcher de ventanas estilo Windows.</li>
+    <li><strong>BetterTouchTool</strong> — personalización de Touch Bar y trackpad.</li>
+    <li><strong>iTerm2</strong> — terminal avanzada, hooks de shell extendidos.</li>
+  </ul>
+
+  <p>A destacar: <strong>Raycast</strong> empezó exclusivamente fuera de la tienda en 2020. Varias apps siguen el mismo camino — distribución Homebrew primero, eventualmente una versión "lite" en App Store.</p>
+
+  <h2 id="install">Cómo instalar <span class="grad-text">Homebrew</span></h2>
+
+  <p>Un solo comando para pegar en Terminal:</p>
+
+  <pre class="cmd">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</pre>
+
+  <p>El script descarga Homebrew, instala las Command Line Tools de Xcode si es necesario, y configura el PATH. Duración: 2 a 5 minutos según la conexión. No requiere reinicio. Verificación:</p>
+
+  <pre class="cmd">brew --version
+# Homebrew 4.x.x</pre>
+
+  <p>Primer uso, por ejemplo instalar NotchIA:</p>
+
+  <pre class="cmd">brew install --cask coaxel2/notchia/notchia</pre>
+
+  <p>Para comparar o elegir otro método de instalación, consulta <a href="/install">los métodos de instalación de NotchIA</a>.</p>
+
+  <h2 id="verdict">Veredicto: <span class="grad-text">complementarios, no competidores</span></h2>
+
+  <p>La trampa clásica es presentar Mac App Store vs Homebrew como una elección binaria. <strong>Son dos herramientas distintas para dos tipos de apps distintos</strong>:</p>
+
+  <ul>
+    <li><strong>Mac App Store</strong> para apps de gran público que no necesitan accesos profundos al sistema (Things 3, 1Password, Pages, Pixelmator Pro).</li>
+    <li><strong>Homebrew</strong> para apps que requieren la API Accessibility, herramientas CLI de desarrollo, y reproducibilidad vía Brewfile.</li>
+  </ul>
+
+  <p>Un setup típico de power user macOS en 2026 combina ambos: App Store para 5 a 10 apps firmadas y sincronizadas con iCloud, Homebrew para 30 a 50 herramientas CLI + 10 a 15 casks GUI. Sin conflictos, sin interferencias.</p>
+
+  <h2 id="faq">FAQ: <span class="grad-text">Mac App Store vs Homebrew</span></h2>
+
+  <h3>¿Es seguro Homebrew?</h3>
+  <p>Homebrew es ampliamente seguro: proyecto open-source activo desde 2009, gran base de contribuidores, código auditable en GitHub. El riesgo reside en los casks individuales — cada cask apunta al servidor del editor, sin la capa de revisión de Apple. Recomendación: instalar solo casks de editores conocidos y revisar el comando antes de ejecutarlo. Homebrew en sí no exige privilegios root desde 2020.</p>
+
+  <h3>¿Se pueden usar a la vez Mac App Store y Homebrew?</h3>
+  <p>Sí, y la mayoría de los power users lo hacen. Ambos sistemas conviven sin conflicto: Mac App Store para apps de gran público e iCloud-nativas (Pages, Things 3, 1Password), Homebrew para herramientas CLI y apps que requieren acceso al sistema (Raycast, NotchIA, Karabiner-Elements). Sin interferencias en actualizaciones ni gestión de archivos.</p>
+
+  <h3>¿Hace falta una cuenta de Mac App Store para usar apps de Homebrew?</h3>
+  <p>No. Homebrew descarga directamente desde los servidores del editor, sin pasar por Apple ID. No se requiere cuenta. Es uno de sus casos de uso clave: instalar rápidamente Chrome, VS Code o Docker en una máquina nueva sin ni siquiera iniciar sesión con una cuenta Apple.</p>
+
+  <h3>¿Por qué algunas apps como NotchIA no están en el Mac App Store?</h3>
+  <p>El Mac App Store impone una sandbox estricta que bloquea el acceso a la API Accessibility, a los atajos globales del sistema y a las integraciones avanzadas de Now Playing. Cualquier app menu-bar avanzada (Raycast, BetterTouchTool, Karabiner-Elements, NotchIA, AltTab) debe distribuirse fuera de la tienda mediante Homebrew o DMG directo.</p>
+
+  <h3>¿Cómo se instala Homebrew?</h3>
+  <p>Abre Terminal y pega: <code class="font-mono text-xs">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>. La instalación dura 2 a 5 minutos. No requiere reinicio. Verifica con <code class="font-mono text-xs">brew --version</code>.</p>
+
+  <h3>¿Homebrew ralentiza el Mac?</h3>
+  <p>No. Homebrew está inactivo cuando no se usa. Sin demonios en segundo plano, sin agentes al arranque. Las apps instaladas vía brew se ejecutan exactamente como si se hubieran descargado en DMG.</p>
+
+  <div class="callout">
+    <p><strong>Sobre el autor.</strong> Axel Courty es desarrollador independiente y creador de <a href="/">NotchIA</a>, una app macOS que transforma la muesca del MacBook en un centro de control interactivo. Distribución vía Homebrew (<code class="font-mono text-xs">brew install --cask coaxel2/notchia/notchia</code>) y DMG directo. Contacto: <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> · <a href="https://github.com/coaxel2" rel="noopener" target="_blank">github.com/coaxel2</a>.</p>
+  </div>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Descargar NotchIA</a>
+    <a href="/install" class="btn-secondary">Métodos de instalación</a>
+  </div>
+
+  <p class="mt-10 text-sm"><a href="/" class="text-cream/55 hover:text-cream">← Volver al inicio</a></p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA · Axel Courty</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Aviso legal</a>
+      <a href="/cgv" class="hover:text-cream">Términos</a>
+      <a href="/privacy" class="hover:text-cream">Privacidad</a>
+      <a href="/refund" class="hover:text-cream">Reembolso</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
