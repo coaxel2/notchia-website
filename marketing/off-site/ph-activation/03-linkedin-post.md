@@ -20,7 +20,7 @@ J'ai lancé NotchIA sur Product Hunt cette semaine. 1 upvote. Solitaire.
 → états IA en direct pour Claude Code, ChatGPT Codex, GitHub Copilot
 → Apple Intelligence on-device pour résumer tes flux RSS et tes PDF
 → médias multi-source, calendrier, focus, HUD système
-→ 15 modules natifs dans une seule app freemium
+→ 14 modules natifs dans une seule app freemium
 
 Le tier Essentiel est gratuit à vie. Pro à 24,99 € en achat unique (pas d'abonnement).
 

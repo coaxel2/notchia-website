@@ -14,7 +14,7 @@
 ### Concurrents notch déjà listés (analyse 2026-05-16)
 
 - Atoll · CodexIsland · Notchly · NotchNook · Droppy · DynamicHorizon
-- Ta différenciation : 15 modules natifs (vs apps mono-fonction), IA en direct unique sur Claude Code/Codex/Copilot, Apple Intelligence on-device pour Digest et Shelf summary, i18n FR/EN/ES/DE.
+- Ta différenciation : 14 modules natifs (vs apps mono-fonction), IA en direct unique sur Claude Code/Codex/Copilot, Apple Intelligence on-device pour Digest et Shelf summary, i18n FR/EN/ES/DE.
 
 ### Ligne dans README.md (entre NetFluss et NotchNook)
 

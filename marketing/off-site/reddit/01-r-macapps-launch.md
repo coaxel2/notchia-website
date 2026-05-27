@@ -39,7 +39,7 @@ it for Copilot. Then I figured I might as well do music, because
 why not. Then calendar. Then focus sessions. Then a clipboard
 manager.
 
-15 modules later it's a real app. macOS 15+, Apple Silicon and
+14 modules later it's a real app. macOS 15+, Apple Silicon and
 Intel. ~30 MB. Menu-bar only (LSUIElement, no Dock icon).
 
 **What I think is actually different**
@@ -75,7 +75,7 @@ categories. Sandbox + minimal entitlements.
   launch requires right-click → Open. I'm a solo dev and the
   notarisation hoop is on the to-do list, not done yet.
 - Pricing isn't live yet. Free tier is real and unlimited (9 of
-  15 modules including the Digest, music, calendar, focus, HUD).
+  14 modules including the Digest, music, calendar, focus, HUD).
   Pro will be €2.99/month or €24.99 lifetime (2 Macs, no recurring)
   in a couple of weeks.
 - The AI session detection has only been battle-tested on the IDEs
@@ -241,7 +241,7 @@ respect the call, the no-self-promo rule is what keeps this sub
 useful and I'd rather ask than assume.
 
 A bit of context in case it helps: I'm the solo dev behind NotchIA,
-a native macOS notch utility (15 modules, Essential tier free
+a native macOS notch utility (14 modules, Essential tier free
 forever, no telemetry). I've been a passive reader of r/macapps
 for a while and tried to write the post as a "what I learned
 building this" discussion piece rather than a launch ad — no

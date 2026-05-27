@@ -90,7 +90,7 @@ Idéalement quelqu'un avec déjà des followers PH. Sinon, poste toi-même.
 ### r/MacApps — corps
 
 ```
-Hi all, indie dev here. I built NotchIA — a native macOS app that turns the MacBook notch (or the menu bar on notch-less Macs) into a multi-tab interactive cockpit. 15 modules across six tabs.
+Hi all, indie dev here. I built NotchIA — a native macOS app that turns the MacBook notch (or the menu bar on notch-less Macs) into a multi-tab interactive cockpit. 14 modules across six tabs.
 
 **Why I built it**
 
@@ -168,7 +168,7 @@ Je suis Axel Courty, développeur indépendant à Paris. Je viens de sortir Notc
 
 2. Digest — résumé des flux RSS via Apple Intelligence (Foundation Models on-device, macOS 26). L'utilisateur colle ses flux, décrit ses centres d'intérêt en langage naturel, l'app fetch + dédupe + résume. 100 % local — pas d'OpenAI/Anthropic dans le circuit. C'est la première fois que je vois un usage quotidien sérieux des Foundation Models.
 
-L'app inclut 15 modules natifs au total : médias multi-source avec paroles synchronisées, calendrier, Pomodoro Focus, Digest, Shelf, IA en direct, convertisseur 16 formats, presse-papiers historique, HUD système, et plus. Tier Essentiel gratuit à vie, Pro à 2,99 €/mois ou 24,99 € à vie en achat unique.
+L'app inclut 14 modules natifs au total : médias multi-source avec paroles synchronisées, calendrier, Pomodoro Focus, Digest, Shelf, IA en direct, convertisseur 16 formats, presse-papiers historique, HUD système, et plus. Tier Essentiel gratuit à vie, Pro à 2,99 €/mois ou 24,99 € à vie en achat unique.
 
 Je serais ravi de vous envoyer un build de test, vous laisser jouer avec, et répondre aux questions techniques. Je peux aussi écrire un guest post si vous voulez creuser l'intégration on-device Apple Intelligence.
 
@@ -224,7 +224,7 @@ Hi HN. I built NotchIA because the MacBook notch sits there empty while my Claud
 
 It does live AI status detection (Claude Code, Codex, Copilot — read locally from ~/.claude/projects/), media playback with synced lyrics, calendar, Pomodoro Focus, system HUD replacement, and the bit I'm proudest of: Digest, which uses Apple's on-device Foundation Models (Apple Intelligence, macOS 26) to summarize my RSS feeds based on what I tell it I care about. Nothing leaves the Mac.
 
-It's a native macOS app — 15 modules total. Free Essential tier, €24.99 lifetime Pro.
+It's a native macOS app — 14 modules total. Free Essential tier, €24.99 lifetime Pro.
 
 Tech stack: SwiftUI, AppKit for the notch overlay, XPC helper for HUD interception, lrclib for synced lyrics, Sparkle with EdDSA for auto-update. The AI detection parses Claude Code's local JSONL session logs and matches them to 10 state patterns.
 

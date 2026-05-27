@@ -8,7 +8,7 @@
 
 Hi Setapp team,
 
-I'm Axel, indie macOS dev behind **NotchIA** (https://notchia.app) — a native menu-bar + notch cockpit released May 2026 (v2.8.0). 15 modules in one app: multi-source media + synced lyrics, calendar, on-device Apple Intelligence RSS Digest, focus, clipboard history, file Shelf, and live-state monitoring for Claude Code / ChatGPT Codex / GitHub Copilot sessions.
+I'm Axel, indie macOS dev behind **NotchIA** (https://notchia.app) — a native menu-bar + notch cockpit released May 2026 (v2.8.0). 14 modules in one app: multi-source media + synced lyrics, calendar, on-device Apple Intelligence RSS Digest, focus, clipboard history, file Shelf, and live-state monitoring for Claude Code / ChatGPT Codex / GitHub Copilot sessions.
 
 **Why I think it fits Setapp:**
 - Your notch-utility slot is currently held by one app focused on widgets. NotchIA covers a different angle: **AI developer workflow + on-device Apple Intelligence**, a category your catalog doesn't have yet.

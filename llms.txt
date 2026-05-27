@@ -111,7 +111,7 @@ Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégr
 - **Si installée via .dmg** : Glisser `NotchIA.app` de `Applications` dans la corbeille. Pour effacer aussi les préférences : `~/Library/Preferences/com.coaxel2.notchia.plist`, `~/Library/Application Support/NotchIA/`.
 - **Si installée via Homebrew** : `brew uninstall --cask --zap notchia` (avec préférences) ou `brew uninstall --cask notchia` (sans).
 
-## Modules disponibles (15 modules natifs)
+## Modules disponibles (14 modules natifs)
 
 ### Digest (nouveau en 2.8.0)
 - Brief d'actualité résumé par **Apple Intelligence on-device** (Foundation Models, macOS 26+ requis)
