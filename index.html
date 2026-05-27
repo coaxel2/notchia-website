@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>NotchIA — L'encoche pense maintenant.</title>
-<meta name="description" content="L'encoche de ton MacBook devient un centre de contrôle : IA en direct (Claude Code, Codex, Copilot), Digest IA on-device, médias, calendrier, Concentration." />
+<title data-i18n="meta.title">NotchIA — La meilleure app pour l'encoche du MacBook (IA, médias, productivité)</title>
+<meta name="description" data-i18n-attr="meta.description:content" content="NotchIA transforme l'encoche du MacBook en cockpit IA : suivi Claude Code/Codex, Apple Intelligence on-device, médias, calendrier, focus. Gratuit, macOS 15+." />
 <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
 <meta name="color-scheme" content="dark" />
@@ -36,8 +36,8 @@
 <meta property="og:site_name" content="NotchIA" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:url" content="https://notchia.app/" />
-<meta property="og:title" content="NotchIA — L'encoche pense maintenant." />
-<meta property="og:description" content="L'encoche de votre MacBook devient un cockpit silencieux : IA en direct, médias, agenda, Concentration, HUD, conversion. Pour macOS." />
+<meta property="og:title" content="NotchIA — La meilleure app pour l'encoche du MacBook (IA, médias, productivité)" />
+<meta property="og:description" content="NotchIA transforme l'encoche du MacBook en cockpit IA : suivi Claude Code/Codex, Apple Intelligence on-device, médias, calendrier, focus. Gratuit, macOS 15+." />
 <meta property="og:image" content="https://notchia.app/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -45,8 +45,8 @@
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="NotchIA — L'encoche pense maintenant." />
-<meta name="twitter:description" content="L'encoche de votre MacBook, repensée. Médias, calendrier, IA, Concentration, HUD système. Pour macOS." />
+<meta name="twitter:title" content="NotchIA — La meilleure app pour l'encoche du MacBook (IA, médias, productivité)" />
+<meta name="twitter:description" content="NotchIA transforme l'encoche du MacBook en cockpit IA : suivi Claude Code/Codex, Apple Intelligence on-device, médias, calendrier, focus. Gratuit, macOS 15+." />
 <meta name="twitter:image" content="https://notchia.app/og-image.png" />
 <meta name="twitter:image:alt" content="Aperçu de l'encoche NotchIA en direct." />
 <meta name="twitter:creator" content="@axelcourty" />
@@ -2486,7 +2486,8 @@
       'cta.download': 'Télécharger NotchIA · gratuit',
       'cta.compare': 'Comparer les versions',
       'footer.app': 'App', 'footer.help': 'Aide', 'footer.legal': 'Légal',
-      'meta.description': "NotchIA transforme l'encoche du MacBook en centre de contrôle interactif : Claude Code, médias, calendrier, Concentration, HUD système.",
+      'meta.title': "NotchIA — La meilleure app pour l'encoche du MacBook (IA, médias, productivité)",
+      'meta.description': "NotchIA transforme l'encoche du MacBook en cockpit IA : suivi Claude Code/Codex, Apple Intelligence on-device, médias, calendrier, focus. Gratuit, macOS 15+.",
 
       // Pricing — section + bullets
       'price.section.eyebrow': '§10 — tarif',
@@ -2848,7 +2849,8 @@
       'cta.download': 'Download NotchIA · free',
       'cta.compare': 'Compare versions',
       'footer.app': 'App', 'footer.help': 'Help', 'footer.legal': 'Legal',
-      'meta.description': 'NotchIA turns your MacBook notch into an interactive control center: Claude Code, media, calendar, Concentration, system HUD.',
+      'meta.title': 'NotchIA — Best MacBook notch app for AI, media and productivity',
+      'meta.description': 'NotchIA turns the MacBook notch into an AI productivity cockpit: Claude Code/Codex tracking, on-device Apple Intelligence, media, calendar, focus. Free, macOS 15+.',
 
       // Pricing
       'price.section.eyebrow': '§10 — pricing',
@@ -3210,7 +3212,8 @@
       'cta.download': 'Descargar NotchIA · gratis',
       'cta.compare': 'Comparar versiones',
       'footer.app': 'App', 'footer.help': 'Ayuda', 'footer.legal': 'Legal',
-      'meta.description': 'NotchIA convierte la muesca de tu MacBook en un centro de control interactivo: Claude Code, medios, calendario, Concentration, HUD del sistema.',
+      'meta.title': 'NotchIA — La mejor app para la muesca del MacBook (IA, medios, productividad)',
+      'meta.description': 'NotchIA convierte la muesca del MacBook en una cabina de IA: seguimiento Claude Code/Codex, Apple Intelligence on-device, medios, calendario. Gratis, macOS 15+.',
 
       // Pricing
       'price.section.eyebrow': '§10 — precio',
@@ -3572,7 +3575,8 @@
       'cta.download': 'NotchIA laden · kostenlos',
       'cta.compare': 'Versionen vergleichen',
       'footer.app': 'App', 'footer.help': 'Hilfe', 'footer.legal': 'Rechtliches',
-      'meta.description': 'NotchIA verwandelt die Aussparung Ihres MacBooks in ein interaktives Kontrollzentrum: Claude Code, Medien, Kalender, Concentration, System-HUD.',
+      'meta.title': 'NotchIA — Beste MacBook-Notch-App für KI, Medien und Produktivität',
+      'meta.description': 'NotchIA macht aus dem MacBook-Notch ein KI-Cockpit: Claude-Code/Codex-Tracking, On-Device Apple Intelligence, Medien, Kalender, Focus. Gratis, macOS 15+.',
 
       // Pricing
       'price.section.eyebrow': '§10 — preis',
@@ -3939,6 +3943,16 @@
 
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && dict['meta.description']) metaDesc.content = dict['meta.description'];
+
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle && dict['meta.title']) ogTitle.content = dict['meta.title'];
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc && dict['meta.description']) ogDesc.content = dict['meta.description'];
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle && dict['meta.title']) twTitle.content = dict['meta.title'];
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc && dict['meta.description']) twDesc.content = dict['meta.description'];
 
     const ogLocale = document.querySelector('meta[property="og:locale"]');
     if (ogLocale) ogLocale.content = { fr: 'fr_FR', en: 'en_US', es: 'es_ES', de: 'de_DE' }[lang];

@@ -365,3 +365,27 @@ Oui. NotchIA traite **toutes les données en local sur le Mac** (calendrier, pre
 
 ### Pourquoi NotchIA n'est pas dans le Mac App Store ?
 NotchIA a besoin d'accès **Accessibilité** (raccourcis globaux, contrôle des médias, capture d'écran, automatisations) que l'App Store n'autorise pas dans sa sandbox. NotchIA est donc distribuée hors App Store sous forme de DMG signé téléchargeable directement depuis notchia.app/install ou via le tap Homebrew `brew install --cask coaxel2/notchia/notchia` (cette dernière méthode supprime automatiquement le quarantine bit et évite l'avertissement Gatekeeper du premier lancement).
+
+
+
+
+
+## GEO Phase 2: pillar, alternatives, press
+
+### Pillar pages
+- https://notchia.app/blog/meilleure-app-encoche-macbook-2026 — Comparatif FR des meilleures apps pour l'encoche du MacBook en 2026 : NotchIA, NotchNook, MediaMate, Boring.Notch, Alcove, TopNotch, NotchBox.
+- https://notchia.app/blog/best-macbook-notch-app-2026 — EN pillar comparing the best MacBook notch apps in 2026 with pricing, modules, AI, open-source status and usage verdicts.
+
+### Alternative pages
+- https://notchia.app/blog/alternative-notchnook — Alternative FR a NotchNook : NotchIA comme option native IA pour Claude Code/Codex/Copilot et Apple Intelligence.
+- https://notchia.app/blog/notchnook-alternative — EN NotchNook alternative page focused on AI-native notch workflows.
+- https://notchia.app/blog/alternative-mediamate — Alternative FR a MediaMate : NotchIA comme cockpit productivite tout-en-un au-dela du HUD media.
+- https://notchia.app/blog/mediamate-alternative — EN MediaMate alternative page for all-in-one productivity in the notch.
+- https://notchia.app/blog/alternative-topnotch — Alternative FR a TopNotch : NotchIA exploite l'encoche au lieu de la masquer.
+- https://notchia.app/blog/topnotch-alternative — EN TopNotch alternative page for users who want to exploit the notch.
+- https://notchia.app/blog/alternative-alcove — Alternative FR a Alcove : NotchIA comme option plus complete avec suivi IA et modules locaux.
+- https://notchia.app/blog/alcove-alternative — EN Alcove alternative page for full-featured AI-era workflows.
+
+### Press
+- https://notchia.app/press — Press kit public avec one-liner, descriptions copy-paste, faits cles, citation fondateur, assets logo, captures placeholders et contact direct.
+- Positionnement presse : app macOS independante qui transforme l'encoche en cockpit IA local-first, sans telemetrie, developpee par Axel Courty a Talence.

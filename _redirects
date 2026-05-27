@@ -9,4 +9,8 @@
 # On garde uniquement le catch-all 404 pour empêcher le soft-404 (avant ce fix
 # tout chemin inexistant retournait 200 avec la homepage).
 
+# Exception: le dossier /press contient les assets du press kit, mais l'URL
+# canonique /press doit continuer a servir press.html.
+/press  /press.html  200
+
 /*  /404.html  404
