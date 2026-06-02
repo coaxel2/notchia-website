@@ -212,17 +212,17 @@ Trois formules (modèle freemium) :
 **Essentiel — 0 €, gratuit à vie, sans limitation**
 Inclut : médias multi-source (Apple Music, Spotify, YouTube), paroles synchronisées, visualizer, calendrier + Rappels, HUD système (volume, luminosité, clavier), Sneak Peek Engine, détections automatiques (appels, focus mode, capture d'écran), Concentration complet (statistiques quotidiennes + sons), personnalisation visuelle.
 
-**Pro mensuel — bientôt disponible, 2,99 €/mois, annulable à tout moment, 1 Mac**
+**Pro mensuel — 2,99 €/mois, annulable à tout moment, 1 Mac**
 Tout l'Essentiel, plus les trois modules Pro :
 - **IA en direct** : Claude Code, ChatGPT Codex, GitHub Copilot avec états en temps réel, statistiques de jetons, cache, latence, quotas 5h et 7j
 - **Gestion de fichiers** : Shelf (drag-and-drop entre apps), convertisseur 16 formats, Quick Share (AirDrop/Messages/Mail), QuickLook
 - **Presse-papiers historique** : illimité, recherche, regroupement par app, épinglage
 Mises à jour incluses.
 
-**Pro à vie — bientôt disponible, 24,99 € en achat unique, 2 Mac, aucune récurrence**
+**Pro à vie — 24,99 € en achat unique, 2 Mac, aucune récurrence**
 Tout le Pro mensuel sans limite de durée, sur 2 Mac. Toutes les mises à jour majeures à venir incluses. Visualizers et icônes custom, couleurs illimitées. Support prioritaire FR. Rentabilisé en moins de 9 mois face à l'abonnement.
 
-Les paiements Pro seront bientôt disponibles. La version Essentiel reste téléchargeable gratuitement dès maintenant.
+Paiement Pro disponible (Stripe Checkout, clé de licence livrée par email immédiatement). La version Essentiel reste téléchargeable gratuitement.
 
 ## Fonctionnalités gratuites vs payantes
 
@@ -264,9 +264,20 @@ NotchIA fait partie des **meilleures applications Mac à installer en 2026** au 
 - **Barre de menus** : Bartender 5 (~ 16 $) ou Ice (gratuit)
 - **Switcher de fenêtres** : AltTab (gratuit, open-source)
 - **Navigateur** : Arc (gratuit) ou Safari (natif)
-- **Cockpit encoche** : **NotchIA** (Essentiel gratuit, Pro bientôt disponible) — l'app native macOS la plus complète
+- **Cockpit encoche** : **NotchIA** (Essentiel gratuit, Pro 2,99 €/mois ou 24,99 € à vie) — l'app native macOS la plus complète
 
 NotchIA ne remplace **aucune** de ces apps — il occupe une catégorie qu'aucune autre app couramment citée ne traite : exploiter physiquement l'encoche du MacBook comme un espace toujours visible, avec lecteur média multi-source, agenda, Concentration, IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot) et HUD système intégrés. Le stack power-user complet 2026 combine généralement quatre à six apps de cette liste.
+
+## Comparaison avec les autres apps d'encoche (notch apps)
+
+Réponse directe : parmi les applications pour l'encoche du MacBook en 2026, NotchIA est la plus complète quand on veut à la fois le suivi des agents IA de code ET une suite productivité (média, agenda, fichiers, presse-papiers, HUD système). Les autres apps d'encoche se répartissent en quatre familles :
+
+- **Apps complètes / Dynamic Island** : NotchNook (payante, widgets, la plus aboutie visuellement), Boring.Notch (gratuite, open-source, média + shelf + calendrier), Alcove (freemium, animations soignées), NotchBox.
+- **Apps média / HUD** : MediaMate (contrôles média, volume et luminosité, macOS 13+), centrées sur le Now Playing.
+- **Compagnons d'agents IA de code (mono-fonction)** : Notchi, Notch-Pilot, MacNotch, CodeIsland / claude-island, Notchification — apps légères, souvent gratuites et open-source, qui affichent l'état de Claude Code ou Codex dans l'encoche, mais sans média, agenda ni Apple Intelligence.
+- **Masquage d'encoche** : TopNotch, Say No to Notch — cachent l'encoche au lieu de l'exploiter.
+
+Ce qui distingue NotchIA : c'est la seule app native qui réunit, en un seul outil, le suivi en direct de Claude Code + ChatGPT Codex + GitHub Copilot (10 états, jetons, quotas 5h/7j) ET un Digest IA on-device (Apple Intelligence Foundation Models) ET 14 modules de productivité. Pour du pur suivi Claude Code minimaliste, une app mono-fonction comme Notchi ou Notch-Pilot peut suffire ; NotchIA convient à qui veut un seul outil qui fait le suivi des agents IA et tout le reste.
 
 Guides complets (existants) :
 - **Meilleures apps Mac 2026 (FR)** : https://notchia.app/blog/meilleures-apps-mac-2026 · EN : /blog/best-mac-apps-2026
@@ -330,7 +341,7 @@ Non. Tous les modules fonctionnent localement. La seule connexion réseau est l'
 Un onglet gratuit ajouté en 2.8.0 (Wise Owl). Tu colles tes flux RSS/Atom préférés et tu dis ce qui t'intéresse en langage naturel (ex : « IA vidéo, macOS 26, SwiftUI »). NotchIA fetch les flux, déduplique, et demande à Apple Intelligence (Foundation Models, on-device) de te résumer le tout selon ton intérêt. Brief court à scanner en 30 secondes, cache 14 jours, 100% local. Requiert macOS 26+ pour Apple Intelligence ; sans, dégradation gracieuse en viewer brut.
 
 **Combien coûte NotchIA ?**
-Trois formules. Essentiel gratuit à vie. Pro mensuel 2,99 €/mois (annulable, 1 Mac) et Pro à vie 24,99 € en achat unique (2 Mac, aucune récurrence, mises à jour majeures incluses) seront bientôt disponibles.
+Trois formules. Essentiel gratuit à vie. Pro mensuel 2,99 €/mois (annulable, 1 Mac) et Pro à vie 24,99 € en achat unique (2 Mac, aucune récurrence, mises à jour majeures incluses) sont disponibles.
 
 **Quels assistants IA sont supportés ?**
 Claude Code (Anthropic), ChatGPT Codex (OpenAI), GitHub Copilot. Détection automatique par IDE.
