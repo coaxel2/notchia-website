@@ -47,7 +47,7 @@ export async function onRequestOptions() {
     status: 204,
     headers: {
       "Allow": "GET, OPTIONS",
-      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin": "https://notchia.app",
       "Access-Control-Allow-Methods": "GET, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     },

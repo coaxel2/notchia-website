@@ -119,20 +119,25 @@ async function handleCheckoutCompleted(session, env) {
   }
 
   // Génération licence Ed25519
+  // iat DÉTERMINISTE (basé sur session.created, stable entre rejeux webhook) :
+  // la même session régénère toujours la même licenseKey → un rejeu Stripe
+  // collisionne sur la PRIMARY KEY `licenses.key` et ne crée pas de doublon.
   const now = Math.floor(Date.now() / 1000);
+  const iat = session.created || now;
   const jti = await shortHash(session.id);
   const max = MAX_DEVICES[plan];
-  const exp = plan === "monthly" ? now + MONTHLY_PERIOD_DAYS * 86400 : null;
+  const exp = plan === "monthly" ? iat + MONTHLY_PERIOD_DAYS * 86400 : null;
 
-  const payload = { sub: email, plan, iat: now, jti, max };
+  const payload = { sub: email, plan, iat, jti, max };
   if (exp) payload.exp = exp;
 
   const licenseKey = await generateLicenseKey(payload, env.LICENSE_PRIVATE_KEY);
 
-  // Insert en D1
-  await env.DB
+  // Insert en D1 — INSERT OR IGNORE : si la clé existe déjà (rejeu webhook ou
+  // livraison concurrente du même event), aucune ligne n'est créée (changes=0).
+  const insert = await env.DB
     .prepare(`
-      INSERT INTO licenses
+      INSERT OR IGNORE INTO licenses
         (key, email, plan, status, stripe_customer_id, stripe_subscription_id,
          stripe_session_id, created_at, updated_at, expires_at, active_devices, max_devices)
       VALUES (?, ?, ?, 'active', ?, ?, ?, ?, ?, ?, 0, ?)
@@ -145,6 +150,13 @@ async function handleCheckoutCompleted(session, env) {
       now, now, exp, max
     )
     .run();
+
+  // Aucune ligne insérée → licence déjà émise pour cette session : on n'envoie
+  // PAS un second email (évite le double-mail sur rejeu/concurrence Stripe).
+  if (insert?.meta?.changes === 0) {
+    console.log("license already issued, skip duplicate email", session.id);
+    return;
+  }
 
   // Email de livraison via Resend
   await sendLicenseEmail(env, email, licenseKey, plan, lang);
@@ -167,11 +179,15 @@ async function handleInvoicePaid(invoice, env) {
 }
 
 async function handlePaymentFailed(invoice, env) {
+  // Échec de paiement : on NE coupe PAS immédiatement (grace period pendant les
+  // Smart Retries Stripe). On passe en 'past_due' — encore valide tant que
+  // expires_at n'est pas dépassé (cf. validate.js). La coupure définitive vient
+  // de customer.subscription.deleted quand Stripe abandonne les retries.
   const subId = invoice?.subscription;
   if (!subId) return;
   const now = Math.floor(Date.now() / 1000);
   await env.DB
-    .prepare(`UPDATE licenses SET status = 'expired', updated_at = ? WHERE stripe_subscription_id = ?`)
+    .prepare(`UPDATE licenses SET status = 'past_due', updated_at = ? WHERE stripe_subscription_id = ? AND status = 'active'`)
     .bind(now, subId)
     .run();
 }

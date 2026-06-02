@@ -26,7 +26,7 @@ const VALID_CATEGORIES = ["support", "bug", "license", "press", "partnership", "
 // pour 99% des cas — un user qui veut spam doit tomber sur le même Worker chaud)
 const ipLastSubmit = new Map();
 
-function corsHeaders(origin = "*") {
+function corsHeaders(origin = "https://notchia.app") {
   return {
     "Access-Control-Allow-Origin": origin,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
@@ -164,20 +164,18 @@ export async function onRequestPost(context) {
     resendBody = await res.text().catch(() => "(unread)");
 
     if (!res.ok) {
-      console.log("Resend error", resendStatus, resendBody);
+      console.log("Resend error", resendStatus, resendBody, "from", from);
       return json({
         error: "Envoi impossible. Reessaie ou ecris a notchia.app@gmail.com.",
-        debug: { stage: "resend_not_ok", status: resendStatus, body: resendBody.slice(0, 800), from, to_masked: to.replace(/(?<=.{2}).+(?=@)/, "***") },
       }, 502);
     }
     return json({ ok: true, resend_status: resendStatus });
   } catch (e) {
     clearTimeout(timeoutId);
     const isAbort = e?.name === "AbortError";
-    console.log("Resend fetch threw", e?.name, e?.message);
+    console.log("Resend fetch threw", e?.name, e?.message, "partial_status", resendStatus);
     return json({
       error: isAbort ? "Le service email a mis trop longtemps a repondre. Reessaie." : "Service email indisponible. Reessaie dans un moment.",
-      debug: { stage: isAbort ? "timeout" : "fetch_threw", name: e?.name, message: e?.message, partial_status: resendStatus, partial_body: resendBody.slice(0, 400) },
     }, 502);
   }
 }

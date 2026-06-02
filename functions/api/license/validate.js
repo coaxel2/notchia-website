@@ -25,7 +25,7 @@ import { verifyLicenseKey } from "./_crypto.js";
 
 function corsHeaders() {
   return {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": "https://notchia.app",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
   };
@@ -63,7 +63,11 @@ export async function onRequestPost({ request, env }) {
   if (!row) {
     return json({ valid: false, reason: "not_found" }, 404);
   }
-  if (row.status !== "active") {
+  // 'past_due' reste valide tant que expires_at n'est pas dépassé : c'est le
+  // grace period pendant les Smart Retries Stripe. L'expiration naturelle est
+  // gérée juste en dessous via expires_at. Les statuts cancelled/refunded/expired
+  // sont rejetés.
+  if (row.status !== "active" && row.status !== "past_due") {
     return json({ valid: false, reason: `status_${row.status}`, status: row.status });
   }
   if (row.expires_at && Math.floor(Date.now() / 1000) > row.expires_at) {
