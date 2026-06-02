@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tarifs NotchIA Pro — bientôt disponible</title>
-<meta name="description" content="NotchIA Pro sera bientôt disponible à 2,99 €/mois ou 24,99 € à vie. La version gratuite de NotchIA reste disponible dès maintenant." />
+<title>Tarifs NotchIA Pro — 2,99 €/mois ou 24,99 € à vie</title>
+<meta name="description" content="NotchIA Pro à 2,99 €/mois ou 24,99 € à vie. Paiement sécurisé Stripe, clé de licence livrée par email immédiatement. Version Essentiel gratuite disponible." />
 <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
 <meta name="author" content="Axel Courty" /><link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
@@ -94,8 +94,8 @@
     {"@type":"ListItem","position":2,"name":"Tarifs","item":"https://notchia.app/pricing"}
   ]},
   {"@type":"Product","name":"NotchIA Pro","description":"Logiciel macOS qui transforme l'encoche du MacBook en centre de contrôle interactif : assistants IA en direct (Claude Code, Codex, Copilot), Shelf, presse-papiers historique, convertisseur natif.","brand":{"@type":"Brand","name":"NotchIA"},"image":"https://notchia.app/og-image.png","url":"https://notchia.app/pricing","offers":[
-    {"@type":"Offer","name":"Pro mensuel","price":"2.99","priceCurrency":"EUR","availability":"https://schema.org/PreOrder","url":"https://notchia.app/pricing","priceSpecification":{"@type":"UnitPriceSpecification","price":"2.99","priceCurrency":"EUR","billingDuration":"P1M","unitCode":"MON"}},
-    {"@type":"Offer","name":"Pro à vie","price":"24.99","priceCurrency":"EUR","availability":"https://schema.org/PreOrder","url":"https://notchia.app/pricing","category":"licence à vie"}
+    {"@type":"Offer","name":"Pro mensuel","price":"2.99","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://notchia.app/pricing","priceSpecification":{"@type":"UnitPriceSpecification","price":"2.99","priceCurrency":"EUR","billingDuration":"P1M","unitCode":"MON"}},
+    {"@type":"Offer","name":"Pro à vie","price":"24.99","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://notchia.app/pricing","category":"licence à vie"}
   ]}
 ]}
 </script>
@@ -124,7 +124,7 @@
       <span class="grad-text">Pro</span>, sans abonnement obligatoire
     </h1>
     <p class="text-cream/70 text-lg max-w-2xl mx-auto" data-i18n="lead">
-      Les offres Pro seront bientôt disponibles. En attendant, la version gratuite reste téléchargeable.
+      Pro mensuel ou Pro à vie, au choix. Paiement sécurisé Stripe, clé livrée par email immédiatement.
     </p>
   </section>
 
@@ -189,7 +189,7 @@
 
     <details class="card rounded-xl px-5 py-4">
       <summary class="cursor-pointer font-medium" data-i18n="faq.q1">Que se passe-t-il si j'arrête de payer ?</summary>
-      <p class="text-cream/70 text-sm mt-3" data-i18n="faq.a1">Quand le paiement sera disponible, les fonctionnalités Pro (Claude Code et Codex) pourront être arrêtées à tout moment. Le reste de NotchIA continuera de marcher normalement.</p>
+      <p class="text-cream/70 text-sm mt-3" data-i18n="faq.a1">Les fonctionnalités Pro (Claude Code et Codex) peuvent être arrêtées à tout moment. Le reste de NotchIA continue de marcher normalement.</p>
     </details>
 
     <details class="card rounded-xl px-5 py-4">
@@ -204,12 +204,12 @@
 
     <details class="card rounded-xl px-5 py-4">
       <summary class="cursor-pointer font-medium" data-i18n="faq.q4">J'ai perdu ma clé de licence. Que faire ?</summary>
-      <p class="text-cream/70 text-sm mt-3" data-i18n-html="faq.a4">Quand les achats seront ouverts, la page <a href="/account" class="underline">/account</a> permettra de retrouver une clé depuis l'email d'achat.</p>
+      <p class="text-cream/70 text-sm mt-3" data-i18n-html="faq.a4">La page <a href="/account" class="underline">/account</a> permet de retrouver une clé depuis l'email d'achat.</p>
     </details>
   </section>
 
   <p class="text-center text-cream/40 text-xs mt-12" data-i18n-html="footnote">
-    Paiement bientôt disponible. La version gratuite reste accessible dès maintenant. Voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.
+    Paiement sécurisé via Stripe. Voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.
   </p>
 
 </main>
@@ -233,10 +233,10 @@
       'cta.error':'Paiement indisponible pour le moment. Réessaie ou écris à /contact.',
       'status.cancelled':'Paiement annulé. Aucun débit. Tu peux retenter à tout moment.',
       'faq.title':'Questions fréquentes',
-      'faq.q1':"Que se passe-t-il si j'arrête de payer ?",'faq.a1':"Quand le paiement sera disponible, les fonctionnalités Pro (Claude Code et Codex) pourront être arrêtées à tout moment. Le reste de NotchIA continuera de marcher normalement.",
+      'faq.q1':"Que se passe-t-il si j'arrête de payer ?",'faq.a1':"Les fonctionnalités Pro (Claude Code et Codex) peuvent être arrêtées à tout moment. Le reste de NotchIA continue de marcher normalement.",
       'faq.q2':"Sur combien de Mac puis-je l'installer ?",'faq.a2':"Le forfait mensuel est prévu pour 1 Mac. La licence à vie est prévue pour 2 Mac.",
       'faq.q3':"Le lifetime inclut-il les futures versions majeures ?",'faq.a3':"Oui. Toutes les mises à jour de NotchIA, y compris les versions majeures, sont incluses pour les acheteurs lifetime.",
-      'faq.q4':"J'ai perdu ma clé de licence. Que faire ?",'faq.a4':'Quand les achats seront ouverts, la page <a href="/account" class="underline">/account</a> permettra de retrouver une clé depuis l\'email d\'achat.',
+      'faq.q4':"J'ai perdu ma clé de licence. Que faire ?",'faq.a4':'La page <a href="/account" class="underline">/account</a> permet de retrouver une clé depuis l\'email d\'achat.',
       'footnote':'Paiement sécurisé via Stripe. Voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.',
     },
     en: {
@@ -256,10 +256,10 @@
       'cta.error':'Payment unavailable right now. Try again or use /contact.',
       'status.cancelled':'Payment cancelled. No charge. You can retry anytime.',
       'faq.title':'Frequently asked',
-      'faq.q1':'What happens if I stop paying?','faq.a1':'When payment is available, Pro features (Claude Code and Codex) can be stopped at any time. The rest of NotchIA keeps working normally.',
+      'faq.q1':'What happens if I stop paying?','faq.a1':'Pro features (Claude Code and Codex) can be stopped at any time. The rest of NotchIA keeps working normally.',
       'faq.q2':'How many Macs can I install it on?','faq.a2':'The monthly plan is for 1 Mac. The lifetime license is for 2 Macs.',
       'faq.q3':'Does Lifetime include future major versions?','faq.a3':'Yes. All NotchIA updates, including major versions, are included for lifetime buyers.',
-      'faq.q4':'I lost my license key. What now?','faq.a4':'When purchases open, the <a href="/account" class="underline">/account</a> page will let you retrieve a key from the purchase email.',
+      'faq.q4':'I lost my license key. What now?','faq.a4':'The <a href="/account" class="underline">/account</a> page lets you retrieve a key from the purchase email.',
       'footnote':'Secure payment via Stripe. See our <a href="/refund" class="underline">refund policy</a>, our <a href="/cgv" class="underline">terms of sale</a> and our <a href="/privacy" class="underline">privacy policy</a>.',
     },
     es: {
@@ -279,10 +279,10 @@
       'cta.error':'Pago no disponible ahora. Inténtalo o usa /contact.',
       'status.cancelled':'Pago cancelado. Sin cargo. Puedes reintentar en cualquier momento.',
       'faq.title':'Preguntas frecuentes',
-      'faq.q1':'¿Qué pasa si dejo de pagar?','faq.a1':'Cuando el pago esté disponible, las funciones Pro (Claude Code y Codex) podrán detenerse en cualquier momento. El resto de NotchIA seguirá funcionando normalmente.',
+      'faq.q1':'¿Qué pasa si dejo de pagar?','faq.a1':'Las funciones Pro (Claude Code y Codex) pueden detenerse en cualquier momento. El resto de NotchIA sigue funcionando normalmente.',
       'faq.q2':'¿En cuántos Mac puedo instalarlo?','faq.a2':'El plan mensual es para 1 Mac. La licencia de por vida es para 2 Mac.',
       'faq.q3':'¿La licencia de por vida incluye futuras versiones mayores?','faq.a3':'Sí. Todas las actualizaciones de NotchIA, incluidas las versiones mayores, están incluidas para los compradores de por vida.',
-      'faq.q4':'Perdí mi clave de licencia. ¿Qué hago?','faq.a4':'Cuando se abran las compras, la página <a href="/account" class="underline">/account</a> permitirá recuperar una clave desde el email de compra.',
+      'faq.q4':'Perdí mi clave de licencia. ¿Qué hago?','faq.a4':'La página <a href="/account" class="underline">/account</a> permite recuperar una clave desde el email de compra.',
       'footnote':'Pago seguro vía Stripe. Ver nuestra <a href="/refund" class="underline">política de reembolso</a>, nuestras <a href="/cgv" class="underline">CGV</a> y nuestra <a href="/privacy" class="underline">política de privacidad</a>.',
     },
     de: {
@@ -302,10 +302,10 @@
       'cta.error':'Zahlung gerade nicht verfügbar. Versuch erneut oder nutze /contact.',
       'status.cancelled':'Zahlung abgebrochen. Keine Belastung. Du kannst es jederzeit erneut versuchen.',
       'faq.title':'Häufige Fragen',
-      'faq.q1':'Was passiert, wenn ich aufhöre zu zahlen?','faq.a1':'Wenn die Zahlung verfügbar ist, können die Pro-Funktionen (Claude Code und Codex) jederzeit gestoppt werden. Der Rest von NotchIA funktioniert weiterhin normal.',
+      'faq.q1':'Was passiert, wenn ich aufhöre zu zahlen?','faq.a1':'Die Pro-Funktionen (Claude Code und Codex) können jederzeit gestoppt werden. Der Rest von NotchIA funktioniert weiterhin normal.',
       'faq.q2':'Auf wie vielen Macs kann ich es installieren?','faq.a2':'Der Monatsplan ist für 1 Mac. Die Lebenslang-Lizenz ist für 2 Macs.',
       'faq.q3':'Enthält Lebenslang künftige Hauptversionen?','faq.a3':'Ja. Alle NotchIA-Updates, einschließlich Hauptversionen, sind für Lebenslang-Käufer inklusive.',
-      'faq.q4':'Ich habe meinen Lizenzschlüssel verloren. Was nun?','faq.a4':'Sobald Käufe geöffnet sind, kannst du auf der Seite <a href="/account" class="underline">/account</a> einen Schlüssel über die Kauf-E-Mail wiederfinden.',
+      'faq.q4':'Ich habe meinen Lizenzschlüssel verloren. Was nun?','faq.a4':'Auf der Seite <a href="/account" class="underline">/account</a> kannst du einen Schlüssel über die Kauf-E-Mail wiederfinden.',
       'footnote':'Sichere Zahlung über Stripe. Siehe unsere <a href="/refund" class="underline">Rückerstattungs-Richtlinie</a>, unsere <a href="/cgv" class="underline">AGB</a> und unsere <a href="/privacy" class="underline">Datenschutzerklärung</a>.',
     },
   };

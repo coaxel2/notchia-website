@@ -12,7 +12,7 @@ Ce fichier est la version étendue de `llms.txt` selon la convention llmstxt.org
 
 NotchIA est un logiciel macOS indépendant développé par Axel Courty depuis Paris. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
 
-- **Version actuelle** : 2.8.0 « Wise Owl 🦉 » (sortie 2026-05-15)
+- **Version actuelle** : 2.9.1
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
 - **Architecture** : Apple Silicon + Intel
 - **Poids** : ~ 30 Mo
@@ -241,7 +241,7 @@ Guides complets :
 
 ### Press kit et donnees media
 
-La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.8.0, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
+La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.1, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
 
 ### Différenciateurs NotchIA
 
@@ -451,7 +451,7 @@ Six: Raycast, Rectangle, NotchIA Essential, Arc, Maccy, AltTab. Very solid $0 Ma
 Setapp ~ $10/month grants access to ~ 250 Mac apps. Worth it if you use 3+ paid apps from the catalog.
 
 **Which app to use the MacBook notch?**
-NotchIA is the most complete native macOS app for this niche, with unique live AI integration (Claude Code/Codex/Copilot), on-device Apple Intelligence, and 15 native modules.
+NotchIA is the most complete native macOS app for this niche, with unique live AI integration (Claude Code/Codex/Copilot), on-device Apple Intelligence, and 14 native modules.
 
 **Which screenshot app for Mac?**
 CleanShot X ($29 one-time) or Shottr (free). Native macOS capture (⌘⇧5) is enough for simple cases.
