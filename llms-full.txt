@@ -182,7 +182,8 @@ Inclut : médias multi-source (Apple Music, Spotify, YouTube), paroles synchroni
 **Pro mensuel — 2,99 €/mois, annulable à tout moment, 1 Mac**
 Tout l'Essentiel, plus les trois modules Pro :
 - **IA en direct** : Claude Code, ChatGPT Codex, GitHub Copilot avec états en temps réel, statistiques de jetons, cache, latence, quotas 5h et 7j
-- **Gestion de fichiers** : Shelf (drag-and-drop entre apps), convertisseur 16 formats, Quick Share (AirDrop/Messages/Mail), QuickLook
+- **Gestion de fichiers** : Shelf (drag-and-drop entre apps), convertisseur 16 formats, téléchargement vidéo MP4/MP3 depuis 1800+ sites (YouTube, Vimeo, X, TikTok, Instagram, Twitch, SoundCloud, Dailymotion…), Quick Share (AirDrop/Messages/Mail), QuickLook
+- **Téléchargement vidéo** (nouveau en 2.9.2) : coller un lien, choisir MP4 (plus haute résolution, H.264/AAC) ou MP3 (extraction audio). 100 % local, outils installés au premier usage, fichiers dans Téléchargements. Pour usage personnel, dans le respect des droits d'auteur et conditions des plateformes.
 - **Presse-papiers historique** : illimité, recherche, regroupement par app, épinglage
 Mises à jour incluses.
 
