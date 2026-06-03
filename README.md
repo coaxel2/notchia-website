@@ -160,3 +160,34 @@ Lighthouse devrait afficher :
   --screenshot=og-image.png \
   "file://$PWD/og-image.svg"
 ```
+
+## Page Nouveautés / Changelog (`/changelog`)
+
+Rendue **côté serveur** par `functions/changelog.js` (Cloudflare Pages Function),
+pas un fichier statique. Elle lit les **GitHub Releases** de `coaxel2/NotchIA`
+via l'API publique, génère le HTML (crawlable par les bots IA, contrairement à
+un fetch client-side) et le met en cache à l'edge pendant **1 h**.
+
+- Source : `https://api.github.com/repos/coaxel2/NotchIA/releases` (filtre
+  `draft`/`prerelease`).
+- Alias FR `/nouveautes` → `/changelog` (301, dans `_redirects`).
+- i18n FR/EN/ES/DE des libellés ; les notes de version restent en anglais.
+- Aucun token GitHub (fetch public, UA requis). Rendu Markdown sanitizé.
+
+### Rafraîchir après une nouvelle release (sans attendre le TTL d'1 h)
+
+La page se met à jour seule au bout d'1 h. Pour un rafraîchissement **immédiat**
+après publication d'une release, déclencher un **Cloudflare Pages Deploy Hook** :
+
+1. Cloudflare → Pages → `notchia-website` → Settings → Builds & deployments →
+   **Deploy hooks** → créer un hook (ex. `release-changelog`) → copier l'URL.
+2. Dans le repo de l'app (`coaxel2/NotchIA`), à la fin de `release.yml`
+   (après la publication de la release), ajouter une étape :
+
+```yaml
+      - name: Refresh notchia.app changelog
+        run: curl -fsS -X POST "${{ secrets.PAGES_DEPLOY_HOOK }}"
+```
+
+   Stocker l'URL du hook dans le secret GitHub `PAGES_DEPLOY_HOOK` du repo app.
+   Le nouveau déploiement purge le cache edge → la release apparaît en ~1 min.

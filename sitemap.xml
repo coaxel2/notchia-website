@@ -42,6 +42,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/press" />
   </url>
   <url>
+    <loc>https://notchia.app/changelog</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/changelog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/changelog" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/changelog" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/changelog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/changelog" />
+  </url>
+  <url>
     <loc>https://notchia.app/contact</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>

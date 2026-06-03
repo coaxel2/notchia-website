@@ -13,4 +13,7 @@
 # press-kit/ donc plus d'ambiguite. Cloudflare sert press.html naturellement
 # au path /press via les pretty URLs.
 
+# Alias FR vers la page Nouveautes (rendue par functions/changelog.js).
+/nouveautes  /changelog  301
+
 /*  /404.html  404
