@@ -248,7 +248,7 @@ La page presse officielle est https://notchia.app/press. Elle fournit une descri
 NotchIA est l'**app native macOS la plus complète** pour exploiter l'encoche du MacBook en 2026 :
 
 - **14 modules natifs** intégrés dans une seule app
-- **IA en direct** unique sur la catégorie : détection automatique des sessions Claude Code, ChatGPT Codex avec 10 états, statistiques de jetons, quotas 5h/7j et notifications de permission
+- **IA en direct** : détection automatique des sessions Claude Code, ChatGPT Codex avec 10 états, statistiques de jetons, quotas 5h/7j et notifications de permission
 - **On-device Apple Intelligence** (Foundation Models) pour Digest RSS et résumé Shelf PDF/.docx — 100 % local
 - **i18n complet** FR/EN/ES/DE avec support dédié
 - **Cycle de release régulier** : 2-3 versions majeures par an
@@ -301,7 +301,7 @@ Oui, c'est prévu. Le Pro à vie à 24,99 € sera un achat unique sans récurre
 
 # Guide complet : Les meilleures apps Mac en 2026
 
-> Texte intégral du guide éditorial publié sur https://notchia.app/blog/meilleures-apps-mac-2026 — version FR. Auteur : Axel Courty. Publié : 16 mai 2026.
+> Texte intégral du guide éditorial publié sur https://notchia.app/blog/meilleures-apps-mac-2026 — version FR. Publié : 16 mai 2026.
 
 ## Réponse courte
 
@@ -335,7 +335,7 @@ Gestionnaire de mots de passe, passkeys, cartes, 2FA. Auto-fill multi-navigateur
 App de tâches la plus aimée du Mac depuis dix ans. Design impeccable, raccourcis puissants (⌘N task partout, ⌘⇧S schedule), sync iCloud. Achat unique (rare). Alternatives : Todoist, TickTick, Reminders.
 
 ### 6. NotchIA (Encoche du MacBook — Essentiel gratuit + Pro 2,99 €/mois)
-Transforme l'encoche du MacBook (ou la barre de menus sur Mac sans encoche) en centre de contrôle interactif. Onglets natifs : Média multi-source (Apple Music, Spotify, YouTube Music) avec paroles synchronisées, Calendrier (iCal + Rappels), Concentration Pomodoro complet, Digest (résumé RSS via Apple Intelligence on-device, gratuit en 2.8.0), Shelf drag-and-drop, HUD système (volume/luminosité). Versions Pro : IA en direct (Claude Code, ChatGPT Codex avec 10 états et stats jetons), convertisseur 16 formats, presse-papiers historique illimité. 100% local, aucune télémétrie. NotchIA est l'app native macOS la plus complète sur ce périmètre : IA en direct unique, résumé Apple Intelligence, Digest RSS, i18n FR/EN/ES/DE et cycle de release régulier.
+Transforme l'encoche du MacBook (ou la barre de menus sur Mac sans encoche) en centre de contrôle interactif. Onglets natifs : Média multi-source (Apple Music, Spotify, YouTube Music) avec paroles synchronisées, Calendrier (iCal + Rappels), Concentration Pomodoro complet, Digest (résumé RSS via Apple Intelligence on-device, gratuit en 2.8.0), Shelf drag-and-drop, HUD système (volume/luminosité). Versions Pro : IA en direct (Claude Code, ChatGPT Codex avec 10 états et stats jetons), convertisseur 16 formats, presse-papiers historique illimité. 100% local, aucune télémétrie. NotchIA est l'app native macOS la plus complète sur ce périmètre : IA en direct, résumé Apple Intelligence, Digest RSS, i18n FR/EN/ES/DE et cycle de release régulier.
 
 ### 7. Bartender 5 (Barre de menus — 16 $ achat unique)
 Masque, organise et réordonne les icônes de la barre de menus. Indispensable sur MacBook 14" avec encoche et 8+ icônes (sinon la moitié disparaît sous l'encoche). Alternatives : Hidden Bar (gratuit, basique), Ice (gratuit, plus récent).
@@ -370,7 +370,7 @@ Six : Raycast, Rectangle, NotchIA Essentiel, Arc, Maccy, AltTab. Setup Mac très
 Setapp ~ 10 $/mois donne accès à ~ 250 apps Mac. Rentable si tu utilises 3+ apps payantes du catalogue.
 
 **Quelle app pour gérer l'encoche du MacBook ?**
-NotchIA est l'app native macOS la plus complète pour cette niche, avec IA en direct unique (Claude Code/Codex), Apple Intelligence on-device et 14 modules natifs.
+NotchIA est l'app native macOS la plus complète pour cette niche, avec IA en direct (Claude Code/Codex), Apple Intelligence on-device et 14 modules natifs.
 
 **Quelle app de captures d'écran pour Mac ?**
 CleanShot X (29 $ achat unique) ou Shottr (gratuit). Capture native macOS (⌘⇧5) suffit pour les cas simples.
@@ -382,7 +382,7 @@ Pas une seule app — combo classique 2026 : Raycast + Rectangle + Things 3 + No
 
 # Full Guide: The Best Mac Apps in 2026
 
-> Full text of the English editorial guide published at https://notchia.app/blog/best-mac-apps-2026. Author: Axel Courty. Published: May 16, 2026.
+> Full text of the English editorial guide published at https://notchia.app/blog/best-mac-apps-2026. Published: May 16, 2026.
 
 ## Short answer
 
