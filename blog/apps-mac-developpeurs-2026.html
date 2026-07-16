@@ -127,7 +127,7 @@
         { "@type": "ListItem", "position": 10, "name": "Raycast", "url": "https://www.raycast.com/", "description": "Launcher universel avec extensions devtools et IA intégrée." },
         { "@type": "ListItem", "position": 11, "name": "Rectangle", "url": "https://rectangleapp.com/", "description": "Gestion des fenêtres au clavier, gratuit et open-source." },
         { "@type": "ListItem", "position": 12, "name": "CleanShot X", "url": "https://cleanshot.com/", "description": "Captures d'écran et enregistrements pour documentation technique." },
-        { "@type": "ListItem", "position": 13, "name": "NotchIA", "url": "https://notchia.app/", "description": "Encoche en cockpit IA en direct (10 états), stats jetons/cache/quotas pour Claude Code, Codex, Copilot." },
+        { "@type": "ListItem", "position": 13, "name": "NotchIA", "url": "https://notchia.app/", "description": "Encoche en cockpit IA en direct (10 états), stats jetons/cache/quotas pour Claude Code, Codex." },
         { "@type": "ListItem", "position": 14, "name": "Stats", "url": "https://github.com/exelban/stats", "description": "Monitoring system tray (CPU, RAM, réseau, disque), gratuit." },
         { "@type": "ListItem", "position": 15, "name": "Tailscale", "url": "https://tailscale.com/", "description": "VPN mesh WireGuard, partage de localhost entre machines de dev." }
       ]
@@ -165,7 +165,7 @@
           "name": "Quelle app pour surveiller les agents IA sur Mac ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NotchIA est la seule app macOS qui détecte automatiquement Claude Code, ChatGPT Codex et GitHub Copilot et affiche leurs 10 états en direct dans l'encoche du MacBook (Compilation, Recherche, Modification, Web, Sous-agent, etc.), avec stats jetons/cache/quotas 5h et 7j. 100 % local. Essentiel gratuit, Pro 2,99 €/mois ou 24,99 € à vie."
+            "text": "NotchIA est la seule app macOS qui détecte automatiquement Claude Code et ChatGPT Codex et affiche leurs 10 états en direct dans l'encoche du MacBook (Compilation, Recherche, Modification, Web, Sous-agent, etc.), avec stats jetons/cache/quotas 5h et 7j. 100 % local. Essentiel gratuit, Pro 2,99 €/mois ou 24,99 € à vie."
           }
         },
         {
@@ -360,7 +360,7 @@
     <p class="meta">Encoche en cockpit IA · indie français · notchia.app</p>
     <h3>NotchIA</h3>
     <p><span class="price free">Essentiel gratuit</span> · <span class="price">Pro 2,99 €/mois ou 24,99 € à vie</span></p>
-    <p><strong>NotchIA</strong> transforme l'encoche du MacBook (ou la barre de menus sur Mac sans encoche) en cockpit IA en direct. Quand Claude Code, ChatGPT Codex ou GitHub Copilot tourne en arrière-plan, NotchIA détecte automatiquement la session et affiche son état parmi 10 reconnus : <strong>Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution</strong>.</p>
+    <p><strong>NotchIA</strong> transforme l'encoche du MacBook (ou la barre de menus sur Mac sans encoche) en cockpit IA en direct. Quand Claude Code ou ChatGPT Codex tourne en arrière-plan, NotchIA détecte automatiquement la session et affiche son état parmi 10 reconnus : <strong>Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution</strong>.</p>
     <p>Bonus : stats jetons (input, output, cache hit, cache create) en temps réel, quotas 5 h et 7 j avec barre de progression, notifications quand l'agent attend une permission, indicateur multi-session (points colorés sous l'encoche fermée pour les sessions parallèles), bring-to-front de l'IDE en un clic. Ajoute aussi l'<strong>Apple Intelligence Digest</strong> (résumé de notifications, batterie, météo) pour les Mac compatibles. Lecture 100 % locale depuis <code class="font-mono text-xs">~/.claude/projects/</code> et équivalents — aucune donnée ne quitte le Mac.</p>
     <p>Version actuelle : <strong>v2.8.0 « Wise Owl »</strong> sortie le 15 mai 2026.</p>
   </div>
@@ -436,13 +436,13 @@
   <p>Pas obligatoire. <strong>Claude Code</strong> (Claude Pro 20 $/mois ou Max) reste leader sur les tâches longues et le raisonnement. <strong>Codex</strong> (ChatGPT Plus 20 $/mois) est bon en exécution rapide et intégration OpenAI. Beaucoup de devs combinent les deux pour 40 $/mois, en utilisant <a href="/">NotchIA</a> pour voir leurs états en parallèle et alterner selon la tâche.</p>
 
   <h3>Quelle app pour surveiller les agents IA sur Mac ?</h3>
-  <p><a href="/">NotchIA</a> est la seule app macOS qui détecte automatiquement Claude Code, ChatGPT Codex et GitHub Copilot et affiche leurs 10 états en direct dans l'encoche du MacBook (Compilation, Recherche, Modification, Web, Sous-agent, etc.), avec stats jetons/cache/quotas 5h et 7j. 100 % local. Essentiel gratuit, <a href="/pricing">Pro 2,99 €/mois ou 24,99 € à vie</a>.</p>
+  <p><a href="/">NotchIA</a> est la seule app macOS qui détecte automatiquement Claude Code et ChatGPT Codex et affiche leurs 10 états en direct dans l'encoche du MacBook (Compilation, Recherche, Modification, Web, Sous-agent, etc.), avec stats jetons/cache/quotas 5h et 7j. 100 % local. Essentiel gratuit, <a href="/pricing">Pro 2,99 €/mois ou 24,99 € à vie</a>.</p>
 
   <h3>Quel terminal choisir entre Warp, Ghostty et iTerm2 ?</h3>
   <p><strong>Warp</strong> pour les blocks de commande et l'IA intégrée, <strong>Ghostty</strong> pour la pure performance (GPU, écrit en Zig), <strong>iTerm2</strong> pour la robustesse et la configurabilité historique. Aucun n'est mauvais — c'est une question de préférence et d'écosystème.</p>
 
   <div class="mt-8 rounded-xl border border-cream/10 bg-gradient-to-b from-[#14171F] to-[#0F1218] px-5 py-4">
-    <p><strong>À propos de l'auteur.</strong> Axel Courty est développeur indie et créateur de NotchIA, l'app macOS qui transforme l'encoche du MacBook en cockpit IA en direct (Claude Code, ChatGPT Codex, GitHub Copilot). Ce guide est mis à jour à chaque release majeure. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> · <a href="https://github.com/coaxel2" rel="me noopener">GitHub</a>.</p>
+    <p><strong>À propos de l'auteur.</strong> Axel Courty est développeur indie et créateur de NotchIA, l'app macOS qui transforme l'encoche du MacBook en cockpit IA en direct (Claude Code, ChatGPT Codex). Ce guide est mis à jour à chaque release majeure. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> · <a href="https://github.com/coaxel2" rel="me noopener">GitHub</a>.</p>
   </div>
 
   <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
