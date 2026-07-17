@@ -35,17 +35,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&display=optional" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = { theme: { extend: {
-    colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
-    fontFamily: {
-      display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
-      sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-      mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-    }
-  }}}
-</script>
+<link rel="stylesheet" href="../tailwind.css" />
+
 <style>
   :root {
     --ink: #0B0D12; --cream: #EDE8DC;
@@ -126,6 +117,12 @@
     <p class="text-cream/70 text-lg max-w-2xl mx-auto" data-i18n="hero.subtitle">
       Sélections honnêtes pour macOS, encoche du MacBook, IA on-device et outils de dev. Tout est sourcé, daté, et mis à jour au fil des versions.
     </p>
+    <div class="mt-5 flex items-center justify-center gap-3 text-sm">
+      <span class="text-cream/45" id="lang-filter-label" data-i18n="filter.showing">Articles en français</span>
+      <button id="lang-filter-toggle" type="button"
+        class="px-3 py-1 rounded-full border border-cream/20 text-cream/70 hover:text-cream hover:border-cream/40 transition"
+        data-i18n="filter.all">Toutes les langues</button>
+    </div>
   </section>
 
   <!-- ─── Notch utility (catégorie maison) ─── -->
@@ -557,7 +554,7 @@
 
 <footer class="border-t border-cream/10 mt-12">
   <div class="max-w-4xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
-    <div>© 2026 NotchIA · Axel Courty</div>
+    <div>© 2026 NotchIA</div>
     <nav class="flex flex-wrap gap-x-5 gap-y-2">
       <a href="/mentions-legales" class="hover:text-cream" data-i18n="footer.legal">Mentions légales</a>
       <a href="/cgv" class="hover:text-cream" data-i18n="footer.terms">CGV</a>
@@ -592,7 +589,11 @@
       'footer.privacy': 'Confidentialité',
       'footer.refund': 'Remboursement',
       'meta.title': 'Blog NotchIA — Guides Mac, IA, productivité 2026',
-      'meta.description': "Tous les articles NotchIA : meilleures apps Mac 2026, apps encoche MacBook, outils Claude Code et Codex, IA on-device Apple Intelligence."
+      'meta.description': "Tous les articles NotchIA : meilleures apps Mac 2026, apps encoche MacBook, outils Claude Code et Codex, IA on-device Apple Intelligence.",
+      'filter.showing': 'Articles en français',
+      'filter.showing_all': 'Toutes les langues affichées',
+      'filter.all': 'Toutes les langues',
+      'filter.mine': 'Ma langue uniquement'
     },
     en: {
       'nav.home': 'Home',
@@ -615,7 +616,11 @@
       'footer.privacy': 'Privacy',
       'footer.refund': 'Refund',
       'meta.title': 'NotchIA Blog — Mac, AI, productivity guides 2026',
-      'meta.description': "All NotchIA articles: best Mac apps 2026, MacBook notch apps, Claude Code and Codex tools, on-device Apple Intelligence."
+      'meta.description': "All NotchIA articles: best Mac apps 2026, MacBook notch apps, Claude Code and Codex tools, on-device Apple Intelligence.",
+      'filter.showing': 'Articles in English',
+      'filter.showing_all': 'Showing all languages',
+      'filter.all': 'All languages',
+      'filter.mine': 'My language only'
     },
     es: {
       'nav.home': 'Inicio',
@@ -638,7 +643,11 @@
       'footer.privacy': 'Privacidad',
       'footer.refund': 'Reembolso',
       'meta.title': 'Blog NotchIA — Guías Mac, IA, productividad 2026',
-      'meta.description': "Todos los artículos NotchIA: mejores apps Mac 2026, apps de muesca MacBook, herramientas Claude Code y Codex, Apple Intelligence on-device."
+      'meta.description': "Todos los artículos NotchIA: mejores apps Mac 2026, apps de muesca MacBook, herramientas Claude Code y Codex, Apple Intelligence on-device.",
+      'filter.showing': 'Artículos en español',
+      'filter.showing_all': 'Mostrando todos los idiomas',
+      'filter.all': 'Todos los idiomas',
+      'filter.mine': 'Solo mi idioma'
     },
     de: {
       'nav.home': 'Startseite',
@@ -661,9 +670,41 @@
       'footer.privacy': 'Datenschutz',
       'footer.refund': 'Rückerstattung',
       'meta.title': 'NotchIA Blog — Mac-, KI- und Produktivitätsguides 2026',
-      'meta.description': "Alle NotchIA-Artikel: beste Mac-Apps 2026, MacBook-Aussparungs-Apps, Claude Code und Codex, On-Device Apple Intelligence."
+      'meta.description': "Alle NotchIA-Artikel: beste Mac-Apps 2026, MacBook-Aussparungs-Apps, Claude Code und Codex, On-Device Apple Intelligence.",
+      'filter.showing': 'Artikel auf Deutsch',
+      'filter.showing_all': 'Alle Sprachen werden angezeigt',
+      'filter.all': 'Alle Sprachen',
+      'filter.mine': 'Nur meine Sprache'
     }
   };
+
+  // Filtre des cartes par langue. Les crawlers (sans JS) voient toujours
+  // toutes les cartes — le filtre est une personnalisation client uniquement.
+  let showAllLangs = false;
+  function cardLang(card) {
+    const pill = card.querySelector('.pill');
+    if (!pill) return null; // carte sans pill = toujours visible
+    for (const l of ['fr', 'en', 'es', 'de']) if (pill.classList.contains(l)) return l;
+    return null;
+  }
+  function filterCards(lang) {
+    document.querySelectorAll('.card-article').forEach(card => {
+      const cl = cardLang(card);
+      card.style.display = (showAllLangs || !cl || cl === lang) ? '' : 'none';
+    });
+    // masque les sections devenues vides
+    document.querySelectorAll('main > section').forEach(sec => {
+      const cards = sec.querySelectorAll('.card-article');
+      if (!cards.length) return; // hero / CTA
+      const visible = [...cards].some(c => c.style.display !== 'none');
+      sec.style.display = visible ? '' : 'none';
+    });
+    const toggle = document.getElementById('lang-filter-toggle');
+    const label = document.getElementById('lang-filter-label');
+    const dict = I18N[lang] || I18N.fr;
+    if (toggle) toggle.textContent = showAllLangs ? (dict['filter.mine'] || '') : (dict['filter.all'] || '');
+    if (label) label.textContent = showAllLangs ? (dict['filter.showing_all'] || '') : (dict['filter.showing'] || '');
+  }
 
   function applyLang(lang) {
     const dict = I18N[lang] || I18N.fr;
@@ -675,6 +716,7 @@
     if (dict['meta.title']) document.title = dict['meta.title'];
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && dict['meta.description']) metaDesc.setAttribute('content', dict['meta.description']);
+    filterCards(lang);
   }
 
   (function() {
@@ -699,6 +741,13 @@
       const next = e.target.value;
       try { localStorage.setItem('notchia-lang', next); } catch(_){}
       applyLang(next);
+    });
+
+    // 3. Bouton « toutes les langues » : bascule le filtre des cartes
+    const toggle = document.getElementById('lang-filter-toggle');
+    if (toggle) toggle.addEventListener('click', () => {
+      showAllLangs = !showAllLangs;
+      filterCards(sel.value);
     });
   })();
 </script>

@@ -25,6 +25,9 @@
      Promouvoir vers /fr/, /en/, /es/, /de/ si on traduit vraiment server-side. -->
 <link rel="canonical" href="https://notchia.app/" />
 <link rel="alternate" hreflang="fr" href="https://notchia.app/" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/en/" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/es/" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/de/" />
 <link rel="alternate" hreflang="x-default" href="https://notchia.app/" />
 
 <!-- llms.txt (convention llmstxt.org — résumé pour les LLM) -->
@@ -414,36 +417,8 @@
 <!-- Preload du logo hero (LCP candidate) — version AVIF si supportée -->
 <link rel="preload" as="image" href="logo.avif" type="image/avif" />
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          ink:      '#0B0D12',
-          ink2:     '#0F1218',
-          surface:  '#14171F',
-          surface2: '#1B1F2A',
-          line:     'rgba(237, 232, 220, 0.08)',
-          line2:    'rgba(237, 232, 220, 0.14)',
-          cream:    '#EDE8DC',
-          fog:      'rgba(237, 232, 220, 0.62)',
-          mist:     'rgba(237, 232, 220, 0.52)',
-          violet:   'var(--violet)',
-          magenta:  'var(--magenta)',
-          orange:   'var(--orange)',
-          cyan:     'var(--cyan)',
-          mint:     '#9DD9B7',
-        },
-        fontFamily: {
-          display:  ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
-          sans:     ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          mono:     ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-        },
-      }
-    }
-  }
-</script>
+<link rel="stylesheet" href="tailwind.css" />
+
 
 <style>
   :root {
@@ -2475,7 +2450,7 @@
     <div class="rule my-8 sm:my-10"></div>
 
     <div class="flex flex-wrap items-center justify-between gap-3 sm:gap-4 text-[11px] sm:text-xs text-mist font-mono">
-      <span data-i18n="footer.copyright">© 2026 NotchIA · Axel Courty</span>
+      <span data-i18n="footer.copyright">© 2026 NotchIA</span>
       <span data-i18n="footer.madein">fait avec Swift 6 · sans télémétrie</span>
       <span>v2.9.7 · 2026-06-10</span>
     </div>
@@ -2685,7 +2660,7 @@
       'footer.legal.l2': 'Confidentialité',
       'footer.legal.l3': 'Remboursement',
       'footer.legal.l4': 'Mentions légales',
-      'footer.copyright': '© 2026 NotchIA · Axel Courty',
+      'footer.copyright': '© 2026 NotchIA',
       'footer.madein': 'fait avec Swift 6 · sans télémétrie',
 
       // === Articles section (§10.5) ===
@@ -3050,7 +3025,7 @@
       'footer.legal.l2': 'Privacy',
       'footer.legal.l3': 'Refunds',
       'footer.legal.l4': 'Legal notice',
-      'footer.copyright': '© 2026 NotchIA · Axel Courty',
+      'footer.copyright': '© 2026 NotchIA',
       'footer.madein': 'made with Swift 6 · no telemetry',
 
       // === Articles section (§10.5) ===
@@ -3415,7 +3390,7 @@
       'footer.legal.l2': 'Privacidad',
       'footer.legal.l3': 'Reembolsos',
       'footer.legal.l4': 'Aviso legal',
-      'footer.copyright': '© 2026 NotchIA · Axel Courty',
+      'footer.copyright': '© 2026 NotchIA',
       'footer.madein': 'hecho con Swift 6 · sin telemetría',
 
       // === Articles section (§10.5) ===
@@ -3780,7 +3755,7 @@
       'footer.legal.l2': 'Datenschutz',
       'footer.legal.l3': 'Rückerstattung',
       'footer.legal.l4': 'Impressum',
-      'footer.copyright': '© 2026 NotchIA · Axel Courty',
+      'footer.copyright': '© 2026 NotchIA',
       'footer.madein': 'mit Swift 6 gemacht · keine Telemetrie',
 
       // === Articles section (§10.5) ===
@@ -3913,7 +3888,7 @@
       'prod.clip.cache': 'Cache: 500 Einträge',
       'prod.shelf.title': 'Ziehen. Ablegen. Vergessen.',
       'prod.shelf.desc': 'QuickLook integriert. Quick Share AirDrop / Mail / Messages.',
-      'prod.vid.eyebrow': 'Video-Download', 'prod.vid.tag': 'Neu · 2.9.2', 'prod.vid.title': 'Ein Link. MP4 oder MP3.', 'prod.vid.desc': 'Link einfügen, HD-MP4 oder MP3 erhalten — von über 1800 Seiten. 100% lokal.',
+      'prod.vid.eyebrow': 'Video-Download', 'prod.vid.tag': 'Neu · 2.9.2', 'prod.vid.title': 'Ein Link. MP4 oder MP3.', 'prod.vid.desc': 'Link einfügen, HD-MP4 oder MP3 erhalten — von über 1800 Websites. 100% lokal.',
       'prod.conv.eyebrow': 'Konverter',
       'prod.conv.title': 'Ein Format. Ein Klick.',
       'prod.conv.desc': 'Bilder, PDF, verschiedene Formate. Lokale Verarbeitung.',

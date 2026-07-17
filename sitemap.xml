@@ -830,4 +830,103 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-alcove" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-alcove" />
   </url>
+  <url>
+    <loc>https://notchia.app/en/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/"/>
+  </url>
+  <url>
+    <loc>https://notchia.app/es/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/"/>
+  </url>
+  <url>
+    <loc>https://notchia.app/de/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/"/>
+  </url>
+  <url>
+    <loc>https://notchia.app/en/features</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features"/>
+  </url>
+  <url>
+    <loc>https://notchia.app/es/features</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features"/>
+  </url>
+  <url>
+    <loc>https://notchia.app/de/features</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features"/>
+  </url>
+  <url>
+    <loc>https://notchia.app/en/pricing</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing"/>
+  </url>
+  <url>
+    <loc>https://notchia.app/es/pricing</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing"/>
+  </url>
+  <url>
+    <loc>https://notchia.app/de/pricing</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing"/>
+  </url>
 </urlset>

@@ -10,11 +10,11 @@
 <meta name="author" content="NotchIA" /><link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="canonical" href="https://notchia.app/features" />
-<meta name="robots" content="index,follow" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 <link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
-<link rel="alternate" hreflang="en" href="https://notchia.app/features" />
-<link rel="alternate" hreflang="es" href="https://notchia.app/features" />
-<link rel="alternate" hreflang="de" href="https://notchia.app/features" />
+<link rel="alternate" hreflang="en" href="https://notchia.app/en/features" />
+<link rel="alternate" hreflang="es" href="https://notchia.app/es/features" />
+<link rel="alternate" hreflang="de" href="https://notchia.app/de/features" />
 <link rel="alternate" hreflang="x-default" href="https://notchia.app/features" />
 
 <meta property="og:type" content="website" />
@@ -28,21 +28,8 @@
 <meta name="twitter:image" content="https://notchia.app/og-image.png" />
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
-        fontFamily: {
-          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
-          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-        }
-      }
-    }
-  }
-</script>
+<link rel="stylesheet" href="tailwind.css" />
+
 <style>
   :root {
     --ink: #0B0D12;
@@ -598,7 +585,7 @@
 
 <footer class="border-t border-cream/10 mt-12">
   <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
-    <div data-i18n="foot.copy">© 2026 NotchIA · Axel Courty</div>
+    <div data-i18n="foot.copy">© 2026 NotchIA</div>
     <nav class="flex flex-wrap gap-x-5 gap-y-2">
       <a href="/mentions-legales" class="hover:text-cream" data-i18n="foot.legal">Mentions légales</a>
       <a href="/cgv" class="hover:text-cream" data-i18n="foot.cgv">CGV</a>
@@ -611,6 +598,7 @@
 <script>
   const I18N = {
     fr: {
+      'meta.title':'Fonctionnalités NotchIA — Digest IA, Concentration, IA Code, Shelf','meta.description':"4 onglets gratuits (Musique, Calendrier, Digest IA, Concentration) et 3 Pro (Shelf, IA Code, Presse-papier). Résumés IA on-device. macOS 15+.",
       'nav.home':'Accueil','nav.features':'Fonctionnalités','nav.pricing':'Tarifs',
       'hero.title':'Toutes les <span class="grad-text">fonctionnalités</span>',
       'hero.lead1':"L'encoche de ton Mac devient un véritable assistant. Musique, calendrier, digest d'actualité IA, concentration et toutes les détections live sont <strong class=\"text-cream\">gratuits</strong>.",
@@ -799,10 +787,11 @@
       'cta.title':'Prêt à essayer ?',
       'cta.lead':'Télécharge la version gratuite. Si elle te plaît, débloque les onglets Pro quand tu veux.',
       'cta.primary':'Télécharger gratuit','cta.secondary':'Voir les tarifs Pro',
-      'foot.copy':'© 2026 NotchIA · Axel Courty',
+      'foot.copy':'© 2026 NotchIA',
       'foot.legal':'Mentions légales','foot.cgv':'CGV','foot.privacy':'Confidentialité','foot.refund':'Remboursement',
     },
     en: {
+      'meta.title':'NotchIA Features — AI Digest, Focus, AI Code, Shelf','meta.description':"4 free tabs (Music, Calendar, AI Digest, Focus) and 3 Pro (Shelf, AI Code, Clipboard). On-device AI summaries. macOS 15+.",
       'nav.home':'Home','nav.features':'Features','nav.pricing':'Pricing',
       'hero.title':'All the <span class="grad-text">features</span>',
       'hero.lead1':'Your Mac\'s notch becomes a real assistant. Music, calendar, AI news digest, focus and all live detections are <strong class="text-cream">free</strong>.',
@@ -991,10 +980,11 @@
       'cta.title':'Ready to try?',
       'cta.lead':'Download the free version. If you like it, unlock the Pro tabs whenever you want.',
       'cta.primary':'Download free','cta.secondary':'See Pro pricing',
-      'foot.copy':'© 2026 NotchIA · Axel Courty',
+      'foot.copy':'© 2026 NotchIA',
       'foot.legal':'Legal','foot.cgv':'Terms','foot.privacy':'Privacy','foot.refund':'Refund',
     },
     es: {
+      'meta.title':'Funciones de NotchIA — Digest IA, Concentración, IA Code, Shelf','meta.description':"4 pestañas gratis (Música, Calendario, Digest IA, Concentración) y 3 Pro (Shelf, IA Code, Portapapeles). Resúmenes IA on-device. macOS 15+.",
       'nav.home':'Inicio','nav.features':'Funcionalidades','nav.pricing':'Precios',
       'hero.title':'Todas las <span class="grad-text">funcionalidades</span>',
       'hero.lead1':'La muesca de tu Mac se convierte en un verdadero asistente. Música, calendario, resumen de actualidad IA, concentración y todas las detecciones en vivo son <strong class="text-cream">gratis</strong>.',
@@ -1183,10 +1173,11 @@
       'cta.title':'¿Listo para probar?',
       'cta.lead':'Descarga la versión gratuita. Si te gusta, desbloquea las pestañas Pro cuando quieras.',
       'cta.primary':'Descargar gratis','cta.secondary':'Ver precios Pro',
-      'foot.copy':'© 2026 NotchIA · Axel Courty',
+      'foot.copy':'© 2026 NotchIA',
       'foot.legal':'Aviso legal','foot.cgv':'CGV','foot.privacy':'Privacidad','foot.refund':'Reembolso',
     },
     de: {
+      'meta.title':'NotchIA Funktionen — KI-Digest, Fokus, KI-Code, Shelf','meta.description':"4 kostenlose Tabs (Musik, Kalender, KI-Digest, Fokus) und 3 Pro (Shelf, KI-Code, Zwischenablage). On-Device-KI-Zusammenfassungen. macOS 15+.",
       'nav.home':'Startseite','nav.features':'Funktionen','nav.pricing':'Preise',
       'hero.title':'Alle <span class="grad-text">Funktionen</span>',
       'hero.lead1':'Die Aussparung deines Macs wird zum echten Assistenten. Musik, Kalender, KI-News-Digest, Fokus und alle Live-Erkennungen sind <strong class="text-cream">kostenlos</strong>.',
@@ -1321,7 +1312,7 @@
       'shelf.b5_1':'Link einfügen, MP4 oder MP3 wählen, herunterladen.',
       'shelf.b5_2':'<strong>MP4</strong>: höchste verfügbare Auflösung, überall abspielbar (H.264/AAC, QuickTime/Vorschau).',
       'shelf.b5_3':'<strong>MP3</strong>: Audioextraktion in bester Qualität.',
-      'shelf.b5_4':'YouTube, Vimeo, X, TikTok, Instagram, Twitch, SoundCloud, Dailymotion + 1800 Seiten.',
+      'shelf.b5_4':'YouTube, Vimeo, X, TikTok, Instagram, Twitch, SoundCloud, Dailymotion + 1800 Websites.',
       'shelf.b5_5':'100% lokal: keine Daten über einen NotchIA-Server. Nötige Tools beim ersten Gebrauch installiert.',
       'shelf.note_video':'Video-Download: Urheberrecht und Nutzungsbedingungen der Plattformen beachten. Für den persönlichen Gebrauch.',
       'iacode.title':'<span class="grad-text">AI Code</span>-Tab <span class="badge-pro">💎 Pro</span>',
@@ -1375,7 +1366,7 @@
       'cta.title':'Bereit zum Ausprobieren?',
       'cta.lead':'Lade die kostenlose Version herunter. Wenn sie dir gefällt, schalte die Pro-Tabs frei, wann du willst.',
       'cta.primary':'Kostenlos herunterladen','cta.secondary':'Pro-Preise ansehen',
-      'foot.copy':'© 2026 NotchIA · Axel Courty',
+      'foot.copy':'© 2026 NotchIA',
       'foot.legal':'Impressum','foot.cgv':'AGB','foot.privacy':'Datenschutz','foot.refund':'Rückerstattung',
     },
   };
@@ -1391,6 +1382,13 @@
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.textContent = v; });
     document.querySelectorAll('[data-i18n-html]').forEach(el => { const v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    const _md = document.querySelector('meta[name="description"]');
+    if (_md && dict['meta.description']) _md.setAttribute('content', dict['meta.description']);
+    const _ot = document.querySelector('meta[property="og:title"]');
+    if (_ot && dict['meta.title']) _ot.setAttribute('content', dict['meta.title']);
+    const _od = document.querySelector('meta[property="og:description"]');
+    if (_od && dict['meta.description']) _od.setAttribute('content', dict['meta.description']);
     const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
     try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
   }

@@ -10,7 +10,7 @@
 <meta name="author" content="NotchIA" /><link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="canonical" href="https://notchia.app/refund" />
-<meta name="robots" content="index,follow" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 <link rel="alternate" hreflang="fr" href="https://notchia.app/refund" />
 <link rel="alternate" hreflang="en" href="https://notchia.app/refund" />
 <link rel="alternate" hreflang="es" href="https://notchia.app/refund" />
@@ -32,21 +32,8 @@
 <meta name="twitter:image" content="https://notchia.app/og-image.png" />
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
-        fontFamily: {
-          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
-          sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-        }
-      }
-    }
-  }
-</script>
+<link rel="stylesheet" href="tailwind.css" />
+
 <style>
   :root {
     --ink: #0B0D12;
@@ -154,7 +141,7 @@
 
 <footer class="border-t border-cream/10 mt-12">
   <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
-    <div data-i18n="footer.copy">© 2026 NotchIA · Axel Courty</div>
+    <div data-i18n="footer.copy">© 2026 NotchIA</div>
     <nav class="flex flex-wrap gap-x-5 gap-y-2">
       <a href="/mentions-legales" class="hover:text-cream" data-i18n="footer.legal">Mentions légales</a>
       <a href="/cgv" class="hover:text-cream" data-i18n="footer.terms">CGV</a>
@@ -199,7 +186,7 @@
       'after.p':'Une fois le remboursement traité, ta clé de licence est <strong>désactivée</strong>. NotchIA retombe en mode Essentiel sur tes Mac à la prochaine vérification de licence. Tu peux racheter à tout moment, sans pénalité.',
       'contact.h2':'Contact',
       'contact.p':'Une question, un doute, un cas non couvert ? Écris à <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. On répond en français ou en anglais.',
-      'footer.copy':'© 2026 NotchIA · Axel Courty',
+      'footer.copy':'© 2026 NotchIA',
       'footer.legal':'Mentions légales','footer.terms':'CGV','footer.privacy':'Confidentialité','footer.refund':'Remboursement',
     },
     en: {
@@ -235,7 +222,7 @@
       'after.p':'Once the refund is processed, your license key is <strong>deactivated</strong>. NotchIA falls back to Essential mode on your Macs at the next license check. You can re-purchase at any time, without penalty.',
       'contact.h2':'Contact',
       'contact.p':'A question, a doubt, a case not covered? Write to <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. We reply in French or English.',
-      'footer.copy':'© 2026 NotchIA · Axel Courty',
+      'footer.copy':'© 2026 NotchIA',
       'footer.legal':'Legal notice','footer.terms':'Terms of sale','footer.privacy':'Privacy','footer.refund':'Refund',
     },
     es: {
@@ -271,7 +258,7 @@
       'after.p':'Una vez procesado el reembolso, tu clave de licencia queda <strong>desactivada</strong>. NotchIA vuelve a modo Esencial en tus Mac en la próxima verificación de licencia. Puedes volver a comprar en cualquier momento, sin penalización.',
       'contact.h2':'Contacto',
       'contact.p':'¿Una pregunta, una duda, un caso no cubierto? Escribe a <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. Respondemos en francés o en inglés.',
-      'footer.copy':'© 2026 NotchIA · Axel Courty',
+      'footer.copy':'© 2026 NotchIA',
       'footer.legal':'Aviso legal','footer.terms':'CGV','footer.privacy':'Privacidad','footer.refund':'Reembolso',
     },
     de: {
@@ -307,7 +294,7 @@
       'after.p':'Sobald die Rückerstattung bearbeitet ist, wird dein Lizenzschlüssel <strong>deaktiviert</strong>. NotchIA fällt bei der nächsten Lizenzprüfung auf deinen Macs in den Essential-Modus zurück. Du kannst jederzeit ohne Strafe erneut kaufen.',
       'contact.h2':'Kontakt',
       'contact.p':'Eine Frage, ein Zweifel, ein nicht abgedeckter Fall? Schreibe an <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>. Wir antworten auf Französisch oder Englisch.',
-      'footer.copy':'© 2026 NotchIA · Axel Courty',
+      'footer.copy':'© 2026 NotchIA',
       'footer.legal':'Impressum','footer.terms':'AGB','footer.privacy':'Datenschutz','footer.refund':'Rückerstattung',
     },
   };

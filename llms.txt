@@ -29,6 +29,7 @@
 | Distribution | hors Mac App Store ; téléchargement direct DMG + tap Homebrew (coaxel2/notchia) |
 | Mises à jour | Sparkle avec signature EdDSA, appcast HTTPS |
 | Site web | https://notchia.app |
+| Pages EN / ES / DE | https://notchia.app/en/ · https://notchia.app/es/ · https://notchia.app/de/ (accueil, features, pricing statiques par langue) |
 | Téléchargement | https://notchia.app/install |
 | Tarifs | https://notchia.app/pricing |
 | Contact | https://notchia.app/contact · notchia.app@gmail.com |

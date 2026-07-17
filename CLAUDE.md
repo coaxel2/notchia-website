@@ -44,10 +44,12 @@ curl https://notchia.app/llms.txt | head
 
 ## Architecture du site
 
-- **Single HTML file** : `index.html` (~1900 lignes)
-- **Tailwind via CDN** (pas de build step)
+- **Single HTML file** : `index.html` (~4000 lignes)
+- **Tailwind buildé localement** : `tailwind.css` (29 Ko minifié) commité à la racine — PLUS de CDN. Après tout ajout/retrait de classes Tailwind : `./scripts/build-css.sh` (npx tailwindcss@3.4, config inline dans le script). Toutes les pages référencent `tailwind.css` (racine) ou `../tailwind.css` (blog/, dl/, en/, es/, de/) ; `/changelog` SSR référence `/tailwind.css`.
 - **Polices Google Fonts** : Fraunces (display), Instrument Sans (body), JetBrains Mono (code/labels)
 - **i18n** : système data-i18n inline avec dictionnaire JS pour 4 langues (FR/EN/ES/DE), détection via `navigator.language` + sélecteur manuel
+- **Pages statiques multilingues** : `/en/`, `/es/`, `/de/` contiennent des versions PRÉ-RENDUES de index/features/pricing (générées, ne pas éditer à la main). Après TOUTE modif de `index.html`, `features.html` ou `pricing.html` : `cd /tmp/i18ngen && npm i jsdom@24 && cp <repo>/scripts/build-i18n-pages.mjs . && node build-i18n-pages.mjs`. Le générateur applique le dico I18N côté serveur, traduit le JSON-LD (FAQ, descriptions), gère canonical/hreflang/og:locale et patche le JS (langue par défaut = celle de la page, sélecteur = navigation entre versions).
+- **Blog index** : les cartes ont des pills de langue ; un filtre client affiche uniquement la langue de l'utilisateur (localStorage `notchia-lang` → `navigator.language`), bouton « Toutes les langues » pour tout voir. Les crawlers (sans JS) voient toutes les cartes.
 - **Pas de JavaScript framework** : vanilla JS pour marquee, reveal-on-scroll, language switcher
 
 ## Identité visuelle
@@ -65,7 +67,9 @@ Si tu changes une feature majeure de l'app :
 3. `index.html` FAQ section + FAQPage schema (si nouvelle question)
 4. `llms.txt` — résumé pour les LLM
 5. `sitemap.xml` — `<lastmod>` mis à jour
-6. `./scripts/indexnow.sh` — relancer après déploiement
+6. **`scripts/build-i18n-pages.mjs`** — régénérer `/en/ /es/ /de/` (si index/features/pricing touchés)
+7. **`./scripts/build-css.sh`** — régénérer `tailwind.css` (si nouvelles classes Tailwind)
+8. `./scripts/indexnow.sh` — relancer après déploiement
 
 ## Conventions Edit/Write
 

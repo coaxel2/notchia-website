@@ -209,8 +209,7 @@ function renderPage(releases, ok) {
 <meta name="twitter:description" content="Toutes les mises à jour de NotchIA." />
 <meta name="twitter:image" content="https://notchia.app/og-image.png" />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{colors:{ink:'#0B0D12',cream:'#EDE8DC',violet:'#A855F7',magenta:'#FF4D88',orange:'#FF7A2D',cyan:'#4DA8FF'},fontFamily:{display:['"Fraunces"','ui-serif','Georgia','serif'],sans:['"Instrument Sans"','ui-sans-serif','system-ui','sans-serif'],mono:['"JetBrains Mono"','ui-monospace','monospace']}}}}</script>
+<link rel="stylesheet" href="/tailwind.css" />
 <style>
 :root{--ink:#0B0D12;--cream:#EDE8DC;--brand:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%)}
 html,body{background:var(--ink);color:var(--cream)}

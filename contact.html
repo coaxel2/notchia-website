@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contact — NotchIA</title>
 <meta name="description" content="Contacte l'équipe NotchIA : support, bug, licence, presse, partenariat. Réponse sous 48h." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
 <meta name="author" content="NotchIA" />
@@ -33,19 +34,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&display=optional" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: { extend: {
-      colors: { ink: '#0B0D12', cream: '#EDE8DC', violet: '#A855F7', magenta: '#FF4D88', orange: '#FF7A2D', cyan: '#4DA8FF' },
-      fontFamily: {
-        display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
-        sans:    ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-      }
-    }}
-  }
-</script>
+<link rel="stylesheet" href="tailwind.css" />
+
 <style>
   :root {
     --ink: #0B0D12; --cream: #EDE8DC;
@@ -208,7 +198,7 @@
 
 <footer class="border-t border-cream/10 mt-12">
   <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
-    <div>© 2026 NotchIA · Axel Courty</div>
+    <div>© 2026 NotchIA</div>
     <nav class="flex flex-wrap gap-x-5 gap-y-2">
       <a href="/mentions-legales" class="hover:text-cream" data-i18n="ft.legal">Mentions légales</a>
       <a href="/cgv" class="hover:text-cream" data-i18n="ft.tos">CGV</a>
