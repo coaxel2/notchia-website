@@ -13,6 +13,10 @@
 # press-kit/ donc plus d'ambiguite. Cloudflare sert press.html naturellement
 # au path /press via les pretty URLs.
 
+# Canonicalisation www → apex (301). Ne matche que lorsque www.notchia.app
+# est rattache au projet Pages comme custom domain ; inerte sinon.
+https://www.notchia.app/*  https://notchia.app/:splat  301
+
 # Alias FR vers la page Nouveautes (rendue par functions/changelog.js).
 /nouveautes  /changelog  301
 
