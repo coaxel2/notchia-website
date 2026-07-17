@@ -137,6 +137,7 @@ function fixHead(doc, page, lang) {
 
 function rewriteLinks(doc, lang) {
   doc.querySelectorAll('*').forEach((el) => {
+    if (el.hasAttribute && el.hasAttribute('data-no-lang-rewrite')) return; // liens de langue explicites
     for (const a of ['href', 'src', 'srcset']) {
       const v = el.getAttribute && el.getAttribute(a);
       if (!v) continue;

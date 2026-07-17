@@ -338,54 +338,6 @@
       "description": "L'encoche pense maintenant. Centre de contrôle interactif pour macOS.",
       "publisher": { "@id": "https://notchia.app/#organization" },
       "inLanguage": ["fr-FR", "en-US", "es-ES", "de-DE"]
-    },
-    {
-      "@type": "HowTo",
-      "@id": "https://notchia.app/#howto-install",
-      "name": "Comment installer NotchIA sur macOS",
-      "description": "Guide officiel d'installation de l'application macOS NotchIA, version 2.9.7, en deux méthodes — DMG direct ou Homebrew CLI sans avertissement Gatekeeper.",
-      "totalTime": "PT2M",
-      "estimatedCost": { "@type": "MonetaryAmount", "currency": "EUR", "value": "0" },
-      "supply": [
-        { "@type": "HowToSupply", "name": "Mac sous macOS 15.0 Sequoia ou plus récent" },
-        { "@type": "HowToSupply", "name": "Apple Silicon (M1, M2, M3, M4) ou Intel" },
-        { "@type": "HowToSupply", "name": "Connexion internet pour le téléchargement (~12 Mo)" }
-      ],
-      "tool": [
-        { "@type": "HowToTool", "name": "Finder macOS" },
-        { "@type": "HowToTool", "name": "Terminal macOS (optionnel, pour Homebrew)" }
-      ],
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "Méthode rapide sans warning : Homebrew CLI",
-          "url": "https://notchia.app/install#homebrew",
-          "text": "Ouvre Terminal, copie-colle la commande : brew install --cask coaxel2/notchia/notchia. Homebrew enlève automatiquement le quarantine bit, aucun avertissement macOS ne s'affiche.",
-          "itemListElement": [
-            { "@type": "HowToDirection", "text": "Ouvre Terminal (⌘+Espace → Terminal)" },
-            { "@type": "HowToDirection", "text": "Tape : brew install --cask coaxel2/notchia/notchia" },
-            { "@type": "HowToDirection", "text": "Si Homebrew n'est pas installé, installe-le d'abord depuis https://brew.sh" }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Méthode classique : téléchargement .dmg",
-          "url": "https://notchia.app/install#dmg",
-          "text": "Télécharge NotchIA.dmg depuis notchia.app/dl/dmg. Double-clique le DMG, glisse NotchIA dans Applications, puis premier lancement avec clic droit → Ouvrir pour passer l'avertissement Gatekeeper (une seule fois).",
-          "itemListElement": [
-            { "@type": "HowToDirection", "text": "Va sur https://notchia.app et clique Télécharger NotchIA" },
-            { "@type": "HowToDirection", "text": "Ouvre le DMG téléchargé" },
-            { "@type": "HowToDirection", "text": "Glisse l'app dans le dossier Applications" },
-            { "@type": "HowToDirection", "text": "Premier lancement : clic droit sur NotchIA → Ouvrir → Ouvrir (le warning Gatekeeper ne réapparaîtra plus)" }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Si macOS refuse l'ouverture (« app endommagée »)",
-          "url": "https://notchia.app/install#gate",
-          "text": "Ouvre Terminal et tape : xattr -d com.apple.quarantine /Applications/NotchIA.app && open /Applications/NotchIA.app. Cette commande retire l'attribut quarantine ajouté par macOS et lance l'app. NotchIA n'est pas notarisée Apple par choix (compte développeur facultatif pour cette phase de lancement)."
-        }
-      ]
     }
   ]
 }
@@ -2452,6 +2404,9 @@
     <div class="flex flex-wrap items-center justify-between gap-3 sm:gap-4 text-[11px] sm:text-xs text-mist font-mono">
       <span data-i18n="footer.copyright">© 2026 NotchIA</span>
       <span data-i18n="footer.madein">fait avec Swift 6 · sans télémétrie</span>
+      <nav class="flex items-center gap-2" aria-label="Langues">
+        <a href="/" data-no-lang-rewrite class="hover:text-cream">FR</a><span>·</span><a href="/en/" data-no-lang-rewrite class="hover:text-cream">EN</a><span>·</span><a href="/es/" data-no-lang-rewrite class="hover:text-cream">ES</a><span>·</span><a href="/de/" data-no-lang-rewrite class="hover:text-cream">DE</a>
+      </nav>
       <span>v2.9.7 · 2026-06-10</span>
     </div>
   </div>

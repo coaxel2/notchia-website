@@ -117,6 +117,39 @@
       "priceCurrency": "EUR",
       "billingDuration": "P1M",
       "unitCode": "MON"
+     },
+     "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "FR",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+      "merchantReturnLink": "https://notchia.app/refund"
+     },
+     "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+       "@type": "MonetaryAmount",
+       "value": 0,
+       "currency": "EUR"
+      },
+      "shippingDestination": {
+       "@type": "DefinedRegion",
+       "addressCountry": "FR"
+      },
+      "deliveryTime": {
+       "@type": "ShippingDeliveryTime",
+       "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       },
+       "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       }
+      }
      }
     },
     {
@@ -126,7 +159,40 @@
      "priceCurrency": "EUR",
      "availability": "https://schema.org/InStock",
      "url": "https://notchia.app/pricing",
-     "category": "licence à vie"
+     "category": "licence à vie",
+     "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "FR",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+      "merchantReturnLink": "https://notchia.app/refund"
+     },
+     "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+       "@type": "MonetaryAmount",
+       "value": 0,
+       "currency": "EUR"
+      },
+      "shippingDestination": {
+       "@type": "DefinedRegion",
+       "addressCountry": "FR"
+      },
+      "deliveryTime": {
+       "@type": "ShippingDeliveryTime",
+       "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       },
+       "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       }
+      }
+     }
     }
    ]
   }
@@ -236,6 +302,9 @@
 
   <p class="text-center text-cream/40 text-xs mt-12" data-i18n-html="footnote">Sichere Zahlung über Stripe. Siehe unsere <a href="/refund" class="underline">Rückerstattungs-Richtlinie</a>, unsere <a href="/cgv" class="underline">AGB</a> und unsere <a href="/privacy" class="underline">Datenschutzerklärung</a>.</p>
 
+  <nav class="mt-14 flex items-center justify-center gap-3 text-xs text-cream/45 font-mono" aria-label="Langues">
+    <a href="/pricing" data-no-lang-rewrite="" class="hover:text-cream">FR</a><span>·</span><a href="/en/pricing" data-no-lang-rewrite="" class="hover:text-cream">EN</a><span>·</span><a href="/es/pricing" data-no-lang-rewrite="" class="hover:text-cream">ES</a><span>·</span><a href="/de/pricing" data-no-lang-rewrite="" class="hover:text-cream">DE</a>
+  </nav>
 </main>
 
 <script>
