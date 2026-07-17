@@ -62,6 +62,7 @@ curl https://notchia.app/llms.txt | head
 
 Si tu changes une feature majeure de l'app :
 
+0. **Article de release dans `blog/`** — à CHAQUE nouvelle version de l'app, créer `blog/<codename>-x-y-z.html` (pattern : `wise-owl-2-8-0.html`, `sealed-badger-2-9-7.html`) : BlogPosting + FAQPage schema, byline « Par NotchIA », FR, wording légal prudent. Ajouter la carte dans `blog/index.html` (pill `note`, en tête de la section Notes de version) + entrée sitemap. Le `/changelog` est automatique (GitHub Releases) mais l'article éditorial ne l'est pas.
 1. `index.html` — section visible
 2. `index.html` `<script type="application/ld+json">` — featureList du SoftwareApplication
 3. `index.html` FAQ section + FAQPage schema (si nouvelle question)

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9 — Téléchargement vidéo MP4/MP3 + suivi IA fiabilisé</title>
+<meta name="description" content="NotchIA 2.9 « Sealed Badger » : colle un lien vidéo, récupère un MP4 ou un MP3 dans le Shelf (1800+ sites, 100 % local). Chrono et tokens IA enfin fiables, notifications maîtrisées, confidentialité renforcée." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/sealed-badger-2-9-7" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/sealed-badger-2-9-7" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/sealed-badger-2-9-7" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="2.9 Sealed Badger 🦡 — Téléchargement vidéo MP4/MP3 et suivi IA fiabilisé — NotchIA" />
+<meta property="og:description" content="NotchIA 2.9 : colle un lien vidéo, récupère un MP4 ou un MP3 dans le Shelf (1800+ sites, 100 % local). Chrono et tokens IA enfin fiables." />
+<meta property="og:url" content="https://notchia.app/blog/sealed-badger-2-9-7" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-07-17" />
+<meta property="article:modified_time" content="2026-07-17" />
+<meta property="article:author" content="NotchIA" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="2.9 Sealed Badger 🦡 — Téléchargement vidéo MP4/MP3 et suivi IA fiabilisé — NotchIA" />
+<meta name="twitter:description" content="Colle un lien vidéo, récupère un MP4 ou un MP3 dans le Shelf (1800+ sites, 100 % local). Chrono et tokens IA enfin fiables." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tech-note { font-size: 0.85rem; color: rgba(237,232,220,0.55); border-left: 2px solid rgba(168,85,247,0.4); padding: 0.4rem 0 0.4rem 1rem; margin: 2rem 0 1rem; }
+  .tech-note p { color: rgba(237,232,220,0.55); margin-bottom: 0.4rem; }
+  .lang-sw { appearance: none; -webkit-appearance: none; background-color: transparent; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; background-size: 9px; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://notchia.app/blog/sealed-badger-2-9-7#article",
+      "headline": "Sealed Badger : colle un lien vidéo, récupère un MP4 — et un suivi IA qui ne flanche plus",
+      "description": "NotchIA 2.9 « Sealed Badger » : téléchargement vidéo MP4/MP3 dans le Shelf (1800+ sites, 100 % local), chrono et tokens IA fiabilisés, notifications maîtrisées, confidentialité renforcée.",
+      "datePublished": "2026-07-17",
+      "dateModified": "2026-07-17",
+      "inLanguage": "fr-FR",
+      "image": "https://notchia.app/og-image.png",
+      "author": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NotchIA",
+        "url": "https://notchia.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://notchia.app/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://notchia.app/blog/sealed-badger-2-9-7"
+      },
+      "wordCount": 920
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/sealed-badger-2-9-7#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment fonctionne le téléchargement vidéo de NotchIA ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'utilisateur copie un lien vidéo (YouTube, Vimeo, X, TikTok, Twitch, SoundCloud, Dailymotion et 1800+ sites), ouvre le Shelf et choisit MP4 (vidéo HD) ou MP3 (audio seul). Le fichier arrive directement dans le Shelf. Les outils open-source yt-dlp et ffmpeg sont installés automatiquement au premier usage. Tout se passe en local sur le Mac — aucun serveur NotchIA dans le circuit. Fonction incluse dans NotchIA Pro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le téléchargement vidéo est-il autorisé ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La fonction est réservée à un usage personnel. L'utilisateur reste responsable du respect du droit d'auteur et des conditions d'utilisation des plateformes concernées."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi GitHub Copilot n'est plus suivi par NotchIA ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le provider GitHub Copilot a été retiré en 2.9.4 pour concentrer la fiabilité du suivi sur Claude Code (Anthropic) et ChatGPT Codex (OpenAI) : 10 états en direct, statistiques de jetons et quotas 5h/7j, lus localement depuis les fichiers de session."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment obtenir NotchIA 2.9.7 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les utilisateurs existants reçoivent la mise à jour via l'auto-update Sparkle (menu NotchIA → Vérifier les mises à jour). Les nouveaux utilisateurs téléchargent le DMG (~12 Mo) depuis notchia.app/install. NotchIA nécessite macOS 15.0+ (Apple Silicon ou Intel)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://notchia.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://notchia.app/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "2.9 Sealed Badger",
+          "item": "https://notchia.app/blog/sealed-badger-2-9-7"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+      <select id="lang-switch" class="lang-sw" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
+    </select>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Mise à jour · série 2.9 · Sealed Badger 🦡</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Sealed Badger : colle un lien vidéo, récupère un <span class="grad-text">MP4</span> — et un suivi IA qui ne flanche plus</h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 17 juillet 2026 · 5 min de lecture</p>
+  </section>
+
+  <p>La série 2.9 de NotchIA (2.9.0 → 2.9.7, publiée entre le 26 mai et le 10 juin 2026) apporte une nouvelle fonction Pro — le <strong>téléchargement vidéo MP4/MP3 dans le Shelf</strong> — et une longue passe de fiabilisation : chrono et compteur de tokens IA enfin exacts, notifications réduites à l'essentiel, filtre de calendriers réparé, et un rapport de diagnostic qui ne contient plus que ce qu'il doit contenir.</p>
+
+  <h2>Un lien. <span class="grad-text">MP4 ou MP3.</span> <span class="pro-badge">💎 Pro</span></h2>
+
+  <p>Le cas d'usage est vieux comme le web : tu veux garder une vidéo pour la regarder hors-ligne dans l'avion, extraire l'audio d'une conférence pour l'écouter en marchant, archiver un tuto avant qu'il disparaisse. D'habitude ça finit sur un site de conversion douteux avec trois pop-ups et un bouton « Download » qui n'est jamais le bon.</p>
+
+  <p>Depuis la 2.9.2, ça se passe dans l'encoche. Tu copies un lien — YouTube, Vimeo, X, TikTok, Twitch, SoundCloud, Dailymotion et <strong>1800+ sites</strong> au total — tu ouvres le Shelf, tu choisis <strong>MP4</strong> (vidéo HD) ou <strong>MP3</strong> (audio seul). Le fichier atterrit dans le Shelf, prêt à être glissé où tu veux.</p>
+
+  <p>Sous le capot, NotchIA s'appuie sur deux outils open-source de référence : <a href="https://github.com/yt-dlp/yt-dlp" rel="noopener" target="_blank">yt-dlp</a> pour la récupération et <a href="https://ffmpeg.org/" rel="noopener" target="_blank">ffmpeg</a> pour la conversion. Tu n'installes rien toi-même : les deux sont téléchargés et configurés automatiquement au premier usage. Et comme tout dans NotchIA, ça tourne <strong>100 % en local</strong> — le lien que tu colles ne transite par aucun serveur NotchIA.</p>
+
+  <div class="callout">
+    <p><strong>Usage personnel uniquement.</strong> Cette fonction est pensée pour la copie privée : garder pour toi ce que tu as le droit de garder. Tu restes responsable du respect du droit d'auteur et des conditions d'utilisation des plateformes concernées.</p>
+  </div>
+
+  <h2>Le suivi IA ne <span class="grad-text">flanche plus</span></h2>
+
+  <p>Si tu utilises l'onglet IA avec Claude Code ou ChatGPT Codex, la série 2.9 est celle qu'il fallait attendre. Trois problèmes agaçants ont été traités à la racine :</p>
+
+  <ul>
+    <li><strong>Le chrono.</strong> Il démarre maintenant même si tu ouvres l'encoche alors que l'agent travaille déjà, ne se coupe plus en plein travail, et ne reste plus bloqué à tourner dans le vide après une réponse courte. Le « Terminé » reste affiché au lieu de retomber à 00:00.</li>
+    <li><strong>Le compteur de tokens.</strong> Le contexte relu à chaque tour n'est plus compté en double — fini les « millions de tokens » affichés sur un simple prompt. Les stats (jetons, cache, quotas 5h/7j) reflètent la réalité.</li>
+    <li><strong>Les notifications.</strong> Plus de fausses alertes « Claude attend ta permission » dès qu'un outil tournait plus de 2,5 secondes. Il ne reste qu'une seule notification, à la vraie fin du travail de l'agent, sans doublon.</li>
+  </ul>
+
+  <p>Décision assumée au passage : le provider <strong>GitHub Copilot a été retiré</strong> en 2.9.4. NotchIA se concentre sur les deux assistants qu'il peut suivre de façon fiable — <strong>Claude Code et ChatGPT Codex</strong>, avec leurs 10 états en direct, lus localement depuis les fichiers de session. Mieux vaut deux intégrations solides qu'une troisième approximative.</p>
+
+  <h2>Le reste de la <span class="grad-text">série 2.9</span></h2>
+
+  <p><strong>Calendrier</strong> — décocher un calendrier filtre réellement les événements, et le choix est conservé entre les sessions.</p>
+
+  <p><strong>Concentration</strong> — la mise en veille du Mac compte désormais comme une pause : plus de sessions Pomodoro « complétées » en chaîne pendant que tu dormais, plus de gel au réveil.</p>
+
+  <p><strong>Presse-papiers</strong> — un élément sensible (clé API, carte bancaire) que tu avais épinglé est vraiment conservé ; il disparaissait silencieusement au redémarrage.</p>
+
+  <p><strong>Confidentialité</strong> — le rapport de diagnostic exportable (Réglages → Avancé) ne contient plus que les réglages de NotchIA. Il embarquait par erreur des préférences système (trackpad, son) et du contenu personnel (résumés Digest, historique Pomodoro). C'est corrigé en 2.9.7 — d'où le nom <em>Sealed Badger</em>, le blaireau scellé.</p>
+
+  <p>Plus une animation d'ouverture de l'encoche retravaillée (2.9.0–2.9.1), des téléchargements qui ne restent plus bloqués « en cours », et une dizaine d'autres corrections listées dans le <a href="/changelog">changelog complet</a>.</p>
+
+  <h2>Comment <span class="grad-text">l'obtenir</span></h2>
+
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update <a href="https://sparkle-project.org/documentation/" rel="noopener" target="_blank">Sparkle</a> te propose la 2.9.7 automatiquement. Pour forcer : menu NotchIA dans la barre des menus → <em>Vérifier les mises à jour</em>.</p>
+
+  <p><strong>Nouvel utilisateur ?</strong> Musique, Calendrier, Digest et Concentration sont gratuits à vie. Télécharge NotchIA (~12 Mo) depuis <a href="/#telecharger">la page d'accueil</a>. Le téléchargement vidéo, le Shelf et le suivi IA sont dans le pack Pro — 2,99 €/mois ou 24,99 € à vie, voir <a href="/pricing">les tarifs</a>.</p>
+
+  <div class="tech-note">
+    <p><strong>Note technique.</strong> NotchIA tourne à partir de macOS 15.0 (Sequoia), sur Apple Silicon et Intel. Le téléchargement vidéo nécessite une connexion pour récupérer la vidéo demandée et, au premier usage, les outils yt-dlp et ffmpeg — ensuite tout le traitement est local.</p>
+  </div>
+
+  <h2>FAQ</h2>
+
+  <h3>Comment fonctionne le téléchargement vidéo de NotchIA ?</h3>
+  <p>Tu copies un lien vidéo (YouTube, Vimeo, X, TikTok, Twitch, SoundCloud, Dailymotion et 1800+ sites), tu ouvres le Shelf et tu choisis MP4 (vidéo HD) ou MP3 (audio seul). Le fichier arrive directement dans le Shelf. Les outils open-source yt-dlp et ffmpeg sont installés automatiquement au premier usage. Tout se passe en local sur ton Mac — aucun serveur NotchIA dans le circuit. Fonction incluse dans NotchIA Pro.</p>
+
+  <h3>Le téléchargement vidéo est-il autorisé ?</h3>
+  <p>La fonction est réservée à un usage personnel. Tu restes responsable du respect du droit d'auteur et des conditions d'utilisation des plateformes concernées.</p>
+
+  <h3>Pourquoi GitHub Copilot n'est plus suivi par NotchIA ?</h3>
+  <p>Le provider GitHub Copilot a été retiré en 2.9.4 pour concentrer la fiabilité du suivi sur Claude Code (Anthropic) et ChatGPT Codex (OpenAI) : 10 états en direct, statistiques de jetons et quotas 5h/7j, lus localement depuis les fichiers de session.</p>
+
+  <h3>Comment obtenir NotchIA 2.9.7 ?</h3>
+  <p>Les utilisateurs existants reçoivent la mise à jour via l'auto-update Sparkle (menu NotchIA → Vérifier les mises à jour). Les nouveaux utilisateurs téléchargent le DMG (~12 Mo) depuis <a href="/install">notchia.app/install</a>. NotchIA nécessite macOS 15.0+ (Apple Silicon ou Intel).</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a> · <a href="https://github.com/coaxel2" rel="me noopener">GitHub</a>.</p>
+  </div>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/pricing" class="btn-secondary">Voir les tarifs Pro</a>
+  </div>
+
+  <p class="mt-10 text-sm"><a href="/" class="text-cream/55 hover:text-cream">← Retour à l'accueil</a></p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Sélecteur de langue : lit les <link rel="alternate" hreflang="X">
+  // du <head> et navigue vers l'URL équivalente dans la langue cible.
+  (function() {
+    const sel = document.getElementById('lang-switch');
+    if (!sel) return;
+    // 1. Détecte la langue courante
+    const currentLang = (document.documentElement.lang || 'fr').toLowerCase().split('-')[0];
+    // 2. Construit la map { hreflang: href } depuis les alternates
+    const altMap = {};
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(l => {
+      const lang = l.getAttribute('hreflang').toLowerCase().split('-')[0];
+      const href = l.getAttribute('href');
+      if (lang && lang !== 'x-default' && href && !altMap[lang]) altMap[lang] = href;
+    });
+    // 3. Retire les options non disponibles dans cette URL
+    Array.from(sel.options).forEach(opt => {
+      if (!altMap[opt.value]) opt.remove();
+    });
+    sel.value = altMap[currentLang] ? currentLang : sel.options[0]?.value || 'fr';
+    // 4. Au change : redirige vers la version dans la langue cible
+    sel.addEventListener('change', (e) => {
+      try { localStorage.setItem('notchia-lang', e.target.value); } catch(_){}
+      const target = altMap[e.target.value];
+      if (target && target !== window.location.href) {
+        window.location.href = target;
+      }
+    });
+  })();
+</script>
+</body>
+</html>
