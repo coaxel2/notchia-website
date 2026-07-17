@@ -1401,7 +1401,7 @@
     const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
     /* pas de persistance implicite sur les pages statiques */
   }
-  applyLang(detectLang());
+  (function(){ let s = null; try { s = localStorage.getItem('notchia-lang'); } catch (_) {} if (s && s !== 'es' && I18N[s]) applyLang(s); })();
   document.getElementById('lang-switch')?.addEventListener('change', e => {
     const v = e.target.value;
     try { localStorage.setItem('notchia-lang', v); } catch (_) {}
