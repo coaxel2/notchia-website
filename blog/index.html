@@ -72,6 +72,10 @@
   .pill.es { color: #FFD29A; background: rgba(255,180,84,0.10); border-color: rgba(255,180,84,0.30); }
   .pill.de { color: #C8EDD8; background: rgba(157,217,183,0.10); border-color: rgba(157,217,183,0.30); }
   .pill.note { color: #C8B6F7; background: rgba(168,85,247,0.10); border-color: rgba(168,85,247,0.30); }
+  /* Liste filtrée sur la langue de l'utilisateur : la pill de langue est redondante.
+     Elle réapparaît en mode « toutes les langues » (et pour les visiteurs sans JS). */
+  body.lang-filtered .pill.fr, body.lang-filtered .pill.en,
+  body.lang-filtered .pill.es, body.lang-filtered .pill.de { display: none; }
   .meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(237,232,220,0.45); letter-spacing: 0.04em; margin-top: .8rem; display: flex; gap: .8rem; flex-wrap: wrap; }
   .lang-sw { appearance: none; -webkit-appearance: none; background-color: transparent; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; background-size: 9px; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
   .lang-sw:hover { color: #EDE8DC; }
@@ -688,6 +692,7 @@
     return null;
   }
   function filterCards(lang) {
+    document.body.classList.toggle('lang-filtered', !showAllLangs);
     document.querySelectorAll('.card-article').forEach(card => {
       const cl = cardLang(card);
       card.style.display = (showAllLangs || !cl || cl === lang) ? '' : 'none';
