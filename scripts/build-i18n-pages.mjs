@@ -163,14 +163,14 @@ function patchScripts(html, page, lang) {
   );
   // 2. pas de persistance implicite au chargement
   html = html.replace(
-    "try { localStorage.setItem('notchia-lang', lang); } catch (e) {}",
+    "try { localStorage.setItem('notchia-lang-choice', lang); } catch (e) {}",
     "/* pas de persistance implicite sur les pages statiques */"
   );
   // 2b. le contenu est PRÉ-RENDU : pas de re-render au chargement, sauf si
   //     l'utilisateur a explicitement choisi une autre langue auparavant
   html = html.replace(
     'applyLang(detectLang());',
-    `(function(){ let s = null; try { s = localStorage.getItem('notchia-lang'); } catch (_) {} if (s && s !== '${lang}' && I18N[s]) applyLang(s); })();`
+    `(function(){ let s = null; try { s = localStorage.getItem('notchia-lang-choice'); } catch (_) {} if (s && s !== '${lang}' && I18N[s]) applyLang(s); })();`
   );
   // 2c. liens relatifs restants dans les chaînes des dictionnaires JS
   //     (ré-injectés par applyLang) : préfixe ../ — lookbehind pour ne pas
@@ -180,10 +180,10 @@ function patchScripts(html, page, lang) {
   const dests = `{ fr: '../${page.slug}', en: '../en/${page.slug}', es: '../es/${page.slug}', de: '../de/${page.slug}' }`
     .replace(/\.\.\/'/g, "../'").replace(/\.\.\/(en|es|de)\/'/g, "../$1/'");
   html = html.replace(
-    "document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));",
+    /document\.getElementById\('lang-switch'\)\?\.addEventListener\('change', e => \{\n\s*try \{ localStorage\.setItem\('notchia-lang-choice', e\.target\.value\); \} catch \(_\) \{\}\n\s*applyLang\(e\.target\.value\);\n\s*\}\);/,
     `document.getElementById('lang-switch')?.addEventListener('change', e => {
     const v = e.target.value;
-    try { localStorage.setItem('notchia-lang', v); } catch (_) {}
+    try { localStorage.setItem('notchia-lang-choice', v); } catch (_) {}
     const dest = ${dests}[v];
     if (dest != null) location.href = dest || '../'; else applyLang(v);
   });`

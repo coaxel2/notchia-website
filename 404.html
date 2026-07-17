@@ -97,17 +97,20 @@
     });
     const sel = document.getElementById('lang-switch');
     if (sel) sel.value = lang;
-    try { localStorage.setItem('notchia-lang', lang); } catch(_){}
+    /* persistance uniquement sur choix explicite */
   }
   // Détection : localStorage > navigator.language > fr
   let initLang = 'fr';
-  try { const s = localStorage.getItem('notchia-lang'); if (s && I[s]) initLang = s; } catch(_){}
+  try { const s = localStorage.getItem('notchia-lang-choice'); if (s && I[s]) initLang = s; } catch(_){}
   if (initLang === 'fr') {
     const nav = (navigator.language || 'fr').toLowerCase().slice(0, 2);
     if (['fr','en','es','de'].includes(nav)) initLang = nav;
   }
   apply(initLang);
-  document.getElementById('lang-switch')?.addEventListener('change', e => apply(e.target.value));
+  document.getElementById('lang-switch')?.addEventListener('change', e => {
+    try { localStorage.setItem('notchia-lang-choice', e.target.value); } catch(_){}
+    apply(e.target.value);
+  });
 </script>
 </body>
 </html>

@@ -735,7 +735,7 @@
     // 1. Détermine la langue : préférence enregistrée > navigator.language > fr
     let lang = 'fr';
     try {
-      const saved = localStorage.getItem('notchia-lang');
+      const saved = localStorage.getItem('notchia-lang-choice');
       if (saved && I18N[saved]) lang = saved;
       else {
         const nav = (navigator.language || 'fr').toLowerCase().split('-')[0];
@@ -751,7 +751,7 @@
     sel.value = lang;
     sel.addEventListener('change', (e) => {
       const next = e.target.value;
-      try { localStorage.setItem('notchia-lang', next); } catch(_){}
+      try { localStorage.setItem('notchia-lang-choice', next); } catch(_){}
       applyLang(next);
     });
 

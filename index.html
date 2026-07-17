@@ -3887,7 +3887,7 @@
      dépendance externe, zéro risque RGPD. */
   function detectLang() {
     try {
-      const stored = localStorage.getItem('notchia-lang');
+      const stored = localStorage.getItem('notchia-lang-choice');
       if (stored && I18N[stored]) return stored;
     } catch (e) {}
     const b = (navigator.language || 'en').toLowerCase().split('-')[0];
@@ -3930,7 +3930,7 @@
     const sel = document.getElementById('lang-switch');
     if (sel) sel.value = lang;
 
-    try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+    /* persistance uniquement sur choix explicite du sélecteur */
 
     // Re-render dynamic mocks (calendar + marquee states) so they follow language
     if (typeof window.__renderCalendarForLang === 'function') window.__renderCalendarForLang(lang);
@@ -3943,7 +3943,10 @@
   // Détection + application synchrones — aucun flash, aucune requête réseau
   applyLang(detectLang());
 
-  document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));
+  document.getElementById('lang-switch')?.addEventListener('change', e => {
+    try { localStorage.setItem('notchia-lang-choice', e.target.value); } catch (_) {}
+    applyLang(e.target.value);
+  });
 
   /* ──────────────── Stripe Checkout (boutons pricing) ──────────────── */
   const CHECKOUT_MSG = {

@@ -9,5 +9,14 @@ export async function onRequest(context) {
     url.hostname = "notchia.app";
     return Response.redirect(url.toString(), 301);
   }
-  return context.next();
+  const response = await context.next();
+  // *.pages.dev (previews + alias prod) : contenu identique à l'apex →
+  // noindex pour éviter le duplicate content, sans casser la navigation
+  // des previews.
+  if (url.hostname.endsWith(".pages.dev")) {
+    const r = new Response(response.body, response);
+    r.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return r;
+  }
+  return response;
 }

@@ -408,7 +408,7 @@
   };
 
   function detectLang() {
-    try { const s = localStorage.getItem('notchia-lang'); if (s && I18N[s]) return s; } catch (e) {}
+    try { const s = localStorage.getItem('notchia-lang-choice'); if (s && I18N[s]) return s; } catch (e) {}
     return 'es';
   }
   let currentLang = detectLang();
@@ -427,7 +427,7 @@
     const _od = document.querySelector('meta[property="og:description"]');
     if (_od && dict['meta.description']) _od.setAttribute('content', dict['meta.description']);
     const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
-    /* pas de persistance implicite sur les pages statiques */
+    /* persistance uniquement sur choix explicite du sélecteur */
     // Banner conditionnel : seulement si ?status=cancelled dans l'URL
     const banner = document.getElementById('status');
     if (banner) {
@@ -446,7 +446,7 @@
   applyLang(currentLang);
   document.getElementById('lang-switch')?.addEventListener('change', e => {
     const v = e.target.value;
-    try { localStorage.setItem('notchia-lang', v); } catch (_) {}
+    try { localStorage.setItem('notchia-lang-choice', v); } catch (_) {}
     const dest = { fr: '../pricing', en: '../en/pricing', es: '../es/pricing', de: '../de/pricing' }[v];
     if (dest != null) location.href = dest || '../'; else applyLang(v);
   });

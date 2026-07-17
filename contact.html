@@ -317,7 +317,7 @@
   };
 
   function detectLang() {
-    try { const s = localStorage.getItem('notchia-lang'); if (s && I18N[s]) return s; } catch (e) {}
+    try { const s = localStorage.getItem('notchia-lang-choice'); if (s && I18N[s]) return s; } catch (e) {}
     const b = (navigator.language || 'en').toLowerCase().split('-')[0];
     return I18N[b] ? b : 'en';
   }
@@ -331,7 +331,7 @@
     document.querySelectorAll('[data-i18n-html]').forEach(el => { const v = dict[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { const v = dict[el.dataset.i18nPlaceholder]; if (v != null) el.placeholder = v; });
     const sel = document.getElementById('lang-switch'); if (sel) sel.value = lang;
-    try { localStorage.setItem('notchia-lang', lang); } catch (e) {}
+    try { localStorage.setItem('notchia-lang-choice', lang); } catch (e) {}
   }
   applyLang(currentLang);
   document.getElementById('lang-switch')?.addEventListener('change', e => applyLang(e.target.value));

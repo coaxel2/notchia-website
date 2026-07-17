@@ -3879,7 +3879,7 @@
      dépendance externe, zéro risque RGPD. */
   function detectLang() {
     try {
-      const stored = localStorage.getItem('notchia-lang');
+      const stored = localStorage.getItem('notchia-lang-choice');
       if (stored && I18N[stored]) return stored;
     } catch (e) {}
     return 'es';
@@ -3921,7 +3921,7 @@
     const sel = document.getElementById('lang-switch');
     if (sel) sel.value = lang;
 
-    /* pas de persistance implicite sur les pages statiques */
+    /* persistance uniquement sur choix explicite du sélecteur */
 
     // Re-render dynamic mocks (calendar + marquee states) so they follow language
     if (typeof window.__renderCalendarForLang === 'function') window.__renderCalendarForLang(lang);
@@ -3932,11 +3932,11 @@
   window.I18N = I18N;
 
   // Détection + application synchrones — aucun flash, aucune requête réseau
-  (function(){ let s = null; try { s = localStorage.getItem('notchia-lang'); } catch (_) {} if (s && s !== 'es' && I18N[s]) applyLang(s); })();
+  (function(){ let s = null; try { s = localStorage.getItem('notchia-lang-choice'); } catch (_) {} if (s && s !== 'es' && I18N[s]) applyLang(s); })();
 
   document.getElementById('lang-switch')?.addEventListener('change', e => {
     const v = e.target.value;
-    try { localStorage.setItem('notchia-lang', v); } catch (_) {}
+    try { localStorage.setItem('notchia-lang-choice', v); } catch (_) {}
     const dest = { fr: '../', en: '../en/', es: '../es/', de: '../de/' }[v];
     if (dest != null) location.href = dest || '../'; else applyLang(v);
   });
