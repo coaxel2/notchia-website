@@ -1,187 +1,83 @@
 # GEO Analysis — notchia.app
 
-> Generative Engine Optimization audit & action plan
-> Date : 2026-05-26
-> Méthodologie : skill `claude-seo:seo-geo` (framework 5 critères pondérés)
-> Restriction utilisateur : actions **on-page uniquement** (pas de blog/forum/PR externe pour éviter risques de ban)
+**Date : 2026-07-17** · remplace l'analyse du 2026-05-26 · toutes les vérifications ci-dessous ont été exécutées en live ce jour (curl, User-Agent GPTBot, recherches web).
 
 ---
 
-## GEO Readiness Score
+## 1. GEO Readiness Score : 81/100
 
-**87 / 100** ⬆ (depuis 68/100 avant cette passe)
-
-| Critère | Poids | Score actuel | Avant |
+| Dimension | Poids | Note | Verdict |
 |---|---|---|---|
-| Citability (passages 134-167 mots) | 25 % | 22 / 25 | 12 / 25 |
-| Structural readability | 20 % | 19 / 20 | 17 / 20 |
-| Multi-modal content | 15 % | 9 / 15 | 8 / 15 |
-| Authority & brand signals | 20 % | 14 / 20 | 8 / 20 |
-| Technical accessibility | 20 % | 20 / 20 | 20 / 20 |
-| **Total pondéré** | 100 % | **87 / 100** | 68 / 100 |
+| Citabilité | 25 % | 92 | 27 blocs « citation-ready » dans llms.txt, answer-first, un fait précis tous les 150-200 mots, claims tous véridiques (audit du 16-17/07) |
+| Lisibilité structurelle | 20 % | 94 | Hiérarchie Hn propre, FAQ 10 questions = 10 `<details>` (parité schema), tableaux comparatifs |
+| Multi-modal | 15 % | 57 | og-image seule ; pas de vidéo démo, screenshots press = placeholders |
+| Autorité & marque | 20 % | 55 | Dates + contact + sameAs ✓, mais auteur anonymisé (choix privacy) et ~0 mention tierce |
+| Accessibilité technique | 20 % | 96 | 19 crawlers IA autorisés, llms.txt 31 Ko + llms-full 36 Ko, SSR /changelog, pages statiques /en /es /de vérifiées via UA GPTBot |
 
----
+> Note : l'analyse du 26 mai affichait 87/100 avec une notation plus généreuse du critère autorité (14/20 pour des signaux on-page). La présente notation applique strictement le barème du skill (les mentions tierces Wikipedia/Reddit/YouTube dominent le critère) — les deux analyses décrivent la même réalité : **on-page au plafond, off-page quasi vide**.
 
-## Breakdown par plateforme IA
+## 2. Répartition par plateforme
 
-| Plateforme | Estimation visibilité | Levier dominant |
+| Plateforme | Note | Pourquoi |
 |---|---|---|
-| **Google AI Overviews** | Élevée (8.5 / 10) | Schema.org riche + FAQPage + HowTo + top-10 ranking via SEO classique |
-| **ChatGPT (Atlas / Search)** | Moyenne (6 / 10) | Bloqué par absence Wikipedia + Reddit. Forte couverture llms.txt mitige partiellement. |
-| **Claude Search** | Moyenne+ (7 / 10) | Excellent : ClaudeBot + anthropic-ai allowed, llms.txt riche, schema Person + Organization avec sameAs |
-| **Perplexity** | Moyenne (5.5 / 10) | Bloqué par absence Reddit (source #1 de Perplexity à 46.7 %) |
-| **Bing Copilot** | Moyenne (6 / 10) | Bing index OK, IndexNow déjà configuré |
+| Claude | ~88 | ClaudeBot + anthropic-ai + Claude-Web autorisés, llms.txt riche |
+| Google AI Overviews | ~85 | #1 sur la marque (title EN déjà indexé), schema @graph, 88 URLs sitemap en 200 |
+| Bing Copilot | ~84 | IndexNow actif (clé validée, ping 200 après chaque deploy) |
+| ChatGPT | ~76 | GPTBot/OAI-SearchBot OK, mais **0 présence Wikipedia** (47,9 % des citations ChatGPT) |
+| Perplexity | ~72 | PerplexityBot OK, mais **0 présence Reddit** (46,7 % des citations Perplexity) |
 
----
+## 3. Accès crawlers IA — 19/19 autorisés ✅
 
-## ✅ État de l'art on-page (ce qui est fait)
+`robots.txt` (vérifié live) : GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, anthropic-ai, Claude-Web, PerplexityBot, Perplexity-User, Google-Extended, Amazonbot, Applebot-Extended, Meta-ExternalAgent, FacebookBot, Bytespider, CCBot, cohere-ai, DuckAssistBot, YouBot + wildcard. Sitemap déclaré. Aucun blocage.
 
-### 1. AI crawler access (20/20)
-Tous les crawlers IA majeurs sont **explicitement autorisés** dans `robots.txt` :
+## 4. llms.txt — présent et exemplaire ✅
 
-| Crawler | Status |
-|---|---|
-| GPTBot, ChatGPT-User, OAI-SearchBot (OpenAI) | ✅ Allow |
-| ClaudeBot, anthropic-ai, Claude-Web (Anthropic) | ✅ Allow |
-| PerplexityBot, Perplexity-User | ✅ Allow |
-| Google-Extended (Gemini, AIO) | ✅ Allow |
-| Applebot-Extended (Apple Intelligence) | ✅ Allow |
-| Amazonbot, Meta-ExternalAgent, FacebookBot | ✅ Allow |
-| Bytespider, CCBot, cohere-ai | ✅ Allow |
-| DuckAssistBot, YouBot | ✅ Allow |
+- `/llms.txt` (31 355 o) : intro answer-first, table « Key facts » (20+ lignes), 27 sections dont « Citation-ready answers » (blocs 60-120 mots par intention de recherche), comparatif concurrents, **0 donnée personnelle** (anonymisé le 16/07).
+- `/llms-full.txt` (36 070 o) : version étendue avec guides intégraux.
+- Versions/faits synchronisés : 2.9.7, 14 modules, macOS 15+, DMG ~12 Mo / installé ~30 Mo, InStock.
 
-### 2. llms.txt et llms-full.txt
-- ✅ `llms.txt` présent (291 → **enrichi maintenant**)
-- ✅ `llms-full.txt` complémentaire (503 lignes)
-- ✅ Nouveau bloc **Key facts** structuré en tableau (citation-ready format)
-- ✅ Nouveau bloc **Citation-ready answers** avec 7 réponses courtes (60-120 mots, sweet spot AI Overviews)
-- ✅ FAQ étoffée
-- ✅ X-Robots-Tag: noindex sur llms.txt (visible AI, invisible Google index — évite duplicate content)
+## 5. Mentions de marque (vérifié 2026-07-17)
 
-### 3. Schema.org JSON-LD (enrichi cette passe)
-Schema en `@graph` avec 7 entités :
-
-| Entité | Statut | Améliorations |
+| Plateforme | Statut | Note |
 |---|---|---|
-| Organization | ✅ très riche | + `legalName`, `taxID`, `vatID`, `iso6523Code`, `naics`, `address` complète, `foundingLocation`, `sameAs` (GitHub, Product Hunt), `contactPoint` × 2 (support + presse) |
-| Person (Axel Courty) | ✅ enrichi | + `givenName`, `familyName`, `description`, `knowsAbout`, `birthDate`, `birthPlace`, `nationality`, `founderOf`, `sameAs` (GitHub) |
-| SoftwareApplication | ✅ très complet | featureList × 30, offers × 3 (Essentiel, Pro mensuel, Pro à vie), datePublished, releaseNotes |
-| FAQPage | ✅ 10 questions | Format Q/A optimisé pour AI Overviews |
-| BreadcrumbList | ✅ 8 niveaux | Navigation sémantique |
-| WebSite | ✅ inLanguage 4 langues | Corrigé depuis fr-FR uniquement |
-| **HowTo** | ✅ NOUVEAU | 3 steps (brew CLI, DMG, xattr fix) — gros levier pour AI Overviews sur requêtes "how to install NotchIA" |
+| Wikipedia | ❌ absent | « Notchia » sur Wikipedia = un arthropode préhistorique, pas l'app |
+| Reddit | ❌ absent | Aucune mention détectée |
+| YouTube | ⚠️ chaîne propre créée (@notchia-app), aucune mention tierce | Corrélation la plus forte avec les citations IA (~0.737) |
+| LinkedIn | ❌ absent | |
+| Annuaire tiers | ✅ toolify.ai/tool/notchia | Seule fiche tierce |
+| Socials propres | ✅ Instagram, TikTok, YouTube, Facebook | Référencés en sameAs dans le schema Organization |
 
-### 4. Passage-level citability (22/25 — gros gain cette passe)
-- ✅ **Nouveau bloc § About** dans `index.html` avec **lede 165 mots** (sweet spot AI 134-167)
-- ✅ Stats inline avec dates précises (19 mai 2026, 14 modules, 10 états IA, 26 langues lrclib, etc.)
-- ✅ Identifiants entity verbatim (COURTY Axel, Talence, RCS 105 093 058, v2.8.0 « Wise Owl »)
-- ✅ Tableau **Key facts** 8 colonnes (catégorie / dev / version / plateforme / modules / tarif / langues / privacy)
-- ✅ FAQ structurée Q/A avec réponses self-contained
-- ✅ Headings question-based (`Qu'est-ce que NotchIA ?`, `Quelle version macOS ?`, etc.)
+⚠️ **Index périmé** : la recherche Google restitue encore l'ancienne description « Claude Code, ChatGPT Codex et GitHub Copilot » (feature retirée de l'app en 2.9.4, purgée du site le 16/07). IndexNow a été pingé (88 URLs) ; le recrawl corrigera. Si Google Search Console est configurée : demander une réindexation manuelle de `/`, `/features`, `/llms.txt`.
 
-### 5. Authority & brand signals on-page (14/20 — limite atteinte sans externe)
-- ✅ Auteur identifié partout (Person schema + visible "Axel Courty" dans manifesto)
-- ✅ Dates publication + dernière mise à jour visibles
-- ✅ Adresse physique vérifiable (KBis officiel)
-- ✅ Numéro RCS + SIREN + APE + TVA dans Organization schema
-- ✅ Liens vers sources tierces (Apple Music, Spotify, lrclib, brew.sh, github.com)
-- ✅ Contact email + formulaire visible
-- ✅ Press kit dédié (`/press`) avec quotes, facts, screenshots
+## 6. Citabilité passage-level
 
----
+- Bloc « Qu'est-ce que NotchIA ? » : présent dans les 60 premiers mots du about (FR) et de la FAQ, **dans les 4 langues** (pages statiques).
+- llms.txt : 27 blocs auto-suffisants ; les « Citation-ready answers » couvrent créateur, différence vs Boring Notch, sécurité, open-source, modèle économique, Mac App Store.
+- Article de release `blog/sealed-badger-2-9-7` (17/07) : FAQ 4 questions avec parité schema.
+- Aucun claim « premier/seul » absolu restant (adoucis le 16/07 : « l'une des seules », « among the first »).
 
-## ⚠️ Plafond on-page atteint — leviers externes restants
+## 7. Server-Side Rendering ✅ (résolu le 17/07)
 
-> Le score on-page est **proche du maximum**. Les 13 points manquants viennent de **brand signals externes** que tu ne veux pas activer pour l'instant (Wikipedia, Reddit, YouTube, LinkedIn, blogs tiers).
+- **Avant** : home/features/pricing servis en FR uniquement, EN/ES/DE en JS-only → invisibles aux crawlers IA.
+- **Maintenant** : `/en/`, `/es/`, `/de/` = versions statiques pré-rendues (générateur `scripts/build-i18n-pages.mjs`), JSON-LD traduit (FAQ comprise), clusters hreflang réels. **Vérifié avec UA GPTBot sans JS** : contenu EN/ES/DE servi.
+- `/changelog` : SSR edge (GitHub Releases), affiche 2.9.7.
+- Blog : 70+ articles statiques multilingues, index filtré par langue côté client (crawlers voient tout).
 
-### Tableau des leviers externes (impact si activés)
+## 8. Top 5 actions à plus fort impact (toutes off-page ou média)
 
-| Levier | Impact potentiel | Risque ban | Effort | Recommandation |
-|---|---|---|---|---|
-| **Wikipedia article** | +5 points (entity recognition critique pour ChatGPT 47.9 % et Claude) | Faible si notable | 2-4 h rédaction + sources tierces | À faire **dès que** 2-3 articles tiers indépendants citent NotchIA |
-| **LinkedIn page entreprise** | +2 points (signal d'autorité) | Nul | 30 min | À faire dès activation Stripe |
-| **GitHub repo public** | +1 point (déjà partiellement fait via `coaxel2/NotchIA/releases`) | Nul | déjà fait | ✅ ok |
-| **YouTube channel + 1 vidéo démo** | +3 points (corr. 0.737 avec citations IA selon Ahrefs) | Nul | 4-6 h tournage + montage | Pivote dès que tu as 1 démo claire 90 s |
-| **Reddit organique r/macapps** | +2 points (Perplexity #1 à 46.7 %) | **Élevé si auto-promo** | Patience (post quand vrais users) | Attendre que des users postent organiquement |
-| **Product Hunt launch** | +1 point | Nul (légitime) | 1 j prep + jour J | Déjà planifié (cf. `marketing/off-site/ph-activation/`) |
-| **Press inde tech (MacStories, The Verge, 9to5Mac)** | +3 points si pickup | Nul (pitches existants) | 2 h envoi + relances | Pitches déjà rédigés dans `marketing/off-site/press-pitches/` |
+1. **Vidéo démo YouTube** (~0.737 de corrélation avec les citations IA — le signal n°1) + shorts TikTok/IG déjà planifiés.
+2. **Présence Reddit** : post de lancement r/macapps + réponses utiles dans les fils « notch app » (46,7 % des citations Perplexity).
+3. **Fiche AlternativeTo** (compte débloqué depuis le 04/06, kit prêt dans `marketing/off-site/alternativeto-submit-now.md`).
+4. **Vrais screenshots produit** (remplace les 6 placeholders du press kit) → multi-modal 57 → ~80.
+5. **Purge de l'index périmé** : recrawl GSC des pages clés pour éliminer la mention Copilot fantôme.
+
+## 9. Schema — état
+
+88 blocs JSON-LD, 100 % parseables. @graph home : Organization (sameAs socials), SoftwareApplication (v2.9.7, InStock, macOS 15.0+), FAQPage (parité), BreadcrumbList, WebSite, HowTo (déprécié par Google pour les rich results mais inoffensif, conservé pour le contexte IA). Author = Organization « NotchIA » partout (nœud Person supprimé volontairement — privacy). Pages de langue : FAQ et descriptions traduites dans le schema. Rien à corriger.
+
+## 10. Reformulations de contenu
+
+Aucune urgente — la structure answer-first est en place. Optionnel : RSL 1.0 (`/license.xml`) absent ; standard émergent de licence IA, à considérer seulement si une politique de licence de contenu devient nécessaire.
 
 ---
-
-## 📊 Quick wins on-page complémentaires (en file d'attente, pas urgents)
-
-| Action | Impact | Effort |
-|---|---|---|
-| Ajouter une page `/comparison-vs-boring-notch` avec tableau citation-friendly | +1 pt Perplexity | 1 h |
-| Convertir 3 articles blog en format "evergreen review" + dates de révision | +0.5 pt Google AIO | 30 min/article |
-| Ajouter `SpeakableSpecification` schema pour voice assistants (Siri, Alexa) | +0.3 pt Bing/Apple | 30 min |
-| Ajouter `AggregateRating` Schema dès qu'on a 5+ reviews vérifiables | +1 pt | dépend des reviews |
-| `VideoObject` schema sur la home avec démo embed | +1.5 pt | dépend de la vidéo |
-
----
-
-## 🎯 Top 5 highest-impact changes (cette passe)
-
-| # | Change | Avant | Après |
-|---|---|---|---|
-| 1 | **Bloc § About 165 mots** avec stats datées + identifiants verbatim | Pas de passage citable | Sweet spot AI Overviews atteint |
-| 2 | **HowTo schema** pour install (3 étapes : brew, DMG, xattr fix) | Aucun | Schema riche pour requêtes "how to install …" |
-| 3 | **Person + Organization `sameAs`** (GitHub, Product Hunt, GitHub Axel) | Aucun lien externe | Entity resolution améliorée |
-| 4 | **Address légale + identifiants fiscaux** dans Organization schema | Adresse manquante | KBis-grade authority signal |
-| 5 | **llms.txt Key facts table** + 7 citation-ready answers 60-120 mots | FAQ courte uniquement | Format optimal pour LLM retrieval |
-
----
-
-## Roadmap GEO future
-
-### Immédiat (cette passe — fait)
-- [x] Bloc § About passage citable
-- [x] Tableau Key Facts dans /
-- [x] HowTo schema + Person sameAs + Organization address
-- [x] llms.txt enrichi (Key facts + 7 citation-ready answers)
-- [x] inLanguage corrigé sur WebSite
-
-### Court terme (1-7 jours, on-page possible)
-- [ ] Page `/comparison-vs-boring-notch` avec tableau side-by-side
-- [ ] `VideoObject` schema dès que tu as une démo vidéo
-- [ ] Mettre à jour `<meta name="article:published_time">` + `<meta name="article:modified_time">` sur tous les blog posts
-- [ ] Ajouter `SpeakableSpecification` sur la FAQ
-- [ ] Publier une "Newsroom timeline" sur /press avec milestones datés (lance, immat, etc.)
-
-### Moyen terme (off-site, à débloquer quand prêt)
-- [ ] Page LinkedIn entreprise NotchIA
-- [ ] Setup YouTube channel + 1 vidéo démo 90 s
-- [ ] Listing Product Hunt (déjà préparé)
-- [ ] Pitches presse (déjà rédigés dans `marketing/off-site/press-pitches/`)
-- [ ] Page Wikipedia (attendre 2-3 sources tierces indépendantes)
-
----
-
-## Comment vérifier l'impact
-
-### 1. Test direct sur les LLMs (immédiat)
-Demande à ChatGPT, Claude, Perplexity, Gemini :
-> « Qu'est-ce que NotchIA ? Qui l'a créée ? Combien coûte la version Pro ? »
-
-Compte combien d'éléments factuels du § About sont restitués correctement. Cible : 4/4 sur Claude (best entity context), 3/4 sur ChatGPT, 2/4 sur Perplexity à fin mai 2026.
-
-### 2. Google AI Overviews
-Cherche sur Google « notchia app » et regarde si l'AI Overview cite notchia.app comme source. Délai : 1-2 semaines après ce push.
-
-### 3. Search Console
-- Performance → Search type → Web → Filter pages : `/`
-- Compare clicks/impressions avant/après le déploiement
-- Watch pour de nouveaux query patterns type « what is notchia », « notchia vs boring notch »
-
----
-
-## Notes
-
-- **Brand mentions > backlinks** (Ahrefs étude 2025 sur 75 k brands) : la GEO se gagne par mentions externes (YouTube 0.737, Reddit, Wikipedia) bien plus que par backlinks. Plafond on-page atteint ; l'investissement marginal va dans **un repo GitHub stable + 1 vidéo YouTube** (deux actions à risque ban nul).
-- **JS-heavy content invisible aux AI crawlers** : ✅ le site est en HTML statique (Cloudflare Pages, pas de SSR JS) → tout le contenu est crawlable sans exécution.
-- **Server-side rendering** : ✅ all pages SSR via static HTML — pas de risque de contenu invisible.
-- **i18n via data-i18n** : ⚠️ le contenu visible par défaut est en FR (le JS swap au load). Les AI crawlers voient donc majoritairement le FR. Pour cibler EN/ES/DE, il faudrait des URLs `/en/`, `/es/`, `/de/` (pas prévu vu le scope actuel — i18n inline reste OK pour la part organique humaine).
-
----
-
-*Audit généré par le skill `claude-seo:seo-geo`. Améliorations appliquées dans le commit `[à venir]`.*
+*Généré le 2026-07-17. Méthodo : curl live (robots, llms, UA GPTBot sur /en /de /changelog), validation JSON-LD locale (88 blocs), recherches web marque du jour, audit on-page des 16-17/07 (commits be37c83 → 8a0e64d).*
