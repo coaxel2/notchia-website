@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9.9 — % de contexte IA enfin juste, notifications à la vraie fin</title>
+<meta name="description" content="NotchIA 2.9.8 « Patient Eagle » et 2.9.9 « Counting Crow » : le % de contexte Claude Code affiche la vraie valeur (fenêtres 1M reconnues), multi-session fiable, et les notifications attendent la vraie fin du travail." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/counting-crow-2-9-9" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/counting-crow-2-9-9" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/counting-crow-2-9-9" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="2.9.9 Counting Crow 🐦‍⬛ — % de contexte IA juste et notifications fiables — NotchIA" />
+<meta property="og:description" content="Le % de contexte Claude Code affiche enfin la vraie valeur (fenêtres 1M), et les notifications attendent la vraie fin du travail des agents." />
+<meta property="og:url" content="https://notchia.app/blog/counting-crow-2-9-9" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-07-18" />
+<meta property="article:modified_time" content="2026-07-18" />
+<meta property="article:author" content="NotchIA" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="2.9.9 Counting Crow 🐦‍⬛ — % de contexte IA juste et notifications fiables — NotchIA" />
+<meta name="twitter:description" content="% de contexte Claude Code enfin juste (fenêtres 1M reconnues), multi-session fiable, notifications à la vraie fin du travail." />
+<meta name="twitter:image" content="https://notchia.app/og-image.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tech-note { font-size: 0.85rem; color: rgba(237,232,220,0.55); border-left: 2px solid rgba(168,85,247,0.4); padding: 0.4rem 0 0.4rem 1rem; margin: 2rem 0 1rem; }
+  .tech-note p { color: rgba(237,232,220,0.55); margin-bottom: 0.4rem; }
+  .lang-sw { appearance: none; -webkit-appearance: none; background-color: transparent; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; background-size: 9px; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://notchia.app/blog/counting-crow-2-9-9#article",
+      "headline": "Counting Crow : le % de contexte IA affiche enfin la vraie valeur — et les notifications attendent la vraie fin",
+      "description": "NotchIA 2.9.8 « Patient Eagle » et 2.9.9 « Counting Crow » : % de contexte Claude Code exact (fenêtres 1M reconnues), multi-session fiable, notifications à la vraie fin du travail des agents, corrections Apple Music, Shelf et diagnostic.",
+      "datePublished": "2026-07-18",
+      "dateModified": "2026-07-18",
+      "inLanguage": "fr-FR",
+      "image": "https://notchia.app/og-image.png",
+      "author": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/" },
+      "publisher": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/", "logo": { "@type": "ImageObject", "url": "https://notchia.app/logo-512.png" } },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://notchia.app/blog/counting-crow-2-9-9" },
+      "wordCount": 640
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://notchia.app/blog/counting-crow-2-9-9#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pourquoi le % de contexte Claude Code était-il faux avant la 2.9.9 ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "NotchIA calculait le pourcentage sur une fenêtre supposée de 200k tokens. Les sessions Claude Code à grande fenêtre (1 million de tokens) étaient donc affichées à 100 % en rouge alors qu'elles avaient encore de la marge. Depuis la 2.9.9, la valeur vient directement de la source officielle de Claude Code et la taille de fenêtre de chaque session est mémorisée."
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qui change pour les notifications en 2.9.8 ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Quand Claude Code lance des tâches en arrière-plan (agents, commandes longues), NotchIA attend désormais la vraie fin du travail avant d'envoyer la notification « terminé ». Plus de notification prématurée en plein milieu d'une tâche qui continue toute seule." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment obtenir NotchIA 2.9.9 ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les utilisateurs existants reçoivent la mise à jour via l'auto-update Sparkle (menu NotchIA → Vérifier les mises à jour). Les nouveaux utilisateurs téléchargent le DMG (~12 Mo) depuis notchia.app/install. NotchIA nécessite macOS 15.0+ (Apple Silicon ou Intel)." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://notchia.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "2.9.9 Counting Crow", "item": "https://notchia.app/blog/counting-crow-2-9-9" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="font-sans min-h-screen">
+
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Mise à jour · 2.9.8 Patient Eagle 🦅 + 2.9.9 Counting Crow 🐦‍⬛</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Counting Crow : le % de contexte IA affiche enfin <span class="grad-text">la vraie valeur</span></h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 18 juillet 2026 · 3 min de lecture</p>
+  </section>
+
+  <p>Deux mises à jour publiées le 17 juillet 2026, toutes deux consacrées à la fiabilité de l'onglet IA : la <strong>2.9.8 « Patient Eagle »</strong> apprend aux notifications à attendre la vraie fin du travail des agents, et la <strong>2.9.9 « Counting Crow »</strong> corrige le pourcentage de contexte Claude Code — le chiffre le plus regardé de l'encoche.</p>
+
+  <h2>Un % de contexte <span class="grad-text">enfin juste</span></h2>
+
+  <p>Si tu utilises Claude Code avec une session à grande fenêtre (1&nbsp;million de tokens), NotchIA calculait jusqu'ici le pourcentage sur une fenêtre supposée de 200k — résultat : une pastille bloquée à <strong>100&nbsp;% en rouge</strong> alors que ta session avait encore une marge énorme. Depuis la 2.9.9 :</p>
+
+  <ul>
+    <li>le % de contexte vient <strong>directement de la source officielle de Claude Code</strong> — les fenêtres 1M sont correctement reconnues ;</li>
+    <li>la taille de fenêtre de <strong>chaque session est mémorisée</strong> : le % reste juste même en jonglant entre plusieurs sessions ;</li>
+    <li>les tokens de la requête en cours et la taille de fenêtre affichés dans les stats sont alignés sur les mêmes sources.</li>
+  </ul>
+
+  <h2>Des notifications qui attendent <span class="grad-text">la vraie fin</span></h2>
+
+  <p>La 2.9.8 règle un agacement classique : quand Claude Code lance des tâches en arrière-plan (agents, commandes longues), la notification « terminé » partait <strong>trop tôt</strong>, en plein milieu d'une tâche qui continuait toute seule. NotchIA attend désormais la fin réelle du travail — une seule notification, au bon moment.</p>
+
+  <h2>Le reste des <span class="grad-text">corrections</span></h2>
+
+  <p><strong>Apple Music</strong> — l'état de lecture est mis à jour sur le thread principal : pochette et infos de piste plus fiables.</p>
+  <p><strong>Shelf</strong> — un échec de compression ZIP ne laisse plus de copies orphelines dans le dossier temporaire.</p>
+  <p><strong>Diagnostic</strong> — un échec de création du rapport est détecté proprement au lieu d'ouvrir un fichier inexistant dans le Finder.</p>
+
+  <h2>Comment <span class="grad-text">l'obtenir</span></h2>
+
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update <a href="https://sparkle-project.org/documentation/" rel="noopener" target="_blank">Sparkle</a> te propose la 2.9.9 automatiquement. Pour forcer : menu NotchIA → <em>Vérifier les mises à jour</em>.</p>
+
+  <p><strong>Nouvel utilisateur ?</strong> Télécharge NotchIA (~12 Mo) depuis <a href="/#telecharger">la page d'accueil</a>. Musique, Calendrier, Digest et Concentration sont gratuits à vie ; le suivi IA est dans le pack Pro — <a href="/pricing">voir les tarifs</a>.</p>
+
+  <h2>FAQ</h2>
+
+  <h3>Pourquoi le % de contexte Claude Code était-il faux avant la 2.9.9 ?</h3>
+  <p>NotchIA calculait le pourcentage sur une fenêtre supposée de 200k tokens. Les sessions Claude Code à grande fenêtre (1 million de tokens) étaient donc affichées à 100 % en rouge alors qu'elles avaient encore de la marge. Depuis la 2.9.9, la valeur vient directement de la source officielle de Claude Code et la taille de fenêtre de chaque session est mémorisée.</p>
+
+  <h3>Qu'est-ce qui change pour les notifications en 2.9.8 ?</h3>
+  <p>Quand Claude Code lance des tâches en arrière-plan (agents, commandes longues), NotchIA attend désormais la vraie fin du travail avant d'envoyer la notification « terminé ». Plus de notification prématurée en plein milieu d'une tâche qui continue toute seule.</p>
+
+  <h3>Comment obtenir NotchIA 2.9.9 ?</h3>
+  <p>Les utilisateurs existants reçoivent la mise à jour via l'auto-update Sparkle (menu NotchIA → Vérifier les mises à jour). Les nouveaux utilisateurs téléchargent le DMG (~12 Mo) depuis <a href="/install">notchia.app/install</a>. NotchIA nécessite macOS 15.0+ (Apple Silicon ou Intel).</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/changelog" class="btn-secondary">Changelog complet</a>
+  </div>
+
+  <p class="mt-10 text-sm"><a href="/" class="text-cream/55 hover:text-cream">← Retour à l'accueil</a></p>
+
+</main>
+
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

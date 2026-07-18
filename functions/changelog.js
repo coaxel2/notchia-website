@@ -55,7 +55,7 @@ export async function onRequestGet(context) {
         .map((r) => ({
           version: String(r.tag_name || "").trim(),
           title: cleanTitle(r.name, r.tag_name),
-          date: r.published_at || "",
+          date: (String(r.body || "").match(/^<!--date:(\d{4}-\d{2}-\d{2})-->/) || [])[1] || r.published_at || "",
           body: cleanBody(r.body || ""),
           dmg: DMG(r.tag_name),
         }))

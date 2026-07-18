@@ -12,7 +12,7 @@ Ce fichier est la version étendue de `llms.txt` selon la convention llmstxt.org
 
 NotchIA est un logiciel macOS indépendant développé en France. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
 
-- **Version actuelle** : 2.9.7
+- **Version actuelle** : 2.9.9
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
 - **Architecture** : Apple Silicon + Intel
 - **Poids** : DMG ~ 12 Mo · installé ~ 30 Mo
@@ -241,7 +241,7 @@ Guides complets :
 
 ### Press kit et donnees media
 
-La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.7, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
+La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.9, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
 
 ### Différenciateurs NotchIA
 
