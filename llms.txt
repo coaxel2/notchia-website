@@ -35,7 +35,7 @@
 | Contact | https://notchia.app/contact · notchia.app@gmail.com |
 | Press kit | https://notchia.app/press |
 | Repo public | https://github.com/coaxel2/NotchIA |
-| Notes de version | https://notchia.app/changelog (auto, toutes versions) · https://notchia.app/blog/sealed-badger-2-9-7 (article série 2.9) |
+| Notes de version | https://notchia.app/changelog (auto, toutes versions) · https://notchia.app/blog/counting-crow-2-9-9 (dernier article) · https://notchia.app/blog/sealed-badger-2-9-7 |
 | Concurrents directs | Boring Notch (open-source), NotchNook, Dynamic Island Pro (apps de category notch utility) |
 | Apps complémentaires (stack power-user) | Raycast (launcher), Rectangle (window manager), CleanShot X (screenshots), 1Password, Things 3 |
 

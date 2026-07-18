@@ -69,52 +69,91 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "@id": "https://notchia.app/blog/counting-crow-2-9-9#article",
-      "headline": "Counting Crow : le % de contexte IA affiche enfin la vraie valeur — et les notifications attendent la vraie fin",
-      "description": "NotchIA 2.9.8 « Patient Eagle » et 2.9.9 « Counting Crow » : % de contexte Claude Code exact (fenêtres 1M reconnues), multi-session fiable, notifications à la vraie fin du travail des agents, corrections Apple Music, Shelf et diagnostic.",
-      "datePublished": "2026-07-18",
-      "dateModified": "2026-07-18",
-      "inLanguage": "fr-FR",
-      "image": "https://notchia.app/og-image.png",
-      "author": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/" },
-      "publisher": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/", "logo": { "@type": "ImageObject", "url": "https://notchia.app/logo-512.png" } },
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://notchia.app/blog/counting-crow-2-9-9" },
-      "wordCount": 640
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://notchia.app/blog/counting-crow-2-9-9#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Pourquoi le % de contexte Claude Code était-il faux avant la 2.9.9 ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "NotchIA calculait le pourcentage sur une fenêtre supposée de 200k tokens. Les sessions Claude Code à grande fenêtre (1 million de tokens) étaient donc affichées à 100 % en rouge alors qu'elles avaient encore de la marge. Depuis la 2.9.9, la valeur vient directement de la source officielle de Claude Code et la taille de fenêtre de chaque session est mémorisée."
-        },
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce qui change pour les notifications en 2.9.8 ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Quand Claude Code lance des tâches en arrière-plan (agents, commandes longues), NotchIA attend désormais la vraie fin du travail avant d'envoyer la notification « terminé ». Plus de notification prématurée en plein milieu d'une tâche qui continue toute seule." }
-        },
-        {
-          "@type": "Question",
-          "name": "Comment obtenir NotchIA 2.9.9 ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Les utilisateurs existants reçoivent la mise à jour via l'auto-update Sparkle (menu NotchIA → Vérifier les mises à jour). Les nouveaux utilisateurs téléchargent le DMG (~12 Mo) depuis notchia.app/install. NotchIA nécessite macOS 15.0+ (Apple Silicon ou Intel)." }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://notchia.app/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "2.9.9 Counting Crow", "item": "https://notchia.app/blog/counting-crow-2-9-9" }
-      ]
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://notchia.app/blog/counting-crow-2-9-9#article",
+   "headline": "Counting Crow : le % de contexte IA affiche enfin la vraie valeur — et les notifications attendent la vraie fin",
+   "description": "NotchIA 2.9.8 « Patient Eagle » et 2.9.9 « Counting Crow » : % de contexte Claude Code exact (fenêtres 1M reconnues), multi-session fiable, notifications à la vraie fin du travail des agents, corrections Apple Music, Shelf et diagnostic.",
+   "datePublished": "2026-07-18",
+   "dateModified": "2026-07-18",
+   "inLanguage": "fr-FR",
+   "image": "https://notchia.app/og-image.png",
+   "author": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://notchia.app/logo-512.png"
     }
-  ]
+   },
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://notchia.app/blog/counting-crow-2-9-9"
+   },
+   "wordCount": 640
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/blog/counting-crow-2-9-9#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Pourquoi le % de contexte Claude Code était-il faux avant la 2.9.9 ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NotchIA calculait le pourcentage sur une fenêtre supposée de 200k tokens. Les sessions Claude Code à grande fenêtre (1 million de tokens) étaient donc affichées à 100 % en rouge alors qu'elles avaient encore de la marge. Depuis la 2.9.9, la valeur vient directement de la source officielle de Claude Code et la taille de fenêtre de chaque session est mémorisée."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qu'est-ce qui change pour les notifications en 2.9.8 ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Quand Claude Code lance des tâches en arrière-plan (agents, commandes longues), NotchIA attend désormais la vraie fin du travail avant d'envoyer la notification « terminé ». Plus de notification prématurée en plein milieu d'une tâche qui continue toute seule."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment obtenir NotchIA 2.9.9 ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les utilisateurs existants reçoivent la mise à jour via l'auto-update Sparkle (menu NotchIA → Vérifier les mises à jour). Les nouveaux utilisateurs téléchargent le DMG (~12 Mo) depuis notchia.app/install. NotchIA nécessite macOS 15.0+ (Apple Silicon ou Intel)."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://notchia.app/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://notchia.app/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "2.9.9 Counting Crow",
+     "item": "https://notchia.app/blog/counting-crow-2-9-9"
+    }
+   ]
+  }
+ ]
 }
 </script>
 </head>
