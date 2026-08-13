@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9.13 — notch Chrome + artworks HD + presse-papiers enrichi</title>
+<meta name="description" content="La notch ne disparaît plus quand Chrome passe en plein écran. Miniatures YouTube Music demandées en 544×544 (HD). Le presse-papiers détecte URL, couleurs, e-mail, JSON, code — avec actions rapides." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/curious-octopus-2-9-13" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/curious-octopus-2-9-13" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/curious-octopus-2-9-13" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA 2.9.13 — Curious Octopus 🐙" />
+<meta property="og:description" content="La notch ne disparaît plus quand Chrome passe en plein écran. Miniatures YouTube Music demandées en 544×544 (HD). Le presse-papiers détecte URL, couleurs, e-mail, JSON, code — avec actions rapides." />
+<meta property="og:url" content="https://notchia.app/blog/curious-octopus-2-9-13" />
+<meta property="og:image" content="https://notchia.app/og-image.png" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-07-18" />
+<meta property="article:modified_time" content="2026-07-18" />
+<meta property="article:author" content="NotchIA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA 2.9.13 — Curious Octopus 🐙" />
+<meta name="twitter:description" content="La notch ne disparaît plus quand Chrome passe en plein écran. Miniatures YouTube Music demandées en 544×544 (HD). Le presse-papiers détecte URL, couleurs, e-mail, JSON, code — avec actions rapides." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  .tech-note { font-size: 0.85rem; color: rgba(237,232,220,0.55); border-left: 2px solid rgba(168,85,247,0.4); padding: 0.4rem 0 0.4rem 1rem; margin: 2rem 0 1rem; }
+  .tech-note p { color: rgba(237,232,220,0.55); margin-bottom: 0.4rem; }
+  .lang-sw { appearance: none; -webkit-appearance: none; background-color: transparent; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; background-size: 9px; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
+  .lang-sw:hover { color: #EDE8DC; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://notchia.app/blog/curious-octopus-2-9-13#article",
+   "headline": "Curious Octopus — notch stable sur Chrome, artworks HD, presse-papiers enrichi",
+   "description": "La notch ne disparaît plus quand Chrome passe en plein écran. Miniatures YouTube Music demandées en 544×544 (HD). Le presse-papiers détecte URL, couleurs, e-mail, JSON, code — avec actions rapides.",
+   "datePublished": "2026-07-18",
+   "dateModified": "2026-07-18",
+   "inLanguage": "fr-FR",
+   "image": "https://notchia.app/og-image.png",
+   "author": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://notchia.app/logo-512.png"
+    }
+   },
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://notchia.app/blog/curious-octopus-2-9-13"
+   },
+   "wordCount": 400
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://notchia.app/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://notchia.app/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "2.9.13",
+     "item": "https://notchia.app/blog/curious-octopus-2-9-13"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="font-sans min-h-screen">
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Notes de version · 2.9.13</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Curious Octopus — la notch <span class="grad-text">tient bon sur Chrome</span>, artworks HD, presse-papiers intelligent</h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 18 juillet 2026 · 3 min de lecture</p>
+  </section>
+
+  <p>Mise à jour ciblée : deux vrais irritants signalés (la notch qui disparaît quand tu utilises Chrome, la qualité perfectible des pochettes YouTube), plus une évolution créative du presse-papiers qui devient un mini-couteau suisse.</p>
+
+  <h2>La notch <span class="grad-text">ne disparaît plus dans Chrome</span></h2>
+  <p>Cause : si tu écoutes YouTube Music, Spotify Web, Deezer ou SoundCloud <em>via le navigateur</em>, macOS te fait apparaître Chrome comme l'app « qui joue de la musique ». La règle « masquer la notch quand l'app musicale est en plein écran » se déclenchait alors dès que Chrome passait en fullscreen (touche F11, vidéo YouTube en plein écran…). Résultat : la notch disparaissait au milieu d'une session de travail dans Chrome.</p>
+  <p>Correctif : Chrome, Safari, Firefox, Arc, Brave, Edge, Vivaldi, Opera, Chromium, Dia sont désormais explicitement ignorés par cette détection. Un navigateur n'est pas une app musicale dédiée — la notch reste visible.</p>
+
+  <h2>Miniatures YouTube Music <span class="grad-text">en haute résolution</span></h2>
+  <p>Les URLs d'artworks servies par YouTube Music sont parfois minuscules (60×60 ou 90×90). Sur un écran Retina, même la meilleure interpolation ne peut pas inventer les pixels manquants. NotchIA réécrit maintenant l'URL avant de télécharger l'image :</p>
+  <ul>
+    <li>Google image serving (<code>googleusercontent.com</code>) : les paramètres <code>=w60-h60</code> deviennent <code>=w544-h544</code> — le serveur retourne la version haute résolution si la source la contient.</li>
+    <li>YouTube (<code>i.ytimg.com</code>) : <code>mqdefault.jpg</code> / <code>hqdefault.jpg</code> / <code>sddefault.jpg</code> sont remplacés par <code>maxresdefault.jpg</code> (jusqu'à 1280×720).</li>
+  </ul>
+  <p>Combiné à l'interpolation haute de la 2.9.12, les pochettes affichées sont enfin nettes, en ratio préservé sur la notch ouverte, en crop centré propre sur les badges compacts.</p>
+
+  <h2>Presse-papiers : <span class="grad-text">un couteau suisse discret</span></h2>
+  <p>Chaque item du presse-papiers est désormais analysé pour en déduire sa nature :</p>
+  <ul>
+    <li><strong>URL</strong> — badge lien bleu, action « Ouvrir dans le navigateur ».</li>
+    <li><strong>Couleur</strong> (hex, rgb, rgba) — pastille de la vraie couleur affichée à la place de l'icône.</li>
+    <li><strong>E-mail</strong> — badge enveloppe, action « Nouveau message… » (ouvre ton client mail).</li>
+    <li><strong>JSON valide</strong> — badge accolades, action « Copier reformaté » (pretty-print à jour, clés triées).</li>
+    <li><strong>Nombre, code, texte</strong> — badge icône discret, sous-menu « Encoder / décoder » pour base64 et URL-encode dans les deux sens.</li>
+  </ul>
+  <p>Zéro téléchargement, zéro API tierce, 100 % local. La détection tourne à l'affichage, pas à la copie — aucune migration de format, aucun ralentissement de capture.</p>
+
+  <h2>Comment l'obtenir</h2>
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update Sparkle te propose la 2.9.13 automatiquement. Pour forcer : menu NotchIA → <em>Vérifier les mises à jour</em>.</p>
+  <p><strong>Nouvel utilisateur ?</strong> Télécharge NotchIA (~13 Mo) depuis <a href="/#telecharger">la page d'accueil</a> — <a href="/pricing">voir les tarifs</a>.</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/changelog" class="btn-secondary">Changelog complet</a>
+  </div>
+  <p class="mt-10 text-sm"><a href="/blog/" class="text-cream/55 hover:text-cream">← Tous les articles</a></p>
+</main>
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
