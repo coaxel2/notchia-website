@@ -9,7 +9,7 @@
  *   GEMINI_API_KEY = clé gratuite générée sur https://aistudio.google.com/apikey
  */
 
-import { checkRate, MINUTE, HOUR, DAY } from "./_ratelimit.js";
+import { checkRateD1, MINUTE, HOUR, DAY } from "./_ratelimit.js";
 
 // Free-tier quotas (au 2026-05) :
 //   gemini-2.5-flash-lite : 30 RPM, 1000 RPD  ← choisi (RPM 2x meilleur)
@@ -163,7 +163,7 @@ export async function onRequestPost(context) {
   }
 
   const ip = request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For") || "unknown";
-  const rate = checkRate("chat", ip, CHAT_LIMITS);
+  const rate = await checkRateD1(env.DB, "chat", ip, CHAT_LIMITS);
   if (rate.limited) {
     return json(
       { error: `Trop de questions d'affilée. Réessaie dans ${rate.retryAfter} secondes.`, retryAfter: rate.retryAfter },

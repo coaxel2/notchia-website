@@ -15,7 +15,7 @@
  * Rate limit : 1/min, 5/h, 8/jour par IP (voir _ratelimit.js).
  */
 
-import { checkRate, MINUTE, HOUR, DAY } from "./_ratelimit.js";
+import { checkRateD1, MINUTE, HOUR, DAY } from "./_ratelimit.js";
 
 const MAX_NAME = 80;
 const MAX_EMAIL = 120;
@@ -89,7 +89,7 @@ export async function onRequestPost(context) {
 
   // 2. Rate limit par IP (minute / heure / jour)
   const ip = request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For") || "unknown";
-  const rate = checkRate("contact", ip, CONTACT_LIMITS);
+  const rate = await checkRateD1(env.DB, "contact", ip, CONTACT_LIMITS);
   if (rate.limited) {
     return json(
       { error: `Trop d'envois récents. Réessaie dans ${rate.retryAfter} secondes.`, retryAfter: rate.retryAfter },
