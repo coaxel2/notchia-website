@@ -27,3 +27,8 @@ logo.original.png
 node_modules/
 npm-debug.log*
 og-image.jpg
+
+# Doublons Finder (« … copie.html ») — ne doivent JAMAIS être deployes (duplicate content)
+* copie.*
+* copy.*
+*-copie.*

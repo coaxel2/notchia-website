@@ -12,7 +12,7 @@ Ce fichier est la version étendue de `llms.txt` selon la convention llmstxt.org
 
 NotchIA est un logiciel macOS indépendant développé en France. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
 
-- **Version actuelle** : 2.9.10
+- **Version actuelle** : 2.9.11
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
 - **Architecture** : Apple Silicon + Intel
 - **Poids** : DMG ~ 12 Mo · installé ~ 30 Mo
@@ -214,9 +214,10 @@ Paiement Pro disponible (Stripe Checkout, clé de licence livrée par email). La
 - Aucune télémétrie, aucune connexion réseau hors auto-update signé
 - Architecture native macOS (SwiftUI + AppKit pour l'overlay encoche, helper XPC signé)
 - Lecture locale des journaux Claude Code (`~/.claude/projects/`)
-- Helper XPC signé avec validation de signature de l'appelant
+- Helper privilégié signé : l'app appelante est authentifiée via l'audit token du kernel (moins spoofable qu'une vérification par PID) depuis la 2.9.11
+- Historique du presse-papiers et configuration Claude Code écrits avec des permissions restreintes au seul utilisateur (2.9.11)
 - Sandbox + entitlements minimaux
-- Code source partiellement public
+- Logiciel propriétaire : le code source n'est pas public
 
 ## Positionnement dans l'écosystème Mac
 
@@ -241,7 +242,7 @@ Guides complets :
 
 ### Press kit et donnees media
 
-La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.10, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
+La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.11, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
 
 ### Différenciateurs NotchIA
 
