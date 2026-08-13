@@ -19,6 +19,59 @@ const RETRY_ON_429_MS = 1500; // backoff avant 1 seul retry sur quota
 const MAX_USER_MSG_LEN = 1000;
 const MAX_HISTORY = 12; // messages échangés gardés en contexte
 const MAX_OUTPUT_TOKENS = 500;
+// Garde-fous anti-abus : sans eux, `messages` accepte un historique arbitraire
+// (seul le DERNIER message était borné) → un client forgé pouvait envoyer 12
+// messages de plusieurs Mo et faire exploser le prompt envoyé à Gemini.
+const MAX_MESSAGES_IN = 40;         // avant slice — refuse les payloads absurdes
+const MAX_ASSISTANT_MSG_LEN = 4000; // nos propres réponses (500 tokens) tiennent largement dedans
+const MAX_TOTAL_CHARS = 24000;      // budget de l'historique transmis au modèle
+
+// Rate limit par IP (même approche mémoire que /api/contact : réinitialisé au
+// cold start, suffisant pour du spam opportuniste). Le quota Gemini free tier
+// est de 30 req/min et 1000 req/jour PARTAGÉ entre tous les visiteurs : sans
+// limite, un seul script pouvait griller la journée entière du chatbot.
+const RATE_PER_MIN = 6;
+const RATE_PER_HOUR = 40;
+const ipHits = new Map(); // ip -> timestamps (ms) de la dernière heure
+
+function checkRate(ip) {
+  const now = Date.now();
+  const hits = (ipHits.get(ip) || []).filter((t) => now - t < 3_600_000);
+  const lastMin = hits.filter((t) => now - t < 60_000);
+  if (lastMin.length >= RATE_PER_MIN) {
+    return { limited: true, retryAfter: Math.max(1, Math.ceil((60_000 - (now - lastMin[0])) / 1000)) };
+  }
+  if (hits.length >= RATE_PER_HOUR) {
+    return { limited: true, retryAfter: Math.max(1, Math.ceil((3_600_000 - (now - hits[0])) / 1000)) };
+  }
+  hits.push(now);
+  ipHits.set(ip, hits);
+  // Purge défensive : empêche la Map de croître indéfiniment sur un worker chaud
+  if (ipHits.size > 5000) {
+    for (const [k, v] of ipHits) {
+      if (!v.length || now - v[v.length - 1] > 3_600_000) ipHits.delete(k);
+    }
+  }
+  return { limited: false };
+}
+
+// L'endpoint ne sert que le chatbot de notchia.app (l'app macOS n'appelle que
+// /api/license/validate). Un navigateur envoie toujours Origin sur un POST :
+// exiger un Origin connu écarte les scripts qui tapent l'API directement.
+function originAllowed(request) {
+  const o = request.headers.get("Origin");
+  if (!o) return false;
+  try {
+    const h = new URL(o).hostname;
+    return (
+      h === "notchia.app" || h === "www.notchia.app" ||
+      h.endsWith(".notchia.pages.dev") || h.endsWith(".pages.dev") ||
+      h === "localhost" || h === "127.0.0.1"
+    );
+  } catch {
+    return false;
+  }
+}
 
 const SYSTEM_PROMPTS = {
   fr: `Tu es l'assistant officiel de NotchIA, application macOS qui transforme l'encoche du MacBook en centre de contrôle interactif.
@@ -123,6 +176,20 @@ export async function onRequestPost(context) {
     return json({ error: "Chatbot non configuré (clé API absente)." }, 503);
   }
 
+  if (!originAllowed(request)) {
+    return json({ error: "Origine non autorisée." }, 403);
+  }
+
+  const ip = request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For") || "unknown";
+  const rate = checkRate(ip);
+  if (rate.limited) {
+    return json(
+      { error: `Trop de questions d'affilée. Réessaie dans ${rate.retryAfter} secondes.`, retryAfter: rate.retryAfter },
+      429,
+      { "Retry-After": String(rate.retryAfter) }
+    );
+  }
+
   let payload;
   try {
     payload = await request.json();
@@ -136,6 +203,9 @@ export async function onRequestPost(context) {
   if (!messages || messages.length === 0) {
     return json({ error: "Aucun message fourni." }, 400);
   }
+  if (messages.length > MAX_MESSAGES_IN) {
+    return json({ error: "Historique trop long." }, 400);
+  }
 
   // Validation taille messages
   const last = messages[messages.length - 1];
@@ -147,9 +217,28 @@ export async function onRequestPost(context) {
   }
 
   // Garde les N derniers messages, alterne user/assistant correctement
-  const trimmed = messages.slice(-MAX_HISTORY).filter(
+  const kept = messages.slice(-MAX_HISTORY).filter(
     (m) => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string"
   );
+
+  // Chaque message de l'historique est borné, pas seulement le dernier : sinon
+  // un client forgé glisse un message géant en avant-dernière position.
+  const tooLong = kept.some((m) =>
+    m.content.length > (m.role === "assistant" ? MAX_ASSISTANT_MSG_LEN : MAX_USER_MSG_LEN)
+  );
+  if (tooLong) {
+    return json({ error: `Message trop long (max ${MAX_USER_MSG_LEN} caractères).` }, 400);
+  }
+
+  // Budget global : on tronque par le début (on garde le contexte récent) au
+  // lieu de rejeter — une longue conversation légitime ne doit jamais casser.
+  const trimmed = [];
+  let budget = MAX_TOTAL_CHARS;
+  for (let i = kept.length - 1; i >= 0; i--) {
+    budget -= kept[i].content.length;
+    if (budget < 0 && trimmed.length > 0) break;
+    trimmed.unshift(kept[i]);
+  }
 
   const origin = new URL(request.url).origin;
   const llms = await getLlmsContext(origin);

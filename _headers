@@ -10,7 +10,11 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   X-DNS-Prefetch-Control: on
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+  # CSP appliquée (plus en Report-Only depuis le 2026-08-13) : le site ne charge
+  # aucun script tiers (GA4 et Plausible sont commentés), aucune iframe, aucun
+  # média externe, et tous les fetch() sont relatifs (/api/*). La redirection
+  # Stripe se fait par window.location (navigation, non soumise à connect-src).
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; media-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
 
 # Assets statiques — cache long immutable
 /logo.png
