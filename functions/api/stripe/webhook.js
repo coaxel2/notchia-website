@@ -202,19 +202,82 @@ async function handleSubscriptionDeleted(subscription, env) {
     .run();
 }
 
+/**
+ * Retrouve la Checkout Session à l'origine d'une charge.
+ *
+ * `charge.payment_intent` est un `pi_…` : il ne peut JAMAIS être égal à la
+ * colonne `stripe_session_id` (`cs_…`). Il faut donc demander à Stripe la
+ * session correspondant à ce PaymentIntent. La clé restreinte a le scope
+ * Checkout Sessions: Write, qui couvre la lecture.
+ *
+ * Renvoie null si la session est introuvable (cas normal pour les factures
+ * d'abonnement récurrentes : elles n'ont pas de Checkout Session).
+ */
+async function resolveSessionId(charge, env) {
+  const pi = typeof charge?.payment_intent === "string"
+    ? charge.payment_intent
+    : charge?.payment_intent?.id;
+  if (!pi || !env.STRIPE_SECRET_KEY) return null;
+  try {
+    const res = await fetch(
+      `https://api.stripe.com/v1/checkout/sessions?payment_intent=${encodeURIComponent(pi)}&limit=1`,
+      { headers: { Authorization: `Bearer ${String(env.STRIPE_SECRET_KEY).trim()}` } }
+    );
+    if (!res.ok) {
+      console.log("stripe session lookup failed", res.status, (await res.text().catch(() => "")).slice(0, 200));
+      return null;
+    }
+    const data = await res.json();
+    return data?.data?.[0]?.id || null;
+  } catch (e) {
+    console.log("stripe session lookup threw", e?.message);
+    return null;
+  }
+}
+
 async function handleChargeRefunded(charge, env) {
-  // Pour les achats lifetime — révoque
-  const sessionId = charge?.metadata?.session_id || charge?.payment_intent;
-  if (!sessionId) return;
+  // 1. Stripe émet charge.refunded pour TOUT remboursement, y compris partiel
+  //    (geste commercial de quelques euros). Révoquer dans ce cas couperait
+  //    l'accès d'un client qui a payé l'essentiel de sa licence.
+  const amount = Number(charge?.amount ?? 0);
+  const refunded = Number(charge?.amount_refunded ?? 0);
+  const fullyRefunded = charge?.refunded === true || (amount > 0 && refunded >= amount);
+  if (!fullyRefunded) {
+    console.log("charge.refunded partiel — pas de révocation", charge?.id, `${refunded}/${amount}`);
+    return;
+  }
+
+  // 2. Cibler LA licence concernée, jamais « toutes celles du client » :
+  //    un même client peut cumuler un abonnement et un achat à vie, ou avoir
+  //    acheté deux licences. L'ancienne requête (OR stripe_customer_id = ?)
+  //    les révoquait toutes d'un coup.
+  const sessionId = charge?.metadata?.session_id || (await resolveSessionId(charge, env));
+  if (!sessionId) {
+    // Cas attendu pour un remboursement de facture d'abonnement (pas de
+    // Checkout Session) : la coupure viendra de customer.subscription.deleted.
+    console.log(
+      "charge.refunded : aucune session résolue, révocation manuelle si besoin",
+      charge?.id, charge?.payment_intent, charge?.customer
+    );
+    return;
+  }
+
   const now = Math.floor(Date.now() / 1000);
-  await env.DB
+  const res = await env.DB
     .prepare(`
       UPDATE licenses
       SET status = 'refunded', updated_at = ?
-      WHERE stripe_session_id = ? OR stripe_customer_id = ?
+      WHERE stripe_session_id = ?
     `)
-    .bind(now, sessionId, charge?.customer || "")
+    .bind(now, sessionId)
     .run();
+
+  const changed = res?.meta?.changes ?? 0;
+  console.log(
+    changed > 0
+      ? `license revoked after refund (session ${sessionId})`
+      : `charge.refunded : aucune licence pour la session ${sessionId}`
+  );
 }
 
 // ────────────────────────────────────────────────────────────────────────

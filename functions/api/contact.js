@@ -12,19 +12,25 @@
  *   CONTACT_FROM   = email expéditeur vérifié sur Resend (ex: contact@notchia.app)
  *                    ou onboarding@resend.dev en attendant la vérif domaine
  *
- * Rate limit : 1 envoi / 60 sec / IP (en mémoire — suffisant pour ce volume).
+ * Rate limit : 1/min, 5/h, 8/jour par IP (voir _ratelimit.js).
  */
+
+import { checkRate, MINUTE, HOUR, DAY } from "./_ratelimit.js";
 
 const MAX_NAME = 80;
 const MAX_EMAIL = 120;
 const MAX_MESSAGE = 4000;
-const RATE_LIMIT_SEC = 60;
+
+// Le quota Resend est de 100 mails/jour, partagé : une seule IP ne doit pas
+// pouvoir l'épuiser et priver les vrais visiteurs du formulaire. Un humain
+// n'envoie pas 8 messages par jour au support.
+const CONTACT_LIMITS = [
+  { ms: MINUTE, max: 1 },
+  { ms: HOUR, max: 5 },
+  { ms: DAY, max: 8 },
+];
 
 const VALID_CATEGORIES = ["support", "bug", "license", "press", "partnership", "feedback", "other"];
-
-// In-memory rate limit (réinitialisé à chaque cold start du Worker, suffisant
-// pour 99% des cas — un user qui veut spam doit tomber sur le même Worker chaud)
-const ipLastSubmit = new Map();
 
 function corsHeaders(origin = "https://notchia.app") {
   return {
@@ -81,20 +87,16 @@ export async function onRequestPost(context) {
     return json({ error: `Message requis (10 à ${MAX_MESSAGE} caractères).` }, 400);
   }
 
-  // 2. Rate limit par IP
+  // 2. Rate limit par IP (minute / heure / jour)
   const ip = request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For") || "unknown";
-  const now = Date.now();
-  const last = ipLastSubmit.get(ip) || 0;
-  const sinceLast = (now - last) / 1000;
-  if (sinceLast < RATE_LIMIT_SEC) {
-    const wait = Math.ceil(RATE_LIMIT_SEC - sinceLast);
+  const rate = checkRate("contact", ip, CONTACT_LIMITS);
+  if (rate.limited) {
     return json(
-      { error: `Trop d'envois récents. Réessaie dans ${wait} secondes.`, retryAfter: wait },
+      { error: `Trop d'envois récents. Réessaie dans ${rate.retryAfter} secondes.`, retryAfter: rate.retryAfter },
       429,
-      { "Retry-After": String(wait) }
+      { "Retry-After": String(rate.retryAfter) }
     );
   }
-  ipLastSubmit.set(ip, now);
 
   // 3. Vérifier la config Resend
   if (!env.RESEND_API_KEY || !env.CONTACT_TO) {

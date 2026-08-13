@@ -9,6 +9,8 @@
  *   GEMINI_API_KEY = clé gratuite générée sur https://aistudio.google.com/apikey
  */
 
+import { checkRate, MINUTE, HOUR, DAY } from "./_ratelimit.js";
+
 // Free-tier quotas (au 2026-05) :
 //   gemini-2.5-flash-lite : 30 RPM, 1000 RPD  ← choisi (RPM 2x meilleur)
 //   gemini-2.0-flash      : 15 RPM, 1500 RPD
@@ -26,34 +28,14 @@ const MAX_MESSAGES_IN = 40;         // avant slice — refuse les payloads absur
 const MAX_ASSISTANT_MSG_LEN = 4000; // nos propres réponses (500 tokens) tiennent largement dedans
 const MAX_TOTAL_CHARS = 24000;      // budget de l'historique transmis au modèle
 
-// Rate limit par IP (même approche mémoire que /api/contact : réinitialisé au
-// cold start, suffisant pour du spam opportuniste). Le quota Gemini free tier
-// est de 30 req/min et 1000 req/jour PARTAGÉ entre tous les visiteurs : sans
-// limite, un seul script pouvait griller la journée entière du chatbot.
-const RATE_PER_MIN = 6;
-const RATE_PER_HOUR = 40;
-const ipHits = new Map(); // ip -> timestamps (ms) de la dernière heure
-
-function checkRate(ip) {
-  const now = Date.now();
-  const hits = (ipHits.get(ip) || []).filter((t) => now - t < 3_600_000);
-  const lastMin = hits.filter((t) => now - t < 60_000);
-  if (lastMin.length >= RATE_PER_MIN) {
-    return { limited: true, retryAfter: Math.max(1, Math.ceil((60_000 - (now - lastMin[0])) / 1000)) };
-  }
-  if (hits.length >= RATE_PER_HOUR) {
-    return { limited: true, retryAfter: Math.max(1, Math.ceil((3_600_000 - (now - hits[0])) / 1000)) };
-  }
-  hits.push(now);
-  ipHits.set(ip, hits);
-  // Purge défensive : empêche la Map de croître indéfiniment sur un worker chaud
-  if (ipHits.size > 5000) {
-    for (const [k, v] of ipHits) {
-      if (!v.length || now - v[v.length - 1] > 3_600_000) ipHits.delete(k);
-    }
-  }
-  return { limited: false };
-}
+// Rate limit par IP. Le quota Gemini free tier est de 30 req/min et 1000
+// req/jour PARTAGÉ entre tous les visiteurs : sans limite, un seul script
+// grillait la journée entière du chatbot.
+const CHAT_LIMITS = [
+  { ms: MINUTE, max: 6 },
+  { ms: HOUR, max: 40 },
+  { ms: DAY, max: 150 },
+];
 
 // L'endpoint ne sert que le chatbot de notchia.app (l'app macOS n'appelle que
 // /api/license/validate). Un navigateur envoie toujours Origin sur un POST :
@@ -181,7 +163,7 @@ export async function onRequestPost(context) {
   }
 
   const ip = request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For") || "unknown";
-  const rate = checkRate(ip);
+  const rate = checkRate("chat", ip, CHAT_LIMITS);
   if (rate.limited) {
     return json(
       { error: `Trop de questions d'affilée. Réessaie dans ${rate.retryAfter} secondes.`, retryAfter: rate.retryAfter },
