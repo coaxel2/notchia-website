@@ -14,7 +14,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 
-const ROOT = '/Users/axel/notchia-website';
+// Racine du repo. Le script est copié dans /tmp pour disposer de jsdom, donc le
+// chemin ne peut pas être déduit de import.meta.url — il est surchargeable par
+// variable d'environnement (`NOTCHIA_ROOT=… node build-i18n-pages.mjs`).
+// Valeur par défaut alignée sur le workspace ~/dev (migration du 2026-08-16).
+const ROOT = process.env.NOTCHIA_ROOT || '/Users/axel/dev/notchia-website/repo';
 const LANGS = ['en', 'es', 'de'];
 const OGLOC = { fr: 'fr_FR', en: 'en_US', es: 'es_ES', de: 'de_DE' };
 const PAGES = [
