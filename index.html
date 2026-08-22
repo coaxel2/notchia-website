@@ -778,6 +778,8 @@
     vertical-align: -0.18em; /* aligne la baseline du SVG avec celle de la ligne */
   }
   .hero-word text { font-family: 'Fraunces', serif; }
+    .shot-home{margin:0;border:1px solid var(--line,rgba(237,232,220,.10));border-radius:16px;overflow:hidden;background:var(--ink2,#12151C)}
+    .shot-home img{width:100%;height:auto;display:block}
 </style>
 </head>
 
@@ -1350,7 +1352,11 @@
       </div>
     </div>
   </div>
-</section>
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 mt-10 sm:mt-14">
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/01.webp" type="image/webp" /><img src="press-kit/screenshots/01.png" width="1326" height="402" loading="lazy" decoding="async" data-i18n-alt="shot.ia" alt="L'onglet IA de NotchIA suivant une session Claude Code en direct : modèle, jetons et état d'activité." /></picture></figure>
+      </div>
+    </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -1492,7 +1498,11 @@
       </div>
     </div>
   </div>
-</section>
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 mt-10 sm:mt-14">
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/07.webp" type="image/webp" /><img src="press-kit/screenshots/07.png" width="1294" height="446" loading="lazy" decoding="async" data-i18n-alt="shot.medias" alt="Le lecteur média de NotchIA dans l'encoche ouverte : pochette, titre, paroles synchronisées et contrôles." /></picture></figure>
+      </div>
+    </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -1568,7 +1578,11 @@
       </div>
     </div>
   </div>
-</section>
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 mt-10 sm:mt-14">
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/06.webp" type="image/webp" /><img src="press-kit/screenshots/06.png" width="1278" height="538" loading="lazy" decoding="async" data-i18n-alt="shot.agenda" alt="L'onglet Calendrier avec la grille du mois et les prochains rendez-vous." /></picture></figure>
+      </div>
+    </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -1652,7 +1666,11 @@
       </div>
     </div>
   </div>
-</section>
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 mt-10 sm:mt-14">
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/02.webp" type="image/webp" /><img src="press-kit/screenshots/02.png" width="1338" height="598" loading="lazy" decoding="async" data-i18n-alt="shot.digest" alt="L'onglet Digest affichant un résumé d'actualité généré en local par Apple Intelligence." /></picture></figure>
+      </div>
+    </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -1805,7 +1823,11 @@
       </div>
     </div>
   </div>
-</section>
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 mt-10 sm:mt-14">
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/04.webp" type="image/webp" /><img src="press-kit/screenshots/04.png" width="1326" height="414" loading="lazy" decoding="async" data-i18n-alt="shot.prod" alt="L'onglet Étagère avec ses zones de dépôt : conversion, résumé de PDF et téléchargement de vidéo." /></picture></figure>
+      </div>
+    </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -1941,7 +1963,11 @@
       </div>
     </div>
   </div>
-</section>
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 mt-10 sm:mt-14">
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/08.webp" type="image/webp" /><img src="press-kit/screenshots/08.png" width="1200" height="887" loading="lazy" decoding="async" data-i18n-alt="shot.systeme" alt="Les réglages de NotchIA remplaçant le HUD système de macOS pour le volume et la luminosité." /></picture></figure>
+      </div>
+    </section>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -2424,6 +2450,12 @@
   const I18N = {
     fr: {
       'a11y.skip': 'Aller au contenu',
+      'shot.ia':'L\'onglet IA de NotchIA suivant une session Claude Code en direct : modèle, jetons et état d\'activité.',
+      'shot.medias':'Le lecteur média de NotchIA dans l\'encoche ouverte : pochette, titre, paroles synchronisées et contrôles.',
+      'shot.agenda':'L\'onglet Calendrier avec la grille du mois et les prochains rendez-vous.',
+      'shot.digest':'L\'onglet Digest affichant un résumé d\'actualité généré en local par Apple Intelligence.',
+      'shot.prod':'L\'onglet Étagère avec ses zones de dépôt : conversion, résumé de PDF et téléchargement de vidéo.',
+      'shot.systeme':'Les réglages de NotchIA remplaçant le HUD système de macOS pour le volume et la luminosité.',
       'hero.build': 'build 2.9.17 — disponible',
       'nav.ia': 'IA', 'nav.medias': 'Médias', 'nav.agenda': 'Agenda', 'nav.digest': 'Digest',
       'nav.productivity': 'Productivité', 'nav.system': 'Système',
@@ -2789,6 +2821,12 @@
     },
     en: {
       'a11y.skip': 'Skip to content',
+      'shot.ia':'NotchIA AI tab tracking a live Claude Code session: model, tokens and activity state.',
+      'shot.medias':'NotchIA media player in the open notch: artwork, track, synced lyrics and controls.',
+      'shot.agenda':'Calendar tab with the month grid and upcoming appointments.',
+      'shot.digest':'Digest tab showing a news summary generated on-device by Apple Intelligence.',
+      'shot.prod':'Shelf tab with its drop zones: conversion, PDF summary and video download.',
+      'shot.systeme':'NotchIA settings replacing the macOS system HUD for volume and brightness.',
       'hero.build': 'build 2.9.17 — available',
       'nav.ia': 'AI', 'nav.medias': 'Media', 'nav.agenda': 'Calendar', 'nav.digest': 'Digest',
       'nav.productivity': 'Productivity', 'nav.system': 'System',
@@ -3154,6 +3192,12 @@
     },
     es: {
       'a11y.skip': 'Saltar al contenido',
+      'shot.ia':'La pestaña IA de NotchIA siguiendo una sesión de Claude Code en directo: modelo, tokens y estado de actividad.',
+      'shot.medias':'El reproductor multimedia de NotchIA en la muesca abierta: carátula, título, letras sincronizadas y controles.',
+      'shot.agenda':'La pestaña Calendario con la cuadrícula del mes y las próximas citas.',
+      'shot.digest':'La pestaña Digest con un resumen de noticias generado localmente por Apple Intelligence.',
+      'shot.prod':'La pestaña Estantería con sus zonas de arrastre: conversión, resumen de PDF y descarga de vídeo.',
+      'shot.systeme':'Los ajustes de NotchIA sustituyendo el HUD del sistema de macOS para el volumen y el brillo.',
       'hero.build': 'build 2.9.17 — disponible',
       'nav.ia': 'IA', 'nav.medias': 'Medios', 'nav.agenda': 'Agenda', 'nav.digest': 'Digest',
       'nav.productivity': 'Productividad', 'nav.system': 'Sistema',
@@ -3519,6 +3563,12 @@
     },
     de: {
       'a11y.skip': 'Zum Inhalt springen',
+      'shot.ia':'Der KI-Tab von NotchIA verfolgt eine laufende Claude-Code-Sitzung: Modell, Tokens und Aktivitätsstatus.',
+      'shot.medias':'Der Medienplayer von NotchIA in der geöffneten Notch: Cover, Titel, synchronisierter Songtext und Steuerung.',
+      'shot.agenda':'Der Kalender-Tab mit Monatsraster und den nächsten Terminen.',
+      'shot.digest':'Der Digest-Tab mit einer lokal von Apple Intelligence erzeugten Nachrichtenzusammenfassung.',
+      'shot.prod':'Der Ablage-Tab mit seinen Ablagezonen: Konvertierung, PDF-Zusammenfassung und Video-Download.',
+      'shot.systeme':'Die NotchIA-Einstellungen, die das System-HUD von macOS für Lautstärke und Helligkeit ersetzen.',
       'hero.build': 'Build 2.9.17 — verfügbar',
       'nav.ia': 'KI', 'nav.medias': 'Medien', 'nav.agenda': 'Kalender', 'nav.digest': 'Digest',
       'nav.productivity': 'Produktivität', 'nav.system': 'System',
@@ -3909,6 +3959,10 @@
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const v = dict[el.dataset.i18nHtml];
       if (v != null) el.innerHTML = v;
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const v = dict[el.dataset.i18nAlt];
+      if (v != null) el.setAttribute('alt', v);
     });
 
     const heroSvg = document.querySelector('.hero-word text');
