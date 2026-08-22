@@ -89,6 +89,11 @@ function applyDict(doc, dict, lang) {
     const v = dict[el.getAttribute('data-i18n-html')];
     if (v != null) el.innerHTML = v;
   });
+  // textes alternatifs des captures (accessibilité + SEO images)
+  doc.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const v = dict[el.getAttribute('data-i18n-alt')];
+    if (v != null) el.setAttribute('alt', v);
+  });
   const hero = doc.querySelector('.hero-word text');
   if (hero && dict['hero.svg']) hero.textContent = dict['hero.svg'];
   if (dict['meta.title']) {
