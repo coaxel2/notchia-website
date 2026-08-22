@@ -12,7 +12,7 @@ Ce fichier est la version étendue de `llms.txt` selon la convention llmstxt.org
 
 NotchIA est un logiciel macOS indépendant développé en France. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
 
-- **Version actuelle** : 2.9.12
+- **Version actuelle** : 2.9.17
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
 - **Architecture** : Apple Silicon + Intel
 - **Poids** : DMG ~ 12 Mo · installé ~ 30 Mo
@@ -110,7 +110,7 @@ Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégr
 
 ### Productivité
 - **Concentration** : sessions focus + pauses courtes/longues paramétrables, statistiques quotidiennes, son de fin, sneak peek périodique
-- **Presse-papiers historique** : recherche, regroupement par app, épinglage, taille de cache configurable (jusqu'à 500 entrées en Pro)
+- **Presse-papiers historique** : recherche, regroupement par app, section « Épinglés » dédiée en tête, détection automatique du type de contenu (URL, couleur hex/rgb, e-mail, JSON, nombre, code) avec badge par ligne, actions rapides contextuelles (ouvrir un lien, écrire un e-mail, reformater un JSON, encoder/décoder base64 ou URL), badge « Copié » au moment de la copie, taille de cache configurable (jusqu'à 500 entrées en Pro)
 - **Shelf** : drag-and-drop temporaire de fichiers/textes/liens entre apps sans encombrer le Bureau
 - **Convertisseur de fichiers intégré** : 16 formats en Pro (image JPG/WebP/HEIC/AVIF/TIFF, PDF, vidéo)
 - **Quick Share** : partage rapide AirDrop, Messages, Mail, Notes
@@ -242,7 +242,7 @@ Guides complets :
 
 ### Press kit et donnees media
 
-La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.12, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
+La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.17, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
 
 ### Différenciateurs NotchIA
 
