@@ -29,7 +29,22 @@
  */
 
 import { execFileSync } from "node:child_process";
+import readline from "node:readline";
 import { generateLicenseKey, shortHash } from "../functions/api/license/_crypto.js";
+
+/** Saisie masquée : rien ne s'affiche, rien n'atterrit dans l'historique du shell. */
+function promptHidden(question) {
+  return new Promise((resolve) => {
+    process.stdout.write(question);
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout, terminal: true });
+    rl._writeToOutput = () => {}; // masque la frappe (y compris le collage)
+    rl.question("", (answer) => {
+      rl.close();
+      process.stdout.write("\n");
+      resolve(answer.trim());
+    });
+  });
+}
 
 function arg(name, fallback = null) {
   const i = process.argv.indexOf("--" + name);
@@ -54,18 +69,32 @@ if (!Number.isFinite(days) || days < 0) {
   process.exit(1);
 }
 
-const privateKey = process.env.LICENSE_PRIVATE_KEY;
+// La clé peut venir de l'environnement (usage scripté) ; sinon on la demande
+// directement ici, ce qui évite toute manipulation de variable dans le shell.
+let privateKey = process.env.LICENSE_PRIVATE_KEY;
 if (!privateKey) {
-  console.error(`❌ LICENSE_PRIVATE_KEY absente de l'environnement.
+  if (!process.stdin.isTTY) {
+    console.error("❌ LICENSE_PRIVATE_KEY absente et pas de terminal pour la demander.");
+    process.exit(2);
+  }
+  console.log("\n  La clé privée Ed25519 (LICENSE_PRIVATE_KEY) est stockée chiffrée dans");
+  console.log("  Cloudflare Pages, donc illisible : récupère-la depuis ta sauvegarde 1Password.");
+  console.log("  Elle n'est ni affichée, ni enregistrée, ni conservée après l'exécution.\n");
+  privateKey = await promptHidden("  Colle la clé privée puis Entrée : ");
+  if (!privateKey) {
+    console.error("\n❌ Aucune clé saisie, rien n'a été émis.");
+    process.exit(2);
+  }
+}
 
-   Elle est stockée chiffrée dans Cloudflare Pages (illisible après création) :
-   récupère-la depuis ta sauvegarde, puis :
-
-     read -rs LICENSE_PRIVATE_KEY && export LICENSE_PRIVATE_KEY
-     node scripts/issue-license.mjs --email ${email === true ? "…" : email} --days ${days} --insert
-     unset LICENSE_PRIVATE_KEY
-
-   (\`read -rs\` masque la saisie et n'écrit rien dans l'historique du shell.)`);
+// Garde-fou : une PKCS#8 Ed25519 en base64 fait 91 caractères et commence par MC4.
+if (!/^[A-Za-z0-9+/=]+$/.test(privateKey)) {
+  console.error("\n❌ La valeur saisie n'est pas du base64 — clé probablement tronquée ou mal collée.");
+  process.exit(2);
+}
+if (!privateKey.startsWith("MC4")) {
+  console.error("\n❌ Ce n'est pas une clé privée Ed25519 PKCS#8 (elle devrait commencer par « MC4 »).");
+  console.error("   Attention à ne pas confondre avec LICENSE_PUBLIC_KEY, qui commence par « MCow ».");
   process.exit(2);
 }
 
