@@ -27,10 +27,12 @@
   Cache-Control: public, max-age=31536000, immutable
 /apple-touch-icon.png
   Cache-Control: public, max-age=31536000, immutable
+# PAS immutable : l'og-image porte les prix et évolue avec eux. En cache un an,
+# elle a servi les anciens tarifs sur chaque partage social de mai à août 2026.
 /og-image.png
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400
 /og-image.svg
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400
 /Apple_logo_black.svg
   Cache-Control: public, max-age=31536000, immutable
 
