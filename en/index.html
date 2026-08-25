@@ -1865,43 +1865,6 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §CONVERSION : rappel d'achat avant la FAQ (la grille complète est en §02)
-     Volontairement SANS .reveal : ce bloc porte les prix, il doit rester
-     lisible sans JavaScript (crawlers IA, cf. conventions GEO).
-═══════════════════════════════════════════════════════════════════════ -->
-<section id="passer-pro" class="relative py-14 sm:py-20 border-t border-line" aria-labelledby="promo-title">
-  <div class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10">
-    <div class="rounded-3xl border border-line bg-ink2 overflow-hidden">
-      <span class="block h-px grad-bg"></span>
-      <div class="p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-
-        <div>
-          <div class="eyebrow mb-4" data-i18n="promo.eyebrow">Pro feature</div>
-          <h2 id="promo-title" class="display text-cream" style="font-size: clamp(1.7rem, 4vw, 2.4rem);">
-            <span data-i18n="promo.title1">Live AI is a</span>
-            <span class="display-italic grad-text" data-i18n="promo.title2">Pro feature.</span>
-          </h2>
-          <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n="promo.subtitle">Claude Code and Codex tracking, the Shelf, the 16-format converter and clipboard history unlock with a Pro licence. Everything else in NotchIA stays free forever.</p>
-        </div>
-
-        <div class="flex flex-col gap-3">
-          <button type="button" data-plan="lifetime" class="js-checkout btn btn-grad w-full justify-center py-3.5">
-            <span data-i18n="promo.cta.lifetime">Pro lifetime: €24.99 once</span>
-          </button>
-          <button type="button" data-plan="monthly" class="js-checkout btn btn-ghost w-full justify-center py-3.5">
-            <span data-i18n="promo.cta.monthly">Pro monthly: €2.99 / month</span>
-          </button>
-          <a href="#tarif" class="text-center text-xs text-mist hover:text-cream transition font-mono underline decoration-dotted underline-offset-4 mt-1" data-i18n="promo.compare">compare all three plans</a>
-          <p class="text-[11px] text-mist text-center font-mono" data-i18n="promo.note">Stripe payment · key by email · cancel anytime</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════════════════════════════════
      §FAQ · Questions fréquentes (matche le FAQPage schema pour GEO)
 ═══════════════════════════════════════════════════════════════════════ -->
 <section id="faq" class="relative py-20 sm:py-28 lg:py-36 border-t border-line" aria-label="Questions fréquentes">
@@ -2196,14 +2159,11 @@
       'hero.cta.download': 'Télécharger NotchIA', 'hero.cta.demo': 'Voir en action',
       'hero.tagline': 'Gratuit à vie · <b class="text-cream">Pro dès 2,99 €/mois</b> ou 24,99 € à vie',
       'nav.pro': 'Passer à Pro',
-      'promo.eyebrow': 'fonction Pro',
-      'promo.title1': 'L\'IA en direct est',
-      'promo.title2': 'réservée à Pro.',
-      'promo.subtitle': 'Le suivi de Claude Code et Codex, la Shelf, le convertisseur 16 formats et le presse-papiers historique s\'activent avec une licence Pro. Tout le reste de NotchIA reste gratuit à vie.',
-      'promo.cta.lifetime': 'Pro à vie · 24,99 € une fois',
-      'promo.cta.monthly': 'Pro mensuel · 2,99 € / mois',
-      'promo.compare': 'comparer les trois formules',
-      'promo.note': 'paiement Stripe · clé par email · annulable',
+      
+      
+      
+      
+      
       'hero.cta.alt': '~ 12 Mo · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">ou via Homebrew</a>',
       'price.essential.name': 'Essentiel', 'price.essential.tag': 'gratuit',
       'price.lifetime': 'à vie',
@@ -2509,8 +2469,6 @@
       // === Productivité (§06) ===
       
       
-      
-      
       'prod.clip.eyebrow': 'Presse-papiers',
       'prod.clip.title': 'Historique complet de votre presse-papiers.',
       'prod.clip.ago_3m': 'il y a 3 m',
@@ -2572,14 +2530,11 @@
       'hero.cta.download': 'Download NotchIA', 'hero.cta.demo': 'See it in action',
       'hero.tagline': 'Free forever · <b class="text-cream">Pro from €2.99/mo</b> or €24.99 lifetime',
       'nav.pro': 'Go Pro',
-      'promo.eyebrow': 'Pro feature',
-      'promo.title1': 'Live AI is a',
-      'promo.title2': 'Pro feature.',
-      'promo.subtitle': 'Claude Code and Codex tracking, the Shelf, the 16-format converter and clipboard history unlock with a Pro licence. Everything else in NotchIA stays free forever.',
-      'promo.cta.lifetime': 'Pro lifetime: €24.99 once',
-      'promo.cta.monthly': 'Pro monthly: €2.99 / month',
-      'promo.compare': 'compare all three plans',
-      'promo.note': 'Stripe payment · key by email · cancel anytime',
+      
+      
+      
+      
+      
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">or via Homebrew</a>',
       'price.essential.name': 'Essential', 'price.essential.tag': 'free',
       'price.lifetime': 'forever',
@@ -2885,8 +2840,6 @@
       // === Productivity (§06) ===
       
       
-      
-      
       'prod.clip.eyebrow': 'Clipboard',
       'prod.clip.title': 'Full history of your clipboard.',
       'prod.clip.ago_3m': '3 m ago',
@@ -2948,14 +2901,11 @@
       'hero.cta.download': 'Descargar NotchIA', 'hero.cta.demo': 'Ver en acción',
       'hero.tagline': 'Gratis para siempre · <b class="text-cream">Pro desde 2,99 €/mes</b> o 24,99 € de por vida',
       'nav.pro': 'Pasar a Pro',
-      'promo.eyebrow': 'función Pro',
-      'promo.title1': 'La IA en directo es',
-      'promo.title2': 'exclusiva de Pro.',
-      'promo.subtitle': 'El seguimiento de Claude Code y Codex, la Shelf, el conversor de 16 formatos y el historial del portapapeles se activan con una licencia Pro. Todo lo demás de NotchIA sigue siendo gratis para siempre.',
-      'promo.cta.lifetime': 'Pro de por vida · 24,99 € una vez',
-      'promo.cta.monthly': 'Pro mensual · 2,99 € / mes',
-      'promo.compare': 'comparar las tres fórmulas',
-      'promo.note': 'pago Stripe · clave por email · cancelable',
+      
+      
+      
+      
+      
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">o vía Homebrew</a>',
       'price.essential.name': 'Esencial', 'price.essential.tag': 'gratis',
       'price.lifetime': 'para siempre',
@@ -3261,8 +3211,6 @@
       // === Productividad (§06) ===
       
       
-      
-      
       'prod.clip.eyebrow': 'Portapapeles',
       'prod.clip.title': 'Historial completo de tu portapapeles.',
       'prod.clip.ago_3m': 'hace 3 m',
@@ -3324,14 +3272,11 @@
       'hero.cta.download': 'NotchIA herunterladen', 'hero.cta.demo': 'In Aktion sehen',
       'hero.tagline': 'Kostenlos für immer · <b class="text-cream">Pro ab 2,99 €/Monat</b> oder 24,99 € einmalig',
       'nav.pro': 'Pro holen',
-      'promo.eyebrow': 'Pro-Funktion',
-      'promo.title1': 'Live-KI ist eine',
-      'promo.title2': 'Pro-Funktion.',
-      'promo.subtitle': 'Das Verfolgen von Claude Code und Codex, die Shelf, der 16-Format-Konverter und der Zwischenablage-Verlauf werden mit einer Pro-Lizenz freigeschaltet. Alles andere in NotchIA bleibt für immer kostenlos.',
-      'promo.cta.lifetime': 'Pro für immer: einmalig 24,99 €',
-      'promo.cta.monthly': 'Pro monatlich · 2,99 € / Monat',
-      'promo.compare': 'alle drei Formeln vergleichen',
-      'promo.note': 'Stripe-Zahlung · Schlüssel per E-Mail · kündbar',
+      
+      
+      
+      
+      
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">oder per Homebrew</a>',
       'price.essential.name': 'Essential', 'price.essential.tag': 'kostenlos',
       'price.lifetime': 'für immer',
@@ -3635,8 +3580,6 @@
       
 
       // === Produktivität (§06) ===
-      
-      
       
       
       'prod.clip.eyebrow': 'Zwischenablage',
