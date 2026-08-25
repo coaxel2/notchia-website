@@ -141,7 +141,7 @@
           "name": "Is Homebrew safe?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Homebrew is broadly safe: open-source project active since 2009, large contributor base, auditable code on GitHub. The risk lies in individual casks — each cask points to the vendor's server, without Apple's review layer. Recommendation: only install casks from known vendors and inspect the command before running it. Homebrew itself has required no root privileges since 2020."
+            "text": "Homebrew is broadly safe: open-source project active since 2009, large contributor base, auditable code on GitHub. The risk lies in individual casks: each cask points to the vendor's server, without Apple's review layer. Recommendation: only install casks from known vendors and inspect the command before running it. Homebrew itself has required no root privileges since 2020."
           }
         },
         {
@@ -232,7 +232,7 @@
   </section>
 
   <div class="tldr">
-    <p><strong>Short answer.</strong> The <strong>Mac App Store</strong> and <strong>Homebrew</strong> aren't competitors — they're <strong>complementary</strong>. The Mac App Store (launched in 2011) offers ~30,000 apps signed and sandboxed by Apple: safe, simple, automatic updates. Homebrew (created in 2009 by Max Howell) ships ~7,000 GUI casks and ~7,000 CLI formulae: more freedom, full system access, outside the sandbox. Most power users rely on <strong>both</strong> depending on the app: App Store for Things 3 or 1Password, Homebrew for Raycast, NotchIA, or Karabiner-Elements.</p>
+    <p><strong>Short answer.</strong> The <strong>Mac App Store</strong> and <strong>Homebrew</strong> aren't competitors: they're <strong>complementary</strong>. The Mac App Store (launched in 2011) offers ~30,000 apps signed and sandboxed by Apple: safe, simple, automatic updates. Homebrew (created in 2009 by Max Howell) ships ~7,000 GUI casks and ~7,000 CLI formulae: more freedom, full system access, outside the sandbox. Most power users rely on <strong>both</strong> depending on the app: App Store for Things 3 or 1Password, Homebrew for Raycast, NotchIA, or Karabiner-Elements.</p>
   </div>
 
   <div class="toc">
@@ -268,7 +268,7 @@
   <h3>Limitations</h3>
   <ul>
     <li><strong>Sandbox blocks system access</strong>: no Accessibility API, no powerful global shortcuts, no system menu bar customization.</li>
-    <li><strong>No advanced menu-bar apps</strong>: Raycast, BetterTouchTool, Karabiner-Elements, NotchIA, AltTab — all ineligible.</li>
+    <li><strong>No advanced menu-bar apps</strong>: Raycast, BetterTouchTool, Karabiner-Elements, NotchIA, AltTab: all ineligible.</li>
     <li><strong>Apple commission 15–30%</strong>: some vendors prefer direct sales to preserve their margin.</li>
     <li><strong>Slow Apple review</strong>: updates sometimes blocked for days.</li>
     <li><strong>Limited catalog</strong>: ~30,000 apps vs. hundreds of thousands available outside the store.</li>
@@ -285,7 +285,7 @@
   <ul>
     <li><strong>Full freedom</strong>: access to apps outside the store (Raycast, NotchIA, Karabiner-Elements, Hammerspoon).</li>
     <li><strong>Scriptable installation</strong>: a Brewfile installs 50 apps in a single command, reproducible on any Mac.</li>
-    <li><strong>CLI tools</strong>: git, node, python, postgresql, redis — the foundation of a developer workstation.</li>
+    <li><strong>CLI tools</strong>: git, node, python, postgresql, redis: the foundation of a developer workstation.</li>
     <li><strong>Bulk updates</strong>: <code class="font-mono text-xs">brew upgrade</code> updates everything at once.</li>
     <li><strong>No Apple account required</strong> for downloads.</li>
     <li><strong>Open-source and auditable</strong>: every formula and cask is a Ruby file viewable on GitHub.</li>
@@ -343,7 +343,7 @@
   <p>Homebrew becomes essential as soon as you hit one of these situations:</p>
 
   <ul>
-    <li><strong>Setting up a developer Mac</strong>: Node, Python, Postgres, Docker, Git — all installable in minutes.</li>
+    <li><strong>Setting up a developer Mac</strong>: Node, Python, Postgres, Docker, Git: all installable in minutes.</li>
     <li><strong>Advanced menu-bar apps</strong>: Raycast, BetterTouchTool, Karabiner-Elements, Hammerspoon, NotchIA.</li>
     <li><strong>Apps requiring the Accessibility API</strong>: automation, global system shortcuts, click simulation.</li>
     <li><strong>Reproducibility</strong>: a Brewfile versioned in Git lets you rebuild a fresh Mac in 15 minutes.</li>
@@ -365,16 +365,16 @@
   <p>Other notable examples:</p>
 
   <ul>
-    <li><strong>Raycast</strong> — universal launcher, Accessibility for its system commands.</li>
-    <li><strong>Karabiner-Elements</strong> — low-level keyboard remapping, kernel extension.</li>
-    <li><strong>Hammerspoon</strong> — Lua automation, full system access.</li>
-    <li><strong>Rectangle</strong> — window management, Accessibility access.</li>
-    <li><strong>AltTab</strong> — Windows-style window switcher.</li>
-    <li><strong>BetterTouchTool</strong> — Touch Bar and trackpad customization.</li>
-    <li><strong>iTerm2</strong> — advanced terminal, extended shell hooks.</li>
+    <li><strong>Raycast</strong>: universal launcher, Accessibility for its system commands.</li>
+    <li><strong>Karabiner-Elements</strong>: low-level keyboard remapping, kernel extension.</li>
+    <li><strong>Hammerspoon</strong>: Lua automation, full system access.</li>
+    <li><strong>Rectangle</strong>: window management, Accessibility access.</li>
+    <li><strong>AltTab</strong>: Windows-style window switcher.</li>
+    <li><strong>BetterTouchTool</strong>: Touch Bar and trackpad customization.</li>
+    <li><strong>iTerm2</strong>: advanced terminal, extended shell hooks.</li>
   </ul>
 
-  <p>Note: <strong>Raycast</strong> started exclusively outside the store in 2020. Several apps follow the same path — Homebrew distribution first, eventually a "lite" App Store version.</p>
+  <p>Note: <strong>Raycast</strong> started exclusively outside the store in 2020. Several apps follow the same path: Homebrew distribution first, eventually a "lite" App Store version.</p>
 
   <h2 id="install">How to install <span class="grad-text">Homebrew</span></h2>
 
@@ -407,7 +407,7 @@
   <h2 id="faq">FAQ: <span class="grad-text">Mac App Store vs Homebrew</span></h2>
 
   <h3>Is Homebrew safe?</h3>
-  <p>Homebrew is broadly safe: open-source project active since 2009, large contributor base, auditable code on GitHub. The risk lies in individual casks — each cask points to the vendor's server, without Apple's review layer. Recommendation: only install casks from known vendors and inspect the command before running it. Homebrew itself has required no root privileges since 2020.</p>
+  <p>Homebrew is broadly safe: open-source project active since 2009, large contributor base, auditable code on GitHub. The risk lies in individual casks: each cask points to the vendor's server, without Apple's review layer. Recommendation: only install casks from known vendors and inspect the command before running it. Homebrew itself has required no root privileges since 2020.</p>
 
   <h3>Can I use the Mac App Store and Homebrew together?</h3>
   <p>Yes, and most power users do. The two systems coexist without conflict: Mac App Store for consumer and iCloud-native apps (Pages, Things 3, 1Password), Homebrew for CLI tools and apps that need system access (Raycast, NotchIA, Karabiner-Elements). No interference on updates or file management.</p>

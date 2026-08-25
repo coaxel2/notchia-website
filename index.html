@@ -60,291 +60,397 @@
 
 <!-- JSON-LD : graphe complet pour GEO (Generative Engine Optimization)
      Organization + SoftwareApplication + Person + FAQPage + BreadcrumbList -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://notchia.app/#organization",
+   "name": "NotchIA",
+   "alternateName": [
+    "Notch IA",
+    "NotchAI",
+    "Notch.IA",
+    "Notch IA app"
+   ],
+   "url": "https://notchia.app/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://notchia.app/logo.png",
+    "width": 256,
+    "height": 256
+   },
+   "foundingDate": "2026-05-19",
+   "legalName": "COURTY Axel",
+   "taxID": "10509305800029",
+   "iso6523Code": "0009:105093058",
+   "identifier": [
     {
-      "@type": "Organization",
-      "@id": "https://notchia.app/#organization",
-      "name": "NotchIA",
-      "alternateName": ["Notch IA", "NotchAI", "Notch.IA", "Notch IA app"],
-      "url": "https://notchia.app/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://notchia.app/logo.png",
-        "width": 256,
-        "height": 256
-      },
-      "foundingDate": "2026-05-19",
-      "legalName": "COURTY Axel",
-      "taxID": "10509305800029",
-        "iso6523Code": "0009:105093058",
-        "identifier": [
-          { "@type": "PropertyValue", "propertyID": "SIREN", "value": "105093058" },
-          { "@type": "PropertyValue", "propertyID": "SIRET", "value": "10509305800029" },
-          { "@type": "PropertyValue", "propertyID": "APE", "value": "6201Z" }
-        ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Talence",
-        "postalCode": "33400",
-        "addressRegion": "Nouvelle-Aquitaine",
-        "addressCountry": "FR"
-      },
-      "foundingLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "FR"
-        }
-      },
-      "email": "notchia.app@gmail.com",
-      "sameAs": [
-        "https://github.com/coaxel2/NotchIA",
-        "https://github.com/coaxel2",
-        "https://www.producthunt.com/products/notchia",
-        "https://www.instagram.com/notchia.app/",
-        "https://www.tiktok.com/@notchia.app",
-        "https://www.youtube.com/@notchia-app",
-        "https://www.facebook.com/people/Notch-IA/pfbid02334MYjptbfVLsRYEP9VZD1NXbZr7tiPkNgQ6o2cMHmX6HWyBvqkue3hTBPhwxfTyl/"
-      ],
-      "slogan": "L'encoche pense maintenant.",
-      "description": "Logiciel macOS indépendant qui transforme l'encoche du MacBook en centre de contrôle interactif, développé en France sous le statut d'entreprise individuelle.",
-      "knowsAbout": [
-        "macOS", "MacBook notch", "menu bar app", "Claude Code", "ChatGPT Codex",
-        "Concentration", "media player", "calendar integration",
-        "clipboard manager", "file converter", "screen recording detection",
-        "Apple Intelligence", "Foundation Models", "RSS digest", "Ed25519 signed licenses",
-        "Stripe Checkout", "Cloudflare Pages Functions"
-      ],
-      "areaServed": "Worldwide",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "email": "notchia.app@gmail.com",
-          "url": "https://notchia.app/contact",
-          "contactType": "customer support",
-          "availableLanguage": ["French", "English", "Spanish", "German"]
-        },
-        {
-          "@type": "ContactPoint",
-          "email": "notchia.app@gmail.com",
-          "contactType": "press inquiries",
-          "url": "https://notchia.app/press",
-          "availableLanguage": ["French", "English"]
-        }
-      ]
+     "@type": "PropertyValue",
+     "propertyID": "SIREN",
+     "value": "105093058"
     },
     {
-      "@type": "SoftwareApplication",
-      "@id": "https://notchia.app/#app",
-      "name": "NotchIA",
-      "alternateName": ["Notch IA", "NotchAI"],
-      "description": "Application macOS qui transforme l'encoche du MacBook (ou la barre de menu) en centre de contrôle interactif : assistants IA en direct (Claude Code, Codex), lecteur multi-source (Apple Music, Spotify, YouTube Music), calendrier, Concentration, presse-papiers historique, conversion de fichiers, HUD système, sneak peek engine.",
-      "url": "https://notchia.app/",
-      "image": "https://notchia.app/og-image.png?v=20260825",
-      "screenshot": "https://notchia.app/og-image.png?v=20260825",
-      "applicationCategory": ["ProductivityApplication", "DeveloperApplication", "UtilitiesApplication"],
-      "applicationSubCategory": "MenuBarApp",
-      "operatingSystem": "macOS 15.0+",
-      "processorRequirements": "Apple Silicon or Intel",
-      "softwareVersion": "2.9.17",
-      "releaseNotes": "https://notchia.app/changelog",
-      "datePublished": "2026-04-12",
-      "dateModified": "2026-08-25",
-      "inLanguage": ["fr"],
-      "fileSize": "12MB",
-      "downloadUrl": "https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg",
-      "installUrl": "https://notchia.app/install",
-      "author": { "@id": "https://notchia.app/#organization" },
-      "publisher": { "@id": "https://notchia.app/#organization" },
-      "featureList": [
-        "Digest : brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS/Atom (nouveau en 2.8.0, requiert macOS 26+)",
-        "Résumé IA d'un fichier (PDF/.txt/.md/.docx) on-device dans le Shelf (Pro, requiert macOS 26+)",
-        "Lecteur multi-source Apple Music / Spotify / YouTube Music",
-        "Paroles synchronisées en temps réel via lrclib",
-        "Visualizer audio personnalisable",
-        "Calendrier avec marqueurs visuels et création d'événements",
-        "Rappels Reminders cochables depuis l'encoche",
-        "Concentration avec sessions configurables et statistiques",
-        "Presse-papiers historique avec recherche, section Épinglés dédiée, détection automatique du type (URL, couleur, e-mail, JSON, code) et actions rapides contextuelles",
-        "Shelf : drag-and-drop temporaire entre apps",
-        "Convertisseur de fichiers natif (16 formats en Pro)",
-        "Téléchargement vidéo MP4/MP3 depuis 1800+ sites (Pro, 100% local)",
-        "Quick Share AirDrop / Messages / Mail",
-        "QuickLook intégré",
-        "Détection auto Claude Code, ChatGPT Codex",
-        "10 états IA en direct (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution)",
-        "Stats IA : jetons, cache, latence, quotas 5h et 7j",
-        "HUD système (volume, luminosité, clavier) intégré dans l'encoche",
-        "Affichage sur tous les écrans branchés (multi-écran par défaut depuis la 2.9.11)",
-        "Sneak Peek Engine : rotation périodique de mini-widgets",
-        "Détection des appels en cours (FaceTime, Zoom, Teams, Meet)",
-        "Affichage du Mode Concentration macOS",
-        "Détection enregistrement d'écran (QuickTime, OBS) avec masquage auto",
-        "Couleur d'accent personnalisable (presets ou color picker)",
-        "Icône d'app remplaçable",
-        "Forme de l'encoche ajustable (rayon, ombre, hauteur)",
-        "Geste deux doigts pour ouvrir l'encoche fermée",
-        "Multi-écrans avec bascule auto sur l'écran actif",
-        "Mode LSUIElement (pas d'icône Dock)",
-        "Auto-update Sparkle avec signature EdDSA",
-        "Aucune télémétrie, traitement local"
-      ],
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Essentiel",
-          "description": "Version gratuite avec médias, calendrier, HUD système, Sneak Peek, détections automatiques.",
-          "price": "0",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2027-12-31"
-        },
-        {
-          "@type": "Offer",
-          "name": "Pro mensuel",
-          "description": "Toutes les fonctionnalités Pro : assistants IA, Concentration complet, presse-papiers illimité, convertisseur 16 formats. Annulable à tout moment, 1 Mac.",
-          "price": "2.99",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "category": "subscription",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "2.99",
-            "priceCurrency": "EUR",
-            "billingDuration": "P1M",
-            "billingIncrement": 1,
-            "unitCode": "MON"
-          },
-          "priceValidUntil": "2027-12-31"
-        },
-        {
-          "@type": "Offer",
-          "name": "Pro à vie",
-          "description": "Toutes les fonctionnalités Pro pour toujours, sur 2 Mac. Achat unique, aucune récurrence, toutes les mises à jour majeures incluses.",
-          "price": "24.99",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "category": "lifetime license",
-          "priceValidUntil": "2027-12-31"
-        }
-      ]
+     "@type": "PropertyValue",
+     "propertyID": "SIRET",
+     "value": "10509305800029"
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://notchia.app/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce que NotchIA ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, un Digest IA on-device (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), un Concentration complet, des assistants IA en direct (Claude Code, Codex, en Pro), un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelle version de macOS est requise pour NotchIA ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NotchIA nécessite macOS 15.0 (Sequoia) ou plus récent. L'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel. Les fonctionnalités d'IA on-device (Digest, résumé Shelf) nécessitent macOS 26+ avec Apple Intelligence ; dégradation gracieuse sinon."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "NotchIA fonctionne-t-il sur un Mac sans encoche physique ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Sur les Mac sans encoche physique (iMac, MacBook Air anciennes générations, Mac mini connecté à un écran externe), NotchIA crée une zone d'encoche virtuelle dans la barre de menu. La hauteur est configurable séparément pour les deux contextes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Combien coûte NotchIA et quelles sont les formules disponibles ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Trois formules. Essentiel : 0 € à vie, sans limitation, avec les médias multi-source, le calendrier, le HUD système, le Sneak Peek, les détections automatiques, le Concentration complet (statistiques + sons) et la personnalisation visuelle. Pro mensuel : 2,99 € par mois, annulable à tout moment, 1 Mac. Ajoute trois modules payants : IA en direct (Claude Code, ChatGPT Codex avec états et statistiques), gestion de fichiers (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et presse-papiers historique illimité avec recherche et épinglage. Pro à vie : 24,99 € en achat unique, 2 Mac, aucune récurrence, toutes les mises à jour majeures incluses, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels assistants IA NotchIA supporte-t-il ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NotchIA détecte automatiquement les sessions actives de deux assistants : Claude Code (Anthropic) et ChatGPT Codex (OpenAI). L'application affiche en direct l'état d'activité (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution), les statistiques de jetons et de cache, les quotas 5h et 7j, et notifie quand un assistant attend une permission."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels lecteurs musicaux NotchIA supporte-t-il ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NotchIA supporte nativement Apple Music, Spotify, YouTube Music et toute application utilisant l'API Now Playing de macOS. L'encoche affiche la pochette d'album avec couleur dominante extraite, les contrôles personnalisables et les paroles synchronisées en temps réel via lrclib (26 langues)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "NotchIA collecte-t-il des données ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non. NotchIA ne collecte aucune donnée d'usage et n'envoie aucune télémétrie. Les modules calendrier, presse-papiers, Concentration, assistants IA et résumé Shelf fonctionnent 100% localement. Les journaux de session Claude Code et Codex sont lus depuis le disque local : jamais envoyés. Le résumé d'un fichier dans le Shelf est généré on-device par Apple Intelligence (Foundation Models). Le module Digest fetch tes flux RSS publics directement depuis ton Mac, et le résumé est lui aussi généré on-device : jamais d'envoi vers OpenAI, Anthropic ou nos serveurs. Seules connexions sortantes : auto-update Sparkle (signature EdDSA), validation de licence (email + clé), fetch des flux RSS que tu as configurés."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce que Digest et comment fonctionne-t-il ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Digest est un nouvel onglet gratuit ajouté en 2.8.0 (Wise Owl). Tu colles tes flux RSS/Atom préférés, tu écris en langage naturel ce qui t'intéresse (ex : « IA vidéo, macOS 26, SwiftUI »), et Apple Intelligence (Foundation Models, on-device) filtre, résume et priorise. Brief court à scanner en 30 secondes, directement dans l'encoche. Cache 14 jours pour éviter la régénération en boucle. 100% local : les flux sont fetched depuis ton Mac, les résumés générés sur ton CPU/GPU, jamais d'appel vers un fournisseur IA tiers ou nos serveurs. Requiert macOS 26+ pour Apple Intelligence ; sur macOS 15, dégradation gracieuse (viewer brut sans résumé IA)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "NotchIA fait-il partie des meilleures apps Mac à installer en 2026 ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, NotchIA figure dans les sélections d'apps Mac essentielles 2026 au titre de notch utility : la catégorie qui exploite l'encoche du MacBook en cockpit interactif. Aux côtés de Raycast (launcher universel), Rectangle (gestion de fenêtres), CleanShot X (captures pro), 1Password (mots de passe), Things 3 (tâches personnelles) et Bartender 5 (barre de menus), NotchIA couvre un usage que les autres ne traitent pas : musique multi-source, calendrier, Concentration, IA en direct (Claude Code, ChatGPT Codex) et HUD système, le tout intégré dans l'encoche elle-même. Tier Essentiel gratuit à vie, Pro à 2,99 €/mois ou 24,99 € à vie. Voir le guide complet des meilleures apps Mac 2026 : https://notchia.app/blog/meilleures-apps-mac-2026"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelle est la différence entre NotchIA, Raycast, Rectangle et CleanShot X ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ces quatre apps Mac sont complémentaires, pas concurrentes. Raycast remplace Spotlight : lanceur universel au clavier (⌘ + Espace) avec extensions, scripts et IA. Rectangle redimensionne les fenêtres au raccourci clavier (gratuit, open-source). CleanShot X fait des captures d'écran et enregistrements vidéo pro avec annotations (29 $ achat unique). NotchIA exploite l'encoche du MacBook en cockpit toujours visible : musique multi-source, agenda, Concentration, IA en direct (Claude Code, Codex), HUD système : des usages passifs récurrents que les trois autres ne couvrent pas. Le stack power-user Mac 2026 typique combine les quatre apps pour couvrir lancement (Raycast), fenêtres (Rectangle), captures (CleanShot X) et cockpit encoche (NotchIA)."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://notchia.app/#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://notchia.app/" },
-        { "@type": "ListItem", "position": 2, "name": "IA en direct", "item": "https://notchia.app/#ia" },
-        { "@type": "ListItem", "position": 3, "name": "Médias", "item": "https://notchia.app/#medias" },
-        { "@type": "ListItem", "position": 4, "name": "Calendrier", "item": "https://notchia.app/#agenda" },
-        { "@type": "ListItem", "position": 5, "name": "Productivité", "item": "https://notchia.app/#productivite" },
-        { "@type": "ListItem", "position": 6, "name": "Système", "item": "https://notchia.app/#systeme" },
-        { "@type": "ListItem", "position": 7, "name": "Tarif", "item": "https://notchia.app/#tarif" },
-        { "@type": "ListItem", "position": 8, "name": "Télécharger", "item": "https://notchia.app/#telecharger" }
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://notchia.app/#website",
-      "url": "https://notchia.app/",
-      "name": "NotchIA",
-      "alternateName": ["Notch IA", "NotchAI"],
-      "description": "L'encoche pense maintenant. Centre de contrôle interactif pour macOS.",
-      "publisher": { "@id": "https://notchia.app/#organization" },
-      "inLanguage": ["fr-FR", "en-US", "es-ES", "de-DE"]
+     "@type": "PropertyValue",
+     "propertyID": "APE",
+     "value": "6201Z"
     }
-  ]
-}
-</script>
+   ],
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Talence",
+    "postalCode": "33400",
+    "addressRegion": "Nouvelle-Aquitaine",
+    "addressCountry": "FR"
+   },
+   "foundingLocation": {
+    "@type": "Place",
+    "address": {
+     "@type": "PostalAddress",
+     "addressCountry": "FR"
+    }
+   },
+   "email": "notchia.app@gmail.com",
+   "sameAs": [
+    "https://github.com/coaxel2/NotchIA",
+    "https://github.com/coaxel2",
+    "https://www.producthunt.com/products/notchia",
+    "https://www.instagram.com/notchia.app/",
+    "https://www.tiktok.com/@notchia.app",
+    "https://www.youtube.com/@notchia-app",
+    "https://www.facebook.com/people/Notch-IA/pfbid02334MYjptbfVLsRYEP9VZD1NXbZr7tiPkNgQ6o2cMHmX6HWyBvqkue3hTBPhwxfTyl/"
+   ],
+   "slogan": "L'encoche pense maintenant.",
+   "description": "Logiciel macOS indépendant qui transforme l'encoche du MacBook en centre de contrôle interactif, développé en France sous le statut d'entreprise individuelle.",
+   "knowsAbout": [
+    "macOS",
+    "MacBook notch",
+    "menu bar app",
+    "Claude Code",
+    "ChatGPT Codex",
+    "Concentration",
+    "media player",
+    "calendar integration",
+    "clipboard manager",
+    "file converter",
+    "screen recording detection",
+    "Apple Intelligence",
+    "Foundation Models",
+    "RSS digest",
+    "Ed25519 signed licenses",
+    "Stripe Checkout",
+    "Cloudflare Pages Functions"
+   ],
+   "areaServed": "Worldwide",
+   "contactPoint": [
+    {
+     "@type": "ContactPoint",
+     "email": "notchia.app@gmail.com",
+     "url": "https://notchia.app/contact",
+     "contactType": "customer support",
+     "availableLanguage": [
+      "French",
+      "English",
+      "Spanish",
+      "German"
+     ]
+    },
+    {
+     "@type": "ContactPoint",
+     "email": "notchia.app@gmail.com",
+     "contactType": "press inquiries",
+     "url": "https://notchia.app/press",
+     "availableLanguage": [
+      "French",
+      "English"
+     ]
+    }
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://notchia.app/#app",
+   "name": "NotchIA",
+   "alternateName": [
+    "Notch IA",
+    "NotchAI"
+   ],
+   "description": "Application macOS qui transforme l'encoche du MacBook (ou la barre de menu) en centre de contrôle interactif : assistants IA en direct (Claude Code, Codex), lecteur multi-source (Apple Music, Spotify, YouTube Music), calendrier, Concentration, presse-papiers historique, conversion de fichiers, HUD système, sneak peek engine.",
+   "url": "https://notchia.app/",
+   "image": "https://notchia.app/og-image.png?v=20260825",
+   "screenshot": "https://notchia.app/og-image.png?v=20260825",
+   "applicationCategory": [
+    "ProductivityApplication",
+    "DeveloperApplication",
+    "UtilitiesApplication"
+   ],
+   "applicationSubCategory": "MenuBarApp",
+   "operatingSystem": "macOS 15.0+",
+   "processorRequirements": "Apple Silicon or Intel",
+   "softwareVersion": "2.9.17",
+   "releaseNotes": "https://notchia.app/changelog",
+   "datePublished": "2026-04-12",
+   "dateModified": "2026-08-25",
+   "inLanguage": [
+    "fr"
+   ],
+   "fileSize": "12MB",
+   "downloadUrl": "https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg",
+   "installUrl": "https://notchia.app/install",
+   "author": {
+    "@id": "https://notchia.app/#organization"
+   },
+   "publisher": {
+    "@id": "https://notchia.app/#organization"
+   },
+   "featureList": [
+    "Digest : brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS/Atom (nouveau en 2.8.0, requiert macOS 26+)",
+    "Résumé IA d'un fichier (PDF/.txt/.md/.docx) on-device dans le Shelf (Pro, requiert macOS 26+)",
+    "Lecteur multi-source Apple Music / Spotify / YouTube Music",
+    "Paroles synchronisées en temps réel via lrclib",
+    "Visualizer audio personnalisable",
+    "Calendrier avec marqueurs visuels et création d'événements",
+    "Rappels Reminders cochables depuis l'encoche",
+    "Concentration avec sessions configurables et statistiques",
+    "Presse-papiers historique avec recherche, section Épinglés dédiée, détection automatique du type (URL, couleur, e-mail, JSON, code) et actions rapides contextuelles",
+    "Shelf : drag-and-drop temporaire entre apps",
+    "Convertisseur de fichiers natif (16 formats en Pro)",
+    "Téléchargement vidéo MP4/MP3 depuis 1800+ sites (Pro, 100% local)",
+    "Quick Share AirDrop / Messages / Mail",
+    "QuickLook intégré",
+    "Détection auto Claude Code, ChatGPT Codex",
+    "10 états IA en direct (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution)",
+    "Stats IA : jetons, cache, latence, quotas 5h et 7j",
+    "HUD système (volume, luminosité, clavier) intégré dans l'encoche",
+    "Affichage sur tous les écrans branchés (multi-écran par défaut depuis la 2.9.11)",
+    "Sneak Peek Engine : rotation périodique de mini-widgets",
+    "Détection des appels en cours (FaceTime, Zoom, Teams, Meet)",
+    "Affichage du Mode Concentration macOS",
+    "Détection enregistrement d'écran (QuickTime, OBS) avec masquage auto",
+    "Couleur d'accent personnalisable (presets ou color picker)",
+    "Icône d'app remplaçable",
+    "Forme de l'encoche ajustable (rayon, ombre, hauteur)",
+    "Geste deux doigts pour ouvrir l'encoche fermée",
+    "Multi-écrans avec bascule auto sur l'écran actif",
+    "Mode LSUIElement (pas d'icône Dock)",
+    "Auto-update Sparkle avec signature EdDSA",
+    "Aucune télémétrie, traitement local"
+   ],
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Essentiel",
+     "description": "Version gratuite avec médias, calendrier, HUD système, Sneak Peek, détections automatiques.",
+     "price": "0",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock",
+     "priceValidUntil": "2027-12-31"
+    },
+    {
+     "@type": "Offer",
+     "name": "Pro mensuel",
+     "description": "Toutes les fonctionnalités Pro : assistants IA, Concentration complet, presse-papiers illimité, convertisseur 16 formats. Annulable à tout moment, 1 Mac.",
+     "price": "2.99",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock",
+     "category": "subscription",
+     "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "2.99",
+      "priceCurrency": "EUR",
+      "billingDuration": "P1M",
+      "billingIncrement": 1,
+      "unitCode": "MON"
+     },
+     "priceValidUntil": "2027-12-31"
+    },
+    {
+     "@type": "Offer",
+     "name": "Pro à vie",
+     "description": "Toutes les fonctionnalités Pro pour toujours, sur 2 Mac. Achat unique, aucune récurrence, toutes les mises à jour majeures incluses.",
+     "price": "24.99",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock",
+     "category": "lifetime license",
+     "priceValidUntil": "2027-12-31"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Qu'est-ce que NotchIA ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, un Digest IA on-device (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), un Concentration complet, des assistants IA en direct (Claude Code, Codex, en Pro), un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quelle est la meilleure app pour l'encoche du MacBook en 2026 ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NotchIA est la meilleure app pour l'encoche du MacBook en 2026 si vous cherchez un outil complet : suivi IA en direct (Claude Code, Codex), médias, calendrier, presse-papiers, fichiers et HUD système dans une seule surface, avec un palier Essentiel gratuit à vie. Pour un besoin plus étroit, NotchNook (effet Dynamic Island), MediaMate (HUD média) ou TopNotch (masquer l'encoche) restent pertinents. Comparatif complet : notchia.app/blog/meilleure-app-encoche-macbook-2026"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quelle version de macOS est requise pour NotchIA ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NotchIA nécessite macOS 15.0 (Sequoia) ou plus récent. L'application fonctionne nativement sur Apple Silicon (M1, M2, M3, M4) et sur Intel. Les fonctionnalités d'IA on-device (Digest, résumé Shelf) nécessitent macOS 26+ avec Apple Intelligence ; dégradation gracieuse sinon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "NotchIA fonctionne-t-il sur un Mac sans encoche physique ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui. Sur les Mac sans encoche physique (iMac, MacBook Air anciennes générations, Mac mini connecté à un écran externe), NotchIA crée une zone d'encoche virtuelle dans la barre de menu. La hauteur est configurable séparément pour les deux contextes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Combien coûte NotchIA et quelles sont les formules disponibles ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Trois formules. Essentiel : 0 € à vie, sans limitation, avec les médias multi-source, le calendrier, le HUD système, le Sneak Peek, les détections automatiques, le Concentration complet (statistiques + sons) et la personnalisation visuelle. Pro mensuel : 2,99 € par mois, annulable à tout moment, 1 Mac. Ajoute trois modules payants : IA en direct (Claude Code, ChatGPT Codex avec états et statistiques), gestion de fichiers (Shelf, convertisseur 16 formats, Quick Share, QuickLook) et presse-papiers historique illimité avec recherche et épinglage. Pro à vie : 24,99 € en achat unique, 2 Mac, aucune récurrence, toutes les mises à jour majeures incluses, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quels assistants IA NotchIA supporte-t-il ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NotchIA détecte automatiquement les sessions actives de deux assistants : Claude Code (Anthropic) et ChatGPT Codex (OpenAI). L'application affiche en direct l'état d'activité (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution), les statistiques de jetons et de cache, les quotas 5h et 7j, et notifie quand un assistant attend une permission."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quels lecteurs musicaux NotchIA supporte-t-il ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NotchIA supporte nativement Apple Music, Spotify, YouTube Music et toute application utilisant l'API Now Playing de macOS. L'encoche affiche la pochette d'album avec couleur dominante extraite, les contrôles personnalisables et les paroles synchronisées en temps réel via lrclib (26 langues)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "NotchIA collecte-t-il des données ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Non. NotchIA ne collecte aucune donnée d'usage et n'envoie aucune télémétrie. Les modules calendrier, presse-papiers, Concentration, assistants IA et résumé Shelf fonctionnent 100% localement. Les journaux de session Claude Code et Codex sont lus depuis le disque local : jamais envoyés. Le résumé d'un fichier dans le Shelf est généré on-device par Apple Intelligence (Foundation Models). Le module Digest fetch tes flux RSS publics directement depuis ton Mac, et le résumé est lui aussi généré on-device : jamais d'envoi vers OpenAI, Anthropic ou nos serveurs. Seules connexions sortantes : auto-update Sparkle (signature EdDSA), validation de licence (email + clé), fetch des flux RSS que tu as configurés."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qu'est-ce que Digest et comment fonctionne-t-il ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Digest est un nouvel onglet gratuit ajouté en 2.8.0 (Wise Owl). Tu colles tes flux RSS/Atom préférés, tu écris en langage naturel ce qui t'intéresse (ex : « IA vidéo, macOS 26, SwiftUI »), et Apple Intelligence (Foundation Models, on-device) filtre, résume et priorise. Brief court à scanner en 30 secondes, directement dans l'encoche. Cache 14 jours pour éviter la régénération en boucle. 100% local : les flux sont fetched depuis ton Mac, les résumés générés sur ton CPU/GPU, jamais d'appel vers un fournisseur IA tiers ou nos serveurs. Requiert macOS 26+ pour Apple Intelligence ; sur macOS 15, dégradation gracieuse (viewer brut sans résumé IA)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "NotchIA fait-il partie des meilleures apps Mac à installer en 2026 ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, NotchIA figure dans les sélections d'apps Mac essentielles 2026 au titre de notch utility : la catégorie qui exploite l'encoche du MacBook en cockpit interactif. Aux côtés de Raycast (launcher universel), Rectangle (gestion de fenêtres), CleanShot X (captures pro), 1Password (mots de passe), Things 3 (tâches personnelles) et Bartender 5 (barre de menus), NotchIA couvre un usage que les autres ne traitent pas : musique multi-source, calendrier, Concentration, IA en direct (Claude Code, ChatGPT Codex) et HUD système, le tout intégré dans l'encoche elle-même. Tier Essentiel gratuit à vie, Pro à 2,99 €/mois ou 24,99 € à vie. Voir le guide complet des meilleures apps Mac 2026 : https://notchia.app/blog/meilleures-apps-mac-2026"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quelle est la différence entre NotchIA, Raycast, Rectangle et CleanShot X ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ces quatre apps Mac sont complémentaires, pas concurrentes. Raycast remplace Spotlight : lanceur universel au clavier (⌘ + Espace) avec extensions, scripts et IA. Rectangle redimensionne les fenêtres au raccourci clavier (gratuit, open-source). CleanShot X fait des captures d'écran et enregistrements vidéo pro avec annotations (29 $ achat unique). NotchIA exploite l'encoche du MacBook en cockpit toujours visible : musique multi-source, agenda, Concentration, IA en direct (Claude Code, Codex), HUD système : des usages passifs récurrents que les trois autres ne couvrent pas. Le stack power-user Mac 2026 typique combine les quatre apps pour couvrir lancement (Raycast), fenêtres (Rectangle), captures (CleanShot X) et cockpit encoche (NotchIA)."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://notchia.app/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://notchia.app/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "IA en direct",
+     "item": "https://notchia.app/#ia"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Médias",
+     "item": "https://notchia.app/#medias"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Calendrier",
+     "item": "https://notchia.app/#agenda"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "name": "Productivité",
+     "item": "https://notchia.app/#productivite"
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "name": "Système",
+     "item": "https://notchia.app/#systeme"
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "name": "Tarif",
+     "item": "https://notchia.app/#tarif"
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "name": "Télécharger",
+     "item": "https://notchia.app/#telecharger"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://notchia.app/#website",
+   "url": "https://notchia.app/",
+   "name": "NotchIA",
+   "alternateName": [
+    "Notch IA",
+    "NotchAI"
+   ],
+   "description": "L'encoche pense maintenant. Centre de contrôle interactif pour macOS.",
+   "publisher": {
+    "@id": "https://notchia.app/#organization"
+   },
+   "inLanguage": [
+    "fr-FR",
+    "en-US",
+    "es-ES",
+    "de-DE"
+   ]
+  }
+ ]
+}</script>
 
 <!-- Google Analytics 4 — désactivé par défaut. Voir README. -->
 <!--
@@ -1852,6 +1958,15 @@
           NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, un Digest IA on-device (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS), un Concentration complet, des assistants IA en direct (Claude Code, Codex, en Pro), un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système.
         </p>
       </details>
+      <details class="group rounded-2xl border border-line bg-ink2 p-5 sm:p-6">
+        <summary class="flex items-center justify-between cursor-pointer list-none">
+          <h3 class="font-medium text-cream text-base sm:text-lg pr-4" data-i18n="faq.q12">Quelle est la meilleure app pour l'encoche du MacBook en 2026 ?</h3>
+          <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a12">
+          NotchIA est la meilleure app pour l'encoche du MacBook en 2026 si vous cherchez un outil complet : suivi IA en direct (Claude Code, Codex), médias, calendrier, presse-papiers, fichiers et HUD système dans une seule surface, avec un palier Essentiel gratuit à vie. Pour un besoin plus étroit, NotchNook (effet Dynamic Island), MediaMate (HUD média) ou TopNotch (masquer l'encoche) restent pertinents. Le détail app par app est dans notre <a href="blog/meilleure-app-encoche-macbook-2026" class="underline hover:text-cream">comparatif 2026 des apps d'encoche</a>.
+        </p>
+      </details>
 
       <details class="group rounded-2xl border border-line bg-ink2 p-5 sm:p-6">
         <summary class="flex items-center justify-between cursor-pointer list-none">
@@ -2211,6 +2326,7 @@
       'faq.eyebrow': '§FAQ · questions fréquentes',
       'faq.title1': 'Avant de',
       'faq.title2': 'télécharger.',
+      'faq.q12': 'Quelle est la meilleure app pour l\'encoche du MacBook en 2026 ?', 'faq.a12': 'NotchIA est la meilleure app pour l\'encoche du MacBook en 2026 si vous cherchez un outil complet : suivi IA en direct (Claude Code, Codex), médias, calendrier, presse-papiers, fichiers et HUD système dans une seule surface, avec un palier Essentiel gratuit à vie. Pour un besoin plus étroit, NotchNook (effet Dynamic Island), MediaMate (HUD média) ou TopNotch (masquer l\'encoche) restent pertinents. Le détail app par app est dans notre <a href="blog/meilleure-app-encoche-macbook-2026" class="underline hover:text-cream">comparatif 2026 des apps d\'encoche</a>.',
       'faq.q1': "Qu'est-ce que NotchIA ?",
       'faq.a1': "NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif. Elle regroupe en un seul point d'accès : un lecteur multi-source, un calendrier, un Digest IA on-device (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS), un Concentration complet, des assistants IA en direct (Claude Code, Codex, en Pro), un presse-papiers historique, un convertisseur de fichiers et un remplacement esthétique des HUD système.",
       'faq.q2': 'Quelle version de macOS est requise ?',
@@ -2582,6 +2698,7 @@
       'faq.eyebrow': '§FAQ · frequently asked',
       'faq.title1': 'Before you',
       'faq.title2': 'download.',
+      'faq.q12': 'What is the best MacBook notch app in 2026?', 'faq.a12': 'NotchIA is the best MacBook notch app in 2026 if you want a complete tool: live AI tracking (Claude Code, Codex), media, calendar, clipboard, files and system HUD in one surface, with a free-forever Essential tier. For narrower needs, NotchNook (Dynamic Island effect), MediaMate (media HUD) or TopNotch (hiding the notch) remain relevant. The app-by-app breakdown is in our <a href="blog/best-macbook-notch-app-2026" class="underline hover:text-cream">2026 notch apps comparison</a>.',
       'faq.q1': 'What is NotchIA?',
       'faq.a1': 'NotchIA is a macOS app that turns your MacBook notch (or the menu bar on notch-less displays) into an interactive control center. In a single access point: a multi-source media player, a calendar, an on-device AI Digest (news brief summarized by Apple Intelligence from your RSS feeds), a full Concentration, live AI assistants (Claude Code, Codex: Pro), a clipboard history, a file converter, and an aesthetic replacement for system HUDs.',
       'faq.q2': 'Which macOS version is required?',
@@ -2953,6 +3070,7 @@
       'faq.eyebrow': '§FAQ · preguntas frecuentes',
       'faq.title1': 'Antes de',
       'faq.title2': 'descargar.',
+      'faq.q12': '¿Cuál es la mejor app para la muesca del MacBook en 2026?', 'faq.a12': 'NotchIA es la mejor app para la muesca del MacBook en 2026 si buscas una herramienta completa: seguimiento de IA en directo (Claude Code, Codex), multimedia, calendario, portapapeles, archivos y HUD del sistema en una sola superficie, con un nivel Esencial gratis para siempre. Para necesidades más concretas, NotchNook (efecto Dynamic Island), MediaMate (HUD multimedia) o TopNotch (ocultar la muesca) siguen siendo pertinentes. El detalle app por app está en nuestra <a href="blog/mejor-app-muesca-macbook-2026" class="underline hover:text-cream">comparativa 2026 de apps de muesca</a>.',
       'faq.q1': '¿Qué es NotchIA?',
       'faq.a1': 'NotchIA es una aplicación macOS que convierte la muesca del MacBook (o la barra de menú en pantallas sin muesca) en un centro de control interactivo. Reúne en un solo punto de acceso: un reproductor multifuente, un calendario, un Digest IA on-device (briefing de actualidad resumido por Apple Intelligence desde tus feeds RSS), un Concentration completo, asistentes de IA en directo (Claude Code, Codex, en Pro), un historial del portapapeles, un conversor de archivos y un reemplazo estético de los HUD del sistema.',
       'faq.q2': '¿Qué versión de macOS se requiere?',
@@ -3324,6 +3442,7 @@
       'faq.eyebrow': '§FAQ · häufige Fragen',
       'faq.title1': 'Bevor Sie',
       'faq.title2': 'laden.',
+      'faq.q12': 'Welche ist die beste App für die MacBook-Notch 2026?', 'faq.a12': 'NotchIA ist die beste App für die MacBook-Notch 2026, wenn Sie ein komplettes Tool suchen: Live-KI-Tracking (Claude Code, Codex), Medien, Kalender, Zwischenablage, Dateien und System-HUD in einer Oberfläche, mit einer dauerhaft kostenlosen Essential-Stufe. Für engere Bedürfnisse bleiben NotchNook (Dynamic-Island-Effekt), MediaMate (Medien-HUD) oder TopNotch (Notch verstecken) relevant. Die Details App für App stehen in unserem <a href="blog/beste-macbook-notch-app-2026" class="underline hover:text-cream">Notch-App-Vergleich 2026</a>.',
       'faq.q1': 'Was ist NotchIA?',
       'faq.a1': 'NotchIA ist eine macOS-App, die die Aussparung Ihres MacBooks (oder die Menüleiste auf Bildschirmen ohne Aussparung) in ein interaktives Kontrollzentrum verwandelt. An einem einzigen Zugangspunkt: ein Multi-Source-Mediaplayer, ein Kalender, ein On-Device-KI-Digest (News-Briefing zusammengefasst von Apple Intelligence aus Ihren RSS-Feeds), ein vollständiges Concentration, Live-KI-Assistenten (Claude Code, Codex, in Pro), ein Zwischenablage-Verlauf, ein Datei-Konverter und ein ästhetischer Ersatz für System-HUDs.',
       'faq.q2': 'Welche macOS-Version wird benötigt?',

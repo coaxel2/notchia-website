@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>NotchIA 2.8.0 — Digest IA on-device + résumé Shelf</title>
+<title>NotchIA 2.8.0 : Digest IA on-device + résumé Shelf</title>
 <meta name="description" content="NotchIA 2.8.0 introduit Digest : brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS. Aucun octet ne quitte ton Mac." />
 <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
 <meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
@@ -18,7 +18,7 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
-<meta property="og:title" content="2.8.0 Wise Owl 🦉 — Digest IA on-device et résumés Shelf — NotchIA" />
+<meta property="og:title" content="2.8.0 Wise Owl 🦉, Digest IA on-device et résumés Shelf, NotchIA" />
 <meta property="og:description" content="NotchIA 2.8.0 Wise Owl 🦉 introduit Digest, un brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS. Aucun octet ne quitte ton Mac." />
 <meta property="og:url" content="https://notchia.app/blog/wise-owl-2-8-0" />
 <meta property="og:image" content="https://notchia.app/og-image.png?v=20260825" />
@@ -29,7 +29,7 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="2.8.0 Wise Owl 🦉 — Digest IA on-device et résumés Shelf — NotchIA" />
+<meta name="twitter:title" content="2.8.0 Wise Owl 🦉, Digest IA on-device et résumés Shelf, NotchIA" />
 <meta name="twitter:description" content="NotchIA 2.8.0 Wise Owl 🦉 introduit Digest, un brief d'actualité résumé par Apple Intelligence on-device depuis tes flux RSS. Aucun octet ne quitte ton Mac." />
 <meta name="twitter:image" content="https://notchia.app/og-image.png?v=20260825" />
 
@@ -197,29 +197,29 @@
 
   <p>Trois étapes, vraiment trois.</p>
 
-  <p><strong>Étape 1.</strong> Tu colles les URL des flux RSS et Atom que tu suis déjà — ton lecteur RSS exporte sûrement un OPML, ou tu copies juste les URL une par une. Tu peux mettre Hacker News, le blog d'un dev que tu lis, les releases GitHub d'un repo, n'importe quelle newsletter qui expose un flux. Si ça parle RSS ou Atom, NotchIA sait le lire.</p>
+  <p><strong>Étape 1.</strong> Tu colles les URL des flux RSS et Atom que tu suis déjà : ton lecteur RSS exporte sûrement un OPML, ou tu copies juste les URL une par une. Tu peux mettre Hacker News, le blog d'un dev que tu lis, les releases GitHub d'un repo, n'importe quelle newsletter qui expose un flux. Si ça parle RSS ou Atom, NotchIA sait le lire.</p>
 
   <p><strong>Étape 2.</strong> Tu écris en langage naturel ce qui t'intéresse. Pas de mots-clés, pas de filtres booléens. Un paragraphe. Par exemple : <em>« IA vidéo, macOS 26 et les nouveaux Foundation Models, SwiftUI, indie dev macOS, sortie de jeux indé. »</em> C'est ton brief éditorial à toi. Tu peux le réécrire quand tu veux.</p>
 
-  <p><strong>Étape 3.</strong> NotchIA fetch les flux, dédupe les articles vus, et demande à Apple Intelligence — les <a href="https://developer.apple.com/documentation/foundationmodels" rel="noopener" target="_blank">Foundation Models documentation</a> qui tournent on-device depuis macOS 26 — de te résumer le tout selon ton intérêt. Tu te retrouves avec un brief court à scanner en trente secondes, directement dans l'encoche, sans ouvrir une seule app.</p>
+  <p><strong>Étape 3.</strong> NotchIA fetch les flux, dédupe les articles vus, et demande à Apple Intelligence : les <a href="https://developer.apple.com/documentation/foundationmodels" rel="noopener" target="_blank">Foundation Models documentation</a> qui tournent on-device depuis macOS 26 : de te résumer le tout selon ton intérêt. Tu te retrouves avec un brief court à scanner en trente secondes, directement dans l'encoche, sans ouvrir une seule app.</p>
 
   <p>Le résultat est mis en cache quatorze jours pour ne pas re-générer en boucle quand tu rouvres ton Mac. Tu peux forcer un rafraîchissement quand tu veux.</p>
 
-  <p>Les liens d'origine restent toujours affichés à côté de chaque résumé — l'IA résume, elle ne remplace pas la source.</p>
+  <p>Les liens d'origine restent toujours affichés à côté de chaque résumé : l'IA résume, elle ne remplace pas la source.</p>
 
-  <p>Et — c'est le point qui m'intéressait — tout est local. La requête sort vers les flux RSS publics (forcément, il faut bien aller les chercher) et c'est tout. Le résumé est fait sur ton CPU/GPU, par le moteur Apple. Jamais d'appel vers OpenAI, Anthropic, Mistral, ou nos serveurs. Il n'y a pas de serveur NotchIA qui voit tes lectures, parce qu'il n'y a pas de serveur NotchIA dans le circuit, point.</p>
+  <p>Et, c'est le point qui m'intéressait, tout est local. La requête sort vers les flux RSS publics (forcément, il faut bien aller les chercher) et c'est tout. Le résumé est fait sur ton CPU/GPU, par le moteur Apple. Jamais d'appel vers OpenAI, Anthropic, Mistral, ou nos serveurs. Il n'y a pas de serveur NotchIA qui voit tes lectures, parce qu'il n'y a pas de serveur NotchIA dans le circuit, point.</p>
 
   <h2>Pourquoi <span class="grad-text">je l'ai fait</span></h2>
 
   <div class="callout">
     <p>Je suis le profil tech qui jongle entre Hacker News, trois ou quatre newsletters, Bluesky, deux lecteurs RSS et les releases GitHub de quelques projets. Le matin, je passe vingt minutes à scanner pour trouver les trois trucs vraiment importants. Et le soir, je recommence, parce que j'ai peur d'avoir raté un truc.</p>
-    <p>Quand Apple a sorti les Foundation Models on-device avec macOS 26, je me suis dit que le tooling existait enfin pour un usage quotidien — pas un gadget pour faire la démo, un vrai outil. L'encoche affiche déjà ma musique et mon prochain événement de calendrier de façon passive ; pourquoi pas mon actu filtrée ? Voir aussi la page <a href="https://developer.apple.com/apple-intelligence/" rel="noopener" target="_blank">Apple Intelligence for developers</a>.</p>
-    <p>Restait l'arbitrage privacy. Envoyer la liste de ses flux RSS à OpenAI ou Anthropic, c'est leur offrir gratuitement un portrait fidèle de ses centres d'intérêt — qui tu lis, ce que tu suis, ce qui te préoccupe en ce moment. Je voulais que NotchIA s'en passe complètement. Apple Intelligence on-device, c'était la pièce qui manquait.</p>
+    <p>Quand Apple a sorti les Foundation Models on-device avec macOS 26, je me suis dit que le tooling existait enfin pour un usage quotidien : pas un gadget pour faire la démo, un vrai outil. L'encoche affiche déjà ma musique et mon prochain événement de calendrier de façon passive ; pourquoi pas mon actu filtrée ? Voir aussi la page <a href="https://developer.apple.com/apple-intelligence/" rel="noopener" target="_blank">Apple Intelligence for developers</a>.</p>
+    <p>Restait l'arbitrage privacy. Envoyer la liste de ses flux RSS à OpenAI ou Anthropic, c'est leur offrir gratuitement un portrait fidèle de ses centres d'intérêt : qui tu lis, ce que tu suis, ce qui te préoccupe en ce moment. Je voulais que NotchIA s'en passe complètement. Apple Intelligence on-device, c'était la pièce qui manquait.</p>
   </div>
 
   <h2>Autres améliorations dans <span class="grad-text">2.8.0</span></h2>
 
-  <p><strong>Résumé IA du Shelf <span class="pro-badge">💎 Pro</span></strong> — Drop un PDF, un <code class="font-mono text-xs">.docx</code>, un <code class="font-mono text-xs">.txt</code> ou un <code class="font-mono text-xs">.md</code> sur l'encoche, et tu as un résumé scrollable en quelques secondes. Même moteur Apple Intelligence on-device que Digest. Le Shelf affiche une aura arc-en-ciel pendant la génération, histoire que tu voies qu'il bosse. Ça tourne sans réseau, ça tourne sur ton Mac.</p>
+  <p><strong>Résumé IA du Shelf <span class="pro-badge">💎 Pro</span></strong> : Drop un PDF, un <code class="font-mono text-xs">.docx</code>, un <code class="font-mono text-xs">.txt</code> ou un <code class="font-mono text-xs">.md</code> sur l'encoche, et tu as un résumé scrollable en quelques secondes. Même moteur Apple Intelligence on-device que Digest. Le Shelf affiche une aura arc-en-ciel pendant la génération, histoire que tu voies qu'il bosse. Ça tourne sans réseau, ça tourne sur ton Mac.</p>
 
   <p>+ corrections diverses sur la stabilité du lecteur musique en arrière-plan, la gestion de l'écran de connexion après un long sleep, et quelques petites choses signalées par mail.</p>
 
@@ -227,11 +227,11 @@
 
   <p><strong>Déjà utilisateur ?</strong> L'auto-update <a href="https://sparkle-project.org/documentation/" rel="noopener" target="_blank">Sparkle documentation</a> te proposera la 2.8.0 dans les prochaines heures. Si tu n'as pas envie d'attendre : menu NotchIA dans la barre des menus → <em>Vérifier les mises à jour</em>.</p>
 
-  <p><strong>Nouvel utilisateur ?</strong> Digest, Musique, Calendrier et Concentration sont gratuits. Télécharge NotchIA depuis <a href="/#telecharger">la page d'accueil</a>. Le résumé Shelf et l'IA Code sont dans le pack Pro — voir <a href="/pricing">les tarifs</a>.</p>
+  <p><strong>Nouvel utilisateur ?</strong> Digest, Musique, Calendrier et Concentration sont gratuits. Télécharge NotchIA depuis <a href="/#telecharger">la page d'accueil</a>. Le résumé Shelf et l'IA Code sont dans le pack Pro : voir <a href="/pricing">les tarifs</a>.</p>
 
   <div class="tech-note">
-    <p><strong>Note technique.</strong> NotchIA tourne à partir de macOS 15.0 (Sequoia). Les résumés IA — Digest et Shelf — nécessitent macOS 26+ et un Mac compatible Apple Intelligence (Foundation Models).</p>
-    <p>Sur macOS 15 sans Apple Intelligence, l'onglet Digest reste fonctionnel en mode viewer brut : fetch des flux, déduplication, affichage chronologique. Pas de résumé IA, pas de message d'erreur — dégradation gracieuse, tu lis tes flux normalement.</p>
+    <p><strong>Note technique.</strong> NotchIA tourne à partir de macOS 15.0 (Sequoia). Les résumés IA, Digest et Shelf, nécessitent macOS 26+ et un Mac compatible Apple Intelligence (Foundation Models).</p>
+    <p>Sur macOS 15 sans Apple Intelligence, l'onglet Digest reste fonctionnel en mode viewer brut : fetch des flux, déduplication, affichage chronologique. Pas de résumé IA, pas de message d'erreur : dégradation gracieuse, tu lis tes flux normalement.</p>
   </div>
 
   <h2>FAQ</h2>
