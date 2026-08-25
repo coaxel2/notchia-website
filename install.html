@@ -51,6 +51,9 @@
     border-color: rgba(168,85,247,0.45);
     box-shadow: 0 0 60px rgba(168, 85, 247, 0.10), inset 0 1px 0 rgba(255,255,255,0.03);
   }
+  /* les items de grid ont min-width:auto : un <pre> large force la colonne à 410px
+     sur mobile malgré son overflow-x — min-width:0 rend l'overflow effectif */
+  section.grid > article { min-width: 0; }
   .cta-mega {
     background: var(--brand);
     color: #0B0D12;
@@ -112,6 +115,7 @@
     border-radius: 4px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.9em;
+    overflow-wrap: anywhere; /* la commande curl Homebrew débordait sur mobile */
   }
   .lang-sw { appearance: none; -webkit-appearance: none; background-color: transparent; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; background-size: 9px; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
   .lang-sw:hover { color: #EDE8DC; }
@@ -131,9 +135,9 @@
     <picture><source srcset="logo.avif" type="image/avif" /><img src="logo.png" alt="NotchIA" class="h-8 w-8" width="32" height="32" /></picture>
     <span class="font-display text-xl">NotchIA</span>
   </a>
-  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
-    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
-    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+  <nav class="flex flex-wrap justify-end items-center gap-3 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream hidden sm:inline" data-i18n="nav.home">Accueil</a>
+    <a href="/pricing" data-i18n="nav.pro" style="background:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%);color:#fff;padding:.5rem .95rem;border-radius:999px;font-weight:600;white-space:nowrap">Passer à Pro</a>
     <a href="/account" class="hover:text-cream" data-i18n="nav.account">Mon compte</a>
     <select id="lang-switch" class="lang-sw" aria-label="Language">
       <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
@@ -376,7 +380,7 @@
   const I18N = {
     fr: {
       'meta.description': 'Télécharger NotchIA pour macOS — DMG direct ou installateur Homebrew automatique.',
-      'nav.home': 'Accueil', 'nav.pricing': 'Tarifs', 'nav.account': 'Mon compte',
+      'nav.home': 'Accueil', 'nav.pricing': 'Tarifs','nav.pro': 'Passer à Pro', 'nav.account': 'Mon compte',
       'hero.os_badge': 'macOS Sequoia 15+ · Apple Silicon & Intel',
       'hero.title.verb': 'Télécharger', 'hero.title.app': 'NotchIA',
       'hero.subtitle': 'Deux méthodes au choix : <strong class="text-cream">le .dmg</strong> (standard, recommandé) ou <strong class="text-cream">l\'installateur Homebrew</strong> (auto).',
@@ -457,7 +461,7 @@
     },
     en: {
       'meta.description': 'Download NotchIA for macOS — direct DMG or automatic Homebrew installer.',
-      'nav.home': 'Home', 'nav.pricing': 'Pricing', 'nav.account': 'Account',
+      'nav.home': 'Home', 'nav.pricing': 'Pricing','nav.pro': 'Go Pro', 'nav.account': 'Account',
       'hero.os_badge': 'macOS Sequoia 15+ · Apple Silicon & Intel',
       'hero.title.verb': 'Download', 'hero.title.app': 'NotchIA',
       'hero.subtitle': 'Two methods to choose from: <strong class="text-cream">the .dmg</strong> (standard, recommended) or <strong class="text-cream">the Homebrew installer</strong> (auto).',
@@ -539,7 +543,7 @@
     },
     es: {
       'meta.description': 'Descargar NotchIA para macOS — DMG directo o instalador Homebrew automático.',
-      'nav.home': 'Inicio', 'nav.pricing': 'Precio', 'nav.account': 'Mi cuenta',
+      'nav.home': 'Inicio', 'nav.pricing': 'Precio','nav.pro': 'Pasar a Pro', 'nav.account': 'Mi cuenta',
       'hero.os_badge': 'macOS Sequoia 15+ · Apple Silicon & Intel',
       'hero.title.verb': 'Descargar', 'hero.title.app': 'NotchIA',
       'hero.subtitle': 'Dos métodos a elegir: <strong class="text-cream">el .dmg</strong> (estándar, recomendado) o <strong class="text-cream">el instalador Homebrew</strong> (automático).',
@@ -621,7 +625,7 @@
     },
     de: {
       'meta.description': 'NotchIA für macOS herunterladen — direktes DMG oder automatischer Homebrew-Installer.',
-      'nav.home': 'Startseite', 'nav.pricing': 'Preis', 'nav.account': 'Mein Konto',
+      'nav.home': 'Startseite', 'nav.pricing': 'Preis','nav.pro': 'Pro holen', 'nav.account': 'Mein Konto',
       'hero.os_badge': 'macOS Sequoia 15+ · Apple Silicon & Intel',
       'hero.title.verb': 'NotchIA', 'hero.title.app': 'herunterladen',
       'hero.subtitle': 'Zwei Methoden zur Wahl: <strong class="text-cream">das .dmg</strong> (Standard, empfohlen) oder <strong class="text-cream">der Homebrew-Installer</strong> (automatisch).',

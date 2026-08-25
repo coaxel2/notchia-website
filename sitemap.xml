@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://notchia.app/install</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/install" />
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://notchia.app/features</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://notchia.app/pricing</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing" />
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://notchia.app/press</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/press" />
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://notchia.app/blog/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/" />
@@ -865,7 +865,7 @@
   </url>
   <url>
     <loc>https://notchia.app/en/features</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
@@ -876,7 +876,7 @@
   </url>
   <url>
     <loc>https://notchia.app/es/features</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
@@ -887,7 +887,7 @@
   </url>
   <url>
     <loc>https://notchia.app/de/features</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
@@ -898,7 +898,7 @@
   </url>
   <url>
     <loc>https://notchia.app/en/pricing</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>
@@ -909,7 +909,7 @@
   </url>
   <url>
     <loc>https://notchia.app/es/pricing</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>
@@ -920,7 +920,7 @@
   </url>
   <url>
     <loc>https://notchia.app/de/pricing</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>

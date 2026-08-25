@@ -101,10 +101,10 @@
     </picture>
     <span class="font-display text-xl">NotchIA</span>
   </a>
-  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
-    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
+  <nav class="flex flex-wrap justify-end items-center gap-3 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream hidden sm:inline" data-i18n="nav.home">Accueil</a>
     <a href="/install" class="hover:text-cream" data-i18n="nav.install">Installer</a>
-    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+    <a href="/pricing" data-i18n="nav.pro" style="background:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%);color:#fff;padding:.5rem .95rem;border-radius:999px;font-weight:600;white-space:nowrap">Passer à Pro</a>
     <a href="/contact" class="hover:text-cream" data-i18n="nav.contact">Contact</a>
       <select id="lang-switch" class="lang-sw" aria-label="Language">
       <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
@@ -799,7 +799,7 @@
     fr: {
       'nav.home': 'Accueil',
       'nav.install': 'Installer',
-      'nav.pricing': 'Tarifs',
+      'nav.pricing': 'Tarifs','nav.pro': 'Passer à Pro',
       'nav.contact': 'Contact',
       'hero.subtitle': "Sélections honnêtes pour macOS, encoche du MacBook, IA on-device et outils de dev. Tout est sourcé, daté, et mis à jour au fil des versions.",
       'section.notch': 'Encoche MacBook & notch utility',
@@ -826,7 +826,7 @@
     en: {
       'nav.home': 'Home',
       'nav.install': 'Install',
-      'nav.pricing': 'Pricing',
+      'nav.pricing': 'Pricing','nav.pro': 'Go Pro',
       'nav.contact': 'Contact',
       'hero.subtitle': "Honest picks for macOS, the MacBook notch, on-device AI and dev tools. Everything is sourced, dated and updated across releases.",
       'section.notch': 'MacBook notch & notch utility',
@@ -853,7 +853,7 @@
     es: {
       'nav.home': 'Inicio',
       'nav.install': 'Instalar',
-      'nav.pricing': 'Precios',
+      'nav.pricing': 'Precios','nav.pro': 'Pasar a Pro',
       'nav.contact': 'Contacto',
       'hero.subtitle': "Selecciones honestas para macOS, la muesca del MacBook, IA on-device y herramientas de dev. Todo está documentado, fechado y actualizado en cada versión.",
       'section.notch': 'Muesca del MacBook y notch utility',
@@ -880,7 +880,7 @@
     de: {
       'nav.home': 'Startseite',
       'nav.install': 'Installieren',
-      'nav.pricing': 'Preise',
+      'nav.pricing': 'Preise','nav.pro': 'Pro holen',
       'nav.contact': 'Kontakt',
       'hero.subtitle': "Ehrliche Auswahl für macOS, die MacBook-Aussparung, On-Device-KI und Entwicklertools. Alles ist belegt, datiert und mit jedem Release aktualisiert.",
       'section.notch': 'MacBook-Aussparung & Notch Utility',

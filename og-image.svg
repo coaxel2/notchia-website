@@ -54,8 +54,9 @@
   </g>
 
   <!-- soft halo around notch -->
-  <ellipse cx="600" cy="160" rx="320" ry="80" fill="#FF4D88" opacity="0.25" filter="blur(28)"/>
-  <ellipse cx="600" cy="160" rx="220" ry="50" fill="#FF7A2D" opacity="0.18" filter="blur(22)"/>
+  <!-- filter="blur(n)" n'est pas du SVG valide : blur CSS inline, sinon ellipses à bords durs -->
+  <ellipse cx="600" cy="160" rx="320" ry="80" fill="#FF4D88" opacity="0.25" style="filter:blur(28px)"/>
+  <ellipse cx="600" cy="160" rx="220" ry="50" fill="#FF7A2D" opacity="0.18" style="filter:blur(22px)"/>
 
   <!-- Headline -->
   <g font-family="Fraunces, serif" fill="#EDE8DC">
@@ -66,7 +67,7 @@
 
   <!-- Subline -->
   <text x="60" y="528" font-family="Instrument Sans, sans-serif" font-size="22" fill="#EDE8DC" opacity="0.62">
-    Médias · Calendrier · IA · Pomodoro · HUD · Convertisseur — un seul point d'accès.
+    Médias · Calendrier · IA en direct · Concentration · Presse-papiers · HUD.
   </text>
 
   <!-- Bottom strip -->

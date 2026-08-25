@@ -152,7 +152,7 @@
       "softwareVersion": "2.9.17",
       "releaseNotes": "https://notchia.app/changelog",
       "datePublished": "2026-04-12",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-25",
       "inLanguage": ["fr"],
       "fileSize": "12MB",
       "downloadUrl": "https://github.com/coaxel2/NotchIA/releases/latest/download/NotchIA.dmg",
@@ -804,12 +804,12 @@
 
     <nav class="hidden lg:flex items-center gap-8 text-sm text-fog" aria-label="Navigation principale">
       <a href="#ia" data-i18n="nav.ia" class="hover:text-cream transition">IA</a>
+      <a href="#tarif" data-i18n="nav.pricing" class="hover:text-cream transition">Tarif</a>
       <a href="#medias" data-i18n="nav.medias" class="hover:text-cream transition">Médias</a>
       <a href="#agenda" data-i18n="nav.agenda" class="hover:text-cream transition">Agenda</a>
       <a href="#digest" data-i18n="nav.digest" class="hover:text-cream transition">Digest</a>
       <a href="#productivite" data-i18n="nav.productivity" class="hover:text-cream transition">Productivité</a>
       <a href="#systeme" data-i18n="nav.system" class="hover:text-cream transition">Système</a>
-      <a href="#tarif" data-i18n="nav.pricing" class="hover:text-cream transition">Tarif</a>
       <a href="#faq" data-i18n="nav.faq" class="hover:text-cream transition">FAQ</a>
     </nav>
 
@@ -843,12 +843,12 @@
   <div id="mobile-nav" class="lg:hidden hidden border-t border-line bg-ink/95" style="-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)">
     <nav class="flex flex-col px-5 py-3 text-fog" aria-label="Navigation mobile">
       <a href="#ia" data-i18n="nav.ia" class="py-3 border-b border-line/50 hover:text-cream transition">IA</a>
+      <a href="#tarif" data-i18n="nav.pricing" class="py-3 border-b border-line/50 hover:text-cream transition">Tarif</a>
       <a href="#medias" data-i18n="nav.medias" class="py-3 border-b border-line/50 hover:text-cream transition">Médias</a>
       <a href="#agenda" data-i18n="nav.agenda" class="py-3 border-b border-line/50 hover:text-cream transition">Agenda</a>
       <a href="#digest" data-i18n="nav.digest" class="py-3 border-b border-line/50 hover:text-cream transition">Digest</a>
       <a href="#productivite" data-i18n="nav.productivity" class="py-3 border-b border-line/50 hover:text-cream transition">Productivité</a>
       <a href="#systeme" data-i18n="nav.system" class="py-3 border-b border-line/50 hover:text-cream transition">Système</a>
-      <a href="#tarif" data-i18n="nav.pricing" class="py-3 border-b border-line/50 hover:text-cream transition">Tarif</a>
       <a href="#faq" data-i18n="nav.faq" class="py-3 hover:text-cream transition">FAQ</a>
       <div class="flex flex-col gap-2.5 pt-4 pb-2">
         <a href="#tarif" class="btn btn-grad w-full justify-center">
@@ -1252,7 +1252,10 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
       <div class="lg:col-span-5 reveal">
-        <div class="eyebrow mb-5 sm:mb-6" data-i18n="ia.eyebrow">§02 — IA en direct</div>
+        <div class="flex items-center gap-2.5 mb-5 sm:mb-6">
+          <div class="eyebrow" data-i18n="ia.eyebrow">§02 — IA en direct</div>
+          <span class="text-[10px] leading-none uppercase tracking-[0.18em] font-mono px-2 py-1 rounded-full grad-bg text-white">Pro</span>
+        </div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="ia.title1">l'IA travaille.</span>
           <br/>
@@ -1378,39 +1381,115 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §CONVERSION — rappel d'achat juste après la démo IA (fonction Pro phare)
-     Volontairement SANS .reveal : ce bloc porte les prix, il doit rester
-     lisible sans JavaScript (crawlers IA, cf. conventions GEO).
+     §03 — PRICING (remonté ici : l'achat ne doit pas attendre le bas de page)
 ═══════════════════════════════════════════════════════════════════════ -->
-<section id="passer-pro" class="relative py-14 sm:py-20 border-t border-line" aria-labelledby="promo-title">
-  <div class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10">
-    <div class="rounded-3xl border border-line bg-ink2 overflow-hidden">
-      <span class="block h-px grad-bg"></span>
-      <div class="p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+<section id="tarif" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
-        <div>
-          <div class="eyebrow mb-4" data-i18n="promo.eyebrow">fonction Pro</div>
-          <h2 id="promo-title" class="display text-cream" style="font-size: clamp(1.7rem, 4vw, 2.4rem);">
-            <span data-i18n="promo.title1">L'IA en direct est</span>
-            <span class="display-italic grad-text" data-i18n="promo.title2">réservée à Pro.</span>
-          </h2>
-          <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n="promo.subtitle">
-            Le suivi de Claude Code et Codex, la Shelf, le convertisseur 16 formats et le presse-papiers historique s'activent avec une licence Pro. Tout le reste de NotchIA reste gratuit à vie.
-          </p>
+    <div class="text-center mb-12 sm:mb-16 reveal">
+      <div class="eyebrow mb-4 sm:mb-5" data-i18n="price.section.eyebrow">§03 — tarif</div>
+      <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
+        <span data-i18n="price.section.title1">Trois formules.</span>
+        <span class="display-italic grad-text" data-i18n="price.section.title2">À votre rythme.</span>
+      </h2>
+      <p class="mt-5 sm:mt-6 text-fog max-w-xl mx-auto" data-i18n="price.section.intro">
+        Gratuit à vie pour démarrer, mensuel pour tester l'IA quelques mois,
+        ou licence à vie pour ne plus jamais y penser.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 max-w-6xl mx-auto items-stretch">
+
+      <!-- 1. Essentiel (gratuit) -->
+      <div class="lift rounded-3xl border border-line bg-ink2 p-7 sm:p-9 reveal flex flex-col">
+        <div class="flex items-baseline justify-between">
+          <h3 class="display text-2xl sm:text-3xl" data-i18n="price.essential.name">Essentiel</h3>
+          <span class="eyebrow" data-i18n="price.essential.tag">gratuit</span>
         </div>
-
-        <div class="flex flex-col gap-3">
-          <button type="button" data-plan="lifetime" class="js-checkout btn btn-grad w-full justify-center py-3.5">
-            <span data-i18n="promo.cta.lifetime">Pro à vie — 24,99 € une fois</span>
-          </button>
-          <button type="button" data-plan="monthly" class="js-checkout btn btn-ghost w-full justify-center py-3.5">
-            <span data-i18n="promo.cta.monthly">Pro mensuel — 2,99 € / mois</span>
-          </button>
-          <a href="#tarif" class="text-center text-xs text-mist hover:text-cream transition font-mono underline decoration-dotted underline-offset-4 mt-1" data-i18n="promo.compare">comparer les trois formules</a>
-          <p class="text-[11px] text-mist text-center font-mono" data-i18n="promo.note">paiement Stripe · clé par email · annulable</p>
+        <div class="mt-5 sm:mt-6">
+          <span class="display text-5xl sm:text-6xl">0 €</span>
+          <span class="text-mist ml-2" data-i18n="price.lifetime">à vie</span>
         </div>
+        <p class="text-fog mt-4 sm:mt-5" data-i18n="price.essential.subtitle">Tout ce qui rend l'encoche utile. Sans IA, sans gestion de fichiers.</p>
 
+        <ul class="mt-6 sm:mt-8 space-y-2.5 text-fog text-sm flex-1">
+          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b1">Médias multi-source · paroles · visualizer</span></li>
+          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b2">Calendrier + Rappels</span></li>
+          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b3">HUD système · volume, luminosité, clavier</span></li>
+          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b4">Sneak Peek Engine</span></li>
+          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b5">Détections · appels, focus mode, capture</span></li>
+          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b6">Concentration complet · statistiques · sons</span></li>
+          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b7">Personnalisation visuelle</span></li>
+          <li class="flex gap-3 text-mist"><span class="text-mist">·</span> <span data-i18n="price.essential.b8">IA en direct ↗ Pro</span></li>
+          <li class="flex gap-3 text-mist"><span class="text-mist">·</span> <span data-i18n="price.essential.b9">Shelf, convertisseur, partage ↗ Pro</span></li>
+          <li class="flex gap-3 text-mist"><span class="text-mist">·</span> <span data-i18n="price.essential.b10">Presse-papiers historique ↗ Pro</span></li>
+        </ul>
+
+        <a href="install.html" class="btn btn-ghost mt-7 sm:mt-8 w-full justify-center" data-i18n="price.essential.cta">Télécharger NotchIA</a>
       </div>
+
+      <!-- 2. Pro Mensuel -->
+      <div class="lift rounded-3xl border border-line bg-ink2 p-7 sm:p-9 reveal flex flex-col">
+        <div class="flex items-baseline justify-between">
+          <h3 class="display text-2xl sm:text-3xl" data-i18n="price.monthly.name">Pro mensuel</h3>
+          <span class="eyebrow" data-i18n="price.monthly.tag">flexible</span>
+        </div>
+        <div class="mt-5 sm:mt-6">
+          <span class="display text-5xl sm:text-6xl">2,99 €</span>
+          <span class="text-mist ml-2" data-i18n="price.monthly.period">/ mois</span>
+        </div>
+        <p class="text-fog mt-4 sm:mt-5" data-i18n="price.monthly.subtitle">Tout l'Essentiel + les trois modules Pro. Annulable à tout moment.</p>
+
+        <ul class="mt-6 sm:mt-8 space-y-2.5 text-fog text-sm flex-1">
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span class="text-cream" data-i18n="price.monthly.b1">Tout l'Essentiel inclus</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n-html="price.monthly.b2"><b class="text-cream">IA en direct</b> · Claude Code, Codex</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.monthly.b3">Statistiques IA · jetons, cache, latence, quotas</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n-html="price.monthly.b4"><b class="text-cream">Gestion de fichiers</b> · Shelf, convertisseur 16 formats, Quick Share, QuickLook</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n-html="price.monthly.b5"><b class="text-cream">Presse-papiers historique</b> · illimité, épinglé, recherche</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.monthly.b6">1 Mac · mises à jour incluses</span></li>
+        </ul>
+
+        <button type="button" data-plan="monthly" class="js-checkout btn btn-ghost mt-7 sm:mt-8 w-full justify-center">
+          <span data-i18n="price.monthly.cta">Souscrire Pro mensuel</span>
+        </button>
+        <p class="text-[11px] text-mist mt-3 text-center font-mono" data-i18n="price.monthly.note">paiement sécurisé Stripe · annulable à tout moment</p>
+      </div>
+
+      <!-- 3. Pro à vie (recommandé) -->
+      <div class="lift rounded-3xl bg-cream text-ink2 p-7 sm:p-9 relative overflow-hidden reveal flex flex-col">
+        <span class="absolute -top-px left-10 right-10 h-px grad-bg"></span>
+        <div class="flex items-baseline justify-between">
+          <h3 class="display text-2xl sm:text-3xl" data-i18n="price.lifetime_pro.name">Pro à vie</h3>
+          <span class="text-[11px] uppercase tracking-[0.18em] font-mono px-2 py-1 rounded-full grad-bg text-white" data-i18n="price.lifetime_pro.tag">meilleur prix</span>
+        </div>
+        <div class="mt-5 sm:mt-6">
+          <span class="display text-5xl sm:text-6xl">24,99 €</span>
+          <span class="text-ink2/70 ml-2 text-sm sm:text-base" data-i18n="price.lifetime_pro.period">une fois</span>
+        </div>
+        <p class="text-ink2/70 mt-4 sm:mt-5" data-i18n="price.lifetime_pro.subtitle">Rentabilisé en moins de 9 mois face à l'abonnement.</p>
+
+        <ul class="mt-6 sm:mt-8 space-y-2.5 text-ink2/80 text-sm flex-1">
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span class="text-ink2" data-i18n-html="price.lifetime_pro.b1"><b>Tout le Pro mensuel</b>, sans limite de durée</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b2">IA en direct · Shelf · Convertisseur · Quick Share · Presse-papiers</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b3">2 Mac (au lieu d'1)</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b4">Toutes les mises à jour majeures à venir</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b5">Visualizers et icônes custom · couleurs illimitées</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b6">Support prioritaire FR</span></li>
+          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b7">Aucune récurrence, aucun renouvellement</span></li>
+        </ul>
+
+        <button type="button" data-plan="lifetime" class="js-checkout btn mt-7 sm:mt-8 w-full justify-center" style="background:#0B0D12; color:#EDE8DC;">
+          <span data-i18n="price.lifetime_pro.cta">Acheter Pro à vie</span>
+        </button>
+        <p class="text-xs text-ink2/50 mt-3 text-center font-mono" data-i18n="price.refund">Paiement unique sécurisé Stripe · clé par email</p>
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto mt-8 sm:mt-10 grid grid-cols-2 sm:flex sm:flex-wrap sm:items-center sm:justify-between gap-3 sm:gap-4 text-[11px] sm:text-xs text-mist font-mono reveal">
+      <span data-i18n="trust.signed">signé · hors App Store</span>
+      <span data-i18n="trust.notelemetry">aucune télémétrie</span>
+      <span data-i18n="trust.ondevice">IA on-device</span>
+      <span>FR · EN · DE · ES</span>
     </div>
   </div>
 </section>
@@ -1424,7 +1503,7 @@
 
     <div class="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14 reveal">
       <div>
-        <div class="eyebrow mb-4 sm:mb-5" data-i18n="medias.eyebrow">§03 — médias & musique</div>
+        <div class="eyebrow mb-4 sm:mb-5" data-i18n="medias.eyebrow">§04 — médias & musique</div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="medias.title1">Apple Music, Spotify, YouTube.</span>
           <br/>
@@ -1570,7 +1649,7 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
       <div class="lg:col-span-5 reveal">
-        <div class="eyebrow mb-5 sm:mb-6" data-i18n="agenda.eyebrow">§04 — calendrier & rappels</div>
+        <div class="eyebrow mb-5 sm:mb-6" data-i18n="agenda.eyebrow">§05 — calendrier & rappels</div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="agenda.title1">Votre prochain rendez-vous.</span>
           <br/>
@@ -1651,8 +1730,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-10 gap-y-10 items-start">
       <div class="lg:col-span-5 reveal">
         <div class="eyebrow mb-5 sm:mb-6 flex items-center gap-3 flex-wrap">
-          <span data-i18n="digest.eyebrow">§05 — digest IA on-device</span>
-          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider" style="background:linear-gradient(90deg,var(--violet),var(--cyan));color:#0B0D12" data-i18n="digest.tag_new">Nouveau · 2.8.0</span>
+          <span data-i18n="digest.eyebrow">§06 — digest IA on-device</span>
         </div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="digest.title1">Ton brief d'actu.</span>
@@ -1738,7 +1816,7 @@
 
     <div class="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14 reveal">
       <div>
-        <div class="eyebrow mb-4 sm:mb-5" data-i18n="prod.eyebrow">§06 — productivité</div>
+        <div class="eyebrow mb-4 sm:mb-5" data-i18n="prod.eyebrow">§07 — productivité</div>
         <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
           <span data-i18n="prod.title1">Une boîte à outils.</span>
           <br/>
@@ -1831,11 +1909,10 @@
         <p class="mt-5 text-fog text-sm" data-i18n="prod.shelf.desc">QuickLook intégré. Quick Share AirDrop / Mail / Messages.</p>
       </div>
 
-      <!-- Téléchargement vidéo (NEW 2.9.2) -->
+      <!-- Téléchargement vidéo -->
       <div class="lg:col-span-4 lift rounded-3xl border border-line bg-ink2 p-6 sm:p-8 reveal">
         <div class="flex items-center justify-between">
           <div class="eyebrow" data-i18n="prod.vid.eyebrow">Téléchargement vidéo</div>
-          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider" style="background:linear-gradient(90deg,var(--violet),var(--cyan));color:#0B0D12" data-i18n="prod.vid.tag">Nouveau · 2.9.2</span>
         </div>
         <h3 class="display text-xl sm:text-2xl mt-4 sm:mt-5" data-i18n="prod.vid.title">Un lien. MP4 ou MP3.</h3>
         <div class="mt-5 grid grid-cols-2 gap-2">
@@ -1879,7 +1956,7 @@
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="text-center mb-12 sm:mb-16 reveal">
-      <div class="eyebrow mb-4 sm:mb-5" data-i18n="sys.eyebrow">§07 — système réinventé</div>
+      <div class="eyebrow mb-4 sm:mb-5" data-i18n="sys.eyebrow">§08 — système réinventé</div>
       <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
         <span data-i18n="sys.title1">macOS,</span>
         <span class="display-italic grad-text" data-i18n="sys.title2">réinventé.</span>
@@ -2019,7 +2096,7 @@
   <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
     <div class="text-center mb-10 sm:mb-14 reveal">
-      <div class="eyebrow mb-4 sm:mb-5" data-i18n="behav.eyebrow">§08 — comportements & gestes</div>
+      <div class="eyebrow mb-4 sm:mb-5" data-i18n="behav.eyebrow">§09 — comportements & gestes</div>
       <h2 class="display text-cream" style="font-size: clamp(2rem, 6vw, 3.5rem);">
         <span data-i18n="behav.title1">L'encoche s'ouvre</span>
         <span class="display-italic grad-text" data-i18n="behav.title2">comme vous voulez.</span>
@@ -2053,7 +2130,7 @@
 ═══════════════════════════════════════════════════════════════════════ -->
 <section class="relative py-20 sm:py-32 border-t border-line">
   <div class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10 reveal">
-    <div class="eyebrow mb-6 sm:mb-8" data-i18n="manifesto.eyebrow">§09 — manifeste</div>
+    <div class="eyebrow mb-6 sm:mb-8" data-i18n="manifesto.eyebrow">§10 — manifeste</div>
     <p class="display text-cream leading-[1.1]" style="font-size: clamp(1.6rem, 4.5vw, 3rem);" data-i18n-html="manifesto.quote">
       <span class="text-mist">«</span> L'encoche n'est pas un défaut à cacher.
       C'est <span class="display-italic grad-text">la seule zone d'écran</span>
@@ -2073,115 +2150,39 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     §10 — PRICING
+     §CONVERSION — rappel d'achat avant la FAQ (la grille complète est en §03)
+     Volontairement SANS .reveal : ce bloc porte les prix, il doit rester
+     lisible sans JavaScript (crawlers IA, cf. conventions GEO).
 ═══════════════════════════════════════════════════════════════════════ -->
-<section id="tarif" class="relative py-20 sm:py-28 lg:py-36 border-t border-line">
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+<section id="passer-pro" class="relative py-14 sm:py-20 border-t border-line" aria-labelledby="promo-title">
+  <div class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10">
+    <div class="rounded-3xl border border-line bg-ink2 overflow-hidden">
+      <span class="block h-px grad-bg"></span>
+      <div class="p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
-    <div class="text-center mb-12 sm:mb-16 reveal">
-      <div class="eyebrow mb-4 sm:mb-5" data-i18n="price.section.eyebrow">§10 — tarif</div>
-      <h2 class="display text-cream" style="font-size: clamp(2.2rem, 7vw, 4rem);">
-        <span data-i18n="price.section.title1">Trois formules.</span>
-        <span class="display-italic grad-text" data-i18n="price.section.title2">À votre rythme.</span>
-      </h2>
-      <p class="mt-5 sm:mt-6 text-fog max-w-xl mx-auto" data-i18n="price.section.intro">
-        Gratuit à vie pour démarrer, mensuel pour tester l'IA quelques mois,
-        ou licence à vie pour ne plus jamais y penser.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 max-w-6xl mx-auto items-stretch">
-
-      <!-- 1. Essentiel (gratuit) -->
-      <div class="lift rounded-3xl border border-line bg-ink2 p-7 sm:p-9 reveal flex flex-col">
-        <div class="flex items-baseline justify-between">
-          <h3 class="display text-2xl sm:text-3xl" data-i18n="price.essential.name">Essentiel</h3>
-          <span class="eyebrow" data-i18n="price.essential.tag">gratuit</span>
+        <div>
+          <div class="eyebrow mb-4" data-i18n="promo.eyebrow">fonction Pro</div>
+          <h2 id="promo-title" class="display text-cream" style="font-size: clamp(1.7rem, 4vw, 2.4rem);">
+            <span data-i18n="promo.title1">L'IA en direct est</span>
+            <span class="display-italic grad-text" data-i18n="promo.title2">réservée à Pro.</span>
+          </h2>
+          <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n="promo.subtitle">
+            Le suivi de Claude Code et Codex, la Shelf, le convertisseur 16 formats et le presse-papiers historique s'activent avec une licence Pro. Tout le reste de NotchIA reste gratuit à vie.
+          </p>
         </div>
-        <div class="mt-5 sm:mt-6">
-          <span class="display text-5xl sm:text-6xl">0 €</span>
-          <span class="text-mist ml-2" data-i18n="price.lifetime">à vie</span>
+
+        <div class="flex flex-col gap-3">
+          <button type="button" data-plan="lifetime" class="js-checkout btn btn-grad w-full justify-center py-3.5">
+            <span data-i18n="promo.cta.lifetime">Pro à vie — 24,99 € une fois</span>
+          </button>
+          <button type="button" data-plan="monthly" class="js-checkout btn btn-ghost w-full justify-center py-3.5">
+            <span data-i18n="promo.cta.monthly">Pro mensuel — 2,99 € / mois</span>
+          </button>
+          <a href="#tarif" class="text-center text-xs text-mist hover:text-cream transition font-mono underline decoration-dotted underline-offset-4 mt-1" data-i18n="promo.compare">comparer les trois formules</a>
+          <p class="text-[11px] text-mist text-center font-mono" data-i18n="promo.note">paiement Stripe · clé par email · annulable</p>
         </div>
-        <p class="text-fog mt-4 sm:mt-5" data-i18n="price.essential.subtitle">Tout ce qui rend l'encoche utile. Sans IA, sans gestion de fichiers.</p>
 
-        <ul class="mt-6 sm:mt-8 space-y-2.5 text-fog text-sm flex-1">
-          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b1">Médias multi-source · paroles · visualizer</span></li>
-          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b2">Calendrier + Rappels</span></li>
-          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b3">HUD système · volume, luminosité, clavier</span></li>
-          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b4">Sneak Peek Engine</span></li>
-          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b5">Détections · appels, focus mode, capture</span></li>
-          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b6">Concentration complet · statistiques · sons</span></li>
-          <li class="flex gap-3"><span class="text-mint">✓</span> <span data-i18n="price.essential.b7">Personnalisation visuelle</span></li>
-          <li class="flex gap-3 text-mist"><span class="text-mist">·</span> <span data-i18n="price.essential.b8">IA en direct ↗ Pro</span></li>
-          <li class="flex gap-3 text-mist"><span class="text-mist">·</span> <span data-i18n="price.essential.b9">Shelf, convertisseur, partage ↗ Pro</span></li>
-          <li class="flex gap-3 text-mist"><span class="text-mist">·</span> <span data-i18n="price.essential.b10">Presse-papiers historique ↗ Pro</span></li>
-        </ul>
-
-        <a href="install.html" class="btn btn-ghost mt-7 sm:mt-8 w-full justify-center" data-i18n="price.essential.cta">Télécharger NotchIA</a>
       </div>
-
-      <!-- 2. Pro Mensuel -->
-      <div class="lift rounded-3xl border border-line bg-ink2 p-7 sm:p-9 reveal flex flex-col">
-        <div class="flex items-baseline justify-between">
-          <h3 class="display text-2xl sm:text-3xl" data-i18n="price.monthly.name">Pro mensuel</h3>
-          <span class="eyebrow" data-i18n="price.monthly.tag">flexible</span>
-        </div>
-        <div class="mt-5 sm:mt-6">
-          <span class="display text-5xl sm:text-6xl">2,99 €</span>
-          <span class="text-mist ml-2" data-i18n="price.monthly.period">/ mois</span>
-        </div>
-        <p class="text-fog mt-4 sm:mt-5" data-i18n="price.monthly.subtitle">Tout l'Essentiel + les trois modules Pro. Annulable à tout moment.</p>
-
-        <ul class="mt-6 sm:mt-8 space-y-2.5 text-fog text-sm flex-1">
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span class="text-cream" data-i18n="price.monthly.b1">Tout l'Essentiel inclus</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n-html="price.monthly.b2"><b class="text-cream">IA en direct</b> · Claude Code, Codex</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.monthly.b3">Statistiques IA · jetons, cache, latence, quotas</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n-html="price.monthly.b4"><b class="text-cream">Gestion de fichiers</b> · Shelf, convertisseur 16 formats, Quick Share, QuickLook</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n-html="price.monthly.b5"><b class="text-cream">Presse-papiers historique</b> · illimité, épinglé, recherche</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.monthly.b6">1 Mac · mises à jour incluses</span></li>
-        </ul>
-
-        <button type="button" data-plan="monthly" class="js-checkout btn btn-ghost mt-7 sm:mt-8 w-full justify-center">
-          <span data-i18n="price.monthly.cta">Souscrire Pro mensuel</span>
-        </button>
-        <p class="text-[11px] text-mist mt-3 text-center font-mono" data-i18n="price.monthly.note">paiement sécurisé Stripe · annulable à tout moment</p>
-      </div>
-
-      <!-- 3. Pro à vie (recommandé) -->
-      <div class="lift rounded-3xl bg-cream text-ink2 p-7 sm:p-9 relative overflow-hidden reveal flex flex-col">
-        <span class="absolute -top-px left-10 right-10 h-px grad-bg"></span>
-        <div class="flex items-baseline justify-between">
-          <h3 class="display text-2xl sm:text-3xl" data-i18n="price.lifetime_pro.name">Pro à vie</h3>
-          <span class="text-[11px] uppercase tracking-[0.18em] font-mono px-2 py-1 rounded-full grad-bg text-white" data-i18n="price.lifetime_pro.tag">meilleur prix</span>
-        </div>
-        <div class="mt-5 sm:mt-6">
-          <span class="display text-5xl sm:text-6xl">24,99 €</span>
-          <span class="text-ink2/70 ml-2 text-sm sm:text-base" data-i18n="price.lifetime_pro.period">une fois</span>
-        </div>
-        <p class="text-ink2/70 mt-4 sm:mt-5" data-i18n="price.lifetime_pro.subtitle">Rentabilisé en moins de 9 mois face à l'abonnement.</p>
-
-        <ul class="mt-6 sm:mt-8 space-y-2.5 text-ink2/80 text-sm flex-1">
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span class="text-ink2" data-i18n-html="price.lifetime_pro.b1"><b>Tout le Pro mensuel</b>, sans limite de durée</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b2">IA en direct · Shelf · Convertisseur · Quick Share · Presse-papiers</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b3">2 Mac (au lieu d'1)</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b4">Toutes les mises à jour majeures à venir</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b5">Visualizers et icônes custom · couleurs illimitées</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b6">Support prioritaire FR</span></li>
-          <li class="flex gap-3"><span class="grad-text font-bold">★</span> <span data-i18n="price.lifetime_pro.b7">Aucune récurrence, aucun renouvellement</span></li>
-        </ul>
-
-        <button type="button" data-plan="lifetime" class="js-checkout btn mt-7 sm:mt-8 w-full justify-center" style="background:#0B0D12; color:#EDE8DC;">
-          <span data-i18n="price.lifetime_pro.cta">Acheter Pro à vie</span>
-        </button>
-        <p class="text-xs text-ink2/50 mt-3 text-center font-mono" data-i18n="price.refund">Paiement unique sécurisé Stripe · clé par email</p>
-      </div>
-    </div>
-
-    <div class="max-w-5xl mx-auto mt-8 sm:mt-10 grid grid-cols-2 sm:flex sm:flex-wrap sm:items-center sm:justify-between gap-3 sm:gap-4 text-[11px] sm:text-xs text-mist font-mono reveal">
-      <span data-i18n="trust.signed">signé · hors App Store</span>
-      <span data-i18n="trust.notelemetry">aucune télémétrie</span>
-      <span data-i18n="trust.ondevice">IA on-device</span>
-      <span>FR · EN · DE · ES</span>
     </div>
   </div>
 </section>
@@ -2539,7 +2540,7 @@
       'meta.description': "NotchIA transforme l'encoche du MacBook en cockpit IA : suivi Claude Code/Codex, Apple Intelligence on-device, médias, calendrier, focus. Gratuit, macOS 15+.",
 
       // Pricing — section + bullets
-      'price.section.eyebrow': '§10 — tarif',
+      'price.section.eyebrow': '§03 — tarif',
       'price.section.title1': 'Trois formules.',
       'price.section.title2': 'À votre rythme.',
       'price.section.intro': "Gratuit à vie pour démarrer, mensuel pour tester l'IA quelques mois, ou licence à vie pour ne plus jamais y penser.",
@@ -2609,13 +2610,13 @@
       'ia.intro2': "Un point coloré sous l'encoche fermée par session active. Au clic, l'IDE concerné passe au premier plan.",
 
       // §03 Médias
-      'medias.eyebrow': '§03 — médias & musique',
+      'medias.eyebrow': '§04 — médias & musique',
       'medias.title1': 'Apple Music, Spotify, YouTube.',
       'medias.title2': 'La même barre.',
       'medias.intro': "Lecteur multi-source natif via Now Playing macOS — l'encoche fermée affiche la pochette, ouverte vous donne contrôles, paroles synchronisées et visualizer. Sneak peek discret au changement de morceau.",
 
       // §04 Agenda
-      'agenda.eyebrow': '§04 — calendrier & rappels',
+      'agenda.eyebrow': '§05 — calendrier & rappels',
       'agenda.title1': 'Votre prochain rendez-vous.',
       'agenda.title2': "Pas tout l'agenda.",
       'agenda.intro': "Vue jour défilante avec marqueur sous chaque date occupée. Vue mois en grille classique. Événements et rappels affichés côte à côte. Création directe depuis l'encoche.",
@@ -2625,7 +2626,7 @@
       'agenda.b4': 'Sélection des calendriers à afficher',
 
       // §05 Digest (NEW 2.8.0)
-      'digest.eyebrow': '§05 — digest IA on-device',
+      'digest.eyebrow': '§06 — digest IA on-device',
       'digest.title1': "Ton brief d'actu.",
       'digest.title2': 'Résumé sur ton Mac.',
       'digest.intro': "Tu colles tes flux RSS/Atom. Tu dis ce qui t'intéresse en langage naturel. Apple Intelligence fait le tri, résume, priorise — sans qu'aucun octet ne quitte ta machine.",
@@ -2635,13 +2636,13 @@
       'digest.b4': 'Cache 14 jours · 100 % local · zéro envoi externe',
       'digest.note': 'Requiert macOS 26+ pour Apple Intelligence. Sans, dégradation gracieuse : viewer brut sans résumé IA.',
       // §06 Productivité
-      'prod.eyebrow': '§06 — productivité',
+      'prod.eyebrow': '§07 — productivité',
       'prod.title1': 'Une boîte à outils.',
       'prod.title2': 'Pas une fenêtre.',
       'prod.intro': "Concentration, presse-papiers historique, étagère de fichiers, convertisseur, Quick Share, QuickLook — tous chargés à la demande dans l'encoche.",
 
       // §07 Système
-      'sys.eyebrow': '§07 — système réinventé',
+      'sys.eyebrow': '§08 — système réinventé',
       'sys.title1': 'macOS,',
       'sys.title2': 'réinventé.',
       'sys.intro': "NotchIA remplace les HUD natifs, fait défiler des mini-widgets dans l'encoche fermée, et détecte automatiquement appels, focus mode et enregistrements.",
@@ -2658,7 +2659,7 @@
       'perso.b5': 'Retour haptique trackpad',
 
       // §08 Comportements
-      'behav.eyebrow': '§08 — comportements & gestes',
+      'behav.eyebrow': '§09 — comportements & gestes',
       'behav.title1': "L'encoche s'ouvre",
       'behav.title2': 'comme vous voulez.',
       'behav.c1.title': 'Survol',
@@ -2671,7 +2672,7 @@
       'behav.c4.desc': 'Mémorise le dernier onglet ouvert. Affichage sur écran verrouillé.',
 
       // §09 Manifeste
-      'manifesto.eyebrow': '§09 — manifeste',
+      'manifesto.eyebrow': '§10 — manifeste',
       'manifesto.quote': '<span class="text-mist">«</span> L\'encoche n\'est pas un défaut à cacher. C\'est <span class="display-italic grad-text">la seule zone d\'écran</span> qui ne se ferme jamais. Autant lui confier ce qui compte. <span class="text-mist">»</span>',
       'manifesto.role': 'créateur · NotchIA',
 
@@ -2807,7 +2808,6 @@
       'agenda.day.l': 'L', 'agenda.day.m1': 'M', 'agenda.day.m2': 'M', 'agenda.day.j': 'J', 'agenda.day.v': 'V', 'agenda.day.s': 'S', 'agenda.day.d': 'D',
 
       // === Digest mock (§05) ===
-      'digest.tag_new': 'Nouveau · 2.8.0',
       'digest.brief_title': 'Digest du matin',
       'digest.brief_meta': '15 mai · 07:42 · 4 sources · 18 items → 3 résumés',
       'digest.topic_ai_video': 'IA vidéo',
@@ -2835,7 +2835,7 @@
       'prod.clip.cache': 'cache : 500 entrées',
       'prod.shelf.title': 'Glissez. Déposez. Oubliez.',
       'prod.shelf.desc': 'QuickLook intégré. Quick Share AirDrop / Mail / Messages.',
-      'prod.vid.eyebrow': 'Téléchargement vidéo', 'prod.vid.tag': 'Nouveau · 2.9.2', 'prod.vid.title': 'Un lien. MP4 ou MP3.', 'prod.vid.desc': 'Colle un lien, récupère un MP4 HD ou un MP3 — depuis 1800+ sites. 100% local.',
+      'prod.vid.eyebrow': 'Téléchargement vidéo', 'prod.vid.title': 'Un lien. MP4 ou MP3.', 'prod.vid.desc': 'Colle un lien, récupère un MP4 HD ou un MP3 — depuis 1800+ sites. 100% local.',
       'prod.conv.eyebrow': 'Convertisseur',
       'prod.conv.title': 'Un format. Un clic.',
       'prod.conv.desc': 'Images, PDF, formats divers. Traitement local.',
@@ -2918,7 +2918,7 @@
       'meta.description': 'NotchIA turns the MacBook notch into an AI productivity cockpit: Claude Code/Codex tracking, on-device Apple Intelligence, media, calendar, focus. Free, macOS 15+.',
 
       // Pricing
-      'price.section.eyebrow': '§10 — pricing',
+      'price.section.eyebrow': '§03 — pricing',
       'price.section.title1': 'Three plans.',
       'price.section.title2': 'Your pace.',
       'price.section.intro': 'Free forever to start, monthly to try the AI for a few months, or lifetime so you never have to think about it again.',
@@ -2988,13 +2988,13 @@
       'ia.intro2': 'A colored dot under the closed notch per active session. One click brings the right IDE to the front.',
 
       // §03 Media
-      'medias.eyebrow': '§03 — media & music',
+      'medias.eyebrow': '§04 — media & music',
       'medias.title1': 'Apple Music, Spotify, YouTube.',
       'medias.title2': 'One control bar.',
       'medias.intro': 'Native multi-source player via macOS Now Playing — closed notch shows the album art, opened gives you controls, synced lyrics and visualizer. Discreet sneak peek on track change.',
 
       // §04 Calendar
-      'agenda.eyebrow': '§04 — calendar & reminders',
+      'agenda.eyebrow': '§05 — calendar & reminders',
       'agenda.title1': 'Just the next thing.',
       'agenda.title2': 'Not the whole calendar.',
       'agenda.intro': 'Scrollable day view with a marker under every busy date. Classic month grid. Events and reminders side by side. Create directly from the notch.',
@@ -3004,7 +3004,7 @@
       'agenda.b4': 'Pick which calendars to show',
 
       // §05 Digest (NEW 2.8.0)
-      'digest.eyebrow': '§05 — on-device AI digest',
+      'digest.eyebrow': '§06 — on-device AI digest',
       'digest.title1': 'Your news brief.',
       'digest.title2': 'Summarized on your Mac.',
       'digest.intro': "You paste your RSS/Atom feeds. You say what matters in plain language. Apple Intelligence filters, summarizes, prioritizes — without a single byte leaving your machine.",
@@ -3014,13 +3014,13 @@
       'digest.b4': '14-day cache · 100% local · zero external upload',
       'digest.note': 'Requires macOS 26+ for Apple Intelligence. Without it, graceful fallback: raw viewer without AI summary.',
       // §06 Productivity
-      'prod.eyebrow': '§06 — productivity',
+      'prod.eyebrow': '§07 — productivity',
       'prod.title1': 'A toolkit.',
       'prod.title2': 'Not a window.',
       'prod.intro': 'Concentration, clipboard history, file shelf, converter, Quick Share, QuickLook — all loaded on demand inside the notch.',
 
       // §07 System
-      'sys.eyebrow': '§07 — system reinvented',
+      'sys.eyebrow': '§08 — system reinvented',
       'sys.title1': 'macOS,',
       'sys.title2': 'reimagined.',
       'sys.intro': 'NotchIA replaces native HUDs, rotates mini-widgets inside the closed notch, and automatically detects calls, focus mode and recordings.',
@@ -3037,7 +3037,7 @@
       'perso.b5': 'Optional trackpad haptics',
 
       // §08 Behaviors
-      'behav.eyebrow': '§08 — behaviors & gestures',
+      'behav.eyebrow': '§09 — behaviors & gestures',
       'behav.title1': 'The notch opens',
       'behav.title2': 'how you want.',
       'behav.c1.title': 'Hover',
@@ -3050,7 +3050,7 @@
       'behav.c4.desc': 'Remembers the last opened tab. Shows on locked screen.',
 
       // §09 Manifesto
-      'manifesto.eyebrow': '§09 — manifesto',
+      'manifesto.eyebrow': '§10 — manifesto',
       'manifesto.quote': '<span class="text-mist">"</span> The notch is not a flaw to hide. It\'s <span class="display-italic grad-text">the only screen area</span> that never closes. Might as well give it what matters. <span class="text-mist">"</span>',
       'manifesto.role': 'creator · NotchIA',
 
@@ -3186,7 +3186,6 @@
       'agenda.day.l': 'M', 'agenda.day.m1': 'T', 'agenda.day.m2': 'W', 'agenda.day.j': 'T', 'agenda.day.v': 'F', 'agenda.day.s': 'S', 'agenda.day.d': 'S',
 
       // === Digest mock (§05) ===
-      'digest.tag_new': 'New · 2.8.0',
       'digest.brief_title': 'Morning Digest',
       'digest.brief_meta': 'May 15 · 07:42 · 4 sources · 18 items → 3 summaries',
       'digest.topic_ai_video': 'AI video',
@@ -3214,7 +3213,7 @@
       'prod.clip.cache': 'cache: 500 entries',
       'prod.shelf.title': 'Drag. Drop. Forget.',
       'prod.shelf.desc': 'Built-in QuickLook. Quick Share AirDrop / Mail / Messages.',
-      'prod.vid.eyebrow': 'Video Download', 'prod.vid.tag': 'New · 2.9.2', 'prod.vid.title': 'One link. MP4 or MP3.', 'prod.vid.desc': 'Paste a link, get an HD MP4 or an MP3 — from 1800+ sites. 100% local.',
+      'prod.vid.eyebrow': 'Video Download', 'prod.vid.title': 'One link. MP4 or MP3.', 'prod.vid.desc': 'Paste a link, get an HD MP4 or an MP3 — from 1800+ sites. 100% local.',
       'prod.conv.eyebrow': 'Converter',
       'prod.conv.title': 'One format. One click.',
       'prod.conv.desc': 'Images, PDF, various formats. Local processing.',
@@ -3297,7 +3296,7 @@
       'meta.description': 'NotchIA convierte la muesca del MacBook en una cabina de IA: seguimiento Claude Code/Codex, Apple Intelligence on-device, medios, calendario. Gratis, macOS 15+.',
 
       // Pricing
-      'price.section.eyebrow': '§10 — precio',
+      'price.section.eyebrow': '§03 — precio',
       'price.section.title1': 'Tres planes.',
       'price.section.title2': 'A tu ritmo.',
       'price.section.intro': 'Gratis para siempre para empezar, mensual para probar la IA unos meses, o licencia de por vida para no pensar más en ello.',
@@ -3367,13 +3366,13 @@
       'ia.intro2': 'Un punto de color bajo la muesca cerrada por sesión activa. Al hacer clic, el IDE pasa al primer plano.',
 
       // §03 Medios
-      'medias.eyebrow': '§03 — medios & música',
+      'medias.eyebrow': '§04 — medios & música',
       'medias.title1': 'Apple Music, Spotify, YouTube.',
       'medias.title2': 'La misma barra.',
       'medias.intro': 'Reproductor multifuente nativo vía Now Playing macOS — la muesca cerrada muestra la portada, abierta da controles, letras sincronizadas y visualizador. Sneak peek discreto al cambiar de canción.',
 
       // §04 Calendario
-      'agenda.eyebrow': '§04 — calendario & recordatorios',
+      'agenda.eyebrow': '§05 — calendario & recordatorios',
       'agenda.title1': 'Tu próxima cita.',
       'agenda.title2': 'No toda la agenda.',
       'agenda.intro': 'Vista de día desplazable con marcador bajo cada fecha ocupada. Vista de mes en cuadrícula clásica. Eventos y recordatorios uno al lado del otro. Creación directa desde la muesca.',
@@ -3383,7 +3382,7 @@
       'agenda.b4': 'Selección de calendarios a mostrar',
 
       // §05 Digest (NEW 2.8.0)
-      'digest.eyebrow': '§05 — digest IA on-device',
+      'digest.eyebrow': '§06 — digest IA on-device',
       'digest.title1': 'Tu briefing de actualidad.',
       'digest.title2': 'Resumido en tu Mac.',
       'digest.intro': "Pegas tus feeds RSS/Atom. Indicas lo que te interesa en lenguaje natural. Apple Intelligence filtra, resume, prioriza — sin que un solo byte salga de tu máquina.",
@@ -3393,13 +3392,13 @@
       'digest.b4': 'Caché 14 días · 100% local · cero envío externo',
       'digest.note': 'Requiere macOS 26+ para Apple Intelligence. Sin él, degradación elegante: viewer sin resumen IA.',
       // §06 Productividad
-      'prod.eyebrow': '§06 — productividad',
+      'prod.eyebrow': '§07 — productividad',
       'prod.title1': 'Una caja de herramientas.',
       'prod.title2': 'No una ventana.',
       'prod.intro': 'Concentration, historial del portapapeles, estantería de archivos, conversor, Quick Share, QuickLook — todos cargados bajo demanda en la muesca.',
 
       // §07 Sistema
-      'sys.eyebrow': '§07 — sistema reinventado',
+      'sys.eyebrow': '§08 — sistema reinventado',
       'sys.title1': 'macOS,',
       'sys.title2': 'reimaginado.',
       'sys.intro': 'NotchIA reemplaza los HUD nativos, hace rotar mini-widgets en la muesca cerrada y detecta automáticamente llamadas, modo focus y grabaciones.',
@@ -3416,7 +3415,7 @@
       'perso.b5': 'Háptica del trackpad opcional',
 
       // §08 Comportamientos
-      'behav.eyebrow': '§08 — comportamientos & gestos',
+      'behav.eyebrow': '§09 — comportamientos & gestos',
       'behav.title1': 'La muesca se abre',
       'behav.title2': 'como tú quieras.',
       'behav.c1.title': 'Hover',
@@ -3429,7 +3428,7 @@
       'behav.c4.desc': 'Recuerda la última pestaña abierta. Visible en pantalla bloqueada.',
 
       // §09 Manifiesto
-      'manifesto.eyebrow': '§09 — manifiesto',
+      'manifesto.eyebrow': '§10 — manifiesto',
       'manifesto.quote': '<span class="text-mist">«</span> La muesca no es un defecto que ocultar. Es <span class="display-italic grad-text">la única zona de la pantalla</span> que nunca se cierra. Mejor confiarle lo que importa. <span class="text-mist">»</span>',
       'manifesto.role': 'creador · NotchIA',
 
@@ -3565,7 +3564,6 @@
       'agenda.day.l': 'L', 'agenda.day.m1': 'M', 'agenda.day.m2': 'X', 'agenda.day.j': 'J', 'agenda.day.v': 'V', 'agenda.day.s': 'S', 'agenda.day.d': 'D',
 
       // === Digest mock (§05) ===
-      'digest.tag_new': 'Nuevo · 2.8.0',
       'digest.brief_title': 'Digest matutino',
       'digest.brief_meta': '15 mayo · 07:42 · 4 fuentes · 18 ítems → 3 resúmenes',
       'digest.topic_ai_video': 'IA vídeo',
@@ -3593,7 +3591,7 @@
       'prod.clip.cache': 'caché: 500 entradas',
       'prod.shelf.title': 'Arrastra. Suelta. Olvida.',
       'prod.shelf.desc': 'QuickLook integrado. Quick Share AirDrop / Mail / Messages.',
-      'prod.vid.eyebrow': 'Descarga de vídeos', 'prod.vid.tag': 'Nuevo · 2.9.2', 'prod.vid.title': 'Un enlace. MP4 o MP3.', 'prod.vid.desc': 'Pega un enlace, obtén un MP4 HD o un MP3 — de más de 1800 sitios. 100% local.',
+      'prod.vid.eyebrow': 'Descarga de vídeos', 'prod.vid.title': 'Un enlace. MP4 o MP3.', 'prod.vid.desc': 'Pega un enlace, obtén un MP4 HD o un MP3 — de más de 1800 sitios. 100% local.',
       'prod.conv.eyebrow': 'Conversor',
       'prod.conv.title': 'Un formato. Un clic.',
       'prod.conv.desc': 'Imágenes, PDF, formatos diversos. Procesamiento local.',
@@ -3676,7 +3674,7 @@
       'meta.description': 'NotchIA macht aus dem MacBook-Notch ein KI-Cockpit: Claude-Code/Codex-Tracking, On-Device Apple Intelligence, Medien, Kalender, Focus. Gratis, macOS 15+.',
 
       // Pricing
-      'price.section.eyebrow': '§10 — preis',
+      'price.section.eyebrow': '§03 — preis',
       'price.section.title1': 'Drei Pläne.',
       'price.section.title2': 'In Ihrem Tempo.',
       'price.section.intro': 'Kostenlos für immer zum Einstieg, monatlich um die KI ein paar Monate zu testen, oder lebenslange Lizenz, damit Sie nie wieder daran denken müssen.',
@@ -3746,13 +3744,13 @@
       'ia.intro2': 'Ein farbiger Punkt unter der geschlossenen Aussparung pro aktiver Sitzung. Per Klick rückt die zugehörige IDE in den Vordergrund.',
 
       // §03 Medien
-      'medias.eyebrow': '§03 — Medien & Musik',
+      'medias.eyebrow': '§04 — Medien & Musik',
       'medias.title1': 'Apple Music, Spotify, YouTube.',
       'medias.title2': 'Eine Leiste.',
       'medias.intro': 'Nativer Multi-Source-Player über macOS Now Playing — die geschlossene Aussparung zeigt das Cover, geöffnet bietet sie Steuerung, synchronisierte Songtexte und Visualizer. Dezenter Sneak Peek beim Songwechsel.',
 
       // §04 Kalender
-      'agenda.eyebrow': '§04 — Kalender & Erinnerungen',
+      'agenda.eyebrow': '§05 — Kalender & Erinnerungen',
       'agenda.title1': 'Nur das Nächste.',
       'agenda.title2': 'Nicht der ganze Kalender.',
       'agenda.intro': 'Scrollbare Tagesansicht mit Marker unter jedem belegten Datum. Klassische Monats-Rasteransicht. Termine und Erinnerungen nebeneinander. Direktes Erstellen aus der Aussparung.',
@@ -3762,7 +3760,7 @@
       'agenda.b4': 'Auswahl der angezeigten Kalender',
 
       // §05 Digest (NEW 2.8.0)
-      'digest.eyebrow': '§05 — On-Device-KI-Digest',
+      'digest.eyebrow': '§06 — On-Device-KI-Digest',
       'digest.title1': 'Dein News-Briefing.',
       'digest.title2': 'Auf deinem Mac zusammengefasst.',
       'digest.intro': "Du fügst deine RSS/Atom-Feeds ein. Du sagst in natürlicher Sprache, was zählt. Apple Intelligence filtert, fasst zusammen, priorisiert — ohne dass ein einziges Byte deine Maschine verlässt.",
@@ -3772,13 +3770,13 @@
       'digest.b4': '14-Tage-Cache · 100% lokal · null externer Upload',
       'digest.note': 'Benötigt macOS 26+ für Apple Intelligence. Ansonsten elegante Degradation: Roh-Viewer ohne KI-Zusammenfassung.',
       // §06 Produktivität
-      'prod.eyebrow': '§06 — Produktivität',
+      'prod.eyebrow': '§07 — Produktivität',
       'prod.title1': 'Ein Werkzeugkasten.',
       'prod.title2': 'Kein Fenster.',
       'prod.intro': 'Concentration, Zwischenablage-Verlauf, Datei-Shelf, Konverter, Quick Share, QuickLook — alle bei Bedarf in die Aussparung geladen.',
 
       // §07 System
-      'sys.eyebrow': '§07 — System neu erfunden',
+      'sys.eyebrow': '§08 — System neu erfunden',
       'sys.title1': 'macOS,',
       'sys.title2': 'neu gedacht.',
       'sys.intro': 'NotchIA ersetzt native HUDs, lässt Mini-Widgets in der geschlossenen Aussparung rotieren und erkennt automatisch Anrufe, Fokusmodus und Aufnahmen.',
@@ -3795,7 +3793,7 @@
       'perso.b5': 'Optionales Trackpad-Haptik',
 
       // §08 Verhalten
-      'behav.eyebrow': '§08 — Verhalten & Gesten',
+      'behav.eyebrow': '§09 — Verhalten & Gesten',
       'behav.title1': 'Die Aussparung öffnet sich,',
       'behav.title2': 'wie Sie wollen.',
       'behav.c1.title': 'Hover',
@@ -3808,7 +3806,7 @@
       'behav.c4.desc': 'Merkt sich den zuletzt geöffneten Tab. Anzeige auf gesperrtem Bildschirm.',
 
       // §09 Manifest
-      'manifesto.eyebrow': '§09 — Manifest',
+      'manifesto.eyebrow': '§10 — Manifest',
       'manifesto.quote': '<span class="text-mist">„</span> Die Aussparung ist kein Makel zum Verstecken. Sie ist <span class="display-italic grad-text">der einzige Bildschirmbereich</span>, der sich nie schließt. Geben Sie ihr also, was zählt. <span class="text-mist">"</span>',
       'manifesto.role': 'Schöpfer · NotchIA',
 
@@ -3944,7 +3942,6 @@
       'agenda.day.l': 'M', 'agenda.day.m1': 'D', 'agenda.day.m2': 'M', 'agenda.day.j': 'D', 'agenda.day.v': 'F', 'agenda.day.s': 'S', 'agenda.day.d': 'S',
 
       // === Digest Mock (§05) ===
-      'digest.tag_new': 'Neu · 2.8.0',
       'digest.brief_title': 'Morgen-Digest',
       'digest.brief_meta': '15. Mai · 07:42 · 4 Quellen · 18 Items → 3 Zusammenfassungen',
       'digest.topic_ai_video': 'KI-Video',
@@ -3972,7 +3969,7 @@
       'prod.clip.cache': 'Cache: 500 Einträge',
       'prod.shelf.title': 'Ziehen. Ablegen. Vergessen.',
       'prod.shelf.desc': 'QuickLook integriert. Quick Share AirDrop / Mail / Messages.',
-      'prod.vid.eyebrow': 'Video-Download', 'prod.vid.tag': 'Neu · 2.9.2', 'prod.vid.title': 'Ein Link. MP4 oder MP3.', 'prod.vid.desc': 'Link einfügen, HD-MP4 oder MP3 erhalten — von über 1800 Websites. 100% lokal.',
+      'prod.vid.eyebrow': 'Video-Download', 'prod.vid.title': 'Ein Link. MP4 oder MP3.', 'prod.vid.desc': 'Link einfügen, HD-MP4 oder MP3 erhalten — von über 1800 Websites. 100% lokal.',
       'prod.conv.eyebrow': 'Konverter',
       'prod.conv.title': 'Ein Format. Ein Klick.',
       'prod.conv.desc': 'Bilder, PDF, verschiedene Formate. Lokale Verarbeitung.',

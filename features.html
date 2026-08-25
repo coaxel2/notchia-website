@@ -185,10 +185,10 @@
     <picture><source srcset="logo.avif" type="image/avif" /><img src="logo.png" alt="NotchIA" class="h-8 w-8" width="32" height="32" /></picture>
     <span class="font-display text-xl">NotchIA</span>
   </a>
-  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
-    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
+  <nav class="flex flex-wrap justify-end items-center gap-3 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream hidden sm:inline" data-i18n="nav.home">Accueil</a>
     <a href="/features" class="nav-current" data-i18n="nav.features">Fonctionnalités</a>
-    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+    <a href="/pricing" data-i18n="nav.pro" style="background:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%);color:#fff;padding:.5rem .95rem;border-radius:999px;font-weight:600;white-space:nowrap">Passer à Pro</a>
     <select id="lang-switch" class="lang-sw" aria-label="Language">
       <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
     </select>
@@ -278,7 +278,7 @@
   </div>
 
   <!-- DIGEST -->
-  <h2 data-i18n-html="dig.title">Onglet <span class="grad-text">Digest</span> <span class="badge-new">Nouveau · 2.8.0</span> <span class="badge-free">Gratuit</span></h2>
+  <h2 data-i18n-html="dig.title">Onglet <span class="grad-text">Digest</span> <span class="badge-free">Gratuit</span></h2>
   <p class="lede" data-i18n="dig.lede">Ton brief d'actualité matinal, résumé par ton Mac, jamais par un serveur.</p>
   <figure class="shot-fig"><picture><source srcset="press-kit/screenshots/02.webp" type="image/webp" /><img src="press-kit/screenshots/02.png" width="1100" height="492" loading="lazy" decoding="async" data-i18n-alt="shot.dig" alt="L'onglet Digest affichant un résumé d'actualité généré en local par Apple Intelligence, à côté de la liste des sources RSS." /></picture></figure>
   <div class="feature-grid cols-2">
@@ -454,7 +454,7 @@
       </ul>
     </div>
     <div class="callout">
-      <h3 data-i18n-html="shelf.h5">Téléchargement vidéo <span class="badge-new">Nouveau · 2.9.2</span></h3>
+      <h3 data-i18n-html="shelf.h5">Téléchargement vidéo</h3>
       <ul>
         <li data-i18n="shelf.b5_1">Colle un lien, choisis MP4 ou MP3, télécharge.</li>
         <li data-i18n-html="shelf.b5_2"><strong>MP4</strong> : la plus haute résolution, lisible partout (H.264/AAC, QuickTime/Aperçu).</li>
@@ -611,7 +611,7 @@
   const I18N = {
     fr: {'shot.iacode':'L\'onglet IA de NotchIA affichant une session Claude Code en direct : modèle, jetons consommés et état d\'activité.','shot.dig':'L\'onglet Digest affichant un résumé d\'actualité généré en local par Apple Intelligence, à côté de la liste des sources RSS.','shot.shelf':'L\'onglet Étagère avec ses zones de dépôt : conversion de fichier, résumé de PDF et téléchargement de vidéo.','shot.foc':'Une session Concentration en cours, avec le temps restant, le cycle et les statistiques de la semaine.','shot.cal':'L\'onglet Calendrier avec la grille du mois et la liste des prochains évènements.',
       'meta.title':'Fonctionnalités NotchIA — Digest IA, Concentration, IA Code, Shelf','meta.description':"4 onglets gratuits (Musique, Calendrier, Digest IA, Concentration) et 3 Pro (Shelf, IA Code, Presse-papier). Résumés IA on-device. macOS 15+.",
-      'nav.home':'Accueil','nav.features':'Fonctionnalités','nav.pricing':'Tarifs',
+      'nav.home':'Accueil','nav.features':'Fonctionnalités','nav.pricing':'Tarifs','nav.pro':'Passer à Pro',
       'hero.title':'Toutes les <span class="grad-text">fonctionnalités</span>',
       'hero.lead1':"L'encoche de ton Mac devient un véritable assistant. Musique, calendrier, digest d'actualité IA, concentration et toutes les détections live sont <strong class=\"text-cream\">gratuits</strong>.",
       'hero.lead2':'Passe Pro <span class="badge-pro">💎 Pro</span> pour débloquer la Shelf (drag-drop universel + résumé IA de fichiers), le suivi temps réel de ton assistant de code et l\'historique presse-papier.',
@@ -647,7 +647,7 @@
       'cal.b2_2':"Masquer les évènements « toute la journée » pour ne garder que ce qui a une heure.",
       'cal.b2_3':"Titres complets ou tronqués selon ta densité d'affichage.",
       'cal.b2_4':'Rappels intégrés depuis Reminders.app, dans la même vue.',
-      'dig.title':'Onglet <span class="grad-text">Digest</span> <span class="badge-new">Nouveau · 2.8.0</span> <span class="badge-free">Gratuit</span>',
+      'dig.title':'Onglet <span class="grad-text">Digest</span> <span class="badge-free">Gratuit</span>',
       'dig.lede':"Ton brief d'actualité matinal, résumé par ton Mac, jamais par un serveur.",
       'dig.h1':'Tes flux, ton sujet',
       'dig.b1_1':"Ajoute n'importe quel flux RSS ou Atom (blogs, médias, newsletters).",
@@ -741,7 +741,7 @@
       'shelf.b4_4':'Bouton « Copier » pour récupérer le texte.',
       'shelf.b4_5':'Apple Intelligence Foundation Models, 100% local.',
       'shelf.note':'<em>Note :</em> le résumé IA de fichier nécessite macOS 26+. Sans Apple Intelligence, la Shelf garde le drag-drop, le Quick Share et le convertisseur.',
-      'shelf.h5':'Téléchargement vidéo <span class="badge-new">Nouveau · 2.9.2</span>',
+      'shelf.h5':'Téléchargement vidéo',
       'shelf.b5_1':'Colle un lien, choisis MP4 ou MP3, télécharge.',
       'shelf.b5_2':'<strong>MP4</strong> : la plus haute résolution, lisible partout (H.264/AAC, QuickTime/Aperçu).',
       'shelf.b5_3':'<strong>MP3</strong> : extraction audio meilleure qualité.',
@@ -804,7 +804,7 @@
     },
     en: {'shot.iacode':'NotchIA AI tab showing a live Claude Code session: model, token usage and activity state.','shot.dig':'Digest tab showing a news summary generated on-device by Apple Intelligence, next to the RSS source list.','shot.shelf':'Shelf tab with its drop zones: file conversion, PDF summary and video download.','shot.foc':'A Focus session in progress, with remaining time, cycle and weekly statistics.','shot.cal':'Calendar tab with the month grid and the list of upcoming events.',
       'meta.title':'NotchIA Features — AI Digest, Focus, AI Code, Shelf','meta.description':"4 free tabs (Music, Calendar, AI Digest, Focus) and 3 Pro (Shelf, AI Code, Clipboard). On-device AI summaries. macOS 15+.",
-      'nav.home':'Home','nav.features':'Features','nav.pricing':'Pricing',
+      'nav.home':'Home','nav.features':'Features','nav.pricing':'Pricing','nav.pro':'Go Pro',
       'hero.title':'All the <span class="grad-text">features</span>',
       'hero.lead1':'Your Mac\'s notch becomes a real assistant. Music, calendar, AI news digest, focus and all live detections are <strong class="text-cream">free</strong>.',
       'hero.lead2':'Go Pro <span class="badge-pro">💎 Pro</span> to unlock the Shelf (universal drag-drop + AI file summaries), real-time tracking of your code assistant, and clipboard history.',
@@ -840,7 +840,7 @@
       'cal.b2_2':'Hide "all-day" events to keep only timed ones.',
       'cal.b2_3':'Full or truncated titles depending on your display density.',
       'cal.b2_4':'Reminders integrated from Reminders.app, in the same view.',
-      'dig.title':'<span class="grad-text">Digest</span> tab <span class="badge-new">New · 2.8.0</span> <span class="badge-free">Free</span>',
+      'dig.title':'<span class="grad-text">Digest</span> tab <span class="badge-free">Free</span>',
       'dig.lede':'Your morning news brief, summarized by your Mac, never by a server.',
       'dig.h1':'Your feeds, your topic',
       'dig.b1_1':'Add any RSS or Atom feed (blogs, media, newsletters).',
@@ -934,7 +934,7 @@
       'shelf.b4_4':'"Copy" button to grab the text.',
       'shelf.b4_5':'Apple Intelligence Foundation Models, 100% local.',
       'shelf.note':'<em>Note:</em> AI file summary requires macOS 26+. Without Apple Intelligence, Shelf keeps drag-drop, Quick Share and the converter.',
-      'shelf.h5':'Video Download <span class="badge-new">New · 2.9.2</span>',
+      'shelf.h5':'Video Download',
       'shelf.b5_1':'Paste a link, pick MP4 or MP3, download.',
       'shelf.b5_2':'<strong>MP4</strong>: highest available resolution, plays everywhere (H.264/AAC, QuickTime/Preview).',
       'shelf.b5_3':'<strong>MP3</strong>: best-quality audio extraction.',
@@ -997,7 +997,7 @@
     },
     es: {'shot.iacode':'La pestaña IA de NotchIA con una sesión de Claude Code en directo: modelo, tokens consumidos y estado de actividad.','shot.dig':'La pestaña Digest con un resumen de noticias generado localmente por Apple Intelligence, junto a la lista de fuentes RSS.','shot.shelf':'La pestaña Estantería con sus zonas de arrastre: conversión de archivos, resumen de PDF y descarga de vídeo.','shot.foc':'Una sesión de Concentración en curso, con el tiempo restante, el ciclo y las estadísticas de la semana.','shot.cal':'La pestaña Calendario con la cuadrícula del mes y la lista de próximos eventos.',
       'meta.title':'Funciones de NotchIA — Digest IA, Concentración, IA Code, Shelf','meta.description':"4 pestañas gratis (Música, Calendario, Digest IA, Concentración) y 3 Pro (Shelf, IA Code, Portapapeles). Resúmenes IA on-device. macOS 15+.",
-      'nav.home':'Inicio','nav.features':'Funcionalidades','nav.pricing':'Precios',
+      'nav.home':'Inicio','nav.features':'Funcionalidades','nav.pricing':'Precios','nav.pro':'Pasar a Pro',
       'hero.title':'Todas las <span class="grad-text">funcionalidades</span>',
       'hero.lead1':'La muesca de tu Mac se convierte en un verdadero asistente. Música, calendario, resumen de actualidad IA, concentración y todas las detecciones en vivo son <strong class="text-cream">gratis</strong>.',
       'hero.lead2':'Pasa a Pro <span class="badge-pro">💎 Pro</span> para desbloquear el Shelf (drag-drop universal + resumen IA de archivos), el seguimiento en tiempo real de tu asistente de código y el historial del portapapeles.',
@@ -1033,7 +1033,7 @@
       'cal.b2_2':'Oculta los eventos de «todo el día» para quedarte solo con los que tienen hora.',
       'cal.b2_3':'Títulos completos o truncados según tu densidad de visualización.',
       'cal.b2_4':'Recordatorios integrados desde Reminders.app, en la misma vista.',
-      'dig.title':'Pestaña <span class="grad-text">Digest</span> <span class="badge-new">Nuevo · 2.8.0</span> <span class="badge-free">Gratis</span>',
+      'dig.title':'Pestaña <span class="grad-text">Digest</span> <span class="badge-free">Gratis</span>',
       'dig.lede':'Tu brief matinal, resumido por tu Mac, nunca por un servidor.',
       'dig.h1':'Tus feeds, tu tema',
       'dig.b1_1':'Añade cualquier feed RSS o Atom (blogs, medios, newsletters).',
@@ -1127,7 +1127,7 @@
       'shelf.b4_4':'Botón «Copiar» para recuperar el texto.',
       'shelf.b4_5':'Apple Intelligence Foundation Models, 100% local.',
       'shelf.note':'<em>Nota:</em> el resumen IA de archivos requiere macOS 26+. Sin Apple Intelligence, Shelf conserva el drag-drop, Quick Share y el conversor.',
-      'shelf.h5':'Descarga de vídeos <span class="badge-new">Nuevo · 2.9.2</span>',
+      'shelf.h5':'Descarga de vídeos',
       'shelf.b5_1':'Pega un enlace, elige MP4 o MP3, descarga.',
       'shelf.b5_2':'<strong>MP4</strong>: la resolución más alta, se reproduce en todas partes (H.264/AAC, QuickTime/Vista previa).',
       'shelf.b5_3':'<strong>MP3</strong>: extracción de audio de mejor calidad.',
@@ -1190,7 +1190,7 @@
     },
     de: {'shot.iacode':'Der KI-Tab von NotchIA mit einer laufenden Claude-Code-Sitzung: Modell, verbrauchte Tokens und Aktivitätsstatus.','shot.dig':'Der Digest-Tab mit einer lokal von Apple Intelligence erzeugten Nachrichtenzusammenfassung neben der RSS-Quellenliste.','shot.shelf':'Der Ablage-Tab mit seinen Ablagezonen: Dateikonvertierung, PDF-Zusammenfassung und Video-Download.','shot.foc':'Eine laufende Fokus-Sitzung mit Restzeit, Zyklus und Wochenstatistik.','shot.cal':'Der Kalender-Tab mit Monatsraster und der Liste der nächsten Termine.',
       'meta.title':'NotchIA Funktionen — KI-Digest, Fokus, KI-Code, Shelf','meta.description':"4 kostenlose Tabs (Musik, Kalender, KI-Digest, Fokus) und 3 Pro (Shelf, KI-Code, Zwischenablage). On-Device-KI-Zusammenfassungen. macOS 15+.",
-      'nav.home':'Startseite','nav.features':'Funktionen','nav.pricing':'Preise',
+      'nav.home':'Startseite','nav.features':'Funktionen','nav.pricing':'Preise','nav.pro':'Pro holen',
       'hero.title':'Alle <span class="grad-text">Funktionen</span>',
       'hero.lead1':'Die Aussparung deines Macs wird zum echten Assistenten. Musik, Kalender, KI-News-Digest, Fokus und alle Live-Erkennungen sind <strong class="text-cream">kostenlos</strong>.',
       'hero.lead2':'Werde Pro <span class="badge-pro">💎 Pro</span>, um die Shelf (universelles Drag-Drop + KI-Datei-Zusammenfassung), das Echtzeit-Tracking deines Code-Assistenten und den Zwischenablage-Verlauf freizuschalten.',
@@ -1226,7 +1226,7 @@
       'cal.b2_2':'„Ganztägige" Ereignisse ausblenden, um nur Termine mit Uhrzeit zu behalten.',
       'cal.b2_3':'Vollständige oder gekürzte Titel je nach Anzeigedichte.',
       'cal.b2_4':'Erinnerungen aus Reminders.app integriert, in derselben Ansicht.',
-      'dig.title':'<span class="grad-text">Digest</span>-Tab <span class="badge-new">Neu · 2.8.0</span> <span class="badge-free">Kostenlos</span>',
+      'dig.title':'<span class="grad-text">Digest</span>-Tab <span class="badge-free">Kostenlos</span>',
       'dig.lede':'Dein morgendliches News-Briefing, zusammengefasst von deinem Mac, niemals von einem Server.',
       'dig.h1':'Deine Feeds, dein Thema',
       'dig.b1_1':'Füge jeden RSS- oder Atom-Feed hinzu (Blogs, Medien, Newsletter).',
@@ -1320,7 +1320,7 @@
       'shelf.b4_4':'„Kopieren"-Button, um den Text zu übernehmen.',
       'shelf.b4_5':'Apple Intelligence Foundation Models, 100% lokal.',
       'shelf.note':'<em>Hinweis:</em> Die KI-Datei-Zusammenfassung benötigt macOS 26+. Ohne Apple Intelligence behält Shelf Drag-Drop, Quick Share und den Konverter.',
-      'shelf.h5':'Video-Download <span class="badge-new">Neu · 2.9.2</span>',
+      'shelf.h5':'Video-Download',
       'shelf.b5_1':'Link einfügen, MP4 oder MP3 wählen, herunterladen.',
       'shelf.b5_2':'<strong>MP4</strong>: höchste verfügbare Auflösung, überall abspielbar (H.264/AAC, QuickTime/Vorschau).',
       'shelf.b5_3':'<strong>MP3</strong>: Audioextraktion in bester Qualität.',

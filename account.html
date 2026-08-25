@@ -71,9 +71,9 @@
     <picture><source srcset="logo.avif" type="image/avif" /><img src="logo.png" alt="NotchIA" class="h-8 w-8" width="32" height="32" /></picture>
     <span class="font-display text-xl">NotchIA</span>
   </a>
-  <nav class="flex items-center gap-4 sm:gap-6 text-sm text-cream/70">
-    <a href="/" class="hover:text-cream" data-i18n="nav.home">Accueil</a>
-    <a href="/pricing" class="hover:text-cream" data-i18n="nav.pricing">Tarifs</a>
+  <nav class="flex flex-wrap justify-end items-center gap-3 sm:gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream hidden sm:inline" data-i18n="nav.home">Accueil</a>
+    <a href="/pricing" data-i18n="nav.pro" style="background:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%);color:#fff;padding:.5rem .95rem;border-radius:999px;font-weight:600;white-space:nowrap">Passer à Pro</a>
     <select id="lang-switch" class="lang-sw" aria-label="Language">
       <option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="de">DE</option>
     </select>
@@ -135,7 +135,7 @@
 
   const I18N = {
     fr: {
-      'nav.home':'Accueil','nav.pricing':'Tarifs',
+      'nav.home':'Accueil','nav.pricing':'Tarifs','nav.pro':'Passer à Pro',
       'h1':'Mon <span class="grad-text">compte</span>',
       'lead':'Retrouver ta clé, gérer ton abonnement.',
       'success.title':'Paiement reçu — merci !',
@@ -160,7 +160,7 @@
       'footnote':'Une question ? <a href="/contact" class="underline">Contacte-nous</a>.',
     },
     en: {
-      'nav.home':'Home','nav.pricing':'Pricing',
+      'nav.home':'Home','nav.pricing':'Pricing','nav.pro':'Go Pro',
       'h1':'My <span class="grad-text">account</span>',
       'lead':'Retrieve your key, manage your subscription.',
       'success.title':'Payment received — thank you!',
@@ -185,7 +185,7 @@
       'footnote':'A question? <a href="/contact" class="underline">Contact us</a>.',
     },
     es: {
-      'nav.home':'Inicio','nav.pricing':'Precios',
+      'nav.home':'Inicio','nav.pricing':'Precios','nav.pro':'Pasar a Pro',
       'h1':'Mi <span class="grad-text">cuenta</span>',
       'lead':'Recupera tu clave, gestiona tu suscripción.',
       'success.title':'¡Pago recibido — gracias!',
@@ -210,7 +210,7 @@
       'footnote':'¿Una pregunta? <a href="/contact" class="underline">Contáctanos</a>.',
     },
     de: {
-      'nav.home':'Startseite','nav.pricing':'Preise',
+      'nav.home':'Startseite','nav.pricing':'Preise','nav.pro':'Pro holen',
       'h1':'Mein <span class="grad-text">Konto</span>',
       'lead':'Schlüssel abrufen, Abo verwalten.',
       'success.title':'Zahlung erhalten — danke!',
