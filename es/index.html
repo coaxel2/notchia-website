@@ -916,9 +916,15 @@
         <option value="es" selected="">ES</option>
         <option value="de">DE</option>
       </select>
-      <a href="#telecharger" class="btn btn-ghost text-xs sm:text-sm py-2 px-3 sm:py-2.5 sm:px-4">
+      <!-- masqué sous 640 px : .btn porte display:inline-flex dans le <style> inline,
+           qui l'emporte sur .hidden à spécificité égale → le modificateur ! est requis -->
+      <a href="#telecharger" class="btn btn-ghost text-xs sm:text-sm py-2 px-3 sm:py-2.5 sm:px-4 !hidden sm:!inline-flex">
         <span data-i18n="nav.download">Descargar</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 4v12m0 0l-5-5m5 5l5-5M4 20h16"></path></svg>
+      </a>
+      <a href="#tarif" class="btn btn-grad text-xs sm:text-sm py-2 px-3 sm:py-2.5 sm:px-4 whitespace-nowrap">
+        <svg class="hidden sm:block" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5z"></path></svg>
+        <span data-i18n="nav.pro">Pasar a Pro</span>
       </a>
       <button id="menu-toggle" type="button" class="lg:hidden inline-flex items-center justify-center text-fog hover:text-cream transition rounded-lg p-2.5 -mr-1 focus:outline-none focus:ring-2 focus:ring-magenta" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
         <svg id="menu-icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
@@ -938,6 +944,14 @@
       <a href="#systeme" data-i18n="nav.system" class="py-3 border-b border-line/50 hover:text-cream transition">Sistema</a>
       <a href="#tarif" data-i18n="nav.pricing" class="py-3 border-b border-line/50 hover:text-cream transition">Precio</a>
       <a href="#faq" data-i18n="nav.faq" class="py-3 hover:text-cream transition">FAQ</a>
+      <div class="flex flex-col gap-2.5 pt-4 pb-2">
+        <a href="#tarif" class="btn btn-grad w-full justify-center">
+          <span data-i18n="nav.pro">Pasar a Pro</span>
+        </a>
+        <a href="#telecharger" class="btn btn-ghost w-full justify-center">
+          <span data-i18n="nav.download">Descargar</span>
+        </a>
+      </div>
     </nav>
   </div>
 </header>
@@ -1033,7 +1047,10 @@
           </a>
         </div>
         <p class="mt-3 text-xs text-mist font-mono" data-i18n-html="hero.cta.alt">~ 12 MB · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">o vía Homebrew</a></p>
-        <p data-i18n="hero.tagline" class="mt-5 text-xs text-mist font-mono">Gratis para siempre · Pro 2,99 €/mes o 24,99 € de por vida</p>
+        <a href="#tarif" class="mt-5 block text-xs sm:text-[13px] text-fog hover:text-cream transition font-mono leading-relaxed">
+          <span data-i18n-html="hero.tagline">Gratis para siempre · <b class="text-cream">Pro desde 2,99 €/mes</b> o 24,99 € de por vida</span>
+          <svg class="inline align-middle ml-1" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6l6 6-6 6"></path></svg>
+        </a>
       </div>
     </div>
 
@@ -1419,6 +1436,43 @@
         <figure class="shot-home"><picture><source srcset="../press-kit/screenshots/01.webp" type="image/webp"><img src="../press-kit/screenshots/01.png" width="1100" height="333" loading="lazy" decoding="async" data-i18n-alt="shot.ia" alt="La pestaña IA de NotchIA siguiendo una sesión de Claude Code en directo: modelo, tokens y estado de actividad."></picture></figure>
       </div>
     </section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §CONVERSION — rappel d'achat juste après la démo IA (fonction Pro phare)
+     Volontairement SANS .reveal : ce bloc porte les prix, il doit rester
+     lisible sans JavaScript (crawlers IA, cf. conventions GEO).
+═══════════════════════════════════════════════════════════════════════ -->
+<section id="passer-pro" class="relative py-14 sm:py-20 border-t border-line" aria-labelledby="promo-title">
+  <div class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10">
+    <div class="rounded-3xl border border-line bg-ink2 overflow-hidden">
+      <span class="block h-px grad-bg"></span>
+      <div class="p-7 sm:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+        <div>
+          <div class="eyebrow mb-4" data-i18n="promo.eyebrow">función Pro</div>
+          <h2 id="promo-title" class="display text-cream" style="font-size: clamp(1.7rem, 4vw, 2.4rem);">
+            <span data-i18n="promo.title1">La IA en directo es</span>
+            <span class="display-italic grad-text" data-i18n="promo.title2">exclusiva de Pro.</span>
+          </h2>
+          <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n="promo.subtitle">El seguimiento de Claude Code y Codex, la Shelf, el conversor de 16 formatos y el historial del portapapeles se activan con una licencia Pro. Todo lo demás de NotchIA sigue siendo gratis para siempre.</p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <button type="button" data-plan="lifetime" class="js-checkout btn btn-grad w-full justify-center py-3.5">
+            <span data-i18n="promo.cta.lifetime">Pro de por vida — 24,99 € una vez</span>
+          </button>
+          <button type="button" data-plan="monthly" class="js-checkout btn btn-ghost w-full justify-center py-3.5">
+            <span data-i18n="promo.cta.monthly">Pro mensual — 2,99 € / mes</span>
+          </button>
+          <a href="#tarif" class="text-center text-xs text-mist hover:text-cream transition font-mono underline decoration-dotted underline-offset-4 mt-1" data-i18n="promo.compare">comparar las tres fórmulas</a>
+          <p class="text-[11px] text-mist text-center font-mono" data-i18n="promo.note">pago Stripe · clave por email · cancelable</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -2455,7 +2509,16 @@
       'hero.svg': 'pense',
       'hero.subtitle': 'NotchIA transforme la zone morte de votre MacBook en <span class="text-cream">centre de contrôle interactif</span> : médias, calendrier, IA en direct, Concentration, presse-papiers, HUD — tout ce qui comptait, à hauteur de regard.',
       'hero.cta.download': 'Télécharger NotchIA', 'hero.cta.demo': 'Voir en action',
-      'hero.tagline': 'Gratuit à vie · Pro 2,99 €/mois ou 24,99 € à vie',
+      'hero.tagline': 'Gratuit à vie · <b class="text-cream">Pro dès 2,99 €/mois</b> ou 24,99 € à vie',
+      'nav.pro': 'Passer à Pro',
+      'promo.eyebrow': 'fonction Pro',
+      'promo.title1': 'L\'IA en direct est',
+      'promo.title2': 'réservée à Pro.',
+      'promo.subtitle': 'Le suivi de Claude Code et Codex, la Shelf, le convertisseur 16 formats et le presse-papiers historique s\'activent avec une licence Pro. Tout le reste de NotchIA reste gratuit à vie.',
+      'promo.cta.lifetime': 'Pro à vie — 24,99 € une fois',
+      'promo.cta.monthly': 'Pro mensuel — 2,99 € / mois',
+      'promo.compare': 'comparer les trois formules',
+      'promo.note': 'paiement Stripe · clé par email · annulable',
       'hero.cta.alt': '~ 12 Mo · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">ou via Homebrew</a>',
       'price.essential.name': 'Essentiel', 'price.essential.tag': 'gratuit',
       'price.lifetime': 'à vie',
@@ -2825,7 +2888,16 @@
       'hero.svg': 'thinks',
       'hero.subtitle': 'NotchIA turns the dead zone of your MacBook into an <span class="text-cream">interactive control center</span>: media, calendar, live AI, Concentration, clipboard, HUD — everything that mattered, right at eye level.',
       'hero.cta.download': 'Download NotchIA', 'hero.cta.demo': 'See it in action',
-      'hero.tagline': 'Free forever · Pro €2.99/mo or €24.99 lifetime',
+      'hero.tagline': 'Free forever · <b class="text-cream">Pro from €2.99/mo</b> or €24.99 lifetime',
+      'nav.pro': 'Go Pro',
+      'promo.eyebrow': 'Pro feature',
+      'promo.title1': 'Live AI is a',
+      'promo.title2': 'Pro feature.',
+      'promo.subtitle': 'Claude Code and Codex tracking, the Shelf, the 16-format converter and clipboard history unlock with a Pro licence. Everything else in NotchIA stays free forever.',
+      'promo.cta.lifetime': 'Pro lifetime — €24.99 once',
+      'promo.cta.monthly': 'Pro monthly — €2.99 / month',
+      'promo.compare': 'compare all three plans',
+      'promo.note': 'Stripe payment · key by email · cancel anytime',
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">or via Homebrew</a>',
       'price.essential.name': 'Essential', 'price.essential.tag': 'free',
       'price.lifetime': 'forever',
@@ -3195,7 +3267,16 @@
       'hero.svg': 'piensa',
       'hero.subtitle': 'NotchIA convierte la zona muerta de tu MacBook en un <span class="text-cream">centro de control interactivo</span>: medios, calendario, IA en vivo, Concentration, portapapeles, HUD — todo lo que importaba, al alcance de la vista.',
       'hero.cta.download': 'Descargar NotchIA', 'hero.cta.demo': 'Ver en acción',
-      'hero.tagline': 'Gratis para siempre · Pro 2,99 €/mes o 24,99 € de por vida',
+      'hero.tagline': 'Gratis para siempre · <b class="text-cream">Pro desde 2,99 €/mes</b> o 24,99 € de por vida',
+      'nav.pro': 'Pasar a Pro',
+      'promo.eyebrow': 'función Pro',
+      'promo.title1': 'La IA en directo es',
+      'promo.title2': 'exclusiva de Pro.',
+      'promo.subtitle': 'El seguimiento de Claude Code y Codex, la Shelf, el conversor de 16 formatos y el historial del portapapeles se activan con una licencia Pro. Todo lo demás de NotchIA sigue siendo gratis para siempre.',
+      'promo.cta.lifetime': 'Pro de por vida — 24,99 € una vez',
+      'promo.cta.monthly': 'Pro mensual — 2,99 € / mes',
+      'promo.compare': 'comparar las tres fórmulas',
+      'promo.note': 'pago Stripe · clave por email · cancelable',
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">o vía Homebrew</a>',
       'price.essential.name': 'Esencial', 'price.essential.tag': 'gratis',
       'price.lifetime': 'para siempre',
@@ -3565,7 +3646,16 @@
       'hero.svg': 'denkt',
       'hero.subtitle': 'NotchIA macht die tote Zone Ihres MacBooks zu einem <span class="text-cream">interaktiven Kontrollzentrum</span>: Medien, Kalender, Live-KI, Concentration, Zwischenablage, HUD — alles Wichtige auf Augenhöhe.',
       'hero.cta.download': 'NotchIA herunterladen', 'hero.cta.demo': 'In Aktion sehen',
-      'hero.tagline': 'Kostenlos für immer · Pro 2,99 €/Monat oder 24,99 € einmalig',
+      'hero.tagline': 'Kostenlos für immer · <b class="text-cream">Pro ab 2,99 €/Monat</b> oder 24,99 € einmalig',
+      'nav.pro': 'Pro holen',
+      'promo.eyebrow': 'Pro-Funktion',
+      'promo.title1': 'Live-KI ist eine',
+      'promo.title2': 'Pro-Funktion.',
+      'promo.subtitle': 'Das Verfolgen von Claude Code und Codex, die Shelf, der 16-Format-Konverter und der Zwischenablage-Verlauf werden mit einer Pro-Lizenz freigeschaltet. Alles andere in NotchIA bleibt für immer kostenlos.',
+      'promo.cta.lifetime': 'Pro für immer — einmalig 24,99 €',
+      'promo.cta.monthly': 'Pro monatlich — 2,99 € / Monat',
+      'promo.compare': 'alle drei Formeln vergleichen',
+      'promo.note': 'Stripe-Zahlung · Schlüssel per E-Mail · kündbar',
       'hero.cta.alt': '~ 12 MB · macOS 15+ · <a href="../install.html" class="underline hover:text-cream">oder per Homebrew</a>',
       'price.essential.name': 'Essential', 'price.essential.tag': 'kostenlos',
       'price.lifetime': 'für immer',
