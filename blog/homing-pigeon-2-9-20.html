@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9.20 : les sessions IA perdues, les notifications cliquables</title>
+<meta name="description" content="NotchIA 2.9.20 retrouve les sessions Claude Code des projets deplaces, rend les notifications cliquables et previent quand une autorisation manque a une fonction activee." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/homing-pigeon-2-9-20" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/homing-pigeon-2-9-20" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/homing-pigeon-2-9-20" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA 2.9.20 : Homing Pigeon 🕊️" />
+<meta property="og:description" content="NotchIA 2.9.20 retrouve les sessions Claude Code des projets deplaces, rend les notifications cliquables et previent quand une autorisation manque a une fonction activee." />
+<meta property="og:url" content="https://notchia.app/blog/homing-pigeon-2-9-20" />
+<meta property="og:image" content="https://notchia.app/og-image.png?v=20260825" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-08-27" />
+<meta property="article:modified_time" content="2026-08-27" />
+<meta property="article:author" content="NotchIA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA 2.9.20 : Homing Pigeon 🕊️" />
+<meta name="twitter:description" content="NotchIA 2.9.20 retrouve les sessions Claude Code des projets deplaces, rend les notifications cliquables et previent quand une autorisation manque a une fonction activee." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  code.inline { font-family: 'JetBrains Mono', monospace; font-size: 0.86em; background: rgba(237,232,220,0.08); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+  details { border: 1px solid rgba(237,232,220,0.10); border-radius: 10px; padding: 1rem; margin: 0.8rem 0; background: #10131A; }
+  summary { cursor: pointer; color: #EDE8DC; font-weight: 600; }
+  details p { margin-top: 0.7rem; margin-bottom: 0; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://notchia.app/blog/homing-pigeon-2-9-20#article",
+   "headline": "NotchIA 2.9.20 : les sessions IA perdues, les notifications cliquables",
+   "description": "NotchIA 2.9.20 retrouve les sessions Claude Code des projets déplacés, rend les notifications cliquables et prévient quand une autorisation manque à une fonction activée.",
+   "datePublished": "2026-08-27",
+   "dateModified": "2026-08-27",
+   "inLanguage": "fr-FR",
+   "image": "https://notchia.app/og-image.png?v=20260825",
+   "author": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://notchia.app/logo-512.png"
+    }
+   },
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://notchia.app/blog/homing-pigeon-2-9-20"
+   },
+   "wordCount": 520
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/blog/homing-pigeon-2-9-20#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Pourquoi NotchIA ne suivait plus mes sessions Claude Code ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Si le dossier du projet a été déplacé ou renommé, Claude Code laisse un lien symbolique de l'ancien emplacement vers le nouveau. NotchIA ne traversait pas ces liens : les sessions de ces projets devenaient invisibles, sans chrono ni notification de fin de tour. La version 2.9.20 les suit correctement."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Que se passe-t-il quand on clique une notification NotchIA ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depuis la 2.9.20, un clic sur « Claude a terminé » ramène au premier plan le terminal ou l'IDE de la session concernée. Un clic sur une alerte d'autorisation ouvre directement le volet correspondant des Réglages système. Avant cette version, cliquer une notification ne faisait rien."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment savoir si une autorisation macOS manque à NotchIA ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NotchIA surveille les autorisations dont dépendent les fonctions que vous avez activées et vous prévient avec un lien direct vers le bon volet des Réglages système. Rien n'est signalé pour une fonction désactivée, et un même manque n'est rappelé qu'une fois par semaine."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment mettre à jour NotchIA vers la 2.9.20 ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "L'auto-update Sparkle propose la mise à jour automatiquement. Pour forcer : menu NotchIA puis Vérifier les mises à jour. En Homebrew : brew upgrade --cask notchia. Sinon, le .dmg est disponible sur notchia.app/install."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://notchia.app/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://notchia.app/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "2.9.20",
+     "item": "https://notchia.app/blog/homing-pigeon-2-9-20"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="font-sans min-h-screen">
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Notes de version · 2.9.20</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Homing Pigeon : ce qui ne marchait pas <span class="grad-text">le dit enfin</span></h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 27 août 2026 · 3 min de lecture</p>
+  </section>
+
+  <p>Trois corrections qui partagent le même défaut : une fonction s'arrêtait de marcher sans jamais le signaler. Le pire mode de panne, parce qu'on ne le cherche pas.</p>
+
+  <h2>Vos sessions Claude Code étaient peut-être invisibles</h2>
+  <p>Quand vous déplacez ou renommez le dossier d'un projet, Claude Code laisse derrière lui un lien symbolique de l'ancien emplacement vers le nouveau. NotchIA ne traversait pas ces liens.</p>
+  <p>Conséquence : <strong>toutes les sessions des projets déplacés disparaissaient</strong> du suivi. Pas de chrono, pas d'activité en direct, pas de notification en fin de tour. Rien n'indiquait que quelque chose manquait, l'encoche restait simplement muette.</p>
+  <p>Sur la machine de test, <strong>trois projets sur quatre</strong> étaient silencieux depuis une réorganisation de dossiers. Si vous avez rangé vos projets récemment et trouvé NotchIA étrangement calme, c'était ça.</p>
+
+  <h2>Les notifications sont enfin cliquables</h2>
+  <p>Il manquait à l'app le composant qui reçoit les clics sur les notifications. Deux effets, l'un visible, l'autre plus sournois :</p>
+  <ul>
+    <li>Cliquer sur une notification ne faisait <strong>rien du tout</strong>.</li>
+    <li>macOS <strong>supprimait purement et simplement</strong> les notifications quand NotchIA était l'app au premier plan. Pour une app d'encoche, c'est-à-dire toujours là, ça arrivait souvent.</li>
+  </ul>
+  <p>Désormais, un clic sur « Claude a terminé » ramène au premier plan le terminal ou l'IDE de la session concernée. Un clic sur une alerte d'autorisation ouvre directement le bon volet des Réglages système.</p>
+
+  <h2>Une alerte quand il manque une autorisation</h2>
+  <p>Une fonction privée de son autorisation macOS ne proteste pas : elle ne fait rien. NotchIA surveille maintenant les autorisations dont dépendent les fonctions <strong>que vous avez activées</strong>, et vous prévient avec un lien direct vers le volet concerné.</p>
+  <p>Deux garde-fous pour que ça reste discret : rien n'est signalé pour une fonction que vous avez désactivée, et un même manque n'est rappelé qu'une fois par semaine.</p>
+  <p>Cas amusant : impossible de notifier qu'il manque l'autorisation de notifier. Celui-là est affiché en tête de l'écran d'audit des autorisations.</p>
+
+  <h2>Sous le capot</h2>
+  <p>Le lien direct vers les réglages de notifications utilisait un identifiant abandonné par macOS 13, quand ce panneau a changé de nature. Il n'ouvrait plus rien. Les quatre liens de réglages ont été revérifiés un par un.</p>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Pourquoi NotchIA ne suivait plus mes sessions Claude Code ?</summary>
+    <p>Si le dossier du projet a été déplacé ou renommé, Claude Code laisse un lien symbolique de l'ancien emplacement vers le nouveau. NotchIA ne traversait pas ces liens : les sessions de ces projets devenaient invisibles, sans chrono ni notification de fin de tour. La 2.9.20 les suit correctement.</p>
+  </details>
+  <details>
+    <summary>Que se passe-t-il quand on clique une notification NotchIA ?</summary>
+    <p>Un clic sur « Claude a terminé » ramène au premier plan le terminal ou l'IDE de la session concernée. Un clic sur une alerte d'autorisation ouvre directement le volet correspondant des Réglages système. Avant cette version, cliquer une notification ne faisait rien.</p>
+  </details>
+  <details>
+    <summary>Comment savoir si une autorisation macOS manque à NotchIA ?</summary>
+    <p>NotchIA surveille les autorisations dont dépendent les fonctions que vous avez activées et vous prévient avec un lien direct vers le bon volet des Réglages système. Rien n'est signalé pour une fonction désactivée, et un même manque n'est rappelé qu'une fois par semaine.</p>
+  </details>
+
+  <h2>Comment l'obtenir</h2>
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update Sparkle vous propose la 2.9.20 automatiquement. Pour forcer : menu NotchIA → <em>Vérifier les mises à jour</em>.</p>
+  <p><strong>Nouvel utilisateur ?</strong> <code class="inline">brew install --cask coaxel2/notchia/notchia</code>, ou le <a href="/install">.dmg depuis la page d'installation</a>.</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/changelog" class="btn-secondary">Changelog complet</a>
+  </div>
+  <p class="mt-10 text-sm"><a href="/blog/" class="text-cream/55 hover:text-cream">← Tous les articles</a></p>
+</main>
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
