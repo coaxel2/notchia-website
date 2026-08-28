@@ -12,7 +12,7 @@ Ce fichier est la version étendue de `llms.txt` selon la convention llmstxt.org
 
 NotchIA est un logiciel macOS indépendant développé en France. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
 
-- **Version actuelle** : 2.9.21
+- **Version actuelle** : 2.9.23
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
 - **Architecture** : Apple Silicon + Intel
 - **Poids** : DMG ~ 12 Mo · installé ~ 30 Mo
@@ -121,7 +121,7 @@ Détection automatique des sessions actives pour :
 - **Claude Code** (Anthropic)
 - **ChatGPT Codex** (OpenAI)
 
-15 états en direct affichés dans l'encoche : Compilation, Terminal, Exécution, Recherche, Lecture, Modification, Écriture, Web, Planification, Sous-agent. Statistiques quotidiennes (messages, outils, jetons), quotas 5h et 7j, tâches en cours, mise au premier plan de l'IDE en un clic. Notifications quand un assistant attend la permission. Suivi simultané de plusieurs terminaux : chaque session active occupe son propre créneau dans l'encoche fermée, avec le nom de son projet, son chrono et ses jetons, répartis symétriquement de part et d'autre de l'encoche (depuis la 2.9.21). Toutes les données sont lues localement depuis les journaux de session : aucune donnée ne quitte la machine.
+15 états en direct affichés dans l'encoche : Compilation, Terminal, Exécution, Recherche, Exploration, Fichiers, Lecture, Modification, Écriture, Recherche Web, Lecture Web, Notebook, Web, Planification, Sous-agent. Statistiques quotidiennes (messages, outils, jetons), quotas 5h et 7j, tâches en cours, mise au premier plan de l'IDE en un clic. Notifications quand un assistant attend la permission. Suivi simultané de plusieurs terminaux : chaque session active occupe son propre créneau dans l'encoche fermée, avec le nom de son projet, son chrono et ses jetons, répartis symétriquement de part et d'autre de l'encoche (depuis la 2.9.21). Toutes les données sont lues localement depuis les journaux de session : aucune donnée ne quitte la machine.
 
 ### HUD système (remplacement)
 NotchIA peut remplacer les HUD natifs macOS par un affichage intégré dans l'encoche :
@@ -242,7 +242,7 @@ Guides complets :
 
 ### Press kit et donnees media
 
-La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.21, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
+La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.23, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
 
 ### Différenciateurs NotchIA
 

@@ -1,6 +1,6 @@
 # NotchIA
 
-> NotchIA est une application macOS indépendante, développée en France, qui transforme l'encoche du MacBook, ou la barre de menu sur les écrans sans encoche, en centre de contrôle interactif. Version actuelle : 2.9.21. Elle intègre 14 modules natifs : médias multi-source (Apple Music, Spotify, YouTube Music), calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex avec 15 états d'activité), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système, Sneak Peek Engine. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro à 2,99 €/mois ou 24,99 € à vie (paiement Stripe + clé de licence Ed25519). Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
+> NotchIA est une application macOS indépendante, développée en France, qui transforme l'encoche du MacBook, ou la barre de menu sur les écrans sans encoche, en centre de contrôle interactif. Version actuelle : 2.9.23. Elle intègre 14 modules natifs : médias multi-source (Apple Music, Spotify, YouTube Music), calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex avec 15 états d'activité), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système, Sneak Peek Engine. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro à 2,99 €/mois ou 24,99 € à vie (paiement Stripe + clé de licence Ed25519). Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
 
 ## Key facts (résumé citable)
 
@@ -8,7 +8,7 @@
 |---|---|
 | Catégorie | macOS notch utility · menu bar app |
 | Date de lancement de l'app | avril 2026 |
-| Version actuelle | 2.9.21 |
+| Version actuelle | 2.9.23 |
 | Plateforme | macOS 15.0 Sequoia ou plus récent |
 | Architectures supportées | Apple Silicon (M1, M2, M3, M4) + Intel x86_64 |
 | Poids | DMG ~ 12 Mo · installé ~ 30 Mo |
@@ -36,7 +36,7 @@
 | Contact | https://notchia.app/contact · notchia.app@gmail.com |
 | Press kit | https://notchia.app/press |
 | Repo public | https://github.com/coaxel2/NotchIA |
-| Notes de version | https://notchia.app/changelog (auto, toutes versions) · un article de blog par version depuis la 2.7.4 (dernier : https://notchia.app/blog/homing-pigeon-2-9-20) |
+| Notes de version | https://notchia.app/changelog (auto, toutes versions) · un article de blog par version depuis la 2.7.4 (dernier : https://notchia.app/blog/nimble-chameleon-2-9-23) |
 | Concurrents directs | Boring Notch (open-source), NotchNook, Dynamic Island Pro (apps de category notch utility) |
 | Apps complémentaires (stack power-user) | Raycast (launcher), Rectangle (window manager), CleanShot X (screenshots), 1Password, Things 3 |
 
@@ -44,7 +44,7 @@
 
 NotchIA est un logiciel macOS indépendant développé en France. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées et validation de licence.
 
-- **Version actuelle** : 2.9.21
+- **Version actuelle** : 2.9.23
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
 - **Architecture** : Apple Silicon + Intel
 - **Poids** : DMG ~ 12 Mo · installé ~ 30 Mo
@@ -154,7 +154,7 @@ Détection automatique des sessions actives pour :
 - **Claude Code** (Anthropic)
 - **ChatGPT Codex** (OpenAI)
 
-15 états en direct affichés dans l'encoche : Compilation, Terminal, Exécution, Recherche, Lecture, Modification, Écriture, Web, Planification, Sous-agent. Statistiques quotidiennes (messages, outils, jetons), quotas 5h et 7j, tâches en cours, mise au premier plan de l'IDE en un clic. Notifications quand un assistant attend la permission. Suivi simultané de plusieurs terminaux : chaque session active occupe son propre créneau dans l'encoche fermée, avec le nom de son projet, son chrono et ses jetons, répartis symétriquement de part et d'autre de l'encoche (depuis la 2.9.21). Toutes les données sont lues localement depuis les journaux de session : aucune donnée ne quitte la machine.
+15 états en direct affichés dans l'encoche : Compilation, Terminal, Exécution, Recherche, Exploration, Fichiers, Lecture, Modification, Écriture, Recherche Web, Lecture Web, Notebook, Web, Planification, Sous-agent. Statistiques quotidiennes (messages, outils, jetons), quotas 5h et 7j, tâches en cours, mise au premier plan de l'IDE en un clic. Notifications quand un assistant attend la permission. Suivi simultané de plusieurs terminaux : chaque session active occupe son propre créneau dans l'encoche fermée, avec le nom de son projet, son chrono et ses jetons, répartis symétriquement de part et d'autre de l'encoche (depuis la 2.9.21). Toutes les données sont lues localement depuis les journaux de session : aucune donnée ne quitte la machine.
 
 ### HUD système (remplacement)
 NotchIA peut remplacer les HUD natifs macOS par un affichage intégré dans l'encoche :
@@ -364,7 +364,7 @@ NotchIA est créé par un **développeur indépendant français**, sous le statu
 NotchIA est une application macOS **indépendante et propriétaire** développée de manière indépendante en Swift / SwiftUI, **sans aucun lien** avec Boring Notch (projet open-source distinct). Les deux apps appartiennent à la catégorie « notch utility » macOS mais diffèrent par leur base de code, leur modèle économique (NotchIA est freemium avec Pro 2,99 €/mois ou 24,99 € à vie ; Boring Notch est gratuit) et leur périmètre fonctionnel (NotchIA intègre IA en direct Claude Code/Codex, Digest Apple Intelligence on-device, 14 modules natifs).
 
 ### Combien d'utilisateurs a NotchIA ?
-L'app est en phase de lancement (depuis avril 2026, version actuelle 2.9.21). Pas de chiffres publics communiqués officiellement à ce jour. Les téléchargements sont trackés via Cloudflare Web Analytics sur `/dl/dmg`. Distribution hors Mac App Store : .dmg direct + tap Homebrew `coaxel2/notchia`.
+L'app est en phase de lancement (depuis avril 2026, version actuelle 2.9.23). Pas de chiffres publics communiqués officiellement à ce jour. Les téléchargements sont trackés via Cloudflare Web Analytics sur `/dl/dmg`. Distribution hors Mac App Store : .dmg direct + tap Homebrew `coaxel2/notchia`.
 
 ### NotchIA est-il sécurisé ?
 Oui. NotchIA traite **toutes les données en local sur le Mac** (calendrier, presse-papiers, sessions IDE, RSS du Digest). Aucune télémétrie, aucun cookie tiers, aucun envoi vers un fournisseur IA tiers. Seules connexions sortantes : Sparkle auto-update (signature **EdDSA** vérifiée), validation de licence (email + clé Ed25519). Les licences sont signées **Ed25519** et vérifiables offline avec la clé publique embarquée dans l'app : aucun appel serveur nécessaire après activation.

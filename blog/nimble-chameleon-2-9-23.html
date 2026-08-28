@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9.23 : le reglage Densite fonctionne enfin</title>
+<meta name="description" content="NotchIA 2.9.23 branche le reglage Densite sur la geometrie de l'encoche ouverte, rend 32 reglages applicables a chaud sans redemarrage, et retire deux bascules qui ne commandaient plus rien." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/nimble-chameleon-2-9-23" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/nimble-chameleon-2-9-23" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/nimble-chameleon-2-9-23" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA 2.9.23 : Nimble Chameleon 🦎" />
+<meta property="og:description" content="NotchIA 2.9.23 branche le reglage Densite sur la geometrie de l'encoche ouverte, rend 32 reglages applicables a chaud sans redemarrage, et retire deux bascules qui ne commandaient plus rien." />
+<meta property="og:url" content="https://notchia.app/blog/nimble-chameleon-2-9-23" />
+<meta property="og:image" content="https://notchia.app/og-image.png?v=20260825" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-08-28" />
+<meta property="article:modified_time" content="2026-08-28" />
+<meta property="article:author" content="NotchIA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA 2.9.23 : Nimble Chameleon 🦎" />
+<meta name="twitter:description" content="NotchIA 2.9.23 branche le reglage Densite sur la geometrie de l'encoche ouverte, rend 32 reglages applicables a chaud sans redemarrage, et retire deux bascules qui ne commandaient plus rien." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  code.inline { font-family: 'JetBrains Mono', monospace; font-size: 0.86em; background: rgba(237,232,220,0.08); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+  details { border: 1px solid rgba(237,232,220,0.10); border-radius: 10px; padding: 1rem; margin: 0.8rem 0; background: #10131A; }
+  summary { cursor: pointer; color: #EDE8DC; font-weight: 600; }
+  details p { margin-top: 0.7rem; margin-bottom: 0; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://notchia.app/blog/nimble-chameleon-2-9-23#article",
+   "headline": "NotchIA 2.9.23 : le réglage Densité fonctionne enfin",
+   "description": "NotchIA 2.9.23 branche le réglage Densité sur la géométrie de l'encoche ouverte, rend 32 réglages applicables à chaud sans redémarrage, et retire deux bascules qui ne commandaient plus rien.",
+   "datePublished": "2026-08-28",
+   "dateModified": "2026-08-28",
+   "inLanguage": "fr-FR",
+   "image": "https://notchia.app/og-image.png?v=20260825",
+   "author": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://notchia.app/logo-512.png"
+    }
+   },
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://notchia.app/blog/nimble-chameleon-2-9-23"
+   },
+   "wordCount": 620
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/blog/nimble-chameleon-2-9-23#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Que fait le réglage Densité de NotchIA ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Il règle la compacité de l'encoche ouverte : hauteur d'en-tête, marges, espacements, taille des onglets et des boutons, rayons des coins et hauteur totale du panneau. Trois valeurs sont proposées, de la plus compacte à la plus large. La géométrie de l'encoche fermée n'est volontairement pas concernée, puisqu'elle est calquée sur l'encoche matérielle du Mac."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pourquoi le réglage Densité de NotchIA ne changeait-il rien avant la 2.9.23 ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Parce que la fonction chargée d'appliquer l'échelle n'était appelée nulle part dans le projet : sa seule occurrence était une mention dans un commentaire. Le réglage enregistrait bien la valeur choisie, mais aucune vue ne la consommait. Depuis la 2.9.23, la densité pilote réellement les métriques de mise en page de l'encoche ouverte."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Faut-il redémarrer NotchIA pour qu'un réglage s'applique ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Non. Trente-deux réglages ne s'appliquaient qu'au prochain redessin fortuit de l'interface, ce qui donnait l'impression qu'ils mettaient une éternité à prendre effet : icône de réglages dans l'encoche, incrustation système, effet d'éclairage, paroles, teinte du lecteur, arrondi, ombre, spectrogramme, filtres du calendrier, détection d'appel, d'enregistrement et de Bluetooth. Ils sont désormais appliqués immédiatement."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pourquoi l'encoche s'ouvre-t-elle quand je change la densité ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Parce que le réglage ne concerne que l'encoche ouverte : le modifier depuis la fenêtre de réglages ne montrerait sinon aucun résultat. NotchIA l'ouvre donc 1,6 seconde pour afficher l'effet, uniquement lorsque la fenêtre de réglages est visible."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://notchia.app/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://notchia.app/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "2.9.23",
+     "item": "https://notchia.app/blog/nimble-chameleon-2-9-23"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="font-sans min-h-screen">
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Notes de version · 2.9.23</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Nimble Chameleon : la densité <span class="grad-text">change vraiment</span> quelque chose</h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 28 août 2026 · 4 min de lecture</p>
+  </section>
+
+  <p>Le réglage « Densité » de NotchIA ne faisait rien. Pas « peu de chose » : rien du tout. Cette version le branche pour de bon, et corrige au passage trente-deux autres réglages qui n'étaient pris en compte qu'après un redémarrage.</p>
+
+  <h2>Un réglage sans destinataire</h2>
+  <p><strong>La fonction chargée d'appliquer l'échelle n'était appelée nulle part.</strong> Sa seule occurrence dans tout le projet était une mention dans un commentaire. Le curseur enregistrait consciencieusement la valeur choisie, l'interface l'ignorait. Le libellé du réglage l'avouait à demi-mot en promettant qu'« un redémarrage peut être nécessaire pour propager partout ».</p>
+  <p>La densité pilote maintenant les métriques de mise en page de l'encoche ouverte : <strong>hauteur d'en-tête, marges, espacements, taille des onglets et des boutons, rayons des coins, hauteur totale du panneau</strong>, toutes recalculées à chaque accès. L'encoche fermée reste volontairement à l'écart : sa géométrie est calquée sur l'encoche matérielle du Mac, il n'y a rien à y comprimer.</p>
+  <p>Un détail compte pour la suite : la taille maximale de la fenêtre hôte est calculée à la densité la plus large, pas à la densité courante. Cette fenêtre n'est créée qu'une fois au lancement, et tronquerait le panneau si vous passiez ensuite sur un réglage plus généreux.</p>
+
+  <h3>Un aperçu au moment du choix</h3>
+  <p>La chaîne de rafraîchissement répond en 0,5 à 3 millisecondes une fois branchée. Le vrai problème n'était donc pas la latence, mais l'absence de retour : le réglage ne touche que l'encoche <em>ouverte</em>, et on le modifie depuis la fenêtre de réglages, encoche fermée. <strong>Elle s'ouvre maintenant 1,6 seconde pour montrer le résultat</strong>, uniquement quand la fenêtre de réglages est visible.</p>
+
+  <h2>Trente-deux réglages qui attendaient un redémarrage</h2>
+  <p>Même cause pour tous : lire une préférence depuis une fonction ne crée aucune dépendance entre le réglage et la vue. Celle-ci n'est jamais prévenue du changement, et n'affiche la nouvelle valeur qu'au prochain redessin fortuit. D'où cette impression tenace que certains réglages « mettaient une heure » à s'appliquer.</p>
+  <p>Toutes les vues ont été revues sur ce critère, et la dépendance manquante ajoutée partout où un réglage décide du rendu :</p>
+  <ul>
+    <li>icône de réglages dans l'encoche, style de l'aperçu furtif, incrustation système ;</li>
+    <li>effet d'éclairage, arrondi, ombre, teinte du lecteur, couleur du curseur ;</li>
+    <li>paroles, spectrogramme, filtres du calendrier ;</li>
+    <li>détection d'appel, d'enregistrement et de périphérique Bluetooth.</li>
+  </ul>
+  <p>Les lectures faites au moment d'une action, elles, restent en l'état : consultées quand on clique, elles n'ont aucune raison d'être réactives.</p>
+
+  <h2>Deux bascules qui ne commandaient plus rien</h2>
+  <p>Revue systématique des <strong>104 clés de réglages</strong> : pour chacune, recherche d'un consommateur réel, en dehors de sa déclaration et de l'écran de réglages.</p>
+  <p>Deux coupables. Les widgets volume et luminosité de l'aperçu furtif périodique avaient été retirés volontairement, parce qu'ils surgissaient sans action de l'utilisateur en doublonnant l'incrustation native de macOS. Leurs interrupteurs, eux, étaient restés dans les réglages : ils changeaient d'état sans le moindre effet. Retirés, clés comprises.</p>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Que fait le réglage Densité ?</summary>
+    <p>Il règle la compacité de l'encoche ouverte : hauteur d'en-tête, marges, espacements, taille des onglets et des boutons, rayons et hauteur totale du panneau. L'encoche fermée n'est pas concernée, sa géométrie suit l'encoche matérielle du Mac.</p>
+  </details>
+  <details>
+    <summary>Pourquoi ne changeait-il rien avant la 2.9.23 ?</summary>
+    <p>La fonction chargée d'appliquer l'échelle n'était appelée nulle part : sa seule occurrence dans le projet était une mention dans un commentaire. Le réglage enregistrait la valeur, aucune vue ne la lisait.</p>
+  </details>
+  <details>
+    <summary>Faut-il redémarrer NotchIA pour qu'un réglage s'applique ?</summary>
+    <p>Non. Trente-deux réglages ne prenaient effet qu'au prochain redessin fortuit de l'interface. Ils sont désormais appliqués immédiatement.</p>
+  </details>
+  <details>
+    <summary>Pourquoi l'encoche s'ouvre-t-elle quand je change la densité ?</summary>
+    <p>Le réglage ne concerne que l'encoche ouverte : sans cela, vous ne verriez aucun résultat depuis la fenêtre de réglages. Elle s'ouvre 1,6 seconde pour montrer l'effet, uniquement si cette fenêtre est visible.</p>
+  </details>
+
+  <h2>Comment l'obtenir</h2>
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update Sparkle vous propose la 2.9.23 automatiquement. Pour forcer : menu NotchIA → <em>Vérifier les mises à jour</em>.</p>
+  <p><strong>Nouvel utilisateur ?</strong> <code class="inline">brew install --cask coaxel2/notchia/notchia</code>, ou le <a href="/install">.dmg depuis la page d'installation</a>.</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/changelog" class="btn-secondary">Changelog complet</a>
+  </div>
+  <p class="mt-10 text-sm"><a href="/blog/" class="text-cream/55 hover:text-cream">← Tous les articles</a></p>
+</main>
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
