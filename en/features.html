@@ -511,7 +511,7 @@
     <div class="callout">
       <h3 data-i18n="iacode.h3">Extended mode</h3>
       <ul>
-        <li data-i18n="iacode.b3_1">Dots indicator of open sessions.</li>
+        <li data-i18n="iacode.b3_1">One slot per active terminal: project name, timer and tokens.</li>
         <li data-i18n="iacode.b3_2">Context bar: percentage of context window used.</li>
         <li data-i18n="iacode.b3_3">Real-time token stats.</li>
         <li data-i18n="iacode.b3_4">Session picker to switch in one click.</li>
@@ -534,7 +534,7 @@
     <div class="callout">
       <h3 data-i18n="clip.h1">Smart history</h3>
       <ul>
-        <li data-i18n="clip.b1_1">Up to 48 entries (configurable).</li>
+        <li data-i18n="clip.b1_1">Up to 100 entries kept (20, 48 or 100, your choice).</li>
         <li data-i18n="clip.b1_2">Full-text search across the whole history.</li>
         <li data-i18n="clip.b1_3">Grouping by source app: Safari, VSCode, Slack, etc.</li>
         <li data-i18n="clip.b1_4">Open shortcut: ⇧⌘C.</li>
@@ -584,6 +584,10 @@
       <li data-i18n-html="req.b4"><strong>macOS 26+ required</strong> for Shelf AI summaries and the Digest brief (Apple Intelligence). Without it, graceful degradation: the tabs stay functional.</li>
       <li data-i18n-html="req.b5"><strong>~30 MB</strong> of disk space.</li>
       <li data-i18n-html="req.b6"><strong>Network</strong> used only for: license validation, Sparkle updates, RSS feed fetching for the Digest. Nothing else.</li>
+        <li data-i18n="clip.b1_5">Dedicated “Pinned” section at the top, independent of the source app.</li>
+        <li data-i18n="clip.b2_4">Content type detected: links are clickable, colours previewed.</li>
+        <li data-i18n="iacode.b3_5">Several terminals tracked in parallel, spread on either side of the notch.</li>
+        <li data-i18n="pers.b3_8">Fold-away eye: a tab that opens on hover when the notch is collapsed.</li>
     </ul>
   </div>
 
@@ -722,6 +726,7 @@
       'pers.b3_4':"Cacher l'encoche pendant un screen recording.",
       'pers.b3_5':"Afficher (ou non) sur l'écran de verrouillage.",
       'pers.b3_6':'Retours haptiques sur les MacBook qui les supportent.',
+      'pers.b3_8':'Œil de repli : languette d\'ouverture au survol quand l\'encoche est repliée.',
       'pers.b3_7':"Auto-switch d'écran en multi-display.",
       'pers.h4':'Raccourcis clavier',
       'pers.b4_1':'7 raccourcis 100% éditables.',
@@ -769,9 +774,10 @@
       'iacode.b2_2':'La session active.',
       'iacode.b2_3':"Tient dans l'encoche pendant que tu codes.",
       'iacode.h3':'Mode étendu',
-      'iacode.b3_1':'Dots indicator des sessions ouvertes.',
+      'iacode.b3_1':'Un créneau par terminal actif : nom du projet, chrono et jetons.',
       'iacode.b3_2':'Context bar : pourcentage du context window utilisé.',
       'iacode.b3_3':'Stats tokens en temps réel.',
+      'iacode.b3_5':'Plusieurs terminaux suivis en parallèle, répartis de part et d\'autre de l\'encoche.',
       'iacode.b3_4':'Session picker pour switcher en un clic.',
       'iacode.h4':'100% local',
       'iacode.b4_1':'NotchIA lit les sessions depuis <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.',
@@ -780,12 +786,14 @@
       'clip.title':'Onglet <span class="grad-text">Presse-papier</span> <span class="badge-pro">💎 Pro</span>',
       'clip.lede':'Tout ce que tu as copié, retrouvable instantanément.',
       'clip.h1':'Historique intelligent',
-      'clip.b1_1':"Jusqu'à 48 entrées (configurable).",
+      'clip.b1_1':"Jusqu'à 100 entrées conservées (20, 48 ou 100 au choix).",
       'clip.b1_2':"Recherche full-text sur tout l'historique.",
+      'clip.b1_5':'Section « Épinglés » dédiée en tête, indépendante de l\'app d\'origine.',
       'clip.b1_3':'Groupement par app source : Safari, VSCode, Slack, etc.',
       'clip.b1_4':"Raccourci d'ouverture : ⇧⌘C.",
       'clip.h2':'Sécurité par défaut',
       'clip.b2_1':'Auto-clear du contenu sensible détecté (mots de passe, numéros de carte).',
+      'clip.b2_4':'Type de contenu détecté : les liens sont cliquables, les couleurs prévisualisées.',
       'clip.b2_2':"Restauration en un clic d'une entrée passée.",
       'clip.b2_3':'Rien ne sort de ton Mac.',
       'trust.title':'Confiance & <span class="grad-text">vie privée</span>',
@@ -915,6 +923,7 @@
       'pers.b3_4':'Hide the notch during screen recording.',
       'pers.b3_5':'Show (or not) on the lock screen.',
       'pers.b3_6':'Haptic feedback on MacBooks that support it.',
+      'pers.b3_8':'Fold-away eye: a tab that opens on hover when the notch is collapsed.',
       'pers.b3_7':'Auto screen switch in multi-display.',
       'pers.h4':'Keyboard shortcuts',
       'pers.b4_1':'7 shortcuts 100% editable.',
@@ -962,9 +971,10 @@
       'iacode.b2_2':'The active session.',
       'iacode.b2_3':'Fits in the notch while you code.',
       'iacode.h3':'Extended mode',
-      'iacode.b3_1':'Dots indicator of open sessions.',
+      'iacode.b3_1':'One slot per active terminal: project name, timer and tokens.',
       'iacode.b3_2':'Context bar: percentage of context window used.',
       'iacode.b3_3':'Real-time token stats.',
+      'iacode.b3_5':'Several terminals tracked in parallel, spread on either side of the notch.',
       'iacode.b3_4':'Session picker to switch in one click.',
       'iacode.h4':'100% local',
       'iacode.b4_1':'NotchIA reads sessions from <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.',
@@ -973,12 +983,14 @@
       'clip.title':'<span class="grad-text">Clipboard</span> tab <span class="badge-pro">💎 Pro</span>',
       'clip.lede':'Everything you\'ve copied, instantly retrievable.',
       'clip.h1':'Smart history',
-      'clip.b1_1':'Up to 48 entries (configurable).',
+      'clip.b1_1':'Up to 100 entries kept (20, 48 or 100, your choice).',
       'clip.b1_2':'Full-text search across the whole history.',
+      'clip.b1_5':'Dedicated “Pinned” section at the top, independent of the source app.',
       'clip.b1_3':'Grouping by source app: Safari, VSCode, Slack, etc.',
       'clip.b1_4':'Open shortcut: ⇧⌘C.',
       'clip.h2':'Security by default',
       'clip.b2_1':'Auto-clear of detected sensitive content (passwords, card numbers).',
+      'clip.b2_4':'Content type detected: links are clickable, colours previewed.',
       'clip.b2_2':'One-click restore of a past entry.',
       'clip.b2_3':'Nothing leaves your Mac.',
       'trust.title':'Trust & <span class="grad-text">privacy</span>',
@@ -1108,6 +1120,7 @@
       'pers.b3_4':'Ocultar la muesca durante una grabación de pantalla.',
       'pers.b3_5':'Mostrar (o no) en la pantalla de bloqueo.',
       'pers.b3_6':'Feedback háptico en los MacBook que lo soportan.',
+      'pers.b3_8':'Ojo plegable: una pestaña que se abre al pasar el cursor con la muesca plegada.',
       'pers.b3_7':'Cambio automático de pantalla en multi-display.',
       'pers.h4':'Atajos de teclado',
       'pers.b4_1':'7 atajos 100% editables.',
@@ -1155,9 +1168,10 @@
       'iacode.b2_2':'La sesión activa.',
       'iacode.b2_3':'Cabe en la muesca mientras codeas.',
       'iacode.h3':'Modo extendido',
-      'iacode.b3_1':'Dots indicator de las sesiones abiertas.',
+      'iacode.b3_1':'Una ranura por terminal activo: nombre del proyecto, cronómetro y tokens.',
       'iacode.b3_2':'Context bar: porcentaje de context window utilizado.',
       'iacode.b3_3':'Estadísticas de tokens en tiempo real.',
+      'iacode.b3_5':'Varios terminales seguidos en paralelo, repartidos a ambos lados de la muesca.',
       'iacode.b3_4':'Session picker para cambiar con un clic.',
       'iacode.h4':'100% local',
       'iacode.b4_1':'NotchIA lee las sesiones desde <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.',
@@ -1166,12 +1180,14 @@
       'clip.title':'Pestaña <span class="grad-text">Portapapeles</span> <span class="badge-pro">💎 Pro</span>',
       'clip.lede':'Todo lo que has copiado, recuperable al instante.',
       'clip.h1':'Historial inteligente',
-      'clip.b1_1':'Hasta 48 entradas (configurable).',
+      'clip.b1_1':'Hasta 100 entradas conservadas (20, 48 o 100, a tu elección).',
       'clip.b1_2':'Búsqueda full-text en todo el historial.',
+      'clip.b1_5':'Sección «Fijados» dedicada arriba, independiente de la app de origen.',
       'clip.b1_3':'Agrupación por app origen: Safari, VSCode, Slack, etc.',
       'clip.b1_4':'Atajo de apertura: ⇧⌘C.',
       'clip.h2':'Seguridad por defecto',
       'clip.b2_1':'Auto-clear del contenido sensible detectado (contraseñas, números de tarjeta).',
+      'clip.b2_4':'Tipo de contenido detectado: los enlaces son clicables, los colores previsualizados.',
       'clip.b2_2':'Restauración con un clic de una entrada pasada.',
       'clip.b2_3':'Nada sale de tu Mac.',
       'trust.title':'Confianza y <span class="grad-text">privacidad</span>',
@@ -1301,6 +1317,7 @@
       'pers.b3_4':'Aussparung während Bildschirmaufnahme ausblenden.',
       'pers.b3_5':'Auf dem Sperrbildschirm anzeigen (oder nicht).',
       'pers.b3_6':'Haptisches Feedback auf MacBooks, die es unterstützen.',
+      'pers.b3_8':'Einklapp-Auge: Lasche, die bei Mouseover öffnet, wenn die Notch eingeklappt ist.',
       'pers.b3_7':'Automatischer Bildschirmwechsel im Multi-Display.',
       'pers.h4':'Tastaturkürzel',
       'pers.b4_1':'7 Shortcuts zu 100% editierbar.',
@@ -1348,9 +1365,10 @@
       'iacode.b2_2':'Die aktive Sitzung.',
       'iacode.b2_3':'Passt in die Aussparung, während du codest.',
       'iacode.h3':'Erweiterter Modus',
-      'iacode.b3_1':'Dots-Indikator der offenen Sitzungen.',
+      'iacode.b3_1':'Ein Platz pro aktivem Terminal: Projektname, Timer und Tokens.',
       'iacode.b3_2':'Context-Bar: Prozentsatz des verwendeten Context Window.',
       'iacode.b3_3':'Token-Statistiken in Echtzeit.',
+      'iacode.b3_5':'Mehrere Terminals parallel verfolgt, beidseitig der Notch verteilt.',
       'iacode.b3_4':'Session Picker zum Umschalten mit einem Klick.',
       'iacode.h4':'100% lokal',
       'iacode.b4_1':'NotchIA liest die Sitzungen aus <code class="font-mono text-xs">~/.claude/projects/*/jsonl</code>, <code class="font-mono text-xs">~/.codex/sessions/*.sqlite</code>.',
@@ -1359,12 +1377,14 @@
       'clip.title':'<span class="grad-text">Zwischenablage</span>-Tab <span class="badge-pro">💎 Pro</span>',
       'clip.lede':'Alles, was du kopiert hast, sofort wiederfindbar.',
       'clip.h1':'Intelligenter Verlauf',
-      'clip.b1_1':'Bis zu 48 Einträge (konfigurierbar).',
+      'clip.b1_1':'Bis zu 100 Einträge gespeichert (20, 48 oder 100, nach Wahl).',
       'clip.b1_2':'Volltextsuche im gesamten Verlauf.',
+      'clip.b1_5':'Eigener Bereich „Angeheftet“ ganz oben, unabhängig von der Quell-App.',
       'clip.b1_3':'Gruppierung nach Quell-App: Safari, VSCode, Slack usw.',
       'clip.b1_4':'Öffnungs-Shortcut: ⇧⌘C.',
       'clip.h2':'Sicherheit standardmäßig',
       'clip.b2_1':'Auto-Clear erkannter sensibler Inhalte (Passwörter, Kartennummern).',
+      'clip.b2_4':'Inhaltstyp erkannt: Links sind anklickbar, Farben werden vorschaubar.',
       'clip.b2_2':'Wiederherstellung eines früheren Eintrags mit einem Klick.',
       'clip.b2_3':'Nichts verlässt deinen Mac.',
       'trust.title':'Vertrauen & <span class="grad-text">Privatsphäre</span>',

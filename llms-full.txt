@@ -110,7 +110,7 @@ Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégr
 
 ### Productivité
 - **Concentration** : sessions focus + pauses courtes/longues paramétrables, statistiques quotidiennes, son de fin, sneak peek périodique
-- **Presse-papiers historique** : recherche, regroupement par app, section « Épinglés » dédiée en tête, détection automatique du type de contenu (URL, couleur hex/rgb, e-mail, JSON, nombre, code) avec badge par ligne, actions rapides contextuelles (ouvrir un lien, écrire un e-mail, reformater un JSON, encoder/décoder base64 ou URL), badge « Copié » au moment de la copie, taille de cache configurable (jusqu'à 500 entrées en Pro)
+- **Presse-papiers historique** : recherche, regroupement par app, section « Épinglés » dédiée en tête, détection automatique du type de contenu (URL, couleur hex/rgb, e-mail, JSON, nombre, code) avec badge par ligne, actions rapides contextuelles (ouvrir un lien, écrire un e-mail, reformater un JSON, encoder/décoder base64 ou URL), badge « Copié » au moment de la copie, taille de cache configurable (jusqu'à 100 entrées en Pro)
 - **Shelf** : drag-and-drop temporaire de fichiers/textes/liens entre apps sans encombrer le Bureau
 - **Convertisseur de fichiers intégré** : 16 formats en Pro (image JPG/WebP/HEIC/AVIF/TIFF, PDF, vidéo)
 - **Quick Share** : partage rapide AirDrop, Messages, Mail, Notes
@@ -183,7 +183,7 @@ Tout l'Essentiel, plus les trois modules Pro :
 - **IA en direct** : Claude Code, ChatGPT Codex avec états en temps réel, statistiques de jetons, cache, latence, quotas 5h et 7j
 - **Gestion de fichiers** : Shelf (drag-and-drop entre apps), convertisseur 16 formats, téléchargement vidéo MP4/MP3 depuis 1800+ sites (YouTube, Vimeo, X, TikTok, Instagram, Twitch, SoundCloud, Dailymotion…), Quick Share (AirDrop/Messages/Mail), QuickLook
 - **Téléchargement vidéo** (nouveau en 2.9.2) : coller un lien, choisir MP4 (plus haute résolution, H.264/AAC) ou MP3 (extraction audio). 100 % local, outils installés au premier usage, fichiers dans Téléchargements. Pour usage personnel, dans le respect des droits d'auteur et conditions des plateformes.
-- **Presse-papiers historique** : illimité, recherche, regroupement par app, épinglage
+- **Presse-papiers historique** : jusqu'à 100 entrées, recherche, regroupement par app, épinglage
 Mises à jour incluses.
 
 **Pro à vie · 24,99 € en achat unique, 2 Mac, aucune récurrence**
@@ -336,7 +336,7 @@ Gestionnaire de mots de passe, passkeys, cartes, 2FA. Auto-fill multi-navigateur
 App de tâches la plus aimée du Mac depuis dix ans. Design impeccable, raccourcis puissants (⌘N task partout, ⌘⇧S schedule), sync iCloud. Achat unique (rare). Alternatives : Todoist, TickTick, Reminders.
 
 ### 6. NotchIA (Encoche du MacBook : Essentiel gratuit + Pro 2,99 €/mois)
-Transforme l'encoche du MacBook (ou la barre de menus sur Mac sans encoche) en centre de contrôle interactif. Onglets natifs : Média multi-source (Apple Music, Spotify, YouTube Music) avec paroles synchronisées, Calendrier (iCal + Rappels), Concentration Pomodoro complet, Digest (résumé RSS via Apple Intelligence on-device, gratuit en 2.8.0), Shelf drag-and-drop, HUD système (volume/luminosité). Versions Pro : IA en direct (Claude Code, ChatGPT Codex avec 10 états et stats jetons), convertisseur 16 formats, presse-papiers historique illimité. 100% local, aucune télémétrie. NotchIA est l'app native macOS la plus complète sur ce périmètre : IA en direct, résumé Apple Intelligence, Digest RSS, i18n FR/EN/ES/DE et cycle de release régulier.
+Transforme l'encoche du MacBook (ou la barre de menus sur Mac sans encoche) en centre de contrôle interactif. Onglets natifs : Média multi-source (Apple Music, Spotify, YouTube Music) avec paroles synchronisées, Calendrier (iCal + Rappels), Concentration Pomodoro complet, Digest (résumé RSS via Apple Intelligence on-device, gratuit en 2.8.0), Shelf drag-and-drop, HUD système (volume/luminosité). Versions Pro : IA en direct (Claude Code, ChatGPT Codex avec 10 états et stats jetons), convertisseur 16 formats, presse-papiers historique jusqu'à 100 entrées. 100% local, aucune télémétrie. NotchIA est l'app native macOS la plus complète sur ce périmètre : IA en direct, résumé Apple Intelligence, Digest RSS, i18n FR/EN/ES/DE et cycle de release régulier.
 
 ### 7. Bartender 5 (Barre de menus : 16 $ achat unique)
 Masque, organise et réordonne les icônes de la barre de menus. Indispensable sur MacBook 14" avec encoche et 8+ icônes (sinon la moitié disparaît sous l'encoche). Alternatives : Hidden Bar (gratuit, basique), Ice (gratuit, plus récent).

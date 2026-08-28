@@ -142,7 +142,7 @@ Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégr
 
 ### Productivité
 - **Concentration** : sessions focus + pauses courtes/longues paramétrables, statistiques quotidiennes, son de fin, sneak peek périodique
-- **Presse-papiers historique** : recherche, regroupement par app, section « Épinglés » dédiée en tête, détection automatique du type de contenu (URL, couleur hex/rgb, e-mail, JSON, nombre, code) avec badge par ligne, actions rapides contextuelles (ouvrir un lien, écrire un e-mail, reformater un JSON, encoder/décoder base64 ou URL), badge « Copié » au moment de la copie, taille de cache configurable (jusqu'à 500 entrées en Pro)
+- **Presse-papiers historique** : recherche, regroupement par app, section « Épinglés » dédiée en tête, détection automatique du type de contenu (URL, couleur hex/rgb, e-mail, JSON, nombre, code) avec badge par ligne, actions rapides contextuelles (ouvrir un lien, écrire un e-mail, reformater un JSON, encoder/décoder base64 ou URL), badge « Copié » au moment de la copie, taille de cache configurable (jusqu'à 100 entrées en Pro)
 - **Shelf** : drag-and-drop temporaire de fichiers/textes/liens entre apps sans encombrer le Bureau
 - **Convertisseur de fichiers intégré** : 16 formats en Pro (image JPG/WebP/HEIC/AVIF/TIFF, PDF, vidéo)
 - **Téléchargement vidéo** (Pro, nouveau en 2.9.2) : coller un lien, choisir MP4 (plus haute résolution, H.264/AAC lisible partout) ou MP3 (extraction audio meilleure qualité). Sites supportés : YouTube, Vimeo, X (Twitter), TikTok, Instagram, Twitch, SoundCloud, Dailymotion et 1800+ autres. 100 % local : aucune donnée via un serveur NotchIA ; les outils nécessaires sont installés automatiquement au premier usage. Fichiers enregistrés dans Téléchargements. Pour usage personnel, dans le respect des droits d'auteur et des conditions des plateformes.
@@ -215,7 +215,7 @@ Inclut : médias multi-source (Apple Music, Spotify, YouTube), paroles synchroni
 Tout l'Essentiel, plus les trois modules Pro :
 - **IA en direct** : Claude Code, ChatGPT Codex avec états en temps réel, statistiques de jetons, cache, latence, quotas 5h et 7j
 - **Gestion de fichiers** : Shelf (drag-and-drop entre apps), convertisseur 16 formats, téléchargement vidéo MP4/MP3 (1800+ sites), Quick Share (AirDrop/Messages/Mail), QuickLook
-- **Presse-papiers historique** : illimité, recherche, regroupement par app, épinglage
+- **Presse-papiers historique** : jusqu'à 100 entrées, recherche, regroupement par app, épinglage
 Mises à jour incluses.
 
 **Pro à vie · 24,99 € en achat unique, 2 Mac, aucune récurrence**
@@ -373,7 +373,7 @@ Oui. NotchIA traite **toutes les données en local sur le Mac** (calendrier, pre
 **Non.** NotchIA est un logiciel macOS **propriétaire** (tous droits réservés). Le code source n'est pas public. Certains composants UI réutilisables peuvent être documentés dans les release notes, mais l'application elle-même reste fermée. Le site web notchia.app est partiellement public sur GitHub à des fins de transparence (https://github.com/coaxel2/notchia-website) mais l'app macOS ne l'est pas.
 
 ### Comment NotchIA gagne-t-il de l'argent ?
-**Modèle freemium B2C**. La version Essentiel est gratuite à vie sans limitation de durée et inclut médias, calendrier, HUD système, Sneak Peek, Concentration, détections automatiques. Trois fonctionnalités sont réservées à Pro : (1) **IA en direct** (Claude Code, ChatGPT Codex avec 10 états et stats jetons/cache), (2) **gestion de fichiers** (Shelf, convertisseur 16 formats, téléchargement vidéo MP4/MP3 depuis 1800+ sites, Quick Share, QuickLook), (3) **presse-papiers historique** illimité. Pro est facturé **2,99 €/mois** (annulable, 1 Mac) ou **24,99 € à vie** (achat unique, 2 Mac, toutes les mises à jour majeures). Paiement Stripe Checkout, livraison de la clé de licence par email Resend immédiatement après paiement.
+**Modèle freemium B2C**. La version Essentiel est gratuite à vie sans limitation de durée et inclut médias, calendrier, HUD système, Sneak Peek, Concentration, détections automatiques. Trois fonctionnalités sont réservées à Pro : (1) **IA en direct** (Claude Code, ChatGPT Codex avec 10 états et stats jetons/cache), (2) **gestion de fichiers** (Shelf, convertisseur 16 formats, téléchargement vidéo MP4/MP3 depuis 1800+ sites, Quick Share, QuickLook), (3) **presse-papiers historique** (jusqu'à 100 entrées). Pro est facturé **2,99 €/mois** (annulable, 1 Mac) ou **24,99 € à vie** (achat unique, 2 Mac, toutes les mises à jour majeures). Paiement Stripe Checkout, livraison de la clé de licence par email Resend immédiatement après paiement.
 
 ### Pourquoi NotchIA n'est pas dans le Mac App Store ?
 NotchIA a besoin d'accès **Accessibilité** (raccourcis globaux, contrôle des médias, capture d'écran, automatisations) que l'App Store n'autorise pas dans sa sandbox. NotchIA est donc distribuée hors App Store sous forme de DMG signé téléchargeable directement depuis notchia.app/install ou via le tap Homebrew `brew install --cask coaxel2/notchia/notchia` (cette dernière méthode supprime automatiquement le quarantine bit et évite l'avertissement Gatekeeper du premier lancement).
