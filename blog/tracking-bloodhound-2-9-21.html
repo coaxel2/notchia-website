@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9.21 : plusieurs sessions IA suivies en meme temps</title>
+<meta name="description" content="NotchIA 2.9.21 suit plusieurs terminaux Claude Code en parallele dans l'encoche, chacun avec son projet et son chrono, et corrige deux bugs qui faussaient les durees affichees." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/tracking-bloodhound-2-9-21" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/tracking-bloodhound-2-9-21" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/tracking-bloodhound-2-9-21" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA 2.9.21 : Tracking Bloodhound 🐕" />
+<meta property="og:description" content="NotchIA 2.9.21 suit plusieurs terminaux Claude Code en parallele dans l'encoche, chacun avec son projet et son chrono, et corrige deux bugs qui faussaient les durees affichees." />
+<meta property="og:url" content="https://notchia.app/blog/tracking-bloodhound-2-9-21" />
+<meta property="og:image" content="https://notchia.app/og-image.png?v=20260825" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-08-28" />
+<meta property="article:modified_time" content="2026-08-28" />
+<meta property="article:author" content="NotchIA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA 2.9.21 : Tracking Bloodhound 🐕" />
+<meta name="twitter:description" content="NotchIA 2.9.21 suit plusieurs terminaux Claude Code en parallele dans l'encoche, chacun avec son projet et son chrono, et corrige deux bugs qui faussaient les durees affichees." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  code.inline { font-family: 'JetBrains Mono', monospace; font-size: 0.86em; background: rgba(237,232,220,0.08); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+  details { border: 1px solid rgba(237,232,220,0.10); border-radius: 10px; padding: 1rem; margin: 0.8rem 0; background: #10131A; }
+  summary { cursor: pointer; color: #EDE8DC; font-weight: 600; }
+  details p { margin-top: 0.7rem; margin-bottom: 0; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://notchia.app/blog/tracking-bloodhound-2-9-21#article",
+   "headline": "NotchIA 2.9.21 : plusieurs sessions IA suivies en même temps",
+   "description": "NotchIA 2.9.21 suit plusieurs terminaux Claude Code en parallèle dans l'encoche, chacun avec son projet et son chrono, et corrige deux bugs qui faussaient les durées affichées.",
+   "datePublished": "2026-08-28",
+   "dateModified": "2026-08-28",
+   "inLanguage": "fr-FR",
+   "image": "https://notchia.app/og-image.png?v=20260825",
+   "author": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "NotchIA",
+    "url": "https://notchia.app/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://notchia.app/logo-512.png"
+    }
+   },
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://notchia.app/blog/tracking-bloodhound-2-9-21"
+   },
+   "wordCount": 560
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/blog/tracking-bloodhound-2-9-21#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "NotchIA peut-il suivre plusieurs sessions Claude Code en même temps ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, depuis la version 2.9.21. Chaque session active occupe son propre créneau dans l'encoche fermée, avec le nom de son projet, son chrono et ses jetons. Les créneaux se répartissent symétriquement de part et d'autre de l'encoche : la session sélectionnée reste au plus près du matériel, les autres s'éloignent vers l'extérieur."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pourquoi les sessions affichent-elles le nom du projet et pas celui du terminal ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Parce que l'arbre des processus ne donne que l'application hôte, pas l'onglet. Deux sessions ouvertes dans deux onglets de Ghostty afficheraient « Ghostty » deux fois sans rien distinguer. L'icône porte donc l'identité du terminal, et le texte celle du projet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pourquoi le chrono de NotchIA affichait-il 00:00 ou des durées fausses ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Deux causes distinctes, corrigées en 2.9.21. La fenêtre de lecture du transcript était trop petite pour contenir le prompt d'ouverture du cycle, donc aucune durée n'était reconstruite. Et les lignes que Claude Code s'injecte à lui-même étaient prises pour de vrais messages, ce qui remettait le chrono à zéro en plein travail."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qu'est-ce que l'œil de repli de NotchIA ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "C'est une petite languette affichée près de l'encoche quand celle-ci est repliée. Elle s'ouvre au survol, sans clic, et permet de retrouver l'encoche sans viser la zone matérielle."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://notchia.app/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://notchia.app/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "2.9.21",
+     "item": "https://notchia.app/blog/tracking-bloodhound-2-9-21"
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="font-sans min-h-screen">
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Notes de version · 2.9.21</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Tracking Bloodhound : l'encoche suit <span class="grad-text">tous vos terminaux</span></h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 28 août 2026 · 4 min de lecture</p>
+  </section>
+
+  <p>Jusqu'ici, l'encoche n'affichait qu'une session IA à la fois, celle que vous aviez sélectionnée. Elle les affiche maintenant toutes. Avec, au passage, deux corrections de fond sur les chronos.</p>
+
+  <h2>Plusieurs terminaux, plusieurs créneaux<span class="pro-badge">Pro</span></h2>
+  <p>NotchIA surveillait déjà plusieurs sessions en parallèle en interne : une seule était montrée. <strong>Chaque session active occupe désormais son propre créneau</strong> dans l'encoche fermée, exactement comme les ailes du minuteur ou le badge musique. L'encoche s'élargit d'autant.</p>
+  <p>L'unité d'affichage n'est pas une cellule mais un couple : <strong>à gauche le nom du projet et le chrono, à droite le statut et les jetons</strong>. Deux terminaux font donc quatre éléments, trois en font six, répartis symétriquement de part et d'autre de l'encoche plutôt qu'entassés d'un seul côté.</p>
+  <p>La session sélectionnée reste collée au matériel, les autres s'éloignent vers l'extérieur dans le même ordre des deux côtés : chaque couple se lit à distance égale de l'encoche.</p>
+
+  <h3>Pourquoi le nom du projet, et pas celui du terminal</h3>
+  <p>Parce que l'arbre des processus ne donne que l'application hôte, jamais l'onglet. Deux sessions dans deux onglets de Ghostty afficheraient « Ghostty » deux fois, sans rien distinguer. <strong>L'icône porte donc l'identité du terminal, le texte celle du projet.</strong> Un nom trop long est tronqué plutôt que mis en défilement : une animation permanente dans une vue toujours visible fatigue pour un gain de lisibilité marginal.</p>
+
+  <h2>Les chronos disaient n'importe quoi</h2>
+  <p>Deux bugs distincts, tous deux sur la reconstruction des durées.</p>
+  <p><strong>Chrono figé sur 00:00.</strong> Pour retrouver le début d'un tour, NotchIA relisait les 50 derniers kilo-octets du transcript. Mesuré sur huit sessions réelles, le prompt d'ouverture se trouve entre 46 Ko et 580 Ko de la fin, parce que les résultats d'outils sont énormes : 50 Ko ne représentent qu'une trentaine de lignes. Le début du tour n'était donc jamais trouvé, et la durée du dernier tour restait à zéro. La fenêtre de lecture passe à 2 Mo.</p>
+  <p><strong>Chrono remis à zéro en plein travail.</strong> Claude Code journalise ses propres injections (légendes de résultats d'outil, résumés de compaction) comme des messages utilisateur, en les marquant au niveau de l'enveloppe. NotchIA les prenait pour de vrais prompts humains et ouvrait un nouveau cycle à chaque fois : chrono réancré, compteur de jetons remis à zéro.</p>
+  <p><strong>Et une régression qu'ils masquaient.</strong> En retrouvant enfin le prompt d'ouverture, un troisième cas est devenu atteignable : le tour interrompu — échappé, fenêtre fermée, processus tué. Il n'émet jamais sa fin, donc son cycle restait ouvert indéfiniment. Deux sessions affichaient 29:08 et 30:44 qui défilaient alors que leur transcript n'avait pas bougé depuis vingt-deux minutes. Ces tours sont maintenant refermés.</p>
+
+  <h2>L'œil de repli</h2>
+  <p>Quand l'encoche est repliée, une petite languette permet de la retrouver. Elle <strong>s'ouvre au survol, sans clic</strong>, et se fond désormais dans la zone de l'encoche au lieu de former une bande noire isolée sur le côté.</p>
+  <p>Elle était mal placée : le bloc étant centré, ajouter un créneau d'un seul côté décalait l'ensemble de treize points. L'œil se retrouvait à moitié sous l'encoche matérielle, et le clic tombait à côté de sa cible visible. Corrigé.</p>
+
+  <h2>Affichage</h2>
+  <ul>
+    <li><strong>La barre compacte débordait.</strong> La fenêtre qui héberge l'encoche est dimensionnée une seule fois au lancement. Avec plusieurs terminaux, le contenu dépassait, et tout dépassement est coupé en silence : badge musique tronqué, coins carrés au lieu d'arrondis.</li>
+    <li><strong>Musique et IA ensemble.</strong> Le titre défilant n'avait pas de taille propre. Avec la seule IA, deux cellules suffisaient à masquer le problème ; en ajoutant la musique, la mise en page ne se résolvait plus.</li>
+    <li><strong>Vignette de lecture</strong> aux coins plus arrondis, avec un rayon désormais partagé entre l'image et son liseré.</li>
+  </ul>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>NotchIA peut-il suivre plusieurs sessions Claude Code en même temps ?</summary>
+    <p>Oui, depuis la 2.9.21. Chaque session active occupe son propre créneau dans l'encoche fermée, avec le nom de son projet, son chrono et ses jetons. Les créneaux se répartissent symétriquement de part et d'autre de l'encoche : la session sélectionnée reste au plus près du matériel, les autres s'éloignent vers l'extérieur.</p>
+  </details>
+  <details>
+    <summary>Pourquoi le nom du projet plutôt que celui du terminal ?</summary>
+    <p>L'arbre des processus ne donne que l'application hôte, pas l'onglet. Deux sessions dans deux onglets de Ghostty afficheraient « Ghostty » deux fois sans rien distinguer. L'icône porte l'identité du terminal, le texte celle du projet.</p>
+  </details>
+  <details>
+    <summary>Pourquoi le chrono affichait-il 00:00 ou des durées fausses ?</summary>
+    <p>Deux causes. La fenêtre de lecture du transcript était trop petite pour contenir le prompt d'ouverture du cycle, donc aucune durée n'était reconstruite. Et les lignes que Claude Code s'injecte à lui-même étaient prises pour de vrais messages, ce qui remettait le chrono à zéro en plein travail.</p>
+  </details>
+
+  <h2>Comment l'obtenir</h2>
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update Sparkle vous propose la 2.9.21 automatiquement. Pour forcer : menu NotchIA → <em>Vérifier les mises à jour</em>.</p>
+  <p><strong>Nouvel utilisateur ?</strong> <code class="inline">brew install --cask coaxel2/notchia/notchia</code>, ou le <a href="/install">.dmg depuis la page d'installation</a>.</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/changelog" class="btn-secondary">Changelog complet</a>
+  </div>
+  <p class="mt-10 text-sm"><a href="/blog/" class="text-cream/55 hover:text-cream">← Tous les articles</a></p>
+</main>
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

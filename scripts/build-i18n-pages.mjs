@@ -18,7 +18,19 @@ import vm from 'node:vm';
 // chemin ne peut pas être déduit de import.meta.url — il est surchargeable par
 // variable d'environnement (`NOTCHIA_ROOT=… node build-i18n-pages.mjs`).
 // Valeur par défaut alignée sur le workspace ~/dev (migration du 2026-08-16).
-const ROOT = process.env.NOTCHIA_ROOT || '/Users/axel/dev/notchia-website/repo';
+// Le script est copié dans un dossier temporaire pour disposer de jsdom : le
+// chemin ne peut donc pas venir de import.meta.url. Il est résolu dans cet
+// ordre — variable d'environnement, puis le premier dossier du workspace qui
+// contient index.html. Un chemin en dur casse à chaque renommage du dépôt
+// (migration repo/ → repo-notchia-website/ du 2026-08-28).
+const ROOT = process.env.NOTCHIA_ROOT || (() => {
+  const base = '/Users/axel/dev/notchia-website';
+  const found = fs.readdirSync(base)
+    .map((d) => path.join(base, d))
+    .find((d) => fs.existsSync(path.join(d, 'index.html')));
+  if (!found) throw new Error(`Aucun dépôt avec index.html sous ${base} — passe NOTCHIA_ROOT=…`);
+  return found;
+})();
 const LANGS = ['en', 'es', 'de'];
 const OGLOC = { fr: 'fr_FR', en: 'en_US', es: 'es_ES', de: 'de_DE' };
 const PAGES = [
