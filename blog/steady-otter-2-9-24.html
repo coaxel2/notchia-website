@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9.24 : plus de plantage au lancement chez les utilisateurs Pro</title>
+<meta name="description" content="NotchIA 2.9.24 corrige un plantage au lancement réservé aux utilisateurs Pro : l'index des fils Codex conserve une ligne par renommage d'un même fil, et l'app exigeait des identifiants uniques." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/steady-otter-2-9-24" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/steady-otter-2-9-24" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/steady-otter-2-9-24" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA 2.9.24 : Steady Otter 🦦" />
+<meta property="og:description" content="NotchIA 2.9.24 corrige un plantage au lancement réservé aux utilisateurs Pro : l'index des fils Codex conserve une ligne par renommage d'un même fil, et l'app exigeait des identifiants uniques." />
+<meta property="og:url" content="https://notchia.app/blog/steady-otter-2-9-24" />
+<meta property="og:image" content="https://notchia.app/og-image.png?v=20260825" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-09-25" />
+<meta property="article:modified_time" content="2026-09-25" />
+<meta property="article:author" content="NotchIA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA 2.9.24 : Steady Otter 🦦" />
+<meta name="twitter:description" content="NotchIA 2.9.24 corrige un plantage au lancement réservé aux utilisateurs Pro : l'index des fils Codex conserve une ligne par renommage d'un même fil, et l'app exigeait des identifiants uniques." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  code.inline { font-family: 'JetBrains Mono', monospace; font-size: 0.86em; background: rgba(237,232,220,0.08); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+  details { border: 1px solid rgba(237,232,220,0.10); border-radius: 10px; padding: 1rem; margin: 0.8rem 0; background: #10131A; }
+  summary { cursor: pointer; color: #EDE8DC; font-weight: 600; }
+  details p { margin-top: 0.7rem; margin-bottom: 0; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://notchia.app/blog/steady-otter-2-9-24#article",
+   "headline": "NotchIA 2.9.24 : plus de plantage au lancement chez les utilisateurs Pro",
+   "description": "NotchIA 2.9.24 corrige un plantage au lancement réservé aux utilisateurs Pro : l'index des fils Codex conserve une ligne par renommage d'un même fil, et l'app exigeait des identifiants uniques.",
+   "datePublished": "2026-09-25",
+   "dateModified": "2026-09-25",
+   "inLanguage": "fr-FR",
+   "image": "https://notchia.app/og-image.png?v=20260825",
+   "author": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/" },
+   "publisher": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/", "logo": { "@type": "ImageObject", "url": "https://notchia.app/logo-512.png" } },
+   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://notchia.app/blog/steady-otter-2-9-24" },
+   "wordCount": 520
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/blog/steady-otter-2-9-24#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Pourquoi NotchIA plantait-il seulement après l'activation de Pro ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Parce que la détection des sessions Codex est une fonctionnalité Pro : sans licence, ce code ne s'exécute jamais. Une fois Pro activé, le scan tournait au lancement et rencontrait le défaut."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Que faire si l'app se ferme avant de pouvoir se mettre à jour ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Téléchargez la dernière version depuis la page d'installation et remplacez l'app dans le dossier Applications. La licence Pro est conservée sur le Mac, il n'y a rien à ressaisir."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Le plantage dépendait-il de la puce du Mac ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Non. Il a été reproduit à l'identique sur Apple Silicon et sur Intel, et la correction vaut pour les deux."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://notchia.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "2.9.24", "item": "https://notchia.app/blog/steady-otter-2-9-24" }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="font-sans min-h-screen">
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Notes de version · 2.9.24</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Steady Otter : l'app <span class="grad-text">ne plante plus</span> au lancement</h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 25 septembre 2026 · 3 min de lecture</p>
+  </section>
+
+  <p>Un utilisateur l'a signalé le jour même de son passage à Pro : NotchIA se fermait net quelques secondes après le lancement, sans message, à chaque tentative. Cette version corrige la cause, et le plantage a été reproduit puis vérifié sur les deux architectures.</p>
+
+  <h2>Un identifiant en double, par construction</h2>
+  <p>NotchIA lit l'index des fils de Codex pour afficher les sessions en cours. <strong>Cet index conserve une ligne par renommage d'un même fil</strong> : c'est son fonctionnement normal, la dernière ligne l'emporte. NotchIA, lui, exigeait que chaque identifiant n'apparaisse qu'une fois, et s'arrêtait brutalement dès qu'il en rencontrait un en double.</p>
+  <p>La détection des sessions Codex étant réservée à Pro, ce code ne s'exécute jamais sans licence. D'où le symptôme déroutant : une app qui fonctionnait très bien, puis plantait dès l'activation. Et d'où son invisibilité en développement, où aucun fil n'avait jamais été renommé.</p>
+
+  <h2>Reproduit sur Apple Silicon et sur Intel</h2>
+  <p>Avec un index contenant un fil renommé, la 2.9.23 meurt en quelques secondes sur les deux puces, y compris la version Intel exécutée sous Rosetta. <strong>La 2.9.24 reste en vie sur le même index</strong> : pour chaque fil, c'est la ligne la plus récente qui est retenue, exactement comme le fait Codex.</p>
+
+  <h2>Rien à refaire</h2>
+  <p>La licence Pro est enregistrée sur le Mac et n'est pas concernée. Si l'app se ferme avant que la mise à jour automatique ait pu s'installer, il suffit de télécharger la dernière version et de remplacer l'app dans le dossier Applications.</p>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Pourquoi NotchIA plantait-il seulement après l'activation de Pro ?</summary>
+    <p>Parce que la détection des sessions Codex est une fonctionnalité Pro : sans licence, ce code ne s'exécute jamais. Une fois Pro activé, le scan tournait au lancement et rencontrait le défaut.</p>
+  </details>
+  <details>
+    <summary>Que faire si l'app se ferme avant de pouvoir se mettre à jour ?</summary>
+    <p>Téléchargez la dernière version depuis la page d'installation et remplacez l'app dans le dossier Applications. La licence Pro est conservée sur le Mac, il n'y a rien à ressaisir.</p>
+  </details>
+  <details>
+    <summary>Le plantage dépendait-il de la puce du Mac ?</summary>
+    <p>Non. Il a été reproduit à l'identique sur Apple Silicon et sur Intel, et la correction vaut pour les deux.</p>
+  </details>
+
+  <h2>Comment l'obtenir</h2>
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update Sparkle vous propose la 2.9.24 automatiquement. Pour forcer : menu NotchIA → <em>Vérifier les mises à jour</em>.</p>
+  <p><strong>Nouvel utilisateur ?</strong> <code class="inline">brew install --cask coaxel2/notchia/notchia</code>, ou le <a href="/install">.dmg depuis la page d'installation</a>.</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/changelog" class="btn-secondary">Changelog complet</a>
+  </div>
+  <p class="mt-10 text-sm"><a href="/blog/" class="text-cream/55 hover:text-cream">← Tous les articles</a></p>
+</main>
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

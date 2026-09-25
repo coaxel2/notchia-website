@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9.25 : Compact devient la densité de tout le monde</title>
+<meta name="description" content="NotchIA 2.9.25 fait de Compact la densité par défaut et l'applique à tous dès la mise à jour, y compris à ceux qui avaient laissé Normal. Large est conservé, le réglage reste libre." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/tidy-wren-2-9-25" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/tidy-wren-2-9-25" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/tidy-wren-2-9-25" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA 2.9.25 : Tidy Wren 🐦" />
+<meta property="og:description" content="NotchIA 2.9.25 fait de Compact la densité par défaut et l'applique à tous dès la mise à jour, y compris à ceux qui avaient laissé Normal. Large est conservé, le réglage reste libre." />
+<meta property="og:url" content="https://notchia.app/blog/tidy-wren-2-9-25" />
+<meta property="og:image" content="https://notchia.app/og-image.png?v=20260825" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-09-25" />
+<meta property="article:modified_time" content="2026-09-25" />
+<meta property="article:author" content="NotchIA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA 2.9.25 : Tidy Wren 🐦" />
+<meta name="twitter:description" content="NotchIA 2.9.25 fait de Compact la densité par défaut et l'applique à tous dès la mise à jour, y compris à ceux qui avaient laissé Normal. Large est conservé, le réglage reste libre." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  code.inline { font-family: 'JetBrains Mono', monospace; font-size: 0.86em; background: rgba(237,232,220,0.08); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+  details { border: 1px solid rgba(237,232,220,0.10); border-radius: 10px; padding: 1rem; margin: 0.8rem 0; background: #10131A; }
+  summary { cursor: pointer; color: #EDE8DC; font-weight: 600; }
+  details p { margin-top: 0.7rem; margin-bottom: 0; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://notchia.app/blog/tidy-wren-2-9-25#article",
+   "headline": "NotchIA 2.9.25 : Compact devient la densité de tout le monde",
+   "description": "NotchIA 2.9.25 fait de Compact la densité par défaut et l'applique à tous dès la mise à jour, y compris à ceux qui avaient laissé Normal. Large est conservé, le réglage reste libre.",
+   "datePublished": "2026-09-25",
+   "dateModified": "2026-09-25",
+   "inLanguage": "fr-FR",
+   "image": "https://notchia.app/og-image.png?v=20260825",
+   "author": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/" },
+   "publisher": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/", "logo": { "@type": "ImageObject", "url": "https://notchia.app/logo-512.png" } },
+   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://notchia.app/blog/tidy-wren-2-9-25" },
+   "wordCount": 300
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/blog/tidy-wren-2-9-25#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Mon réglage de densité a changé tout seul, pourquoi ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La 2.9.25 fait de Compact la densité de tout le monde : les Mac restés sur Normal, par défaut ou par choix, passent en Compact une seule fois. Ceux qui avaient choisi Large ne bougent pas. Le réglage reste ensuite modifiable librement."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment revenir à Normal ou à Large ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Réglages, section Densité. Le choix s'applique immédiatement et l'encoche s'ouvre une seconde et demie pour montrer le résultat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "L'encoche fermée change-t-elle aussi ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Non. Seule l'encoche ouverte suit la densité ; la fermée reste calquée sur l'encoche matérielle du Mac."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://notchia.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "2.9.25", "item": "https://notchia.app/blog/tidy-wren-2-9-25" }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="font-sans min-h-screen">
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Notes de version · 2.9.25</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Tidy Wren : <span class="grad-text">Compact</span> pour tout le monde</h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 25 septembre 2026 · 2 min de lecture</p>
+  </section>
+
+  <p>Depuis la 2.9.23, le réglage Densité fonctionne pour de bon. À l'usage, la valeur Normale laisse l'encoche ouverte plus haute que nécessaire. <strong>Compact devient donc la densité par défaut</strong>, et cette version l'applique à tout le monde.</p>
+
+  <h2>Ce qui change</h2>
+  <p>L'encoche ouverte se resserre d'environ 10 % : hauteur d'en-tête, marges, espacements, onglets, boutons et arrondis suivent. L'encoche fermée, elle, ne bouge pas.</p>
+  <p>La bascule s'applique une seule fois, au premier lancement de la 2.9.25, aux Mac restés sur Normal, par défaut ou par choix. <strong>Ceux qui avaient choisi Large le gardent.</strong></p>
+
+  <h2>Le réglage reste libre</h2>
+  <p>Réglages, section Densité : Compact, Normal ou Large, avec un aperçu immédiat. Le choix fait après la mise à jour est conservé, la bascule ne se reproduit pas.</p>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Mon réglage de densité a changé tout seul, pourquoi ?</summary>
+    <p>La 2.9.25 fait de Compact la densité de tout le monde : les Mac restés sur Normal, par défaut ou par choix, passent en Compact une seule fois. Ceux qui avaient choisi Large ne bougent pas. Le réglage reste ensuite modifiable librement.</p>
+  </details>
+  <details>
+    <summary>Comment revenir à Normal ou à Large ?</summary>
+    <p>Réglages, section Densité. Le choix s'applique immédiatement et l'encoche s'ouvre une seconde et demie pour montrer le résultat.</p>
+  </details>
+  <details>
+    <summary>L'encoche fermée change-t-elle aussi ?</summary>
+    <p>Non. Seule l'encoche ouverte suit la densité ; la fermée reste calquée sur l'encoche matérielle du Mac.</p>
+  </details>
+
+  <h2>Comment l'obtenir</h2>
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update Sparkle vous propose la 2.9.25 automatiquement. Pour forcer : menu NotchIA → <em>Vérifier les mises à jour</em>.</p>
+  <p><strong>Nouvel utilisateur ?</strong> <code class="inline">brew install --cask coaxel2/notchia/notchia</code>, ou le <a href="/install">.dmg depuis la page d'installation</a>.</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/changelog" class="btn-secondary">Changelog complet</a>
+  </div>
+  <p class="mt-10 text-sm"><a href="/blog/" class="text-cream/55 hover:text-cream">← Tous les articles</a></p>
+</main>
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
