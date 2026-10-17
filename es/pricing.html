@@ -309,7 +309,7 @@
 
 <script>
   const I18N = {
-    fr: {
+    fr: {'langhint.msg':'Cette page existe aussi en français.','langhint.go':'Lire en français','langhint.close':'Fermer',
       'meta.title':'Tarifs NotchIA Pro · 2,99 €/mois ou 24,99 € à vie','meta.description':"NotchIA Pro à 2,99 €/mois ou 24,99 € à vie. Paiement sécurisé Stripe, clé de licence livrée par email immédiatement. Version Essentiel gratuite disponible.",
       'nav.home':'Accueil','nav.account':'Mon compte',
       'h1':'<span class="grad-text">Pro</span>, sans abonnement obligatoire',
@@ -333,7 +333,7 @@
       'faq.q4':"J'ai perdu ma clé de licence. Que faire ?",'faq.a4':'La page <a href="/account" class="underline">/account</a> permet de retrouver une clé depuis l\'email d\'achat.',
       'footnote':'Paiement sécurisé via Stripe. Voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.',
     },
-    en: {
+    en: {'langhint.msg':'This page is also available in English.','langhint.go':'Read in English','langhint.close':'Close',
       'meta.title':'NotchIA Pro Pricing: €2.99/month or €24.99 lifetime','meta.description':"NotchIA Pro at €2.99/month or €24.99 lifetime. Secure Stripe payment, license key delivered by email instantly. Free Essential version available.",
       'nav.home':'Home','nav.account':'My account',
       'h1':'<span class="grad-text">Pro</span>, no mandatory subscription',
@@ -357,7 +357,7 @@
       'faq.q4':'I lost my license key. What now?','faq.a4':'The <a href="/account" class="underline">/account</a> page lets you retrieve a key from the purchase email.',
       'footnote':'Secure payment via Stripe. See our <a href="/refund" class="underline">refund policy</a>, our <a href="/cgv" class="underline">terms of sale</a> and our <a href="/privacy" class="underline">privacy policy</a>.',
     },
-    es: {
+    es: {'langhint.msg':'Esta página también está disponible en español.','langhint.go':'Leer en español','langhint.close':'Cerrar',
       'meta.title':'Precios de NotchIA Pro · 2,99 €/mes o 24,99 € de por vida','meta.description':"NotchIA Pro a 2,99 €/mes o 24,99 € de por vida. Pago seguro con Stripe, clave de licencia entregada por email al instante. Versión Esencial gratuita disponible.",
       'nav.home':'Inicio','nav.account':'Mi cuenta',
       'h1':'<span class="grad-text">Pro</span>, sin suscripción obligatoria',
@@ -381,7 +381,7 @@
       'faq.q4':'Perdí mi clave de licencia. ¿Qué hago?','faq.a4':'La página <a href="/account" class="underline">/account</a> permite recuperar una clave desde el email de compra.',
       'footnote':'Pago seguro vía Stripe. Ver nuestra <a href="/refund" class="underline">política de reembolso</a>, nuestras <a href="/cgv" class="underline">CGV</a> y nuestra <a href="/privacy" class="underline">política de privacidad</a>.',
     },
-    de: {
+    de: {'langhint.msg':'Diese Seite gibt es auch auf Deutsch.','langhint.go':'Auf Deutsch lesen','langhint.close':'Schließen',
       'meta.title':'NotchIA Pro Preise · 2,99 €/Monat oder 24,99 € auf Lebenszeit','meta.description':"NotchIA Pro für 2,99 €/Monat oder 24,99 € auf Lebenszeit. Sichere Stripe-Zahlung, Lizenzschlüssel sofort per E-Mail. Kostenlose Essential-Version verfügbar.",
       'nav.home':'Startseite','nav.account':'Mein Konto',
       'h1':'<span class="grad-text">Pro</span>, ohne Pflicht-Abo',
@@ -407,11 +407,7 @@
     },
   };
 
-  function detectLang() {
-    try { const s = localStorage.getItem('notchia-lang-choice'); if (s && I18N[s]) return s; } catch (e) {}
-    return 'es';
-  }
-  let currentLang = detectLang();
+  let currentLang = document.documentElement.lang || 'fr';
   function applyLang(lang) {
     if (!I18N[lang]) lang = 'en';
     currentLang = lang;
@@ -444,12 +440,53 @@
     }
   }
   applyLang(currentLang);
+  /* Langue : chaque page est servie pré-rendue dans sa langue (FR à la racine,
+     EN/ES/DE dans /en/ /es/ /de/, générées par scripts/build-i18n-pages.mjs).
+     Aucune réécriture du DOM selon navigator.language : crawlers et visiteurs
+     voient le HTML servi, conforme au canonical et au hreflang (Googlebot rend
+     en en-US, la page FR s'affichait en anglais pour lui).
+     - choix explicite mémorisé (sélecteur) : renvoi vers la version choisie ;
+     - navigateur dans une autre langue disponible : simple suggestion,
+       jamais de redirection automatique. */
+  const LANG_DEST = { fr: '../pricing', en: '../en/pricing', es: '../es/pricing', de: '../de/pricing' }; // versions de cette page (réécrit par build-i18n-pages.mjs)
+  const PAGE_LANG = document.documentElement.lang || 'fr';
+  let langChoice = null;
+  try { langChoice = localStorage.getItem('notchia-lang-choice'); } catch (_) {}
+  if (langChoice && langChoice !== PAGE_LANG && LANG_DEST[langChoice] != null) location.replace(LANG_DEST[langChoice]);
+
   document.getElementById('lang-switch')?.addEventListener('change', e => {
     const v = e.target.value;
     try { localStorage.setItem('notchia-lang-choice', v); } catch (_) {}
-    const dest = { fr: '../pricing', en: '../en/pricing', es: '../es/pricing', de: '../de/pricing' }[v];
-    if (dest != null) location.href = dest || '../'; else applyLang(v);
+    if (LANG_DEST[v] != null) location.href = LANG_DEST[v]; else applyLang(v);
   });
+
+  (function langHint() {
+    if (langChoice) return;
+    try { if (localStorage.getItem('notchia-langhint-off')) return; } catch (_) {}
+    const b = (navigator.language || '').toLowerCase().split('-')[0];
+    const t = I18N[b];
+    if (!t || b === PAGE_LANG || LANG_DEST[b] == null || !t['langhint.msg']) return;
+    const bar = document.createElement('aside');
+    bar.lang = b;
+    bar.setAttribute('aria-label', t['langhint.msg']);
+    bar.style.cssText = 'position:fixed;left:16px;bottom:16px;z-index:60;display:flex;align-items:center;flex-wrap:wrap;gap:4px 14px;max-width:min(520px,calc(100vw - 104px));padding:6px 4px 6px 16px;background:#14171F;border:1px solid rgba(237,232,220,.18);border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.45);color:#EDE8DC;font:500 14px/1.35 "Instrument Sans",system-ui,sans-serif';
+    const msg = document.createElement('span');
+    msg.textContent = t['langhint.msg'];
+    const go = document.createElement('a');
+    go.href = LANG_DEST[b];
+    go.hreflang = b;
+    go.textContent = t['langhint.go'];
+    go.style.cssText = 'color:#EDE8DC;font-weight:600;text-decoration:underline;text-underline-offset:3px;padding:12px 0';
+    go.addEventListener('click', () => { try { localStorage.setItem('notchia-lang-choice', b); } catch (_) {} });
+    const close = document.createElement('button');
+    close.type = 'button';
+    close.setAttribute('aria-label', t['langhint.close']);
+    close.textContent = '×';
+    close.style.cssText = 'width:44px;height:44px;margin-left:auto;background:none;border:0;color:rgba(237,232,220,.75);font-size:22px;line-height:1;cursor:pointer';
+    close.addEventListener('click', () => { bar.remove(); try { localStorage.setItem('notchia-langhint-off', '1'); } catch (_) {} });
+    bar.append(msg, go, close);
+    window.addEventListener('load', () => document.body.appendChild(bar), { once: true });
+  })();
 
   // ── Stripe Checkout ───────────────────────────────────────────────
   document.querySelectorAll('.js-checkout').forEach(btn => {

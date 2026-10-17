@@ -3,8 +3,9 @@
  * Génère les versions statiques EN/ES/DE de index/features/pricing dans /en/ /es/ /de/.
  * Applique le dictionnaire I18N côté serveur (même sémantique que applyLang du site),
  * traduit le JSON-LD (FAQPage, descriptions), réécrit canonical/hreflang/og et les
- * chemins relatifs, et patche le JS embarqué (langue par défaut = celle de la page,
- * sélecteur = navigation entre versions, pas de persistance implicite).
+ * chemins relatifs (url() des polices comprises), et patche le JS embarqué : la table
+ * LANG_DEST (URL des versions de la page) suit le dossier de langue. La langue de la
+ * page vient de <html lang>, le sélecteur navigue entre versions.
  *
  * À RELANCER après toute modification de index.html, features.html ou pricing.html :
  *   cd /tmp/i18ngen && npm i jsdom@24 && cp <repo>/scripts/build-i18n-pages.mjs . && node build-i18n-pages.mjs
@@ -177,38 +178,21 @@ function rewriteLinks(doc, lang) {
 }
 
 function patchScripts(html, page, lang) {
-  // 1. langue par défaut = celle de la page (le choix explicite stocké reste prioritaire)
-  html = html.replace(
-    /const b = \(navigator\.language \|\| 'en'\)\.toLowerCase\(\)\.split\('-'\)\[0\];\s*\n\s*return I18N\[b\] \? b : 'en';/,
-    `return '${lang}';`
-  );
-  // 2. pas de persistance implicite au chargement
-  html = html.replace(
-    "try { localStorage.setItem('notchia-lang-choice', lang); } catch (e) {}",
-    "/* pas de persistance implicite sur les pages statiques */"
-  );
-  // 2b. le contenu est PRÉ-RENDU : pas de re-render au chargement, sauf si
-  //     l'utilisateur a explicitement choisi une autre langue auparavant
-  html = html.replace(
-    'applyLang(detectLang());',
-    `(function(){ let s = null; try { s = localStorage.getItem('notchia-lang-choice'); } catch (_) {} if (s && s !== '${lang}' && I18N[s]) applyLang(s); })();`
-  );
+  // 1. Langue : les pages sources ne détectent plus navigator.language. Elles
+  //    lisent leur langue dans <html lang> (posé par applyDict), renvoient vers la
+  //    version mémorisée par le sélecteur et proposent un bandeau de suggestion.
+  //    Seule la table LANG_DEST (URL des versions de la page) dépend du dossier.
+  const dests = `{ fr: '../${page.slug}', en: '../en/${page.slug}', es: '../es/${page.slug}', de: '../de/${page.slug}' }`;
+  const before = html;
+  html = html.replace(/const LANG_DEST = \{[^}]*\};/, `const LANG_DEST = ${dests};`);
+  if (html === before) throw new Error(`${page.file} : const LANG_DEST introuvable, script de langue modifié ?`);
   // 2c. liens relatifs restants dans les chaînes des dictionnaires JS
   //     (ré-injectés par applyLang) : préfixe ../ — lookbehind pour ne pas
   //     retoucher ceux déjà réécrits dans le DOM
   html = html.replace(/(?<!\.\.\/)href="install\.html/g, 'href="../install.html');
-  // 3. sélecteur = navigation entre versions linguistiques
-  const dests = `{ fr: '../${page.slug}', en: '../en/${page.slug}', es: '../es/${page.slug}', de: '../de/${page.slug}' }`
-    .replace(/\.\.\/'/g, "../'").replace(/\.\.\/(en|es|de)\/'/g, "../$1/'");
-  html = html.replace(
-    /document\.getElementById\('lang-switch'\)\?\.addEventListener\('change', e => \{\n\s*try \{ localStorage\.setItem\('notchia-lang-choice', e\.target\.value\); \} catch \(_\) \{\}\n\s*applyLang\(e\.target\.value\);\n\s*\}\);/,
-    `document.getElementById('lang-switch')?.addEventListener('change', e => {
-    const v = e.target.value;
-    try { localStorage.setItem('notchia-lang-choice', v); } catch (_) {}
-    const dest = ${dests}[v];
-    if (dest != null) location.href = dest || '../'; else applyLang(v);
-  });`
-  );
+  // 2d. polices auto-hébergées : les url() des @font-face inline ne passent pas
+  //     par rewriteLinks (texte CSS, pas un attribut)
+  html = html.replace(/url\(fonts\//g, 'url(../fonts/');
   return html;
 }
 
