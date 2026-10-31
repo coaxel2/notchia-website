@@ -19,4 +19,40 @@
 # Alias FR vers la page Nouveautes (rendue par functions/changelog.js).
 /nouveautes  /changelog  301
 
+# Pages « alternative » et guide en double fusionnés dans les comparatifs (2026-10-31).
+/blog/alternative-alcove  /blog/notchia-vs-alcove-2026  301
+/blog/alternative-alcove.html  /blog/notchia-vs-alcove-2026  301
+/blog/alcove-alternative  /blog/notchia-vs-alcove-comparison-2026  301
+/blog/alcove-alternative.html  /blog/notchia-vs-alcove-comparison-2026  301
+/blog/alternativa-alcove  /blog/notchia-vs-alcove-comparativa-2026  301
+/blog/alternativa-alcove.html  /blog/notchia-vs-alcove-comparativa-2026  301
+/blog/alcove-alternative-de  /blog/notchia-vs-alcove-vergleich-2026  301
+/blog/alcove-alternative-de.html  /blog/notchia-vs-alcove-vergleich-2026  301
+/blog/alternative-mediamate  /blog/notchia-vs-mediamate-2026  301
+/blog/alternative-mediamate.html  /blog/notchia-vs-mediamate-2026  301
+/blog/mediamate-alternative  /blog/notchia-vs-mediamate-comparison-2026  301
+/blog/mediamate-alternative.html  /blog/notchia-vs-mediamate-comparison-2026  301
+/blog/alternativa-mediamate  /blog/notchia-vs-mediamate-comparativa-2026  301
+/blog/alternativa-mediamate.html  /blog/notchia-vs-mediamate-comparativa-2026  301
+/blog/mediamate-alternative-de  /blog/notchia-vs-mediamate-vergleich-2026  301
+/blog/mediamate-alternative-de.html  /blog/notchia-vs-mediamate-vergleich-2026  301
+/blog/alternative-notchnook  /blog/notchia-vs-notchnook-2026  301
+/blog/alternative-notchnook.html  /blog/notchia-vs-notchnook-2026  301
+/blog/notchnook-alternative  /blog/notchia-vs-notchnook-comparison-2026  301
+/blog/notchnook-alternative.html  /blog/notchia-vs-notchnook-comparison-2026  301
+/blog/alternativa-notchnook  /blog/notchia-vs-notchnook-comparativa-2026  301
+/blog/alternativa-notchnook.html  /blog/notchia-vs-notchnook-comparativa-2026  301
+/blog/notchnook-alternative-de  /blog/notchia-vs-notchnook-vergleich-2026  301
+/blog/notchnook-alternative-de.html  /blog/notchia-vs-notchnook-vergleich-2026  301
+/blog/alternative-topnotch  /blog/notchia-vs-topnotch-2026  301
+/blog/alternative-topnotch.html  /blog/notchia-vs-topnotch-2026  301
+/blog/topnotch-alternative  /blog/notchia-vs-topnotch-comparison-2026  301
+/blog/topnotch-alternative.html  /blog/notchia-vs-topnotch-comparison-2026  301
+/blog/alternativa-topnotch  /blog/notchia-vs-topnotch-comparativa-2026  301
+/blog/alternativa-topnotch.html  /blog/notchia-vs-topnotch-comparativa-2026  301
+/blog/topnotch-alternative-de  /blog/notchia-vs-topnotch-vergleich-2026  301
+/blog/topnotch-alternative-de.html  /blog/notchia-vs-topnotch-vergleich-2026  301
+/blog/best-mac-notch-app-2026  /blog/best-macbook-notch-app-2026  301
+/blog/best-mac-notch-app-2026.html  /blog/best-macbook-notch-app-2026  301
+
 /*  /404.html  404

@@ -68,7 +68,30 @@ function extractI18N(html) {
 
 const stripTags = (s) => s.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 
-function translateJsonLd(doc, dict, lang, qKeys) {
+// Libellés du JSON-LD écrits en dur en français dans les pages source (fil d'Ariane, offres).
+const LD_NAMES = {
+  'Accueil': { en: 'Home', es: 'Inicio', de: 'Startseite' },
+  'IA en direct': { en: 'Live AI', es: 'IA en directo', de: 'Live-KI' },
+  'Médias': { en: 'Media', es: 'Multimedia', de: 'Medien' },
+  'Calendrier': { en: 'Calendar', es: 'Calendario', de: 'Kalender' },
+  'Productivité': { en: 'Productivity', es: 'Productividad', de: 'Produktivität' },
+  'Système': { en: 'System', es: 'Sistema', de: 'System' },
+  'Tarif': { en: 'Pricing', es: 'Precio', de: 'Preis' },
+  'Tarifs': { en: 'Pricing', es: 'Precios', de: 'Preise' },
+  'Télécharger': { en: 'Download', es: 'Descargar', de: 'Herunterladen' },
+  'Fonctionnalités': { en: 'Features', es: 'Funciones', de: 'Funktionen' },
+  'Pro mensuel': { en: 'Pro monthly', es: 'Pro mensual', de: 'Pro monatlich' },
+  'Pro à vie': { en: 'Pro lifetime', es: 'Pro de por vida', de: 'Pro lebenslang' },
+};
+const ldName = (s, lang) => (LD_NAMES[s] && LD_NAMES[s][lang]) || s;
+// URL d'une page FR du trio (/, /features, /pricing, avec ancre éventuelle) → sa version localisée.
+function ldUrl(u, lang) {
+  const m = typeof u === 'string' && u.match(/^https:\/\/notchia\.app\/(features|pricing)?(#.*)?$/);
+  return m ? langUrl(lang, m[1] || '') + (m[2] || '') : u;
+}
+
+function translateJsonLd(doc, dict, lang, qKeys, page) {
+  const my = langUrl(lang, page.slug);
   doc.querySelectorAll('script[type="application/ld+json"]').forEach((node) => {
     let data;
     try { data = JSON.parse(node.textContent); } catch { return; }
@@ -87,6 +110,25 @@ function translateJsonLd(doc, dict, lang, qKeys) {
         if (dict['meta.description']) n.description = dict['meta.description'];
       }
       if (n.inLanguage === 'fr' || n.inLanguage === 'fr-FR') n.inLanguage = lang;
+      // nœuds propres à la page : identifiant, langue et URL de la version localisée
+      if (n['@type'] === 'FAQPage') {
+        if (n['@id']) n['@id'] = my + '#faq';
+        n.inLanguage = lang;
+      }
+      if (n['@type'] === 'BreadcrumbList') {
+        if (n['@id']) n['@id'] = my + '#breadcrumb';
+        (n.itemListElement || []).forEach((it) => {
+          it.name = ldName(it.name, lang);
+          it.item = ldUrl(it.item, lang);
+        });
+      }
+      if (n['@type'] === 'Product') {
+        n.url = ldUrl(n.url, lang);
+        (Array.isArray(n.offers) ? n.offers : [n.offers]).filter(Boolean).forEach((o) => {
+          o.name = ldName(o.name, lang);
+          o.url = ldUrl(o.url, lang);
+        });
+      }
     }
     node.textContent = JSON.stringify(data, null, 1);
   });
@@ -208,7 +250,7 @@ for (const page of PAGES) {
     // ordre DOM des clés de questions (les numéros sautent, ex. pas de faq.q8)
     const qKeys = [...doc.querySelectorAll('[data-i18n^="faq.q"]')].map((el) => el.getAttribute('data-i18n'));
     applyDict(doc, I18N[lang], lang);
-    translateJsonLd(doc, I18N[lang], lang, qKeys);
+    translateJsonLd(doc, I18N[lang], lang, qKeys, page);
     fixHead(doc, page, lang);
     rewriteLinks(doc, lang);
     let out = dom.serialize();

@@ -193,11 +193,6 @@ function renderPage(releases, ok) {
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="canonical" href="https://notchia.app/changelog" />
-<link rel="alternate" hreflang="fr" href="https://notchia.app/changelog" />
-<link rel="alternate" hreflang="en" href="https://notchia.app/changelog" />
-<link rel="alternate" hreflang="es" href="https://notchia.app/changelog" />
-<link rel="alternate" hreflang="de" href="https://notchia.app/changelog" />
-<link rel="alternate" hreflang="x-default" href="https://notchia.app/changelog" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Nouveautés NotchIA — journal des versions" />
 <meta property="og:description" content="Toutes les mises à jour de NotchIA, version actuelle et téléchargement direct." />
@@ -208,7 +203,7 @@ function renderPage(releases, ok) {
 <meta name="twitter:title" content="Nouveautés NotchIA — journal des versions" />
 <meta name="twitter:description" content="Toutes les mises à jour de NotchIA." />
 <meta name="twitter:image" content="https://notchia.app/og-image.png" />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/fonts.css" />
 <link rel="stylesheet" href="/tailwind.css" />
 <style>
 :root{--ink:#0B0D12;--cream:#EDE8DC;--brand:linear-gradient(90deg,#A855F7 0%,#FF4D88 30%,#FF7A2D 60%,#4DA8FF 100%)}

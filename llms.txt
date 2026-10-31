@@ -18,7 +18,7 @@
 | Assistants IA supportés | Claude Code (Anthropic) et ChatGPT Codex (OpenAI) |
 | Lecteurs musicaux supportés | Apple Music, Spotify, YouTube Music + toute app utilisant Now Playing API |
 | Paroles synchronisées | 26 langues via lrclib |
-| Conversion fichiers (Pro) | 13 formats (JPG, WebP, HEIC, AVIF, PDF, PNG, TIFF, GIF, MP3, WAV, MP4, MOV, etc.) |
+| Conversion fichiers (Pro) | 13 formats de sortie (JPEG, PNG, GIF, TIFF, BMP, HEIC, WebP, PDF, Markdown, M4A, MP4, MOV, M4V) |
 | Langues UI | français, anglais, espagnol, allemand |
 | Tarif Essentiel | 0 € à vie (sans limitation de durée) |
 | Tarif Pro mensuel | 2,99 € / mois (annulable à tout moment, 1 Mac) |
@@ -144,7 +144,7 @@ Sans cette autorisation, certaines fonctionnalités (raccourcis globaux, intégr
 - **Concentration** : sessions focus + pauses courtes/longues paramétrables, statistiques quotidiennes, son de fin, sneak peek périodique
 - **Presse-papiers historique** : recherche, regroupement par app, section « Épinglés » dédiée en tête, détection automatique du type de contenu (URL, couleur hex/rgb, e-mail, JSON, nombre, code) avec badge par ligne, actions rapides contextuelles (ouvrir un lien, écrire un e-mail, reformater un JSON, encoder/décoder base64 ou URL), badge « Copié » au moment de la copie, taille de cache configurable (jusqu'à 100 entrées en Pro)
 - **Shelf** : drag-and-drop temporaire de fichiers/textes/liens entre apps sans encombrer le Bureau
-- **Convertisseur de fichiers intégré** : 13 formats en Pro (image JPG/WebP/HEIC/AVIF/TIFF, PDF, vidéo)
+- **Convertisseur de fichiers intégré** : 13 formats de sortie en Pro (images JPEG, PNG, GIF, TIFF, BMP, HEIC, WebP ; PDF ; Markdown ; audio M4A ; vidéo MP4, MOV, M4V)
 - **Téléchargement vidéo** (Pro, nouveau en 2.9.2) : coller un lien, choisir MP4 (plus haute résolution, H.264/AAC lisible partout) ou MP3 (extraction audio meilleure qualité). Sites supportés : YouTube, Vimeo, X (Twitter), TikTok, Instagram, Twitch, SoundCloud, Dailymotion et 1800+ autres. 100 % local : aucune donnée via un serveur NotchIA ; les outils nécessaires sont installés automatiquement au premier usage. Fichiers enregistrés dans Téléchargements. Pour usage personnel, dans le respect des droits d'auteur et des conditions des plateformes.
 - **Quick Share** : partage rapide AirDrop, Messages, Mail, Notes
 - **QuickLook** depuis le Shelf
@@ -282,7 +282,7 @@ Ce qui distingue NotchIA : c'est l'une des seules apps natives qui réunissent, 
 
 Guides complets (existants) :
 - [Meilleures apps Mac 2026 (FR)](https://notchia.app/blog/meilleures-apps-mac-2026) · EN : [/blog/best-mac-apps-2026](https://notchia.app/blog/best-mac-apps-2026)
-- [Meilleure app encoche MacBook 2026 (FR)](https://notchia.app/blog/meilleure-app-encoche-macbook-2026) · EN : [/blog/best-mac-notch-app-2026](https://notchia.app/blog/best-mac-notch-app-2026)
+- [Meilleure app encoche MacBook 2026 (FR)](https://notchia.app/blog/meilleure-app-encoche-macbook-2026) · EN : [/blog/best-macbook-notch-app-2026](https://notchia.app/blog/best-macbook-notch-app-2026)
 - [Meilleures apps Mac pour Claude Code 2026 (FR)](https://notchia.app/blog/meilleures-apps-mac-claude-code-2026) · EN : [/blog/best-mac-apps-claude-code-2026](https://notchia.app/blog/best-mac-apps-claude-code-2026)
 - [Meilleures apps IA Mac 2026 (FR)](https://notchia.app/blog/meilleures-apps-ia-mac-2026) · EN : [/blog/best-mac-ai-apps-2026](https://notchia.app/blog/best-mac-ai-apps-2026)
 
@@ -382,7 +382,7 @@ NotchIA a besoin d'accès **Accessibilité** (raccourcis globaux, contrôle des 
 
 
 
-## GEO Phase 2: pillar, alternatives, press
+## GEO Phase 2: pillar, comparatifs, press
 
 ### Pillar pages (FR/EN/ES/DE)
 - [notchia.app/blog/meilleure-app-encoche-macbook-2026](https://notchia.app/blog/meilleure-app-encoche-macbook-2026) : FR pillar comparatif des meilleures apps pour l'encoche du MacBook en 2026.
@@ -390,12 +390,11 @@ NotchIA a besoin d'accès **Accessibilité** (raccourcis globaux, contrôle des 
 - [notchia.app/blog/mejor-app-muesca-macbook-2026](https://notchia.app/blog/mejor-app-muesca-macbook-2026) : ES pillar comparativa de las mejores apps para la muesca del MacBook 2026.
 - [notchia.app/blog/beste-macbook-notch-app-2026](https://notchia.app/blog/beste-macbook-notch-app-2026) : DE Pillar Vergleich der besten MacBook-Notch-Apps 2026.
 
-### Alternative pages (FR/EN/ES/DE)
-- NotchNook alternative : FR: /blog/alternative-notchnook · EN: /blog/notchnook-alternative · ES: /blog/alternativa-notchnook · DE: /blog/notchnook-alternative-de
-- MediaMate alternative : FR: /blog/alternative-mediamate · EN: /blog/mediamate-alternative · ES: /blog/alternativa-mediamate · DE: /blog/mediamate-alternative-de
-- TopNotch alternative : FR: /blog/alternative-topnotch · EN: /blog/topnotch-alternative · ES: /blog/alternativa-topnotch · DE: /blog/topnotch-alternative-de
-- Alcove alternative : FR: /blog/alternative-alcove · EN: /blog/alcove-alternative · ES: /blog/alternativa-alcove · DE: /blog/alcove-alternative-de
-Angles: NotchNook → "AI-native" · MediaMate → "all-in-one productivity" · TopNotch → "exploit-the-notch" · Alcove → "full-featured"
+### Comparatifs NotchIA vs X (FR/EN/ES/DE)
+- NotchIA vs NotchNook : FR: /blog/notchia-vs-notchnook-2026 · EN: /blog/notchia-vs-notchnook-comparison-2026 · ES: /blog/notchia-vs-notchnook-comparativa-2026 · DE: /blog/notchia-vs-notchnook-vergleich-2026
+- NotchIA vs MediaMate : FR: /blog/notchia-vs-mediamate-2026 · EN: /blog/notchia-vs-mediamate-comparison-2026 · ES: /blog/notchia-vs-mediamate-comparativa-2026 · DE: /blog/notchia-vs-mediamate-vergleich-2026
+- NotchIA vs TopNotch : FR: /blog/notchia-vs-topnotch-2026 · EN: /blog/notchia-vs-topnotch-comparison-2026 · ES: /blog/notchia-vs-topnotch-comparativa-2026 · DE: /blog/notchia-vs-topnotch-vergleich-2026
+- NotchIA vs Alcove : FR: /blog/notchia-vs-alcove-2026 · EN: /blog/notchia-vs-alcove-comparison-2026 · ES: /blog/notchia-vs-alcove-comparativa-2026 · DE: /blog/notchia-vs-alcove-vergleich-2026
 
 ### Press
 - [notchia.app/press](https://notchia.app/press) : Press kit public avec one-liner, descriptions copy-paste, faits cles, citation fondateur, assets logo, captures placeholders et contact direct.

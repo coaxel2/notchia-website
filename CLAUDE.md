@@ -45,8 +45,10 @@ curl https://notchia.app/llms.txt | head
 ## Architecture du site
 
 - **Single HTML file** : `index.html` (~4000 lignes)
+- **Publication** : seul `dist/` part en ligne. `scripts/build-dist.sh` l'assemble à partir d'une **liste blanche** (pages, blog/, en/ es/ de/, dl/, fonts/, press-kit/, .well-known/, fichiers publics de la racine) ; `deploy.yml` le lance puis `wrangler pages deploy dist`, `functions/` restant à la racine. Les notes internes (`*.md`, `marketing/`, `seo-audit/`, `scripts/`, `schema.sql`) ne sont plus servies. Un nouveau type de fichier public doit être ajouté à la liste blanche. Test local : `./scripts/build-dist.sh && npx wrangler@3 pages dev dist`.
+- **Redirections** : `_redirects` (301 des pages fusionnées, ex. pages « alternative » vers les comparatifs « NotchIA vs X »).
 - **Tailwind buildé localement** : `tailwind.css` (29 Ko minifié) commité à la racine — PLUS de CDN. Après tout ajout/retrait de classes Tailwind : `./scripts/build-css.sh` (npx tailwindcss@3.4, config inline dans le script). Toutes les pages référencent `tailwind.css` (racine) ou `../tailwind.css` (blog/, dl/, en/, es/, de/) ; `/changelog` SSR référence `/tailwind.css`. **Exception : la home** (`index.html`, donc aussi `/en/ /es/ /de/`) intègre une copie dans `<style id="tailwind">` pour qu'aucune feuille ne bloque son premier rendu. `build-css.sh` la réinjecte et l'exclut de l'analyse Tailwind (`content.transform`) : ne jamais l'éditer à la main.
-- **Polices** : Fraunces (display), Instrument Sans (body), JetBrains Mono (code/labels). La home les **auto-héberge** dans `fonts/` (woff2 latin + latin-ext, version Google dans le nom, `@font-face` inline + preload, licence OFL dans `fonts/LICENSE.md`). Les autres pages chargent encore Google Fonts.
+- **Polices** : Fraunces (display), Instrument Sans (body), JetBrains Mono (code/labels). **Toutes les pages les auto-hébergent** dans `fonts/` (woff2 latin + latin-ext, version Google dans le nom, licence OFL dans `fonts/LICENSE.md`) : la home en `@font-face` inline + preload, les autres pages via `fonts.css` à la racine (`fonts.css` ou `../fonts.css`, `/fonts.css` pour 404 et `/changelog`). Plus aucun appel à Google Fonts.
 - **i18n** : système data-i18n inline avec dictionnaire JS pour 4 langues (FR/EN/ES/DE). **Aucune détection par `navigator.language`** sur index/features/pricing : chaque URL affiche sa langue (Googlebot rend en en-US, la page FR s'affichait en anglais). Le sélecteur navigue entre versions (`LANG_DEST`), un choix mémorisé renvoie vers la bonne version, et un navigateur dans une autre langue voit un bandeau de suggestion (clés `langhint.*`), jamais une redirection automatique. Sur la home, le dictionnaire est dans son propre `<script>`, au format compact `'clé':'valeur'`.
 - **Pages statiques multilingues** : `/en/`, `/es/`, `/de/` contiennent des versions PRÉ-RENDUES de index/features/pricing (générées, ne pas éditer à la main). Après TOUTE modif de `index.html`, `features.html` ou `pricing.html` : `cd /tmp/i18ngen && npm i jsdom@24 && cp <repo>/scripts/build-i18n-pages.mjs . && node build-i18n-pages.mjs`. Le générateur applique le dico I18N côté serveur, traduit le JSON-LD (FAQ, descriptions), gère canonical/hreflang/og:locale et réécrit la table `LANG_DEST` du JS et les `url(fonts/...)` (échec explicite si `const LANG_DEST` est introuvable).
 - **Blog index** : les cartes ont des pills de langue ; un filtre client affiche uniquement la langue de l'utilisateur (localStorage `notchia-lang` → `navigator.language`), bouton « Toutes les langues » pour tout voir. Les crawlers (sans JS) voient toutes les cartes.
@@ -62,12 +64,12 @@ curl https://notchia.app/llms.txt | head
 
 Si tu changes une feature majeure de l'app :
 
-0. **Article de release dans `blog/`** — à CHAQUE nouvelle version de l'app, créer `blog/<codename>-x-y-z.html` (pattern : `wise-owl-2-8-0.html`, `sealed-badger-2-9-7.html`) : BlogPosting + FAQPage schema, byline « Par NotchIA », FR, wording légal prudent. Ajouter la carte dans `blog/index.html` (pill `note`, en tête de la section Notes de version) + entrée sitemap. Le `/changelog` est automatique (GitHub Releases) mais l'article éditorial ne l'est pas.
+0. **Article de release dans `blog/`** — à CHAQUE nouvelle version de l'app, créer `blog/<codename>-x-y-z.html` (pattern : `wise-owl-2-8-0.html`, `sealed-badger-2-9-7.html`) : BlogPosting + FAQPage schema, byline « Par NotchIA », FR, wording légal prudent. Ajouter la carte dans `blog/index.html` (pill `note`, en tête de la section Notes de version), puis régénérer le sitemap. Le `/changelog` est automatique (GitHub Releases) mais l'article éditorial ne l'est pas.
 1. `index.html` — section visible
 2. `index.html` `<script type="application/ld+json">` — featureList du SoftwareApplication
 3. `index.html` FAQ section + FAQPage schema (si nouvelle question)
 4. `llms.txt` — résumé pour les LLM
-5. `sitemap.xml` — `<lastmod>` mis à jour
+5. `sitemap.xml` : **généré**, ne pas l'éditer à la main. `node scripts/build-sitemap.mjs` (canonical, hreflang et noindex lus dans chaque page, lastmod tiré de git)
 6. **`scripts/build-i18n-pages.mjs`** — régénérer `/en/ /es/ /de/` (si index/features/pricing touchés)
 7. **`./scripts/build-css.sh`** — régénérer `tailwind.css` (si nouvelles classes Tailwind)
 8. `./scripts/indexnow.sh` — relancer après déploiement

@@ -128,15 +128,3 @@ export async function onRequestPost({ request, env }) {
     return json({ error: "Service de paiement indisponible." }, 502);
   }
 }
-
-// Health check
-export async function onRequestGet({ env }) {
-  return json({
-    status: "ok",
-    configured: Boolean(env.STRIPE_SECRET_KEY && env.STRIPE_PRICE_MONTHLY && env.STRIPE_PRICE_LIFETIME),
-    has_secret: Boolean(env.STRIPE_SECRET_KEY),
-    has_monthly: Boolean(env.STRIPE_PRICE_MONTHLY),
-    has_lifetime: Boolean(env.STRIPE_PRICE_LIFETIME),
-    docs: "POST { plan: 'monthly'|'lifetime', email?, lang? }",
-  });
-}

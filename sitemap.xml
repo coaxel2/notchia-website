@@ -4,146 +4,259 @@
   <url>
     <loc>https://notchia.app/</loc>
     <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/" />
   </url>
   <url>
-    <loc>https://notchia.app/install</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/install" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/install" />
+    <loc>https://notchia.app/cgv</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/changelog</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/contact</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://notchia.app/features</loc>
     <lastmod>2026-10-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features" />
   </url>
   <url>
-    <loc>https://notchia.app/pricing</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing" />
+    <loc>https://notchia.app/install</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/mentions-legales</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://notchia.app/press</loc>
     <lastmod>2026-10-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/press" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/press" />
   </url>
   <url>
-    <loc>https://notchia.app/changelog</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/changelog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/changelog" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/changelog" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/changelog" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/changelog" />
+    <loc>https://notchia.app/pricing</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing" />
   </url>
   <url>
-    <loc>https://notchia.app/contact</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/contact" />
+    <loc>https://notchia.app/privacy</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/refund</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/de/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/" />
+  </url>
+  <url>
+    <loc>https://notchia.app/de/features</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features" />
+  </url>
+  <url>
+    <loc>https://notchia.app/de/pricing</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing" />
+  </url>
+  <url>
+    <loc>https://notchia.app/en/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/" />
+  </url>
+  <url>
+    <loc>https://notchia.app/en/features</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features" />
+  </url>
+  <url>
+    <loc>https://notchia.app/en/pricing</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing" />
+  </url>
+  <url>
+    <loc>https://notchia.app/es/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/" />
+  </url>
+  <url>
+    <loc>https://notchia.app/es/features</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features" />
+  </url>
+  <url>
+    <loc>https://notchia.app/es/pricing</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing" />
   </url>
   <url>
     <loc>https://notchia.app/blog/</loc>
     <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/wise-owl-2-8-0</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/wise-owl-2-8-0" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/wise-owl-2-8-0" />
+    <loc>https://notchia.app/blog/apple-intelligence-mac-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/meilleures-apps-mac-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleures-apps-mac-2026" />
+    <loc>https://notchia.app/blog/apple-intelligence-mac-2026-de</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/apple-intelligence-mac-2026-es</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/apple-intelligence-on-mac-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/apps-mac-desarrolladores-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/apps-mac-developpeurs-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/best-claude-code-notch-companion-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-claude-code-notch-companion-2026" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/best-mac-ai-apps-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/best-mac-apps-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-apps-2026" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-mac-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/best-mac-apps-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/meilleures-apps-mac-claude-code-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-mac-claude-code-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-apps-claude-code-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleures-apps-mac-claude-code-2026" />
-  </url>
-  <url>
     <loc>https://notchia.app/blog/best-mac-apps-claude-code-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-apps-claude-code-2026" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-mac-claude-code-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/best-mac-apps-claude-code-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/meilleures-apps-ia-mac-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
+    <loc>https://notchia.app/blog/best-macbook-notch-app-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-macbook-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mejor-app-muesca-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/beste-macbook-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/best-mac-ai-apps-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
+    <loc>https://notchia.app/blog/beste-macbook-notch-app-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-macbook-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mejor-app-muesca-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/beste-macbook-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
   </url>
-  <!-- ─── Articles GEO 2026-05-27 — 5 sujets × 4 langues = 20 articles ─── -->
-
-  <!-- Boring Notch vs NotchIA — comparatif -->
   <url>
     <loc>https://notchia.app/blog/boring-notch-vs-notchia-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/boring-notch-vs-notchia-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/boring-notch-vs-notchia-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/boring-notch-vs-notchia-vergleich-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/boring-notch-vs-notchia-comparativa-2026</loc>
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/boring-notch-vs-notchia-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/boring-notch-vs-notchia-comparativa-2026" />
@@ -152,136 +265,93 @@
   </url>
   <url>
     <loc>https://notchia.app/blog/boring-notch-vs-notchia-comparison-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/boring-notch-vs-notchia-comparison-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/boring-notch-vs-notchia-comparativa-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/boring-notch-vs-notchia-vergleich-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/boring-notch-vs-notchia-comparativa-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/boring-notch-vs-notchia-comparativa-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/boring-notch-vs-notchia-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/boring-notch-vs-notchia-comparativa-2026" />
     <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/boring-notch-vs-notchia-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/boring-notch-vs-notchia-vergleich-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/boring-notch-vs-notchia-vergleich-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/boring-notch-vs-notchia-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/boring-notch-vs-notchia-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/boring-notch-vs-notchia-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/boring-notch-vs-notchia-2026" />
   </url>
-
-  <!-- Personnaliser l'encoche du MacBook -->
   <url>
-    <loc>https://notchia.app/blog/personnaliser-encoche-macbook-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/customize-macbook-notch-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/personalizar-muesca-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/macbook-aussparung-anpassen-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
+    <loc>https://notchia.app/blog/chameleon-frame-2-9-11</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/counting-crow-2-9-9</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/curious-octopus-2-9-13</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://notchia.app/blog/customize-macbook-notch-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/customize-macbook-notch-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/customize-macbook-notch-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/personalizar-muesca-macbook-2026" />
     <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/macbook-aussparung-anpassen-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/personalizar-muesca-macbook-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/personalizar-muesca-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/customize-macbook-notch-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/macbook-aussparung-anpassen-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
+    <loc>https://notchia.app/blog/developer-mac-apps-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/macbook-aussparung-anpassen-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/macbook-aussparung-anpassen-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/customize-macbook-notch-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/personalizar-muesca-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
-  </url>
-
-  <!-- Apple Intelligence sur Mac : 10 cas d'usage -->
-  <url>
-    <loc>https://notchia.app/blog/apple-intelligence-mac-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+    <loc>https://notchia.app/blog/entwickler-mac-apps-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/apple-intelligence-on-mac-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+    <loc>https://notchia.app/blog/flashing-firefly-2-9-15</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
-    <loc>https://notchia.app/blog/apple-intelligence-mac-2026-es</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+    <loc>https://notchia.app/blog/graceful-swan-2-9-27</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
-    <loc>https://notchia.app/blog/apple-intelligence-mac-2026-de</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/apple-intelligence-mac-2026-de" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/apple-intelligence-on-mac-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apple-intelligence-mac-2026-es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apple-intelligence-mac-2026" />
+    <loc>https://notchia.app/blog/guarded-pangolin-2-9-19</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
-
-  <!-- Mac App Store vs Homebrew -->
+  <url>
+    <loc>https://notchia.app/blog/homing-pigeon-2-9-20</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/keen-owl-2-9-18</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
   <url>
     <loc>https://notchia.app/blog/mac-app-store-vs-homebrew-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-de" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/mac-app-store-vs-homebrew-2026-de</loc>
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-en" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
@@ -290,92 +360,181 @@
   </url>
   <url>
     <loc>https://notchia.app/blog/mac-app-store-vs-homebrew-2026-en</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-en" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-en" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
     <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-de" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
     <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-de" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/mac-app-store-vs-homebrew-2026-de</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-de" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026-es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/mac-app-store-vs-homebrew-2026" />
-  </url>
-
-  <!-- Apps Mac pour développeurs -->
-  <url>
-    <loc>https://notchia.app/blog/apps-mac-developpeurs-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+    <loc>https://notchia.app/blog/macbook-aussparung-anpassen-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/customize-macbook-notch-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/personalizar-muesca-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/macbook-aussparung-anpassen-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/developer-mac-apps-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+    <loc>https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-claude-code-notch-companion-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/apps-mac-desarrolladores-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+    <loc>https://notchia.app/blog/meilleure-app-encoche-macbook-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-macbook-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mejor-app-muesca-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/beste-macbook-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/entwickler-mac-apps-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/entwickler-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/developer-mac-apps-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/apps-mac-desarrolladores-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/apps-mac-developpeurs-2026" />
+    <loc>https://notchia.app/blog/meilleures-apps-ia-mac-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-ai-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleures-apps-ia-mac-2026" />
   </url>
-
-  <!-- ─── Comparatifs NotchIA vs concurrents 2026-05-27 — 4 sujets × 4 langues = 16 articles ─── -->
-
-  <!-- NotchIA vs Alcove -->
+  <url>
+    <loc>https://notchia.app/blog/meilleures-apps-mac-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-mac-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-apps-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleures-apps-mac-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/meilleures-apps-mac-claude-code-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleures-apps-mac-claude-code-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-apps-claude-code-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleures-apps-mac-claude-code-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/mejor-app-muesca-macbook-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-macbook-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mejor-app-muesca-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/beste-macbook-notch-app-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/neat-squirrel-2-9-16</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/nimble-chameleon-2-9-23</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-7-4</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-7-5</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-7-6</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-7-7</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-7-8</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-1</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-2</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-3</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-4</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-5</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-6</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-7</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-8</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-8-9</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-9-0</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-9-1</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-9-2</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-9-3</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-9-4</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-9-5</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-2-9-6</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-alcove-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-alcove-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-alcove-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-alcove-vergleich-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-vs-alcove-comparativa-2026</loc>
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-alcove-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-alcove-comparativa-2026" />
@@ -384,44 +543,34 @@
   </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-alcove-comparison-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-alcove-comparison-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-alcove-comparativa-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-alcove-vergleich-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-vs-alcove-comparativa-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-alcove-comparativa-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-alcove-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-alcove-comparativa-2026" />
     <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-alcove-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-alcove-vergleich-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-alcove-vergleich-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-alcove-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-alcove-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-alcove-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-alcove-2026" />
   </url>
-
-  <!-- NotchIA vs MediaMate -->
   <url>
     <loc>https://notchia.app/blog/notchia-vs-mediamate-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-mediamate-vergleich-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026</loc>
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026" />
@@ -430,44 +579,34 @@
   </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-mediamate-comparison-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-mediamate-vergleich-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026" />
     <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-mediamate-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-mediamate-vergleich-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-mediamate-vergleich-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-mediamate-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-mediamate-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-mediamate-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-mediamate-2026" />
   </url>
-
-  <!-- NotchIA vs NotchNook -->
   <url>
     <loc>https://notchia.app/blog/notchia-vs-notchnook-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-notchnook-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-notchnook-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-notchnook-vergleich-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-vs-notchnook-comparativa-2026</loc>
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-notchnook-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-notchnook-comparativa-2026" />
@@ -476,44 +615,34 @@
   </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-notchnook-comparison-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-notchnook-comparison-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-notchnook-comparativa-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-notchnook-vergleich-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-vs-notchnook-comparativa-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-notchnook-comparativa-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-notchnook-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-notchnook-comparativa-2026" />
     <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-notchnook-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-notchnook-vergleich-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-notchnook-vergleich-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-notchnook-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-notchnook-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-notchnook-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-notchnook-2026" />
   </url>
-
-  <!-- NotchIA vs TopNotch -->
   <url>
     <loc>https://notchia.app/blog/notchia-vs-topnotch-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-topnotch-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-topnotch-vergleich-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026</loc>
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-topnotch-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
@@ -522,660 +651,86 @@
   </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-topnotch-comparison-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-topnotch-comparison-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-topnotch-vergleich-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-topnotch-comparison-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
     <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-topnotch-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/notchia-vs-topnotch-vergleich-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-topnotch-vergleich-2026" />
+    <lastmod>2026-10-31</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
     <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchia-vs-topnotch-comparison-2026" />
     <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/notchia-vs-topnotch-comparativa-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchia-vs-topnotch-vergleich-2026" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/notchia-vs-topnotch-2026" />
-  </url>
-
-  <!-- /llms.txt et /llms-full.txt sont accessibles aux LLM mais ne doivent
-       PAS être indexés par Google (X-Robots-Tag: noindex via _headers).
-       Ils restent référencés en racine sans figurer dans la sitemap. -->
-  <url>
-    <loc>https://notchia.app/cgv</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/privacy</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/refund</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/mentions-legales</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <!-- GEO Phase 2 pillar and alternative pages (FR/EN/ES/DE) -->
-  <url>
-    <loc>https://notchia.app/blog/meilleure-app-encoche-macbook-2026</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-macbook-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mejor-app-muesca-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/beste-macbook-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/best-macbook-notch-app-2026</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-macbook-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mejor-app-muesca-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/beste-macbook-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/mejor-app-muesca-macbook-2026</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.93</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mejor-app-muesca-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-macbook-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/beste-macbook-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/beste-macbook-notch-app-2026</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.93</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/beste-macbook-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-macbook-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/mejor-app-muesca-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/best-mac-notch-app-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-mac-notch-app-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleure-app-encoche-macbook-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/best-mac-notch-app-2026" />
-  </url>
-  <!-- Meilleur compagnon Claude Code dans l'encoche (FR/EN) — 2026-06-02 -->
-  <url>
-    <loc>https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-claude-code-notch-companion-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/best-claude-code-notch-companion-2026</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/best-claude-code-notch-companion-2026" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/meilleur-compagnon-claude-code-encoche-2026" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alternative-notchnook</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-notchnook" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchnook-alternative" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-notchnook" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchnook-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-notchnook" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchnook-alternative</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchnook-alternative" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-notchnook" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-notchnook" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchnook-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-notchnook" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alternativa-notchnook</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-notchnook" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-notchnook" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchnook-alternative" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchnook-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-notchnook" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchnook-alternative-de</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/notchnook-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-notchnook" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/notchnook-alternative" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-notchnook" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-notchnook" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alternative-mediamate</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-mediamate" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mediamate-alternative" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-mediamate" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/mediamate-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-mediamate" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/mediamate-alternative</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mediamate-alternative" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-mediamate" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-mediamate" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/mediamate-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-mediamate" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alternativa-mediamate</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-mediamate" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-mediamate" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mediamate-alternative" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/mediamate-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-mediamate" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/mediamate-alternative-de</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/mediamate-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-mediamate" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/mediamate-alternative" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-mediamate" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-mediamate" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alternative-topnotch</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-topnotch" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/topnotch-alternative" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-topnotch" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/topnotch-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-topnotch" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/topnotch-alternative</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/topnotch-alternative" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-topnotch" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-topnotch" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/topnotch-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-topnotch" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alternativa-topnotch</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-topnotch" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-topnotch" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/topnotch-alternative" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/topnotch-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-topnotch" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/topnotch-alternative-de</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/topnotch-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-topnotch" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/topnotch-alternative" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-topnotch" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-topnotch" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alternative-alcove</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-alcove" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/alcove-alternative" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-alcove" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/alcove-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-alcove" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alcove-alternative</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/alcove-alternative" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-alcove" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-alcove" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/alcove-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-alcove" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alternativa-alcove</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-alcove" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-alcove" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/alcove-alternative" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/alcove-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-alcove" />
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/alcove-alternative-de</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/alcove-alternative-de" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/alternative-alcove" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/alcove-alternative" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/alternativa-alcove" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/alternative-alcove" />
-  </url>
-  <url>
-    <loc>https://notchia.app/en/</loc>
-    <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/es/</loc>
-    <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/de/</loc>
-    <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/en/features</loc>
-    <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/es/features</loc>
-    <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/de/features</loc>
-    <lastmod>2026-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/features"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/features"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/features"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/features"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/features"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/en/pricing</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/es/pricing</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/de/pricing</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/pricing"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/en/pricing"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/es/pricing"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/de/pricing"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/pricing"/>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/sealed-badger-2-9-7</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/counting-crow-2-9-9</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/polyglot-parrot-2-9-10</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://notchia.app/blog/patient-eagle-2-9-8</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-9-6</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-9-5</loc>
-    <lastmod>2026-06-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-9-4</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-9-3</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-9-2</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-9-1</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-9-0</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-9</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-8</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-7</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-6</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-5</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-4</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-3</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-2</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-8-1</loc>
-    <lastmod>2026-05-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-7-8</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-7-7</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-7-6</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-7-5</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/notchia-2-7-4</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/chameleon-frame-2-9-11</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/sharp-lynx-2-9-12</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/curious-octopus-2-9-13</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/ready-beaver-2-9-14</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/flashing-firefly-2-9-15</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/neat-squirrel-2-9-16</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/graceful-swan-2-9-27</loc>
     <lastmod>2026-10-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://notchia.app/blog/silky-seal-2-9-26</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://notchia.app/blog/personalizar-muesca-macbook-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/customize-macbook-notch-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/personalizar-muesca-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/macbook-aussparung-anpassen-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
   </url>
   <url>
-    <loc>https://notchia.app/blog/tidy-wren-2-9-25</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/steady-otter-2-9-24</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/nimble-chameleon-2-9-23</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://notchia.app/blog/personnaliser-encoche-macbook-2026</loc>
+    <lastmod>2026-10-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://notchia.app/blog/customize-macbook-notch-2026" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://notchia.app/blog/personalizar-muesca-macbook-2026" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://notchia.app/blog/macbook-aussparung-anpassen-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/personnaliser-encoche-macbook-2026" />
   </url>
   <url>
     <loc>https://notchia.app/blog/poised-heron-2-9-22</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
-    <loc>https://notchia.app/blog/tracking-bloodhound-2-9-21</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/homing-pigeon-2-9-20</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/guarded-pangolin-2-9-19</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://notchia.app/blog/keen-owl-2-9-18</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://notchia.app/blog/polyglot-parrot-2-9-10</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://notchia.app/blog/quiet-turtle-2-9-17</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/ready-beaver-2-9-14</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/sealed-badger-2-9-7</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/sharp-lynx-2-9-12</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/silky-seal-2-9-26</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/steady-otter-2-9-24</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/tidy-wren-2-9-25</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/tracking-bloodhound-2-9-21</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://notchia.app/blog/wise-owl-2-8-0</loc>
+    <lastmod>2026-10-31</lastmod>
   </url>
 </urlset>

@@ -731,6 +731,8 @@
 
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
   .reveal.in { opacity: 1; transform: none; }
+  /* sans JavaScript, l'IntersectionObserver ne révèle rien : contenu visible d'emblée */
+  @media (scripting: none) { .reveal { opacity: 1; transform: none; } }
 
   /* Tape : surligneur via pseudo-element pour éviter de casser
      un éventuel background-clip:text sur le même span (.grad-text). */
@@ -1649,7 +1651,7 @@
       </div>
 
       <div class="lg:col-span-7 flex items-center">
-        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/06.webp" type="image/webp" /><img src="press-kit/screenshots/06.png" width="1100" height="463" loading="lazy" decoding="async" data-i18n-alt="shot.agenda" alt="L'onglet Calendrier avec la grille du mois et les prochains rendez-vous." /></picture></figure>
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/06.webp" type="image/webp" /><img src="press-kit/screenshots/06.png" width="1100" height="411" loading="lazy" decoding="async" data-i18n-alt="shot.agenda" alt="L'onglet Calendrier avec la grille du mois et les prochains rendez-vous." /></picture></figure>
       </div>
     </div>
   </div>
@@ -1685,7 +1687,7 @@
       </div>
 
       <div class="lg:col-span-7 flex items-center">
-        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/02.webp" type="image/webp" /><img src="press-kit/screenshots/02.png" width="1100" height="492" loading="lazy" decoding="async" data-i18n-alt="shot.digest" alt="L'onglet Digest affichant un résumé d'actualité généré en local par Apple Intelligence." /></picture></figure>
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/02.webp" type="image/webp" /><img src="press-kit/screenshots/02.png" width="1100" height="442" loading="lazy" decoding="async" data-i18n-alt="shot.digest" alt="L'onglet Digest affichant un résumé d'actualité généré en local par Apple Intelligence." /></picture></figure>
       </div>
     </div>
   </div>
@@ -1717,7 +1719,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-5">
 
       <div class="lg:col-span-5 flex items-center">
-        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/05.webp" type="image/webp" /><img src="press-kit/screenshots/05.png" width="1100" height="433" loading="lazy" decoding="async" data-i18n-alt="shot.focus" alt="L'onglet Concentration avec le minuteur en cours et les statistiques de sessions." /></picture></figure>
+        <figure class="shot-home"><picture><source srcset="press-kit/screenshots/05.webp" type="image/webp" /><img src="press-kit/screenshots/05.png" width="1100" height="391" loading="lazy" decoding="async" data-i18n-alt="shot.focus" alt="L'onglet Concentration avec le minuteur en cours et les statistiques de sessions." /></picture></figure>
       </div>
 
       <!-- Presse-papiers -->
@@ -1756,7 +1758,7 @@
 
       <div class="lg:col-span-12">
         <div class="mx-auto max-w-4xl">
-          <figure class="shot-home"><picture><source srcset="press-kit/screenshots/04.webp" type="image/webp" /><img src="press-kit/screenshots/04.png" width="1100" height="343" loading="lazy" decoding="async" data-i18n-alt="shot.prod" alt="L'onglet Étagère avec ses zones de dépôt : conversion, résumé de PDF et téléchargement de vidéo." /></picture></figure>
+          <figure class="shot-home"><picture><source srcset="press-kit/screenshots/04.webp" type="image/webp" /><img src="press-kit/screenshots/04.png" width="1100" height="321" loading="lazy" decoding="async" data-i18n-alt="shot.prod" alt="L'onglet Étagère avec ses zones de dépôt : conversion, résumé de PDF et téléchargement de vidéo." /></picture></figure>
         </div>
       </div>
     </div>
@@ -2052,7 +2054,7 @@
           <svg class="flex-none text-fog transition group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
         <p class="mt-4 text-fog text-sm sm:text-base leading-relaxed" data-i18n-html="faq.a4">
-          Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Concentration complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">2,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro : <b class="text-cream">IA en direct</b> (Claude Code, Codex), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 13 formats, Quick Share, QuickLook) et <b class="text-cream">presse-papiers historique</b> illimité. <span class="text-cream">Pro à vie</span> : <span class="text-cream">24,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite.
+          Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Concentration complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">2,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro : <b class="text-cream">IA en direct</b> (Claude Code, Codex), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 13 formats, Quick Share, QuickLook) et <b class="text-cream">historique du presse-papiers</b> (jusqu'à 100 entrées). <span class="text-cream">Pro à vie</span> : <span class="text-cream">24,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite.
 </p>
       </details>
 
@@ -2362,7 +2364,7 @@
     'faq.q3':'NotchIA fonctionne-t-il sur un Mac sans encoche physique ?',
     'faq.a3':"Oui. Sur les Mac sans encoche physique (iMac, MacBook Air anciennes générations, Mac mini connecté à un écran externe), NotchIA crée une zone d'encoche virtuelle dans la barre de menu. La hauteur est configurable séparément pour les deux contextes.",
     'faq.q4':'Combien coûte NotchIA et quelles sont les formules ?',
-    'faq.a4':'Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Concentration complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">2,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro : <b class="text-cream">IA en direct</b> (Claude Code, Codex), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 13 formats, Quick Share, QuickLook) et <b class="text-cream">presse-papiers historique</b> illimité. <span class="text-cream">Pro à vie</span> : <span class="text-cream">24,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite.',
+    'faq.a4':'Trois formules. <span class="text-cream">Essentiel</span> : gratuit à vie, avec médias, calendrier, HUD système, Sneak Peek, détections, <b class="text-cream">Concentration complet</b> et personnalisation. <span class="text-cream">Pro mensuel</span> : <span class="text-cream">2,99 €/mois</span>, annulable à tout moment, 1 Mac, ajoute les trois modules Pro : <b class="text-cream">IA en direct</b> (Claude Code, Codex), <b class="text-cream">gestion de fichiers</b> (Shelf, convertisseur 13 formats, Quick Share, QuickLook) et <b class="text-cream">historique du presse-papiers</b> (jusqu\'à 100 entrées). <span class="text-cream">Pro à vie</span> : <span class="text-cream">24,99 €</span> en achat unique, 2 Mac, toutes les mises à jour majeures, support prioritaire.Paiement sécurisé via Stripe ; la version Essentiel reste gratuite.',
     'faq.q5':'Quels assistants IA NotchIA supporte-t-il ?',
     'faq.a5':'NotchIA détecte automatiquement les sessions actives de deux assistants : <span class="text-cream">Claude Code</span> (Anthropic), <span class="text-cream">ChatGPT Codex</span> (OpenAI). L\'application affiche en direct 15 états (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution, Exploration, Fichiers, Recherche Web, Lecture Web, Notebook), les statistiques de jetons et de cache, les quotas 5h et 7j, et notifie quand un assistant attend une permission.',
     'faq.q6':'Quels lecteurs musicaux sont supportés ?',
@@ -2734,7 +2736,7 @@
     'faq.q3':'Does NotchIA work on a Mac without a physical notch?',
     'faq.a3':'Yes. On Macs without a physical notch (iMac, older MacBook Air, Mac mini connected to an external display), NotchIA creates a virtual notch zone in the menu bar. Height is configurable separately for both contexts.',
     'faq.q4':'How much does NotchIA cost and what are the plans?',
-    'faq.a4':'Three plans. <span class="text-cream">Essential</span>: free forever, with media, calendar, system HUD, Sneak Peek, detections, <b class="text-cream">full Concentration</b> and customization. <span class="text-cream">Pro monthly</span>: <span class="text-cream">€2.99/month</span>, cancel anytime, 1 Mac, adds the three Pro modules: <b class="text-cream">live AI</b> (Claude Code, Codex), <b class="text-cream">file management</b> (Shelf, 13-format converter, Quick Share, QuickLook) and unlimited <b class="text-cream">clipboard history</b>. <span class="text-cream">Pro lifetime</span>: <span class="text-cream">€24.99</span> one-time, 2 Macs, all major updates, priority support. Pro payments via secure Stripe checkout; Essential remains free.',
+    'faq.a4':'Three plans. <span class="text-cream">Essential</span>: free forever, with media, calendar, system HUD, Sneak Peek, detections, <b class="text-cream">full Concentration</b> and customization. <span class="text-cream">Pro monthly</span>: <span class="text-cream">€2.99/month</span>, cancel anytime, 1 Mac, adds the three Pro modules: <b class="text-cream">live AI</b> (Claude Code, Codex), <b class="text-cream">file management</b> (Shelf, 13-format converter, Quick Share, QuickLook) and <b class="text-cream">clipboard history</b>. <span class="text-cream">Pro lifetime</span>: <span class="text-cream">€24.99</span> one-time, 2 Macs, all major updates, priority support. Pro payments via secure Stripe checkout; Essential remains free.',
     'faq.q5':'Which AI assistants does NotchIA support?',
     'faq.a5':'NotchIA automatically detects active sessions for two assistants: <span class="text-cream">Claude Code</span> (Anthropic), <span class="text-cream">ChatGPT Codex</span> (OpenAI). The app shows 15 live states (Compiling, Terminal, Searching, Reading, Editing, Web, Writing, Sub-agent, Planning, Running, Exploring, Files, Web search, Web read, Notebook), token and cache statistics, 5h and 7d quotas, and notifies you when an assistant is waiting for permission.',
     'faq.q6':'Which music players are supported?',
@@ -3106,7 +3108,7 @@
     'faq.q3':'¿Funciona NotchIA en un Mac sin muesca física?',
     'faq.a3':'Sí. En Mac sin muesca física (iMac, MacBook Air antiguos, Mac mini con pantalla externa), NotchIA crea una zona de muesca virtual en la barra de menú. La altura es configurable por separado para ambos contextos.',
     'faq.q4':'¿Cuánto cuesta NotchIA y cuáles son los planes?',
-    'faq.a4':'Tres planes. <span class="text-cream">Esencial</span>: gratis para siempre, con medios, calendario, HUD del sistema, Sneak Peek, detecciones, <b class="text-cream">Concentration completo</b> y personalización. <span class="text-cream">Pro mensual</span>: <span class="text-cream">2,99 €/mes</span>, cancela cuando quieras, 1 Mac, añade los tres módulos Pro: <b class="text-cream">IA en directo</b> (Claude Code, Codex), <b class="text-cream">gestión de archivos</b> (Shelf, conversor 13 formatos, Quick Share, QuickLook) y <b class="text-cream">historial del portapapeles</b> ilimitado. <span class="text-cream">Pro de por vida</span>: <span class="text-cream">24,99 €</span> pago único, 2 Mac, todas las actualizaciones mayores, soporte prioritario. Pagos Pro mediante Stripe seguro; Esencial sigue siendo gratis.',
+    'faq.a4':'Tres planes. <span class="text-cream">Esencial</span>: gratis para siempre, con medios, calendario, HUD del sistema, Sneak Peek, detecciones, <b class="text-cream">Concentration completo</b> y personalización. <span class="text-cream">Pro mensual</span>: <span class="text-cream">2,99 €/mes</span>, cancela cuando quieras, 1 Mac, añade los tres módulos Pro: <b class="text-cream">IA en directo</b> (Claude Code, Codex), <b class="text-cream">gestión de archivos</b> (Shelf, conversor 13 formatos, Quick Share, QuickLook) y <b class="text-cream">historial del portapapeles</b> (hasta 100 entradas). <span class="text-cream">Pro de por vida</span>: <span class="text-cream">24,99 €</span> pago único, 2 Mac, todas las actualizaciones mayores, soporte prioritario. Pagos Pro mediante Stripe seguro; Esencial sigue siendo gratis.',
     'faq.q5':'¿Qué asistentes de IA admite NotchIA?',
     'faq.a5':'NotchIA detecta automáticamente las sesiones activas de dos asistentes: <span class="text-cream">Claude Code</span> (Anthropic), <span class="text-cream">ChatGPT Codex</span> (OpenAI). La app muestra 15 estados en directo (Compilación, Terminal, Búsqueda, Lectura, Modificación, Web, Escritura, Subagente, Planificación, Ejecución, Exploración, Archivos, Búsqueda web, Lectura web, Notebook), las estadísticas de tokens y caché, las cuotas de 5h y 7d, y notifica cuando un asistente espera permiso.',
     'faq.q6':'¿Qué reproductores de música son compatibles?',
@@ -3478,7 +3480,7 @@
     'faq.q3':'Funktioniert NotchIA auf einem Mac ohne physische Aussparung?',
     'faq.a3':'Ja. Auf Macs ohne physische Aussparung (iMac, älteren MacBook Air, Mac mini mit externem Display) erstellt NotchIA eine virtuelle Aussparungszone in der Menüleiste. Die Höhe ist für beide Kontexte separat konfigurierbar.',
     'faq.q4':'Wie viel kostet NotchIA und welche Pläne gibt es?',
-    'faq.a4':'Drei Pläne. <span class="text-cream">Essential</span>: kostenlos für immer, mit Medien, Kalender, System-HUD, Sneak Peek, Erkennungen, <b class="text-cream">vollständigem Concentration</b> und Anpassung. <span class="text-cream">Pro monatlich</span>: <span class="text-cream">2,99 €/Monat</span>, jederzeit kündbar, 1 Mac, fügt die drei Pro-Module hinzu: <b class="text-cream">Live-KI</b> (Claude Code, Codex), <b class="text-cream">Dateiverwaltung</b> (Shelf, 13-Format-Konverter, Quick Share, QuickLook) und unbegrenzten <b class="text-cream">Zwischenablage-Verlauf</b>. <span class="text-cream">Pro lebenslang</span>: <span class="text-cream">24,99 €</span> Einmalkauf, 2 Macs, alle großen Updates, Prioritätssupport. Pro-Zahlungen über sicheres Stripe-Checkout; Essential bleibt kostenlos.',
+    'faq.a4':'Drei Pläne. <span class="text-cream">Essential</span>: kostenlos für immer, mit Medien, Kalender, System-HUD, Sneak Peek, Erkennungen, <b class="text-cream">vollständigem Concentration</b> und Anpassung. <span class="text-cream">Pro monatlich</span>: <span class="text-cream">2,99 €/Monat</span>, jederzeit kündbar, 1 Mac, fügt die drei Pro-Module hinzu: <b class="text-cream">Live-KI</b> (Claude Code, Codex), <b class="text-cream">Dateiverwaltung</b> (Shelf, 13-Format-Konverter, Quick Share, QuickLook) und <b class="text-cream">Zwischenablage-Verlauf</b> (bis 100 Einträge). <span class="text-cream">Pro lebenslang</span>: <span class="text-cream">24,99 €</span> Einmalkauf, 2 Macs, alle großen Updates, Prioritätssupport. Pro-Zahlungen über sicheres Stripe-Checkout; Essential bleibt kostenlos.',
     'faq.q5':'Welche KI-Assistenten unterstützt NotchIA?',
     'faq.a5':'NotchIA erkennt automatisch aktive Sitzungen von zwei Assistenten: <span class="text-cream">Claude Code</span> (Anthropic), <span class="text-cream">ChatGPT Codex</span> (OpenAI). Die App zeigt 15 Live-Zustände (Kompilieren, Terminal, Suchen, Lesen, Bearbeiten, Web, Schreiben, Sub-Agent, Planung, Ausführung, Erkunden, Dateien, Websuche, Web-Lesen, Notebook), die Token- und Cache-Statistiken, die 5h- und 7d-Quoten und benachrichtigt, wenn ein Assistent auf eine Berechtigung wartet.',
     'faq.q6':'Welche Musikplayer werden unterstützt?',

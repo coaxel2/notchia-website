@@ -38,6 +38,8 @@
 
 /tailwind.css
   Cache-Control: public, max-age=14400, must-revalidate
+/fonts.css
+  Cache-Control: public, max-age=14400, must-revalidate
 
 # Polices auto-hébergées : la version Google Fonts est dans le nom du fichier
 # (fraunces-v38-latin.woff2), une nouvelle version = un nouveau nom, donc immutable sûr.

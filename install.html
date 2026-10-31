@@ -8,11 +8,6 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" /><link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="canonical" href="https://notchia.app/install" />
-<link rel="alternate" hreflang="fr" href="https://notchia.app/install" />
-<link rel="alternate" hreflang="en" href="https://notchia.app/install" />
-<link rel="alternate" hreflang="es" href="https://notchia.app/install" />
-<link rel="alternate" hreflang="de" href="https://notchia.app/install" />
-<link rel="alternate" hreflang="x-default" href="https://notchia.app/install" />
 <meta name="theme-color" content="#0B0D12" />
 
 <!-- Open Graph -->
@@ -29,7 +24,7 @@
 <meta name="twitter:description" content="Télécharge NotchIA pour macOS 15+ : DMG direct ou installateur Homebrew automatique. App indé, signée, sans Apple Developer ID." />
 <meta name="twitter:image" content="https://notchia.app/og-image.png?v=20260825" />
 
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="fonts.css" />
 <link rel="stylesheet" href="tailwind.css" />
 
 <style>
@@ -326,7 +321,7 @@
       <p class="text-cream/55 text-xs pt-2" data-i18n="gate.note">Tu n'auras à le faire qu'une seule fois. macOS approuve ensuite l'app définitivement.</p>
     </div>
 
-    <p class="text-cream/45 text-[11px] pt-2 border-t border-cream/[0.08]" data-i18n-html="gate.legal">L'avertissement disparaît une fois l'app notarisée Apple : c'est prévu (nécessite un compte Apple Developer à 99 €/an). En attendant, ces 2 méthodes sont sûres.</p>
+    <p class="text-cream/45 text-[11px] pt-2 border-t border-cream/[0.08]" data-i18n-html="gate.legal">NotchIA est signée mais non notarisée Apple, distribuée hors App Store. C'est normal et inoffensif.</p>
   </section>
 
   <!-- ── ACCESSIBILITÉ : DÉBLOQUER TOUTES LES FONCTIONNALITÉS ── -->
@@ -429,7 +424,6 @@
       'gate.optA.desc': 'Ouvre Terminal (⌘+Espace → Terminal), copie-colle :',
       'gate.optA.note': 'Cette commande retire l\'attribut « téléchargée d\'internet » que macOS a ajouté, puis lance l\'app. À faire une seule fois.',
       'gate.optB.title': 'Procédure GUI macOS (sans Terminal) : 30 secondes',
-      'gate.legal': 'L\'avertissement disparaît une fois l\'app notarisée Apple : c\'est prévu (nécessite un compte Apple Developer à 99 €/an). En attendant, ces 2 méthodes sont sûres.',
       'copy.done': 'Copié ✓',
       'gate.li1': 'Dans la fenêtre <em>« NotchIA ne peut pas être ouverte »</em>, clique <strong>Terminer</strong> pour la fermer',
       'gate.li2': 'Ouvre <strong>Réglages système → Confidentialité et sécurité</strong>',
@@ -510,7 +504,6 @@
       'gate.optA.desc': 'Open Terminal (⌘+Space → Terminal), copy-paste:',
       'gate.optA.note': 'This command removes the "downloaded from internet" attribute macOS added, then launches the app. Only needed once.',
       'gate.optB.title': 'macOS GUI procedure (no Terminal): 30 seconds',
-      'gate.legal': 'The warning will disappear once the app is Apple-notarized: that\'s planned (requires an Apple Developer account at €99/year). Until then, both methods are safe.',
       'copy.done': 'Copied ✓',
       'gate.intro': 'On first launch, macOS shows a security warning. Official Apple procedure, step by step:',
       'gate.li1': 'In the dialog <em>"NotchIA can\'t be opened"</em>, click <strong>Done</strong> to dismiss it',
@@ -592,7 +585,6 @@
       'gate.optA.desc': 'Abre Terminal (⌘+Espacio → Terminal), copia-pega:',
       'gate.optA.note': 'Este comando quita el atributo «descargado de internet» que macOS añadió, luego lanza la app. Solo una vez.',
       'gate.optB.title': 'Procedimiento GUI macOS (sin Terminal): 30 segundos',
-      'gate.legal': 'El aviso desaparecerá cuando la app esté notarizada por Apple: está previsto (requiere cuenta Apple Developer a 99 €/año). Mientras, ambos métodos son seguros.',
       'copy.done': 'Copiado ✓',
       'gate.intro': 'En el primer lanzamiento, macOS muestra un aviso de seguridad. Procedimiento oficial de Apple, paso a paso:',
       'gate.li1': 'En la ventana <em>«No se puede abrir NotchIA»</em>, haz clic en <strong>Listo</strong> para cerrarla',
@@ -674,7 +666,6 @@
       'gate.optA.desc': 'Terminal öffnen (⌘+Leertaste → Terminal), einfügen:',
       'gate.optA.note': 'Dieser Befehl entfernt das von macOS hinzugefügte „aus dem Internet geladen"-Attribut und startet die App. Nur einmal nötig.',
       'gate.optB.title': 'macOS-GUI-Verfahren (ohne Terminal): 30 Sekunden',
-      'gate.legal': 'Die Warnung verschwindet, sobald die App von Apple notarisiert ist: das ist geplant (erfordert einen Apple-Developer-Account zu 99 €/Jahr). In der Zwischenzeit sind beide Methoden sicher.',
       'copy.done': 'Kopiert ✓',
       'gate.intro': 'Beim ersten Start zeigt macOS eine Sicherheitswarnung. Offizielle Apple-Prozedur, Schritt für Schritt:',
       'gate.li1': 'Im Dialog <em>„NotchIA kann nicht geöffnet werden"</em> auf <strong>Fertig</strong> klicken, um ihn zu schließen',

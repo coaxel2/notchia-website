@@ -300,12 +300,3 @@ export async function onRequestPost(context) {
 
   return json({ reply: reply.trim() });
 }
-
-// GET utilitaire (health check)
-export async function onRequestGet() {
-  return json({
-    status: "ok",
-    model: MODEL,
-    docs: "POST { messages: [{role, content}], lang } to this endpoint.",
-  });
-}

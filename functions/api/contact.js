@@ -181,16 +181,3 @@ export async function onRequestPost(context) {
     }, 502);
   }
 }
-
-// Health check
-export async function onRequestGet({ env }) {
-  return json({
-    status: "ok",
-    configured: Boolean(env.RESEND_API_KEY && env.CONTACT_TO),
-    has_api_key: Boolean(env.RESEND_API_KEY),
-    has_to: Boolean(env.CONTACT_TO),
-    from: env.CONTACT_FROM || "(default onboarding@resend.dev)",
-    to_masked: env.CONTACT_TO ? env.CONTACT_TO.replace(/(?<=.{2}).+(?=@)/, "***") : null,
-    docs: "POST { name, email, category, message, lang } to this endpoint.",
-  });
-}
