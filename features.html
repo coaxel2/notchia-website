@@ -202,7 +202,7 @@
     <h1 class="font-display text-4xl md:text-6xl mb-5 leading-tight" data-i18n-html="hero.title">Toutes les <span class="grad-text">fonctionnalités</span></h1>
     <p class="text-cream/75 text-lg md:text-xl max-w-3xl mb-3" data-i18n-html="hero.lead1">L'encoche de ton Mac devient un véritable assistant. Musique, calendrier, digest d'actualité IA, concentration et toutes les détections live sont <strong class="text-cream">gratuits</strong>.</p>
     <p class="text-cream/75 text-lg md:text-xl max-w-3xl mb-5" data-i18n-html="hero.lead2">Passe Pro <span class="badge-pro">💎 Pro</span> pour débloquer la Shelf (drag-drop universel + résumé IA de fichiers), le suivi temps réel de ton assistant de code et l'historique presse-papier.</p>
-    <p class="meta-line" data-i18n="hero.meta">v2.9.26 · macOS 15+ · Apple Silicon ou Intel</p>
+    <p class="meta-line" data-i18n="hero.meta">v2.9.27 · macOS 15+ · Apple Silicon ou Intel</p>
   </section>
 
   <div class="callout">
@@ -216,6 +216,7 @@
   <!-- MUSIQUE -->
   <h2 data-i18n-html="music.title">Onglet <span class="grad-text">Musique</span> <span class="badge-free">Gratuit</span></h2>
   <p class="lede" data-i18n="music.lede">La piste qui tourne, sous la main, sans ouvrir d'app.</p>
+  <figure class="shot-fig"><picture><source srcset="press-kit/screenshots/07.webp" type="image/webp" /><img src="press-kit/screenshots/07.png" width="1100" height="345" loading="lazy" decoding="async" data-i18n-alt="shot.medias" alt="Le lecteur média de NotchIA dans l'encoche ouverte : pochette, titre, artiste, progression et contrôles de lecture." /></picture></figure>
   <div class="feature-grid cols-2">
     <div class="callout">
       <h3 data-i18n="music.h1">Ce que tu vois en un coup d'œil</h3>
@@ -391,7 +392,7 @@
         <li data-i18n="pers.b2_3">Hauteur d'encoche : menu bar, encoche physique, ou taille custom.</li>
         <li data-i18n="pers.b2_4">Effet lumineux, ombre, scaling animé : chacun toggleable.</li>
         <li data-i18n="pers.b2_5">Langue : français, anglais, espagnol, allemand.</li>
-        <li data-i18n="pers.b2_6">Ouverture animée : l'encoche s'agrandit depuis l'encoche matérielle avec un léger ressort, puis se referme sans rebond. Simple fondu si « Réduire les animations » est activé dans macOS.</li>
+        <li data-i18n="pers.b2_6">Ouverture animée : l'encoche s'agrandit depuis l'encoche matérielle avec un léger ressort, puis se referme sans rebond. Le changement d'onglet fait un fondu enchaîné, et l'encoche prend sa nouvelle taille avec le même ressort. Simple fondu si « Réduire les animations » est activé dans macOS.</li>
       </ul>
     </div>
     <div class="callout">
@@ -468,7 +469,7 @@
     <div class="callout">
       <h3 data-i18n-html="shelf.h4">Résumé IA d'un fichier <span class="badge-new">on-device</span></h3>
       <ul>
-        <li data-i18n="shelf.b4_1">Drop un PDF, .txt, .md ou .docx.</li>
+        <li data-i18n="shelf.b4_1">Drop un PDF, même scanné (texte reconnu par OCR sur le Mac), un .txt, un .md ou un fichier de code.</li>
         <li data-i18n="shelf.b4_2">Résumé scrollable en quelques secondes.</li>
         <li data-i18n="shelf.b4_3">Animation aura rainbow pendant la génération.</li>
         <li data-i18n="shelf.b4_4">Bouton « Copier » pour récupérer le texte.</li>
@@ -476,6 +477,7 @@
       </ul>
     </div>
   </div>
+  <figure class="shot-fig"><picture><source srcset="press-kit/screenshots/11.webp" type="image/webp" /><img src="press-kit/screenshots/11.png" width="1100" height="591" loading="lazy" decoding="async" data-i18n-alt="shot.summary" alt="Un PDF résumé sur l'appareil par Apple Intelligence dans la Shelf : nom du fichier et points clés." /></picture></figure>
   <p class="text-sm text-cream/55" data-i18n-html="shelf.note"><em>Note :</em> le résumé IA de fichier nécessite macOS 26+. Sans Apple Intelligence, la Shelf garde le drag-drop, le Quick Share et le convertisseur.</p>
   <p class="text-sm text-cream/55" data-i18n="shelf.note_video">Téléchargement vidéo : respecte les droits d'auteur et les conditions d'utilisation des plateformes. Pour usage personnel.</p>
 
@@ -615,13 +617,13 @@
 
 <script>
   const I18N = {
-    fr: {'langhint.msg':'Cette page existe aussi en français.','langhint.go':'Lire en français','langhint.close':'Fermer','shot.iacode':'L\'onglet IA de NotchIA affichant une session Claude Code en direct : modèle, jetons consommés et état d\'activité.','shot.dig':'L\'onglet Digest affichant un résumé d\'actualité généré en local par Apple Intelligence, à côté de la liste des sources RSS.','shot.shelf':'L\'onglet Étagère avec ses zones de dépôt : conversion de fichier, résumé de PDF et téléchargement de vidéo.','shot.foc':'Une session Concentration en cours, avec le temps restant, le cycle et les statistiques de la semaine.','shot.cal':'L\'onglet Calendrier avec la grille du mois et la liste des prochains évènements.',
+    fr: {'langhint.msg':'Cette page existe aussi en français.','langhint.go':'Lire en français','langhint.close':'Fermer','shot.iacode':'L\'onglet IA de NotchIA affichant une session Claude Code en direct : modèle, jetons consommés et état d\'activité.','shot.dig':'L\'onglet Digest affichant un résumé d\'actualité généré en local par Apple Intelligence, à côté de la liste des sources RSS.','shot.shelf':'L\'onglet Étagère avec ses zones de dépôt : conversion de fichier, résumé de PDF et téléchargement de vidéo.', 'shot.medias':"Le lecteur média de NotchIA dans l'encoche ouverte : pochette, titre, artiste, progression et contrôles de lecture.", 'shot.summary':"Un PDF résumé sur l'appareil par Apple Intelligence dans la Shelf : nom du fichier et points clés.",'shot.foc':'Une session Concentration en cours, avec le temps restant, le cycle et les statistiques de la semaine.','shot.cal':'L\'onglet Calendrier avec la grille du mois et la liste des prochains évènements.',
       'meta.title':'Fonctionnalités NotchIA · Digest IA, Concentration, IA Code, Shelf','meta.description':"4 onglets gratuits (Musique, Calendrier, Digest IA, Concentration) et 3 Pro (Shelf, IA Code, Presse-papier). Résumés IA on-device. macOS 15+.",
       'nav.home':'Accueil','nav.features':'Fonctionnalités','nav.pricing':'Tarifs','nav.pro':'Passer à Pro',
       'hero.title':'Toutes les <span class="grad-text">fonctionnalités</span>',
       'hero.lead1':"L'encoche de ton Mac devient un véritable assistant. Musique, calendrier, digest d'actualité IA, concentration et toutes les détections live sont <strong class=\"text-cream\">gratuits</strong>.",
       'hero.lead2':'Passe Pro <span class="badge-pro">💎 Pro</span> pour débloquer la Shelf (drag-drop universel + résumé IA de fichiers), le suivi temps réel de ton assistant de code et l\'historique presse-papier.',
-      'hero.meta':'v2.9.26 · macOS 15+ · Apple Silicon ou Intel',
+      'hero.meta':'v2.9.27 · macOS 15+ · Apple Silicon ou Intel',
       'hero.callout':"L'encoche pense maintenant. Sept onglets, des dizaines de détections, et toute l'intelligence reste sur ton Mac : aucun flux, aucun fichier, aucun token n'est envoyé à nos serveurs.",
       'free.eyebrow':'Inclus dans la version gratuite',
       'music.title':'Onglet <span class="grad-text">Musique</span> <span class="badge-free">Gratuit</span>',
@@ -711,7 +713,7 @@
       'pers.b2_3':"Hauteur d'encoche : menu bar, encoche physique, ou taille custom.",
       'pers.b2_4':'Effet lumineux, ombre, scaling animé : chacun toggleable.',
       'pers.b2_5':'Langue : français, anglais, espagnol, allemand.',
-    'pers.b2_6':'Ouverture animée : l\'encoche s\'agrandit depuis l\'encoche matérielle avec un léger ressort, puis se referme sans rebond. Simple fondu si « Réduire les animations » est activé dans macOS.',
+    'pers.b2_6':'Ouverture animée : l\'encoche s\'agrandit depuis l\'encoche matérielle avec un léger ressort, puis se referme sans rebond. Le changement d\'onglet fait un fondu enchaîné, et l\'encoche prend sa nouvelle taille avec le même ressort. Simple fondu si « Réduire les animations » est activé dans macOS.',
       'pers.h3':'Comportement',
       'pers.b3_1':'Sensibilité des gestes (hover, drag, tap).',
       'pers.b3_2':"Hover area étendue au-delà de l'encoche.",
@@ -743,7 +745,7 @@
       'shelf.b3_3':'<strong>Audio</strong> : mp3, wav, aac, m4a.',
       'shelf.b3_4':'<strong>Vidéo</strong> : mp4, mov.',
       'shelf.h4':"Résumé IA d'un fichier <span class=\"badge-new\">on-device</span>",
-      'shelf.b4_1':'Drop un PDF, .txt, .md ou .docx.',
+      'shelf.b4_1':'Drop un PDF, même scanné (texte reconnu par OCR sur le Mac), un .txt, un .md ou un fichier de code.',
       'shelf.b4_2':'Résumé scrollable en quelques secondes.',
       'shelf.b4_3':'Animation aura rainbow pendant la génération.',
       'shelf.b4_4':'Bouton « Copier » pour récupérer le texte.',
@@ -814,13 +816,13 @@
       'foot.copy':'© 2026 NotchIA',
       'foot.legal':'Mentions légales','foot.cgv':'CGV','foot.privacy':'Confidentialité','foot.refund':'Remboursement',
     },
-    en: {'langhint.msg':'This page is also available in English.','langhint.go':'Read in English','langhint.close':'Close','shot.iacode':'NotchIA AI tab showing a live Claude Code session: model, token usage and activity state.','shot.dig':'Digest tab showing a news summary generated on-device by Apple Intelligence, next to the RSS source list.','shot.shelf':'Shelf tab with its drop zones: file conversion, PDF summary and video download.','shot.foc':'A Focus session in progress, with remaining time, cycle and weekly statistics.','shot.cal':'Calendar tab with the month grid and the list of upcoming events.',
+    en: {'langhint.msg':'This page is also available in English.','langhint.go':'Read in English','langhint.close':'Close','shot.iacode':'NotchIA AI tab showing a live Claude Code session: model, token usage and activity state.','shot.dig':'Digest tab showing a news summary generated on-device by Apple Intelligence, next to the RSS source list.','shot.shelf':'Shelf tab with its drop zones: file conversion, PDF summary and video download.', 'shot.medias':"NotchIA media player in the open notch: artwork, title, artist, progress bar and playback controls.", 'shot.summary':"A PDF summarized on-device by Apple Intelligence in the Shelf: file name and key points.",'shot.foc':'A Focus session in progress, with remaining time, cycle and weekly statistics.','shot.cal':'Calendar tab with the month grid and the list of upcoming events.',
       'meta.title':'NotchIA Features: AI Digest, Focus, AI Code, Shelf','meta.description':"4 free tabs (Music, Calendar, AI Digest, Focus) and 3 Pro (Shelf, AI Code, Clipboard). On-device AI summaries. macOS 15+.",
       'nav.home':'Home','nav.features':'Features','nav.pricing':'Pricing','nav.pro':'Go Pro',
       'hero.title':'All the <span class="grad-text">features</span>',
       'hero.lead1':'Your Mac\'s notch becomes a real assistant. Music, calendar, AI news digest, focus and all live detections are <strong class="text-cream">free</strong>.',
       'hero.lead2':'Go Pro <span class="badge-pro">💎 Pro</span> to unlock the Shelf (universal drag-drop + AI file summaries), real-time tracking of your code assistant, and clipboard history.',
-      'hero.meta':'v2.9.26 · macOS 15+ · Apple Silicon or Intel',
+      'hero.meta':'v2.9.27 · macOS 15+ · Apple Silicon or Intel',
       'hero.callout':'The notch thinks now. Seven tabs, dozens of detections, and all the intelligence stays on your Mac: no stream, no file, no token is sent to our servers.',
       'free.eyebrow':'Included in the free version',
       'music.title':'<span class="grad-text">Music</span> tab <span class="badge-free">Free</span>',
@@ -910,7 +912,7 @@
       'pers.b2_3':'Notch height: menu bar, physical notch, or custom size.',
       'pers.b2_4':'Glow effect, shadow, animated scaling: each toggleable.',
       'pers.b2_5':'Language: French, English, Spanish, German.',
-    'pers.b2_6':'Animated opening: the notch grows out of the hardware notch with a gentle spring, then closes without bouncing. A simple fade if “Reduce motion” is turned on in macOS.',
+    'pers.b2_6':'Animated opening: the notch grows out of the hardware notch with a gentle spring, then closes without bouncing. Switching tabs crossfades, and the notch resizes with the same spring. A simple fade if “Reduce motion” is turned on in macOS.',
       'pers.h3':'Behavior',
       'pers.b3_1':'Gesture sensitivity (hover, drag, tap).',
       'pers.b3_2':'Hover area extended beyond the notch.',
@@ -942,7 +944,7 @@
       'shelf.b3_3':'<strong>Audio</strong>: mp3, wav, aac, m4a.',
       'shelf.b3_4':'<strong>Video</strong>: mp4, mov.',
       'shelf.h4':'AI file summary <span class="badge-new">on-device</span>',
-      'shelf.b4_1':'Drop a PDF, .txt, .md or .docx.',
+      'shelf.b4_1':'Drop a PDF, even a scanned one (text recognized by OCR on your Mac), a .txt, a .md or a code file.',
       'shelf.b4_2':'Scrollable summary in a few seconds.',
       'shelf.b4_3':'Rainbow aura animation during generation.',
       'shelf.b4_4':'"Copy" button to grab the text.',
@@ -1013,13 +1015,13 @@
       'foot.copy':'© 2026 NotchIA',
       'foot.legal':'Legal','foot.cgv':'Terms','foot.privacy':'Privacy','foot.refund':'Refund',
     },
-    es: {'langhint.msg':'Esta página también está disponible en español.','langhint.go':'Leer en español','langhint.close':'Cerrar','shot.iacode':'La pestaña IA de NotchIA con una sesión de Claude Code en directo: modelo, tokens consumidos y estado de actividad.','shot.dig':'La pestaña Digest con un resumen de noticias generado localmente por Apple Intelligence, junto a la lista de fuentes RSS.','shot.shelf':'La pestaña Estantería con sus zonas de arrastre: conversión de archivos, resumen de PDF y descarga de vídeo.','shot.foc':'Una sesión de Concentración en curso, con el tiempo restante, el ciclo y las estadísticas de la semana.','shot.cal':'La pestaña Calendario con la cuadrícula del mes y la lista de próximos eventos.',
+    es: {'langhint.msg':'Esta página también está disponible en español.','langhint.go':'Leer en español','langhint.close':'Cerrar','shot.iacode':'La pestaña IA de NotchIA con una sesión de Claude Code en directo: modelo, tokens consumidos y estado de actividad.','shot.dig':'La pestaña Digest con un resumen de noticias generado localmente por Apple Intelligence, junto a la lista de fuentes RSS.','shot.shelf':'La pestaña Estantería con sus zonas de arrastre: conversión de archivos, resumen de PDF y descarga de vídeo.', 'shot.medias':"El reproductor multimedia de NotchIA en la muesca abierta: carátula, título, artista, barra de progreso y controles de reproducción.", 'shot.summary':"Un PDF resumido en el dispositivo por Apple Intelligence en la Shelf: nombre del archivo y puntos clave.",'shot.foc':'Una sesión de Concentración en curso, con el tiempo restante, el ciclo y las estadísticas de la semana.','shot.cal':'La pestaña Calendario con la cuadrícula del mes y la lista de próximos eventos.',
       'meta.title':'Funciones de NotchIA · Digest IA, Concentración, IA Code, Shelf','meta.description':"4 pestañas gratis (Música, Calendario, Digest IA, Concentración) y 3 Pro (Shelf, IA Code, Portapapeles). Resúmenes IA on-device. macOS 15+.",
       'nav.home':'Inicio','nav.features':'Funcionalidades','nav.pricing':'Precios','nav.pro':'Pasar a Pro',
       'hero.title':'Todas las <span class="grad-text">funcionalidades</span>',
       'hero.lead1':'La muesca de tu Mac se convierte en un verdadero asistente. Música, calendario, resumen de actualidad IA, concentración y todas las detecciones en vivo son <strong class="text-cream">gratis</strong>.',
       'hero.lead2':'Pasa a Pro <span class="badge-pro">💎 Pro</span> para desbloquear el Shelf (drag-drop universal + resumen IA de archivos), el seguimiento en tiempo real de tu asistente de código y el historial del portapapeles.',
-      'hero.meta':'v2.9.26 · macOS 15+ · Apple Silicon o Intel',
+      'hero.meta':'v2.9.27 · macOS 15+ · Apple Silicon o Intel',
       'hero.callout':'La muesca ahora piensa. Siete pestañas, decenas de detecciones, y toda la inteligencia se queda en tu Mac: ningún flujo, ningún archivo, ningún token se envía a nuestros servidores.',
       'free.eyebrow':'Incluido en la versión gratuita',
       'music.title':'Pestaña <span class="grad-text">Música</span> <span class="badge-free">Gratis</span>',
@@ -1109,7 +1111,7 @@
       'pers.b2_3':'Altura de la muesca: barra de menú, muesca física o tamaño personalizado.',
       'pers.b2_4':'Efecto luminoso, sombra, escalado animado: cada uno activable.',
       'pers.b2_5':'Idioma: francés, inglés, español, alemán.',
-    'pers.b2_6':'Apertura animada: la muesca crece desde la muesca física con un ligero efecto muelle y se cierra sin rebote. Un simple fundido si «Reducir movimiento» está activado en macOS.',
+    'pers.b2_6':'Apertura animada: la muesca crece desde la muesca física con un ligero efecto muelle y se cierra sin rebote. Al cambiar de pestaña hay un fundido encadenado, y la muesca adopta su nuevo tamaño con el mismo muelle. Un simple fundido si «Reducir movimiento» está activado en macOS.',
       'pers.h3':'Comportamiento',
       'pers.b3_1':'Sensibilidad de gestos (hover, drag, tap).',
       'pers.b3_2':'Zona de hover extendida más allá de la muesca.',
@@ -1141,7 +1143,7 @@
       'shelf.b3_3':'<strong>Audio</strong>: mp3, wav, aac, m4a.',
       'shelf.b3_4':'<strong>Vídeo</strong>: mp4, mov.',
       'shelf.h4':'Resumen IA de un archivo <span class="badge-new">on-device</span>',
-      'shelf.b4_1':'Suelta un PDF, .txt, .md o .docx.',
+      'shelf.b4_1':'Suelta un PDF, incluso escaneado (texto reconocido por OCR en el Mac), un .txt, un .md o un archivo de código.',
       'shelf.b4_2':'Resumen desplazable en pocos segundos.',
       'shelf.b4_3':'Animación aura rainbow durante la generación.',
       'shelf.b4_4':'Botón «Copiar» para recuperar el texto.',
@@ -1212,13 +1214,13 @@
       'foot.copy':'© 2026 NotchIA',
       'foot.legal':'Aviso legal','foot.cgv':'CGV','foot.privacy':'Privacidad','foot.refund':'Reembolso',
     },
-    de: {'langhint.msg':'Diese Seite gibt es auch auf Deutsch.','langhint.go':'Auf Deutsch lesen','langhint.close':'Schließen','shot.iacode':'Der KI-Tab von NotchIA mit einer laufenden Claude-Code-Sitzung: Modell, verbrauchte Tokens und Aktivitätsstatus.','shot.dig':'Der Digest-Tab mit einer lokal von Apple Intelligence erzeugten Nachrichtenzusammenfassung neben der RSS-Quellenliste.','shot.shelf':'Der Ablage-Tab mit seinen Ablagezonen: Dateikonvertierung, PDF-Zusammenfassung und Video-Download.','shot.foc':'Eine laufende Fokus-Sitzung mit Restzeit, Zyklus und Wochenstatistik.','shot.cal':'Der Kalender-Tab mit Monatsraster und der Liste der nächsten Termine.',
+    de: {'langhint.msg':'Diese Seite gibt es auch auf Deutsch.','langhint.go':'Auf Deutsch lesen','langhint.close':'Schließen','shot.iacode':'Der KI-Tab von NotchIA mit einer laufenden Claude-Code-Sitzung: Modell, verbrauchte Tokens und Aktivitätsstatus.','shot.dig':'Der Digest-Tab mit einer lokal von Apple Intelligence erzeugten Nachrichtenzusammenfassung neben der RSS-Quellenliste.','shot.shelf':'Der Ablage-Tab mit seinen Ablagezonen: Dateikonvertierung, PDF-Zusammenfassung und Video-Download.', 'shot.medias':"Der Medienplayer von NotchIA in der geöffneten Notch: Cover, Titel, Interpret, Fortschrittsbalken und Wiedergabesteuerung.", 'shot.summary':"Ein PDF, auf dem Gerät von Apple Intelligence im Shelf zusammengefasst: Dateiname und Kernpunkte.",'shot.foc':'Eine laufende Fokus-Sitzung mit Restzeit, Zyklus und Wochenstatistik.','shot.cal':'Der Kalender-Tab mit Monatsraster und der Liste der nächsten Termine.',
       'meta.title':'NotchIA Funktionen: KI-Digest, Fokus, KI-Code, Shelf','meta.description':"4 kostenlose Tabs (Musik, Kalender, KI-Digest, Fokus) und 3 Pro (Shelf, KI-Code, Zwischenablage). On-Device-KI-Zusammenfassungen. macOS 15+.",
       'nav.home':'Startseite','nav.features':'Funktionen','nav.pricing':'Preise','nav.pro':'Pro holen',
       'hero.title':'Alle <span class="grad-text">Funktionen</span>',
       'hero.lead1':'Die Aussparung deines Macs wird zum echten Assistenten. Musik, Kalender, KI-News-Digest, Fokus und alle Live-Erkennungen sind <strong class="text-cream">kostenlos</strong>.',
       'hero.lead2':'Werde Pro <span class="badge-pro">💎 Pro</span>, um die Shelf (universelles Drag-Drop + KI-Datei-Zusammenfassung), das Echtzeit-Tracking deines Code-Assistenten und den Zwischenablage-Verlauf freizuschalten.',
-      'hero.meta':'v2.9.26 · macOS 15+ · Apple Silicon oder Intel',
+      'hero.meta':'v2.9.27 · macOS 15+ · Apple Silicon oder Intel',
       'hero.callout':'Die Aussparung denkt jetzt. Sieben Tabs, dutzende Erkennungen, und die ganze Intelligenz bleibt auf deinem Mac: kein Stream, keine Datei, kein Token wird an unsere Server gesendet.',
       'free.eyebrow':'In der kostenlosen Version enthalten',
       'music.title':'<span class="grad-text">Musik</span>-Tab <span class="badge-free">Kostenlos</span>',
@@ -1308,7 +1310,7 @@
       'pers.b2_3':'Aussparungshöhe: Menüleiste, physische Aussparung oder eigene Größe.',
       'pers.b2_4':'Leuchteffekt, Schatten, animiertes Scaling: jeweils umschaltbar.',
       'pers.b2_5':'Sprache: Französisch, Englisch, Spanisch, Deutsch.',
-    'pers.b2_6':'Animiertes Öffnen: Die Aussparung wächst mit einer leichten Federbewegung aus der Hardware-Aussparung und schließt sich ohne Nachfedern. Nur eine Überblendung, wenn „Bewegung reduzieren“ in macOS aktiviert ist.',
+    'pers.b2_6':'Animiertes Öffnen: Die Aussparung wächst mit einer leichten Federbewegung aus der Hardware-Aussparung und schließt sich ohne Nachfedern. Beim Tab-Wechsel gibt es eine Überblendung, und die Aussparung nimmt mit derselben Federbewegung ihre neue Größe an. Nur eine Überblendung, wenn „Bewegung reduzieren“ in macOS aktiviert ist.',
       'pers.h3':'Verhalten',
       'pers.b3_1':'Gestensensibilität (Hover, Drag, Tap).',
       'pers.b3_2':'Hover-Bereich über die Aussparung hinaus erweitert.',
@@ -1340,7 +1342,7 @@
       'shelf.b3_3':'<strong>Audio</strong>: mp3, wav, aac, m4a.',
       'shelf.b3_4':'<strong>Video</strong>: mp4, mov.',
       'shelf.h4':'KI-Zusammenfassung einer Datei <span class="badge-new">on-device</span>',
-      'shelf.b4_1':'Lege ein PDF, .txt, .md oder .docx ab.',
+      'shelf.b4_1':'Lege ein PDF ab, auch ein gescanntes (Text per OCR auf dem Mac erkannt), eine .txt-, .md- oder Code-Datei.',
       'shelf.b4_2':'Scrollbare Zusammenfassung in wenigen Sekunden.',
       'shelf.b4_3':'Rainbow-Aura-Animation während der Generierung.',
       'shelf.b4_4':'„Kopieren"-Button, um den Text zu übernehmen.',

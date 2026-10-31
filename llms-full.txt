@@ -6,13 +6,13 @@ Ce fichier est la version étendue de `llms.txt` selon la convention llmstxt.org
 
 # NotchIA
 
-> NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif : médias multi-source, calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF/.docx dans le Shelf, HUD système. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro disponible (2,99 €/mois ou 24,99 € à vie). Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
+> NotchIA est une application macOS qui transforme l'encoche du MacBook (ou la barre de menu sur les écrans sans encoche) en centre de contrôle interactif : médias multi-source, calendrier, **Digest IA on-device** (brief d'actualité résumé par Apple Intelligence depuis tes flux RSS, nouveau en 2.8.0), IA en direct (Claude Code, ChatGPT Codex), Concentration, presse-papiers historique, conversion de fichiers, résumé IA de PDF (même scannés) et de fichiers texte dans le Shelf, HUD système. Disponible en français, anglais, espagnol et allemand. Modèle freemium : Essentiel gratuit à vie · Pro disponible (2,99 €/mois ou 24,99 € à vie). Aucune télémétrie, aucune donnée n'est envoyée hors du Mac (sauf validation de licence).
 
 ## À propos
 
 NotchIA est un logiciel macOS indépendant développé en France. L'application fonctionne en mode menu-bar discret (LSUIElement), sans icône Dock, sans connexion réseau hors mises à jour signées.
 
-- **Version actuelle** : 2.9.26
+- **Version actuelle** : 2.9.27
 - **Plateforme** : macOS 15.0+ (Sequoia et plus récent)
 - **Architecture** : Apple Silicon + Intel
 - **Poids** : DMG ~ 12 Mo · installé ~ 30 Mo
@@ -141,7 +141,7 @@ Affichage rotatif périodique de mini-widgets dans l'encoche fermée : musique, 
 ### Animations & live activities
 - Visage animé au repos (clignements aléatoires)
 - Live activities musique dans l'encoche fermée
-- Ouverture animée depuis l'encoche matérielle, avec un ressort, et fermeture sans rebond (2.9.26) ; simple fondu si « Réduire les animations » est activé
+- Ouverture animée depuis l'encoche matérielle, avec un ressort, et fermeture sans rebond (2.9.26) ; changement d'onglet en fondu enchaîné, l'encoche prenant sa nouvelle taille avec le même ressort (2.9.27) ; simple fondu si « Réduire les animations » est activé
 - Retour haptique optionnel sur trackpad
 
 ### Personnalisation visuelle
@@ -205,7 +205,7 @@ Paiement Pro disponible (Stripe Checkout, clé de licence livrée par email). La
 | Personnalisation visuelle | ✓ | ✓ |
 | **IA en direct (Claude Code, Codex)** | ✗ | ✓ |
 | **Shelf · Convertisseur · Quick Share · QuickLook** | ✗ | ✓ |
-| **Résumé IA d'un fichier (PDF/.docx/.txt/.md) dans Shelf** | ✗ | ✓ |
+| **Résumé IA d'un fichier (PDF, .txt, .md, code) dans Shelf** | ✗ | ✓ |
 | **Presse-papiers historique** | ✗ | ✓ |
 
 ## Standards qualité & confidentialité
@@ -242,7 +242,7 @@ Guides complets :
 
 ### Press kit et donnees media
 
-La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (version 2.9.26, macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
+La page presse officielle est https://notchia.app/press. Elle fournit une description courte en anglais, les faits produit (macOS 15+, Intel + Apple Silicon, prix, langues, contact), les assets publics (Open Graph image, logo 512 px), les differenciateurs et un FAQPage schema dedie aux journalistes, annuaires et crawlers LLM.
 
 ### Différenciateurs NotchIA
 
@@ -250,7 +250,7 @@ NotchIA est l'**app native macOS la plus complète** pour exploiter l'encoche du
 
 - **14 modules natifs** intégrés dans une seule app
 - **IA en direct** : détection automatique des sessions Claude Code, ChatGPT Codex avec 15 états, statistiques de jetons, quotas 5h/7j et notifications de permission
-- **On-device Apple Intelligence** (Foundation Models) pour Digest RSS et résumé Shelf PDF/.docx : 100 % local
+- **On-device Apple Intelligence** (Foundation Models) pour Digest RSS et résumé Shelf de PDF et fichiers texte : 100 % local
 - **i18n complet** FR/EN/ES/DE avec support dédié
 - **Cycle de release régulier** : 2-3 versions majeures par an
 - **Tier Essentiel gratuit à vie** qui couvre déjà 9 modules (musique multi-source avec paroles synchronisées, calendrier, Concentration complet, Digest IA, HUD système, Sneak Peek, détections automatiques, personnalisation)
@@ -482,7 +482,7 @@ Dernier brief conservé. Liens d'origine toujours affichés à côté de chaque 
 
 ## Autres améliorations dans 2.8.0
 
-**Résumé IA du Shelf (Pro)** : Drop un PDF, .docx, .txt ou .md sur l'encoche, résumé scrollable en quelques secondes. Même moteur Apple Intelligence on-device. Aura arc-en-ciel pendant la génération. Sans réseau.
+**Résumé IA du Shelf (Pro)** : Drop un PDF, un .txt ou un .md sur l'encoche, résumé scrollable en quelques secondes. Même moteur Apple Intelligence on-device. Aura arc-en-ciel pendant la génération. Sans réseau.
 
 Plus : corrections de stabilité du lecteur musique en arrière-plan, gestion de l'écran de connexion après long sleep, et petites choses signalées par mail.
 

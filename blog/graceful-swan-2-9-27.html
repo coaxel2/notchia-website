@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NotchIA 2.9.27 : des onglets qui s'enchaînent en douceur</title>
+<meta name="description" content="NotchIA 2.9.27 fait passer d'un onglet à l'autre en fondu enchaîné, répare le dépôt de fichier sur Convertir et Résumé PDF, et corrige une fausse alerte d'accès au calendrier." />
+<meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDE8DC" media="(prefers-color-scheme: light)" />
+<meta name="author" content="NotchIA" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="canonical" href="https://notchia.app/blog/graceful-swan-2-9-27" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="alternate" hreflang="fr" href="https://notchia.app/blog/graceful-swan-2-9-27" />
+<link rel="alternate" hreflang="x-default" href="https://notchia.app/blog/graceful-swan-2-9-27" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="NotchIA 2.9.27 : Graceful Swan 🦢" />
+<meta property="og:description" content="NotchIA 2.9.27 fait passer d'un onglet à l'autre en fondu enchaîné, répare le dépôt de fichier sur Convertir et Résumé PDF, et corrige une fausse alerte d'accès au calendrier." />
+<meta property="og:url" content="https://notchia.app/blog/graceful-swan-2-9-27" />
+<meta property="og:image" content="https://notchia.app/og-image.png?v=20260825" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="article:published_time" content="2026-10-31" />
+<meta property="article:modified_time" content="2026-10-31" />
+<meta property="article:author" content="NotchIA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NotchIA 2.9.27 : Graceful Swan 🦢" />
+<meta name="twitter:description" content="NotchIA 2.9.27 fait passer d'un onglet à l'autre en fondu enchaîné, répare le dépôt de fichier sur Convertir et Résumé PDF, et corrige une fausse alerte d'accès au calendrier." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,50..100,0..1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../tailwind.css" />
+<style>
+  :root {
+    --ink: #0B0D12;
+    --cream: #EDE8DC;
+    --brand: linear-gradient(90deg, #A855F7 0%, #FF4D88 30%, #FF7A2D 60%, #4DA8FF 100%);
+  }
+  html, body { background: var(--ink); color: var(--cream); }
+  body { font-family: 'Instrument Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .grad-text { background-image: var(--brand); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+  h1 span.grad-text, h2 span.grad-text { display: inline-block; line-height: 1.15; padding-bottom: 0.08em; }
+  main h2 { font-family: 'Fraunces', serif; font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  main h3 { font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #EDE8DC; }
+  main p, main li { color: rgba(237,232,220,0.78); line-height: 1.65; }
+  main p { margin-bottom: 0.9rem; }
+  main ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 0.9rem; }
+  main li { margin-bottom: 0.35rem; }
+  main a { color: #FF7A2D; text-decoration: underline; text-underline-offset: 3px; }
+  main a:hover { color: #FF4D88; }
+  .callout { background: linear-gradient(180deg, #14171F 0%, #0F1218 100%); border: 1px solid rgba(237,232,220,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+  .pro-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.35); color: #D6B4FE; vertical-align: middle; margin-left: 0.35rem; }
+  .btn-primary { background-image: var(--brand); color: #0B0D12 !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 600; text-decoration: none !important; display: inline-block; }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-secondary { border: 1px solid rgba(237,232,220,0.25); color: #EDE8DC !important; padding: 0.7rem 1.3rem; border-radius: 10px; font-weight: 500; text-decoration: none !important; display: inline-block; }
+  .btn-secondary:hover { border-color: rgba(237,232,220,0.55); }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; color: rgba(237,232,220,0.55); text-transform: uppercase; }
+  code.inline { font-family: 'JetBrains Mono', monospace; font-size: 0.86em; background: rgba(237,232,220,0.08); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+  details { border: 1px solid rgba(237,232,220,0.10); border-radius: 10px; padding: 1rem; margin: 0.8rem 0; background: #10131A; }
+  summary { cursor: pointer; color: #EDE8DC; font-weight: 600; }
+  details p { margin-top: 0.7rem; margin-bottom: 0; }
+  .shot { margin: 1.5rem 0; border: 1px solid rgba(237,232,220,0.10); border-radius: 12px; overflow: hidden; background: #10131A; }
+  .shot img, .shot video { width: 100%; height: auto; display: block; }
+  .shot figcaption { font-size: 0.85rem; line-height: 1.5; color: rgba(237,232,220,0.55); padding: 0.6rem 0.9rem; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://notchia.app/blog/graceful-swan-2-9-27#article",
+   "headline": "NotchIA 2.9.27 : des onglets qui s'enchaînent en douceur",
+   "description": "NotchIA 2.9.27 fait passer d'un onglet à l'autre en fondu enchaîné, répare le dépôt de fichier sur Convertir et Résumé PDF, et corrige une fausse alerte d'accès au calendrier.",
+   "datePublished": "2026-10-31",
+   "dateModified": "2026-10-31",
+   "inLanguage": "fr-FR",
+   "image": "https://notchia.app/og-image.png?v=20260825",
+   "author": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/" },
+   "publisher": { "@type": "Organization", "name": "NotchIA", "url": "https://notchia.app/", "logo": { "@type": "ImageObject", "url": "https://notchia.app/logo-512.png" } },
+   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://notchia.app/blog/graceful-swan-2-9-27" },
+   "wordCount": 780
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/blog/graceful-swan-2-9-27#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Le changement d'onglet respecte-t-il « Réduire les animations » ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui. Si « Réduire les animations » est activé dans les réglages d'accessibilité de macOS, le changement d'onglet passe par un simple fondu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "J'ai déposé un fichier sur « Convertir » et il a disparu : où est-il ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Probablement sur le Bureau. Avant la 2.9.27, l'encoche se refermait une demi-seconde après l'arrivée du fichier sur la carte : le dépôt n'aboutissait pas, et le fichier, lâché sur ce qui se trouvait sous l'encoche, pouvait être déplacé sur le Bureau par le Finder. Depuis la 2.9.27, l'encoche reste ouverte jusqu'au dépôt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Le résumé fonctionne-t-il avec un PDF scanné ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui. Quand un PDF ne contient pas de texte sélectionnable, NotchIA reconnaît le texte des pages (OCR) sur le Mac, puis le résume avec Apple Intelligence, sans envoyer le fichier sur un serveur. Depuis la 2.9.27, cette lecture se fait en arrière-plan et ne fige plus l'app. Le résumé demande macOS 26 ou plus récent."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "VideoObject",
+   "@id": "https://notchia.app/blog/graceful-swan-2-9-27#video",
+   "name": "NotchIA 2.9.27 : changement d'onglet en fondu enchaîné",
+   "description": "Capture réelle de NotchIA 2.9.27 : l'encoche passe de l'onglet Média à la Shelf, puis à Focus et revient à Média, en fondu enchaîné, avec un redimensionnement en ressort.",
+   "thumbnailUrl": "https://notchia.app/press-kit/screenshots/12.webp",
+   "contentUrl": "https://notchia.app/press-kit/screenshots/12.mp4",
+   "uploadDate": "2026-10-31",
+   "duration": "PT5S",
+   "inLanguage": "fr-FR"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://notchia.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://notchia.app/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "2.9.27", "item": "https://notchia.app/blog/graceful-swan-2-9-27" }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="font-sans min-h-screen">
+<header class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
+  <a href="/" class="flex items-center gap-2">
+    <img src="../logo.png" alt="NotchIA" class="h-8 w-8" />
+    <span class="font-display text-xl">NotchIA</span>
+  </a>
+  <nav class="flex items-center gap-6 text-sm text-cream/70">
+    <a href="/" class="hover:text-cream">Accueil</a>
+    <a href="/features" class="hover:text-cream">Fonctionnalités</a>
+    <a href="/pricing" class="hover:text-cream">Tarifs</a>
+  </nav>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-4 pb-24">
+  <section class="mb-6">
+    <p class="eyebrow mb-3">Notes de version · 2.9.27</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-4 leading-tight">Graceful Swan : des onglets qui <span class="grad-text">s'enchaînent</span> en douceur</h1>
+    <p class="text-cream/55 text-sm">Par NotchIA · 31 octobre 2026 · 3 min de lecture</p>
+  </section>
+
+  <p>La 2.9.27, publiée le 28 octobre 2026, soigne le changement d'onglet comme la 2.9.26 avait soigné l'ouverture de l'encoche : <strong>l'onglet quitté s'efface, puis le nouveau apparaît</strong>, sans que les deux se superposent. Elle répare aussi le dépôt de fichier sur les cartes « Convertir » et « Résumé PDF » de la Shelf, et supprime une alerte d'accès au calendrier qui s'affichait à tort.</p>
+
+  <h2>Un fondu enchaîné entre les onglets</h2>
+  <p>Changer d'onglet fait maintenant un fondu enchaîné. L'onglet quitté s'efface en un dixième de seconde environ, puis le nouveau apparaît en moins de trois dixièmes, avec un léger agrandissement depuis le haut. Pendant ce temps, l'encoche prend sa nouvelle taille avec le même ressort qu'à l'ouverture.</p>
+  <figure class="shot">
+    <video src="../press-kit/screenshots/12.mp4" poster="../press-kit/screenshots/12.webp" width="1340" height="470" autoplay muted loop playsinline preload="metadata" aria-label="L'encoche de NotchIA passe de l'onglet Média à la Shelf, puis à Focus et revient à Média, en fondu enchaîné."></video>
+    <figcaption>Média, Shelf, Focus, puis retour à Média : chaque onglet s'efface avant que le suivant apparaisse, et l'encoche change de taille avec un ressort. Capture réelle de NotchIA 2.9.27.</figcaption>
+  </figure>
+  <p>Jusqu'ici, deux onglets pouvaient se superposer un instant, et le lecteur de l'onglet Média glissait par-dessus les icônes quand on revenait dessus. Le rendu est désormais le même dans les deux sens, quel que soit l'ordre des onglets.</p>
+  <p>Si <strong>« Réduire les animations »</strong> est activé dans les réglages d'accessibilité de macOS, le changement d'onglet passe par un simple fondu.</p>
+
+  <h2>Convertir et Résumé PDF : le dépôt fonctionne <span class="pro-badge">Pro</span></h2>
+  <p>Déposer un fichier sur « Convertir » ou « Résumé PDF » refermait l'encoche une demi-seconde plus tard. Le fichier n'arrivait jamais sur la carte, et pouvait même finir sur le Bureau. L'encoche reste maintenant ouverte jusqu'au dépôt, puis se referme normalement quand la souris s'en va.</p>
+  <ul>
+    <li>« Convertir » accepte un nouveau fichier par-dessus le précédent, après une erreur comme après une conversion terminée.</li>
+    <li>L'extension du fichier (PNG, JPEG…) ne s'affiche plus lettre par lettre, en colonne.</li>
+    <li>« Résumé PDF » affiche le nom du fichier au lieu d'un identifiant technique.</li>
+    <li>NotchIA ne se fige plus pendant la lecture d'un PDF scanné : la reconnaissance du texte (OCR), faite sur le Mac, tourne désormais en arrière-plan.</li>
+  </ul>
+  <figure class="shot"><picture><source srcset="../press-kit/screenshots/10.webp" type="image/webp" /><img src="../press-kit/screenshots/10.png" width="1100" height="320" loading="lazy" decoding="async" alt="La carte Convert de la Shelf après le dépôt d'une image PNG : l'extension tient sur une ligne et les formats de sortie sont proposés." /></picture><figcaption>Une image PNG déposée sur « Convertir » (ici l'interface en anglais) : l'extension tient sur une ligne, et NotchIA propose JPEG, GIF, TIFF, BMP, HEIC, WebP ou PDF.</figcaption></figure>
+  <figure class="shot"><picture><source srcset="../press-kit/screenshots/11.webp" type="image/webp" /><img src="../press-kit/screenshots/11.png" width="1100" height="591" loading="lazy" decoding="async" alt="Le résumé d'un PDF par Apple Intelligence dans la Shelf, avec le nom du fichier en en-tête." /></picture><figcaption>Un PDF déposé sur « Résumé PDF », résumé sur le Mac par Apple Intelligence : l'en-tête affiche maintenant le nom du fichier.</figcaption></figure>
+  <p>Pour rappel, « Convertir » fait passer images, PDF, audio et vidéo d'un format à l'autre, et « Résumé PDF » résume avec Apple Intelligence, sur l'appareil, un PDF ou un fichier texte (macOS 26 et plus récent).</p>
+
+  <h2>Calendrier : plus de fausse alerte d'accès</h2>
+  <p>À sa première ouverture après le lancement de NotchIA, l'onglet Calendrier affichait une fraction de seconde « Accès au calendrier requis », même quand l'accès était déjà accordé. L'autorisation est maintenant lue dès le démarrage de l'app, sans rien vous redemander.</p>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Le changement d'onglet respecte-t-il « Réduire les animations » ?</summary>
+    <p>Oui. Si « Réduire les animations » est activé dans les réglages d'accessibilité de macOS, le changement d'onglet passe par un simple fondu.</p>
+  </details>
+  <details>
+    <summary>J'ai déposé un fichier sur « Convertir » et il a disparu : où est-il ?</summary>
+    <p>Probablement sur le Bureau. Avant la 2.9.27, l'encoche se refermait une demi-seconde après l'arrivée du fichier sur la carte : le dépôt n'aboutissait pas, et le fichier, lâché sur ce qui se trouvait sous l'encoche, pouvait être déplacé sur le Bureau par le Finder. Depuis la 2.9.27, l'encoche reste ouverte jusqu'au dépôt.</p>
+  </details>
+  <details>
+    <summary>Le résumé fonctionne-t-il avec un PDF scanné ?</summary>
+    <p>Oui. Quand un PDF ne contient pas de texte sélectionnable, NotchIA reconnaît le texte des pages (OCR) sur le Mac, puis le résume avec Apple Intelligence, sans envoyer le fichier sur un serveur. Depuis la 2.9.27, cette lecture se fait en arrière-plan et ne fige plus l'app. Le résumé demande macOS 26 ou plus récent.</p>
+  </details>
+
+  <h2>Comment l'obtenir</h2>
+  <p><strong>Déjà utilisateur ?</strong> L'auto-update Sparkle vous propose la 2.9.27 automatiquement. Pour forcer : menu NotchIA → <em>Vérifier les mises à jour</em>.</p>
+  <p><strong>Nouvel utilisateur ?</strong> <code class="inline">brew install --cask coaxel2/notchia/notchia</code>, ou le <a href="/install">.dmg depuis la page d'installation</a>.</p>
+
+  <div class="callout">
+    <p><strong>L'auteur.</strong> L'auteur est développeur indépendant et créateur de NotchIA, app macOS qui transforme l'encoche du MacBook en centre de contrôle interactif. Ce changelog est rédigé à chaque release. Contact : <a href="mailto:notchia.app@gmail.com">notchia.app@gmail.com</a>.</p>
+  </div>
+  <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="/#telecharger" class="btn-primary">Télécharger NotchIA</a>
+    <a href="/changelog" class="btn-secondary">Changelog complet</a>
+  </div>
+  <script>if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('video[autoplay]').forEach(v => { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });</script>
+  <p class="mt-10 text-sm"><a href="/blog/silky-seal-2-9-26" class="text-cream/55 hover:text-cream">← Version précédente : 2.9.26</a> · <a href="/blog/" class="text-cream/55 hover:text-cream">Tous les articles</a></p>
+</main>
+<footer class="border-t border-cream/10 mt-12">
+  <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-cream/50 flex flex-col md:flex-row gap-4 md:gap-8 md:items-center md:justify-between">
+    <div>© 2026 NotchIA</div>
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      <a href="/mentions-legales" class="hover:text-cream">Mentions légales</a>
+      <a href="/cgv" class="hover:text-cream">CGV</a>
+      <a href="/privacy" class="hover:text-cream">Confidentialité</a>
+      <a href="/refund" class="hover:text-cream">Remboursement</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
