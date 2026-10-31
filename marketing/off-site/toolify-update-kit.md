@@ -35,13 +35,13 @@ eye level: a multi-source media player with synced lyrics (Apple Music, Spotify,
 a scrollable calendar with reminders, system HUD replacements for volume and brightness, a
 productivity toolkit with unlimited clipboard history and a 16-format file converter, and live
 tracking of terminal AI coding assistants — Claude Code (Anthropic) and ChatGPT Codex (OpenAI) —
-with 10 activity states. It also generates a fully local daily news digest powered on-device by
+with 15 activity states. It also generates a fully local daily news digest powered on-device by
 Apple Intelligence from user-provided RSS feeds, in the app's language (English, French, Spanish,
 German). 100% local, no telemetry. Current version: 2.9.10 (July 2026). Requires macOS 15+
 (Apple Silicon and Intel).
 
 ### Core Features
-- Live AI session tracking (Claude Code, ChatGPT Codex) with 10 activity states and token usage
+- Live AI session tracking (Claude Code, ChatGPT Codex) with 15 activity states and token usage
 - Multi-source media player with synced lyrics and spectrogram
 - Scrollable Calendar & Reminders day view
 - On-device AI Daily Digest via local Apple Intelligence and RSS feeds (EN/FR/ES/DE)
@@ -76,7 +76,7 @@ icons, unlimited colors, priority support. Instant delivery by email (Stripe).
 - **Does NotchIA collect or upload user data?** No. Everything runs locally, no telemetry;
   the only network call is signed update checks and license validation.
 - **Which AI assistants can NotchIA track?** Claude Code (Anthropic) and ChatGPT Codex (OpenAI),
-  with 10 activity states, multi-session support and token usage. (GitHub Copilot support was
+  with 15 activity states, multi-session support and token usage. (GitHub Copilot support was
   removed in v2.9.4, June 2026.)
 - **What happens to the AI Digest if I am not running macOS 26+?** The Digest requires Apple
   Intelligence (macOS 26+). On macOS 15, the app degrades gracefully — every other module works.

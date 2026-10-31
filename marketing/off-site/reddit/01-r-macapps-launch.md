@@ -48,7 +48,7 @@ Notch apps exist — NotchNook, Alcove, MediaMate, Boring, DropNotch,
 a few others. I respect all of them and most of you probably already
 use one. The thing I haven't seen anywhere else is **live AI
 session state in the notch**: detect which IDE has an active
-Claude Code / Codex / Copilot session, show 10 distinct states
+Claude Code / Codex / Copilot session, show 15 distinct states
 (Compiling, Running, Reading, Writing, Web search, Planning,
 Sub-agent…), surface 5h and 7d quota usage, and ping you when the
 agent is blocked waiting for permission. All from local session
@@ -128,7 +128,7 @@ approach.
 
 The two things I built NotchIA around that aren't in Boring's
 scope: (1) live AI agent state — detecting Claude Code / Codex /
-Copilot sessions from local logs and surfacing 10 states + quota
+Copilot sessions from local logs and surfacing 15 states + quota
 usage in the notch, and (2) on-device Apple Intelligence Digest
 that summarises RSS feeds against interests you describe in plain
 language, 100% local.

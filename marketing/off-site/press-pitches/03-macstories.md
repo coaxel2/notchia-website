@@ -37,7 +37,7 @@ I wanted to put NotchIA on your radar. It's an independent native macOS app I bu
 
 Two things make it different from the apps you've already covered:
 
-1. Live status for AI coding assistants in the notch. NotchIA auto-detects active Claude Code, ChatGPT Codex and GitHub Copilot sessions and surfaces 10 real-time states — Compiling, Reading, Editing, Sub-agent, Permission-wait, etc. — plus token counts and the 5h / 7d rate-limit windows. Everything is read from ~/.claude/projects/ and equivalent session files locally; nothing hits a backend. As far as I can tell it's the first notch utility to do this.
+1. Live status for AI coding assistants in the notch. NotchIA auto-detects active Claude Code, ChatGPT Codex and GitHub Copilot sessions and surfaces 15 real-time states — Compiling, Reading, Editing, Sub-agent, Permission-wait, etc. — plus token counts and the 5h / 7d rate-limit windows. Everything is read from ~/.claude/projects/ and equivalent session files locally; nothing hits a backend. As far as I can tell it's the first notch utility to do this.
 
 2. On-device Apple Intelligence. A Digest module pulls user-defined RSS / Atom feeds, asks the on-device Foundation Models layer to filter and summarize against natural-language interest topics, and writes a 30-second brief. A Shelf module does the same for dropped PDF/.docx files. Requires macOS 26 for the AI layer; degrades gracefully on 15. It's the first daily-use Foundation Models implementation I've come across outside Apple's own demos.
 

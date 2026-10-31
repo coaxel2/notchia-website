@@ -21,7 +21,7 @@ NotchIA wraps the unused space around the MacBook notch into a single, glanceabl
 - **Shelf** — drag-and-drop staging area for files, text and links between apps without polluting the Desktop.
 - **File converter** — 16 image / PDF / video formats in Pro.
 - **Digest (on-device AI)** — paste your RSS feeds, describe your interests in plain language, and Apple Intelligence (Foundation Models, macOS 26+) generates a 30-second daily brief 100% locally.
-- **Live AI dev monitoring** (Pro) — auto-detects active Claude Code, ChatGPT Codex and GitHub Copilot sessions, surfaces 10 live states (compiling, terminal, web, planning, sub-agent...), token counters, 5h/7d quotas and permission-pending alerts — all parsed from local session logs, nothing sent off-device.
+- **Live AI dev monitoring** (Pro) — auto-detects active Claude Code, ChatGPT Codex and GitHub Copilot sessions, surfaces 15 live states (compiling, terminal, web, planning, sub-agent...), token counters, 5h/7d quotas and permission-pending alerts — all parsed from local session logs, nothing sent off-device.
 - **System HUD replacement** — replaces the default volume / brightness / keyboard backlight HUDs with an in-notch version.
 - **Sneak Peek Engine** — rotating mini-widgets in the closed notch.
 

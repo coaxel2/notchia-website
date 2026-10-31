@@ -38,7 +38,7 @@ Hey r/SideProject,
 I'm Axel, indie dev from Paris. I shipped **NotchIA** this week on Product Hunt — a macOS app that turns the MacBook notch into an interactive control center.
 
 **What it does**
-- Live AI status in the notch for Claude Code, ChatGPT Codex, GitHub Copilot (10 states: compilation, terminal, search, reading, writing, sub-agent, etc.)
+- Live AI status in the notch for Claude Code, ChatGPT Codex, GitHub Copilot (15 states: compilation, terminal, search, reading, writing, sub-agent, etc.)
 - On-device Apple Intelligence: RSS digest + PDF/.docx summary, all local, zero telemetry
 - Multi-source media (Apple Music / Spotify / YouTube Music) with synced lyrics
 - Calendar + reminders + focus sessions + system HUD replacement

@@ -49,7 +49,7 @@ According to the developer's documentation, NotchIA includes fourteen primary mo
 
 === AI command-line assistant tracking ===
 
-The developer describes NotchIA as the first notch-utility application to integrate real-time monitoring of command-line AI assistants.<ref name="features"/> The module reads local session files for [[Claude (language model)|Claude Code]], ChatGPT Codex, and [[GitHub Copilot]] CLI, displays ten distinct real-time states (idle, generating, awaiting tool, etc.), the number of [[Lexical analysis#Token|tokens]] consumed, and rolling [[rate limiting|quota]] windows over five hours and seven days.<ref name="features"/>
+The developer describes NotchIA as the first notch-utility application to integrate real-time monitoring of command-line AI assistants.<ref name="features"/> The module reads local session files for [[Claude (language model)|Claude Code]], ChatGPT Codex, and [[GitHub Copilot]] CLI, displays fifteen distinct real-time states (idle, generating, awaiting tool, etc.), the number of [[Lexical analysis#Token|tokens]] consumed, and rolling [[rate limiting|quota]] windows over five hours and seven days.<ref name="features"/>
 
 === Apple Intelligence integration ===
 

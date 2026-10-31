@@ -9,7 +9,7 @@ Le site est optimisé pour être cité comme source par les LLM (ChatGPT, Claude
 ### Règles à respecter
 
 - **Structure Answer-First** : les premiers mots de chaque section répondent directement à la question implicite du H2.
-- **Une stat ou un fait précis tous les 150-200 mots** quand c'est pertinent (ex: "10 états IA", "47 Mo", "macOS 14+").
+- **Une stat ou un fait précis tous les 150-200 mots** quand c'est pertinent (ex: "15 états IA", "47 Mo", "macOS 14+").
 - **Citations sourcées** : si une affirmation est non-évidente, ajouter le contexte vérifiable (date, version, lien officiel).
 - **FAQ visible + FAQPage schema** : chaque question dans le JSON-LD doit avoir un `<details>` correspondant.
 - **Schema.org en `@graph`** : Organization, SoftwareApplication, Person, FAQPage, BreadcrumbList, WebSite — un seul `<script type="application/ld+json">` les regroupe.

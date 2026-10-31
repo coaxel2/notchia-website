@@ -32,7 +32,7 @@ Quick tip for the Mac section.
 
 A new indie macOS app shipped this spring — NotchIA — and it's the first notch utility I've seen that does two things no one else has put together:
 
-1. Live status of AI coding assistants in the MacBook notch. It auto-detects active Claude Code, ChatGPT Codex and GitHub Copilot sessions and shows 10 real-time states (Compiling, Reading, Editing, waiting for permission), token counts, and the 5h / 7d quota windows. All read locally from session files, no cloud.
+1. Live status of AI coding assistants in the MacBook notch. It auto-detects active Claude Code, ChatGPT Codex and GitHub Copilot sessions and shows 15 real-time states (Compiling, Reading, Editing, waiting for permission), token counts, and the 5h / 7d quota windows. All read locally from session files, no cloud.
 
 2. On-device Apple Intelligence. An RSS Digest and a Shelf PDF summarizer run 100% local via Foundation Models (macOS 26+; degrades on 15).
 
@@ -71,7 +71,7 @@ Hi 9to5Mac team,
 
 Quick app tip — feel free to forward to Filipe Espósito if he's the right person.
 
-NotchIA is a new indie macOS app that puts live status of Claude Code, ChatGPT Codex and GitHub Copilot sessions directly in the MacBook notch — 10 real-time states, token counts, 5h/7d quota windows, all read locally. It also runs an on-device Apple Intelligence RSS Digest (Foundation Models, macOS 26+).
+NotchIA is a new indie macOS app that puts live status of Claude Code, ChatGPT Codex and GitHub Copilot sessions directly in the MacBook notch — 15 real-time states, token counts, 5h/7d quota windows, all read locally. It also runs an on-device Apple Intelligence RSS Digest (Foundation Models, macOS 26+).
 
 - Solo developer (Paris)
 - macOS 15+, Apple Silicon + Intel

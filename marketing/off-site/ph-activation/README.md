@@ -73,7 +73,7 @@ I'm Axel, indie macOS dev from Paris. NotchIA is something I've been building fo
 
 The pitch: macOS hides interesting state in 12 places (menu bar, Dock, Spotlight, system HUDs, notifications, Now Playing, etc.). The MacBook notch sits there doing nothing. NotchIA turns it into a single zone that holds the stuff you actually look at all day:
 
-— Live AI status for Claude Code, ChatGPT Codex, GitHub Copilot (10 states, token counts, 5h/7d quotas)
+— Live AI status for Claude Code, ChatGPT Codex, GitHub Copilot (15 states, token counts, 5h/7d quotas)
 — Apple Intelligence on-device: RSS digest summarized locally + PDF/docx summary in the Shelf
 — Multi-source media (Apple Music / Spotify / YouTube Music) with synced lyrics
 — Calendar, reminders, focus sessions with stats

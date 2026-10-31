@@ -38,7 +38,7 @@ Your "These Apps Turn Your MacBook Notch Into a Dynamic Island" piece is still t
 I'm writing because there's a category your roundup doesn't yet cover: a notch app that actually shows you what your AI coding assistants are doing. I built NotchIA, an independent macOS app, and shipped it publicly a few months ago. It might be worth a row when you next refresh the article.
 
 What it adds vs. the apps you covered:
-- Live status for Claude Code, ChatGPT Codex and GitHub Copilot right in the notch — 10 real-time states (thinking, reading, editing, waiting for permission, etc.), token counts, and the 5-hour and 7-day quota windows. All read locally from session files, no cloud.
+- Live status for Claude Code, ChatGPT Codex and GitHub Copilot right in the notch — 15 real-time states (thinking, reading, editing, waiting for permission, etc.), token counts, and the 5-hour and 7-day quota windows. All read locally from session files, no cloud.
 - On-device Apple Intelligence: an RSS Digest and a Shelf PDF summary that run 100% local via Apple's Foundation Models (macOS 26+; graceful fallback on 15).
 - The standard notch stack too: media controls with synced lyrics, calendar, Focus timer, clipboard history, file converter.
 

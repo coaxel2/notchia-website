@@ -121,7 +121,7 @@ privacy
 - 16-format file converter (images, PDF, video)
 - On-device Apple Intelligence RSS Digest (Foundation Models, macOS 26+)
 - On-device PDF / DOCX / TXT / Markdown summarizer
-- Live status for Claude Code, ChatGPT Codex, GitHub Copilot (10 states)
+- Live status for Claude Code, ChatGPT Codex, GitHub Copilot (15 states)
 - Token counters + 5h/7d quota windows for coding agents
 - System HUD replacement (volume, brightness, keyboard backlight)
 - Sneak Peek Engine (rotating mini-widgets in the closed notch)
@@ -405,7 +405,7 @@ NotchIA started as a 30-minute hack. I was running Claude Code in one Terminal t
 
 A year later, NotchIA is 14 modules in one native app (~30 MB, Apple Silicon + Intel). The headline ones for me:
 
-• Live status for Claude Code, ChatGPT Codex and GitHub Copilot, read locally from session files. 10 states, token counters, 5h/7d quota windows. As far as I can tell, the first notch utility to surface this.
+• Live status for Claude Code, ChatGPT Codex and GitHub Copilot, read locally from session files. 15 states, token counters, 5h/7d quota windows. As far as I can tell, the first notch utility to surface this.
 • On-device Apple Intelligence Digest — paste RSS feeds, describe your interests, get a 30-second local brief. Zero cloud AI.
 • The usual cockpit: media + synced lyrics, calendar, focus, clipboard, file shelf, 16-format converter, HUD replacement.
 
@@ -418,7 +418,7 @@ No telemetry, no analytics, no funny business. I run the whole thing solo. Happy
 
 - [ ] **Hero image** (gallery slot 1) — 1270×760 PNG, notch open with media + AI status visible. Use brand gradient backdrop.
 - [ ] **Demo GIF** (gallery slot 2) — 60 seconds, ≤ 3 MB, looped, no audio. Show: notch closed → hover open → media → AI status flicker → Digest summary appearing → focus timer running. Tool: Gifski + ScreenStudio.
-- [ ] **Screenshot 1** — Notch open on Live AI status (Claude Code 10-state UI, token counter, quota bar).
+- [ ] **Screenshot 1** — Notch open on Live AI status (Claude Code 15-state UI, token counter, quota bar).
 - [ ] **Screenshot 2** — Digest module with on-device summary + source links.
 - [ ] **Screenshot 3** — Media module with synced lyrics + visualiser.
 - [ ] **Screenshot 4** — Calendar day+month + Focus timer.
@@ -504,7 +504,7 @@ Native macOS notch cockpit with media, calendar, focus, on-device Apple Intellig
   <li><strong>File converter</strong> — 16 image / PDF / video formats (Pro).</li>
   <li><strong>Digest (on-device AI)</strong> — paste RSS / Atom feeds, describe interests in plain language, and Apple Intelligence Foundation Models (macOS 26+) generate a 30-second local brief. Original links stay visible next to every summary. Graceful fallback on macOS 15.</li>
   <li><strong>PDF Summarizer</strong> — on-device summarization for PDF, DOCX, TXT and Markdown files via the Shelf (Pro).</li>
-  <li><strong>Live AI dev monitoring</strong> (Pro) — auto-detects active Claude Code, ChatGPT Codex and GitHub Copilot sessions. Surfaces 10 live states (Compiling, Reading, Editing, Sub-agent, Permission-wait, etc.), token counters, 5h/7d quotas — all parsed from local session logs.</li>
+  <li><strong>Live AI dev monitoring</strong> (Pro) — auto-detects active Claude Code, ChatGPT Codex and GitHub Copilot sessions. Surfaces 15 live states (Compiling, Reading, Editing, Sub-agent, Permission-wait, etc.), token counters, 5h/7d quotas — all parsed from local session logs.</li>
   <li><strong>System HUD replacement</strong> — replaces the default volume / brightness / keyboard backlight HUDs with an in-notch version.</li>
   <li><strong>Sneak Peek Engine</strong> — rotating mini-widgets in the closed notch.</li>
 </ul>
@@ -612,7 +612,7 @@ Hi everyone — disclosure first: I'm the developer of NotchIA, sharing it here 
 
 NotchIA is a native macOS app I've been building solo for a year. It turns the MacBook notch (or a virtual menu-bar zone on notch-less Macs) into a 14-module cockpit. Two parts I'd actually want feedback on:
 
-• Live status for Claude Code, ChatGPT Codex and GitHub Copilot — 10 states, token counters, 5h/7d quotas, read locally from session files. No backend.
+• Live status for Claude Code, ChatGPT Codex and GitHub Copilot — 15 states, token counters, 5h/7d quotas, read locally from session files. No backend.
 
 • On-device Apple Intelligence Digest — RSS/Atom feeds summarised locally with the Foundation Models layer (macOS 26+). Graceful fallback on macOS 15.
 

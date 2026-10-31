@@ -36,7 +36,7 @@ Hi Raphael,
 Read your "Best Notch Apps for MacBook 2026" piece last week — appreciated that you tested for actual daily use instead of just animations. The Moody follow-up was a nice touch too.
 
 I build NotchIA, an independent macOS notch app, and I think it'd fit your comparison as a 7th row. The angle none of the six you cover have today:
-- Live status in the notch for Claude Code, ChatGPT Codex and GitHub Copilot — 10 real-time states (thinking, tool use, permission wait, quota window, token stats), read from local session files.
+- Live status in the notch for Claude Code, ChatGPT Codex and GitHub Copilot — 15 real-time states (thinking, tool use, permission wait, quota window, token stats), read from local session files.
 - On-device Apple Intelligence: RSS Digest and PDF Shelf summaries run 100% locally via Foundation Models. No cloud round-trip.
 - 14 native modules in one app (media, calendar, Focus, HUD, Shelf, file conversion, clipboard, etc.) instead of one-trick utilities.
 
@@ -80,7 +80,7 @@ Salut Raphael,
 Lu ton article "Best Notch Apps for MacBook 2026" la semaine dernière — j'ai apprécié que tu testes l'usage quotidien réel et pas juste les animations. Le suivi sur Moody était bien vu aussi.
 
 Je développe NotchIA, une app indé macOS pour l'encoche, et je pense qu'elle a sa place comme 7e ligne dans ton tableau. L'angle qu'aucune des six déjà listées ne couvre :
-- Statut IA en direct dans l'encoche pour Claude Code, ChatGPT Codex et GitHub Copilot — 10 états en temps réel (réflexion, outils, attente de permission, fenêtre quota, tokens), lus depuis les fichiers de session locaux.
+- Statut IA en direct dans l'encoche pour Claude Code, ChatGPT Codex et GitHub Copilot — 15 états en temps réel (réflexion, outils, attente de permission, fenêtre quota, tokens), lus depuis les fichiers de session locaux.
 - Apple Intelligence on-device : Digest RSS et résumés PDF via Shelf, 100 % local via Foundation Models. Aucun aller-retour cloud.
 - 14 modules natifs (média, calendrier, Focus, HUD, Shelf, conversion fichiers, presse-papiers...) dans une seule app, au lieu d'utilitaires mono-fonction.
 

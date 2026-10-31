@@ -35,7 +35,7 @@ Adds NotchIA to the Menu Bar Tools section.
 
 NotchIA is an independent native macOS app that turns the MacBook notch into an interactive cockpit. It covers a broader scope than any notch utility currently in this section:
 
-- **Live AI status** for Claude Code, ChatGPT Codex, and GitHub Copilot — 10 states (Compiling, Terminal, Searching, Reading, Editing, Writing, Web, Sub-agent, Planning, Running), token stats, 5h/7d quotas, permission notifications. Read locally from `~/.claude/projects/`.
+- **Live AI status** for Claude Code, ChatGPT Codex, and GitHub Copilot — 15 states (Compiling, Terminal, Searching, Reading, Editing, Writing, Web, Sub-agent, Planning, Running, Exploring, Files, Web search, Web read, Notebook), token stats, 5h/7d quotas, permission notifications. Read locally from `~/.claude/projects/`.
 - **On-device Apple Intelligence Digest** — RSS feed summaries via Foundation Models (macOS 26+). User pastes feeds, describes interests in plain language, the app fetches/dedupes/summarizes locally. 14-day cache. Graceful fallback on macOS 15.
 - **Apple Intelligence Shelf summary** for PDF/.docx/.txt/.md files dropped on the notch.
 - **Full Pomodoro Focus** with daily stats and configurable break sessions.

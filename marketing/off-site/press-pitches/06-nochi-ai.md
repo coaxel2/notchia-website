@@ -38,7 +38,7 @@ Hi,
 
 I'm Axel, the independent developer behind NotchIA, a macOS app that lives in the notch.
 
-I came across your "Best MacBook Notch Apps in 2026" roundup — solid overview. NotchIA isn't in it yet, and I think it earns a spot for one reason the others don't cover: it's an all-in-one notch suite (14 modules: media, calendar, Shelf, Focus, clipboard, HUD…) that also shows live status for AI coding agents (Claude Code, ChatGPT Codex, GitHub Copilot — 10 real-time states) and runs an on-device Apple Intelligence RSS digest, summarized locally.
+I came across your "Best MacBook Notch Apps in 2026" roundup — solid overview. NotchIA isn't in it yet, and I think it earns a spot for one reason the others don't cover: it's an all-in-one notch suite (14 modules: media, calendar, Shelf, Focus, clipboard, HUD…) that also shows live status for AI coding agents (Claude Code, ChatGPT Codex, GitHub Copilot — 15 real-time states) and runs an on-device Apple Intelligence RSS digest, summarized locally.
 
 To make it easy, I've written a ready-to-paste entry below. Happy to send a build, screenshots, or a short screen recording so you can verify before publishing.
 
@@ -62,7 +62,7 @@ If the roundup uses a **table**:
 If the roundup uses **prose / a per-app blurb** (~55 words):
 
 ```text
-NotchIA — A do-everything notch app for macOS 15+ (Apple Silicon and Intel, ~12 MB). Alongside the usual media controls, calendar, Shelf, Focus timer and clipboard history, it shows live status for AI coding agents — Claude Code, ChatGPT Codex and GitHub Copilot, with 10 real-time states — and an on-device Apple Intelligence RSS digest summarized locally. Free tier; Pro 2.99 €/mo or 24.99 € lifetime. notchia.app
+NotchIA — A do-everything notch app for macOS 15+ (Apple Silicon and Intel, ~12 MB). Alongside the usual media controls, calendar, Shelf, Focus timer and clipboard history, it shows live status for AI coding agents — Claude Code, ChatGPT Codex and GitHub Copilot, with 15 real-time states — and an on-device Apple Intelligence RSS digest summarized locally. Free tier; Pro 2.99 €/mo or 24.99 € lifetime. notchia.app
 ```
 
 ---

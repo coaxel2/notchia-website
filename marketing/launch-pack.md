@@ -41,7 +41,7 @@ What you get in the free tier:
 • 4 languages: French, English, Spanish, German
 
 Pro adds:
-• Live AI status — Claude Code, ChatGPT Codex, and GitHub Copilot in the notch with 10 states, token stats, 5h/7d quotas, permission notifications
+• Live AI status — Claude Code, ChatGPT Codex, and GitHub Copilot in the notch with 15 states, token stats, 5h/7d quotas, permission notifications
 • Shelf drag-and-drop with on-device Apple Intelligence summary for PDF/.docx
 • File converter (16 formats)
 • Unlimited clipboard history
@@ -98,7 +98,7 @@ The notch sits empty all day. My Claude Code session is crunching in the backgro
 
 **What it does**
 
-- **Live AI status** in the notch: auto-detects Claude Code, ChatGPT Codex, and GitHub Copilot sessions, shows 10 states (Compiling, Terminal, Searching, Reading, Editing, Writing, Web, Sub-agent, Planning, Running), token stats per session, 5h/7d quota bars, and notifications when an assistant is waiting for permission. Reads `~/.claude/projects/` locally, no cloud calls.
+- **Live AI status** in the notch: auto-detects Claude Code, ChatGPT Codex, and GitHub Copilot sessions, shows 15 states (Compiling, Terminal, Searching, Reading, Editing, Writing, Web, Sub-agent, Planning, Running, Exploring, Files, Web search, Web read, Notebook), token stats per session, 5h/7d quota bars, and notifications when an assistant is waiting for permission. Reads `~/.claude/projects/` locally, no cloud calls.
 
 - **Digest** (new in 2.8.0, free): paste your RSS feeds, describe what interests you in plain language, and on-device Apple Intelligence (Foundation Models) summarizes them for you. 14-day cache. Requires macOS 26 for Apple Intelligence; falls back to a raw RSS viewer on macOS 15.
 
@@ -164,7 +164,7 @@ Bonjour,
 
 Je suis Axel Courty, développeur indépendant à Paris. Je viens de sortir NotchIA, une app macOS native qui exploite l'encoche du MacBook comme cockpit interactif, avec deux angles que vous n'avez pas couverts à ma connaissance :
 
-1. Détection automatique des sessions Claude Code, ChatGPT Codex et GitHub Copilot en direct — affichage de 10 états en temps réel dans l'encoche, statistiques de jetons, quotas 5h/7j, notifications quand l'assistant attend une permission. Lecture 100 % locale des journaux ~/.claude/projects/, jamais d'envoi externe.
+1. Détection automatique des sessions Claude Code, ChatGPT Codex et GitHub Copilot en direct — affichage de 15 états en temps réel dans l'encoche, statistiques de jetons, quotas 5h/7j, notifications quand l'assistant attend une permission. Lecture 100 % locale des journaux ~/.claude/projects/, jamais d'envoi externe.
 
 2. Digest — résumé des flux RSS via Apple Intelligence (Foundation Models on-device, macOS 26). L'utilisateur colle ses flux, décrit ses centres d'intérêt en langage naturel, l'app fetch + dédupe + résume. 100 % local — pas d'OpenAI/Anthropic dans le circuit. C'est la première fois que je vois un usage quotidien sérieux des Foundation Models.
 
@@ -226,7 +226,7 @@ It does live AI status detection (Claude Code, Codex, Copilot — read locally f
 
 It's a native macOS app — 14 modules total. Free Essential tier, €24.99 lifetime Pro.
 
-Tech stack: SwiftUI, AppKit for the notch overlay, XPC helper for HUD interception, lrclib for synced lyrics, Sparkle with EdDSA for auto-update. The AI detection parses Claude Code's local JSONL session logs and matches them to 10 state patterns.
+Tech stack: SwiftUI, AppKit for the notch overlay, XPC helper for HUD interception, lrclib for synced lyrics, Sparkle with EdDSA for auto-update. The AI detection parses Claude Code's local JSONL session logs and matches them to 15 state patterns.
 
 Happy to answer questions on the notch overlay implementation, on-device Apple Intelligence integration, or anything else.
 ```

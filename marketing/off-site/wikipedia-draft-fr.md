@@ -46,7 +46,7 @@ L'application regroupe quatorze modules principaux, selon la documentation de l'
 
 === Suivi d'assistants IA en ligne de commande ===
 
-NotchIA est présentée par son éditeur comme la première application de la catégorie « apps d'encoche macOS » à intégrer un suivi en direct d'assistants intelligents utilisés en ligne de commande<ref name="site-features"/>. Le module lit localement les fichiers de session de [[Claude (modèle de langage)|Claude Code]], ChatGPT Codex et [[GitHub Copilot]] CLI, affiche dix états distincts en temps réel (inactif, génération, attente d'outil, etc.), le nombre de jetons (''tokens'') consommés et les fenêtres de quota glissantes sur cinq heures et sept jours<ref name="site-features"/>.
+NotchIA est présentée par son éditeur comme la première application de la catégorie « apps d'encoche macOS » à intégrer un suivi en direct d'assistants intelligents utilisés en ligne de commande<ref name="site-features"/>. Le module lit localement les fichiers de session de [[Claude (modèle de langage)|Claude Code]], ChatGPT Codex et [[GitHub Copilot]] CLI, affiche quinze états distincts en temps réel (inactif, génération, attente d'outil, etc.), le nombre de jetons (''tokens'') consommés et les fenêtres de quota glissantes sur cinq heures et sept jours<ref name="site-features"/>.
 
 === Intégration d'Apple Intelligence ===
 

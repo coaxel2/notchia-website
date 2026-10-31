@@ -34,7 +34,7 @@ Long-time reader. I noticed your write-ups on NotchNook and Alcove, and I wanted
 
 NotchIA is an independent native macOS app. It adds two things that aren't covered by any of the notch utilities currently reviewed on MacStories:
 
-1. **Live AI status in the notch.** It auto-detects active Claude Code, ChatGPT Codex, and GitHub Copilot sessions and shows what they're doing in real time — 10 states (Compiling, Reading, Editing, Writing, Sub-agent, etc.), token statistics, 5h/7d rate-limit quotas, and notifications when an assistant is waiting for permission. All read locally from ~/.claude/projects/, no cloud calls.
+1. **Live AI status in the notch.** It auto-detects active Claude Code, ChatGPT Codex, and GitHub Copilot sessions and shows what they're doing in real time — 15 states (Compiling, Reading, Editing, Writing, Sub-agent, etc.), token statistics, 5h/7d rate-limit quotas, and notifications when an assistant is waiting for permission. All read locally from ~/.claude/projects/, no cloud calls.
 
 2. **On-device Apple Intelligence RSS Digest.** Users paste their feeds, describe their interests in plain language, and the app summarizes via Foundation Models — on-device, 100% local, requires macOS 26. It's the first practical, daily-use case I've seen for Apple Intelligence beyond the OS demos. Graceful fallback to a raw RSS viewer on macOS 15.
 
