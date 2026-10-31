@@ -74,18 +74,189 @@
   .check { color: #FF7A2D; }
   .lang-sw { appearance: none; -webkit-appearance: none; background-color: transparent; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23808998' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; background-size: 9px; border: 1px solid rgba(237,232,220,0.15); color: rgba(237,232,220,0.7); font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 26px 4px 10px; border-radius: 999px; cursor: pointer; }
   .lang-sw:hover { color: #EDE8DC; }
+  .plans-wrap { overflow-x: auto; border-radius: 1rem; border: 1px solid rgba(237,232,220,.1); }
+  .plans-table { width: 100%; border-collapse: collapse; font-size: .875rem; min-width: 520px; }
+  .plans-table th, .plans-table td { padding: .7rem .9rem; text-align: center; border-bottom: 1px solid rgba(237,232,220,.08); }
+  .plans-table thead th { font-weight: 600; color: #EDE8DC; background: rgba(237,232,220,.04); }
+  .plans-table tbody th { text-align: left; font-weight: 400; color: rgba(237,232,220,.8); }
+  .plans-table td { color: rgba(237,232,220,.75); }
+  .plans-table td.ok { color: #4ade80; }
+  .plans-table td.no { color: rgba(237,232,220,.35); }
+  .plans-table tbody tr:last-child th, .plans-table tbody tr:last-child td { border-bottom: 0; }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-  {"@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Accueil","item":"https://notchia.app/"},
-    {"@type":"ListItem","position":2,"name":"Tarifs","item":"https://notchia.app/pricing"}
-  ]},
-  {"@type":"Product","name":"NotchIA Pro","description":"Logiciel macOS qui transforme l'encoche du MacBook en centre de contrôle interactif : assistants IA en direct (Claude Code, Codex), Shelf, presse-papiers historique, convertisseur natif.","brand":{"@type":"Brand","name":"NotchIA"},"image":"https://notchia.app/og-image.png?v=20260825","url":"https://notchia.app/pricing","offers":[
-    {"@type":"Offer","name":"Pro mensuel","price":"2.99","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://notchia.app/pricing","priceSpecification":{"@type":"UnitPriceSpecification","price":"2.99","priceCurrency":"EUR","billingDuration":"P1M","unitCode":"MON"},"hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"FR","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","merchantReturnLink":"https://notchia.app/refund"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"EUR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"FR"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":0,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":0,"unitCode":"DAY"}}}},
-    {"@type":"Offer","name":"Pro à vie","price":"24.99","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://notchia.app/pricing","category":"licence à vie","hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"FR","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted","merchantReturnLink":"https://notchia.app/refund"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"EUR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"FR"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":0,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":0,"unitCode":"DAY"}}}}
-  ]}
-]}
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://notchia.app/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Tarifs",
+     "item": "https://notchia.app/pricing"
+    }
+   ]
+  },
+  {
+   "@type": "Product",
+   "name": "NotchIA Pro",
+   "description": "Logiciel macOS qui transforme l'encoche du MacBook en centre de contrôle interactif : assistants IA en direct (Claude Code, Codex), Shelf, presse-papiers historique, convertisseur natif.",
+   "brand": {
+    "@type": "Brand",
+    "name": "NotchIA"
+   },
+   "image": "https://notchia.app/og-image.png?v=20260825",
+   "url": "https://notchia.app/pricing",
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Pro mensuel",
+     "price": "2.99",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock",
+     "url": "https://notchia.app/pricing",
+     "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "2.99",
+      "priceCurrency": "EUR",
+      "billingDuration": "P1M",
+      "unitCode": "MON"
+     },
+     "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "FR",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+      "merchantReturnLink": "https://notchia.app/refund"
+     },
+     "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+       "@type": "MonetaryAmount",
+       "value": 0,
+       "currency": "EUR"
+      },
+      "shippingDestination": {
+       "@type": "DefinedRegion",
+       "addressCountry": "FR"
+      },
+      "deliveryTime": {
+       "@type": "ShippingDeliveryTime",
+       "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       },
+       "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       }
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "name": "Pro à vie",
+     "price": "24.99",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock",
+     "url": "https://notchia.app/pricing",
+     "category": "licence à vie",
+     "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "FR",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+      "merchantReturnLink": "https://notchia.app/refund"
+     },
+     "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+       "@type": "MonetaryAmount",
+       "value": 0,
+       "currency": "EUR"
+      },
+      "shippingDestination": {
+       "@type": "DefinedRegion",
+       "addressCountry": "FR"
+      },
+      "deliveryTime": {
+       "@type": "ShippingDeliveryTime",
+       "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       },
+       "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://notchia.app/pricing#faq",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Qu'est-ce qui est gratuit dans NotchIA ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "L'Essentiel, gratuit à vie : médias multi-source avec paroles, calendrier et rappels, HUD système, Sneak Peek, détections, Concentration complet et personnalisation visuelle. Aucun paiement ni compte n'est demandé."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Que se passe-t-il si j'arrête de payer ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les fonctions Pro (IA en direct, gestion de fichiers, historique du presse-papiers) se désactivent. Le reste de NotchIA continue de fonctionner normalement."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sur combien de Mac puis-je l'installer ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Le Pro mensuel couvre 1 Mac, le Pro à vie 2 Mac. L'Essentiel, gratuit, s'installe sans licence sur autant de Mac que tu veux."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Le lifetime inclut-il les futures versions majeures ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui. Toutes les mises à jour de NotchIA, y compris les versions majeures, sont incluses pour les acheteurs lifetime."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "J'ai perdu ma clé de licence. Que faire ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La page /account permet de retrouver une clé depuis l'email d'achat."
+     }
+    }
+   ]
+  }
+ ]
+}
 </script>
 </head>
 
@@ -123,15 +294,16 @@
         <h2 class="font-display text-2xl" data-i18n="monthly.title">Mensuel</h2>
         <span class="text-xs text-cream/50 font-mono uppercase tracking-wider" data-i18n="monthly.tag">flexible</span>
       </div>
-      <p class="text-cream/60 mb-6 text-sm" data-i18n="monthly.sub">Annule à tout moment. Essai gratuit prévu.</p>
+      <p class="text-cream/60 mb-6 text-sm" data-i18n="monthly.sub">Annule à tout moment, sans engagement.</p>
       <div class="mb-8">
         <span class="font-display text-5xl font-medium">2,99&nbsp;€</span>
         <span class="text-cream/50 text-sm" data-i18n="monthly.per">&nbsp;/&nbsp;mois</span>
       </div>
       <ul class="space-y-3 text-sm mb-8 flex-1">
-        <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b1">Onglet Claude Code intégré</span></li>
-        <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b2">Onglet Codex intégré</span></li>
-        <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b3">Toutes les futures fonctionnalités IA</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b1">IA en direct · Claude Code et Codex</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b2">Statistiques IA · jetons, cache, latence, quotas</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b3">Gestion de fichiers · Shelf, convertisseur 13 formats, Quick Share, QuickLook</span></li>
+        <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b8">Historique du presse-papiers · jusqu'à 100 entrées</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b7">Téléchargement vidéo MP4/MP3 (1800+ sites)</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b4">1 Mac inclus</span></li>
         <li class="flex gap-2"><span class="check">✓</span><span data-i18n="monthly.b5">Mises à jour incluses</span></li>
@@ -169,6 +341,27 @@
     </article>
   </div>
 
+  <!-- Les trois formules, réponse directe + tableau (GEO : citable tel quel) -->
+  <section class="max-w-3xl mx-auto mb-16" id="formules">
+    <h2 class="font-display text-2xl text-center mb-4" data-i18n="plans.title">Ce que comprend chaque formule</h2>
+    <p class="text-cream/70 text-sm leading-relaxed mb-6" data-i18n="plans.lead">NotchIA a trois formules. L'Essentiel est gratuit à vie : médias, calendrier, HUD système, Sneak Peek, Concentration et personnalisation. Le Pro ajoute l'IA en direct (Claude Code, Codex), la gestion de fichiers et l'historique du presse-papiers, pour 2,99 € par mois sur 1 Mac ou 24,99 € une seule fois pour 2 Mac.</p>
+    <div class="plans-wrap">
+      <table class="plans-table">
+        <thead><tr><th scope="col" data-i18n="plans.col.feature">Fonction</th><th scope="col" data-i18n="plans.col.free">Essentiel</th><th scope="col" data-i18n="plans.col.monthly">Pro mensuel</th><th scope="col" data-i18n="plans.col.lifetime">Pro à vie</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" data-i18n="plans.r.price">Prix</th><td data-i18n="plans.r.price.free">0 €, à vie</td><td data-i18n="plans.r.price.monthly">2,99 € / mois</td><td data-i18n="plans.r.price.lifetime">24,99 € une fois</td></tr>
+          <tr><th scope="row" data-i18n="plans.r.macs">Mac couverts</th><td data-i18n="plans.r.macs.free">sans licence</td><td>1</td><td>2</td></tr>
+          <tr><th scope="row" data-i18n="plans.r.media">Médias, paroles, calendrier, rappels</th><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+          <tr><th scope="row" data-i18n="plans.r.hud">HUD système, Sneak Peek, détections</th><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+          <tr><th scope="row" data-i18n="plans.r.focus">Concentration complet, personnalisation</th><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+          <tr><th scope="row" data-i18n="plans.r.ai">IA en direct : Claude Code, Codex, 15 états</th><td class="no">—</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+          <tr><th scope="row" data-i18n="plans.r.files">Fichiers : Shelf, convertisseur 13 formats, résumé de PDF</th><td class="no">—</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+          <tr><th scope="row" data-i18n="plans.r.clip">Historique du presse-papiers (100 entrées)</th><td class="no">—</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <!-- Status banner (si redirection ?status=cancel ou erreur checkout) -->
   <div id="status" class="hidden text-center text-sm py-3 px-5 rounded-xl mb-8"></div>
 
@@ -177,13 +370,17 @@
     <h2 class="font-display text-2xl text-center mb-4" data-i18n="faq.title">Questions fréquentes</h2>
 
     <details class="card rounded-xl px-5 py-4">
+      <summary class="cursor-pointer font-medium" data-i18n="faq.q5">Qu'est-ce qui est gratuit dans NotchIA ?</summary>
+      <p class="text-cream/70 text-sm mt-3" data-i18n="faq.a5">L'Essentiel, gratuit à vie : médias multi-source avec paroles, calendrier et rappels, HUD système, Sneak Peek, détections, Concentration complet et personnalisation visuelle. Aucun paiement ni compte n'est demandé.</p>
+    </details>
+    <details class="card rounded-xl px-5 py-4">
       <summary class="cursor-pointer font-medium" data-i18n="faq.q1">Que se passe-t-il si j'arrête de payer ?</summary>
-      <p class="text-cream/70 text-sm mt-3" data-i18n="faq.a1">Les fonctionnalités Pro (Claude Code et Codex) peuvent être arrêtées à tout moment. Le reste de NotchIA continue de marcher normalement.</p>
+      <p class="text-cream/70 text-sm mt-3" data-i18n="faq.a1">Les fonctions Pro (IA en direct, gestion de fichiers, historique du presse-papiers) se désactivent. Le reste de NotchIA continue de fonctionner normalement.</p>
     </details>
 
     <details class="card rounded-xl px-5 py-4">
       <summary class="cursor-pointer font-medium" data-i18n="faq.q2">Sur combien de Mac puis-je l'installer ?</summary>
-      <p class="text-cream/70 text-sm mt-3" data-i18n="faq.a2">Le forfait mensuel est prévu pour 1 Mac. La licence à vie est prévue pour 2 Mac.</p>
+      <p class="text-cream/70 text-sm mt-3" data-i18n="faq.a2">Le Pro mensuel couvre 1 Mac, le Pro à vie 2 Mac. L&#39;Essentiel, gratuit, s&#39;installe sans licence sur autant de Mac que tu veux.</p>
     </details>
 
     <details class="card rounded-xl px-5 py-4">
@@ -213,8 +410,8 @@
       'nav.home':'Accueil','nav.account':'Mon compte',
       'h1':'<span class="grad-text">Pro</span>, sans abonnement obligatoire',
       'lead':'Pro mensuel ou Pro à vie, au choix. Paiement sécurisé Stripe, clé livrée par email immédiatement.',
-      'monthly.title':'Mensuel','monthly.tag':'flexible','monthly.sub':"Annule à tout moment. Essai gratuit prévu.",'monthly.per':' / mois',
-      'monthly.b1':'Onglet Claude Code intégré','monthly.b2':'Onglet Codex intégré','monthly.b3':'Toutes les futures fonctionnalités IA',
+      'monthly.title':'Mensuel','monthly.tag':'flexible','monthly.sub':"Annule à tout moment, sans engagement.",'monthly.per':' / mois',
+      'monthly.b1':"IA en direct · Claude Code et Codex",'monthly.b2':"Statistiques IA · jetons, cache, latence, quotas",'monthly.b3':"Gestion de fichiers · Shelf, convertisseur 13 formats, Quick Share, QuickLook",
       'monthly.b4':'1 Mac inclus','monthly.b5':'Mises à jour incluses','monthly.b6':'Annulation en 1 clic','monthly.b7':'Téléchargement vidéo MP4/MP3 (1800+ sites)',
       'lifetime.badge':'Meilleur prix','lifetime.title':'<span class="grad-text">À vie</span>','lifetime.tag':'achat unique',
       'lifetime.sub':'Un seul paiement. Toutes les futures versions incluses.','lifetime.per':' une seule fois',
@@ -226,10 +423,31 @@
       'cta.error':'Paiement indisponible pour le moment. Réessaie ou écris à /contact.',
       'status.cancelled':'Paiement annulé. Aucun débit. Tu peux retenter à tout moment.',
       'faq.title':'Questions fréquentes',
-      'faq.q1':"Que se passe-t-il si j'arrête de payer ?",'faq.a1':"Les fonctionnalités Pro (Claude Code et Codex) peuvent être arrêtées à tout moment. Le reste de NotchIA continue de marcher normalement.",
-      'faq.q2':"Sur combien de Mac puis-je l'installer ?",'faq.a2':"Le forfait mensuel est prévu pour 1 Mac. La licence à vie est prévue pour 2 Mac.",
+      'faq.q1':"Que se passe-t-il si j'arrête de payer ?",'faq.a1':"Les fonctions Pro (IA en direct, gestion de fichiers, historique du presse-papiers) se désactivent. Le reste de NotchIA continue de fonctionner normalement.",
+      'faq.q2':"Sur combien de Mac puis-je l'installer ?",'faq.a2':"Le Pro mensuel couvre 1 Mac, le Pro à vie 2 Mac. L'Essentiel, gratuit, s'installe sans licence sur autant de Mac que tu veux.",
       'faq.q3':"Le lifetime inclut-il les futures versions majeures ?",'faq.a3':"Oui. Toutes les mises à jour de NotchIA, y compris les versions majeures, sont incluses pour les acheteurs lifetime.",
       'faq.q4':"J'ai perdu ma clé de licence. Que faire ?",'faq.a4':'La page <a href="/account" class="underline">/account</a> permet de retrouver une clé depuis l\'email d\'achat.',
+      'monthly.b8':"Historique du presse-papiers · jusqu'à 100 entrées",
+      'plans.title':"Ce que comprend chaque formule",
+      'plans.lead':"NotchIA a trois formules. L'Essentiel est gratuit à vie : médias, calendrier, HUD système, Sneak Peek, Concentration et personnalisation. Le Pro ajoute l'IA en direct (Claude Code, Codex), la gestion de fichiers et l'historique du presse-papiers, pour 2,99 € par mois sur 1 Mac ou 24,99 € une seule fois pour 2 Mac.",
+      'plans.col.feature':"Fonction",
+      'plans.col.free':"Essentiel",
+      'plans.col.monthly':"Pro mensuel",
+      'plans.col.lifetime':"Pro à vie",
+      'plans.r.price':"Prix",
+      'plans.r.price.free':"0 €, à vie",
+      'plans.r.price.monthly':"2,99 € / mois",
+      'plans.r.price.lifetime':"24,99 € une fois",
+      'plans.r.macs':"Mac couverts",
+      'plans.r.macs.free':"sans licence",
+      'plans.r.media':"Médias, paroles, calendrier, rappels",
+      'plans.r.hud':"HUD système, Sneak Peek, détections",
+      'plans.r.focus':"Concentration complet, personnalisation",
+      'plans.r.ai':"IA en direct : Claude Code, Codex, 15 états",
+      'plans.r.files':"Fichiers : Shelf, convertisseur 13 formats, résumé de PDF",
+      'plans.r.clip':"Historique du presse-papiers (100 entrées)",
+      'faq.q5':"Qu'est-ce qui est gratuit dans NotchIA ?",
+      'faq.a5':"L'Essentiel, gratuit à vie : médias multi-source avec paroles, calendrier et rappels, HUD système, Sneak Peek, détections, Concentration complet et personnalisation visuelle. Aucun paiement ni compte n'est demandé.",
       'footnote':'Paiement sécurisé via Stripe. Voir notre <a href="/refund" class="underline">politique de remboursement</a>, nos <a href="/cgv" class="underline">CGV</a> et notre <a href="/privacy" class="underline">politique de confidentialité</a>.',
     },
     en: {'langhint.msg':'This page is also available in English.','langhint.go':'Read in English','langhint.close':'Close',
@@ -237,8 +455,8 @@
       'nav.home':'Home','nav.account':'My account',
       'h1':'<span class="grad-text">Pro</span>, no mandatory subscription',
       'lead':'Pro monthly or Pro lifetime, your choice. Secure Stripe checkout, key delivered by email instantly.',
-      'monthly.title':'Monthly','monthly.tag':'flexible','monthly.sub':'Cancel anytime. Free trial planned.','monthly.per':' / month',
-      'monthly.b1':'Claude Code tab integrated','monthly.b2':'Codex tab integrated','monthly.b3':'All future AI features',
+      'monthly.title':'Monthly','monthly.tag':'flexible','monthly.sub':"Cancel anytime, no commitment.",'monthly.per':' / month',
+      'monthly.b1':"Live AI · Claude Code and Codex",'monthly.b2':"AI stats · tokens, cache, latency, quotas",'monthly.b3':"File management · Shelf, 13-format converter, Quick Share, QuickLook",
       'monthly.b4':'1 Mac included','monthly.b5':'Updates included','monthly.b6':'One-click cancellation','monthly.b7':'Video download MP4/MP3 (1800+ sites)',
       'lifetime.badge':'Best value','lifetime.title':'<span class="grad-text">Lifetime</span>','lifetime.tag':'one-time purchase',
       'lifetime.sub':'One payment. All future versions included.','lifetime.per':' one-time',
@@ -250,10 +468,31 @@
       'cta.error':'Payment unavailable right now. Try again or use /contact.',
       'status.cancelled':'Payment cancelled. No charge. You can retry anytime.',
       'faq.title':'Frequently asked',
-      'faq.q1':'What happens if I stop paying?','faq.a1':'Pro features (Claude Code and Codex) can be stopped at any time. The rest of NotchIA keeps working normally.',
-      'faq.q2':'How many Macs can I install it on?','faq.a2':'The monthly plan is for 1 Mac. The lifetime license is for 2 Macs.',
+      'faq.q1':'What happens if I stop paying?','faq.a1':"Pro features (live AI, file management, clipboard history) are switched off. The rest of NotchIA keeps working normally.",
+      'faq.q2':'How many Macs can I install it on?','faq.a2':"Pro monthly covers 1 Mac, Pro lifetime 2 Macs. The free Essential plan needs no license and installs on as many Macs as you like.",
       'faq.q3':'Does Lifetime include future major versions?','faq.a3':'Yes. All NotchIA updates, including major versions, are included for lifetime buyers.',
       'faq.q4':'I lost my license key. What now?','faq.a4':'The <a href="/account" class="underline">/account</a> page lets you retrieve a key from the purchase email.',
+      'monthly.b8':"Clipboard history · up to 100 entries",
+      'plans.title':"What each plan includes",
+      'plans.lead':"NotchIA has three plans. Essential is free forever: media, calendar, system HUD, Sneak Peek, Concentration and customization. Pro adds live AI (Claude Code, Codex), file management and clipboard history, for €2.99 a month on 1 Mac or €24.99 once for 2 Macs.",
+      'plans.col.feature':"Feature",
+      'plans.col.free':"Essential",
+      'plans.col.monthly':"Pro monthly",
+      'plans.col.lifetime':"Pro lifetime",
+      'plans.r.price':"Price",
+      'plans.r.price.free':"€0, forever",
+      'plans.r.price.monthly':"€2.99 / month",
+      'plans.r.price.lifetime':"€24.99 once",
+      'plans.r.macs':"Macs covered",
+      'plans.r.macs.free':"no license",
+      'plans.r.media':"Media, lyrics, calendar, reminders",
+      'plans.r.hud':"System HUD, Sneak Peek, detections",
+      'plans.r.focus':"Full Concentration, customization",
+      'plans.r.ai':"Live AI: Claude Code, Codex, 15 states",
+      'plans.r.files':"Files: Shelf, 13-format converter, PDF summary",
+      'plans.r.clip':"Clipboard history (100 entries)",
+      'faq.q5':"What is free in NotchIA?",
+      'faq.a5':"Essential, free forever: multi-source media with lyrics, calendar and reminders, system HUD, Sneak Peek, detections, full Concentration and visual customization. No payment or account required.",
       'footnote':'Secure payment via Stripe. See our <a href="/refund" class="underline">refund policy</a>, our <a href="/cgv" class="underline">terms of sale</a> and our <a href="/privacy" class="underline">privacy policy</a>.',
     },
     es: {'langhint.msg':'Esta página también está disponible en español.','langhint.go':'Leer en español','langhint.close':'Cerrar',
@@ -261,8 +500,8 @@
       'nav.home':'Inicio','nav.account':'Mi cuenta',
       'h1':'<span class="grad-text">Pro</span>, sin suscripción obligatoria',
       'lead':'Pro mensual o Pro de por vida, tú eliges. Pago seguro Stripe, clave por email al instante.',
-      'monthly.title':'Mensual','monthly.tag':'flexible','monthly.sub':'Cancela cuando quieras. Prueba gratuita prevista.','monthly.per':' / mes',
-      'monthly.b1':'Pestaña Claude Code integrada','monthly.b2':'Pestaña Codex integrada','monthly.b3':'Todas las futuras funciones IA',
+      'monthly.title':'Mensual','monthly.tag':'flexible','monthly.sub':"Cancela cuando quieras, sin permanencia.",'monthly.per':' / mes',
+      'monthly.b1':"IA en directo · Claude Code y Codex",'monthly.b2':"Estadísticas IA · tokens, caché, latencia, cuotas",'monthly.b3':"Gestión de archivos · Shelf, conversor 13 formatos, Quick Share, QuickLook",
       'monthly.b4':'1 Mac incluido','monthly.b5':'Actualizaciones incluidas','monthly.b6':'Cancelación en 1 clic','monthly.b7':'Descarga de vídeos MP4/MP3 (más de 1800 sitios)',
       'lifetime.badge':'Mejor precio','lifetime.title':'<span class="grad-text">De por vida</span>','lifetime.tag':'pago único',
       'lifetime.sub':'Un solo pago. Todas las futuras versiones incluidas.','lifetime.per':' una sola vez',
@@ -274,10 +513,31 @@
       'cta.error':'Pago no disponible ahora. Inténtalo o usa /contact.',
       'status.cancelled':'Pago cancelado. Sin cargo. Puedes reintentar en cualquier momento.',
       'faq.title':'Preguntas frecuentes',
-      'faq.q1':'¿Qué pasa si dejo de pagar?','faq.a1':'Las funciones Pro (Claude Code y Codex) pueden detenerse en cualquier momento. El resto de NotchIA sigue funcionando normalmente.',
-      'faq.q2':'¿En cuántos Mac puedo instalarlo?','faq.a2':'El plan mensual es para 1 Mac. La licencia de por vida es para 2 Mac.',
+      'faq.q1':'¿Qué pasa si dejo de pagar?','faq.a1':"Las funciones Pro (IA en directo, gestión de archivos, historial del portapapeles) se desactivan. El resto de NotchIA sigue funcionando con normalidad.",
+      'faq.q2':'¿En cuántos Mac puedo instalarlo?','faq.a2':"Pro mensual cubre 1 Mac, Pro de por vida 2 Mac. El plan Esencial, gratuito, no necesita licencia y se instala en todos los Mac que quieras.",
       'faq.q3':'¿La licencia de por vida incluye futuras versiones mayores?','faq.a3':'Sí. Todas las actualizaciones de NotchIA, incluidas las versiones mayores, están incluidas para los compradores de por vida.',
       'faq.q4':'Perdí mi clave de licencia. ¿Qué hago?','faq.a4':'La página <a href="/account" class="underline">/account</a> permite recuperar una clave desde el email de compra.',
+      'monthly.b8':"Historial del portapapeles · hasta 100 entradas",
+      'plans.title':"Qué incluye cada plan",
+      'plans.lead':"NotchIA tiene tres planes. Esencial es gratis para siempre: medios, calendario, HUD del sistema, Sneak Peek, Concentration y personalización. Pro añade la IA en directo (Claude Code, Codex), la gestión de archivos y el historial del portapapeles, por 2,99 € al mes en 1 Mac o 24,99 € una sola vez para 2 Mac.",
+      'plans.col.feature':"Función",
+      'plans.col.free':"Esencial",
+      'plans.col.monthly':"Pro mensual",
+      'plans.col.lifetime':"Pro de por vida",
+      'plans.r.price':"Precio",
+      'plans.r.price.free':"0 €, para siempre",
+      'plans.r.price.monthly':"2,99 € / mes",
+      'plans.r.price.lifetime':"24,99 € una vez",
+      'plans.r.macs':"Mac cubiertos",
+      'plans.r.macs.free':"sin licencia",
+      'plans.r.media':"Medios, letras, calendario, recordatorios",
+      'plans.r.hud':"HUD del sistema, Sneak Peek, detecciones",
+      'plans.r.focus':"Concentration completo, personalización",
+      'plans.r.ai':"IA en directo: Claude Code, Codex, 15 estados",
+      'plans.r.files':"Archivos: Shelf, conversor de 13 formatos, resumen de PDF",
+      'plans.r.clip':"Historial del portapapeles (100 entradas)",
+      'faq.q5':"¿Qué es gratis en NotchIA?",
+      'faq.a5':"Esencial, gratis para siempre: medios multifuente con letras, calendario y recordatorios, HUD del sistema, Sneak Peek, detecciones, Concentration completo y personalización visual. No se pide pago ni cuenta.",
       'footnote':'Pago seguro vía Stripe. Ver nuestra <a href="/refund" class="underline">política de reembolso</a>, nuestras <a href="/cgv" class="underline">CGV</a> y nuestra <a href="/privacy" class="underline">política de privacidad</a>.',
     },
     de: {'langhint.msg':'Diese Seite gibt es auch auf Deutsch.','langhint.go':'Auf Deutsch lesen','langhint.close':'Schließen',
@@ -285,8 +545,8 @@
       'nav.home':'Startseite','nav.account':'Mein Konto',
       'h1':'<span class="grad-text">Pro</span>, ohne Pflicht-Abo',
       'lead':'Pro monatlich oder Pro lebenslang, deine Wahl. Sichere Stripe-Zahlung, Schlüssel sofort per E-Mail.',
-      'monthly.title':'Monatlich','monthly.tag':'flexibel','monthly.sub':'Jederzeit kündbar. Kostenlose Testphase geplant.','monthly.per':' / Monat',
-      'monthly.b1':'Claude-Code-Tab integriert','monthly.b2':'Codex-Tab integriert','monthly.b3':'Alle künftigen KI-Funktionen',
+      'monthly.title':'Monatlich','monthly.tag':'flexibel','monthly.sub':"Jederzeit kündbar, ohne Bindung.",'monthly.per':' / Monat',
+      'monthly.b1':"Live-KI · Claude Code und Codex",'monthly.b2':"KI-Statistiken · Tokens, Cache, Latenz, Quoten",'monthly.b3':"Dateiverwaltung · Shelf, 13-Format-Konverter, Quick Share, QuickLook",
       'monthly.b4':'1 Mac inklusive','monthly.b5':'Updates inklusive','monthly.b6':'Kündigung mit 1 Klick','monthly.b7':'Video-Download MP4/MP3 (über 1800 Websites)',
       'lifetime.badge':'Bester Preis','lifetime.title':'<span class="grad-text">Lebenslang</span>','lifetime.tag':'Einmalkauf',
       'lifetime.sub':'Eine Zahlung. Alle künftigen Versionen inklusive.','lifetime.per':' einmalig',
@@ -298,10 +558,31 @@
       'cta.error':'Zahlung gerade nicht verfügbar. Versuch erneut oder nutze /contact.',
       'status.cancelled':'Zahlung abgebrochen. Keine Belastung. Du kannst es jederzeit erneut versuchen.',
       'faq.title':'Häufige Fragen',
-      'faq.q1':'Was passiert, wenn ich aufhöre zu zahlen?','faq.a1':'Die Pro-Funktionen (Claude Code und Codex) können jederzeit gestoppt werden. Der Rest von NotchIA funktioniert weiterhin normal.',
-      'faq.q2':'Auf wie vielen Macs kann ich es installieren?','faq.a2':'Der Monatsplan ist für 1 Mac. Die Lebenslang-Lizenz ist für 2 Macs.',
+      'faq.q1':'Was passiert, wenn ich aufhöre zu zahlen?','faq.a1':"Die Pro-Funktionen (Live-KI, Dateiverwaltung, Zwischenablage-Verlauf) werden deaktiviert. Der Rest von NotchIA funktioniert normal weiter.",
+      'faq.q2':'Auf wie vielen Macs kann ich es installieren?','faq.a2':"Pro monatlich gilt für 1 Mac, Pro lebenslang für 2 Macs. Der kostenlose Essential-Plan braucht keine Lizenz und läuft auf beliebig vielen Macs.",
       'faq.q3':'Enthält Lebenslang künftige Hauptversionen?','faq.a3':'Ja. Alle NotchIA-Updates, einschließlich Hauptversionen, sind für Lebenslang-Käufer inklusive.',
       'faq.q4':'Ich habe meinen Lizenzschlüssel verloren. Was nun?','faq.a4':'Auf der Seite <a href="/account" class="underline">/account</a> kannst du einen Schlüssel über die Kauf-E-Mail wiederfinden.',
+      'monthly.b8':"Zwischenablage-Verlauf · bis zu 100 Einträge",
+      'plans.title':"Was jeder Plan enthält",
+      'plans.lead':"NotchIA hat drei Pläne. Essential ist dauerhaft kostenlos: Medien, Kalender, System-HUD, Sneak Peek, Concentration und Anpassung. Pro ergänzt Live-KI (Claude Code, Codex), Dateiverwaltung und Zwischenablage-Verlauf, für 2,99 € im Monat auf 1 Mac oder einmalig 24,99 € für 2 Macs.",
+      'plans.col.feature':"Funktion",
+      'plans.col.free':"Essential",
+      'plans.col.monthly':"Pro monatlich",
+      'plans.col.lifetime':"Pro lebenslang",
+      'plans.r.price':"Preis",
+      'plans.r.price.free':"0 €, dauerhaft",
+      'plans.r.price.monthly':"2,99 € / Monat",
+      'plans.r.price.lifetime':"24,99 € einmalig",
+      'plans.r.macs':"Abgedeckte Macs",
+      'plans.r.macs.free':"ohne Lizenz",
+      'plans.r.media':"Medien, Songtexte, Kalender, Erinnerungen",
+      'plans.r.hud':"System-HUD, Sneak Peek, Erkennungen",
+      'plans.r.focus':"Vollständiger Concentration, Anpassung",
+      'plans.r.ai':"Live-KI: Claude Code, Codex, 15 Zustände",
+      'plans.r.files':"Dateien: Shelf, 13-Format-Konverter, PDF-Zusammenfassung",
+      'plans.r.clip':"Zwischenablage-Verlauf (100 Einträge)",
+      'faq.q5':"Was ist an NotchIA kostenlos?",
+      'faq.a5':"Essential, dauerhaft kostenlos: Multi-Source-Medien mit Songtexten, Kalender und Erinnerungen, System-HUD, Sneak Peek, Erkennungen, vollständiger Concentration und visuelle Anpassung. Keine Zahlung, kein Konto nötig.",
       'footnote':'Sichere Zahlung über Stripe. Siehe unsere <a href="/refund" class="underline">Rückerstattungs-Richtlinie</a>, unsere <a href="/cgv" class="underline">AGB</a> und unsere <a href="/privacy" class="underline">Datenschutzerklärung</a>.',
     },
   };
