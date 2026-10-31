@@ -14,7 +14,7 @@
 | Poids | DMG ~ 12 Mo · installé ~ 30 Mo |
 | Modules natifs | 14 |
 | Affichage multi-écran | oui : la notch s'affiche sur tous les écrans branchés (par défaut depuis la 2.9.11) |
-| États IA détectés | 10 (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution, Exploration, Fichiers, Recherche Web, Lecture Web, Notebook) |
+| États IA détectés | 15 (Compilation, Terminal, Recherche, Lecture, Modification, Web, Écriture, Sous-agent, Planification, Exécution, Exploration, Fichiers, Recherche Web, Lecture Web, Notebook) |
 | Assistants IA supportés | Claude Code (Anthropic) et ChatGPT Codex (OpenAI) |
 | Lecteurs musicaux supportés | Apple Music, Spotify, YouTube Music + toute app utilisant Now Playing API |
 | Paroles synchronisées | 26 langues via lrclib |
